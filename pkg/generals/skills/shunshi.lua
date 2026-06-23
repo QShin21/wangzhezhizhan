@@ -9,7 +9,8 @@ shunshi:addEffect(fk.AfterCardsMove, {
   can_trigger = function(self, event, target, player, data)
     if not player:hasSkill(shunshi.name) or player.phase ~= Player.NotActive then return false end
     for _, move in ipairs(data) do
-      if move.to == player and move.toArea == Card.PlayerHand and move.skillName == "lianying" then
+      if move.to == player and move.toArea == Card.PlayerHand and
+        (move.skillName == "wzzz_v__ex__lianying" or move.skillName == "lianying") then
         for _, info in ipairs(move.moveInfo) do
           if Fk:getCardById(info.cardId).type ~= Card.TypeBasic then return true end
         end

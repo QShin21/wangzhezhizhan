@@ -46,16 +46,10 @@ local function get_skill_name(skill)
   return skel and skel.name or skill.name
 end
 
-local function is_player_general_skill(player, skill)
+local function is_player_owned_skill(player, skill)
   local name = get_skill_name(skill)
   if not name then return false end
-  for _, general_name in ipairs({ player.general, player.deputyGeneral }) do
-    local general = Fk.generals[general_name]
-    if general and table.contains(general:getSkillNameList(true, true), name) then
-      return true
-    end
-  end
-  return false
+  return player:hasSkill(name, true, true)
 end
 
 local function is_wangzhe_general(name)
@@ -424,6 +418,32 @@ local function rebels_all_dead(room)
   end)
 end
 
+local function throw_aozhan_cards(room, player, n, allow_less)
+  local cards = player:getCardIds("he")
+  if #cards == 0 then return false end
+
+  local discard
+  if allow_less and #cards <= n then
+    discard = cards
+  else
+    discard = room:askToCards(player, {
+      min_num = n,
+      max_num = n,
+      include_equip = true,
+      cancelable = false,
+      skill_name = rule.name,
+      pattern = ".",
+      prompt = "#wangzhe_aozhan-discard",
+    })
+  end
+
+  if #discard > 0 then
+    room:throwCard(discard, rule.name, player, player)
+    return true
+  end
+  return false
+end
+
 rule:addEffect(fk.GameStart, {
   priority = 100,
   can_trigger = function(self, event, target, player)
@@ -476,7 +496,11 @@ rule:addEffect(fk.TurnEnd, {
     room:setPlayerMark(player, AOZHAN_INVALID_MARK, 1)
 
     local cards = player:getCardIds("he")
-    if #cards >= 2 then
+    if player:hasSkill("wzzz_v__os__zhuiting", true) then
+      throw_aozhan_cards(room, player, 2, true)
+    elseif player:hasSkill("wzzz_v__weizhong", true) or player:hasSkill("wzzz_v__ty_ex__weizhong", true) then
+      room:loseHp(player, 1, rule.name)
+    elseif #cards >= 2 then
       local choice = room:askToChoice(player, {
         choices = { "wangzhe_aozhan_discard", "wangzhe_aozhan_losehp" },
         skill_name = rule.name,
@@ -484,18 +508,7 @@ rule:addEffect(fk.TurnEnd, {
         cancelable = false,
       })
       if choice == "wangzhe_aozhan_discard" then
-        local ids = room:askToCards(player, {
-          min_num = 2,
-          max_num = 2,
-          include_equip = true,
-          cancelable = false,
-          skill_name = rule.name,
-          pattern = ".",
-          prompt = "#wangzhe_aozhan-discard",
-        })
-        if #ids == 2 then
-          room:throwCard(ids, rule.name, player, player)
-        else
+        if not throw_aozhan_cards(room, player, 2, false) then
           room:loseHp(player, 1, rule.name)
         end
       else
@@ -547,7 +560,7 @@ rule:addEffect(fk.TurnEnd, {
 
 rule:addEffect("invalidity", {
   invalidity_func = function(self, from, skill)
-    return from and from:getMark(AOZHAN_INVALID_MARK) > 0 and is_player_general_skill(from, skill)
+    return from and from:getMark(AOZHAN_INVALID_MARK) > 0 and is_player_owned_skill(from, skill)
   end,
 })
 

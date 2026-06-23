@@ -5,41 +5,89 @@ local weidi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__weidi"] = "伪帝",
-  [":wzzz_v__weidi"] = "锁定技，你视为拥有主公的主公技。",
+  [":wzzz_v__weidi"] = "锁定技，游戏开始时，你选择一项：1.获得主公的一个主公技并随机获得一张剩余四象标记；2.随机获得两张剩余四象标记。",
+  ["wzzz_v__weidi_skill"] = "获得主公技并抽取一张四象",
+  ["wzzz_v__weidi_sixiang"] = "抽取两张四象",
+  ["#wzzz_v__weidi-skill"] = "伪帝：选择获得主公的一个主公技",
+  ["#wzzz_v__weidi_log"] = "%from 因“伪帝”获得了 %arg",
 
   ["$wzzz_v__weidi1"] = "你们都得听我的号令！",
   ["$wzzz_v__weidi2"] = "我才是皇帝！",
 }
 
+local SIXIANG_SKILLS = "wangzhe_suzaku_skill|wangzhe_sixiang_skill"
+
+local function get_lord_skills(room, player)
+  local skills = {}
+  local lord = room:getLord()
+  if not lord then return skills end
+  for _, s in ipairs(lord:getSkillNameList()) do
+    if Fk.skills[s] and Fk.skills[s]:hasTag(Skill.Lord) and not player:hasSkill(s, true) then
+      table.insert(skills, s)
+    end
+  end
+  return skills
+end
+
+local function take_sixiang_marks(room, player, n)
+  local marks = room:getTag("wangzhe_sixiang_left")
+  if type(marks) ~= "table" or #marks == 0 then return end
+
+  local picked = room:tableRandomPick(marks, math.min(n, #marks))
+  if type(picked) == "string" then picked = { picked } end
+  for _, mark in ipairs(picked) do
+    table.removeOne(marks, mark)
+    room:addPlayerMark(player, mark, 1)
+    room:sendLog{
+      type = "#wzzz_v__weidi_log",
+      from = player.id,
+      arg = mark,
+    }
+  end
+  room:setTag("wangzhe_sixiang_left", marks)
+  room:handleAddLoseSkills(player, SIXIANG_SKILLS, nil, false, true)
+end
+
 local spec = {
+  priority = 90,
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(weidi.name) and
-      table.find(player.room:getOtherPlayers(player, false), function (p)
-        return p.role == "lord" and
-          table.find(p:getSkillNameList(), function(s)
-            return Fk.skills[s]:hasTag(Skill.Lord) and not player:hasSkill(s, true)
-          end) ~= nil
-      end)
+    return player:hasSkill(weidi.name) and player.room:getSettings("gameMode") == "wangzhe_role_mode"
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room
-    local skills = {}
-    for _, p in ipairs(player.room:getOtherPlayers(player, false)) do
-      if p.role == "lord" then
-        for _, s in ipairs(p:getSkillNameList()) do
-          if Fk.skills[s]:hasTag(Skill.Lord) and not player:hasSkill(s, true) then
-            table.insert(skills, s)
-          end
-        end
-      end
+    local lord_skills = get_lord_skills(room, player)
+    local mark_count = #(room:getTag("wangzhe_sixiang_left") or {})
+    if #lord_skills == 0 and mark_count == 0 then return end
+
+    local choices = {}
+    if #lord_skills > 0 and mark_count > 0 then
+      table.insert(choices, "wzzz_v__weidi_skill")
     end
-    if #skills > 0 then
-      room:handleAddLoseSkills(player, table.concat(skills, "|"))
+    if mark_count > 0 then
+      table.insert(choices, "wzzz_v__weidi_sixiang")
+    end
+    local choice = room:askToChoice(player, {
+      choices = choices,
+      skill_name = weidi.name,
+      all_choices = { "wzzz_v__weidi_skill", "wzzz_v__weidi_sixiang" },
+    })
+
+    if choice == "wzzz_v__weidi_skill" then
+      local skill = room:askToChoice(player, {
+        choices = lord_skills,
+        skill_name = weidi.name,
+        prompt = "#wzzz_v__weidi-skill",
+      })
+      if skill and skill ~= "" then
+        room:handleAddLoseSkills(player, skill, nil, false, true)
+      end
+      take_sixiang_marks(room, player, 1)
+    else
+      take_sixiang_marks(room, player, 2)
     end
   end,
 }
 
 weidi:addEffect(fk.GameStart, spec)
-weidi:addEffect(fk.EventAcquireSkill, spec)
 
 return weidi

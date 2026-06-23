@@ -15,7 +15,7 @@ yuanding:addEffect(fk.GameStart, {
     local room = player.room
     local choice = room:askToChoice(player, { choices = { "wzzz_v__liangzhu", "lose_jieyin" }, skill_name = yuanding.name })
     if choice == "lose_jieyin" then
-      room:handleAddLoseSkills(player, "-wzzz_v__ex__jieyin", nil, false, true)
+      room:handleAddLoseSkills(player, "-wzzz_v__jieyin", nil, false, true)
     else
       room:setPlayerMark(player, "wzzz__yuanding_liangzhu", 1)
     end
