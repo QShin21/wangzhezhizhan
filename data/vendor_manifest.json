@@ -1,0 +1,2613 @@
+{
+  "generated_at": "2026-06-20T22:33:01.126Z",
+  "namespace": "wzzz_v__",
+  "source_packages": [
+    "freekill-core",
+    "gamemode",
+    "github-xinghan",
+    "mobile",
+    "mougong",
+    "offline",
+    "ol",
+    "overseas",
+    "shzl",
+    "sp",
+    "standard_ex",
+    "tenyear",
+    "tuguo",
+    "yj"
+  ],
+  "skills": {
+    "#rumo": "#wzzz_v__rumo",
+    "#tg__bingji_maxcards": "#wzzz_v__tg__bingji_maxcards",
+    "#tg__jiancheng_distance": "#wzzz_v__tg__jiancheng_distance",
+    "#tg__jianlian_maxcards": "#wzzz_v__tg__jianlian_maxcards",
+    "#tg__jueyu_pay": "#wzzz_v__tg__jueyu_pay",
+    "#tg__qihcai_minus": "#wzzz_v__tg__qihcai_minus",
+    "#tg__rangtu_negative": "#wzzz_v__tg__rangtu_negative",
+    "#tg__shuaikai_select": "#wzzz_v__tg__shuaikai_select",
+    "#tg__shuanggu_trig": "#wzzz_v__tg__shuanggu_trig",
+    "#tg__wanzu_dis": "#wzzz_v__tg__wanzu_dis",
+    "#tg__wanzu_dis_remove": "#wzzz_v__tg__wanzu_dis_remove",
+    "#tg__weixi_draw": "#wzzz_v__tg__weixi_draw",
+    "#tg__xiannan_trig": "#wzzz_v__tg__xiannan_trig",
+    "#tg__yanfa_discard": "#wzzz_v__tg__yanfa_discard",
+    "#tg__zhenfan_buff": "#wzzz_v__tg__zhenfan_buff",
+    "#tg__zunxiu_filter": "#wzzz_v__tg__zunxiu_filter",
+    "bazhen": "wzzz_v__bazhen",
+    "benghuai": "wzzz_v__benghuai",
+    "binglue": "wzzz_v__binglue",
+    "bingqing": "wzzz_v__bingqing",
+    "bingzheng": "wzzz_v__bingzheng",
+    "botu": "wzzz_v__botu",
+    "changbiao": "wzzz_v__changbiao",
+    "chenqing": "wzzz_v__chenqing",
+    "chongzhen": "wzzz_v__chongzhen",
+    "chouhai": "wzzz_v__chouhai",
+    "choujin": "wzzz_v__choujin",
+    "choutao": "wzzz_v__choutao",
+    "daizui": "wzzz_v__daizui",
+    "daoshu": "wzzz_v__daoshu",
+    "dengli": "wzzz_v__dengli",
+    "dingpan": "wzzz_v__dingpan",
+    "duanchang": "wzzz_v__duanchang",
+    "duanfa": "wzzz_v__duanfa",
+    "dufeng": "wzzz_v__dufeng",
+    "dushi": "wzzz_v__dushi",
+    "duwu": "wzzz_v__duwu",
+    "ex__biyue": "wzzz_v__ex__biyue",
+    "ex__fankui": "wzzz_v__ex__fankui",
+    "ex__ganglie": "wzzz_v__ex__ganglie",
+    "ex__guanxing": "wzzz_v__ex__guanxing",
+    "ex__guose": "wzzz_v__ex__guose",
+    "ex__jianxiong": "wzzz_v__ex__jianxiong",
+    "ex__kurou": "wzzz_v__ex__kurou",
+    "ex__lianying": "wzzz_v__ex__lianying",
+    "ex__luoshen": "wzzz_v__ex__luoshen",
+    "ex__luoyi": "wzzz_v__ex__luoyi",
+    "ex__paoxiao": "wzzz_v__ex__paoxiao",
+    "ex__qianxun": "wzzz_v__ex__qianxun",
+    "ex__qingjian": "wzzz_v__ex__qingjian",
+    "ex__rende": "wzzz_v__ex__rende",
+    "ex__tieji": "wzzz_v__ex__tieji",
+    "ex__tishen": "wzzz_v__ex__tishen",
+    "ex__yiji": "wzzz_v__ex__yiji",
+    "ex__yijue": "wzzz_v__ex__yijue",
+    "ex__yingzi": "wzzz_v__ex__yingzi",
+    "faen": "wzzz_v__faen",
+    "fangzhu": "wzzz_v__fangzhu",
+    "feijun": "wzzz_v__feijun",
+    "fencheng": "wzzz_v__fencheng",
+    "fengliang": "wzzz_v__fengliang",
+    "fenli": "wzzz_v__fenli",
+    "fenwei": "wzzz_v__fenwei",
+    "fuhun": "wzzz_v__fuhun",
+    "fuji": "wzzz_v__fuji",
+    "fuyin": "wzzz_v__fuyin",
+    "gongqi": "wzzz_v__gongqi",
+    "gongxin": "wzzz_v__gongxin",
+    "guicai": "wzzz_v__guicai",
+    "guiming": "wzzz_v__guiming",
+    "gundam__gongxin": "wzzz_v__gundam__gongxin",
+    "guolun": "wzzz_v__guolun",
+    "guzheng": "wzzz_v__guzheng",
+    "hanzhan": "wzzz_v__hanzhan",
+    "haoshi": "wzzz_v__haoshi",
+    "hongde": "wzzz_v__hongde",
+    "hongyuan": "wzzz_v__hongyuan",
+    "huaiyi": "wzzz_v__huaiyi",
+    "huanshi": "wzzz_v__huanshi",
+    "huashen": "wzzz_v__huashen",
+    "huilei": "wzzz_v__huilei",
+    "huituo": "wzzz_v__huituo",
+    "hujia": "wzzz_v__hujia",
+    "hunzi": "wzzz_v__hunzi",
+    "huoshou": "wzzz_v__huoshou",
+    "jiang": "wzzz_v__jiang",
+    "jianji": "wzzz_v__jianji",
+    "jianmie": "wzzz_v__jianmie",
+    "jianyi": "wzzz_v__jianyi",
+    "jianzhengq": "wzzz_v__jianzhengq",
+    "jiaozi": "wzzz_v__jiaozi",
+    "jiefan": "wzzz_v__jiefan",
+    "jieyin": "wzzz_v__jieyin",
+    "jijiang": "wzzz_v__jijiang",
+    "jilis": "wzzz_v__jilis",
+    "jinqu": "wzzz_v__jinqu",
+    "jishe": "wzzz_v__jishe",
+    "jiuzhu": "wzzz_v__jiuzhu",
+    "jixi": "wzzz_v__jixi",
+    "jixian": "wzzz_v__jixian",
+    "juece": "wzzz_v__juece",
+    "jueqing": "wzzz_v__jueqing",
+    "jugu": "wzzz_v__jugu",
+    "jungong": "wzzz_v__jungong",
+    "juxiang": "wzzz_v__juxiang",
+    "kangkai": "wzzz_v__kangkai",
+    "keji": "wzzz_v__keji",
+    "kunfen": "wzzz_v__kunfen",
+    "kunfenEx": "wzzz_v__kunfenEx",
+    "langxi": "wzzz_v__langxi",
+    "liangzhu": "wzzz_v__liangzhu",
+    "lianhuo": "wzzz_v__lianhuo",
+    "liantao": "wzzz_v__liantao",
+    "lihun": "wzzz_v__lihun",
+    "lijian": "wzzz_v__lijian",
+    "lizhan": "wzzz_v__lizhan",
+    "m_ex__anxu": "wzzz_v__m_ex__anxu",
+    "m_ex__benxi": "wzzz_v__m_ex__benxi",
+    "m_ex__duanliang": "wzzz_v__m_ex__duanliang",
+    "m_ex__fangquan": "wzzz_v__m_ex__fangquan",
+    "m_ex__hunzi": "wzzz_v__m_ex__hunzi",
+    "m_ex__jianying": "wzzz_v__m_ex__jianying",
+    "m_ex__jiezi": "wzzz_v__m_ex__jiezi",
+    "m_ex__lianhuan": "wzzz_v__m_ex__lianhuan",
+    "m_ex__mieji": "wzzz_v__m_ex__mieji",
+    "m_ex__paiyi": "wzzz_v__m_ex__paiyi",
+    "m_ex__qimou": "wzzz_v__m_ex__qimou",
+    "m_ex__quanji": "wzzz_v__m_ex__quanji",
+    "m_ex__tiaoxin": "wzzz_v__m_ex__tiaoxin",
+    "m_ex__xuanfeng": "wzzz_v__m_ex__xuanfeng",
+    "m_ex__yongsi": "wzzz_v__m_ex__yongsi",
+    "m_shi__kuanggu": "wzzz_v__m_shi__kuanggu",
+    "mashu": "wzzz_v__mashu",
+    "miji": "wzzz_v__miji",
+    "mingzhe": "wzzz_v__mingzhe",
+    "mizhao": "wzzz_v__mizhao",
+    "mobile__choujue": "wzzz_v__mobile__choujue",
+    "mobile__shangyi": "wzzz_v__mobile__shangyi",
+    "mobile__xiaoxi": "wzzz_v__mobile__xiaoxi",
+    "mobile__zishu": "wzzz_v__mobile__zishu",
+    "mou__jiuyuan": "wzzz_v__mou__jiuyuan",
+    "mou__liuli": "wzzz_v__mou__liuli",
+    "mou__luanwu": "wzzz_v__mou__luanwu",
+    "mou__paoxiao": "wzzz_v__mou__paoxiao",
+    "mou__qingzheng": "wzzz_v__mou__qingzheng",
+    "mou__wansha": "wzzz_v__mou__wansha",
+    "mou__weimu": "wzzz_v__mou__weimu",
+    "mozhi": "wzzz_v__mozhi",
+    "niepan": "wzzz_v__niepan",
+    "ninge": "wzzz_v__ninge",
+    "ofl__chongjian": "wzzz_v__ofl__chongjian",
+    "ofl_mou__jizhi": "wzzz_v__ofl_mou__jizhi",
+    "ofl_mou__luanji": "wzzz_v__ofl_mou__luanji",
+    "ofl_mou__tongye": "wzzz_v__ofl_mou__tongye",
+    "ofl_mou__zaiqi": "wzzz_v__ofl_mou__zaiqi",
+    "ol__aocai": "wzzz_v__ol__aocai",
+    "ol__canshi": "wzzz_v__ol__canshi",
+    "ol__duanbing": "wzzz_v__ol__duanbing",
+    "ol__dujin": "wzzz_v__ol__dujin",
+    "ol__jiqiao": "wzzz_v__ol__jiqiao",
+    "ol__pingtao": "wzzz_v__ol__pingtao",
+    "ol__qiangxi": "wzzz_v__ol__qiangxi",
+    "ol__sanyao": "wzzz_v__ol__sanyao",
+    "ol__shenxian": "wzzz_v__ol__shenxian",
+    "ol__shichou": "wzzz_v__ol__shichou",
+    "ol__zhuiji": "wzzz_v__ol__zhuiji",
+    "ol_ex__dimeng": "wzzz_v__ol_ex__dimeng",
+    "ol_ex__enyuan": "wzzz_v__ol_ex__enyuan",
+    "ol_ex__hunzi": "wzzz_v__ol_ex__hunzi",
+    "ol_ex__huoji": "wzzz_v__ol_ex__huoji",
+    "ol_ex__jieming": "wzzz_v__ol_ex__jieming",
+    "ol_ex__jijiang": "wzzz_v__ol_ex__jijiang",
+    "ol_ex__kanpo": "wzzz_v__ol_ex__kanpo",
+    "ol_ex__liegong": "wzzz_v__ol_ex__liegong",
+    "ol_ex__longdan": "wzzz_v__ol_ex__longdan",
+    "ol_ex__qiaobian": "wzzz_v__ol_ex__qiaobian",
+    "ol_ex__qinxue": "wzzz_v__ol_ex__qinxue",
+    "ol_ex__ruoyu": "wzzz_v__ol_ex__ruoyu",
+    "ol_ex__tiaoxin": "wzzz_v__ol_ex__tiaoxin",
+    "ol_ex__tuntian": "wzzz_v__ol_ex__tuntian",
+    "ol_ex__wangxi": "wzzz_v__ol_ex__wangxi",
+    "ol_ex__wansha": "wzzz_v__ol_ex__wansha",
+    "ol_ex__weimu": "wzzz_v__ol_ex__weimu",
+    "ol_ex__xuanhuo": "wzzz_v__ol_ex__xuanhuo",
+    "ol_ex__yaowu": "wzzz_v__ol_ex__yaowu",
+    "ol_ex__zhaxiang": "wzzz_v__ol_ex__zhaxiang",
+    "ol_ex__zhenjun": "wzzz_v__ol_ex__zhenjun",
+    "ol_ex__zhiji": "wzzz_v__ol_ex__zhiji",
+    "ol_ex__zhijian": "wzzz_v__ol_ex__zhijian",
+    "os__zhiming": "wzzz_v__os__zhiming",
+    "os__zhuiting": "wzzz_v__os__zhuiting",
+    "os__zhuiting_other&": "wzzz_v__os__zhuiting_other&",
+    "os_ex__lieren": "wzzz_v__os_ex__lieren",
+    "os_ex__polu": "wzzz_v__os_ex__polu",
+    "paiyi": "wzzz_v__paiyi",
+    "pingcai": "wzzz_v__pingcai",
+    "pingkou": "wzzz_v__pingkou",
+    "pozhu": "wzzz_v__pozhu",
+    "qiangwu": "wzzz_v__qiangwu",
+    "qiangzhi": "wzzz_v__qiangzhi",
+    "qiaoshi": "wzzz_v__qiaoshi",
+    "qicai": "wzzz_v__qicai",
+    "qice": "wzzz_v__qice",
+    "qingguo": "wzzz_v__qingguo",
+    "qingshic": "wzzz_v__qingshic",
+    "qingzhong": "wzzz_v__qingzhong",
+    "qinwang": "wzzz_v__qinwang",
+    "qixi": "wzzz_v__qixi",
+    "qizhi": "wzzz_v__qizhi",
+    "qshm__fenxun": "wzzz_v__qshm__fenxun",
+    "qshm__songsang": "wzzz_v__qshm__songsang",
+    "quedi": "wzzz_v__quedi",
+    "quhu": "wzzz_v__quhu",
+    "renxin": "wzzz_v__renxin",
+    "sanchen": "wzzz_v__sanchen",
+    "shangshi": "wzzz_v__shangshi",
+    "shebian": "wzzz_v__shebian",
+    "shensu": "wzzz_v__shensu",
+    "sheyan": "wzzz_v__sheyan",
+    "shixin": "wzzz_v__shixin",
+    "shiyuan": "wzzz_v__shiyuan",
+    "shizhan": "wzzz_v__shizhan",
+    "sishu": "wzzz_v__sishu",
+    "songwei": "wzzz_v__songwei",
+    "sp__youdi": "wzzz_v__sp__youdi",
+    "sxfy__fenyin": "wzzz_v__sxfy__fenyin",
+    "sxfy__wudu": "wzzz_v__sxfy__wudu",
+    "sxfy__xiemu": "wzzz_v__sxfy__xiemu",
+    "sxfy__xiemu&": "wzzz_v__sxfy__xiemu&",
+    "tg__bingji": "wzzz_v__tg__bingji",
+    "tg__bode": "wzzz_v__tg__bode",
+    "tg__danding": "wzzz_v__tg__danding",
+    "tg__danli": "wzzz_v__tg__danli",
+    "tg__fenlun": "wzzz_v__tg__fenlun",
+    "tg__fenlun_vs": "wzzz_v__tg__fenlun_vs",
+    "tg__fenwei": "wzzz_v__tg__fenwei",
+    "tg__jiancheng": "wzzz_v__tg__jiancheng",
+    "tg__jianlian": "wzzz_v__tg__jianlian",
+    "tg__jueyu": "wzzz_v__tg__jueyu",
+    "tg__jueyuk": "wzzz_v__tg__jueyuk",
+    "tg__kaiji": "wzzz_v__tg__kaiji",
+    "tg__langbu": "wzzz_v__tg__langbu",
+    "tg__pingxi": "wzzz_v__tg__pingxi",
+    "tg__qihcai": "wzzz_v__tg__qihcai",
+    "tg__rangtu": "wzzz_v__tg__rangtu",
+    "tg__shuanggu": "wzzz_v__tg__shuanggu",
+    "tg__shuangkai": "wzzz_v__tg__shuangkai",
+    "tg__siye": "wzzz_v__tg__siye",
+    "tg__tongzhen": "wzzz_v__tg__tongzhen",
+    "tg__wanzu": "wzzz_v__tg__wanzu",
+    "tg__weixi": "wzzz_v__tg__weixi",
+    "tg__xiannan": "wzzz_v__tg__xiannan",
+    "tg__xuanhu": "wzzz_v__tg__xuanhu",
+    "tg__yanfa": "wzzz_v__tg__yanfa",
+    "tg__zhemou": "wzzz_v__tg__zhemou",
+    "tg__zhenfan": "wzzz_v__tg__zhenfan",
+    "tg__zhoubing": "wzzz_v__tg__zhoubing",
+    "tg__zunxiu": "wzzz_v__tg__zunxiu",
+    "tianbian": "wzzz_v__tianbian",
+    "tiandu": "wzzz_v__tiandu",
+    "tianming": "wzzz_v__tianming",
+    "tianyi": "wzzz_v__tianyi",
+    "tiaoxin": "wzzz_v__tiaoxin",
+    "tujue": "wzzz_v__tujue",
+    "tunjiang": "wzzz_v__tunjiang",
+    "tuxi": "wzzz_v__tuxi",
+    "ty__baobian": "wzzz_v__ty__baobian",
+    "ty__chouhai": "wzzz_v__ty__chouhai",
+    "ty__fengying": "wzzz_v__ty__fengying",
+    "ty__kuangfu": "wzzz_v__ty__kuangfu",
+    "ty__moukui": "wzzz_v__ty__moukui",
+    "ty__niluan": "wzzz_v__ty__niluan",
+    "ty_ex__chengxiang": "wzzz_v__ty_ex__chengxiang",
+    "ty_ex__gongao": "wzzz_v__ty_ex__gongao",
+    "ty_ex__jiezhong": "wzzz_v__ty_ex__jiezhong",
+    "ty_ex__jinjiu": "wzzz_v__ty_ex__jinjiu",
+    "ty_ex__jueqing": "wzzz_v__ty_ex__jueqing",
+    "ty_ex__juyi": "wzzz_v__ty_ex__juyi",
+    "ty_ex__longyin": "wzzz_v__ty_ex__longyin",
+    "ty_ex__mingce": "wzzz_v__ty_ex__mingce",
+    "ty_ex__mingjian": "wzzz_v__ty_ex__mingjian",
+    "ty_ex__pindi": "wzzz_v__ty_ex__pindi",
+    "ty_ex__pojun": "wzzz_v__ty_ex__pojun",
+    "ty_ex__qiaomeng": "wzzz_v__ty_ex__qiaomeng",
+    "ty_ex__shibei": "wzzz_v__ty_ex__shibei",
+    "ty_ex__tongxin": "wzzz_v__ty_ex__tongxin",
+    "ty_ex__weizhong": "wzzz_v__ty_ex__weizhong",
+    "ty_ex__xiansi": "wzzz_v__ty_ex__xiansi",
+    "ty_ex__xiansi&": "wzzz_v__ty_ex__xiansi&",
+    "ty_ex__xianzhen": "wzzz_v__ty_ex__xianzhen",
+    "ty_ex__yanyu": "wzzz_v__ty_ex__yanyu",
+    "ty_ex__yicong": "wzzz_v__ty_ex__yicong",
+    "ty_ex__yongjin": "wzzz_v__ty_ex__yongjin",
+    "ty_ex__zhiman": "wzzz_v__ty_ex__zhiman",
+    "ty_ex__zhiyu": "wzzz_v__ty_ex__zhiyu",
+    "tycl__zhiheng": "wzzz_v__tycl__zhiheng",
+    "v11__huwei": "wzzz_v__v11__huwei",
+    "v11__renwang": "wzzz_v__v11__renwang",
+    "v11__xiechan": "wzzz_v__v11__xiechan",
+    "v33__yicheng": "wzzz_v__v33__yicheng",
+    "v33__zhanshen": "wzzz_v__v33__zhanshen",
+    "vd_sheshen": "wzzz_v__vd_sheshen",
+    "weicheng": "wzzz_v__weicheng",
+    "weidi": "wzzz_v__weidi",
+    "weijing": "wzzz_v__weijing",
+    "weikui": "wzzz_v__weikui",
+    "weiwu": "wzzz_v__weiwu",
+    "weizhong": "wzzz_v__weizhong",
+    "wenji": "wzzz_v__wenji",
+    "wulie": "wzzz_v__wulie",
+    "wusheng": "wzzz_v__wusheng",
+    "wzzz__fanjian": "wzzz_v__wzzz__fanjian",
+    "xh__xiongyi": "wzzz_v__xh__xiongyi",
+    "xh__yisuan": "wzzz_v__xh__yisuan",
+    "xiangle": "wzzz_v__xiangle",
+    "xiangshu": "wzzz_v__xiangshu",
+    "xiantu": "wzzz_v__xiantu",
+    "xiaoji": "wzzz_v__xiaoji",
+    "xingbu": "wzzz_v__xingbu",
+    "xingshang": "wzzz_v__xingshang",
+    "xingshuai": "wzzz_v__xingshuai",
+    "xingzhao": "wzzz_v__xingzhao",
+    "xinsheng": "wzzz_v__xinsheng",
+    "xunxun": "wzzz_v__xunxun",
+    "yajiao": "wzzz_v__yajiao",
+    "yinghun": "wzzz_v__yinghun",
+    "yingjian": "wzzz_v__yingjian",
+    "yingyuan": "wzzz_v__yingyuan",
+    "yingzi": "wzzz_v__yingzi",
+    "yinship": "wzzz_v__yinship",
+    "yizhong": "wzzz_v__yizhong",
+    "yizhuang": "wzzz_v__yizhuang",
+    "yuwei": "wzzz_v__yuwei",
+    "zaoxian": "wzzz_v__zaoxian",
+    "zhanji": "wzzz_v__zhanji",
+    "zhanjue": "wzzz_v__zhanjue",
+    "zhaotao": "wzzz_v__zhaotao",
+    "zhengu": "wzzz_v__zhengu",
+    "zhenlie": "wzzz_v__zhenlie",
+    "zhenwei": "wzzz_v__zhenwei",
+    "zhiba": "wzzz_v__zhiba",
+    "zhiba_active&": "wzzz_v__zhiba_active&",
+    "zhichi": "wzzz_v__zhichi",
+    "zhiyi": "wzzz_v__zhiyi",
+    "zhongyi": "wzzz_v__zhongyi",
+    "zhuandui": "wzzz_v__zhuandui",
+    "zhuiyi": "wzzz_v__zhuiyi",
+    "zili": "wzzz_v__zili",
+    "ziyuan": "wzzz_v__ziyuan",
+    "zuilun": "wzzz_v__zuilun"
+  },
+  "files": [
+    {
+      "source": "freekill-core/standard/pkg/skills/guicai.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__guicai.lua",
+      "skills": [
+        "wzzz_v__guicai"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/hujia.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__hujia.lua",
+      "skills": [
+        "wzzz_v__hujia"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/jieyin.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__jieyin.lua",
+      "skills": [
+        "wzzz_v__jieyin"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/jijiang.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__jijiang.lua",
+      "skills": [
+        "wzzz_v__jijiang"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/keji.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__keji.lua",
+      "skills": [
+        "wzzz_v__keji"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/lijian.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__lijian.lua",
+      "skills": [
+        "wzzz_v__lijian"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/mashu.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__mashu.lua",
+      "skills": [
+        "wzzz_v__mashu"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/qicai.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__qicai.lua",
+      "skills": [
+        "wzzz_v__qicai"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/qingguo.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__qingguo.lua",
+      "skills": [
+        "wzzz_v__qingguo"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/qixi.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__qixi.lua",
+      "skills": [
+        "wzzz_v__qixi"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/tiandu.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__tiandu.lua",
+      "skills": [
+        "wzzz_v__tiandu"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/tuxi.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__tuxi.lua",
+      "skills": [
+        "wzzz_v__tuxi"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/wusheng.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__wusheng.lua",
+      "skills": [
+        "wzzz_v__wusheng"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/xiaoji.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__xiaoji.lua",
+      "skills": [
+        "wzzz_v__xiaoji"
+      ]
+    },
+    {
+      "source": "freekill-core/standard/pkg/skills/yingzi.lua",
+      "target": "vendor/skills/freekill-core__standard__pkg__skills__yingzi.lua",
+      "skills": [
+        "wzzz_v__yingzi"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/1v1_generals/skills/huwei.lua",
+      "target": "vendor/skills/gamemode__pkg__1v1_generals__skills__huwei.lua",
+      "skills": [
+        "wzzz_v__v11__huwei"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/1v1_generals/skills/renwang.lua",
+      "target": "vendor/skills/gamemode__pkg__1v1_generals__skills__renwang.lua",
+      "skills": [
+        "wzzz_v__v11__renwang"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/1v1_generals/skills/xiechan.lua",
+      "target": "vendor/skills/gamemode__pkg__1v1_generals__skills__xiechan.lua",
+      "skills": [
+        "wzzz_v__v11__xiechan"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/3v3_generals/skills/choujin.lua",
+      "target": "vendor/skills/gamemode__pkg__3v3_generals__skills__choujin.lua",
+      "skills": [
+        "wzzz_v__choujin"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/3v3_generals/skills/jiuzhu.lua",
+      "target": "vendor/skills/gamemode__pkg__3v3_generals__skills__jiuzhu.lua",
+      "skills": [
+        "wzzz_v__jiuzhu"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/3v3_generals/skills/v33__zhanshen.lua",
+      "target": "vendor/skills/gamemode__pkg__3v3_generals__skills__v33__zhanshen.lua",
+      "skills": [
+        "wzzz_v__v33__zhanshen"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/3v3_generals/skills/yicheng.lua",
+      "target": "vendor/skills/gamemode__pkg__3v3_generals__skills__yicheng.lua",
+      "skills": [
+        "wzzz_v__v33__yicheng"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/3v3_generals/skills/zhongyi.lua",
+      "target": "vendor/skills/gamemode__pkg__3v3_generals__skills__zhongyi.lua",
+      "skills": [
+        "wzzz_v__zhongyi"
+      ]
+    },
+    {
+      "source": "gamemode/pkg/gamemodes/rule_skills/vd_sheshen.lua",
+      "target": "vendor/skills/gamemode__pkg__gamemodes__rule_skills__vd_sheshen.lua",
+      "skills": [
+        "wzzz_v__vd_sheshen"
+      ]
+    },
+    {
+      "source": "github-xinghan/pkg/lizhan/skills/fanjian.lua",
+      "target": "vendor/skills/github-xinghan__pkg__lizhan__skills__fanjian.lua",
+      "skills": [
+        "wzzz_v__wzzz__fanjian"
+      ]
+    },
+    {
+      "source": "github-xinghan/pkg/yiwu/skills/xh__xiongyi.lua",
+      "target": "vendor/skills/github-xinghan__pkg__yiwu__skills__xh__xiongyi.lua",
+      "skills": [
+        "wzzz_v__xh__xiongyi"
+      ]
+    },
+    {
+      "source": "github-xinghan/pkg/yiwu/skills/xh__yisuan.lua",
+      "target": "vendor/skills/github-xinghan__pkg__yiwu__skills__xh__yisuan.lua",
+      "skills": [
+        "wzzz_v__xh__yisuan"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_bingshi/skills/m_shi_kuanggu.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_bingshi__skills__m_shi_kuanggu.lua",
+      "skills": [
+        "wzzz_v__m_shi__kuanggu"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_rare/skills/pingcai.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_rare__skills__pingcai.lua",
+      "skills": [
+        "wzzz_v__pingcai"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_rare/skills/shixin.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_rare__skills__shixin.lua",
+      "skills": [
+        "wzzz_v__shixin"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_rare/skills/yingjian.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_rare__skills__yingjian.lua",
+      "skills": [
+        "wzzz_v__yingjian"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_rare/skills/yinshi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_rare__skills__yinshi.lua",
+      "skills": [
+        "wzzz_v__yinship"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/choujue.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__choujue.lua",
+      "skills": [
+        "wzzz_v__mobile__choujue"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/dengli.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__dengli.lua",
+      "skills": [
+        "wzzz_v__dengli"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/jianyi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__jianyi.lua",
+      "skills": [
+        "wzzz_v__jianyi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/jungong.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__jungong.lua",
+      "skills": [
+        "wzzz_v__jungong"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/quedi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__quedi.lua",
+      "skills": [
+        "wzzz_v__quedi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_shiji/skills/shangyi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_shiji__skills__shangyi.lua",
+      "skills": [
+        "wzzz_v__mobile__shangyi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/bingqing.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__bingqing.lua",
+      "skills": [
+        "wzzz_v__bingqing"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/chouhai.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__chouhai.lua",
+      "skills": [
+        "wzzz_v__chouhai"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/daizui.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__daizui.lua",
+      "skills": [
+        "wzzz_v__daizui"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/duwu.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__duwu.lua",
+      "skills": [
+        "wzzz_v__duwu"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/guiming.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__guiming.lua",
+      "skills": [
+        "wzzz_v__guiming"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/mobile_xiaoxi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__mobile_xiaoxi.lua",
+      "skills": [
+        "wzzz_v__mobile__xiaoxi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/xingbu.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__xingbu.lua",
+      "skills": [
+        "wzzz_v__xingbu"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/yingyuan.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__yingyuan.lua",
+      "skills": [
+        "wzzz_v__yingyuan"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/zhiyi.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__zhiyi.lua",
+      "skills": [
+        "wzzz_v__zhiyi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/mobile_sp/skills/zishu.lua",
+      "target": "vendor/skills/mobile__pkg__mobile_sp__skills__zishu.lua",
+      "skills": [
+        "wzzz_v__mobile__zishu"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/duanliang.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__duanliang.lua",
+      "skills": [
+        "wzzz_v__m_ex__duanliang"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/fangquan.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__fangquan.lua",
+      "skills": [
+        "wzzz_v__m_ex__fangquan"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/hunzi.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__hunzi.lua",
+      "skills": [
+        "wzzz_v__m_ex__hunzi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/jiezi.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__jiezi.lua",
+      "skills": [
+        "wzzz_v__m_ex__jiezi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/lianhuan.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__lianhuan.lua",
+      "skills": [
+        "wzzz_v__m_ex__lianhuan"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/qimou.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__qimou.lua",
+      "skills": [
+        "wzzz_v__m_ex__qimou"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/tiaoxin.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__tiaoxin.lua",
+      "skills": [
+        "wzzz_v__m_ex__tiaoxin"
+      ]
+    },
+    {
+      "source": "mobile/pkg/shzl_ex/skills/yongsi.lua",
+      "target": "vendor/skills/mobile__pkg__shzl_ex__skills__yongsi.lua",
+      "skills": [
+        "wzzz_v__m_ex__yongsi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/anxu.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__anxu.lua",
+      "skills": [
+        "wzzz_v__m_ex__anxu"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/benxi.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__benxi.lua",
+      "skills": [
+        "wzzz_v__m_ex__benxi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/jianying.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__jianying.lua",
+      "skills": [
+        "wzzz_v__m_ex__jianying"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/mieji.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__mieji.lua",
+      "skills": [
+        "wzzz_v__m_ex__mieji"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/paiyi.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__paiyi.lua",
+      "skills": [
+        "wzzz_v__m_ex__paiyi"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/quanji.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__quanji.lua",
+      "skills": [
+        "wzzz_v__m_ex__quanji"
+      ]
+    },
+    {
+      "source": "mobile/pkg/yj_ex/skills/xuanfeng.lua",
+      "target": "vendor/skills/mobile__pkg__yj_ex__skills__xuanfeng.lua",
+      "skills": [
+        "wzzz_v__m_ex__xuanfeng"
+      ]
+    },
+    {
+      "source": "mougong/pkg/tong/skills/mou_paoxiao.lua",
+      "target": "vendor/skills/mougong__pkg__tong__skills__mou_paoxiao.lua",
+      "skills": [
+        "wzzz_v__mou__paoxiao"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_jiuyuan.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_jiuyuan.lua",
+      "skills": [
+        "wzzz_v__mou__jiuyuan"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_liuli.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_liuli.lua",
+      "skills": [
+        "wzzz_v__mou__liuli"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_luanwu.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_luanwu.lua",
+      "skills": [
+        "wzzz_v__mou__luanwu"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_qingzheng.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_qingzheng.lua",
+      "skills": [
+        "wzzz_v__mou__qingzheng"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_wansha.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_wansha.lua",
+      "skills": [
+        "wzzz_v__mou__wansha"
+      ]
+    },
+    {
+      "source": "mougong/pkg/zhi/skills/mou_weimu.lua",
+      "target": "vendor/skills/mougong__pkg__zhi__skills__mou_weimu.lua",
+      "skills": [
+        "wzzz_v__mou__weimu"
+      ]
+    },
+    {
+      "source": "offline/pkg/ofl_mou/skills/jizhi.lua",
+      "target": "vendor/skills/offline__pkg__ofl_mou__skills__jizhi.lua",
+      "skills": [
+        "wzzz_v__ofl_mou__jizhi"
+      ]
+    },
+    {
+      "source": "offline/pkg/ofl_mou/skills/luanji.lua",
+      "target": "vendor/skills/offline__pkg__ofl_mou__skills__luanji.lua",
+      "skills": [
+        "wzzz_v__ofl_mou__luanji"
+      ]
+    },
+    {
+      "source": "offline/pkg/ofl_mou/skills/tongye.lua",
+      "target": "vendor/skills/offline__pkg__ofl_mou__skills__tongye.lua",
+      "skills": [
+        "wzzz_v__ofl_mou__tongye"
+      ]
+    },
+    {
+      "source": "offline/pkg/ofl_mou/skills/zaiqi.lua",
+      "target": "vendor/skills/offline__pkg__ofl_mou__skills__zaiqi.lua",
+      "skills": [
+        "wzzz_v__ofl_mou__zaiqi"
+      ]
+    },
+    {
+      "source": "offline/pkg/piracy_e/skills/chongjian.lua",
+      "target": "vendor/skills/offline__pkg__piracy_e__skills__chongjian.lua",
+      "skills": [
+        "wzzz_v__ofl__chongjian"
+      ]
+    },
+    {
+      "source": "offline/pkg/qshm/skills/fenxun.lua",
+      "target": "vendor/skills/offline__pkg__qshm__skills__fenxun.lua",
+      "skills": [
+        "wzzz_v__qshm__fenxun"
+      ]
+    },
+    {
+      "source": "offline/pkg/qshm/skills/songsang.lua",
+      "target": "vendor/skills/offline__pkg__qshm__skills__songsang.lua",
+      "skills": [
+        "wzzz_v__qshm__songsang"
+      ]
+    },
+    {
+      "source": "offline/pkg/shzj/skills/yizhuang.lua",
+      "target": "vendor/skills/offline__pkg__shzj__skills__yizhuang.lua",
+      "skills": [
+        "wzzz_v__yizhuang"
+      ]
+    },
+    {
+      "source": "offline/pkg/sxfy/skills/fenyin.lua",
+      "target": "vendor/skills/offline__pkg__sxfy__skills__fenyin.lua",
+      "skills": [
+        "wzzz_v__sxfy__fenyin"
+      ]
+    },
+    {
+      "source": "offline/pkg/sxfy/skills/wudu.lua",
+      "target": "vendor/skills/offline__pkg__sxfy__skills__wudu.lua",
+      "skills": [
+        "wzzz_v__sxfy__wudu"
+      ]
+    },
+    {
+      "source": "offline/pkg/sxfy/skills/xiemu_active.lua",
+      "target": "vendor/skills/offline__pkg__sxfy__skills__xiemu_active.lua",
+      "skills": [
+        "wzzz_v__sxfy__xiemu&"
+      ]
+    },
+    {
+      "source": "offline/pkg/sxfy/skills/xiemu.lua",
+      "target": "vendor/skills/offline__pkg__sxfy__skills__xiemu.lua",
+      "skills": [
+        "wzzz_v__sxfy__xiemu"
+      ]
+    },
+    {
+      "source": "ol/pkg/jsrg/skills/pingtao.lua",
+      "target": "vendor/skills/ol__pkg__jsrg__skills__pingtao.lua",
+      "skills": [
+        "wzzz_v__ol__pingtao"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/botu.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__botu.lua",
+      "skills": [
+        "wzzz_v__botu"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/changbiao.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__changbiao.lua",
+      "skills": [
+        "wzzz_v__changbiao"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/dimeng.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__dimeng.lua",
+      "skills": [
+        "wzzz_v__ol_ex__dimeng"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/hanzhan.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__hanzhan.lua",
+      "skills": [
+        "wzzz_v__hanzhan"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/hunzi.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__hunzi.lua",
+      "skills": [
+        "wzzz_v__ol_ex__hunzi"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/huoji.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__huoji.lua",
+      "skills": [
+        "wzzz_v__ol_ex__huoji"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/jieming.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__jieming.lua",
+      "skills": [
+        "wzzz_v__ol_ex__jieming"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/jijiang.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__jijiang.lua",
+      "skills": [
+        "wzzz_v__ol_ex__jijiang"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/kanpo.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__kanpo.lua",
+      "skills": [
+        "wzzz_v__ol_ex__kanpo"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/liegong.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__liegong.lua",
+      "skills": [
+        "wzzz_v__ol_ex__liegong"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/longdan.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__longdan.lua",
+      "skills": [
+        "wzzz_v__ol_ex__longdan"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/ninge.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__ninge.lua",
+      "skills": [
+        "wzzz_v__ninge"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/qiaobian.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__qiaobian.lua",
+      "skills": [
+        "wzzz_v__ol_ex__qiaobian"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/qinxue.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__qinxue.lua",
+      "skills": [
+        "wzzz_v__ol_ex__qinxue"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/ruoyu.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__ruoyu.lua",
+      "skills": [
+        "wzzz_v__ol_ex__ruoyu"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/shebian.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__shebian.lua",
+      "skills": [
+        "wzzz_v__shebian"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/shizhan.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__shizhan.lua",
+      "skills": [
+        "wzzz_v__shizhan"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/sishu.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__sishu.lua",
+      "skills": [
+        "wzzz_v__sishu"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/tiaoxin.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__tiaoxin.lua",
+      "skills": [
+        "wzzz_v__ol_ex__tiaoxin"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/tuntian.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__tuntian.lua",
+      "skills": [
+        "wzzz_v__ol_ex__tuntian"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/wangxi.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__wangxi.lua",
+      "skills": [
+        "wzzz_v__ol_ex__wangxi"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/wansha.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__wansha.lua",
+      "skills": [
+        "wzzz_v__ol_ex__wansha"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/weimu.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__weimu.lua",
+      "skills": [
+        "wzzz_v__ol_ex__weimu"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/wulie.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__wulie.lua",
+      "skills": [
+        "wzzz_v__wulie"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/yaowu.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__yaowu.lua",
+      "skills": [
+        "wzzz_v__ol_ex__yaowu"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/zhiji.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__zhiji.lua",
+      "skills": [
+        "wzzz_v__ol_ex__zhiji"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_ex/skills/zhijian.lua",
+      "target": "vendor/skills/ol__pkg__ol_ex__skills__zhijian.lua",
+      "skills": [
+        "wzzz_v__ol_ex__zhijian"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_exyj/skills/enyuan.lua",
+      "target": "vendor/skills/ol__pkg__ol_exyj__skills__enyuan.lua",
+      "skills": [
+        "wzzz_v__ol_ex__enyuan"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_exyj/skills/jianmie.lua",
+      "target": "vendor/skills/ol__pkg__ol_exyj__skills__jianmie.lua",
+      "skills": [
+        "wzzz_v__jianmie"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_exyj/skills/xuanhuo.lua",
+      "target": "vendor/skills/ol__pkg__ol_exyj__skills__xuanhuo.lua",
+      "skills": [
+        "wzzz_v__ol_ex__xuanhuo"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_exyj/skills/zhenjun.lua",
+      "target": "vendor/skills/ol__pkg__ol_exyj__skills__zhenjun.lua",
+      "skills": [
+        "wzzz_v__ol_ex__zhenjun"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_mo/skills/qingshi.lua",
+      "target": "vendor/skills/ol__pkg__ol_mo__skills__qingshi.lua",
+      "skills": [
+        "wzzz_v__qingshic"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_mo/skills/rumo.lua",
+      "target": "vendor/skills/ol__pkg__ol_mo__skills__rumo.lua",
+      "skills": [
+        "#wzzz_v__rumo"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_mou/skills/zhaxiang.lua",
+      "target": "vendor/skills/ol__pkg__ol_mou__skills__zhaxiang.lua",
+      "skills": [
+        "wzzz_v__ol_ex__zhaxiang"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_shzl/skills/qiangxi.lua",
+      "target": "vendor/skills/ol__pkg__ol_shzl__skills__qiangxi.lua",
+      "skills": [
+        "wzzz_v__ol__qiangxi"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/jiqiao.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__jiqiao.lua",
+      "skills": [
+        "wzzz_v__ol__jiqiao"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/liantao.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__liantao.lua",
+      "skills": [
+        "wzzz_v__liantao"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/lizhan.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__lizhan.lua",
+      "skills": [
+        "wzzz_v__lizhan"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/shichou.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__shichou.lua",
+      "skills": [
+        "wzzz_v__ol__shichou"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/weikui.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__weikui.lua",
+      "skills": [
+        "wzzz_v__weikui"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_sp/skills/zhuiji.lua",
+      "target": "vendor/skills/ol__pkg__ol_sp__skills__zhuiji.lua",
+      "skills": [
+        "wzzz_v__ol__zhuiji"
+      ]
+    },
+    {
+      "source": "ol/pkg/ol_yj/skills/sanyao.lua",
+      "target": "vendor/skills/ol__pkg__ol_yj__skills__sanyao.lua",
+      "skills": [
+        "wzzz_v__ol__sanyao"
+      ]
+    },
+    {
+      "source": "ol/pkg/wende/skills/pozhu.lua",
+      "target": "vendor/skills/ol__pkg__wende__skills__pozhu.lua",
+      "skills": [
+        "wzzz_v__pozhu"
+      ]
+    },
+    {
+      "source": "ol/pkg/wende/skills/sanchen.lua",
+      "target": "vendor/skills/ol__pkg__wende__skills__sanchen.lua",
+      "skills": [
+        "wzzz_v__sanchen"
+      ]
+    },
+    {
+      "source": "ol/pkg/wende/skills/zhaotao.lua",
+      "target": "vendor/skills/ol__pkg__wende__skills__zhaotao.lua",
+      "skills": [
+        "wzzz_v__zhaotao"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/aocai.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__aocai.lua",
+      "skills": [
+        "wzzz_v__ol__aocai"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/bingzheng.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__bingzheng.lua",
+      "skills": [
+        "wzzz_v__bingzheng"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/canshi.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__canshi.lua",
+      "skills": [
+        "wzzz_v__ol__canshi"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/dingpan.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__dingpan.lua",
+      "skills": [
+        "wzzz_v__dingpan"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/duanbing.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__duanbing.lua",
+      "skills": [
+        "wzzz_v__ol__duanbing"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/dujin.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__dujin.lua",
+      "skills": [
+        "wzzz_v__ol__dujin"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/fuji.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__fuji.lua",
+      "skills": [
+        "wzzz_v__fuji"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/hongde.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__hongde.lua",
+      "skills": [
+        "wzzz_v__hongde"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/jianji.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__jianji.lua",
+      "skills": [
+        "wzzz_v__jianji"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/jiaozi.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__jiaozi.lua",
+      "skills": [
+        "wzzz_v__jiaozi"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/jixian.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__jixian.lua",
+      "skills": [
+        "wzzz_v__jixian"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/jugu.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__jugu.lua",
+      "skills": [
+        "wzzz_v__jugu"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/qingzhong.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__qingzhong.lua",
+      "skills": [
+        "wzzz_v__qingzhong"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/shenxian.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__shenxian.lua",
+      "skills": [
+        "wzzz_v__ol__shenxian"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/sheyan.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__sheyan.lua",
+      "skills": [
+        "wzzz_v__sheyan"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/tunjiang.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__tunjiang.lua",
+      "skills": [
+        "wzzz_v__tunjiang"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/weijing.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__weijing.lua",
+      "skills": [
+        "wzzz_v__weijing"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/wenji.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__wenji.lua",
+      "skills": [
+        "wzzz_v__wenji"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/xingzhao.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__xingzhao.lua",
+      "skills": [
+        "wzzz_v__xingzhao"
+      ]
+    },
+    {
+      "source": "ol/pkg/xinghe/skills/ziyuan.lua",
+      "target": "vendor/skills/ol__pkg__xinghe__skills__ziyuan.lua",
+      "skills": [
+        "wzzz_v__ziyuan"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_ex/skills/os_ex_lieren.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_ex__skills__os_ex_lieren.lua",
+      "skills": [
+        "wzzz_v__os_ex__lieren"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_ex/skills/os_ex_polu.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_ex__skills__os_ex_polu.lua",
+      "skills": [
+        "wzzz_v__os_ex__polu"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_sp/skills/gundam_gongxin.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_sp__skills__gundam_gongxin.lua",
+      "skills": [
+        "wzzz_v__gundam__gongxin"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_sp/skills/os_zhiming.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_sp__skills__os_zhiming.lua",
+      "skills": [
+        "wzzz_v__os__zhiming"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_sp/skills/os_zhuiting_other.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_sp__skills__os_zhuiting_other.lua",
+      "skills": [
+        "wzzz_v__os__zhuiting_other&"
+      ]
+    },
+    {
+      "source": "overseas/pkg/overseas_sp/skills/os_zhuiting.lua",
+      "target": "vendor/skills/overseas__pkg__overseas_sp__skills__os_zhuiting.lua",
+      "skills": [
+        "wzzz_v__os__zhuiting"
+      ]
+    },
+    {
+      "source": "shzl/pkg/fire/skills/bazhen.lua",
+      "target": "vendor/skills/shzl__pkg__fire__skills__bazhen.lua",
+      "skills": [
+        "wzzz_v__bazhen"
+      ]
+    },
+    {
+      "source": "shzl/pkg/fire/skills/niepan.lua",
+      "target": "vendor/skills/shzl__pkg__fire__skills__niepan.lua",
+      "skills": [
+        "wzzz_v__niepan"
+      ]
+    },
+    {
+      "source": "shzl/pkg/fire/skills/quhu.lua",
+      "target": "vendor/skills/shzl__pkg__fire__skills__quhu.lua",
+      "skills": [
+        "wzzz_v__quhu"
+      ]
+    },
+    {
+      "source": "shzl/pkg/fire/skills/tianyi.lua",
+      "target": "vendor/skills/shzl__pkg__fire__skills__tianyi.lua",
+      "skills": [
+        "wzzz_v__tianyi"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/benghuai.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__benghuai.lua",
+      "skills": [
+        "wzzz_v__benghuai"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/fangzhu.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__fangzhu.lua",
+      "skills": [
+        "wzzz_v__fangzhu"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/haoshi.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__haoshi.lua",
+      "skills": [
+        "wzzz_v__haoshi"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/huoshou.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__huoshou.lua",
+      "skills": [
+        "wzzz_v__huoshou"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/juxiang.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__juxiang.lua",
+      "skills": [
+        "wzzz_v__juxiang"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/songwei.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__songwei.lua",
+      "skills": [
+        "wzzz_v__songwei"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/xingshang.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__xingshang.lua",
+      "skills": [
+        "wzzz_v__xingshang"
+      ]
+    },
+    {
+      "source": "shzl/pkg/forest/skills/yinghun.lua",
+      "target": "vendor/skills/shzl__pkg__forest__skills__yinghun.lua",
+      "skills": [
+        "wzzz_v__yinghun"
+      ]
+    },
+    {
+      "source": "shzl/pkg/god/skills/gongxin.lua",
+      "target": "vendor/skills/shzl__pkg__god__skills__gongxin.lua",
+      "skills": [
+        "wzzz_v__gongxin"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/duanchang.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__duanchang.lua",
+      "skills": [
+        "wzzz_v__duanchang"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/guzheng.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__guzheng.lua",
+      "skills": [
+        "wzzz_v__guzheng"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/huashen.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__huashen.lua",
+      "skills": [
+        "wzzz_v__huashen"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/hunzi.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__hunzi.lua",
+      "skills": [
+        "wzzz_v__hunzi"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/jiang.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__jiang.lua",
+      "skills": [
+        "wzzz_v__jiang"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/jixi.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__jixi.lua",
+      "skills": [
+        "wzzz_v__jixi"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/tiaoxin.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__tiaoxin.lua",
+      "skills": [
+        "wzzz_v__tiaoxin"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/xiangle.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__xiangle.lua",
+      "skills": [
+        "wzzz_v__xiangle"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/xinsheng.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__xinsheng.lua",
+      "skills": [
+        "wzzz_v__xinsheng"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/zaoxian.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__zaoxian.lua",
+      "skills": [
+        "wzzz_v__zaoxian"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/zhiba_active.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__zhiba_active.lua",
+      "skills": [
+        "wzzz_v__zhiba_active&"
+      ]
+    },
+    {
+      "source": "shzl/pkg/mountain/skills/zhiba.lua",
+      "target": "vendor/skills/shzl__pkg__mountain__skills__zhiba.lua",
+      "skills": [
+        "wzzz_v__zhiba"
+      ]
+    },
+    {
+      "source": "shzl/pkg/shadow/skills/binglue.lua",
+      "target": "vendor/skills/shzl__pkg__shadow__skills__binglue.lua",
+      "skills": [
+        "wzzz_v__binglue"
+      ]
+    },
+    {
+      "source": "shzl/pkg/shadow/skills/feijun.lua",
+      "target": "vendor/skills/shzl__pkg__shadow__skills__feijun.lua",
+      "skills": [
+        "wzzz_v__feijun"
+      ]
+    },
+    {
+      "source": "shzl/pkg/shadow/skills/jinqu.lua",
+      "target": "vendor/skills/shzl__pkg__shadow__skills__jinqu.lua",
+      "skills": [
+        "wzzz_v__jinqu"
+      ]
+    },
+    {
+      "source": "shzl/pkg/shadow/skills/qizhi.lua",
+      "target": "vendor/skills/shzl__pkg__shadow__skills__qizhi.lua",
+      "skills": [
+        "wzzz_v__qizhi"
+      ]
+    },
+    {
+      "source": "shzl/pkg/thunder/skills/fuyin.lua",
+      "target": "vendor/skills/shzl__pkg__thunder__skills__fuyin.lua",
+      "skills": [
+        "wzzz_v__fuyin"
+      ]
+    },
+    {
+      "source": "shzl/pkg/thunder/skills/zhengu.lua",
+      "target": "vendor/skills/shzl__pkg__thunder__skills__zhengu.lua",
+      "skills": [
+        "wzzz_v__zhengu"
+      ]
+    },
+    {
+      "source": "shzl/pkg/thunder/skills/zuilun.lua",
+      "target": "vendor/skills/shzl__pkg__thunder__skills__zuilun.lua",
+      "skills": [
+        "wzzz_v__zuilun"
+      ]
+    },
+    {
+      "source": "shzl/pkg/wind/skills/shensu.lua",
+      "target": "vendor/skills/shzl__pkg__wind__skills__shensu.lua",
+      "skills": [
+        "wzzz_v__shensu"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_jsp/skills/fengliang.lua",
+      "target": "vendor/skills/sp__pkg__sp_jsp__skills__fengliang.lua",
+      "skills": [
+        "wzzz_v__fengliang"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_jsp/skills/kunfen.lua",
+      "target": "vendor/skills/sp__pkg__sp_jsp__skills__kunfen.lua",
+      "skills": [
+        "wzzz_v__kunfen"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_jsp/skills/kunfenEx.lua",
+      "target": "vendor/skills/sp__pkg__sp_jsp__skills__kunfenEx.lua",
+      "skills": [
+        "wzzz_v__kunfenEx"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_jsp/skills/liangzhu.lua",
+      "target": "vendor/skills/sp__pkg__sp_jsp__skills__liangzhu.lua",
+      "skills": [
+        "wzzz_v__liangzhu"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_star/skills/chongzhen.lua",
+      "target": "vendor/skills/sp__pkg__sp_star__skills__chongzhen.lua",
+      "skills": [
+        "wzzz_v__chongzhen"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp_star/skills/lihun.lua",
+      "target": "vendor/skills/sp__pkg__sp_star__skills__lihun.lua",
+      "skills": [
+        "wzzz_v__lihun"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/chenqing.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__chenqing.lua",
+      "skills": [
+        "wzzz_v__chenqing"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/hongyuan.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__hongyuan.lua",
+      "skills": [
+        "wzzz_v__hongyuan"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/huanshi.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__huanshi.lua",
+      "skills": [
+        "wzzz_v__huanshi"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/kangkai.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__kangkai.lua",
+      "skills": [
+        "wzzz_v__kangkai"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/mingzhe.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__mingzhe.lua",
+      "skills": [
+        "wzzz_v__mingzhe"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/mizhao.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__mizhao.lua",
+      "skills": [
+        "wzzz_v__mizhao"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/mozhi.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__mozhi.lua",
+      "skills": [
+        "wzzz_v__mozhi"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/qiangwu.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__qiangwu.lua",
+      "skills": [
+        "wzzz_v__qiangwu"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/tianming.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__tianming.lua",
+      "skills": [
+        "wzzz_v__tianming"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/weidi.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__weidi.lua",
+      "skills": [
+        "wzzz_v__weidi"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/weizhong.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__weizhong.lua",
+      "skills": [
+        "wzzz_v__weizhong"
+      ]
+    },
+    {
+      "source": "sp/pkg/sp/skills/zhenwei.lua",
+      "target": "vendor/skills/sp__pkg__sp__skills__zhenwei.lua",
+      "skills": [
+        "wzzz_v__zhenwei"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/biyue.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__biyue.lua",
+      "skills": [
+        "wzzz_v__ex__biyue"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/fankui.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__fankui.lua",
+      "skills": [
+        "wzzz_v__ex__fankui"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/fenwei.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__fenwei.lua",
+      "skills": [
+        "wzzz_v__fenwei"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/ganglie.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__ganglie.lua",
+      "skills": [
+        "wzzz_v__ex__ganglie"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/guanxing.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__guanxing.lua",
+      "skills": [
+        "wzzz_v__ex__guanxing"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/guose.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__guose.lua",
+      "skills": [
+        "wzzz_v__ex__guose"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/jianxiong.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__jianxiong.lua",
+      "skills": [
+        "wzzz_v__ex__jianxiong"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/kurou.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__kurou.lua",
+      "skills": [
+        "wzzz_v__ex__kurou"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/lianying.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__lianying.lua",
+      "skills": [
+        "wzzz_v__ex__lianying"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/luoshen.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__luoshen.lua",
+      "skills": [
+        "wzzz_v__ex__luoshen"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/luoyi.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__luoyi.lua",
+      "skills": [
+        "wzzz_v__ex__luoyi"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/paoxiao.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__paoxiao.lua",
+      "skills": [
+        "wzzz_v__ex__paoxiao"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/qianxun.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__qianxun.lua",
+      "skills": [
+        "wzzz_v__ex__qianxun"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/qingjian.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__qingjian.lua",
+      "skills": [
+        "wzzz_v__ex__qingjian"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/rende.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__rende.lua",
+      "skills": [
+        "wzzz_v__ex__rende"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/tieji.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__tieji.lua",
+      "skills": [
+        "wzzz_v__ex__tieji"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/tishen.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__tishen.lua",
+      "skills": [
+        "wzzz_v__ex__tishen"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/xunxun.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__xunxun.lua",
+      "skills": [
+        "wzzz_v__xunxun"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/yajiao.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__yajiao.lua",
+      "skills": [
+        "wzzz_v__yajiao"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/yiji.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__yiji.lua",
+      "skills": [
+        "wzzz_v__ex__yiji"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/yijue.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__yijue.lua",
+      "skills": [
+        "wzzz_v__ex__yijue"
+      ]
+    },
+    {
+      "source": "standard_ex/pkg/general/skills/yingzi.lua",
+      "target": "vendor/skills/standard_ex__pkg__general__skills__yingzi.lua",
+      "skills": [
+        "wzzz_v__ex__yingzi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/chengxiang.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__chengxiang.lua",
+      "skills": [
+        "wzzz_v__ty_ex__chengxiang"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/jiezhong.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__jiezhong.lua",
+      "skills": [
+        "wzzz_v__ty_ex__jiezhong"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/jinjiu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__jinjiu.lua",
+      "skills": [
+        "wzzz_v__ty_ex__jinjiu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/jueqing.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__jueqing.lua",
+      "skills": [
+        "wzzz_v__ty_ex__jueqing"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/longyin.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__longyin.lua",
+      "skills": [
+        "wzzz_v__ty_ex__longyin"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/mingce.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__mingce.lua",
+      "skills": [
+        "wzzz_v__ty_ex__mingce"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/mingjian.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__mingjian.lua",
+      "skills": [
+        "wzzz_v__ty_ex__mingjian"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/pindi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__pindi.lua",
+      "skills": [
+        "wzzz_v__ty_ex__pindi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/pojun.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__pojun.lua",
+      "skills": [
+        "wzzz_v__ty_ex__pojun"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/shibei.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__shibei.lua",
+      "skills": [
+        "wzzz_v__ty_ex__shibei"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/tongxin.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__tongxin.lua",
+      "skills": [
+        "wzzz_v__ty_ex__tongxin"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/xiansi_viewas.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__xiansi_viewas.lua",
+      "skills": [
+        "wzzz_v__ty_ex__xiansi&"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/xiansi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__xiansi.lua",
+      "skills": [
+        "wzzz_v__ty_ex__xiansi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/xianzhen.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__xianzhen.lua",
+      "skills": [
+        "wzzz_v__ty_ex__xianzhen"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/yanyu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__yanyu.lua",
+      "skills": [
+        "wzzz_v__ty_ex__yanyu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/yongjin.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__yongjin.lua",
+      "skills": [
+        "wzzz_v__ty_ex__yongjin"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/zhiman.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__zhiman.lua",
+      "skills": [
+        "wzzz_v__ty_ex__zhiman"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_ex/skills/zhiyu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_ex__skills__zhiyu.lua",
+      "skills": [
+        "wzzz_v__ty_ex__zhiyu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/baobian.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__baobian.lua",
+      "skills": [
+        "wzzz_v__ty__baobian"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/chouhai.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__chouhai.lua",
+      "skills": [
+        "wzzz_v__ty__chouhai"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/choutao.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__choutao.lua",
+      "skills": [
+        "wzzz_v__choutao"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/daoshu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__daoshu.lua",
+      "skills": [
+        "wzzz_v__daoshu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/dufeng.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__dufeng.lua",
+      "skills": [
+        "wzzz_v__dufeng"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/dushi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__dushi.lua",
+      "skills": [
+        "wzzz_v__dushi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/fengying.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__fengying.lua",
+      "skills": [
+        "wzzz_v__ty__fengying"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/jilis.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__jilis.lua",
+      "skills": [
+        "wzzz_v__jilis"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/kuangfu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__kuangfu.lua",
+      "skills": [
+        "wzzz_v__ty__kuangfu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/langxi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__langxi.lua",
+      "skills": [
+        "wzzz_v__langxi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/moukui.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__moukui.lua",
+      "skills": [
+        "wzzz_v__ty__moukui"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/niluan.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__niluan.lua",
+      "skills": [
+        "wzzz_v__ty__niluan"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/shiyuan.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__shiyuan.lua",
+      "skills": [
+        "wzzz_v__shiyuan"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/tujue.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__tujue.lua",
+      "skills": [
+        "wzzz_v__tujue"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/weicheng.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__weicheng.lua",
+      "skills": [
+        "wzzz_v__weicheng"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/weiwu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__weiwu.lua",
+      "skills": [
+        "wzzz_v__weiwu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/xiangshu.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__xiangshu.lua",
+      "skills": [
+        "wzzz_v__xiangshu"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_huicui/skills/yuwei.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_huicui__skills__yuwei.lua",
+      "skills": [
+        "wzzz_v__yuwei"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_other/skills/tycl__zhiheng.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_other__skills__tycl__zhiheng.lua",
+      "skills": [
+        "wzzz_v__tycl__zhiheng"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/duanfa.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__duanfa.lua",
+      "skills": [
+        "wzzz_v__duanfa"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/gongao.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__gongao.lua",
+      "skills": [
+        "wzzz_v__ty_ex__gongao"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/guolun.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__guolun.lua",
+      "skills": [
+        "wzzz_v__guolun"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/juyi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__juyi.lua",
+      "skills": [
+        "wzzz_v__ty_ex__juyi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/qiaomeng.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__qiaomeng.lua",
+      "skills": [
+        "wzzz_v__ty_ex__qiaomeng"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/weizhong.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__weizhong.lua",
+      "skills": [
+        "wzzz_v__ty_ex__weizhong"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/yicong.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__yicong.lua",
+      "skills": [
+        "wzzz_v__ty_ex__yicong"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/youdi.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__youdi.lua",
+      "skills": [
+        "wzzz_v__sp__youdi"
+      ]
+    },
+    {
+      "source": "tenyear/pkg/tenyear_xinghuo/skills/zhanji.lua",
+      "target": "vendor/skills/tenyear__pkg__tenyear_xinghuo__skills__zhanji.lua",
+      "skills": [
+        "wzzz_v__zhanji"
+      ]
+    },
+    {
+      "source": "tuguo/tuguo_generals.lua",
+      "target": "vendor/skills/tuguo__tuguo_generals.lua",
+      "skills": [
+        "wzzz_v__tg__kaiji",
+        "wzzz_v__tg__pingxi",
+        "wzzz_v__tg__fenwei",
+        "wzzz_v__tg__yanfa",
+        "#wzzz_v__tg__yanfa_discard",
+        "wzzz_v__tg__zhoubing",
+        "wzzz_v__tg__rangtu",
+        "#wzzz_v__tg__rangtu_negative",
+        "wzzz_v__tg__jianlian",
+        "#wzzz_v__tg__jianlian_maxcards",
+        "wzzz_v__tg__wanzu",
+        "#wzzz_v__tg__wanzu_dis_remove",
+        "#wzzz_v__tg__wanzu_dis",
+        "wzzz_v__tg__fenlun",
+        "wzzz_v__tg__fenlun_vs",
+        "wzzz_v__tg__qihcai",
+        "#wzzz_v__tg__qihcai_minus",
+        "wzzz_v__tg__jiancheng",
+        "#wzzz_v__tg__jiancheng_distance",
+        "wzzz_v__tg__zunxiu",
+        "#wzzz_v__tg__zunxiu_filter",
+        "wzzz_v__tg__zhenfan",
+        "#wzzz_v__tg__zhenfan_buff",
+        "wzzz_v__tg__danding",
+        "wzzz_v__tg__zhemou",
+        "wzzz_v__tg__danli",
+        "wzzz_v__tg__bingji",
+        "#wzzz_v__tg__bingji_maxcards",
+        "wzzz_v__tg__jueyu",
+        "#wzzz_v__tg__jueyu_pay",
+        "#wzzz_v__tg__shuaikai_select",
+        "wzzz_v__tg__shuangkai",
+        "wzzz_v__tg__langbu",
+        "wzzz_v__tg__siye",
+        "wzzz_v__tg__xiannan",
+        "#wzzz_v__tg__xiannan_trig",
+        "wzzz_v__tg__shuanggu",
+        "#wzzz_v__tg__shuanggu_trig",
+        "wzzz_v__tg__jueyuk",
+        "wzzz_v__tg__bode",
+        "wzzz_v__tg__tongzhen",
+        "wzzz_v__tg__weixi",
+        "#wzzz_v__tg__weixi_draw",
+        "wzzz_v__tg__xuanhu"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2011/skills/huilei.lua",
+      "target": "vendor/skills/yj__pkg__yj2011__skills__huilei.lua",
+      "skills": [
+        "wzzz_v__huilei"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2011/skills/jueqing.lua",
+      "target": "vendor/skills/yj__pkg__yj2011__skills__jueqing.lua",
+      "skills": [
+        "wzzz_v__jueqing"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2011/skills/shangshi.lua",
+      "target": "vendor/skills/yj__pkg__yj2011__skills__shangshi.lua",
+      "skills": [
+        "wzzz_v__shangshi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2011/skills/yizhong.lua",
+      "target": "vendor/skills/yj__pkg__yj2011__skills__yizhong.lua",
+      "skills": [
+        "wzzz_v__yizhong"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2011/skills/zhichi.lua",
+      "target": "vendor/skills/yj__pkg__yj2011__skills__zhichi.lua",
+      "skills": [
+        "wzzz_v__zhichi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/fuhun.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__fuhun.lua",
+      "skills": [
+        "wzzz_v__fuhun"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/gongqi.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__gongqi.lua",
+      "skills": [
+        "wzzz_v__gongqi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/jiefan.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__jiefan.lua",
+      "skills": [
+        "wzzz_v__jiefan"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/miji.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__miji.lua",
+      "skills": [
+        "wzzz_v__miji"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/paiyi.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__paiyi.lua",
+      "skills": [
+        "wzzz_v__paiyi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/qice.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__qice.lua",
+      "skills": [
+        "wzzz_v__qice"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/zhenlie.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__zhenlie.lua",
+      "skills": [
+        "wzzz_v__zhenlie"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/zhuiyi.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__zhuiyi.lua",
+      "skills": [
+        "wzzz_v__zhuiyi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2012/skills/zili.lua",
+      "target": "vendor/skills/yj__pkg__yj2012__skills__zili.lua",
+      "skills": [
+        "wzzz_v__zili"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2013/skills/fencheng.lua",
+      "target": "vendor/skills/yj__pkg__yj2013__skills__fencheng.lua",
+      "skills": [
+        "wzzz_v__fencheng"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2013/skills/juece.lua",
+      "target": "vendor/skills/yj__pkg__yj2013__skills__juece.lua",
+      "skills": [
+        "wzzz_v__juece"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2013/skills/renxin.lua",
+      "target": "vendor/skills/yj__pkg__yj2013__skills__renxin.lua",
+      "skills": [
+        "wzzz_v__renxin"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2014/skills/faen.lua",
+      "target": "vendor/skills/yj__pkg__yj2014__skills__faen.lua",
+      "skills": [
+        "wzzz_v__faen"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2014/skills/fenli.lua",
+      "target": "vendor/skills/yj__pkg__yj2014__skills__fenli.lua",
+      "skills": [
+        "wzzz_v__fenli"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2014/skills/pingkou.lua",
+      "target": "vendor/skills/yj__pkg__yj2014__skills__pingkou.lua",
+      "skills": [
+        "wzzz_v__pingkou"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2014/skills/qiangzhi.lua",
+      "target": "vendor/skills/yj__pkg__yj2014__skills__qiangzhi.lua",
+      "skills": [
+        "wzzz_v__qiangzhi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2014/skills/xiantu.lua",
+      "target": "vendor/skills/yj__pkg__yj2014__skills__xiantu.lua",
+      "skills": [
+        "wzzz_v__xiantu"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/huaiyi.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__huaiyi.lua",
+      "skills": [
+        "wzzz_v__huaiyi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/huituo.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__huituo.lua",
+      "skills": [
+        "wzzz_v__huituo"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/qiaoshi.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__qiaoshi.lua",
+      "skills": [
+        "wzzz_v__qiaoshi"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/qinwang.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__qinwang.lua",
+      "skills": [
+        "wzzz_v__qinwang"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/xingshuai.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__xingshuai.lua",
+      "skills": [
+        "wzzz_v__xingshuai"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2015/skills/zhanjue.lua",
+      "target": "vendor/skills/yj__pkg__yj2015__skills__zhanjue.lua",
+      "skills": [
+        "wzzz_v__zhanjue"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2016/skills/jishe.lua",
+      "target": "vendor/skills/yj__pkg__yj2016__skills__jishe.lua",
+      "skills": [
+        "wzzz_v__jishe"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2016/skills/lianhuo.lua",
+      "target": "vendor/skills/yj__pkg__yj2016__skills__lianhuo.lua",
+      "skills": [
+        "wzzz_v__lianhuo"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2017/skills/jianzheng.lua",
+      "target": "vendor/skills/yj__pkg__yj2017__skills__jianzheng.lua",
+      "skills": [
+        "wzzz_v__jianzhengq"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2017/skills/tianbian.lua",
+      "target": "vendor/skills/yj__pkg__yj2017__skills__tianbian.lua",
+      "skills": [
+        "wzzz_v__tianbian"
+      ]
+    },
+    {
+      "source": "yj/pkg/yj2017/skills/zhuandui.lua",
+      "target": "vendor/skills/yj__pkg__yj2017__skills__zhuandui.lua",
+      "skills": [
+        "wzzz_v__zhuandui"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "source": "gamemode/pkg/1v1_generals/1v1_util.lua",
+      "target": "vendor/modules/gamemode/pkg/1v1_generals/1v1_util.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.gamemode.pkg.1v1_generals.1v1_util"
+    },
+    {
+      "source": "utility/_base.lua",
+      "target": "vendor/modules/utility/_base.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility._base"
+    },
+    {
+      "source": "utility/aux_events/delayed_pindian.lua",
+      "target": "vendor/modules/utility/aux_events/delayed_pindian.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.aux_events.delayed_pindian"
+    },
+    {
+      "source": "utility/aux_events/discussion.lua",
+      "target": "vendor/modules/utility/aux_events/discussion.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.aux_events.discussion"
+    },
+    {
+      "source": "utility/aux_events/general_appear.lua",
+      "target": "vendor/modules/utility/aux_events/general_appear.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.aux_events.general_appear"
+    },
+    {
+      "source": "utility/aux_events/joint_pindian.lua",
+      "target": "vendor/modules/utility/aux_events/joint_pindian.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.aux_events.joint_pindian"
+    },
+    {
+      "source": "utility/aux_events/present.lua",
+      "target": "vendor/modules/utility/aux_events/present.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.aux_events.present"
+    },
+    {
+      "source": "utility/mobile_util.lua",
+      "target": "vendor/modules/utility/mobile_util.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.mobile_util"
+    },
+    {
+      "source": "utility/utility.lua",
+      "target": "vendor/modules/utility/utility.lua",
+      "module": "packages.wangzhezhizhan.vendor.modules.utility.utility"
+    }
+  ]
+}

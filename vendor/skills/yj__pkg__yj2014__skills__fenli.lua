@@ -1,0 +1,47 @@
+local fenli = fk.CreateSkill {
+  name = "wzzz_v__fenli"
+}
+
+Fk:loadTranslationTable{
+  ["wzzz_v__fenli"] = "奋励",
+  [":wzzz_v__fenli"] = "若你的手牌数为全场最多，你可以跳过摸牌阶段；若你的体力值为全场最多，你可以跳过出牌阶段；若你的装备区里有牌且数量为全场最多，"..
+  "你可以跳过弃牌阶段。",
+
+  ["#wzzz_v__fenli-invoke"] = "奋励：你可以跳过%arg",
+
+  ["$wzzz_v__fenli1"] = "以逸待劳，坐收渔利。",
+  ["$wzzz_v__fenli2"] = "以主制客，占尽优势。",
+}
+
+fenli:addEffect(fk.EventPhaseChanging, {
+  can_trigger = function(self, event, target, player, data)
+    if target == player and player:hasSkill(fenli.name) and not data.skipped then
+      if data.phase == Player.Draw then
+        return table.every(player.room:getOtherPlayers(player), function (p)
+          return p:getHandcardNum() <= player:getHandcardNum()
+        end)
+      elseif data.phase == Player.Play then
+        return table.every(player.room:getOtherPlayers(player), function (p)
+          return p.hp <= player.hp
+        end)
+      elseif data.phase == Player.Discard and #player:getCardIds("e") > 0 then
+        return table.every(player.room:getOtherPlayers(player), function (p)
+          return #p:getCardIds("e") <= #player:getCardIds("e")
+        end)
+      end
+    end
+  end,
+  on_cost = function(self, event, target, player, data)
+    local phases = {"phase_draw", "phase_play", "phase_discard"}
+    return player.room:askToSkillInvoke(player, {
+      skill_name = fenli.name,
+      prompt = "#wzzz_v__fenli-invoke:::"..phases[data.phase - 3],
+    })
+  end,
+  on_use = function(self, event, target, player, data)
+    player:skip(data.phase)
+    data.skipped = true
+  end,
+})
+
+return fenli

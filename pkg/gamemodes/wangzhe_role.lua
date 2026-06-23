@@ -1,4 +1,8 @@
-local WZ_GENERALS_PACKAGE = "wangzhezhizhanwujiang"
+local WZ_GENERALS_PACKAGES = {
+  wangzhezhizhan = true,
+  wzzz_lords = true,
+  wzzz_generals = true,
+}
 local CHOOSE_TIMEOUT = 60
 local LORD_CANDIDATE_COUNT = 4
 local NON_LORD_CANDIDATE_COUNT = 6
@@ -40,7 +44,11 @@ local function is_wangzhe_general(name)
   if not g then return false end
   local pkg = g.package or g.packageName
   if type(pkg) == "table" then pkg = pkg.name end
-  return pkg == WZ_GENERALS_PACKAGE or string.find(name, "^wz__") ~= nil or string.find(name, "^wangzhe__") ~= nil
+  return WZ_GENERALS_PACKAGES[pkg] == true or
+    string.find(name, "^wzzz__") ~= nil or
+    string.find(name, "^wzzz_lord__") ~= nil or
+    string.find(name, "^wz__") ~= nil or
+    string.find(name, "^wangzhe__") ~= nil
 end
 
 local function skill_has_lord_tag(skill)
@@ -670,7 +678,7 @@ local mode = fk.CreateGameMode{
   main_mode = "role_mode",
   rule = RULE_SKILL,
   whitelist = function(self, pkg)
-    return pkg.name == "wangzhezhizhan" or pkg.name == WZ_GENERALS_PACKAGE or
+    return WZ_GENERALS_PACKAGES[pkg.name] == true or
       pkg.name == "standard_cards" or pkg.name == "standard"
   end,
   feasible = function(self, settings)

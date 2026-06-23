@@ -1,0 +1,3922 @@
+[
+  {
+    "general_number": 1,
+    "general": "曹操",
+    "skill": "述志",
+    "implementation": "custom",
+    "selected_id": "wzzz__shuzhi",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__shuzhi"
+  },
+  {
+    "general_number": 1,
+    "general": "曹操",
+    "skill": "奸雄",
+    "implementation": "reference",
+    "selected_id": "ex__jianxiong",
+    "source_files": [
+      "standard_ex/pkg/general/skills/jianxiong.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__ex__jianxiong"
+  },
+  {
+    "general_number": 1,
+    "general": "曹操",
+    "skill": "清正",
+    "implementation": "reference",
+    "selected_id": "mou__qingzheng",
+    "source_files": [
+      "mougong/pkg/zhi/skills/mou_qingzheng.lua"
+    ],
+    "match_score": 0.6804,
+    "local_id": "wzzz_v__mou__qingzheng"
+  },
+  {
+    "general_number": 1,
+    "general": "曹操",
+    "skill": "护驾",
+    "implementation": "reference",
+    "selected_id": "hujia",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/hujia.lua"
+    ],
+    "match_score": 0.6308,
+    "local_id": "wzzz_v__hujia"
+  },
+  {
+    "general_number": 2,
+    "general": "曹叡",
+    "skill": "明鉴",
+    "implementation": "reference",
+    "selected_id": "ty_ex__mingjian",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/mingjian.lua"
+    ],
+    "match_score": 0.8667,
+    "local_id": "wzzz_v__ty_ex__mingjian"
+  },
+  {
+    "general_number": 2,
+    "general": "曹叡",
+    "skill": "恢拓",
+    "implementation": "reference",
+    "selected_id": "huituo",
+    "source_files": [
+      "yj/pkg/yj2015/skills/huituo.lua"
+    ],
+    "match_score": 0.9888,
+    "local_id": "wzzz_v__huituo"
+  },
+  {
+    "general_number": 2,
+    "general": "曹叡",
+    "skill": "兴衰",
+    "implementation": "reference",
+    "selected_id": "xingshuai",
+    "source_files": [
+      "yj/pkg/yj2015/skills/xingshuai.lua"
+    ],
+    "match_score": 0.8943,
+    "local_id": "wzzz_v__xingshuai"
+  },
+  {
+    "general_number": 3,
+    "general": "曹丕",
+    "skill": "行殇",
+    "implementation": "reference",
+    "selected_id": "xingshang",
+    "source_files": [
+      "shzl/pkg/forest/skills/xingshang.lua"
+    ],
+    "match_score": 0.9697,
+    "local_id": "wzzz_v__xingshang"
+  },
+  {
+    "general_number": 3,
+    "general": "曹丕",
+    "skill": "放逐",
+    "implementation": "reference",
+    "selected_id": "fangzhu",
+    "source_files": [
+      "shzl/pkg/forest/skills/fangzhu.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__fangzhu"
+  },
+  {
+    "general_number": 3,
+    "general": "曹丕",
+    "skill": "颂威",
+    "implementation": "reference",
+    "selected_id": "songwei",
+    "source_files": [
+      "shzl/pkg/forest/skills/songwei.lua"
+    ],
+    "match_score": 0.7119,
+    "local_id": "wzzz_v__songwei"
+  },
+  {
+    "general_number": 4,
+    "general": "刘备",
+    "skill": "仁德",
+    "implementation": "reference",
+    "selected_id": "ex__rende",
+    "source_files": [
+      "standard_ex/pkg/general/skills/rende.lua"
+    ],
+    "match_score": 0.705,
+    "local_id": "wzzz_v__ex__rende"
+  },
+  {
+    "general_number": 4,
+    "general": "刘备",
+    "skill": "仁望",
+    "implementation": "reference",
+    "selected_id": "v11__renwang",
+    "source_files": [
+      "gamemode/pkg/1v1_generals/skills/renwang.lua"
+    ],
+    "match_score": 0.7573,
+    "local_id": "wzzz_v__v11__renwang"
+  },
+  {
+    "general_number": 4,
+    "general": "刘备",
+    "skill": "激将",
+    "implementation": "reference",
+    "selected_id": "jijiang",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/jijiang.lua"
+    ],
+    "match_score": 0.6095,
+    "local_id": "wzzz_v__jijiang"
+  },
+  {
+    "general_number": 4,
+    "general": "刘备",
+    "skill": "授钺",
+    "implementation": "custom",
+    "selected_id": "wzzz__shouyue",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__shouyue"
+  },
+  {
+    "general_number": 5,
+    "general": "刘禅",
+    "skill": "享乐",
+    "implementation": "reference",
+    "selected_id": "xiangle",
+    "source_files": [
+      "shzl/pkg/mountain/skills/xiangle.lua"
+    ],
+    "match_score": 0.6944,
+    "local_id": "wzzz_v__xiangle"
+  },
+  {
+    "general_number": 5,
+    "general": "刘禅",
+    "skill": "放权",
+    "implementation": "reference",
+    "selected_id": "m_ex__fangquan",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/fangquan.lua"
+    ],
+    "match_score": 0.8421,
+    "local_id": "wzzz_v__m_ex__fangquan"
+  },
+  {
+    "general_number": 5,
+    "general": "刘禅",
+    "skill": "若愚",
+    "implementation": "reference",
+    "selected_id": "ol_ex__ruoyu",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/ruoyu.lua"
+    ],
+    "match_score": 0.9663,
+    "local_id": "wzzz_v__ol_ex__ruoyu"
+  },
+  {
+    "general_number": 5,
+    "general": "刘禅",
+    "skill": "激将",
+    "implementation": "reference",
+    "selected_id": "jijiang",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/jijiang.lua"
+    ],
+    "match_score": 0.5246,
+    "local_id": "wzzz_v__jijiang"
+  },
+  {
+    "general_number": 5,
+    "general": "刘禅",
+    "skill": "思蜀",
+    "implementation": "reference",
+    "selected_id": "sishu",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/sishu.lua"
+    ],
+    "match_score": 0.875,
+    "local_id": "wzzz_v__sishu"
+  },
+  {
+    "general_number": 6,
+    "general": "孙皓",
+    "skill": "残蚀",
+    "implementation": "reference",
+    "selected_id": "ol__canshi",
+    "source_files": [
+      "ol/pkg/xinghe/skills/canshi.lua"
+    ],
+    "match_score": 0.8911,
+    "local_id": "wzzz_v__ol__canshi"
+  },
+  {
+    "general_number": 6,
+    "general": "孙皓",
+    "skill": "仇海",
+    "implementation": "reference",
+    "selected_id": "ty__chouhai",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/chouhai.lua"
+    ],
+    "match_score": 0.9565,
+    "local_id": "wzzz_v__ty__chouhai"
+  },
+  {
+    "general_number": 6,
+    "general": "孙皓",
+    "skill": "归命",
+    "implementation": "reference",
+    "selected_id": "guiming",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/guiming.lua"
+    ],
+    "match_score": 0.963,
+    "local_id": "wzzz_v__guiming"
+  },
+  {
+    "general_number": 7,
+    "general": "孙权",
+    "skill": "制衡",
+    "implementation": "reference",
+    "selected_id": "tycl__zhiheng",
+    "source_files": [
+      "tenyear/pkg/tenyear_other/skills/tycl__zhiheng.lua"
+    ],
+    "match_score": 0.9882,
+    "local_id": "wzzz_v__tycl__zhiheng"
+  },
+  {
+    "general_number": 7,
+    "general": "孙权",
+    "skill": "救援",
+    "implementation": "reference",
+    "selected_id": "mou__jiuyuan",
+    "source_files": [
+      "mougong/pkg/zhi/skills/mou_jiuyuan.lua"
+    ],
+    "match_score": 0.814,
+    "local_id": "wzzz_v__mou__jiuyuan"
+  },
+  {
+    "general_number": 7,
+    "general": "孙权",
+    "skill": "统业",
+    "implementation": "reference",
+    "selected_id": "ofl_mou__tongye",
+    "source_files": [
+      "offline/pkg/ofl_mou/skills/tongye.lua"
+    ],
+    "match_score": 0.3158,
+    "local_id": "wzzz_v__ofl_mou__tongye"
+  },
+  {
+    "general_number": 7,
+    "general": "孙权",
+    "skill": "英姿",
+    "implementation": "reference",
+    "selected_id": "ex__yingzi",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yingzi.lua"
+    ],
+    "match_score": 0.9818,
+    "local_id": "wzzz_v__ex__yingzi"
+  },
+  {
+    "general_number": 7,
+    "general": "孙权",
+    "skill": "固政",
+    "implementation": "reference",
+    "selected_id": "guzheng",
+    "source_files": [
+      "shzl/pkg/mountain/skills/guzheng.lua"
+    ],
+    "match_score": 0.9412,
+    "local_id": "wzzz_v__guzheng"
+  },
+  {
+    "general_number": 8,
+    "general": "孙策",
+    "skill": "激昂",
+    "implementation": "reference",
+    "selected_id": "jiang",
+    "source_files": [
+      "shzl/pkg/mountain/skills/jiang.lua"
+    ],
+    "match_score": 0.6667,
+    "local_id": "wzzz_v__jiang"
+  },
+  {
+    "general_number": 8,
+    "general": "孙策",
+    "skill": "魂姿",
+    "implementation": "reference",
+    "selected_id": "ol_ex__hunzi",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/hunzi.lua"
+    ],
+    "match_score": 0.9703,
+    "local_id": "wzzz_v__ol_ex__hunzi"
+  },
+  {
+    "general_number": 8,
+    "general": "孙策",
+    "skill": "制霸",
+    "implementation": "reference",
+    "selected_id": "zhiba",
+    "source_files": [
+      "shzl/pkg/mountain/skills/zhiba.lua"
+    ],
+    "match_score": 0.768,
+    "local_id": "wzzz_v__zhiba"
+  },
+  {
+    "general_number": 8,
+    "general": "孙策",
+    "skill": "英姿",
+    "implementation": "reference",
+    "selected_id": "ex__yingzi",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yingzi.lua"
+    ],
+    "match_score": 0.9818,
+    "local_id": "wzzz_v__ex__yingzi"
+  },
+  {
+    "general_number": 8,
+    "general": "孙策",
+    "skill": "英魂",
+    "implementation": "reference",
+    "selected_id": "yinghun",
+    "source_files": [
+      "shzl/pkg/forest/skills/yinghun.lua"
+    ],
+    "match_score": 0.7368,
+    "local_id": "wzzz_v__yinghun"
+  },
+  {
+    "general_number": 9,
+    "general": "孙坚",
+    "skill": "英魂",
+    "implementation": "reference",
+    "selected_id": "yinghun",
+    "source_files": [
+      "shzl/pkg/forest/skills/yinghun.lua"
+    ],
+    "match_score": 0.7368,
+    "local_id": "wzzz_v__yinghun"
+  },
+  {
+    "general_number": 9,
+    "general": "孙坚",
+    "skill": "武烈",
+    "implementation": "reference",
+    "selected_id": "wulie",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/wulie.lua"
+    ],
+    "match_score": 0.3158,
+    "local_id": "wzzz_v__wulie"
+  },
+  {
+    "general_number": 9,
+    "general": "孙坚",
+    "skill": "破虏",
+    "implementation": "reference",
+    "selected_id": "os_ex__polu",
+    "source_files": [
+      "overseas/pkg/overseas_ex/skills/os_ex_polu.lua"
+    ],
+    "match_score": 0.8283,
+    "local_id": "wzzz_v__os_ex__polu"
+  },
+  {
+    "general_number": 9,
+    "general": "孙坚",
+    "skill": "平讨",
+    "implementation": "reference",
+    "selected_id": "ol__pingtao",
+    "source_files": [
+      "ol/pkg/jsrg/skills/pingtao.lua"
+    ],
+    "match_score": 0.1412,
+    "local_id": "wzzz_v__ol__pingtao"
+  },
+  {
+    "general_number": 10,
+    "general": "刘协",
+    "skill": "天命",
+    "implementation": "reference",
+    "selected_id": "tianming",
+    "source_files": [
+      "sp/pkg/sp/skills/tianming.lua"
+    ],
+    "match_score": 0.6852,
+    "local_id": "wzzz_v__tianming"
+  },
+  {
+    "general_number": 10,
+    "general": "刘协",
+    "skill": "密诏",
+    "implementation": "reference",
+    "selected_id": "mizhao",
+    "source_files": [
+      "sp/pkg/sp/skills/mizhao.lua"
+    ],
+    "match_score": 0.6207,
+    "local_id": "wzzz_v__mizhao"
+  },
+  {
+    "general_number": 10,
+    "general": "刘协",
+    "skill": "坠廷",
+    "implementation": "reference",
+    "selected_id": "os__zhuiting",
+    "source_files": [
+      "overseas/pkg/overseas_sp/skills/os_zhuiting.lua"
+    ],
+    "match_score": 0.6977,
+    "local_id": "wzzz_v__os__zhuiting"
+  },
+  {
+    "general_number": 11,
+    "general": "SP 曹仁",
+    "skill": "伪溃",
+    "implementation": "reference",
+    "selected_id": "weikui",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/weikui.lua"
+    ],
+    "match_score": 0.8315,
+    "local_id": "wzzz_v__weikui"
+  },
+  {
+    "general_number": 11,
+    "general": "SP 曹仁",
+    "skill": "励战",
+    "implementation": "reference",
+    "selected_id": "lizhan",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/lizhan.lua"
+    ],
+    "match_score": 0.8636,
+    "local_id": "wzzz_v__lizhan"
+  },
+  {
+    "general_number": 12,
+    "general": "鲁芝",
+    "skill": "清忠",
+    "implementation": "reference",
+    "selected_id": "qingzhong",
+    "source_files": [
+      "ol/pkg/xinghe/skills/qingzhong.lua"
+    ],
+    "match_score": 0.7912,
+    "local_id": "wzzz_v__qingzhong"
+  },
+  {
+    "general_number": 12,
+    "general": "鲁芝",
+    "skill": "卫境",
+    "implementation": "reference",
+    "selected_id": "weijing",
+    "source_files": [
+      "ol/pkg/xinghe/skills/weijing.lua"
+    ],
+    "match_score": 0.6,
+    "local_id": "wzzz_v__weijing"
+  },
+  {
+    "general_number": 13,
+    "general": "朱灵",
+    "skill": "急陷",
+    "implementation": "reference",
+    "selected_id": "jixian",
+    "source_files": [
+      "ol/pkg/xinghe/skills/jixian.lua",
+      "ol/pkg/xinghe/skills/jixian.lua"
+    ],
+    "match_score": 0.6515,
+    "local_id": "wzzz_v__jixian"
+  },
+  {
+    "general_number": 14,
+    "general": "陈群",
+    "skill": "品第",
+    "implementation": "reference",
+    "selected_id": "ty_ex__pindi",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/pindi.lua"
+    ],
+    "match_score": 0.6333,
+    "local_id": "wzzz_v__ty_ex__pindi"
+  },
+  {
+    "general_number": 14,
+    "general": "陈群",
+    "skill": "法恩",
+    "implementation": "reference",
+    "selected_id": "faen",
+    "source_files": [
+      "yj/pkg/yj2014/skills/faen.lua"
+    ],
+    "match_score": 0.88,
+    "local_id": "wzzz_v__faen"
+  },
+  {
+    "general_number": 15,
+    "general": "李典",
+    "skill": "恂恂",
+    "implementation": "reference",
+    "selected_id": "xunxun",
+    "source_files": [
+      "standard_ex/pkg/general/skills/xunxun.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__xunxun"
+  },
+  {
+    "general_number": 15,
+    "general": "李典",
+    "skill": "忘隙",
+    "implementation": "reference",
+    "selected_id": "ol_ex__wangxi",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/wangxi.lua"
+    ],
+    "match_score": 0.9293,
+    "local_id": "wzzz_v__ol_ex__wangxi"
+  },
+  {
+    "general_number": 16,
+    "general": "典韦",
+    "skill": "强袭",
+    "implementation": "reference",
+    "selected_id": "ol__qiangxi",
+    "source_files": [
+      "ol/pkg/ol_shzl/skills/qiangxi.lua"
+    ],
+    "match_score": 0.8889,
+    "local_id": "wzzz_v__ol__qiangxi"
+  },
+  {
+    "general_number": 16,
+    "general": "典韦",
+    "skill": "狞恶",
+    "implementation": "reference",
+    "selected_id": "ninge",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/ninge.lua"
+    ],
+    "match_score": 0.8444,
+    "local_id": "wzzz_v__ninge"
+  },
+  {
+    "general_number": 17,
+    "general": "夏侯惇",
+    "skill": "刚烈",
+    "implementation": "reference",
+    "selected_id": "ex__ganglie",
+    "source_files": [
+      "standard_ex/pkg/general/skills/ganglie.lua"
+    ],
+    "match_score": 0.8,
+    "local_id": "wzzz_v__ex__ganglie"
+  },
+  {
+    "general_number": 17,
+    "general": "夏侯惇",
+    "skill": "清俭",
+    "implementation": "reference",
+    "selected_id": "ex__qingjian",
+    "source_files": [
+      "standard_ex/pkg/general/skills/qingjian.lua"
+    ],
+    "match_score": 0.8226,
+    "local_id": "wzzz_v__ex__qingjian"
+  },
+  {
+    "general_number": 18,
+    "general": "文聘",
+    "skill": "坚城",
+    "implementation": "reference",
+    "selected_id": "tg__jiancheng",
+    "source_files": [
+      "tuguo/tuguo_generals.lua",
+      "tuguo/pkg/tuguo_generals/skills/tg__jiancheng.lua"
+    ],
+    "match_score": 0.12,
+    "local_id": "wzzz_v__tg__jiancheng"
+  },
+  {
+    "general_number": 18,
+    "general": "文聘",
+    "skill": "镇卫",
+    "implementation": "reference",
+    "selected_id": "zhenwei",
+    "source_files": [
+      "sp/pkg/sp/skills/zhenwei.lua"
+    ],
+    "match_score": 0.8675,
+    "local_id": "wzzz_v__zhenwei"
+  },
+  {
+    "general_number": 18,
+    "general": "文聘",
+    "skill": "守御",
+    "implementation": "custom",
+    "selected_id": "wzzz__shouyu",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__shouyu"
+  },
+  {
+    "general_number": 19,
+    "general": "荀攸",
+    "skill": "奇策",
+    "implementation": "reference",
+    "selected_id": "qice",
+    "source_files": [
+      "yj/pkg/yj2012/skills/qice.lua"
+    ],
+    "match_score": 0.9434,
+    "local_id": "wzzz_v__qice"
+  },
+  {
+    "general_number": 19,
+    "general": "荀攸",
+    "skill": "智愚",
+    "implementation": "reference",
+    "selected_id": "ty_ex__zhiyu",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/zhiyu.lua"
+    ],
+    "match_score": 0.8174,
+    "local_id": "wzzz_v__ty_ex__zhiyu"
+  },
+  {
+    "general_number": 20,
+    "general": "蒋干",
+    "skill": "盗书",
+    "implementation": "reference",
+    "selected_id": "daoshu",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/daoshu.lua"
+    ],
+    "match_score": 0.5419,
+    "local_id": "wzzz_v__daoshu"
+  },
+  {
+    "general_number": 20,
+    "general": "蒋干",
+    "skill": "伪诚",
+    "implementation": "reference",
+    "selected_id": "weicheng",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/weicheng.lua"
+    ],
+    "match_score": 0.6667,
+    "local_id": "wzzz_v__weicheng"
+  },
+  {
+    "general_number": 20,
+    "general": "蒋干",
+    "skill": "戴罪",
+    "implementation": "reference",
+    "selected_id": "daizui",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/daizui.lua"
+    ],
+    "match_score": 0.4421,
+    "local_id": "wzzz_v__daizui"
+  },
+  {
+    "general_number": 21,
+    "general": "张辽",
+    "skill": "突袭",
+    "implementation": "reference",
+    "selected_id": "tuxi",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/tuxi.lua"
+    ],
+    "match_score": 0.3564,
+    "local_id": "wzzz_v__tuxi"
+  },
+  {
+    "general_number": 22,
+    "general": "郭嘉",
+    "skill": "天妒",
+    "implementation": "reference",
+    "selected_id": "tiandu",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/tiandu.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__tiandu"
+  },
+  {
+    "general_number": 22,
+    "general": "郭嘉",
+    "skill": "遗计",
+    "implementation": "reference",
+    "selected_id": "ex__yiji",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yiji.lua"
+    ],
+    "match_score": 0.5946,
+    "local_id": "wzzz_v__ex__yiji"
+  },
+  {
+    "general_number": 23,
+    "general": "司马懿",
+    "skill": "鬼才",
+    "implementation": "reference",
+    "selected_id": "guicai",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/guicai.lua"
+    ],
+    "match_score": 0.9787,
+    "local_id": "wzzz_v__guicai"
+  },
+  {
+    "general_number": 23,
+    "general": "司马懿",
+    "skill": "反馈",
+    "implementation": "reference",
+    "selected_id": "ex__fankui",
+    "source_files": [
+      "standard_ex/pkg/general/skills/fankui.lua"
+    ],
+    "match_score": 0.4595,
+    "local_id": "wzzz_v__ex__fankui"
+  },
+  {
+    "general_number": 24,
+    "general": "荀彧",
+    "skill": "驱虎",
+    "implementation": "reference",
+    "selected_id": "quhu",
+    "source_files": [
+      "shzl/pkg/fire/skills/quhu.lua"
+    ],
+    "match_score": 0.8689,
+    "local_id": "wzzz_v__quhu"
+  },
+  {
+    "general_number": 24,
+    "general": "荀彧",
+    "skill": "节命",
+    "implementation": "reference",
+    "selected_id": "ol_ex__jieming",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/jieming.lua"
+    ],
+    "match_score": 0.8036,
+    "local_id": "wzzz_v__ol_ex__jieming"
+  },
+  {
+    "general_number": 25,
+    "general": "曹昂",
+    "skill": "慷忾",
+    "implementation": "reference",
+    "selected_id": "kangkai",
+    "source_files": [
+      "sp/pkg/sp/skills/kangkai.lua"
+    ],
+    "match_score": 0.7788,
+    "local_id": "wzzz_v__kangkai"
+  },
+  {
+    "general_number": 25,
+    "general": "曹昂",
+    "skill": "舍身",
+    "implementation": "reference",
+    "selected_id": "vd_sheshen",
+    "source_files": [
+      "gamemode/pkg/gamemodes/rule_skills/vd_sheshen.lua"
+    ],
+    "match_score": 0.1386,
+    "local_id": "wzzz_v__vd_sheshen"
+  },
+  {
+    "general_number": 26,
+    "general": "张春华",
+    "skill": "绝情",
+    "implementation": "reference",
+    "selected_id": "ty_ex__jueqing",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/jueqing.lua"
+    ],
+    "match_score": 0.6481,
+    "local_id": "wzzz_v__ty_ex__jueqing"
+  },
+  {
+    "general_number": 26,
+    "general": "张春华",
+    "skill": "伤逝",
+    "implementation": "reference",
+    "selected_id": "shangshi",
+    "source_files": [
+      "yj/pkg/yj2011/skills/shangshi.lua"
+    ],
+    "match_score": 0.5246,
+    "local_id": "wzzz_v__shangshi"
+  },
+  {
+    "general_number": 26,
+    "general": "张春华",
+    "skill": "翦灭",
+    "implementation": "reference",
+    "selected_id": "jianmie",
+    "source_files": [
+      "ol/pkg/ol_exyj/skills/jianmie.lua"
+    ],
+    "match_score": 0.5455,
+    "local_id": "wzzz_v__jianmie"
+  },
+  {
+    "general_number": 27,
+    "general": "徐晃",
+    "skill": "断粮",
+    "implementation": "reference",
+    "selected_id": "m_ex__duanliang",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/duanliang.lua"
+    ],
+    "match_score": 0.7304,
+    "local_id": "wzzz_v__m_ex__duanliang"
+  },
+  {
+    "general_number": 27,
+    "general": "徐晃",
+    "skill": "截辎",
+    "implementation": "reference",
+    "selected_id": "m_ex__jiezi",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/jiezi.lua"
+    ],
+    "match_score": 0.7111,
+    "local_id": "wzzz_v__m_ex__jiezi"
+  },
+  {
+    "general_number": 28,
+    "general": "阎柔",
+    "skill": "仇讨",
+    "implementation": "reference",
+    "selected_id": "choutao",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/choutao.lua"
+    ],
+    "match_score": 0.8043,
+    "local_id": "wzzz_v__choutao"
+  },
+  {
+    "general_number": 28,
+    "general": "阎柔",
+    "skill": "襄戍",
+    "implementation": "reference",
+    "selected_id": "xiangshu",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/xiangshu.lua"
+    ],
+    "match_score": 0.8738,
+    "local_id": "wzzz_v__xiangshu"
+  },
+  {
+    "general_number": 29,
+    "general": "郝昭",
+    "skill": "镇骨",
+    "implementation": "reference",
+    "selected_id": "zhengu",
+    "source_files": [
+      "shzl/pkg/thunder/skills/zhengu.lua"
+    ],
+    "match_score": 0.8,
+    "local_id": "wzzz_v__zhengu"
+  },
+  {
+    "general_number": 30,
+    "general": "毛玠",
+    "skill": "秉清",
+    "implementation": "reference",
+    "selected_id": "bingqing",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/bingqing.lua"
+    ],
+    "match_score": 0.3265,
+    "local_id": "wzzz_v__bingqing"
+  },
+  {
+    "general_number": 30,
+    "general": "毛玠",
+    "skill": "奉迎",
+    "implementation": "reference",
+    "selected_id": "ty__fengying",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/fengying.lua"
+    ],
+    "match_score": 0.7833,
+    "local_id": "wzzz_v__ty__fengying"
+  },
+  {
+    "general_number": 31,
+    "general": "夏侯渊",
+    "skill": "神速",
+    "implementation": "reference",
+    "selected_id": "shensu",
+    "source_files": [
+      "shzl/pkg/wind/skills/shensu.lua"
+    ],
+    "match_score": 0.9106,
+    "local_id": "wzzz_v__shensu"
+  },
+  {
+    "general_number": 31,
+    "general": "夏侯渊",
+    "skill": "设变",
+    "implementation": "reference",
+    "selected_id": "shebian",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/shebian.lua"
+    ],
+    "match_score": 0.9143,
+    "local_id": "wzzz_v__shebian"
+  },
+  {
+    "general_number": 32,
+    "general": "邓艾",
+    "skill": "屯田",
+    "implementation": "reference",
+    "selected_id": "ol_ex__tuntian",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/tuntian.lua"
+    ],
+    "match_score": 0.496,
+    "local_id": "wzzz_v__ol_ex__tuntian"
+  },
+  {
+    "general_number": 32,
+    "general": "邓艾",
+    "skill": "凿险",
+    "implementation": "reference",
+    "selected_id": "zaoxian",
+    "source_files": [
+      "shzl/pkg/mountain/skills/zaoxian.lua"
+    ],
+    "match_score": 0.8852,
+    "local_id": "wzzz_v__zaoxian"
+  },
+  {
+    "general_number": 32,
+    "general": "邓艾",
+    "skill": "急袭",
+    "implementation": "reference",
+    "selected_id": "jixi",
+    "source_files": [
+      "shzl/pkg/mountain/skills/jixi.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__jixi"
+  },
+  {
+    "general_number": 33,
+    "general": "王基",
+    "skill": "奇制",
+    "implementation": "reference",
+    "selected_id": "qizhi",
+    "source_files": [
+      "shzl/pkg/shadow/skills/qizhi.lua"
+    ],
+    "match_score": 0.8,
+    "local_id": "wzzz_v__qizhi"
+  },
+  {
+    "general_number": 33,
+    "general": "王基",
+    "skill": "进趋",
+    "implementation": "reference",
+    "selected_id": "jinqu",
+    "source_files": [
+      "shzl/pkg/shadow/skills/jinqu.lua"
+    ],
+    "match_score": 0.9014,
+    "local_id": "wzzz_v__jinqu"
+  },
+  {
+    "general_number": 34,
+    "general": "SP 姜维",
+    "skill": "困奋",
+    "implementation": "reference",
+    "selected_id": "kunfenEx",
+    "source_files": [
+      "sp/pkg/sp_jsp/skills/kunfenEx.lua"
+    ],
+    "match_score": 0.6909,
+    "local_id": "wzzz_v__kunfenEx"
+  },
+  {
+    "general_number": 34,
+    "general": "SP 姜维",
+    "skill": "逢亮",
+    "implementation": "reference",
+    "selected_id": "fengliang",
+    "source_files": [
+      "sp/pkg/sp_jsp/skills/fengliang.lua"
+    ],
+    "match_score": 0.8315,
+    "local_id": "wzzz_v__fengliang"
+  },
+  {
+    "general_number": 34,
+    "general": "SP 姜维",
+    "skill": "挑衅",
+    "implementation": "reference",
+    "selected_id": "m_ex__tiaoxin",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/tiaoxin.lua"
+    ],
+    "match_score": 0.7692,
+    "local_id": "wzzz_v__m_ex__tiaoxin"
+  },
+  {
+    "general_number": 35,
+    "general": "钟会",
+    "skill": "权计",
+    "implementation": "reference",
+    "selected_id": "m_ex__quanji",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/quanji.lua"
+    ],
+    "match_score": 0.6852,
+    "local_id": "wzzz_v__m_ex__quanji"
+  },
+  {
+    "general_number": 35,
+    "general": "钟会",
+    "skill": "自立",
+    "implementation": "reference",
+    "selected_id": "zili",
+    "source_files": [
+      "yj/pkg/yj2012/skills/zili.lua"
+    ],
+    "match_score": 0.6337,
+    "local_id": "wzzz_v__zili"
+  },
+  {
+    "general_number": 35,
+    "general": "钟会",
+    "skill": "排异",
+    "implementation": "reference",
+    "selected_id": "m_ex__paiyi",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/paiyi.lua",
+      "mobile/pkg/yj_ex/skills/paiyi.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__m_ex__paiyi"
+  },
+  {
+    "general_number": 36,
+    "general": "王异",
+    "skill": "贞烈",
+    "implementation": "reference",
+    "selected_id": "zhenlie",
+    "source_files": [
+      "yj/pkg/yj2012/skills/zhenlie.lua"
+    ],
+    "match_score": 0.9474,
+    "local_id": "wzzz_v__zhenlie"
+  },
+  {
+    "general_number": 36,
+    "general": "王异",
+    "skill": "秘计",
+    "implementation": "reference",
+    "selected_id": "miji",
+    "source_files": [
+      "yj/pkg/yj2012/skills/miji.lua"
+    ],
+    "match_score": 0.9189,
+    "local_id": "wzzz_v__miji"
+  },
+  {
+    "general_number": 37,
+    "general": "曹冲",
+    "skill": "称象",
+    "implementation": "reference",
+    "selected_id": "ty_ex__chengxiang",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/chengxiang.lua"
+    ],
+    "match_score": 0.7967,
+    "local_id": "wzzz_v__ty_ex__chengxiang"
+  },
+  {
+    "general_number": 37,
+    "general": "曹冲",
+    "skill": "仁心",
+    "implementation": "reference",
+    "selected_id": "renxin",
+    "source_files": [
+      "yj/pkg/yj2013/skills/renxin.lua"
+    ],
+    "match_score": 0.8919,
+    "local_id": "wzzz_v__renxin"
+  },
+  {
+    "general_number": 38,
+    "general": "甄姬",
+    "skill": "洛神",
+    "implementation": "reference",
+    "selected_id": "ex__luoshen",
+    "source_files": [
+      "standard_ex/pkg/general/skills/luoshen.lua"
+    ],
+    "match_score": 0.6316,
+    "local_id": "wzzz_v__ex__luoshen"
+  },
+  {
+    "general_number": 38,
+    "general": "甄姬",
+    "skill": "倾国",
+    "implementation": "reference",
+    "selected_id": "qingguo",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/qingguo.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__qingguo"
+  },
+  {
+    "general_number": 39,
+    "general": "许褚",
+    "skill": "裸衣",
+    "implementation": "reference",
+    "selected_id": "ex__luoyi",
+    "source_files": [
+      "standard_ex/pkg/general/skills/luoyi.lua"
+    ],
+    "match_score": 0.6099,
+    "local_id": "wzzz_v__ex__luoyi"
+  },
+  {
+    "general_number": 39,
+    "general": "许褚",
+    "skill": "挟缠",
+    "implementation": "reference",
+    "selected_id": "v11__xiechan",
+    "source_files": [
+      "gamemode/pkg/1v1_generals/skills/xiechan.lua"
+    ],
+    "match_score": 0.8352,
+    "local_id": "wzzz_v__v11__xiechan"
+  },
+  {
+    "general_number": 40,
+    "general": "诸葛诞",
+    "skill": "功獒",
+    "implementation": "reference",
+    "selected_id": "ty_ex__gongao",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/gongao.lua"
+    ],
+    "match_score": 0.6596,
+    "local_id": "wzzz_v__ty_ex__gongao"
+  },
+  {
+    "general_number": 40,
+    "general": "诸葛诞",
+    "skill": "举义",
+    "implementation": "reference",
+    "selected_id": "ty_ex__juyi",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/juyi.lua"
+    ],
+    "match_score": 0.7955,
+    "local_id": "wzzz_v__ty_ex__juyi"
+  },
+  {
+    "general_number": 40,
+    "general": "诸葛诞",
+    "skill": "威重",
+    "implementation": "reference",
+    "selected_id": "weizhong",
+    "source_files": [
+      "sp/pkg/sp/skills/weizhong.lua"
+    ],
+    "match_score": 0.6207,
+    "local_id": "wzzz_v__weizhong"
+  },
+  {
+    "general_number": 40,
+    "general": "诸葛诞",
+    "skill": "崩坏",
+    "implementation": "reference",
+    "selected_id": "benghuai",
+    "source_files": [
+      "shzl/pkg/forest/skills/benghuai.lua"
+    ],
+    "match_score": 0.7887,
+    "local_id": "wzzz_v__benghuai"
+  },
+  {
+    "general_number": 41,
+    "general": "刘谌",
+    "skill": "战绝",
+    "implementation": "reference",
+    "selected_id": "zhanjue",
+    "source_files": [
+      "yj/pkg/yj2015/skills/zhanjue.lua"
+    ],
+    "match_score": 0.625,
+    "local_id": "wzzz_v__zhanjue"
+  },
+  {
+    "general_number": 41,
+    "general": "刘谌",
+    "skill": "勤王",
+    "implementation": "reference",
+    "selected_id": "qinwang",
+    "source_files": [
+      "yj/pkg/yj2015/skills/qinwang.lua"
+    ],
+    "match_score": 0.699,
+    "local_id": "wzzz_v__qinwang"
+  },
+  {
+    "general_number": 42,
+    "general": "庞统",
+    "skill": "连环",
+    "implementation": "reference",
+    "selected_id": "m_ex__lianhuan",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/lianhuan.lua"
+    ],
+    "match_score": 0.9167,
+    "local_id": "wzzz_v__m_ex__lianhuan"
+  },
+  {
+    "general_number": 42,
+    "general": "庞统",
+    "skill": "涅槃",
+    "implementation": "reference",
+    "selected_id": "niepan",
+    "source_files": [
+      "shzl/pkg/fire/skills/niepan.lua"
+    ],
+    "match_score": 0.8113,
+    "local_id": "wzzz_v__niepan"
+  },
+  {
+    "general_number": 42,
+    "general": "庞统",
+    "skill": "八阵",
+    "implementation": "reference",
+    "selected_id": "bazhen",
+    "source_files": [
+      "shzl/pkg/fire/skills/bazhen.lua"
+    ],
+    "match_score": 0.5763,
+    "local_id": "wzzz_v__bazhen"
+  },
+  {
+    "general_number": 42,
+    "general": "庞统",
+    "skill": "火计",
+    "implementation": "reference",
+    "selected_id": "ol_ex__huoji",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/huoji.lua"
+    ],
+    "match_score": 0.6392,
+    "local_id": "wzzz_v__ol_ex__huoji"
+  },
+  {
+    "general_number": 42,
+    "general": "庞统",
+    "skill": "看破",
+    "implementation": "reference",
+    "selected_id": "ol_ex__kanpo",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/kanpo.lua"
+    ],
+    "match_score": 0.9643,
+    "local_id": "wzzz_v__ol_ex__kanpo"
+  },
+  {
+    "general_number": 43,
+    "general": "马超",
+    "skill": "马术",
+    "implementation": "reference",
+    "selected_id": "mashu",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/mashu.lua"
+    ],
+    "match_score": 0.5306,
+    "local_id": "wzzz_v__mashu"
+  },
+  {
+    "general_number": 43,
+    "general": "马超",
+    "skill": "铁骑",
+    "implementation": "reference",
+    "selected_id": "ex__tieji",
+    "source_files": [
+      "standard_ex/pkg/general/skills/tieji.lua"
+    ],
+    "match_score": 0.7119,
+    "local_id": "wzzz_v__ex__tieji"
+  },
+  {
+    "general_number": 43,
+    "general": "马超",
+    "skill": "锦姿",
+    "implementation": "custom",
+    "selected_id": "wzzz__jinzi",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__jinzi"
+  },
+  {
+    "general_number": 44,
+    "general": "黄权",
+    "skill": "筹进",
+    "implementation": "reference",
+    "selected_id": "choujin",
+    "source_files": [
+      "gamemode/pkg/3v3_generals/skills/choujin.lua"
+    ],
+    "match_score": 0.4706,
+    "local_id": "wzzz_v__choujin"
+  },
+  {
+    "general_number": 44,
+    "general": "黄权",
+    "skill": "谏计",
+    "implementation": "reference",
+    "selected_id": "jianji",
+    "source_files": [
+      "ol/pkg/xinghe/skills/jianji.lua"
+    ],
+    "match_score": 0.8406,
+    "local_id": "wzzz_v__jianji"
+  },
+  {
+    "general_number": 44,
+    "general": "黄权",
+    "skill": "途绝",
+    "implementation": "reference",
+    "selected_id": "tujue",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/tujue.lua"
+    ],
+    "match_score": 0.7143,
+    "local_id": "wzzz_v__tujue"
+  },
+  {
+    "general_number": 45,
+    "general": "关兴&张苞",
+    "skill": "父魂",
+    "implementation": "reference",
+    "selected_id": "fuhun",
+    "source_files": [
+      "yj/pkg/yj2012/skills/fuhun.lua"
+    ],
+    "match_score": 0.9647,
+    "local_id": "wzzz_v__fuhun"
+  },
+  {
+    "general_number": 45,
+    "general": "关兴&张苞",
+    "skill": "同心",
+    "implementation": "reference",
+    "selected_id": "ty_ex__tongxin",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/tongxin.lua"
+    ],
+    "match_score": 0.36,
+    "local_id": "wzzz_v__ty_ex__tongxin"
+  },
+  {
+    "general_number": 45,
+    "general": "关兴&张苞",
+    "skill": "武圣",
+    "implementation": "reference",
+    "selected_id": "wusheng",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/wusheng.lua"
+    ],
+    "match_score": 0.7273,
+    "local_id": "wzzz_v__wusheng"
+  },
+  {
+    "general_number": 45,
+    "general": "关兴&张苞",
+    "skill": "咆哮",
+    "implementation": "reference",
+    "selected_id": "mou__paoxiao",
+    "source_files": [
+      "mougong/pkg/tong/skills/mou_paoxiao.lua"
+    ],
+    "match_score": 0.6,
+    "local_id": "wzzz_v__mou__paoxiao"
+  },
+  {
+    "general_number": 46,
+    "general": "马谡",
+    "skill": "散谣",
+    "implementation": "reference",
+    "selected_id": "ol__sanyao",
+    "source_files": [
+      "ol/pkg/ol_yj/skills/sanyao.lua"
+    ],
+    "match_score": 0.9231,
+    "local_id": "wzzz_v__ol__sanyao"
+  },
+  {
+    "general_number": 46,
+    "general": "马谡",
+    "skill": "制蛮",
+    "implementation": "reference",
+    "selected_id": "ty_ex__zhiman",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/zhiman.lua"
+    ],
+    "match_score": 0.9524,
+    "local_id": "wzzz_v__ty_ex__zhiman"
+  },
+  {
+    "general_number": 46,
+    "general": "马谡",
+    "skill": "挥泪",
+    "implementation": "reference",
+    "selected_id": "huilei",
+    "source_files": [
+      "yj/pkg/yj2011/skills/huilei.lua"
+    ],
+    "match_score": 0.8485,
+    "local_id": "wzzz_v__huilei"
+  },
+  {
+    "general_number": 47,
+    "general": "夏侯氏",
+    "skill": "樵拾",
+    "implementation": "reference",
+    "selected_id": "qiaoshi",
+    "source_files": [
+      "yj/pkg/yj2015/skills/qiaoshi.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__qiaoshi"
+  },
+  {
+    "general_number": 47,
+    "general": "夏侯氏",
+    "skill": "燕语",
+    "implementation": "reference",
+    "selected_id": "ty_ex__yanyu",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/yanyu.lua"
+    ],
+    "match_score": 0.9375,
+    "local_id": "wzzz_v__ty_ex__yanyu"
+  },
+  {
+    "general_number": 48,
+    "general": "张星彩",
+    "skill": "甚贤",
+    "implementation": "reference",
+    "selected_id": "ol__shenxian",
+    "source_files": [
+      "ol/pkg/xinghe/skills/shenxian.lua"
+    ],
+    "match_score": 0.8235,
+    "local_id": "wzzz_v__ol__shenxian"
+  },
+  {
+    "general_number": 48,
+    "general": "张星彩",
+    "skill": "枪舞",
+    "implementation": "reference",
+    "selected_id": "qiangwu",
+    "source_files": [
+      "sp/pkg/sp/skills/qiangwu.lua"
+    ],
+    "match_score": 0.6737,
+    "local_id": "wzzz_v__qiangwu"
+  },
+  {
+    "general_number": 49,
+    "general": "祝融",
+    "skill": "巨象",
+    "implementation": "reference",
+    "selected_id": "juxiang",
+    "source_files": [
+      "shzl/pkg/forest/skills/juxiang.lua"
+    ],
+    "match_score": 0.9355,
+    "local_id": "wzzz_v__juxiang"
+  },
+  {
+    "general_number": 49,
+    "general": "祝融",
+    "skill": "烈刃",
+    "implementation": "reference",
+    "selected_id": "os_ex__lieren",
+    "source_files": [
+      "overseas/pkg/overseas_ex/skills/os_ex_lieren.lua"
+    ],
+    "match_score": 0.8276,
+    "local_id": "wzzz_v__os_ex__lieren"
+  },
+  {
+    "general_number": 49,
+    "general": "祝融",
+    "skill": "长标",
+    "implementation": "reference",
+    "selected_id": "changbiao",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/changbiao.lua"
+    ],
+    "match_score": 0.7755,
+    "local_id": "wzzz_v__changbiao"
+  },
+  {
+    "general_number": 50,
+    "general": "马良",
+    "skill": "自书",
+    "implementation": "reference",
+    "selected_id": "mobile__zishu",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/zishu.lua"
+    ],
+    "match_score": 0.3614,
+    "local_id": "wzzz_v__mobile__zishu"
+  },
+  {
+    "general_number": 50,
+    "general": "马良",
+    "skill": "应援",
+    "implementation": "reference",
+    "selected_id": "yingyuan",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/yingyuan.lua"
+    ],
+    "match_score": 0.5882,
+    "local_id": "wzzz_v__yingyuan"
+  },
+  {
+    "general_number": 50,
+    "general": "马良",
+    "skill": "协穆",
+    "implementation": "reference",
+    "selected_id": "sxfy__xiemu",
+    "source_files": [
+      "offline/pkg/sxfy/skills/xiemu.lua"
+    ],
+    "match_score": 0.8205,
+    "local_id": "wzzz_v__sxfy__xiemu"
+  },
+  {
+    "general_number": 51,
+    "general": "吴懿",
+    "skill": "奔袭",
+    "implementation": "reference",
+    "selected_id": "m_ex__benxi",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/benxi.lua"
+    ],
+    "match_score": 0.4317,
+    "local_id": "wzzz_v__m_ex__benxi"
+  },
+  {
+    "general_number": 52,
+    "general": "夏侯霸",
+    "skill": "豹变",
+    "implementation": "reference",
+    "selected_id": "ty__baobian",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/baobian.lua"
+    ],
+    "match_score": 0.9615,
+    "local_id": "wzzz_v__ty__baobian"
+  },
+  {
+    "general_number": 52,
+    "general": "夏侯霸",
+    "skill": "豹烈",
+    "implementation": "custom",
+    "selected_id": "wzzz__baolie",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__baolie"
+  },
+  {
+    "general_number": 52,
+    "general": "夏侯霸",
+    "skill": "挑衅",
+    "implementation": "reference",
+    "selected_id": "ol_ex__tiaoxin",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/tiaoxin.lua"
+    ],
+    "match_score": 0.688,
+    "local_id": "wzzz_v__ol_ex__tiaoxin"
+  },
+  {
+    "general_number": 52,
+    "general": "夏侯霸",
+    "skill": "咆哮",
+    "implementation": "reference",
+    "selected_id": "ex__paoxiao",
+    "source_files": [
+      "standard_ex/pkg/general/skills/paoxiao.lua"
+    ],
+    "match_score": 0.9014,
+    "local_id": "wzzz_v__ex__paoxiao"
+  },
+  {
+    "general_number": 52,
+    "general": "夏侯霸",
+    "skill": "神速",
+    "implementation": "reference",
+    "selected_id": "shensu",
+    "source_files": [
+      "shzl/pkg/wind/skills/shensu.lua"
+    ],
+    "match_score": 0.9106,
+    "local_id": "wzzz_v__shensu"
+  },
+  {
+    "general_number": 53,
+    "general": "秦宓",
+    "skill": "谏征",
+    "implementation": "reference",
+    "selected_id": "jianzhengq",
+    "source_files": [
+      "yj/pkg/yj2017/skills/jianzheng.lua"
+    ],
+    "match_score": 0.6182,
+    "local_id": "wzzz_v__jianzhengq"
+  },
+  {
+    "general_number": 53,
+    "general": "秦宓",
+    "skill": "专对",
+    "implementation": "reference",
+    "selected_id": "zhuandui",
+    "source_files": [
+      "yj/pkg/yj2017/skills/zhuandui.lua"
+    ],
+    "match_score": 0.84,
+    "local_id": "wzzz_v__zhuandui"
+  },
+  {
+    "general_number": 53,
+    "general": "秦宓",
+    "skill": "天辩",
+    "implementation": "reference",
+    "selected_id": "tianbian",
+    "source_files": [
+      "yj/pkg/yj2017/skills/tianbian.lua"
+    ],
+    "match_score": 0.6316,
+    "local_id": "wzzz_v__tianbian"
+  },
+  {
+    "general_number": 54,
+    "general": "诸葛瞻",
+    "skill": "罪论",
+    "implementation": "reference",
+    "selected_id": "zuilun",
+    "source_files": [
+      "shzl/pkg/thunder/skills/zuilun.lua"
+    ],
+    "match_score": 0.4868,
+    "local_id": "wzzz_v__zuilun"
+  },
+  {
+    "general_number": 54,
+    "general": "诸葛瞻",
+    "skill": "父荫",
+    "implementation": "reference",
+    "selected_id": "fuyin",
+    "source_files": [
+      "shzl/pkg/thunder/skills/fuyin.lua"
+    ],
+    "match_score": 0.8421,
+    "local_id": "wzzz_v__fuyin"
+  },
+  {
+    "general_number": 55,
+    "general": "黄忠",
+    "skill": "烈弓",
+    "implementation": "reference",
+    "selected_id": "ol_ex__liegong",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/liegong.lua"
+    ],
+    "match_score": 0.5897,
+    "local_id": "wzzz_v__ol_ex__liegong"
+  },
+  {
+    "general_number": 55,
+    "general": "黄忠",
+    "skill": "益壮",
+    "implementation": "reference",
+    "selected_id": "yizhuang",
+    "source_files": [
+      "offline/pkg/shzj/skills/yizhuang.lua"
+    ],
+    "match_score": 0.9315,
+    "local_id": "wzzz_v__yizhuang"
+  },
+  {
+    "general_number": 56,
+    "general": "沙摩柯",
+    "skill": "蒺藜",
+    "implementation": "reference",
+    "selected_id": "jilis",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/jilis.lua"
+    ],
+    "match_score": 0.8852,
+    "local_id": "wzzz_v__jilis"
+  },
+  {
+    "general_number": 57,
+    "general": "糜竺",
+    "skill": "巨贾",
+    "implementation": "reference",
+    "selected_id": "jugu",
+    "source_files": [
+      "ol/pkg/xinghe/skills/jugu.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__jugu"
+  },
+  {
+    "general_number": 57,
+    "general": "糜竺",
+    "skill": "资援",
+    "implementation": "reference",
+    "selected_id": "ziyuan",
+    "source_files": [
+      "ol/pkg/xinghe/skills/ziyuan.lua"
+    ],
+    "match_score": 0.5472,
+    "local_id": "wzzz_v__ziyuan"
+  },
+  {
+    "general_number": 58,
+    "general": "魏延",
+    "skill": "狂骨",
+    "implementation": "reference",
+    "selected_id": "m_shi__kuanggu",
+    "source_files": [
+      "mobile/pkg/mobile_bingshi/skills/m_shi_kuanggu.lua"
+    ],
+    "match_score": 0.6364,
+    "local_id": "wzzz_v__m_shi__kuanggu"
+  },
+  {
+    "general_number": 58,
+    "general": "魏延",
+    "skill": "奇谋",
+    "implementation": "reference",
+    "selected_id": "m_ex__qimou",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/qimou.lua"
+    ],
+    "match_score": 0.6383,
+    "local_id": "wzzz_v__m_ex__qimou"
+  },
+  {
+    "general_number": 59,
+    "general": "刘封",
+    "skill": "陷嗣",
+    "implementation": "reference",
+    "selected_id": "ty_ex__xiansi",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/xiansi.lua"
+    ],
+    "match_score": 0.5857,
+    "local_id": "wzzz_v__ty_ex__xiansi"
+  },
+  {
+    "general_number": 60,
+    "general": "张翼",
+    "skill": "执义",
+    "implementation": "reference",
+    "selected_id": "zhiyi",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/zhiyi.lua"
+    ],
+    "match_score": 0.8174,
+    "local_id": "wzzz_v__zhiyi"
+  },
+  {
+    "general_number": 61,
+    "general": "姜维",
+    "skill": "挑衅",
+    "implementation": "reference",
+    "selected_id": "ol_ex__tiaoxin",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/tiaoxin.lua"
+    ],
+    "match_score": 0.688,
+    "local_id": "wzzz_v__ol_ex__tiaoxin"
+  },
+  {
+    "general_number": 61,
+    "general": "姜维",
+    "skill": "志继",
+    "implementation": "reference",
+    "selected_id": "ol_ex__zhiji",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/zhiji.lua"
+    ],
+    "match_score": 0.9885,
+    "local_id": "wzzz_v__ol_ex__zhiji"
+  },
+  {
+    "general_number": 61,
+    "general": "姜维",
+    "skill": "观星",
+    "implementation": "reference",
+    "selected_id": "ex__guanxing",
+    "source_files": [
+      "standard_ex/pkg/general/skills/guanxing.lua"
+    ],
+    "match_score": 0.687,
+    "local_id": "wzzz_v__ex__guanxing"
+  },
+  {
+    "general_number": 62,
+    "general": "董允",
+    "skill": "舍宴",
+    "implementation": "reference",
+    "selected_id": "sheyan",
+    "source_files": [
+      "ol/pkg/xinghe/skills/sheyan.lua"
+    ],
+    "match_score": 0.5714,
+    "local_id": "wzzz_v__sheyan"
+  },
+  {
+    "general_number": 62,
+    "general": "董允",
+    "skill": "秉正",
+    "implementation": "reference",
+    "selected_id": "bingzheng",
+    "source_files": [
+      "ol/pkg/xinghe/skills/bingzheng.lua"
+    ],
+    "match_score": 0.6772,
+    "local_id": "wzzz_v__bingzheng"
+  },
+  {
+    "general_number": 63,
+    "general": "张飞",
+    "skill": "咆哮",
+    "implementation": "reference",
+    "selected_id": "ex__paoxiao",
+    "source_files": [
+      "standard_ex/pkg/general/skills/paoxiao.lua"
+    ],
+    "match_score": 0.6957,
+    "local_id": "wzzz_v__ex__paoxiao"
+  },
+  {
+    "general_number": 63,
+    "general": "张飞",
+    "skill": "替身",
+    "implementation": "reference",
+    "selected_id": "ex__tishen",
+    "source_files": [
+      "standard_ex/pkg/general/skills/tishen.lua"
+    ],
+    "match_score": 0.5676,
+    "local_id": "wzzz_v__ex__tishen"
+  },
+  {
+    "general_number": 64,
+    "general": "王平",
+    "skill": "飞军",
+    "implementation": "reference",
+    "selected_id": "feijun",
+    "source_files": [
+      "shzl/pkg/shadow/skills/feijun.lua"
+    ],
+    "match_score": 0.9106,
+    "local_id": "wzzz_v__feijun"
+  },
+  {
+    "general_number": 64,
+    "general": "王平",
+    "skill": "兵略",
+    "implementation": "reference",
+    "selected_id": "binglue",
+    "source_files": [
+      "shzl/pkg/shadow/skills/binglue.lua"
+    ],
+    "match_score": 0.7556,
+    "local_id": "wzzz_v__binglue"
+  },
+  {
+    "general_number": 65,
+    "general": "关羽",
+    "skill": "虎威",
+    "implementation": "reference",
+    "selected_id": "v11__huwei",
+    "source_files": [
+      "gamemode/pkg/1v1_generals/skills/huwei.lua"
+    ],
+    "match_score": 0.1395,
+    "local_id": "wzzz_v__v11__huwei"
+  },
+  {
+    "general_number": 65,
+    "general": "关羽",
+    "skill": "武圣",
+    "implementation": "reference",
+    "selected_id": "wusheng",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/wusheng.lua"
+    ],
+    "match_score": 0.7273,
+    "local_id": "wzzz_v__wusheng"
+  },
+  {
+    "general_number": 65,
+    "general": "关羽",
+    "skill": "青龙",
+    "implementation": "custom",
+    "selected_id": "wzzz__qinglong",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__qinglong"
+  },
+  {
+    "general_number": 65,
+    "general": "关羽",
+    "skill": "义绝",
+    "implementation": "reference",
+    "selected_id": "ex__yijue",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yijue.lua"
+    ],
+    "match_score": 0.5714,
+    "local_id": "wzzz_v__ex__yijue"
+  },
+  {
+    "general_number": 65,
+    "general": "关羽",
+    "skill": "忠义",
+    "implementation": "reference",
+    "selected_id": "zhongyi",
+    "source_files": [
+      "gamemode/pkg/3v3_generals/skills/zhongyi.lua"
+    ],
+    "match_score": 0.3467,
+    "local_id": "wzzz_v__zhongyi"
+  },
+  {
+    "general_number": 66,
+    "general": "法正",
+    "skill": "恩怨",
+    "implementation": "reference",
+    "selected_id": "ol_ex__enyuan",
+    "source_files": [
+      "ol/pkg/ol_exyj/skills/enyuan.lua"
+    ],
+    "match_score": 0.7872,
+    "local_id": "wzzz_v__ol_ex__enyuan"
+  },
+  {
+    "general_number": 66,
+    "general": "法正",
+    "skill": "眩惑",
+    "implementation": "reference",
+    "selected_id": "ol_ex__xuanhuo",
+    "source_files": [
+      "ol/pkg/ol_exyj/skills/xuanhuo.lua"
+    ],
+    "match_score": 0.8226,
+    "local_id": "wzzz_v__ol_ex__xuanhuo"
+  },
+  {
+    "general_number": 67,
+    "general": "谯周",
+    "skill": "知命",
+    "implementation": "reference",
+    "selected_id": "os__zhiming",
+    "source_files": [
+      "overseas/pkg/overseas_sp/skills/os_zhiming.lua"
+    ],
+    "match_score": 0.9062,
+    "local_id": "wzzz_v__os__zhiming"
+  },
+  {
+    "general_number": 67,
+    "general": "谯周",
+    "skill": "星卜",
+    "implementation": "reference",
+    "selected_id": "xingbu",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/xingbu.lua"
+    ],
+    "match_score": 0.8315,
+    "local_id": "wzzz_v__xingbu"
+  },
+  {
+    "general_number": 68,
+    "general": "张松",
+    "skill": "献图",
+    "implementation": "reference",
+    "selected_id": "xiantu",
+    "source_files": [
+      "yj/pkg/yj2014/skills/xiantu.lua"
+    ],
+    "match_score": 0.9346,
+    "local_id": "wzzz_v__xiantu"
+  },
+  {
+    "general_number": 68,
+    "general": "张松",
+    "skill": "强识",
+    "implementation": "reference",
+    "selected_id": "qiangzhi",
+    "source_files": [
+      "yj/pkg/yj2014/skills/qiangzhi.lua"
+    ],
+    "match_score": 0.8387,
+    "local_id": "wzzz_v__qiangzhi"
+  },
+  {
+    "general_number": 69,
+    "general": "关平",
+    "skill": "龙吟",
+    "implementation": "reference",
+    "selected_id": "ty_ex__longyin",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/longyin.lua"
+    ],
+    "match_score": 0.7692,
+    "local_id": "wzzz_v__ty_ex__longyin"
+  },
+  {
+    "general_number": 69,
+    "general": "关平",
+    "skill": "竭忠",
+    "implementation": "reference",
+    "selected_id": "ty_ex__jiezhong",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/jiezhong.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__ty_ex__jiezhong"
+  },
+  {
+    "general_number": 70,
+    "general": "黄月英",
+    "skill": "集智",
+    "implementation": "reference",
+    "selected_id": "ofl_mou__jizhi",
+    "source_files": [
+      "offline/pkg/ofl_mou/skills/jizhi.lua"
+    ],
+    "match_score": 0.8136,
+    "local_id": "wzzz_v__ofl_mou__jizhi"
+  },
+  {
+    "general_number": 70,
+    "general": "黄月英",
+    "skill": "奇才",
+    "implementation": "reference",
+    "selected_id": "qicai",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/qicai.lua"
+    ],
+    "match_score": 0.5957,
+    "local_id": "wzzz_v__qicai"
+  },
+  {
+    "general_number": 70,
+    "general": "黄月英",
+    "skill": "机巧",
+    "implementation": "reference",
+    "selected_id": "ol__jiqiao",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/jiqiao.lua"
+    ],
+    "match_score": 0.9647,
+    "local_id": "wzzz_v__ol__jiqiao"
+  },
+  {
+    "general_number": 71,
+    "general": "丁奉",
+    "skill": "短兵",
+    "implementation": "reference",
+    "selected_id": "ol__duanbing",
+    "source_files": [
+      "ol/pkg/xinghe/skills/duanbing.lua"
+    ],
+    "match_score": 0.9425,
+    "local_id": "wzzz_v__ol__duanbing"
+  },
+  {
+    "general_number": 71,
+    "general": "丁奉",
+    "skill": "奋迅",
+    "implementation": "reference",
+    "selected_id": "qshm__fenxun",
+    "source_files": [
+      "offline/pkg/qshm/skills/fenxun.lua"
+    ],
+    "match_score": 0.6324,
+    "local_id": "wzzz_v__qshm__fenxun"
+  },
+  {
+    "general_number": 72,
+    "general": "韩当",
+    "skill": "弓骑",
+    "implementation": "reference",
+    "selected_id": "gongqi",
+    "source_files": [
+      "yj/pkg/yj2012/skills/gongqi.lua"
+    ],
+    "match_score": 0.9091,
+    "local_id": "wzzz_v__gongqi"
+  },
+  {
+    "general_number": 72,
+    "general": "韩当",
+    "skill": "解烦",
+    "implementation": "reference",
+    "selected_id": "jiefan",
+    "source_files": [
+      "yj/pkg/yj2012/skills/jiefan.lua"
+    ],
+    "match_score": 0.6992,
+    "local_id": "wzzz_v__jiefan"
+  },
+  {
+    "general_number": 73,
+    "general": "凌统",
+    "skill": "旋风",
+    "implementation": "reference",
+    "selected_id": "m_ex__xuanfeng",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/xuanfeng.lua"
+    ],
+    "match_score": 0.7087,
+    "local_id": "wzzz_v__m_ex__xuanfeng"
+  },
+  {
+    "general_number": 73,
+    "general": "凌统",
+    "skill": "勇进",
+    "implementation": "reference",
+    "selected_id": "ty_ex__yongjin",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/yongjin.lua"
+    ],
+    "match_score": 0.92,
+    "local_id": "wzzz_v__ty_ex__yongjin"
+  },
+  {
+    "general_number": 74,
+    "general": "诸葛瑾",
+    "skill": "缓释",
+    "implementation": "reference",
+    "selected_id": "huanshi",
+    "source_files": [
+      "sp/pkg/sp/skills/huanshi.lua"
+    ],
+    "match_score": 0.881,
+    "local_id": "wzzz_v__huanshi"
+  },
+  {
+    "general_number": 74,
+    "general": "诸葛瑾",
+    "skill": "弘援",
+    "implementation": "reference",
+    "selected_id": "hongyuan",
+    "source_files": [
+      "sp/pkg/sp/skills/hongyuan.lua"
+    ],
+    "match_score": 0.7308,
+    "local_id": "wzzz_v__hongyuan"
+  },
+  {
+    "general_number": 74,
+    "general": "诸葛瑾",
+    "skill": "明哲",
+    "implementation": "reference",
+    "selected_id": "mingzhe",
+    "source_files": [
+      "sp/pkg/sp/skills/mingzhe.lua"
+    ],
+    "match_score": 0.5405,
+    "local_id": "wzzz_v__mingzhe"
+  },
+  {
+    "general_number": 75,
+    "general": "SP 庞统",
+    "skill": "过论",
+    "implementation": "reference",
+    "selected_id": "guolun",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/guolun.lua"
+    ],
+    "match_score": 0.6963,
+    "local_id": "wzzz_v__guolun"
+  },
+  {
+    "general_number": 75,
+    "general": "SP 庞统",
+    "skill": "展骥",
+    "implementation": "reference",
+    "selected_id": "zhanji",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/zhanji.lua"
+    ],
+    "match_score": 0.9388,
+    "local_id": "wzzz_v__zhanji"
+  },
+  {
+    "general_number": 75,
+    "general": "SP 庞统",
+    "skill": "送丧",
+    "implementation": "reference",
+    "selected_id": "qshm__songsang",
+    "source_files": [
+      "offline/pkg/qshm/skills/songsang.lua"
+    ],
+    "match_score": 0.8387,
+    "local_id": "wzzz_v__qshm__songsang"
+  },
+  {
+    "general_number": 76,
+    "general": "步练师",
+    "skill": "安恤",
+    "implementation": "reference",
+    "selected_id": "m_ex__anxu",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/anxu.lua"
+    ],
+    "match_score": 0.8155,
+    "local_id": "wzzz_v__m_ex__anxu"
+  },
+  {
+    "general_number": 76,
+    "general": "步练师",
+    "skill": "追忆",
+    "implementation": "reference",
+    "selected_id": "zhuiyi",
+    "source_files": [
+      "yj/pkg/yj2012/skills/zhuiyi.lua"
+    ],
+    "match_score": 0.9697,
+    "local_id": "wzzz_v__zhuiyi"
+  },
+  {
+    "general_number": 77,
+    "general": "徐盛",
+    "skill": "破军",
+    "implementation": "reference",
+    "selected_id": "ty_ex__pojun",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/pojun.lua"
+    ],
+    "match_score": 0.5191,
+    "local_id": "wzzz_v__ty_ex__pojun"
+  },
+  {
+    "general_number": 77,
+    "general": "徐盛",
+    "skill": "疑城",
+    "implementation": "reference",
+    "selected_id": "v33__yicheng",
+    "source_files": [
+      "gamemode/pkg/3v3_generals/skills/yicheng.lua"
+    ],
+    "match_score": 0.6173,
+    "local_id": "wzzz_v__v33__yicheng"
+  },
+  {
+    "general_number": 78,
+    "general": "留赞",
+    "skill": "奋音",
+    "implementation": "reference",
+    "selected_id": "sxfy__fenyin",
+    "source_files": [
+      "offline/pkg/sxfy/skills/fenyin.lua"
+    ],
+    "match_score": 0.6897,
+    "local_id": "wzzz_v__sxfy__fenyin"
+  },
+  {
+    "general_number": 79,
+    "general": "大乔",
+    "skill": "国色",
+    "implementation": "reference",
+    "selected_id": "ex__guose",
+    "source_files": [
+      "standard_ex/pkg/general/skills/guose.lua"
+    ],
+    "match_score": 0.48,
+    "local_id": "wzzz_v__ex__guose"
+  },
+  {
+    "general_number": 79,
+    "general": "大乔",
+    "skill": "流离",
+    "implementation": "reference",
+    "selected_id": "mou__liuli",
+    "source_files": [
+      "mougong/pkg/zhi/skills/mou_liuli.lua"
+    ],
+    "match_score": 0.6957,
+    "local_id": "wzzz_v__mou__liuli"
+  },
+  {
+    "general_number": 79,
+    "general": "大乔",
+    "skill": "婉容",
+    "implementation": "custom",
+    "selected_id": "wzzz__wanrong",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__wanrong"
+  },
+  {
+    "general_number": 80,
+    "general": "文鸯",
+    "skill": "却敌",
+    "implementation": "reference",
+    "selected_id": "quedi",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/quedi.lua"
+    ],
+    "match_score": 0.6824,
+    "local_id": "wzzz_v__quedi"
+  },
+  {
+    "general_number": 80,
+    "general": "文鸯",
+    "skill": "仇决",
+    "implementation": "reference",
+    "selected_id": "mobile__choujue",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/choujue.lua"
+    ],
+    "match_score": 0.9167,
+    "local_id": "wzzz_v__mobile__choujue"
+  },
+  {
+    "general_number": 80,
+    "general": "文鸯",
+    "skill": "冲坚",
+    "implementation": "reference",
+    "selected_id": "ofl__chongjian",
+    "source_files": [
+      "offline/pkg/piracy_e/skills/chongjian.lua"
+    ],
+    "match_score": 0.5614,
+    "local_id": "wzzz_v__ofl__chongjian"
+  },
+  {
+    "general_number": 81,
+    "general": "岑昏",
+    "skill": "极奢",
+    "implementation": "reference",
+    "selected_id": "jishe",
+    "source_files": [
+      "yj/pkg/yj2016/skills/jishe.lua"
+    ],
+    "match_score": 0.9391,
+    "local_id": "wzzz_v__jishe"
+  },
+  {
+    "general_number": 81,
+    "general": "岑昏",
+    "skill": "链祸",
+    "implementation": "reference",
+    "selected_id": "lianhuo",
+    "source_files": [
+      "yj/pkg/yj2016/skills/lianhuo.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__lianhuo"
+  },
+  {
+    "general_number": 81,
+    "general": "岑昏",
+    "skill": "无度",
+    "implementation": "reference",
+    "selected_id": "sxfy__wudu",
+    "source_files": [
+      "offline/pkg/sxfy/skills/wudu.lua"
+    ],
+    "match_score": 0.7576,
+    "local_id": "wzzz_v__sxfy__wudu"
+  },
+  {
+    "general_number": 82,
+    "general": "孙尚香",
+    "skill": "缘定",
+    "implementation": "custom",
+    "selected_id": "wzzz__yuanding",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__yuanding"
+  },
+  {
+    "general_number": 82,
+    "general": "孙尚香",
+    "skill": "结姻",
+    "implementation": "reference",
+    "selected_id": "jieyin",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/jieyin.lua"
+    ],
+    "match_score": 0.5273,
+    "local_id": "wzzz_v__jieyin"
+  },
+  {
+    "general_number": 82,
+    "general": "孙尚香",
+    "skill": "良助",
+    "implementation": "reference",
+    "selected_id": "liangzhu",
+    "source_files": [
+      "sp/pkg/sp_jsp/skills/liangzhu.lua"
+    ],
+    "match_score": 0.7089,
+    "local_id": "wzzz_v__liangzhu"
+  },
+  {
+    "general_number": 82,
+    "general": "孙尚香",
+    "skill": "枭姬",
+    "implementation": "reference",
+    "selected_id": "xiaoji",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/xiaoji.lua"
+    ],
+    "match_score": 0.8293,
+    "local_id": "wzzz_v__xiaoji"
+  },
+  {
+    "general_number": 83,
+    "general": "诸葛恪",
+    "skill": "黩武",
+    "implementation": "reference",
+    "selected_id": "duwu",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/duwu.lua"
+    ],
+    "match_score": 0.4561,
+    "local_id": "wzzz_v__duwu"
+  },
+  {
+    "general_number": 83,
+    "general": "诸葛恪",
+    "skill": "傲才",
+    "implementation": "reference",
+    "selected_id": "ol__aocai",
+    "source_files": [
+      "ol/pkg/xinghe/skills/aocai.lua"
+    ],
+    "match_score": 0.8947,
+    "local_id": "wzzz_v__ol__aocai"
+  },
+  {
+    "general_number": 84,
+    "general": "朱桓",
+    "skill": "奋励",
+    "implementation": "reference",
+    "selected_id": "fenli",
+    "source_files": [
+      "yj/pkg/yj2014/skills/fenli.lua"
+    ],
+    "match_score": 0.6275,
+    "local_id": "wzzz_v__fenli"
+  },
+  {
+    "general_number": 84,
+    "general": "朱桓",
+    "skill": "平寇",
+    "implementation": "reference",
+    "selected_id": "pingkou",
+    "source_files": [
+      "yj/pkg/yj2014/skills/pingkou.lua"
+    ],
+    "match_score": 0.7129,
+    "local_id": "wzzz_v__pingkou"
+  },
+  {
+    "general_number": 85,
+    "general": "鲁肃",
+    "skill": "好施",
+    "implementation": "reference",
+    "selected_id": "haoshi",
+    "source_files": [
+      "shzl/pkg/forest/skills/haoshi.lua"
+    ],
+    "match_score": 0.8958,
+    "local_id": "wzzz_v__haoshi"
+  },
+  {
+    "general_number": 85,
+    "general": "鲁肃",
+    "skill": "缔盟",
+    "implementation": "reference",
+    "selected_id": "ol_ex__dimeng",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/dimeng.lua"
+    ],
+    "match_score": 0.5833,
+    "local_id": "wzzz_v__ol_ex__dimeng"
+  },
+  {
+    "general_number": 86,
+    "general": "蒋钦",
+    "skill": "俭衣",
+    "implementation": "reference",
+    "selected_id": "jianyi",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/jianyi.lua"
+    ],
+    "match_score": 0.6667,
+    "local_id": "wzzz_v__jianyi"
+  },
+  {
+    "general_number": 86,
+    "general": "蒋钦",
+    "skill": "尚义",
+    "implementation": "reference",
+    "selected_id": "mobile__shangyi",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/shangyi.lua"
+    ],
+    "match_score": 0.9505,
+    "local_id": "wzzz_v__mobile__shangyi"
+  },
+  {
+    "general_number": 87,
+    "general": "陆逊",
+    "skill": "谦逊",
+    "implementation": "reference",
+    "selected_id": "ex__qianxun",
+    "source_files": [
+      "standard_ex/pkg/general/skills/qianxun.lua"
+    ],
+    "match_score": 0.9922,
+    "local_id": "wzzz_v__ex__qianxun"
+  },
+  {
+    "general_number": 87,
+    "general": "陆逊",
+    "skill": "连营",
+    "implementation": "reference",
+    "selected_id": "ex__lianying",
+    "source_files": [
+      "standard_ex/pkg/general/skills/lianying.lua"
+    ],
+    "match_score": 0.9873,
+    "local_id": "wzzz_v__ex__lianying"
+  },
+  {
+    "general_number": 87,
+    "general": "陆逊",
+    "skill": "顺势",
+    "implementation": "custom",
+    "selected_id": "wzzz__shunshi",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__shunshi"
+  },
+  {
+    "general_number": 88,
+    "general": "步骘",
+    "skill": "弘德",
+    "implementation": "reference",
+    "selected_id": "hongde",
+    "source_files": [
+      "ol/pkg/xinghe/skills/hongde.lua"
+    ],
+    "match_score": 0.9831,
+    "local_id": "wzzz_v__hongde"
+  },
+  {
+    "general_number": 88,
+    "general": "步骘",
+    "skill": "定叛",
+    "implementation": "reference",
+    "selected_id": "dingpan",
+    "source_files": [
+      "ol/pkg/xinghe/skills/dingpan.lua"
+    ],
+    "match_score": 0.6716,
+    "local_id": "wzzz_v__dingpan"
+  },
+  {
+    "general_number": 89,
+    "general": "甘宁",
+    "skill": "奇袭",
+    "implementation": "reference",
+    "selected_id": "qixi",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/qixi.lua"
+    ],
+    "match_score": 0.6154,
+    "local_id": "wzzz_v__qixi"
+  },
+  {
+    "general_number": 89,
+    "general": "甘宁",
+    "skill": "奋威",
+    "implementation": "reference",
+    "selected_id": "fenwei",
+    "source_files": [
+      "standard_ex/pkg/general/skills/fenwei.lua"
+    ],
+    "match_score": 0.7848,
+    "local_id": "wzzz_v__fenwei"
+  },
+  {
+    "general_number": 90,
+    "general": "凌操",
+    "skill": "独进",
+    "implementation": "reference",
+    "selected_id": "ol__dujin",
+    "source_files": [
+      "ol/pkg/xinghe/skills/dujin.lua"
+    ],
+    "match_score": 0.9667,
+    "local_id": "wzzz_v__ol__dujin"
+  },
+  {
+    "general_number": 90,
+    "general": "凌操",
+    "skill": "独锋",
+    "implementation": "reference",
+    "selected_id": "dufeng",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/dufeng.lua"
+    ],
+    "match_score": 0.3871,
+    "local_id": "wzzz_v__dufeng"
+  },
+  {
+    "general_number": 91,
+    "general": "黄盖",
+    "skill": "苦肉",
+    "implementation": "reference",
+    "selected_id": "ex__kurou",
+    "source_files": [
+      "standard_ex/pkg/general/skills/kurou.lua"
+    ],
+    "match_score": 0.9333,
+    "local_id": "wzzz_v__ex__kurou"
+  },
+  {
+    "general_number": 91,
+    "general": "黄盖",
+    "skill": "诈降",
+    "implementation": "reference",
+    "selected_id": "ol_ex__zhaxiang",
+    "source_files": [
+      "ol/pkg/ol_mou/skills/zhaxiang.lua"
+    ],
+    "match_score": 0.6214,
+    "local_id": "wzzz_v__ol_ex__zhaxiang"
+  },
+  {
+    "general_number": 92,
+    "general": "孙茹",
+    "skill": "影箭",
+    "implementation": "reference",
+    "selected_id": "yingjian",
+    "source_files": [
+      "mobile/pkg/mobile_rare/skills/yingjian.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__yingjian"
+  },
+  {
+    "general_number": 92,
+    "general": "孙茹",
+    "skill": "释衅",
+    "implementation": "reference",
+    "selected_id": "shixin",
+    "source_files": [
+      "mobile/pkg/mobile_rare/skills/shixin.lua"
+    ],
+    "match_score": 0.963,
+    "local_id": "wzzz_v__shixin"
+  },
+  {
+    "general_number": 93,
+    "general": "周鲂",
+    "skill": "断发",
+    "implementation": "reference",
+    "selected_id": "duanfa",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/duanfa.lua"
+    ],
+    "match_score": 0.7711,
+    "local_id": "wzzz_v__duanfa"
+  },
+  {
+    "general_number": 93,
+    "general": "周鲂",
+    "skill": "诱敌",
+    "implementation": "reference",
+    "selected_id": "sp__youdi",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/youdi.lua"
+    ],
+    "match_score": 0.6222,
+    "local_id": "wzzz_v__sp__youdi"
+  },
+  {
+    "general_number": 94,
+    "general": "太史慈",
+    "skill": "天义",
+    "implementation": "reference",
+    "selected_id": "tianyi",
+    "source_files": [
+      "shzl/pkg/fire/skills/tianyi.lua"
+    ],
+    "match_score": 0.7304,
+    "local_id": "wzzz_v__tianyi"
+  },
+  {
+    "general_number": 94,
+    "general": "太史慈",
+    "skill": "酣战",
+    "implementation": "reference",
+    "selected_id": "hanzhan",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/hanzhan.lua"
+    ],
+    "match_score": 0.6,
+    "local_id": "wzzz_v__hanzhan"
+  },
+  {
+    "general_number": 95,
+    "general": "吕蒙",
+    "skill": "克己",
+    "implementation": "reference",
+    "selected_id": "keji",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/keji.lua"
+    ],
+    "match_score": 0.9796,
+    "local_id": "wzzz_v__keji"
+  },
+  {
+    "general_number": 95,
+    "general": "吕蒙",
+    "skill": "勤学",
+    "implementation": "reference",
+    "selected_id": "ol_ex__qinxue",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/qinxue.lua"
+    ],
+    "match_score": 0.7619,
+    "local_id": "wzzz_v__ol_ex__qinxue"
+  },
+  {
+    "general_number": 95,
+    "general": "吕蒙",
+    "skill": "博图",
+    "implementation": "reference",
+    "selected_id": "botu",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/botu.lua"
+    ],
+    "match_score": 0.7391,
+    "local_id": "wzzz_v__botu"
+  },
+  {
+    "general_number": 95,
+    "general": "吕蒙",
+    "skill": "攻心",
+    "implementation": "reference",
+    "selected_id": "gundam__gongxin",
+    "source_files": [
+      "overseas/pkg/overseas_sp/skills/gundam_gongxin.lua"
+    ],
+    "match_score": 0.8919,
+    "local_id": "wzzz_v__gundam__gongxin"
+  },
+  {
+    "general_number": 96,
+    "general": "唐咨",
+    "skill": "兴棹",
+    "implementation": "reference",
+    "selected_id": "xingzhao",
+    "source_files": [
+      "ol/pkg/xinghe/skills/xingzhao.lua"
+    ],
+    "match_score": 0.766,
+    "local_id": "wzzz_v__xingzhao"
+  },
+  {
+    "general_number": 96,
+    "general": "唐咨",
+    "skill": "恂恂",
+    "implementation": "reference",
+    "selected_id": "xunxun",
+    "source_files": [
+      "standard_ex/pkg/general/skills/xunxun.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__xunxun"
+  },
+  {
+    "general_number": 97,
+    "general": "周瑜",
+    "skill": "英姿",
+    "implementation": "reference",
+    "selected_id": "ex__yingzi",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yingzi.lua"
+    ],
+    "match_score": 0.8929,
+    "local_id": "wzzz_v__ex__yingzi"
+  },
+  {
+    "general_number": 97,
+    "general": "周瑜",
+    "skill": "反间",
+    "implementation": "reference",
+    "selected_id": "wzzz__fanjian",
+    "source_files": [
+      "github-xinghan/pkg/lizhan/skills/fanjian.lua",
+      "xinhanwujiang/pkg/lizhan/skills/fanjian.lua"
+    ],
+    "match_score": 0.881,
+    "local_id": "wzzz_v__wzzz__fanjian"
+  },
+  {
+    "general_number": 98,
+    "general": "张昭&张纮",
+    "skill": "直谏",
+    "implementation": "reference",
+    "selected_id": "ol_ex__zhijian",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/zhijian.lua"
+    ],
+    "match_score": 0.9706,
+    "local_id": "wzzz_v__ol_ex__zhijian"
+  },
+  {
+    "general_number": 98,
+    "general": "张昭&张纮",
+    "skill": "固政",
+    "implementation": "reference",
+    "selected_id": "guzheng",
+    "source_files": [
+      "shzl/pkg/mountain/skills/guzheng.lua"
+    ],
+    "match_score": 0.9412,
+    "local_id": "wzzz_v__guzheng"
+  },
+  {
+    "general_number": 99,
+    "general": "李儒",
+    "skill": "绝策",
+    "implementation": "reference",
+    "selected_id": "juece",
+    "source_files": [
+      "yj/pkg/yj2013/skills/juece.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__juece"
+  },
+  {
+    "general_number": 99,
+    "general": "李儒",
+    "skill": "灭计",
+    "implementation": "reference",
+    "selected_id": "m_ex__mieji",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/mieji.lua"
+    ],
+    "match_score": 0.7733,
+    "local_id": "wzzz_v__m_ex__mieji"
+  },
+  {
+    "general_number": 99,
+    "general": "李儒",
+    "skill": "焚城",
+    "implementation": "reference",
+    "selected_id": "fencheng",
+    "source_files": [
+      "yj/pkg/yj2013/skills/fencheng.lua"
+    ],
+    "match_score": 0.8103,
+    "local_id": "wzzz_v__fencheng"
+  },
+  {
+    "general_number": 100,
+    "general": "华雄",
+    "skill": "耀武",
+    "implementation": "reference",
+    "selected_id": "ol_ex__yaowu",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/yaowu.lua"
+    ],
+    "match_score": 0.8462,
+    "local_id": "wzzz_v__ol_ex__yaowu"
+  },
+  {
+    "general_number": 100,
+    "general": "华雄",
+    "skill": "势斩",
+    "implementation": "reference",
+    "selected_id": "shizhan",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/shizhan.lua"
+    ],
+    "match_score": 0.7273,
+    "local_id": "wzzz_v__shizhan"
+  },
+  {
+    "general_number": 101,
+    "general": "高顺",
+    "skill": "陷阵",
+    "implementation": "reference",
+    "selected_id": "ty_ex__xianzhen",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/xianzhen.lua"
+    ],
+    "match_score": 0.5359,
+    "local_id": "wzzz_v__ty_ex__xianzhen"
+  },
+  {
+    "general_number": 101,
+    "general": "高顺",
+    "skill": "禁酒",
+    "implementation": "reference",
+    "selected_id": "ty_ex__jinjiu",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/jinjiu.lua"
+    ],
+    "match_score": 0.7586,
+    "local_id": "wzzz_v__ty_ex__jinjiu"
+  },
+  {
+    "general_number": 102,
+    "general": "张郃",
+    "skill": "巧变",
+    "implementation": "reference",
+    "selected_id": "ol_ex__qiaobian",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/qiaobian.lua"
+    ],
+    "match_score": 0.3733,
+    "local_id": "wzzz_v__ol_ex__qiaobian"
+  },
+  {
+    "general_number": 103,
+    "general": "公孙渊",
+    "skill": "怀异",
+    "implementation": "reference",
+    "selected_id": "huaiyi",
+    "source_files": [
+      "yj/pkg/yj2015/skills/huaiyi.lua"
+    ],
+    "match_score": 0.6182,
+    "local_id": "wzzz_v__huaiyi"
+  },
+  {
+    "general_number": 104,
+    "general": "SP 蔡文姬",
+    "skill": "悲笳",
+    "implementation": "custom",
+    "selected_id": "wzzz__beijia",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__beijia"
+  },
+  {
+    "general_number": 104,
+    "general": "SP 蔡文姬",
+    "skill": "默识",
+    "implementation": "reference",
+    "selected_id": "mozhi",
+    "source_files": [
+      "sp/pkg/sp/skills/mozhi.lua"
+    ],
+    "match_score": 0.8125,
+    "local_id": "wzzz_v__mozhi"
+  },
+  {
+    "general_number": 104,
+    "general": "SP 蔡文姬",
+    "skill": "陈情",
+    "implementation": "reference",
+    "selected_id": "chenqing",
+    "source_files": [
+      "sp/pkg/sp/skills/chenqing.lua"
+    ],
+    "match_score": 0.8504,
+    "local_id": "wzzz_v__chenqing"
+  },
+  {
+    "general_number": 104,
+    "general": "SP 蔡文姬",
+    "skill": "断肠",
+    "implementation": "reference",
+    "selected_id": "duanchang",
+    "source_files": [
+      "shzl/pkg/mountain/skills/duanchang.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__duanchang"
+  },
+  {
+    "general_number": 105,
+    "general": "于禁",
+    "skill": "毅重",
+    "implementation": "reference",
+    "selected_id": "yizhong",
+    "source_files": [
+      "yj/pkg/yj2011/skills/yizhong.lua"
+    ],
+    "match_score": 0.619,
+    "local_id": "wzzz_v__yizhong"
+  },
+  {
+    "general_number": 105,
+    "general": "于禁",
+    "skill": "镇军",
+    "implementation": "reference",
+    "selected_id": "ol_ex__zhenjun",
+    "source_files": [
+      "ol/pkg/ol_exyj/skills/zhenjun.lua"
+    ],
+    "match_score": 0.8684,
+    "local_id": "wzzz_v__ol_ex__zhenjun"
+  },
+  {
+    "general_number": 106,
+    "general": "韩遂",
+    "skill": "逆乱",
+    "implementation": "reference",
+    "selected_id": "ty__niluan",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/niluan.lua"
+    ],
+    "match_score": 0.8696,
+    "local_id": "wzzz_v__ty__niluan"
+  },
+  {
+    "general_number": 106,
+    "general": "韩遂",
+    "skill": "违忤",
+    "implementation": "reference",
+    "selected_id": "weiwu",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/weiwu.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__weiwu"
+  },
+  {
+    "general_number": 106,
+    "general": "韩遂",
+    "skill": "骁袭",
+    "implementation": "reference",
+    "selected_id": "mobile__xiaoxi",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/mobile_xiaoxi.lua"
+    ],
+    "match_score": 0.4407,
+    "local_id": "wzzz_v__mobile__xiaoxi"
+  },
+  {
+    "general_number": 107,
+    "general": "马腾",
+    "skill": "马术",
+    "implementation": "reference",
+    "selected_id": "mashu",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/mashu.lua"
+    ],
+    "match_score": 0.5,
+    "local_id": "wzzz_v__mashu"
+  },
+  {
+    "general_number": 107,
+    "general": "马腾",
+    "skill": "雄异",
+    "implementation": "reference",
+    "selected_id": "xh__xiongyi",
+    "source_files": [
+      "github-xinghan/pkg/yiwu/skills/xh__xiongyi.lua",
+      "xinhanwujiang/pkg/yiwu/skills/xh__xiongyi.lua"
+    ],
+    "match_score": 0.7778,
+    "local_id": "wzzz_v__xh__xiongyi"
+  },
+  {
+    "general_number": 108,
+    "general": "杜预",
+    "skill": "三陈",
+    "implementation": "reference",
+    "selected_id": "sanchen",
+    "source_files": [
+      "ol/pkg/wende/skills/sanchen.lua"
+    ],
+    "match_score": 0.5229,
+    "local_id": "wzzz_v__sanchen"
+  },
+  {
+    "general_number": 108,
+    "general": "杜预",
+    "skill": "破竹",
+    "implementation": "reference",
+    "selected_id": "pozhu",
+    "source_files": [
+      "ol/pkg/wende/skills/pozhu.lua"
+    ],
+    "match_score": 0.4583,
+    "local_id": "wzzz_v__pozhu"
+  },
+  {
+    "general_number": 109,
+    "general": "麴义",
+    "skill": "伏骑",
+    "implementation": "reference",
+    "selected_id": "fuji",
+    "source_files": [
+      "ol/pkg/xinghe/skills/fuji.lua"
+    ],
+    "match_score": 0.7887,
+    "local_id": "wzzz_v__fuji"
+  },
+  {
+    "general_number": 109,
+    "general": "麴义",
+    "skill": "骄恣",
+    "implementation": "reference",
+    "selected_id": "jiaozi",
+    "source_files": [
+      "ol/pkg/xinghe/skills/jiaozi.lua"
+    ],
+    "match_score": 0.8077,
+    "local_id": "wzzz_v__jiaozi"
+  },
+  {
+    "general_number": 110,
+    "general": "陈宫",
+    "skill": "明策",
+    "implementation": "reference",
+    "selected_id": "ty_ex__mingce",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/mingce.lua"
+    ],
+    "match_score": 0.6613,
+    "local_id": "wzzz_v__ty_ex__mingce"
+  },
+  {
+    "general_number": 110,
+    "general": "陈宫",
+    "skill": "智迟",
+    "implementation": "reference",
+    "selected_id": "zhichi",
+    "source_files": [
+      "yj/pkg/yj2011/skills/zhichi.lua"
+    ],
+    "match_score": 0.7812,
+    "local_id": "wzzz_v__zhichi"
+  },
+  {
+    "general_number": 111,
+    "general": "沮授",
+    "skill": "渐营",
+    "implementation": "reference",
+    "selected_id": "m_ex__jianying",
+    "source_files": [
+      "mobile/pkg/yj_ex/skills/jianying.lua"
+    ],
+    "match_score": 0.629,
+    "local_id": "wzzz_v__m_ex__jianying"
+  },
+  {
+    "general_number": 111,
+    "general": "沮授",
+    "skill": "矢北",
+    "implementation": "reference",
+    "selected_id": "ty_ex__shibei",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/shibei.lua"
+    ],
+    "match_score": 0.875,
+    "local_id": "wzzz_v__ty_ex__shibei"
+  },
+  {
+    "general_number": 112,
+    "general": "SP 孙策",
+    "skill": "连讨",
+    "implementation": "reference",
+    "selected_id": "liantao",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/liantao.lua"
+    ],
+    "match_score": 0.4336,
+    "local_id": "wzzz_v__liantao"
+  },
+  {
+    "general_number": 113,
+    "general": "吕布",
+    "skill": "战神",
+    "implementation": "reference",
+    "selected_id": "v33__zhanshen",
+    "source_files": [
+      "gamemode/pkg/3v3_generals/skills/v33__zhanshen.lua"
+    ],
+    "match_score": 0.4906,
+    "local_id": "wzzz_v__v33__zhanshen"
+  },
+  {
+    "general_number": 114,
+    "general": "贾诩",
+    "skill": "完杀",
+    "implementation": "reference",
+    "selected_id": "ol_ex__wansha",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/wansha.lua"
+    ],
+    "match_score": 0.7027,
+    "local_id": "wzzz_v__ol_ex__wansha"
+  },
+  {
+    "general_number": 114,
+    "general": "贾诩",
+    "skill": "乱武",
+    "implementation": "reference",
+    "selected_id": "mou__luanwu",
+    "source_files": [
+      "mougong/pkg/zhi/skills/mou_luanwu.lua"
+    ],
+    "match_score": 0.6964,
+    "local_id": "wzzz_v__mou__luanwu"
+  },
+  {
+    "general_number": 114,
+    "general": "贾诩",
+    "skill": "帷幕",
+    "implementation": "reference",
+    "selected_id": "ol_ex__weimu",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/weimu.lua"
+    ],
+    "match_score": 0.7529,
+    "local_id": "wzzz_v__ol_ex__weimu"
+  },
+  {
+    "general_number": 115,
+    "general": "貂蝉",
+    "skill": "倾世",
+    "implementation": "reference",
+    "selected_id": "qingshic",
+    "source_files": [
+      "ol/pkg/ol_mo/skills/qingshi.lua"
+    ],
+    "match_score": 0.069,
+    "local_id": "wzzz_v__qingshic"
+  },
+  {
+    "general_number": 115,
+    "general": "貂蝉",
+    "skill": "离间",
+    "implementation": "reference",
+    "selected_id": "lijian",
+    "source_files": [
+      "freekill-core/standard/pkg/skills/lijian.lua"
+    ],
+    "match_score": 0.7679,
+    "local_id": "wzzz_v__lijian"
+  },
+  {
+    "general_number": 115,
+    "general": "貂蝉",
+    "skill": "离魂",
+    "implementation": "reference",
+    "selected_id": "lihun",
+    "source_files": [
+      "sp/pkg/sp_star/skills/lihun.lua"
+    ],
+    "match_score": 0.7238,
+    "local_id": "wzzz_v__lihun"
+  },
+  {
+    "general_number": 115,
+    "general": "貂蝉",
+    "skill": "闭月",
+    "implementation": "reference",
+    "selected_id": "ex__biyue",
+    "source_files": [
+      "standard_ex/pkg/general/skills/biyue.lua"
+    ],
+    "match_score": 0.5238,
+    "local_id": "wzzz_v__ex__biyue"
+  },
+  {
+    "general_number": 116,
+    "general": "SP 马超",
+    "skill": "追击",
+    "implementation": "reference",
+    "selected_id": "ol__zhuiji",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/zhuiji.lua"
+    ],
+    "match_score": 0.4037,
+    "local_id": "wzzz_v__ol__zhuiji"
+  },
+  {
+    "general_number": 116,
+    "general": "SP 马超",
+    "skill": "誓仇",
+    "implementation": "reference",
+    "selected_id": "ol__shichou",
+    "source_files": [
+      "ol/pkg/ol_sp/skills/shichou.lua"
+    ],
+    "match_score": 0.7879,
+    "local_id": "wzzz_v__ol__shichou"
+  },
+  {
+    "general_number": 117,
+    "general": "庞德公",
+    "skill": "隐世",
+    "implementation": "reference",
+    "selected_id": "yinship",
+    "source_files": [
+      "mobile/pkg/mobile_rare/skills/yinshi.lua"
+    ],
+    "match_score": 0.3,
+    "local_id": "wzzz_v__yinship"
+  },
+  {
+    "general_number": 117,
+    "general": "庞德公",
+    "skill": "评才",
+    "implementation": "reference",
+    "selected_id": "pingcai",
+    "source_files": [
+      "mobile/pkg/mobile_rare/skills/pingcai.lua"
+    ],
+    "match_score": 0.2222,
+    "local_id": "wzzz_v__pingcai"
+  },
+  {
+    "general_number": 118,
+    "general": "伏完",
+    "skill": "谋溃",
+    "implementation": "reference",
+    "selected_id": "ty__moukui",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/moukui.lua"
+    ],
+    "match_score": 0.7629,
+    "local_id": "wzzz_v__ty__moukui"
+  },
+  {
+    "general_number": 119,
+    "general": "高览",
+    "skill": "峻攻",
+    "implementation": "reference",
+    "selected_id": "jungong",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/jungong.lua"
+    ],
+    "match_score": 0.5484,
+    "local_id": "wzzz_v__jungong"
+  },
+  {
+    "general_number": 119,
+    "general": "高览",
+    "skill": "等力",
+    "implementation": "reference",
+    "selected_id": "dengli",
+    "source_files": [
+      "mobile/pkg/mobile_shiji/skills/dengli.lua"
+    ],
+    "match_score": 0.9149,
+    "local_id": "wzzz_v__dengli"
+  },
+  {
+    "general_number": 120,
+    "general": "SP 赵云",
+    "skill": "龙胆",
+    "implementation": "reference",
+    "selected_id": "ol_ex__longdan",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/longdan.lua"
+    ],
+    "match_score": 0.8696,
+    "local_id": "wzzz_v__ol_ex__longdan"
+  },
+  {
+    "general_number": 120,
+    "general": "SP 赵云",
+    "skill": "冲阵",
+    "implementation": "reference",
+    "selected_id": "chongzhen",
+    "source_files": [
+      "sp/pkg/sp_star/skills/chongzhen.lua"
+    ],
+    "match_score": 0.9667,
+    "local_id": "wzzz_v__chongzhen"
+  },
+  {
+    "general_number": 120,
+    "general": "SP 赵云",
+    "skill": "救主",
+    "implementation": "reference",
+    "selected_id": "jiuzhu",
+    "source_files": [
+      "gamemode/pkg/3v3_generals/skills/jiuzhu.lua"
+    ],
+    "match_score": 0.4854,
+    "local_id": "wzzz_v__jiuzhu"
+  },
+  {
+    "general_number": 120,
+    "general": "SP 赵云",
+    "skill": "涯角",
+    "implementation": "reference",
+    "selected_id": "yajiao",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yajiao.lua"
+    ],
+    "match_score": 0.8155,
+    "local_id": "wzzz_v__yajiao"
+  },
+  {
+    "general_number": 121,
+    "general": "李傕",
+    "skill": "狼袭",
+    "implementation": "reference",
+    "selected_id": "langxi",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/langxi.lua"
+    ],
+    "match_score": 0.6377,
+    "local_id": "wzzz_v__langxi"
+  },
+  {
+    "general_number": 121,
+    "general": "李傕",
+    "skill": "亦算",
+    "implementation": "reference",
+    "selected_id": "xh__yisuan",
+    "source_files": [
+      "github-xinghan/pkg/yiwu/skills/xh__yisuan.lua",
+      "xinhanwujiang/pkg/yiwu/skills/xh__yisuan.lua"
+    ],
+    "match_score": 0.8817,
+    "local_id": "wzzz_v__xh__yisuan"
+  },
+  {
+    "general_number": 122,
+    "general": "袁术",
+    "skill": "庸肆",
+    "implementation": "reference",
+    "selected_id": "m_ex__yongsi",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/yongsi.lua"
+    ],
+    "match_score": 0.8736,
+    "local_id": "wzzz_v__m_ex__yongsi"
+  },
+  {
+    "general_number": 122,
+    "general": "袁术",
+    "skill": "伪帝",
+    "implementation": "reference",
+    "selected_id": "weidi",
+    "source_files": [
+      "sp/pkg/sp/skills/weidi.lua"
+    ],
+    "match_score": 0.2941,
+    "local_id": "wzzz_v__weidi"
+  },
+  {
+    "general_number": 123,
+    "general": "刘辩",
+    "skill": "诗怨",
+    "implementation": "reference",
+    "selected_id": "shiyuan",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/shiyuan.lua"
+    ],
+    "match_score": 0.5841,
+    "local_id": "wzzz_v__shiyuan"
+  },
+  {
+    "general_number": 123,
+    "general": "刘辩",
+    "skill": "毒逝",
+    "implementation": "reference",
+    "selected_id": "dushi",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/dushi.lua"
+    ],
+    "match_score": 0.6346,
+    "local_id": "wzzz_v__dushi"
+  },
+  {
+    "general_number": 124,
+    "general": "袁绍",
+    "skill": "乱击",
+    "implementation": "reference",
+    "selected_id": "ofl_mou__luanji",
+    "source_files": [
+      "offline/pkg/ofl_mou/skills/luanji.lua"
+    ],
+    "match_score": 0.6667,
+    "local_id": "wzzz_v__ofl_mou__luanji"
+  },
+  {
+    "general_number": 125,
+    "general": "刘琦",
+    "skill": "问计",
+    "implementation": "reference",
+    "selected_id": "wenji",
+    "source_files": [
+      "ol/pkg/xinghe/skills/wenji.lua"
+    ],
+    "match_score": 0.8163,
+    "local_id": "wzzz_v__wenji"
+  },
+  {
+    "general_number": 125,
+    "general": "刘琦",
+    "skill": "屯江",
+    "implementation": "reference",
+    "selected_id": "tunjiang",
+    "source_files": [
+      "ol/pkg/xinghe/skills/tunjiang.lua"
+    ],
+    "match_score": 0.72,
+    "local_id": "wzzz_v__tunjiang"
+  },
+  {
+    "general_number": 126,
+    "general": "左慈",
+    "skill": "化身",
+    "implementation": "reference",
+    "selected_id": "huashen",
+    "source_files": [
+      "shzl/pkg/mountain/skills/huashen.lua"
+    ],
+    "match_score": 0.5125,
+    "local_id": "wzzz_v__huashen"
+  },
+  {
+    "general_number": 126,
+    "general": "左慈",
+    "skill": "新生",
+    "implementation": "reference",
+    "selected_id": "xinsheng",
+    "source_files": [
+      "shzl/pkg/mountain/skills/xinsheng.lua"
+    ],
+    "match_score": 0.6809,
+    "local_id": "wzzz_v__xinsheng"
+  },
+  {
+    "general_number": 127,
+    "general": "孟获",
+    "skill": "祸首",
+    "implementation": "reference",
+    "selected_id": "huoshou",
+    "source_files": [
+      "shzl/pkg/forest/skills/huoshou.lua"
+    ],
+    "match_score": 0.6786,
+    "local_id": "wzzz_v__huoshou"
+  },
+  {
+    "general_number": 127,
+    "general": "孟获",
+    "skill": "再起",
+    "implementation": "reference",
+    "selected_id": "ofl_mou__zaiqi",
+    "source_files": [
+      "offline/pkg/ofl_mou/skills/zaiqi.lua"
+    ],
+    "match_score": 0.6275,
+    "local_id": "wzzz_v__ofl_mou__zaiqi"
+  },
+  {
+    "general_number": 128,
+    "general": "公孙瓒",
+    "skill": "义从",
+    "implementation": "reference",
+    "selected_id": "ty_ex__yicong",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/yicong.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__ty_ex__yicong"
+  },
+  {
+    "general_number": 128,
+    "general": "公孙瓒",
+    "skill": "趫猛",
+    "implementation": "reference",
+    "selected_id": "ty_ex__qiaomeng",
+    "source_files": [
+      "tenyear/pkg/tenyear_xinghuo/skills/qiaomeng.lua"
+    ],
+    "match_score": 0.7778,
+    "local_id": "wzzz_v__ty_ex__qiaomeng"
+  },
+  {
+    "general_number": 129,
+    "general": "潘凤",
+    "skill": "狂斧",
+    "implementation": "reference",
+    "selected_id": "ty__kuangfu",
+    "source_files": [
+      "tenyear/pkg/tenyear_huicui/skills/kuangfu.lua"
+    ],
+    "match_score": 0.569,
+    "local_id": "wzzz_v__ty__kuangfu"
+  },
+  {
+    "general_number": 130,
+    "general": "曹操",
+    "skill": "述志",
+    "implementation": "custom",
+    "selected_id": "wzzz__shuzhi",
+    "source_files": [],
+    "match_score": null,
+    "local_id": "wzzz__shuzhi"
+  },
+  {
+    "general_number": 130,
+    "general": "曹操",
+    "skill": "奸雄",
+    "implementation": "reference",
+    "selected_id": "ex__jianxiong",
+    "source_files": [
+      "standard_ex/pkg/general/skills/jianxiong.lua"
+    ],
+    "match_score": 1,
+    "local_id": "wzzz_v__ex__jianxiong"
+  },
+  {
+    "general_number": 130,
+    "general": "曹操",
+    "skill": "清正",
+    "implementation": "reference",
+    "selected_id": "mou__qingzheng",
+    "source_files": [
+      "mougong/pkg/zhi/skills/mou_qingzheng.lua"
+    ],
+    "match_score": 0.6804,
+    "local_id": "wzzz_v__mou__qingzheng"
+  },
+  {
+    "general_number": 131,
+    "general": "曹叡",
+    "skill": "明鉴",
+    "implementation": "reference",
+    "selected_id": "ty_ex__mingjian",
+    "source_files": [
+      "tenyear/pkg/tenyear_ex/skills/mingjian.lua"
+    ],
+    "match_score": 0.8667,
+    "local_id": "wzzz_v__ty_ex__mingjian"
+  },
+  {
+    "general_number": 131,
+    "general": "曹叡",
+    "skill": "恢拓",
+    "implementation": "reference",
+    "selected_id": "huituo",
+    "source_files": [
+      "yj/pkg/yj2015/skills/huituo.lua"
+    ],
+    "match_score": 0.9888,
+    "local_id": "wzzz_v__huituo"
+  },
+  {
+    "general_number": 132,
+    "general": "刘备",
+    "skill": "仁德",
+    "implementation": "reference",
+    "selected_id": "ex__rende",
+    "source_files": [
+      "standard_ex/pkg/general/skills/rende.lua"
+    ],
+    "match_score": 0.705,
+    "local_id": "wzzz_v__ex__rende"
+  },
+  {
+    "general_number": 132,
+    "general": "刘备",
+    "skill": "仁望",
+    "implementation": "reference",
+    "selected_id": "v11__renwang",
+    "source_files": [
+      "gamemode/pkg/1v1_generals/skills/renwang.lua"
+    ],
+    "match_score": 0.7647,
+    "local_id": "wzzz_v__v11__renwang"
+  },
+  {
+    "general_number": 133,
+    "general": "刘禅",
+    "skill": "享乐",
+    "implementation": "reference",
+    "selected_id": "xiangle",
+    "source_files": [
+      "shzl/pkg/mountain/skills/xiangle.lua"
+    ],
+    "match_score": 0.6944,
+    "local_id": "wzzz_v__xiangle"
+  },
+  {
+    "general_number": 133,
+    "general": "刘禅",
+    "skill": "放权",
+    "implementation": "reference",
+    "selected_id": "m_ex__fangquan",
+    "source_files": [
+      "mobile/pkg/shzl_ex/skills/fangquan.lua"
+    ],
+    "match_score": 0.8421,
+    "local_id": "wzzz_v__m_ex__fangquan"
+  },
+  {
+    "general_number": 134,
+    "general": "孙皓",
+    "skill": "残蚀",
+    "implementation": "reference",
+    "selected_id": "ol__canshi",
+    "source_files": [
+      "ol/pkg/xinghe/skills/canshi.lua"
+    ],
+    "match_score": 0.8081,
+    "local_id": "wzzz_v__ol__canshi"
+  },
+  {
+    "general_number": 134,
+    "general": "孙皓",
+    "skill": "仇海",
+    "implementation": "reference",
+    "selected_id": "chouhai",
+    "source_files": [
+      "mobile/pkg/mobile_sp/skills/chouhai.lua"
+    ],
+    "match_score": 0.9524,
+    "local_id": "wzzz_v__chouhai"
+  },
+  {
+    "general_number": 135,
+    "general": "孙权",
+    "skill": "制衡",
+    "implementation": "reference",
+    "selected_id": "tycl__zhiheng",
+    "source_files": [
+      "tenyear/pkg/tenyear_other/skills/tycl__zhiheng.lua"
+    ],
+    "match_score": 0.9882,
+    "local_id": "wzzz_v__tycl__zhiheng"
+  },
+  {
+    "general_number": 136,
+    "general": "孙策",
+    "skill": "激昂",
+    "implementation": "reference",
+    "selected_id": "jiang",
+    "source_files": [
+      "shzl/pkg/mountain/skills/jiang.lua"
+    ],
+    "match_score": 0.6667,
+    "local_id": "wzzz_v__jiang"
+  },
+  {
+    "general_number": 136,
+    "general": "孙策",
+    "skill": "魂姿",
+    "implementation": "reference",
+    "selected_id": "ol_ex__hunzi",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/hunzi.lua"
+    ],
+    "match_score": 0.9703,
+    "local_id": "wzzz_v__ol_ex__hunzi"
+  },
+  {
+    "general_number": 136,
+    "general": "孙策",
+    "skill": "英姿",
+    "implementation": "reference",
+    "selected_id": "ex__yingzi",
+    "source_files": [
+      "standard_ex/pkg/general/skills/yingzi.lua"
+    ],
+    "match_score": 0.9818,
+    "local_id": "wzzz_v__ex__yingzi"
+  },
+  {
+    "general_number": 136,
+    "general": "孙策",
+    "skill": "英魂",
+    "implementation": "reference",
+    "selected_id": "yinghun",
+    "source_files": [
+      "shzl/pkg/forest/skills/yinghun.lua"
+    ],
+    "match_score": 0.7368,
+    "local_id": "wzzz_v__yinghun"
+  },
+  {
+    "general_number": 137,
+    "general": "孙坚",
+    "skill": "英魂",
+    "implementation": "reference",
+    "selected_id": "yinghun",
+    "source_files": [
+      "shzl/pkg/forest/skills/yinghun.lua"
+    ],
+    "match_score": 0.7368,
+    "local_id": "wzzz_v__yinghun"
+  },
+  {
+    "general_number": 137,
+    "general": "孙坚",
+    "skill": "武烈",
+    "implementation": "reference",
+    "selected_id": "wulie",
+    "source_files": [
+      "ol/pkg/ol_ex/skills/wulie.lua"
+    ],
+    "match_score": 0.4118,
+    "local_id": "wzzz_v__wulie"
+  },
+  {
+    "general_number": 138,
+    "general": "刘协",
+    "skill": "天命",
+    "implementation": "reference",
+    "selected_id": "tianming",
+    "source_files": [
+      "sp/pkg/sp/skills/tianming.lua"
+    ],
+    "match_score": 0.7664,
+    "local_id": "wzzz_v__tianming"
+  },
+  {
+    "general_number": 138,
+    "general": "刘协",
+    "skill": "密诏",
+    "implementation": "reference",
+    "selected_id": "mizhao",
+    "source_files": [
+      "sp/pkg/sp/skills/mizhao.lua"
+    ],
+    "match_score": 0.6207,
+    "local_id": "wzzz_v__mizhao"
+  }
+]

@@ -1,0 +1,60 @@
+Fk:loadTranslationTable{
+  ["wzzz_v__ex__qianxun"] = "谦逊",
+  [":wzzz_v__ex__qianxun"] = "当一张延时锦囊牌或其他角色使用的普通锦囊牌对你生效时，若你是此牌唯一目标，则你可以将所有手牌扣置于武将牌上，\
+  然后此回合结束时，你获得这些牌。",
+
+  ["$wzzz_v__ex__qianxun"] = "谦逊",
+
+  ["$wzzz_v__ex__qianxun1"] = "满招损，谦受益。",
+  ["$wzzz_v__ex__qianxun2"] = "谦谦君子，温润如玉。",
+}
+
+local qianxun = fk.CreateSkill{
+  name = "wzzz_v__ex__qianxun",
+}
+
+qianxun:addEffect(fk.CardEffecting, {
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(qianxun.name) and
+      data.from ~= player and data.card.type == Card.TypeTrick and
+      data:isOnlyTarget(player) and not player:isKongcheng()
+  end,
+  on_use = function(self, event, target, player, data)
+    player:addToPile("$wzzz_v__ex__qianxun", player:getCardIds("h"), false, qianxun.name)
+  end,
+})
+
+qianxun:addEffect(fk.TurnEnd, {
+  mute = true,
+  is_delay_effect = true,
+  can_trigger = function(self, event, target, player, data)
+    return #player:getPile("$wzzz_v__ex__qianxun") > 0
+  end,
+  on_use = function(self, event, target, player, data)
+    player.room:obtainCard(player, player:getPile("$wzzz_v__ex__qianxun"), false)
+  end,
+})
+
+qianxun:addTest(function(room, me)
+  local comp2 = room.players[2]
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, "wzzz_v__ex__qianxun")
+    room:obtainCard(me, {1, 2, 3, 4})
+  end)
+  FkTest.setNextReplies(me, { "1" })
+  FkTest.runInRoom(function()
+    room:useCard{
+      from = comp2,
+      tos = { me },
+      card = room:printCard("snatch"),
+    }
+  end)
+  lu.assertEquals(#me:getCardIds("h"), 0)
+  lu.assertEquals(#comp2:getCardIds("h"), 0)
+  FkTest.runInRoom(function()
+    GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Finish })):exec()
+  end)
+  lu.assertEquals(#me:getCardIds("h"), 4)
+end)
+
+return qianxun

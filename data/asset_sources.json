@@ -1,0 +1,4920 @@
+{
+  "images": {
+    "value": [
+      {
+        "code_name": "wzzz_lord__caocao",
+        "source_repo": "offline",
+        "source_path": "image/generals/es__caocao.jpg",
+        "destination": "image/generals/wzzz_lord__caocao.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__caorui",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__caorui.jpg",
+        "destination": "image/generals/wzzz_lord__caorui.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__caopi",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__caopi.jpg",
+        "destination": "image/generals/wzzz_lord__caopi.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__liubei",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__liubei.jpg",
+        "destination": "image/generals/wzzz_lord__liubei.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__liushan",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__liushan.jpg",
+        "destination": "image/generals/wzzz_lord__liushan.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__sunhao",
+        "source_repo": "offline",
+        "source_path": "image/generals/qshm__sunhao.jpg",
+        "destination": "image/generals/wzzz_lord__sunhao.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__sunquan",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__sunquan.jpg",
+        "destination": "image/generals/wzzz_lord__sunquan.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__sunce",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__sunce.jpg",
+        "destination": "image/generals/wzzz_lord__sunce.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__sunjian",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_ex__sunjian.jpg",
+        "destination": "image/generals/wzzz_lord__sunjian.jpg"
+      },
+      {
+        "code_name": "wzzz_lord__liuxie",
+        "source_repo": "offline",
+        "source_path": "image/generals/bgm__liuxie.jpg",
+        "destination": "image/generals/wzzz_lord__liuxie.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_caoren",
+        "source_repo": "sp",
+        "source_path": "image/generals/starsp__caoren.jpg",
+        "destination": "image/generals/wzzz__sp_caoren.jpg"
+      },
+      {
+        "code_name": "wzzz__luzhi",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os__luzhi.jpg",
+        "destination": "image/generals/wzzz__luzhi.jpg"
+      },
+      {
+        "code_name": "wzzz__zhuling",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__zhuling.jpg",
+        "destination": "image/generals/wzzz__zhuling.jpg"
+      },
+      {
+        "code_name": "wzzz__chenqun",
+        "source_repo": "yj",
+        "source_path": "image/generals/chenqun.jpg",
+        "destination": "image/generals/wzzz__chenqun.jpg"
+      },
+      {
+        "code_name": "wzzz__lidian",
+        "source_repo": "standard_ex",
+        "source_path": "image/generals/lidian.jpg",
+        "destination": "image/generals/wzzz__lidian.jpg"
+      },
+      {
+        "code_name": "wzzz__dianwei",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__dianwei.jpg",
+        "destination": "image/generals/wzzz__dianwei.jpg"
+      },
+      {
+        "code_name": "wzzz__xiahoudun",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__xiahoudun.jpg",
+        "destination": "image/generals/wzzz__xiahoudun.jpg"
+      },
+      {
+        "code_name": "wzzz__wenpin",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__wenpin.jpg",
+        "destination": "image/generals/wzzz__wenpin.jpg"
+      },
+      {
+        "code_name": "wzzz__xunyou",
+        "source_repo": "yj",
+        "source_path": "image/generals/xunyou.jpg",
+        "destination": "image/generals/wzzz__xunyou.jpg"
+      },
+      {
+        "code_name": "wzzz__jianggan",
+        "source_repo": "offline",
+        "source_path": "image/generals/sgsh__jianggan.jpg",
+        "destination": "image/generals/wzzz__jianggan.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangliao",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__zhangliao.jpg",
+        "destination": "image/generals/wzzz__zhangliao.jpg"
+      },
+      {
+        "code_name": "wzzz__guojia",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__guojia.jpg",
+        "destination": "image/generals/wzzz__guojia.jpg"
+      },
+      {
+        "code_name": "wzzz__simayi",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__simayi.jpg",
+        "destination": "image/generals/wzzz__simayi.jpg"
+      },
+      {
+        "code_name": "wzzz__xunyu",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__xunyu.jpg",
+        "destination": "image/generals/wzzz__xunyu.jpg"
+      },
+      {
+        "code_name": "wzzz__caoang",
+        "source_repo": "offline",
+        "source_path": "image/generals/es__caoang.jpg",
+        "destination": "image/generals/wzzz__caoang.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangchunhua",
+        "source_repo": "yj",
+        "source_path": "image/generals/zhangchunhua.jpg",
+        "destination": "image/generals/wzzz__zhangchunhua.jpg"
+      },
+      {
+        "code_name": "wzzz__xuhuang",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__xuhuang.jpg",
+        "destination": "image/generals/wzzz__xuhuang.jpg"
+      },
+      {
+        "code_name": "wzzz__yanrou",
+        "source_repo": "tenyear",
+        "source_path": "image/generals/yanrou.jpg",
+        "destination": "image/generals/wzzz__yanrou.jpg"
+      },
+      {
+        "code_name": "wzzz__haozhao",
+        "source_repo": "shzl",
+        "source_path": "image/generals/haozhao.jpg",
+        "destination": "image/generals/wzzz__haozhao.jpg"
+      },
+      {
+        "code_name": "wzzz__maojie",
+        "source_repo": "mobile",
+        "source_path": "image/generals/maojie.jpg",
+        "destination": "image/generals/wzzz__maojie.jpg"
+      },
+      {
+        "code_name": "wzzz__xiahouyuan",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__xiahouyuan.jpg",
+        "destination": "image/generals/wzzz__xiahouyuan.jpg"
+      },
+      {
+        "code_name": "wzzz__dengai",
+        "source_repo": "shzl",
+        "source_path": "image/generals/dengai.jpg",
+        "destination": "image/generals/wzzz__dengai.jpg"
+      },
+      {
+        "code_name": "wzzz__wangji",
+        "source_repo": "shzl",
+        "source_path": "image/generals/wangji.jpg",
+        "destination": "image/generals/wzzz__wangji.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_jiangwei",
+        "source_repo": "sp",
+        "source_path": "image/generals/jsp__jiangwei.jpg",
+        "destination": "image/generals/wzzz__sp_jiangwei.jpg"
+      },
+      {
+        "code_name": "wzzz__zhonghui",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__zhonghui.jpg",
+        "destination": "image/generals/wzzz__zhonghui.jpg"
+      },
+      {
+        "code_name": "wzzz__wangyi",
+        "source_repo": "yj",
+        "source_path": "image/generals/wangyi.jpg",
+        "destination": "image/generals/wzzz__wangyi.jpg"
+      },
+      {
+        "code_name": "wzzz__caochong",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_if__caochong.jpg",
+        "destination": "image/generals/wzzz__caochong.jpg"
+      },
+      {
+        "code_name": "wzzz__zhenji",
+        "source_repo": "offline",
+        "source_path": "image/generals/es__zhenji.jpg",
+        "destination": "image/generals/wzzz__zhenji.jpg"
+      },
+      {
+        "code_name": "wzzz__xuchu",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__xuchu.jpg",
+        "destination": "image/generals/wzzz__xuchu.jpg"
+      },
+      {
+        "code_name": "wzzz__zhugedan",
+        "source_repo": "sp",
+        "source_path": "image/generals/zhugedan.jpg",
+        "destination": "image/generals/wzzz__zhugedan.jpg"
+      },
+      {
+        "code_name": "wzzz__liuchen",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__liuchen.jpg",
+        "destination": "image/generals/wzzz__liuchen.jpg"
+      },
+      {
+        "code_name": "wzzz__pangtong",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__pangtong.jpg",
+        "destination": "image/generals/wzzz__pangtong.jpg"
+      },
+      {
+        "code_name": "wzzz__machao",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__machao.jpg",
+        "destination": "image/generals/wzzz__machao.jpg"
+      },
+      {
+        "code_name": "wzzz__huangquan",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__huangquan.jpg",
+        "destination": "image/generals/wzzz__huangquan.jpg"
+      },
+      {
+        "code_name": "wzzz__guanxingzhangbao",
+        "source_repo": "yj",
+        "source_path": "image/generals/guanxingzhangbao.jpg",
+        "destination": "image/generals/wzzz__guanxingzhangbao.jpg"
+      },
+      {
+        "code_name": "wzzz__masu",
+        "source_repo": "yj",
+        "source_path": "image/generals/masu.jpg",
+        "destination": "image/generals/wzzz__masu.jpg"
+      },
+      {
+        "code_name": "wzzz__xiahoushi",
+        "source_repo": "yj",
+        "source_path": "image/generals/xiahoushi.jpg",
+        "destination": "image/generals/wzzz__xiahoushi.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangxingcai",
+        "source": null,
+        "source_repo": "sp",
+        "source_path": "image/generals/xingcai.jpg",
+        "destination": "image/generals/wzzz__zhangxingcai.jpg"
+      },
+      {
+        "code_name": "wzzz__zhurong",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_ex__zhurong.jpg",
+        "destination": "image/generals/wzzz__zhurong.jpg"
+      },
+      {
+        "code_name": "wzzz__maliang",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__maliang.jpg",
+        "destination": "image/generals/wzzz__maliang.jpg"
+      },
+      {
+        "code_name": "wzzz__wuyi",
+        "source_repo": "yj",
+        "source_path": "image/generals/wuyi.jpg",
+        "destination": "image/generals/wzzz__wuyi.jpg"
+      },
+      {
+        "code_name": "wzzz__xiahouba",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__xiahouba.jpg",
+        "destination": "image/generals/wzzz__xiahouba.jpg"
+      },
+      {
+        "code_name": "wzzz__qinmi",
+        "source_repo": "yj",
+        "source_path": "image/generals/qinmi.jpg",
+        "destination": "image/generals/wzzz__qinmi.jpg"
+      },
+      {
+        "code_name": "wzzz__zhugezhan",
+        "source_repo": "offline",
+        "source_path": "image/generals/shzj_juedai__zhugezhan.jpg",
+        "destination": "image/generals/wzzz__zhugezhan.jpg"
+      },
+      {
+        "code_name": "wzzz__huangzhong",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__huangzhong.jpg",
+        "destination": "image/generals/wzzz__huangzhong.jpg"
+      },
+      {
+        "code_name": "wzzz__shamoke",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__shamoke.jpg",
+        "destination": "image/generals/wzzz__shamoke.jpg"
+      },
+      {
+        "code_name": "wzzz__mizhu",
+        "source_repo": "ol",
+        "source_path": "image/generals/mizhu.jpg",
+        "destination": "image/generals/wzzz__mizhu.jpg"
+      },
+      {
+        "code_name": "wzzz__weiyan",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_if__weiyan.jpg",
+        "destination": "image/generals/wzzz__weiyan.jpg"
+      },
+      {
+        "code_name": "wzzz__liufeng",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_if__liufeng.jpg",
+        "destination": "image/generals/wzzz__liufeng.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangyi",
+        "source_repo": "yj",
+        "source_path": "image/generals/zhangyi.jpg",
+        "destination": "image/generals/wzzz__zhangyi.jpg"
+      },
+      {
+        "code_name": "wzzz__jiangwei",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_mou__jiangwei.jpg",
+        "destination": "image/generals/wzzz__jiangwei.jpg"
+      },
+      {
+        "code_name": "wzzz__dongyun",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__dongyun.jpg",
+        "destination": "image/generals/wzzz__dongyun.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangfei",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__zhangfei.jpg",
+        "destination": "image/generals/wzzz__zhangfei.jpg"
+      },
+      {
+        "code_name": "wzzz__wangping",
+        "source_repo": "shzl",
+        "source_path": "image/generals/wangping.jpg",
+        "destination": "image/generals/wzzz__wangping.jpg"
+      },
+      {
+        "code_name": "wzzz__guanyu",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__guanyu.jpg",
+        "destination": "image/generals/wzzz__guanyu.jpg"
+      },
+      {
+        "code_name": "wzzz__fazheng",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_ex__fazheng.jpg",
+        "destination": "image/generals/wzzz__fazheng.jpg"
+      },
+      {
+        "code_name": "wzzz__qiaozhou",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os__qiaozhou.jpg",
+        "destination": "image/generals/wzzz__qiaozhou.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangsong",
+        "source_repo": "yj",
+        "source_path": "image/generals/zhangsong.jpg",
+        "destination": "image/generals/wzzz__zhangsong.jpg"
+      },
+      {
+        "code_name": "wzzz__guanping",
+        "source_repo": "offline",
+        "source_path": "image/generals/shzj_guansuo__guanping.jpg",
+        "destination": "image/generals/wzzz__guanping.jpg"
+      },
+      {
+        "code_name": "wzzz__huangyueying",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__huangyueying.jpg",
+        "destination": "image/generals/wzzz__huangyueying.jpg"
+      },
+      {
+        "code_name": "wzzz__dingfeng",
+        "source_repo": "offline",
+        "source_path": "image/generals/qshm__dingfeng.jpg",
+        "destination": "image/generals/wzzz__dingfeng.jpg"
+      },
+      {
+        "code_name": "wzzz__handang",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_ex__handang.jpg",
+        "destination": "image/generals/wzzz__handang.jpg"
+      },
+      {
+        "code_name": "wzzz__lingtong",
+        "source_repo": "yj",
+        "source_path": "image/generals/lingtong.jpg",
+        "destination": "image/generals/wzzz__lingtong.jpg"
+      },
+      {
+        "code_name": "wzzz__zhugejin",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__zhugejin.jpg",
+        "destination": "image/generals/wzzz__zhugejin.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_pangtong",
+        "source_repo": "sp",
+        "source_path": "image/generals/starsp__pangtong.jpg",
+        "destination": "image/generals/wzzz__sp_pangtong.jpg"
+      },
+      {
+        "code_name": "wzzz__bulianshi",
+        "source_repo": "yj",
+        "source_path": "image/generals/bulianshi.jpg",
+        "destination": "image/generals/wzzz__bulianshi.jpg"
+      },
+      {
+        "code_name": "wzzz__xusheng",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__xusheng.jpg",
+        "destination": "image/generals/wzzz__xusheng.jpg"
+      },
+      {
+        "code_name": "wzzz__liuzan",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__liuzan.jpg",
+        "destination": "image/generals/wzzz__liuzan.jpg"
+      },
+      {
+        "code_name": "wzzz__daqiao",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__daqiao.jpg",
+        "destination": "image/generals/wzzz__daqiao.jpg"
+      },
+      {
+        "code_name": "wzzz__wenyang",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__wenyang.jpg",
+        "destination": "image/generals/wzzz__wenyang.jpg"
+      },
+      {
+        "code_name": "wzzz__cenhun",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__cenhun.jpg",
+        "destination": "image/generals/wzzz__cenhun.jpg"
+      },
+      {
+        "code_name": "wzzz__sunshangxiang",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__sunshangxiang.jpg",
+        "destination": "image/generals/wzzz__sunshangxiang.jpg"
+      },
+      {
+        "code_name": "wzzz__zhugeke",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__zhugeke.jpg",
+        "destination": "image/generals/wzzz__zhugeke.jpg"
+      },
+      {
+        "code_name": "wzzz__zhuhuan",
+        "source_repo": "yj",
+        "source_path": "image/generals/zhuhuan.jpg",
+        "destination": "image/generals/wzzz__zhuhuan.jpg"
+      },
+      {
+        "code_name": "wzzz__lusu",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__lusu.jpg",
+        "destination": "image/generals/wzzz__lusu.jpg"
+      },
+      {
+        "code_name": "wzzz__jiangqin",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__jiangqin.jpg",
+        "destination": "image/generals/wzzz__jiangqin.jpg"
+      },
+      {
+        "code_name": "wzzz__luxun",
+        "source_repo": "offline",
+        "source_path": "image/generals/shzj_yiling__luxun.jpg",
+        "destination": "image/generals/wzzz__luxun.jpg"
+      },
+      {
+        "code_name": "wzzz__buzhi",
+        "source_repo": "offline",
+        "source_path": "image/generals/qshm__buzhi.jpg",
+        "destination": "image/generals/wzzz__buzhi.jpg"
+      },
+      {
+        "code_name": "wzzz__ganning",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__ganning.jpg",
+        "destination": "image/generals/wzzz__ganning.jpg"
+      },
+      {
+        "code_name": "wzzz__lingcao",
+        "source_repo": "mobile",
+        "source_path": "image/generals/lingcao.jpg",
+        "destination": "image/generals/wzzz__lingcao.jpg"
+      },
+      {
+        "code_name": "wzzz__huanggai",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__huanggai.jpg",
+        "destination": "image/generals/wzzz__huanggai.jpg"
+      },
+      {
+        "code_name": "wzzz__sunru",
+        "source_repo": "mobile",
+        "source_path": "image/generals/sunru.jpg",
+        "destination": "image/generals/wzzz__sunru.jpg"
+      },
+      {
+        "code_name": "wzzz__zhoufang",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__zhoufang.jpg",
+        "destination": "image/generals/wzzz__zhoufang.jpg"
+      },
+      {
+        "code_name": "wzzz__taishici",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_tx__taishici.jpg",
+        "destination": "image/generals/wzzz__taishici.jpg"
+      },
+      {
+        "code_name": "wzzz__lvmeng",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__lvmeng.jpg",
+        "destination": "image/generals/wzzz__lvmeng.jpg"
+      },
+      {
+        "code_name": "wzzz__tangzi",
+        "source_repo": "tenyear",
+        "source_path": "image/generals/ty__tangzi.jpg",
+        "destination": "image/generals/wzzz__tangzi.jpg"
+      },
+      {
+        "code_name": "wzzz__zhouyu",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__zhouyu.jpg",
+        "destination": "image/generals/wzzz__zhouyu.jpg"
+      },
+      {
+        "code_name": "wzzz__zhangzhaozhanghong",
+        "source_repo": "shzl",
+        "source_path": "image/generals/zhangzhaozhanghong.jpg",
+        "destination": "image/generals/wzzz__zhangzhaozhanghong.jpg"
+      },
+      {
+        "code_name": "wzzz__liru",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__liru.jpg",
+        "destination": "image/generals/wzzz__liru.jpg"
+      },
+      {
+        "code_name": "wzzz__huaxiong",
+        "source_repo": "offline",
+        "source_path": "image/generals/sgsh__huaxiong.jpg",
+        "destination": "image/generals/wzzz__huaxiong.jpg"
+      },
+      {
+        "code_name": "wzzz__gaoshun",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_tx__gaoshun.jpg",
+        "destination": "image/generals/wzzz__gaoshun.jpg"
+      },
+      {
+        "code_name": "wzzz__zhanghe",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__zhanghe.jpg",
+        "destination": "image/generals/wzzz__zhanghe.jpg"
+      },
+      {
+        "code_name": "wzzz__gongsunyuan",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__gongsunyuan.jpg",
+        "destination": "image/generals/wzzz__gongsunyuan.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_caiwenji",
+        "source_repo": "sp",
+        "source_path": "image/generals/sp__caiwenji.jpg",
+        "destination": "image/generals/wzzz__sp_caiwenji.jpg"
+      },
+      {
+        "code_name": "wzzz__yujin",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/jiange__yujin.jpg",
+        "destination": "image/generals/wzzz__yujin.jpg"
+      },
+      {
+        "code_name": "wzzz__hansui",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__hansui.jpg",
+        "destination": "image/generals/wzzz__hansui.jpg"
+      },
+      {
+        "code_name": "wzzz__mateng",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__mateng.jpg",
+        "destination": "image/generals/wzzz__mateng.jpg"
+      },
+      {
+        "code_name": "wzzz__duyu",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__duyu.jpg",
+        "destination": "image/generals/wzzz__duyu.jpg"
+      },
+      {
+        "code_name": "wzzz__quyi",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_tx__quyi.jpg",
+        "destination": "image/generals/wzzz__quyi.jpg"
+      },
+      {
+        "code_name": "wzzz__chengong",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__chengong.jpg",
+        "destination": "image/generals/wzzz__chengong.jpg"
+      },
+      {
+        "code_name": "wzzz__jushou",
+        "source_repo": "xinhanwujiang",
+        "source_path": "image/generals/xh__jushou.jpg",
+        "destination": "image/generals/wzzz__jushou.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_sunce",
+        "source_repo": "ol",
+        "source_path": "image/generals/ol_sp__sunce.jpg",
+        "destination": "image/generals/wzzz__sp_sunce.jpg"
+      },
+      {
+        "code_name": "wzzz__lvbu",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v33__lvbu.jpg",
+        "destination": "image/generals/wzzz__lvbu.jpg"
+      },
+      {
+        "code_name": "wzzz__jiaxu",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/chaos__jiaxu.jpg",
+        "destination": "image/generals/wzzz__jiaxu.jpg"
+      },
+      {
+        "code_name": "wzzz__diaochan",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__diaochan.jpg",
+        "destination": "image/generals/wzzz__diaochan.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_machao",
+        "source_repo": "sp",
+        "source_path": "image/generals/sp__machao.jpg",
+        "destination": "image/generals/wzzz__sp_machao.jpg"
+      },
+      {
+        "code_name": "wzzz__pangdegong",
+        "source_repo": "offline",
+        "source_path": "image/generals/sxfy__pangdegong.jpg",
+        "destination": "image/generals/wzzz__pangdegong.jpg"
+      },
+      {
+        "code_name": "wzzz__fuwan",
+        "source_repo": "offline",
+        "source_path": "image/generals/tqt__fuwan.jpg",
+        "destination": "image/generals/wzzz__fuwan.jpg"
+      },
+      {
+        "code_name": "wzzz__gaolan",
+        "source_repo": "mobile",
+        "source_path": "image/generals/mobile__gaolan.jpg",
+        "destination": "image/generals/wzzz__gaolan.jpg"
+      },
+      {
+        "code_name": "wzzz__sp_zhaoyun",
+        "source_repo": "sp",
+        "source_path": "image/generals/jsp__zhaoyun.jpg",
+        "destination": "image/generals/wzzz__sp_zhaoyun.jpg"
+      },
+      {
+        "code_name": "wzzz__lijue",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/chaos__lijue.jpg",
+        "destination": "image/generals/wzzz__lijue.jpg"
+      },
+      {
+        "code_name": "wzzz__yuanshu",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_tx__yuanshu.jpg",
+        "destination": "image/generals/wzzz__yuanshu.jpg"
+      },
+      {
+        "code_name": "wzzz__liubian",
+        "source_repo": "tenyear",
+        "source_path": "image/generals/liubian.jpg",
+        "destination": "image/generals/wzzz__liubian.jpg"
+      },
+      {
+        "code_name": "wzzz__yuanshao",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__yuanshao.jpg",
+        "destination": "image/generals/wzzz__yuanshao.jpg"
+      },
+      {
+        "code_name": "wzzz__liuqi",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_tx__liuqi.jpg",
+        "destination": "image/generals/wzzz__liuqi.jpg"
+      },
+      {
+        "code_name": "wzzz__zuoci",
+        "source_repo": "offline",
+        "source_path": "image/generals/sgsh__zuoci.jpg",
+        "destination": "image/generals/wzzz__zuoci.jpg"
+      },
+      {
+        "code_name": "wzzz__menghuo",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl_mou__menghuo.jpg",
+        "destination": "image/generals/wzzz__menghuo.jpg"
+      },
+      {
+        "code_name": "wzzz__gongsunzan",
+        "source_repo": "offline",
+        "source_path": "image/generals/bgm__gongsunzan.jpg",
+        "destination": "image/generals/wzzz__gongsunzan.jpg"
+      },
+      {
+        "code_name": "wzzz__panfeng",
+        "source_repo": "standard_ex",
+        "source_path": "image/generals/std__panfeng.jpg",
+        "destination": "image/generals/wzzz__panfeng.jpg"
+      },
+      {
+        "code_name": "wzzz__caocao",
+        "source_repo": "offline",
+        "source_path": "image/generals/es__caocao.jpg",
+        "destination": "image/generals/wzzz__caocao.jpg"
+      },
+      {
+        "code_name": "wzzz__caorui",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__caorui.jpg",
+        "destination": "image/generals/wzzz__caorui.jpg"
+      },
+      {
+        "code_name": "wzzz__liubei",
+        "source_repo": "gamemode",
+        "source_path": "image/generals/v11__liubei.jpg",
+        "destination": "image/generals/wzzz__liubei.jpg"
+      },
+      {
+        "code_name": "wzzz__liushan",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__liushan.jpg",
+        "destination": "image/generals/wzzz__liushan.jpg"
+      },
+      {
+        "code_name": "wzzz__sunhao",
+        "source_repo": "offline",
+        "source_path": "image/generals/qshm__sunhao.jpg",
+        "destination": "image/generals/wzzz__sunhao.jpg"
+      },
+      {
+        "code_name": "wzzz__sunquan",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__sunquan.jpg",
+        "destination": "image/generals/wzzz__sunquan.jpg"
+      },
+      {
+        "code_name": "wzzz__sunce",
+        "source_repo": "offline",
+        "source_path": "image/generals/ofl__sunce.jpg",
+        "destination": "image/generals/wzzz__sunce.jpg"
+      },
+      {
+        "code_name": "wzzz__sunjian",
+        "source_repo": "overseas",
+        "source_path": "image/generals/os_ex__sunjian.jpg",
+        "destination": "image/generals/wzzz__sunjian.jpg"
+      },
+      {
+        "code_name": "wzzz__liuxie",
+        "source_repo": "offline",
+        "source_path": "image/generals/bgm__liuxie.jpg",
+        "destination": "image/generals/wzzz__liuxie.jpg"
+      }
+    ],
+    "Count": 138
+  },
+  "audio": {
+    "death": [
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl3__caocao.mp3",
+        "destination": "audio/death/wzzz_lord__caocao.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/caorui.mp3",
+        "destination": "audio/death/wzzz_lord__caorui.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl2__caopi.mp3",
+        "destination": "audio/death/wzzz_lord__caopi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liubei.mp3",
+        "destination": "audio/death/wzzz_lord__liubei.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liushan.mp3",
+        "destination": "audio/death/wzzz_lord__liushan.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/sunhao.mp3",
+        "destination": "audio/death/wzzz_lord__sunhao.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__sunquan.mp3",
+        "destination": "audio/death/wzzz_lord__sunquan.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__sunce.mp3",
+        "destination": "audio/death/wzzz_lord__sunce.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__sunjian.mp3",
+        "destination": "audio/death/wzzz_lord__sunjian.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liuxie.mp3",
+        "destination": "audio/death/wzzz_lord__liuxie.mp3"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/death/ol_sp__caoren.mp3",
+        "destination": "audio/death/wzzz__sp_caoren.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__luzhi.mp3",
+        "destination": "audio/death/wzzz__luzhi.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__zhuling.mp3",
+        "destination": "audio/death/wzzz__zhuling.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/chenqun.mp3",
+        "destination": "audio/death/wzzz__chenqun.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/lidian.mp3",
+        "destination": "audio/death/wzzz__lidian.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__xia__dianwei.mp3",
+        "destination": "audio/death/wzzz__dianwei.mp3"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/death/v33__xiahoudun.mp3",
+        "destination": "audio/death/wzzz__xiahoudun.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/wenpin.mp3",
+        "destination": "audio/death/wzzz__wenpin.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/xunyou.mp3",
+        "destination": "audio/death/wzzz__xunyou.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/sgsh__jianggan.mp3",
+        "destination": "audio/death/wzzz__jianggan.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__zhangliao.mp3",
+        "destination": "audio/death/wzzz__zhangliao.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__guojia.mp3",
+        "destination": "audio/death/wzzz__guojia.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_if__simayi.mp3",
+        "destination": "audio/death/wzzz__simayi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__xunyu.mp3",
+        "destination": "audio/death/wzzz__xunyu.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_if__caoang.mp3",
+        "destination": "audio/death/wzzz__caoang.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/zhangchunhua.mp3",
+        "destination": "audio/death/wzzz__zhangchunhua.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/xuhuang.mp3",
+        "destination": "audio/death/wzzz__xuhuang.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/yanrou.mp3",
+        "destination": "audio/death/wzzz__yanrou.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/haozhao.mp3",
+        "destination": "audio/death/wzzz__haozhao.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/maojie.mp3",
+        "destination": "audio/death/wzzz__maojie.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/xiahouyuan.mp3",
+        "destination": "audio/death/wzzz__xiahouyuan.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/dengai.mp3",
+        "destination": "audio/death/wzzz__dengai.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/wangji.mp3",
+        "destination": "audio/death/wzzz__wangji.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/jsp__jiangwei.mp3",
+        "destination": "audio/death/wzzz__sp_jiangwei.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__zhonghui.mp3",
+        "destination": "audio/death/wzzz__zhonghui.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/wangyi.mp3",
+        "destination": "audio/death/wzzz__wangyi.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/caochong.mp3",
+        "destination": "audio/death/wzzz__caochong.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__zhenji.mp3",
+        "destination": "audio/death/wzzz__zhenji.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__xuchu.mp3",
+        "destination": "audio/death/wzzz__xuchu.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/zhugedan.mp3",
+        "destination": "audio/death/wzzz__zhugedan.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/liuchen.mp3",
+        "destination": "audio/death/wzzz__liuchen.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/qshm__pangtong.mp3",
+        "destination": "audio/death/wzzz__pangtong.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__machao.mp3",
+        "destination": "audio/death/wzzz__machao.mp3"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/death/v33__huangquan.mp3",
+        "destination": "audio/death/wzzz__huangquan.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/guanxingzhangbao.mp3",
+        "destination": "audio/death/wzzz__guanxingzhangbao.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/re__masu.mp3",
+        "destination": "audio/death/wzzz__masu.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/xiahoushi.mp3",
+        "destination": "audio/death/wzzz__xiahoushi.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__zhurong.mp3",
+        "destination": "audio/death/wzzz__zhurong.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/maliang.mp3",
+        "destination": "audio/death/wzzz__maliang.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/wuyi.mp3",
+        "destination": "audio/death/wzzz__wuyi.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/xiahouba.mp3",
+        "destination": "audio/death/wzzz__xiahouba.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/qinmi.mp3",
+        "destination": "audio/death/wzzz__qinmi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/shzj_juedai__zhugezhan.mp3",
+        "destination": "audio/death/wzzz__zhugezhan.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/huangzhong.mp3",
+        "destination": "audio/death/wzzz__huangzhong.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/shamoke.mp3",
+        "destination": "audio/death/wzzz__shamoke.mp3"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/death/mizhu.mp3",
+        "destination": "audio/death/wzzz__mizhu.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_if__weiyan.mp3",
+        "destination": "audio/death/wzzz__weiyan.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/liufeng.mp3",
+        "destination": "audio/death/wzzz__liufeng.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/zhangyi.mp3",
+        "destination": "audio/death/wzzz__zhangyi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__jiangwei.mp3",
+        "destination": "audio/death/wzzz__jiangwei.mp3"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/death/dongyun.mp3",
+        "destination": "audio/death/wzzz__dongyun.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__zhangfei.mp3",
+        "destination": "audio/death/wzzz__zhangfei.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/wangping.mp3",
+        "destination": "audio/death/wzzz__wangping.mp3"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/death/v33__guanyu.mp3",
+        "destination": "audio/death/wzzz__guanyu.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__fazheng.mp3",
+        "destination": "audio/death/wzzz__fazheng.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__qiaozhou.mp3",
+        "destination": "audio/death/wzzz__qiaozhou.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/zhangsong.mp3",
+        "destination": "audio/death/wzzz__zhangsong.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/shzj_guansuo__guanping.mp3",
+        "destination": "audio/death/wzzz__guanping.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__huangyueying.mp3",
+        "destination": "audio/death/wzzz__huangyueying.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/qshm__dingfeng.mp3",
+        "destination": "audio/death/wzzz__dingfeng.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__handang.mp3",
+        "destination": "audio/death/wzzz__handang.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/lingtong.mp3",
+        "destination": "audio/death/wzzz__lingtong.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/zhugejin.mp3",
+        "destination": "audio/death/wzzz__zhugejin.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/starsp__pangtong.mp3",
+        "destination": "audio/death/wzzz__sp_pangtong.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/bulianshi.mp3",
+        "destination": "audio/death/wzzz__bulianshi.mp3"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/death/v33__xusheng.mp3",
+        "destination": "audio/death/wzzz__xusheng.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/liuzan.mp3",
+        "destination": "audio/death/wzzz__liuzan.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__daqiao.mp3",
+        "destination": "audio/death/wzzz__daqiao.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/mobile__wenyang.mp3",
+        "destination": "audio/death/wzzz__wenyang.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/cenhun.mp3",
+        "destination": "audio/death/wzzz__cenhun.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/qshm__sunshangxiang.mp3",
+        "destination": "audio/death/wzzz__sunshangxiang.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/zhugeke.mp3",
+        "destination": "audio/death/wzzz__zhugeke.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/zhuhuan.mp3",
+        "destination": "audio/death/wzzz__zhuhuan.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__xia__lusu.mp3",
+        "destination": "audio/death/wzzz__lusu.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__jiangqin.mp3",
+        "destination": "audio/death/wzzz__jiangqin.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/shzj_guansuo__luxun.mp3",
+        "destination": "audio/death/wzzz__luxun.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/qshm__buzhi.mp3",
+        "destination": "audio/death/wzzz__buzhi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__ganning.mp3",
+        "destination": "audio/death/wzzz__ganning.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/lingcao.mp3",
+        "destination": "audio/death/wzzz__lingcao.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__huanggai.mp3",
+        "destination": "audio/death/wzzz__huanggai.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/sunru.mp3",
+        "destination": "audio/death/wzzz__sunru.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/zhoufang.mp3",
+        "destination": "audio/death/wzzz__zhoufang.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/taishici.mp3",
+        "destination": "audio/death/wzzz__taishici.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__lvmeng.mp3",
+        "destination": "audio/death/wzzz__lvmeng.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/ty__tangzi.mp3",
+        "destination": "audio/death/wzzz__tangzi.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__zhouyu.mp3",
+        "destination": "audio/death/wzzz__zhouyu.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/zhangzhaozhanghong.mp3",
+        "destination": "audio/death/wzzz__zhangzhaozhanghong.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/liru.mp3",
+        "destination": "audio/death/wzzz__liru.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/sgsh__huaxiong.mp3",
+        "destination": "audio/death/wzzz__huaxiong.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/gaoshun.mp3",
+        "destination": "audio/death/wzzz__gaoshun.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_if__zhanghe.mp3",
+        "destination": "audio/death/wzzz__zhanghe.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/gongsunyuan.mp3",
+        "destination": "audio/death/wzzz__gongsunyuan.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/sp__caiwenji.mp3",
+        "destination": "audio/death/wzzz__sp_caiwenji.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__yujin.mp3",
+        "destination": "audio/death/wzzz__yujin.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/mobile__hansui.mp3",
+        "destination": "audio/death/wzzz__hansui.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os__mateng.mp3",
+        "destination": "audio/death/wzzz__mateng.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_shiji__duyu.mp3",
+        "destination": "audio/death/wzzz__duyu.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/ty__quyi.mp3",
+        "destination": "audio/death/wzzz__quyi.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__chengong.mp3",
+        "destination": "audio/death/wzzz__chengong.mp3"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/death/ol_sp__sunce.mp3",
+        "destination": "audio/death/wzzz__sp_sunce.mp3"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/death/v33__lvbu.mp3",
+        "destination": "audio/death/wzzz__lvbu.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl3__jiaxu.mp3",
+        "destination": "audio/death/wzzz__jiaxu.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/ex__diaochan.mp3",
+        "destination": "audio/death/wzzz__diaochan.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/sp__machao.mp3",
+        "destination": "audio/death/wzzz__sp_machao.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/pangdegong.mp3",
+        "destination": "audio/death/wzzz__pangdegong.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/tqt__fuwan.mp3",
+        "destination": "audio/death/wzzz__fuwan.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/mobile__gaolan.mp3",
+        "destination": "audio/death/wzzz__gaolan.mp3"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/death/starsp__zhaoyun.mp3",
+        "destination": "audio/death/wzzz__sp_zhaoyun.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/lijue.mp3",
+        "destination": "audio/death/wzzz__lijue.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/std__yuanshu.mp3",
+        "destination": "audio/death/wzzz__yuanshu.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/liubian.mp3",
+        "destination": "audio/death/wzzz__liubian.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl2__yuanshao.mp3",
+        "destination": "audio/death/wzzz__yuanshao.mp3"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/death/ty__liuqi.mp3",
+        "destination": "audio/death/wzzz__liuqi.mp3"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/death/zuoci.mp3",
+        "destination": "audio/death/wzzz__zuoci.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__menghuo.mp3",
+        "destination": "audio/death/wzzz__menghuo.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__gongsunzan.mp3",
+        "destination": "audio/death/wzzz__gongsunzan.mp3"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/death/std__panfeng.mp3",
+        "destination": "audio/death/wzzz__panfeng.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl3__caocao.mp3",
+        "destination": "audio/death/wzzz__caocao.mp3"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/death/caorui.mp3",
+        "destination": "audio/death/wzzz__caorui.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liubei.mp3",
+        "destination": "audio/death/wzzz__liubei.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liushan.mp3",
+        "destination": "audio/death/wzzz__liushan.mp3"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/death/sunhao.mp3",
+        "destination": "audio/death/wzzz__sunhao.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl_mou__sunquan.mp3",
+        "destination": "audio/death/wzzz__sunquan.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__sunce.mp3",
+        "destination": "audio/death/wzzz__sunce.mp3"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/death/os_ex__sunjian.mp3",
+        "destination": "audio/death/wzzz__sunjian.mp3"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/death/ofl__liuxie.mp3",
+        "destination": "audio/death/wzzz__liuxie.mp3"
+      }
+    ],
+    "skill": [
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__jianxiong1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__jianxiong1.mp3",
+        "skill_id": "wzzz_v__ex__jianxiong"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__jianxiong2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__jianxiong2.mp3",
+        "skill_id": "wzzz_v__ex__jianxiong"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__qingzheng1.mp3",
+        "destination": "audio/skill/wzzz_v__mou__qingzheng1.mp3",
+        "skill_id": "wzzz_v__mou__qingzheng"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__qingzheng2.mp3",
+        "destination": "audio/skill/wzzz_v__mou__qingzheng2.mp3",
+        "skill_id": "wzzz_v__mou__qingzheng"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/ol_ex__hujia1.mp3",
+        "destination": "audio/skill/wzzz_v__hujia1.mp3",
+        "skill_id": "wzzz_v__hujia"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/ol_ex__hujia2.mp3",
+        "destination": "audio/skill/wzzz_v__hujia2.mp3",
+        "skill_id": "wzzz_v__hujia"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__mingjian1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__mingjian1.mp3",
+        "skill_id": "wzzz_v__ty_ex__mingjian"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__mingjian2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__mingjian2.mp3",
+        "skill_id": "wzzz_v__ty_ex__mingjian"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huituo1.mp3",
+        "destination": "audio/skill/wzzz_v__huituo1.mp3",
+        "skill_id": "wzzz_v__huituo"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huituo2.mp3",
+        "destination": "audio/skill/wzzz_v__huituo2.mp3",
+        "skill_id": "wzzz_v__huituo"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__xingshuai1.mp3",
+        "destination": "audio/skill/wzzz_v__xingshuai1.mp3",
+        "skill_id": "wzzz_v__xingshuai"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__xingshuai2.mp3",
+        "destination": "audio/skill/wzzz_v__xingshuai2.mp3",
+        "skill_id": "wzzz_v__xingshuai"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xingshang1.mp3",
+        "destination": "audio/skill/wzzz_v__xingshang1.mp3",
+        "skill_id": "wzzz_v__xingshang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xingshang2.mp3",
+        "destination": "audio/skill/wzzz_v__xingshang2.mp3",
+        "skill_id": "wzzz_v__xingshang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__fangzhu1.mp3",
+        "destination": "audio/skill/wzzz_v__fangzhu1.mp3",
+        "skill_id": "wzzz_v__fangzhu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__fangzhu2.mp3",
+        "destination": "audio/skill/wzzz_v__fangzhu2.mp3",
+        "skill_id": "wzzz_v__fangzhu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__songwei1.mp3",
+        "destination": "audio/skill/wzzz_v__songwei1.mp3",
+        "skill_id": "wzzz_v__songwei"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__songwei2.mp3",
+        "destination": "audio/skill/wzzz_v__songwei2.mp3",
+        "skill_id": "wzzz_v__songwei"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__rende1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__rende1.mp3",
+        "skill_id": "wzzz_v__ex__rende"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__rende2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__rende2.mp3",
+        "skill_id": "wzzz_v__ex__rende"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__renwang1.mp3",
+        "destination": "audio/skill/wzzz_v__v11__renwang1.mp3",
+        "skill_id": "wzzz_v__v11__renwang"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__renwang2.mp3",
+        "destination": "audio/skill/wzzz_v__v11__renwang2.mp3",
+        "skill_id": "wzzz_v__v11__renwang"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__jijiang1.mp3",
+        "destination": "audio/skill/wzzz_v__jijiang1.mp3",
+        "skill_id": "wzzz_v__jijiang"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__jijiang2.mp3",
+        "destination": "audio/skill/wzzz_v__jijiang2.mp3",
+        "skill_id": "wzzz_v__jijiang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xiangle1.mp3",
+        "destination": "audio/skill/wzzz_v__xiangle1.mp3",
+        "skill_id": "wzzz_v__xiangle"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xiangle2.mp3",
+        "destination": "audio/skill/wzzz_v__xiangle2.mp3",
+        "skill_id": "wzzz_v__xiangle"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__fangquan1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__fangquan1.mp3",
+        "skill_id": "wzzz_v__m_ex__fangquan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__fangquan2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__fangquan2.mp3",
+        "skill_id": "wzzz_v__m_ex__fangquan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__ruoyu1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__ruoyu1.mp3",
+        "skill_id": "wzzz_v__ol_ex__ruoyu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__ruoyu2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__ruoyu2.mp3",
+        "skill_id": "wzzz_v__ol_ex__ruoyu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sishu1.mp3",
+        "destination": "audio/skill/wzzz_v__sishu1.mp3",
+        "skill_id": "wzzz_v__sishu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sishu2.mp3",
+        "destination": "audio/skill/wzzz_v__sishu2.mp3",
+        "skill_id": "wzzz_v__sishu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__canshi1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__canshi1.mp3",
+        "skill_id": "wzzz_v__ol__canshi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__canshi2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__canshi2.mp3",
+        "skill_id": "wzzz_v__ol__canshi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__chouhai1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__chouhai1.mp3",
+        "skill_id": "wzzz_v__ty__chouhai"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__chouhai2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__chouhai2.mp3",
+        "skill_id": "wzzz_v__ty__chouhai"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__guiming1.mp3",
+        "destination": "audio/skill/wzzz_v__guiming1.mp3",
+        "skill_id": "wzzz_v__guiming"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__guiming2.mp3",
+        "destination": "audio/skill/wzzz_v__guiming2.mp3",
+        "skill_id": "wzzz_v__guiming"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__tycl__zhiheng.mp3",
+        "destination": "audio/skill/wzzz_v__tycl__zhiheng.mp3",
+        "skill_id": "wzzz_v__tycl__zhiheng"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__jiuyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__mou__jiuyuan1.mp3",
+        "skill_id": "wzzz_v__mou__jiuyuan"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__jiuyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__mou__jiuyuan2.mp3",
+        "skill_id": "wzzz_v__mou__jiuyuan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/tongye1.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__tongye1.mp3",
+        "skill_id": "wzzz_v__ofl_mou__tongye"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/tongye2.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__tongye2.mp3",
+        "skill_id": "wzzz_v__ofl_mou__tongye"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yingzi1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yingzi1.mp3",
+        "skill_id": "wzzz_v__ex__yingzi"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yingzi2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yingzi2.mp3",
+        "skill_id": "wzzz_v__ex__yingzi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__guzheng1.mp3",
+        "destination": "audio/skill/wzzz_v__guzheng1.mp3",
+        "skill_id": "wzzz_v__guzheng"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__guzheng2.mp3",
+        "destination": "audio/skill/wzzz_v__guzheng2.mp3",
+        "skill_id": "wzzz_v__guzheng"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jiang1.mp3",
+        "destination": "audio/skill/wzzz_v__jiang1.mp3",
+        "skill_id": "wzzz_v__jiang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jiang2.mp3",
+        "destination": "audio/skill/wzzz_v__jiang2.mp3",
+        "skill_id": "wzzz_v__jiang"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__hunzi1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__hunzi1.mp3",
+        "skill_id": "wzzz_v__ol_ex__hunzi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__hunzi2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__hunzi2.mp3",
+        "skill_id": "wzzz_v__ol_ex__hunzi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zhiba1.mp3",
+        "destination": "audio/skill/wzzz_v__zhiba1.mp3",
+        "skill_id": "wzzz_v__zhiba"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zhiba2.mp3",
+        "destination": "audio/skill/wzzz_v__zhiba2.mp3",
+        "skill_id": "wzzz_v__zhiba"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__yinghun1.mp3",
+        "destination": "audio/skill/wzzz_v__yinghun1.mp3",
+        "skill_id": "wzzz_v__yinghun"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__yinghun2.mp3",
+        "destination": "audio/skill/wzzz_v__yinghun2.mp3",
+        "skill_id": "wzzz_v__yinghun"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__wulie1.mp3",
+        "destination": "audio/skill/wzzz_v__wulie1.mp3",
+        "skill_id": "wzzz_v__wulie"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__wulie2.mp3",
+        "destination": "audio/skill/wzzz_v__wulie2.mp3",
+        "skill_id": "wzzz_v__wulie"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os_ex__polu1.mp3",
+        "destination": "audio/skill/wzzz_v__os_ex__polu1.mp3",
+        "skill_id": "wzzz_v__os_ex__polu"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os_ex__polu2.mp3",
+        "destination": "audio/skill/wzzz_v__os_ex__polu2.mp3",
+        "skill_id": "wzzz_v__os_ex__polu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__pingtao1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__pingtao1.mp3",
+        "skill_id": "wzzz_v__ol__pingtao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__pingtao2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__pingtao2.mp3",
+        "skill_id": "wzzz_v__ol__pingtao"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__tianming1.mp3",
+        "destination": "audio/skill/wzzz_v__tianming1.mp3",
+        "skill_id": "wzzz_v__tianming"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__tianming2.mp3",
+        "destination": "audio/skill/wzzz_v__tianming2.mp3",
+        "skill_id": "wzzz_v__tianming"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mizhao1.mp3",
+        "destination": "audio/skill/wzzz_v__mizhao1.mp3",
+        "skill_id": "wzzz_v__mizhao"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mizhao2.mp3",
+        "destination": "audio/skill/wzzz_v__mizhao2.mp3",
+        "skill_id": "wzzz_v__mizhao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__weikui1.mp3",
+        "destination": "audio/skill/wzzz_v__weikui1.mp3",
+        "skill_id": "wzzz_v__weikui"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__weikui2.mp3",
+        "destination": "audio/skill/wzzz_v__weikui2.mp3",
+        "skill_id": "wzzz_v__weikui"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__lizhan1.mp3",
+        "destination": "audio/skill/wzzz_v__lizhan1.mp3",
+        "skill_id": "wzzz_v__lizhan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__lizhan2.mp3",
+        "destination": "audio/skill/wzzz_v__lizhan2.mp3",
+        "skill_id": "wzzz_v__lizhan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__qingzhong1.mp3",
+        "destination": "audio/skill/wzzz_v__qingzhong1.mp3",
+        "skill_id": "wzzz_v__qingzhong"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__qingzhong2.mp3",
+        "destination": "audio/skill/wzzz_v__qingzhong2.mp3",
+        "skill_id": "wzzz_v__qingzhong"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__weijing1.mp3",
+        "destination": "audio/skill/wzzz_v__weijing1.mp3",
+        "skill_id": "wzzz_v__weijing"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__weijing2.mp3",
+        "destination": "audio/skill/wzzz_v__weijing2.mp3",
+        "skill_id": "wzzz_v__weijing"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jixian1.mp3",
+        "destination": "audio/skill/wzzz_v__jixian1.mp3",
+        "skill_id": "wzzz_v__jixian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jixian2.mp3",
+        "destination": "audio/skill/wzzz_v__jixian2.mp3",
+        "skill_id": "wzzz_v__jixian"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__pindi1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__pindi1.mp3",
+        "skill_id": "wzzz_v__ty_ex__pindi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__pindi2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__pindi2.mp3",
+        "skill_id": "wzzz_v__ty_ex__pindi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__faen1.mp3",
+        "destination": "audio/skill/wzzz_v__faen1.mp3",
+        "skill_id": "wzzz_v__faen"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__faen2.mp3",
+        "destination": "audio/skill/wzzz_v__faen2.mp3",
+        "skill_id": "wzzz_v__faen"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__xunxun1.mp3",
+        "destination": "audio/skill/wzzz_v__xunxun1.mp3",
+        "skill_id": "wzzz_v__xunxun"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__xunxun2.mp3",
+        "destination": "audio/skill/wzzz_v__xunxun2.mp3",
+        "skill_id": "wzzz_v__xunxun"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__wangxi1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__wangxi1.mp3",
+        "skill_id": "wzzz_v__ol_ex__wangxi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__wangxi2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__wangxi2.mp3",
+        "skill_id": "wzzz_v__ol_ex__wangxi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__qiangxi1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__qiangxi1.mp3",
+        "skill_id": "wzzz_v__ol__qiangxi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__qiangxi2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__qiangxi2.mp3",
+        "skill_id": "wzzz_v__ol__qiangxi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ninge1.mp3",
+        "destination": "audio/skill/wzzz_v__ninge1.mp3",
+        "skill_id": "wzzz_v__ninge"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ninge2.mp3",
+        "destination": "audio/skill/wzzz_v__ninge2.mp3",
+        "skill_id": "wzzz_v__ninge"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__ganglie1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__ganglie1.mp3",
+        "skill_id": "wzzz_v__ex__ganglie"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__ganglie2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__ganglie2.mp3",
+        "skill_id": "wzzz_v__ex__ganglie"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__qingjian1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__qingjian1.mp3",
+        "skill_id": "wzzz_v__ex__qingjian"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__qingjian2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__qingjian2.mp3",
+        "skill_id": "wzzz_v__ex__qingjian"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__zhenwei1.mp3",
+        "destination": "audio/skill/wzzz_v__zhenwei1.mp3",
+        "skill_id": "wzzz_v__zhenwei"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__zhenwei2.mp3",
+        "destination": "audio/skill/wzzz_v__zhenwei2.mp3",
+        "skill_id": "wzzz_v__zhenwei"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qice1.mp3",
+        "destination": "audio/skill/wzzz_v__qice1.mp3",
+        "skill_id": "wzzz_v__qice"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qice2.mp3",
+        "destination": "audio/skill/wzzz_v__qice2.mp3",
+        "skill_id": "wzzz_v__qice"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__zhiyu1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__zhiyu1.mp3",
+        "skill_id": "wzzz_v__ty_ex__zhiyu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__zhiyu2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__zhiyu2.mp3",
+        "skill_id": "wzzz_v__ty_ex__zhiyu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__daoshu1.mp3",
+        "destination": "audio/skill/wzzz_v__daoshu1.mp3",
+        "skill_id": "wzzz_v__daoshu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__daoshu2.mp3",
+        "destination": "audio/skill/wzzz_v__daoshu2.mp3",
+        "skill_id": "wzzz_v__daoshu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__weicheng1.mp3",
+        "destination": "audio/skill/wzzz_v__weicheng1.mp3",
+        "skill_id": "wzzz_v__weicheng"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__weicheng2.mp3",
+        "destination": "audio/skill/wzzz_v__weicheng2.mp3",
+        "skill_id": "wzzz_v__weicheng"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__daizui1.mp3",
+        "destination": "audio/skill/wzzz_v__daizui1.mp3",
+        "skill_id": "wzzz_v__daizui"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__daizui2.mp3",
+        "destination": "audio/skill/wzzz_v__daizui2.mp3",
+        "skill_id": "wzzz_v__daizui"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/ex__tuxi1.mp3",
+        "destination": "audio/skill/wzzz_v__tuxi1.mp3",
+        "skill_id": "wzzz_v__tuxi"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/ex__tuxi2.mp3",
+        "destination": "audio/skill/wzzz_v__tuxi2.mp3",
+        "skill_id": "wzzz_v__tuxi"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__tiandu1.mp3",
+        "destination": "audio/skill/wzzz_v__tiandu1.mp3",
+        "skill_id": "wzzz_v__tiandu"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__tiandu2.mp3",
+        "destination": "audio/skill/wzzz_v__tiandu2.mp3",
+        "skill_id": "wzzz_v__tiandu"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yiji1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yiji1.mp3",
+        "skill_id": "wzzz_v__ex__yiji"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yiji2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yiji2.mp3",
+        "skill_id": "wzzz_v__ex__yiji"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/ex__guicai1.mp3",
+        "destination": "audio/skill/wzzz_v__guicai1.mp3",
+        "skill_id": "wzzz_v__guicai"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/ex__guicai2.mp3",
+        "destination": "audio/skill/wzzz_v__guicai2.mp3",
+        "skill_id": "wzzz_v__guicai"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__fankui1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__fankui1.mp3",
+        "skill_id": "wzzz_v__ex__fankui"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__fankui2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__fankui2.mp3",
+        "skill_id": "wzzz_v__ex__fankui"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__quhu1.mp3",
+        "destination": "audio/skill/wzzz_v__quhu1.mp3",
+        "skill_id": "wzzz_v__quhu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__quhu2.mp3",
+        "destination": "audio/skill/wzzz_v__quhu2.mp3",
+        "skill_id": "wzzz_v__quhu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__jieming1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__jieming1.mp3",
+        "skill_id": "wzzz_v__ol_ex__jieming"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__jieming2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__jieming2.mp3",
+        "skill_id": "wzzz_v__ol_ex__jieming"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__kangkai1.mp3",
+        "destination": "audio/skill/wzzz_v__kangkai1.mp3",
+        "skill_id": "wzzz_v__kangkai"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__kangkai2.mp3",
+        "destination": "audio/skill/wzzz_v__kangkai2.mp3",
+        "skill_id": "wzzz_v__kangkai"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jueqing1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jueqing1.mp3",
+        "skill_id": "wzzz_v__ty_ex__jueqing"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jueqing2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jueqing2.mp3",
+        "skill_id": "wzzz_v__ty_ex__jueqing"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__shangshi1.mp3",
+        "destination": "audio/skill/wzzz_v__shangshi1.mp3",
+        "skill_id": "wzzz_v__shangshi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__shangshi2.mp3",
+        "destination": "audio/skill/wzzz_v__shangshi2.mp3",
+        "skill_id": "wzzz_v__shangshi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jianmie1.mp3",
+        "destination": "audio/skill/wzzz_v__jianmie1.mp3",
+        "skill_id": "wzzz_v__jianmie"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jianmie2.mp3",
+        "destination": "audio/skill/wzzz_v__jianmie2.mp3",
+        "skill_id": "wzzz_v__jianmie"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__duanliang1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__duanliang1.mp3",
+        "skill_id": "wzzz_v__m_ex__duanliang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__duanliang2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__duanliang2.mp3",
+        "skill_id": "wzzz_v__m_ex__duanliang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__jiezi1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__jiezi1.mp3",
+        "skill_id": "wzzz_v__m_ex__jiezi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__jiezi2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__jiezi2.mp3",
+        "skill_id": "wzzz_v__m_ex__jiezi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__choutao1.mp3",
+        "destination": "audio/skill/wzzz_v__choutao1.mp3",
+        "skill_id": "wzzz_v__choutao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__choutao2.mp3",
+        "destination": "audio/skill/wzzz_v__choutao2.mp3",
+        "skill_id": "wzzz_v__choutao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__xiangshu1.mp3",
+        "destination": "audio/skill/wzzz_v__xiangshu1.mp3",
+        "skill_id": "wzzz_v__xiangshu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__xiangshu2.mp3",
+        "destination": "audio/skill/wzzz_v__xiangshu2.mp3",
+        "skill_id": "wzzz_v__xiangshu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zhengu1.mp3",
+        "destination": "audio/skill/wzzz_v__zhengu1.mp3",
+        "skill_id": "wzzz_v__zhengu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zhengu2.mp3",
+        "destination": "audio/skill/wzzz_v__zhengu2.mp3",
+        "skill_id": "wzzz_v__zhengu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__bingqing1.mp3",
+        "destination": "audio/skill/wzzz_v__bingqing1.mp3",
+        "skill_id": "wzzz_v__bingqing"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__bingqing2.mp3",
+        "destination": "audio/skill/wzzz_v__bingqing2.mp3",
+        "skill_id": "wzzz_v__bingqing"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__fengying1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__fengying1.mp3",
+        "skill_id": "wzzz_v__ty__fengying"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__fengying2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__fengying2.mp3",
+        "skill_id": "wzzz_v__ty__fengying"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__shensu1.mp3",
+        "destination": "audio/skill/wzzz_v__shensu1.mp3",
+        "skill_id": "wzzz_v__shensu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__shensu2.mp3",
+        "destination": "audio/skill/wzzz_v__shensu2.mp3",
+        "skill_id": "wzzz_v__shensu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__shebian1.mp3",
+        "destination": "audio/skill/wzzz_v__shebian1.mp3",
+        "skill_id": "wzzz_v__shebian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__shebian2.mp3",
+        "destination": "audio/skill/wzzz_v__shebian2.mp3",
+        "skill_id": "wzzz_v__shebian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__tuntian1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__tuntian1.mp3",
+        "skill_id": "wzzz_v__ol_ex__tuntian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__tuntian2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__tuntian2.mp3",
+        "skill_id": "wzzz_v__ol_ex__tuntian"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zaoxian1.mp3",
+        "destination": "audio/skill/wzzz_v__zaoxian1.mp3",
+        "skill_id": "wzzz_v__zaoxian"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zaoxian2.mp3",
+        "destination": "audio/skill/wzzz_v__zaoxian2.mp3",
+        "skill_id": "wzzz_v__zaoxian"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jixi1.mp3",
+        "destination": "audio/skill/wzzz_v__jixi1.mp3",
+        "skill_id": "wzzz_v__jixi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jixi2.mp3",
+        "destination": "audio/skill/wzzz_v__jixi2.mp3",
+        "skill_id": "wzzz_v__jixi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__qizhi1.mp3",
+        "destination": "audio/skill/wzzz_v__qizhi1.mp3",
+        "skill_id": "wzzz_v__qizhi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__qizhi2.mp3",
+        "destination": "audio/skill/wzzz_v__qizhi2.mp3",
+        "skill_id": "wzzz_v__qizhi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jinqu1.mp3",
+        "destination": "audio/skill/wzzz_v__jinqu1.mp3",
+        "skill_id": "wzzz_v__jinqu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__jinqu2.mp3",
+        "destination": "audio/skill/wzzz_v__jinqu2.mp3",
+        "skill_id": "wzzz_v__jinqu"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__fengliang1.mp3",
+        "destination": "audio/skill/wzzz_v__fengliang1.mp3",
+        "skill_id": "wzzz_v__fengliang"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__fengliang2.mp3",
+        "destination": "audio/skill/wzzz_v__fengliang2.mp3",
+        "skill_id": "wzzz_v__fengliang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__tiaoxin1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__tiaoxin1.mp3",
+        "skill_id": "wzzz_v__m_ex__tiaoxin"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__tiaoxin2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__tiaoxin2.mp3",
+        "skill_id": "wzzz_v__m_ex__tiaoxin"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__quanji1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__quanji1.mp3",
+        "skill_id": "wzzz_v__m_ex__quanji"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__quanji2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__quanji2.mp3",
+        "skill_id": "wzzz_v__m_ex__quanji"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zili1.mp3",
+        "destination": "audio/skill/wzzz_v__zili1.mp3",
+        "skill_id": "wzzz_v__zili"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zili2.mp3",
+        "destination": "audio/skill/wzzz_v__zili2.mp3",
+        "skill_id": "wzzz_v__zili"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__paiyi1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__paiyi1.mp3",
+        "skill_id": "wzzz_v__m_ex__paiyi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__paiyi2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__paiyi2.mp3",
+        "skill_id": "wzzz_v__m_ex__paiyi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhenlie1.mp3",
+        "destination": "audio/skill/wzzz_v__zhenlie1.mp3",
+        "skill_id": "wzzz_v__zhenlie"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhenlie2.mp3",
+        "destination": "audio/skill/wzzz_v__zhenlie2.mp3",
+        "skill_id": "wzzz_v__zhenlie"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__miji1.mp3",
+        "destination": "audio/skill/wzzz_v__miji1.mp3",
+        "skill_id": "wzzz_v__miji"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__miji2.mp3",
+        "destination": "audio/skill/wzzz_v__miji2.mp3",
+        "skill_id": "wzzz_v__miji"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__chengxiang1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__chengxiang1.mp3",
+        "skill_id": "wzzz_v__ty_ex__chengxiang"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__chengxiang2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__chengxiang2.mp3",
+        "skill_id": "wzzz_v__ty_ex__chengxiang"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__renxin1.mp3",
+        "destination": "audio/skill/wzzz_v__renxin1.mp3",
+        "skill_id": "wzzz_v__renxin"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__renxin2.mp3",
+        "destination": "audio/skill/wzzz_v__renxin2.mp3",
+        "skill_id": "wzzz_v__renxin"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__luoshen1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__luoshen1.mp3",
+        "skill_id": "wzzz_v__ex__luoshen"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__luoshen2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__luoshen2.mp3",
+        "skill_id": "wzzz_v__ex__luoshen"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__luoyi1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__luoyi1.mp3",
+        "skill_id": "wzzz_v__ex__luoyi"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__luoyi2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__luoyi2.mp3",
+        "skill_id": "wzzz_v__ex__luoyi"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__xiechan1.mp3",
+        "destination": "audio/skill/wzzz_v__v11__xiechan1.mp3",
+        "skill_id": "wzzz_v__v11__xiechan"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__xiechan2.mp3",
+        "destination": "audio/skill/wzzz_v__v11__xiechan2.mp3",
+        "skill_id": "wzzz_v__v11__xiechan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__gongao1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__gongao1.mp3",
+        "skill_id": "wzzz_v__ty_ex__gongao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__gongao2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__gongao2.mp3",
+        "skill_id": "wzzz_v__ty_ex__gongao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__juyi1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__juyi1.mp3",
+        "skill_id": "wzzz_v__ty_ex__juyi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__juyi2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__juyi2.mp3",
+        "skill_id": "wzzz_v__ty_ex__juyi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__weizhong.mp3",
+        "destination": "audio/skill/wzzz_v__weizhong.mp3",
+        "skill_id": "wzzz_v__weizhong"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__benghuai1.mp3",
+        "destination": "audio/skill/wzzz_v__benghuai1.mp3",
+        "skill_id": "wzzz_v__benghuai"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__benghuai2.mp3",
+        "destination": "audio/skill/wzzz_v__benghuai2.mp3",
+        "skill_id": "wzzz_v__benghuai"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhanjue1.mp3",
+        "destination": "audio/skill/wzzz_v__zhanjue1.mp3",
+        "skill_id": "wzzz_v__zhanjue"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhanjue2.mp3",
+        "destination": "audio/skill/wzzz_v__zhanjue2.mp3",
+        "skill_id": "wzzz_v__zhanjue"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qinwang1.mp3",
+        "destination": "audio/skill/wzzz_v__qinwang1.mp3",
+        "skill_id": "wzzz_v__qinwang"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qinwang2.mp3",
+        "destination": "audio/skill/wzzz_v__qinwang2.mp3",
+        "skill_id": "wzzz_v__qinwang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__lianhuan1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__lianhuan1.mp3",
+        "skill_id": "wzzz_v__m_ex__lianhuan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__lianhuan2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__lianhuan2.mp3",
+        "skill_id": "wzzz_v__m_ex__lianhuan"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__niepan1.mp3",
+        "destination": "audio/skill/wzzz_v__niepan1.mp3",
+        "skill_id": "wzzz_v__niepan"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__niepan2.mp3",
+        "destination": "audio/skill/wzzz_v__niepan2.mp3",
+        "skill_id": "wzzz_v__niepan"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__bazhen1.mp3",
+        "destination": "audio/skill/wzzz_v__bazhen1.mp3",
+        "skill_id": "wzzz_v__bazhen"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__bazhen2.mp3",
+        "destination": "audio/skill/wzzz_v__bazhen2.mp3",
+        "skill_id": "wzzz_v__bazhen"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__huoji1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__huoji1.mp3",
+        "skill_id": "wzzz_v__ol_ex__huoji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__huoji2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__huoji2.mp3",
+        "skill_id": "wzzz_v__ol_ex__huoji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__kanpo1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__kanpo1.mp3",
+        "skill_id": "wzzz_v__ol_ex__kanpo"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__kanpo2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__kanpo2.mp3",
+        "skill_id": "wzzz_v__ol_ex__kanpo"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__tieji1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__tieji1.mp3",
+        "skill_id": "wzzz_v__ex__tieji"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__tieji2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__tieji2.mp3",
+        "skill_id": "wzzz_v__ex__tieji"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__choujin1.mp3",
+        "destination": "audio/skill/wzzz_v__choujin1.mp3",
+        "skill_id": "wzzz_v__choujin"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__choujin2.mp3",
+        "destination": "audio/skill/wzzz_v__choujin2.mp3",
+        "skill_id": "wzzz_v__choujin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jianji1.mp3",
+        "destination": "audio/skill/wzzz_v__jianji1.mp3",
+        "skill_id": "wzzz_v__jianji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jianji2.mp3",
+        "destination": "audio/skill/wzzz_v__jianji2.mp3",
+        "skill_id": "wzzz_v__jianji"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__tujue1.mp3",
+        "destination": "audio/skill/wzzz_v__tujue1.mp3",
+        "skill_id": "wzzz_v__tujue"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__tujue2.mp3",
+        "destination": "audio/skill/wzzz_v__tujue2.mp3",
+        "skill_id": "wzzz_v__tujue"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fuhun1.mp3",
+        "destination": "audio/skill/wzzz_v__fuhun1.mp3",
+        "skill_id": "wzzz_v__fuhun"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fuhun2.mp3",
+        "destination": "audio/skill/wzzz_v__fuhun2.mp3",
+        "skill_id": "wzzz_v__fuhun"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__wusheng1.mp3",
+        "destination": "audio/skill/wzzz_v__wusheng1.mp3",
+        "skill_id": "wzzz_v__wusheng"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__wusheng2.mp3",
+        "destination": "audio/skill/wzzz_v__wusheng2.mp3",
+        "skill_id": "wzzz_v__wusheng"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__paoxiao1.mp3",
+        "destination": "audio/skill/wzzz_v__mou__paoxiao1.mp3",
+        "skill_id": "wzzz_v__mou__paoxiao"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__paoxiao2.mp3",
+        "destination": "audio/skill/wzzz_v__mou__paoxiao2.mp3",
+        "skill_id": "wzzz_v__mou__paoxiao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__sanyao1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__sanyao1.mp3",
+        "skill_id": "wzzz_v__ol__sanyao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__sanyao2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__sanyao2.mp3",
+        "skill_id": "wzzz_v__ol__sanyao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__zhiman1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__zhiman1.mp3",
+        "skill_id": "wzzz_v__ty_ex__zhiman"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__zhiman2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__zhiman2.mp3",
+        "skill_id": "wzzz_v__ty_ex__zhiman"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huilei1.mp3",
+        "destination": "audio/skill/wzzz_v__huilei1.mp3",
+        "skill_id": "wzzz_v__huilei"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huilei2.mp3",
+        "destination": "audio/skill/wzzz_v__huilei2.mp3",
+        "skill_id": "wzzz_v__huilei"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qiaoshi1.mp3",
+        "destination": "audio/skill/wzzz_v__qiaoshi1.mp3",
+        "skill_id": "wzzz_v__qiaoshi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qiaoshi2.mp3",
+        "destination": "audio/skill/wzzz_v__qiaoshi2.mp3",
+        "skill_id": "wzzz_v__qiaoshi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yanyu1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yanyu1.mp3",
+        "skill_id": "wzzz_v__ty_ex__yanyu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yanyu2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yanyu2.mp3",
+        "skill_id": "wzzz_v__ty_ex__yanyu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__shenxian1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__shenxian1.mp3",
+        "skill_id": "wzzz_v__ol__shenxian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__shenxian2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__shenxian2.mp3",
+        "skill_id": "wzzz_v__ol__shenxian"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__qiangwu1.mp3",
+        "destination": "audio/skill/wzzz_v__qiangwu1.mp3",
+        "skill_id": "wzzz_v__qiangwu"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__qiangwu2.mp3",
+        "destination": "audio/skill/wzzz_v__qiangwu2.mp3",
+        "skill_id": "wzzz_v__qiangwu"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__juxiang1.mp3",
+        "destination": "audio/skill/wzzz_v__juxiang1.mp3",
+        "skill_id": "wzzz_v__juxiang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__juxiang2.mp3",
+        "destination": "audio/skill/wzzz_v__juxiang2.mp3",
+        "skill_id": "wzzz_v__juxiang"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os_ex__lieren1.mp3",
+        "destination": "audio/skill/wzzz_v__os_ex__lieren1.mp3",
+        "skill_id": "wzzz_v__os_ex__lieren"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os_ex__lieren2.mp3",
+        "destination": "audio/skill/wzzz_v__os_ex__lieren2.mp3",
+        "skill_id": "wzzz_v__os_ex__lieren"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__changbiao1.mp3",
+        "destination": "audio/skill/wzzz_v__changbiao1.mp3",
+        "skill_id": "wzzz_v__changbiao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__changbiao2.mp3",
+        "destination": "audio/skill/wzzz_v__changbiao2.mp3",
+        "skill_id": "wzzz_v__changbiao"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__zishu1.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__zishu1.mp3",
+        "skill_id": "wzzz_v__mobile__zishu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__zishu2.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__zishu2.mp3",
+        "skill_id": "wzzz_v__mobile__zishu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__yingyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__yingyuan1.mp3",
+        "skill_id": "wzzz_v__yingyuan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__yingyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__yingyuan2.mp3",
+        "skill_id": "wzzz_v__yingyuan"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/xiemu1.mp3",
+        "destination": "audio/skill/wzzz_v__sxfy__xiemu1.mp3",
+        "skill_id": "wzzz_v__sxfy__xiemu"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/xiemu2.mp3",
+        "destination": "audio/skill/wzzz_v__sxfy__xiemu2.mp3",
+        "skill_id": "wzzz_v__sxfy__xiemu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__benxi1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__benxi1.mp3",
+        "skill_id": "wzzz_v__m_ex__benxi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__benxi2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__benxi2.mp3",
+        "skill_id": "wzzz_v__m_ex__benxi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__baobian1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__baobian1.mp3",
+        "skill_id": "wzzz_v__ty__baobian"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__baobian2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__baobian2.mp3",
+        "skill_id": "wzzz_v__ty__baobian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__tiaoxin1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__tiaoxin1.mp3",
+        "skill_id": "wzzz_v__ol_ex__tiaoxin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__tiaoxin2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__tiaoxin2.mp3",
+        "skill_id": "wzzz_v__ol_ex__tiaoxin"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__paoxiao1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__paoxiao1.mp3",
+        "skill_id": "wzzz_v__ex__paoxiao"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__paoxiao2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__paoxiao2.mp3",
+        "skill_id": "wzzz_v__ex__paoxiao"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jianzhengq1.mp3",
+        "destination": "audio/skill/wzzz_v__jianzhengq1.mp3",
+        "skill_id": "wzzz_v__jianzhengq"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jianzhengq2.mp3",
+        "destination": "audio/skill/wzzz_v__jianzhengq2.mp3",
+        "skill_id": "wzzz_v__jianzhengq"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhuandui1.mp3",
+        "destination": "audio/skill/wzzz_v__zhuandui1.mp3",
+        "skill_id": "wzzz_v__zhuandui"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhuandui2.mp3",
+        "destination": "audio/skill/wzzz_v__zhuandui2.mp3",
+        "skill_id": "wzzz_v__zhuandui"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__tianbian1.mp3",
+        "destination": "audio/skill/wzzz_v__tianbian1.mp3",
+        "skill_id": "wzzz_v__tianbian"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__tianbian2.mp3",
+        "destination": "audio/skill/wzzz_v__tianbian2.mp3",
+        "skill_id": "wzzz_v__tianbian"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zuilun1.mp3",
+        "destination": "audio/skill/wzzz_v__zuilun1.mp3",
+        "skill_id": "wzzz_v__zuilun"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__zuilun2.mp3",
+        "destination": "audio/skill/wzzz_v__zuilun2.mp3",
+        "skill_id": "wzzz_v__zuilun"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__fuyin1.mp3",
+        "destination": "audio/skill/wzzz_v__fuyin1.mp3",
+        "skill_id": "wzzz_v__fuyin"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__fuyin2.mp3",
+        "destination": "audio/skill/wzzz_v__fuyin2.mp3",
+        "skill_id": "wzzz_v__fuyin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__liegong1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__liegong1.mp3",
+        "skill_id": "wzzz_v__ol_ex__liegong"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__liegong2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__liegong2.mp3",
+        "skill_id": "wzzz_v__ol_ex__liegong"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__jilis1.mp3",
+        "destination": "audio/skill/wzzz_v__jilis1.mp3",
+        "skill_id": "wzzz_v__jilis"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__jilis2.mp3",
+        "destination": "audio/skill/wzzz_v__jilis2.mp3",
+        "skill_id": "wzzz_v__jilis"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jugu1.mp3",
+        "destination": "audio/skill/wzzz_v__jugu1.mp3",
+        "skill_id": "wzzz_v__jugu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jugu2.mp3",
+        "destination": "audio/skill/wzzz_v__jugu2.mp3",
+        "skill_id": "wzzz_v__jugu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ziyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__ziyuan1.mp3",
+        "skill_id": "wzzz_v__ziyuan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ziyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__ziyuan2.mp3",
+        "skill_id": "wzzz_v__ziyuan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_shi__kuanggu1.mp3",
+        "destination": "audio/skill/wzzz_v__m_shi__kuanggu1.mp3",
+        "skill_id": "wzzz_v__m_shi__kuanggu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_shi__kuanggu2.mp3",
+        "destination": "audio/skill/wzzz_v__m_shi__kuanggu2.mp3",
+        "skill_id": "wzzz_v__m_shi__kuanggu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__qimou1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__qimou1.mp3",
+        "skill_id": "wzzz_v__m_ex__qimou"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__qimou2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__qimou2.mp3",
+        "skill_id": "wzzz_v__m_ex__qimou"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__xiansi1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__xiansi1.mp3",
+        "skill_id": "wzzz_v__ty_ex__xiansi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__xiansi2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__xiansi2.mp3",
+        "skill_id": "wzzz_v__ty_ex__xiansi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__zhiyi1.mp3",
+        "destination": "audio/skill/wzzz_v__zhiyi1.mp3",
+        "skill_id": "wzzz_v__zhiyi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__zhiyi2.mp3",
+        "destination": "audio/skill/wzzz_v__zhiyi2.mp3",
+        "skill_id": "wzzz_v__zhiyi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhiji1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhiji1.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhiji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhiji2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhiji2.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhiji"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__guanxing1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__guanxing1.mp3",
+        "skill_id": "wzzz_v__ex__guanxing"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__guanxing2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__guanxing2.mp3",
+        "skill_id": "wzzz_v__ex__guanxing"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sheyan1.mp3",
+        "destination": "audio/skill/wzzz_v__sheyan1.mp3",
+        "skill_id": "wzzz_v__sheyan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sheyan2.mp3",
+        "destination": "audio/skill/wzzz_v__sheyan2.mp3",
+        "skill_id": "wzzz_v__sheyan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__bingzheng1.mp3",
+        "destination": "audio/skill/wzzz_v__bingzheng1.mp3",
+        "skill_id": "wzzz_v__bingzheng"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__bingzheng2.mp3",
+        "destination": "audio/skill/wzzz_v__bingzheng2.mp3",
+        "skill_id": "wzzz_v__bingzheng"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__tishen1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__tishen1.mp3",
+        "skill_id": "wzzz_v__ex__tishen"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__tishen2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__tishen2.mp3",
+        "skill_id": "wzzz_v__ex__tishen"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__feijun1.mp3",
+        "destination": "audio/skill/wzzz_v__feijun1.mp3",
+        "skill_id": "wzzz_v__feijun"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__feijun2.mp3",
+        "destination": "audio/skill/wzzz_v__feijun2.mp3",
+        "skill_id": "wzzz_v__feijun"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__binglue1.mp3",
+        "destination": "audio/skill/wzzz_v__binglue1.mp3",
+        "skill_id": "wzzz_v__binglue"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__binglue2.mp3",
+        "destination": "audio/skill/wzzz_v__binglue2.mp3",
+        "skill_id": "wzzz_v__binglue"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__huwei1.mp3",
+        "destination": "audio/skill/wzzz_v__v11__huwei1.mp3",
+        "skill_id": "wzzz_v__v11__huwei"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v11__huwei2.mp3",
+        "destination": "audio/skill/wzzz_v__v11__huwei2.mp3",
+        "skill_id": "wzzz_v__v11__huwei"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yijue1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yijue1.mp3",
+        "skill_id": "wzzz_v__ex__yijue"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__yijue2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__yijue2.mp3",
+        "skill_id": "wzzz_v__ex__yijue"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/os__zhongyi1.mp3",
+        "destination": "audio/skill/wzzz_v__zhongyi1.mp3",
+        "skill_id": "wzzz_v__zhongyi"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/os__zhongyi2.mp3",
+        "destination": "audio/skill/wzzz_v__zhongyi2.mp3",
+        "skill_id": "wzzz_v__zhongyi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__enyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__enyuan1.mp3",
+        "skill_id": "wzzz_v__ol_ex__enyuan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__enyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__enyuan2.mp3",
+        "skill_id": "wzzz_v__ol_ex__enyuan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__xuanhuo1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__xuanhuo1.mp3",
+        "skill_id": "wzzz_v__ol_ex__xuanhuo"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__xuanhuo2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__xuanhuo2.mp3",
+        "skill_id": "wzzz_v__ol_ex__xuanhuo"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os__zhiming1.mp3",
+        "destination": "audio/skill/wzzz_v__os__zhiming1.mp3",
+        "skill_id": "wzzz_v__os__zhiming"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__os__zhiming2.mp3",
+        "destination": "audio/skill/wzzz_v__os__zhiming2.mp3",
+        "skill_id": "wzzz_v__os__zhiming"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/os__xingbu1.mp3",
+        "destination": "audio/skill/wzzz_v__xingbu1.mp3",
+        "skill_id": "wzzz_v__xingbu"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/os__xingbu2.mp3",
+        "destination": "audio/skill/wzzz_v__xingbu2.mp3",
+        "skill_id": "wzzz_v__xingbu"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__xiantu1.mp3",
+        "destination": "audio/skill/wzzz_v__xiantu1.mp3",
+        "skill_id": "wzzz_v__xiantu"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__xiantu2.mp3",
+        "destination": "audio/skill/wzzz_v__xiantu2.mp3",
+        "skill_id": "wzzz_v__xiantu"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qiangzhi1.mp3",
+        "destination": "audio/skill/wzzz_v__qiangzhi1.mp3",
+        "skill_id": "wzzz_v__qiangzhi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__qiangzhi2.mp3",
+        "destination": "audio/skill/wzzz_v__qiangzhi2.mp3",
+        "skill_id": "wzzz_v__qiangzhi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__longyin1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__longyin1.mp3",
+        "skill_id": "wzzz_v__ty_ex__longyin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__longyin2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__longyin2.mp3",
+        "skill_id": "wzzz_v__ty_ex__longyin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jiezhong1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jiezhong1.mp3",
+        "skill_id": "wzzz_v__ty_ex__jiezhong"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jiezhong2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jiezhong2.mp3",
+        "skill_id": "wzzz_v__ty_ex__jiezhong"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__jizhi1.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__jizhi1.mp3",
+        "skill_id": "wzzz_v__ofl_mou__jizhi"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__jizhi2.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__jizhi2.mp3",
+        "skill_id": "wzzz_v__ofl_mou__jizhi"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__qicai1.mp3",
+        "destination": "audio/skill/wzzz_v__qicai1.mp3",
+        "skill_id": "wzzz_v__qicai"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__qicai2.mp3",
+        "destination": "audio/skill/wzzz_v__qicai2.mp3",
+        "skill_id": "wzzz_v__qicai"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__jiqiao1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__jiqiao1.mp3",
+        "skill_id": "wzzz_v__ol__jiqiao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__jiqiao2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__jiqiao2.mp3",
+        "skill_id": "wzzz_v__ol__jiqiao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__duanbing1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__duanbing1.mp3",
+        "skill_id": "wzzz_v__ol__duanbing"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__duanbing2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__duanbing2.mp3",
+        "skill_id": "wzzz_v__ol__duanbing"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__qshm__fenxun1.mp3",
+        "destination": "audio/skill/wzzz_v__qshm__fenxun1.mp3",
+        "skill_id": "wzzz_v__qshm__fenxun"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__qshm__fenxun2.mp3",
+        "destination": "audio/skill/wzzz_v__qshm__fenxun2.mp3",
+        "skill_id": "wzzz_v__qshm__fenxun"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__gongqi1.mp3",
+        "destination": "audio/skill/wzzz_v__gongqi1.mp3",
+        "skill_id": "wzzz_v__gongqi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__gongqi2.mp3",
+        "destination": "audio/skill/wzzz_v__gongqi2.mp3",
+        "skill_id": "wzzz_v__gongqi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jiefan1.mp3",
+        "destination": "audio/skill/wzzz_v__jiefan1.mp3",
+        "skill_id": "wzzz_v__jiefan"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jiefan2.mp3",
+        "destination": "audio/skill/wzzz_v__jiefan2.mp3",
+        "skill_id": "wzzz_v__jiefan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__xuanfeng1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__xuanfeng1.mp3",
+        "skill_id": "wzzz_v__m_ex__xuanfeng"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__xuanfeng2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__xuanfeng2.mp3",
+        "skill_id": "wzzz_v__m_ex__xuanfeng"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yongjin1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yongjin1.mp3",
+        "skill_id": "wzzz_v__ty_ex__yongjin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yongjin2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yongjin2.mp3",
+        "skill_id": "wzzz_v__ty_ex__yongjin"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__huanshi1.mp3",
+        "destination": "audio/skill/wzzz_v__huanshi1.mp3",
+        "skill_id": "wzzz_v__huanshi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__huanshi2.mp3",
+        "destination": "audio/skill/wzzz_v__huanshi2.mp3",
+        "skill_id": "wzzz_v__huanshi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__hongyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__hongyuan1.mp3",
+        "skill_id": "wzzz_v__hongyuan"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__hongyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__hongyuan2.mp3",
+        "skill_id": "wzzz_v__hongyuan"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mingzhe1.mp3",
+        "destination": "audio/skill/wzzz_v__mingzhe1.mp3",
+        "skill_id": "wzzz_v__mingzhe"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mingzhe2.mp3",
+        "destination": "audio/skill/wzzz_v__mingzhe2.mp3",
+        "skill_id": "wzzz_v__mingzhe"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__guolun1.mp3",
+        "destination": "audio/skill/wzzz_v__guolun1.mp3",
+        "skill_id": "wzzz_v__guolun"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__guolun2.mp3",
+        "destination": "audio/skill/wzzz_v__guolun2.mp3",
+        "skill_id": "wzzz_v__guolun"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__zhanji1.mp3",
+        "destination": "audio/skill/wzzz_v__zhanji1.mp3",
+        "skill_id": "wzzz_v__zhanji"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__zhanji2.mp3",
+        "destination": "audio/skill/wzzz_v__zhanji2.mp3",
+        "skill_id": "wzzz_v__zhanji"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__qshm__songsang1.mp3",
+        "destination": "audio/skill/wzzz_v__qshm__songsang1.mp3",
+        "skill_id": "wzzz_v__qshm__songsang"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__qshm__songsang2.mp3",
+        "destination": "audio/skill/wzzz_v__qshm__songsang2.mp3",
+        "skill_id": "wzzz_v__qshm__songsang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__anxu1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__anxu1.mp3",
+        "skill_id": "wzzz_v__m_ex__anxu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__anxu2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__anxu2.mp3",
+        "skill_id": "wzzz_v__m_ex__anxu"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhuiyi1.mp3",
+        "destination": "audio/skill/wzzz_v__zhuiyi1.mp3",
+        "skill_id": "wzzz_v__zhuiyi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhuiyi2.mp3",
+        "destination": "audio/skill/wzzz_v__zhuiyi2.mp3",
+        "skill_id": "wzzz_v__zhuiyi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__pojun1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__pojun1.mp3",
+        "skill_id": "wzzz_v__ty_ex__pojun"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__pojun2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__pojun2.mp3",
+        "skill_id": "wzzz_v__ty_ex__pojun"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v33__yicheng1.mp3",
+        "destination": "audio/skill/wzzz_v__v33__yicheng1.mp3",
+        "skill_id": "wzzz_v__v33__yicheng"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v33__yicheng2.mp3",
+        "destination": "audio/skill/wzzz_v__v33__yicheng2.mp3",
+        "skill_id": "wzzz_v__v33__yicheng"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/fenyin1.mp3",
+        "destination": "audio/skill/wzzz_v__sxfy__fenyin1.mp3",
+        "skill_id": "wzzz_v__sxfy__fenyin"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/fenyin2.mp3",
+        "destination": "audio/skill/wzzz_v__sxfy__fenyin2.mp3",
+        "skill_id": "wzzz_v__sxfy__fenyin"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__guose1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__guose1.mp3",
+        "skill_id": "wzzz_v__ex__guose"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__guose2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__guose2.mp3",
+        "skill_id": "wzzz_v__ex__guose"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__liuli1.mp3",
+        "destination": "audio/skill/wzzz_v__mou__liuli1.mp3",
+        "skill_id": "wzzz_v__mou__liuli"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__liuli2.mp3",
+        "destination": "audio/skill/wzzz_v__mou__liuli2.mp3",
+        "skill_id": "wzzz_v__mou__liuli"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/v11__wanrong1.mp3",
+        "destination": "audio/skill/wzzz__wanrong1.mp3",
+        "skill_id": "wzzz__wanrong"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/v11__wanrong2.mp3",
+        "destination": "audio/skill/wzzz__wanrong2.mp3",
+        "skill_id": "wzzz__wanrong"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__quedi1.mp3",
+        "destination": "audio/skill/wzzz_v__quedi1.mp3",
+        "skill_id": "wzzz_v__quedi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__quedi2.mp3",
+        "destination": "audio/skill/wzzz_v__quedi2.mp3",
+        "skill_id": "wzzz_v__quedi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__choujue1.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__choujue1.mp3",
+        "skill_id": "wzzz_v__mobile__choujue"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__choujue2.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__choujue2.mp3",
+        "skill_id": "wzzz_v__mobile__choujue"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/chongjian1.mp3",
+        "destination": "audio/skill/wzzz_v__ofl__chongjian1.mp3",
+        "skill_id": "wzzz_v__ofl__chongjian"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/chongjian2.mp3",
+        "destination": "audio/skill/wzzz_v__ofl__chongjian2.mp3",
+        "skill_id": "wzzz_v__ofl__chongjian"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jishe1.mp3",
+        "destination": "audio/skill/wzzz_v__jishe1.mp3",
+        "skill_id": "wzzz_v__jishe"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__jishe2.mp3",
+        "destination": "audio/skill/wzzz_v__jishe2.mp3",
+        "skill_id": "wzzz_v__jishe"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__lianhuo1.mp3",
+        "destination": "audio/skill/wzzz_v__lianhuo1.mp3",
+        "skill_id": "wzzz_v__lianhuo"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__lianhuo2.mp3",
+        "destination": "audio/skill/wzzz_v__lianhuo2.mp3",
+        "skill_id": "wzzz_v__lianhuo"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__jieyin1.mp3",
+        "destination": "audio/skill/wzzz_v__jieyin1.mp3",
+        "skill_id": "wzzz_v__jieyin"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__jieyin2.mp3",
+        "destination": "audio/skill/wzzz_v__jieyin2.mp3",
+        "skill_id": "wzzz_v__jieyin"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__liangzhu1.mp3",
+        "destination": "audio/skill/wzzz_v__liangzhu1.mp3",
+        "skill_id": "wzzz_v__liangzhu"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__liangzhu2.mp3",
+        "destination": "audio/skill/wzzz_v__liangzhu2.mp3",
+        "skill_id": "wzzz_v__liangzhu"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__xiaoji1.mp3",
+        "destination": "audio/skill/wzzz_v__xiaoji1.mp3",
+        "skill_id": "wzzz_v__xiaoji"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__xiaoji2.mp3",
+        "destination": "audio/skill/wzzz_v__xiaoji2.mp3",
+        "skill_id": "wzzz_v__xiaoji"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__duwu1.mp3",
+        "destination": "audio/skill/wzzz_v__duwu1.mp3",
+        "skill_id": "wzzz_v__duwu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__duwu2.mp3",
+        "destination": "audio/skill/wzzz_v__duwu2.mp3",
+        "skill_id": "wzzz_v__duwu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__aocai1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__aocai1.mp3",
+        "skill_id": "wzzz_v__ol__aocai"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__aocai2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__aocai2.mp3",
+        "skill_id": "wzzz_v__ol__aocai"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fenli1.mp3",
+        "destination": "audio/skill/wzzz_v__fenli1.mp3",
+        "skill_id": "wzzz_v__fenli"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fenli2.mp3",
+        "destination": "audio/skill/wzzz_v__fenli2.mp3",
+        "skill_id": "wzzz_v__fenli"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__pingkou1.mp3",
+        "destination": "audio/skill/wzzz_v__pingkou1.mp3",
+        "skill_id": "wzzz_v__pingkou"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__pingkou2.mp3",
+        "destination": "audio/skill/wzzz_v__pingkou2.mp3",
+        "skill_id": "wzzz_v__pingkou"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__haoshi1.mp3",
+        "destination": "audio/skill/wzzz_v__haoshi1.mp3",
+        "skill_id": "wzzz_v__haoshi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__haoshi2.mp3",
+        "destination": "audio/skill/wzzz_v__haoshi2.mp3",
+        "skill_id": "wzzz_v__haoshi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__dimeng1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__dimeng1.mp3",
+        "skill_id": "wzzz_v__ol_ex__dimeng"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__dimeng2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__dimeng2.mp3",
+        "skill_id": "wzzz_v__ol_ex__dimeng"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__jianyi1.mp3",
+        "destination": "audio/skill/wzzz_v__jianyi1.mp3",
+        "skill_id": "wzzz_v__jianyi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__jianyi2.mp3",
+        "destination": "audio/skill/wzzz_v__jianyi2.mp3",
+        "skill_id": "wzzz_v__jianyi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__shangyi1.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__shangyi1.mp3",
+        "skill_id": "wzzz_v__mobile__shangyi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__shangyi2.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__shangyi2.mp3",
+        "skill_id": "wzzz_v__mobile__shangyi"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__qianxun1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__qianxun1.mp3",
+        "skill_id": "wzzz_v__ex__qianxun"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__qianxun2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__qianxun2.mp3",
+        "skill_id": "wzzz_v__ex__qianxun"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__lianying1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__lianying1.mp3",
+        "skill_id": "wzzz_v__ex__lianying"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__lianying2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__lianying2.mp3",
+        "skill_id": "wzzz_v__ex__lianying"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/shunshi1.mp3",
+        "destination": "audio/skill/wzzz__shunshi1.mp3",
+        "skill_id": "wzzz__shunshi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/shunshi2.mp3",
+        "destination": "audio/skill/wzzz__shunshi2.mp3",
+        "skill_id": "wzzz__shunshi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__hongde1.mp3",
+        "destination": "audio/skill/wzzz_v__hongde1.mp3",
+        "skill_id": "wzzz_v__hongde"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__hongde2.mp3",
+        "destination": "audio/skill/wzzz_v__hongde2.mp3",
+        "skill_id": "wzzz_v__hongde"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__dingpan1.mp3",
+        "destination": "audio/skill/wzzz_v__dingpan1.mp3",
+        "skill_id": "wzzz_v__dingpan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__dingpan2.mp3",
+        "destination": "audio/skill/wzzz_v__dingpan2.mp3",
+        "skill_id": "wzzz_v__dingpan"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__qixi1.mp3",
+        "destination": "audio/skill/wzzz_v__qixi1.mp3",
+        "skill_id": "wzzz_v__qixi"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/ofl_mou__qixi2.mp3",
+        "destination": "audio/skill/wzzz_v__qixi2.mp3",
+        "skill_id": "wzzz_v__qixi"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__fenwei1.mp3",
+        "destination": "audio/skill/wzzz_v__fenwei1.mp3",
+        "skill_id": "wzzz_v__fenwei"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__fenwei2.mp3",
+        "destination": "audio/skill/wzzz_v__fenwei2.mp3",
+        "skill_id": "wzzz_v__fenwei"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__dujin1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__dujin1.mp3",
+        "skill_id": "wzzz_v__ol__dujin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__dujin2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__dujin2.mp3",
+        "skill_id": "wzzz_v__ol__dujin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__dufeng1.mp3",
+        "destination": "audio/skill/wzzz_v__dufeng1.mp3",
+        "skill_id": "wzzz_v__dufeng"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__dufeng2.mp3",
+        "destination": "audio/skill/wzzz_v__dufeng2.mp3",
+        "skill_id": "wzzz_v__dufeng"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__kurou1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__kurou1.mp3",
+        "skill_id": "wzzz_v__ex__kurou"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__kurou2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__kurou2.mp3",
+        "skill_id": "wzzz_v__ex__kurou"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/zhaxiang1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhaxiang1.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhaxiang"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/zhaxiang2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhaxiang2.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhaxiang"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__yingjian1.mp3",
+        "destination": "audio/skill/wzzz_v__yingjian1.mp3",
+        "skill_id": "wzzz_v__yingjian"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__yingjian2.mp3",
+        "destination": "audio/skill/wzzz_v__yingjian2.mp3",
+        "skill_id": "wzzz_v__yingjian"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__shixin1.mp3",
+        "destination": "audio/skill/wzzz_v__shixin1.mp3",
+        "skill_id": "wzzz_v__shixin"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__shixin2.mp3",
+        "destination": "audio/skill/wzzz_v__shixin2.mp3",
+        "skill_id": "wzzz_v__shixin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__duanfa1.mp3",
+        "destination": "audio/skill/wzzz_v__duanfa1.mp3",
+        "skill_id": "wzzz_v__duanfa"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__duanfa2.mp3",
+        "destination": "audio/skill/wzzz_v__duanfa2.mp3",
+        "skill_id": "wzzz_v__duanfa"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__sp__youdi1.mp3",
+        "destination": "audio/skill/wzzz_v__sp__youdi1.mp3",
+        "skill_id": "wzzz_v__sp__youdi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__sp__youdi2.mp3",
+        "destination": "audio/skill/wzzz_v__sp__youdi2.mp3",
+        "skill_id": "wzzz_v__sp__youdi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__tianyi1.mp3",
+        "destination": "audio/skill/wzzz_v__tianyi1.mp3",
+        "skill_id": "wzzz_v__tianyi"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__tianyi2.mp3",
+        "destination": "audio/skill/wzzz_v__tianyi2.mp3",
+        "skill_id": "wzzz_v__tianyi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__hanzhan1.mp3",
+        "destination": "audio/skill/wzzz_v__hanzhan1.mp3",
+        "skill_id": "wzzz_v__hanzhan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__hanzhan2.mp3",
+        "destination": "audio/skill/wzzz_v__hanzhan2.mp3",
+        "skill_id": "wzzz_v__hanzhan"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__keji1.mp3",
+        "destination": "audio/skill/wzzz_v__keji1.mp3",
+        "skill_id": "wzzz_v__keji"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__keji2.mp3",
+        "destination": "audio/skill/wzzz_v__keji2.mp3",
+        "skill_id": "wzzz_v__keji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__qinxue1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__qinxue1.mp3",
+        "skill_id": "wzzz_v__ol_ex__qinxue"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__qinxue2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__qinxue2.mp3",
+        "skill_id": "wzzz_v__ol_ex__qinxue"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__botu1.mp3",
+        "destination": "audio/skill/wzzz_v__botu1.mp3",
+        "skill_id": "wzzz_v__botu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__botu2.mp3",
+        "destination": "audio/skill/wzzz_v__botu2.mp3",
+        "skill_id": "wzzz_v__botu"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__gundam__gongxin1.mp3",
+        "destination": "audio/skill/wzzz_v__gundam__gongxin1.mp3",
+        "skill_id": "wzzz_v__gundam__gongxin"
+      },
+      {
+        "source_repo": "overseas",
+        "source_path": "audio/skill/wzzz_v__gundam__gongxin2.mp3",
+        "destination": "audio/skill/wzzz_v__gundam__gongxin2.mp3",
+        "skill_id": "wzzz_v__gundam__gongxin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__xingzhao1.mp3",
+        "destination": "audio/skill/wzzz_v__xingzhao1.mp3",
+        "skill_id": "wzzz_v__xingzhao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__xingzhao2.mp3",
+        "destination": "audio/skill/wzzz_v__xingzhao2.mp3",
+        "skill_id": "wzzz_v__xingzhao"
+      },
+      {
+        "source_repo": "xinhanwujiang",
+        "source_path": "audio/skill/wzzz_v__wzzz__fanjian1.mp3",
+        "destination": "audio/skill/wzzz_v__wzzz__fanjian1.mp3",
+        "skill_id": "wzzz_v__wzzz__fanjian"
+      },
+      {
+        "source_repo": "xinhanwujiang",
+        "source_path": "audio/skill/wzzz_v__wzzz__fanjian2.mp3",
+        "destination": "audio/skill/wzzz_v__wzzz__fanjian2.mp3",
+        "skill_id": "wzzz_v__wzzz__fanjian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhijian1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhijian1.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhijian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhijian2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhijian2.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhijian"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__juece1.mp3",
+        "destination": "audio/skill/wzzz_v__juece1.mp3",
+        "skill_id": "wzzz_v__juece"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__juece2.mp3",
+        "destination": "audio/skill/wzzz_v__juece2.mp3",
+        "skill_id": "wzzz_v__juece"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__mieji1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__mieji1.mp3",
+        "skill_id": "wzzz_v__m_ex__mieji"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__mieji2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__mieji2.mp3",
+        "skill_id": "wzzz_v__m_ex__mieji"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fencheng1.mp3",
+        "destination": "audio/skill/wzzz_v__fencheng1.mp3",
+        "skill_id": "wzzz_v__fencheng"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__fencheng2.mp3",
+        "destination": "audio/skill/wzzz_v__fencheng2.mp3",
+        "skill_id": "wzzz_v__fencheng"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__yaowu1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__yaowu1.mp3",
+        "skill_id": "wzzz_v__ol_ex__yaowu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__yaowu2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__yaowu2.mp3",
+        "skill_id": "wzzz_v__ol_ex__yaowu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__shizhan1.mp3",
+        "destination": "audio/skill/wzzz_v__shizhan1.mp3",
+        "skill_id": "wzzz_v__shizhan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__shizhan2.mp3",
+        "destination": "audio/skill/wzzz_v__shizhan2.mp3",
+        "skill_id": "wzzz_v__shizhan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__xianzhen1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__xianzhen1.mp3",
+        "skill_id": "wzzz_v__ty_ex__xianzhen"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__xianzhen2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__xianzhen2.mp3",
+        "skill_id": "wzzz_v__ty_ex__xianzhen"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jinjiu1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jinjiu1.mp3",
+        "skill_id": "wzzz_v__ty_ex__jinjiu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__jinjiu2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__jinjiu2.mp3",
+        "skill_id": "wzzz_v__ty_ex__jinjiu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__qiaobian1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__qiaobian1.mp3",
+        "skill_id": "wzzz_v__ol_ex__qiaobian"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__qiaobian2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__qiaobian2.mp3",
+        "skill_id": "wzzz_v__ol_ex__qiaobian"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huaiyi1.mp3",
+        "destination": "audio/skill/wzzz_v__huaiyi1.mp3",
+        "skill_id": "wzzz_v__huaiyi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__huaiyi2.mp3",
+        "destination": "audio/skill/wzzz_v__huaiyi2.mp3",
+        "skill_id": "wzzz_v__huaiyi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mozhi1.mp3",
+        "destination": "audio/skill/wzzz_v__mozhi1.mp3",
+        "skill_id": "wzzz_v__mozhi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__mozhi2.mp3",
+        "destination": "audio/skill/wzzz_v__mozhi2.mp3",
+        "skill_id": "wzzz_v__mozhi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__chenqing1.mp3",
+        "destination": "audio/skill/wzzz_v__chenqing1.mp3",
+        "skill_id": "wzzz_v__chenqing"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__chenqing2.mp3",
+        "destination": "audio/skill/wzzz_v__chenqing2.mp3",
+        "skill_id": "wzzz_v__chenqing"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__duanchang1.mp3",
+        "destination": "audio/skill/wzzz_v__duanchang1.mp3",
+        "skill_id": "wzzz_v__duanchang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__duanchang2.mp3",
+        "destination": "audio/skill/wzzz_v__duanchang2.mp3",
+        "skill_id": "wzzz_v__duanchang"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__yizhong1.mp3",
+        "destination": "audio/skill/wzzz_v__yizhong1.mp3",
+        "skill_id": "wzzz_v__yizhong"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__yizhong2.mp3",
+        "destination": "audio/skill/wzzz_v__yizhong2.mp3",
+        "skill_id": "wzzz_v__yizhong"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhenjun1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhenjun1.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhenjun"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__zhenjun2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__zhenjun2.mp3",
+        "skill_id": "wzzz_v__ol_ex__zhenjun"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__niluan1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__niluan1.mp3",
+        "skill_id": "wzzz_v__ty__niluan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__niluan2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__niluan2.mp3",
+        "skill_id": "wzzz_v__ty__niluan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__weiwu1.mp3",
+        "destination": "audio/skill/wzzz_v__weiwu1.mp3",
+        "skill_id": "wzzz_v__weiwu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__weiwu2.mp3",
+        "destination": "audio/skill/wzzz_v__weiwu2.mp3",
+        "skill_id": "wzzz_v__weiwu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__xiaoxi1.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__xiaoxi1.mp3",
+        "skill_id": "wzzz_v__mobile__xiaoxi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__mobile__xiaoxi2.mp3",
+        "destination": "audio/skill/wzzz_v__mobile__xiaoxi2.mp3",
+        "skill_id": "wzzz_v__mobile__xiaoxi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sanchen1.mp3",
+        "destination": "audio/skill/wzzz_v__sanchen1.mp3",
+        "skill_id": "wzzz_v__sanchen"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__sanchen2.mp3",
+        "destination": "audio/skill/wzzz_v__sanchen2.mp3",
+        "skill_id": "wzzz_v__sanchen"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__pozhu1.mp3",
+        "destination": "audio/skill/wzzz_v__pozhu1.mp3",
+        "skill_id": "wzzz_v__pozhu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__pozhu2.mp3",
+        "destination": "audio/skill/wzzz_v__pozhu2.mp3",
+        "skill_id": "wzzz_v__pozhu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__fuji1.mp3",
+        "destination": "audio/skill/wzzz_v__fuji1.mp3",
+        "skill_id": "wzzz_v__fuji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__fuji2.mp3",
+        "destination": "audio/skill/wzzz_v__fuji2.mp3",
+        "skill_id": "wzzz_v__fuji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jiaozi1.mp3",
+        "destination": "audio/skill/wzzz_v__jiaozi1.mp3",
+        "skill_id": "wzzz_v__jiaozi"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__jiaozi2.mp3",
+        "destination": "audio/skill/wzzz_v__jiaozi2.mp3",
+        "skill_id": "wzzz_v__jiaozi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__mingce1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__mingce1.mp3",
+        "skill_id": "wzzz_v__ty_ex__mingce"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__mingce2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__mingce2.mp3",
+        "skill_id": "wzzz_v__ty_ex__mingce"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhichi1.mp3",
+        "destination": "audio/skill/wzzz_v__zhichi1.mp3",
+        "skill_id": "wzzz_v__zhichi"
+      },
+      {
+        "source_repo": "yj",
+        "source_path": "audio/skill/wzzz_v__zhichi2.mp3",
+        "destination": "audio/skill/wzzz_v__zhichi2.mp3",
+        "skill_id": "wzzz_v__zhichi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__jianying1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__jianying1.mp3",
+        "skill_id": "wzzz_v__m_ex__jianying"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__jianying2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__jianying2.mp3",
+        "skill_id": "wzzz_v__m_ex__jianying"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__shibei1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__shibei1.mp3",
+        "skill_id": "wzzz_v__ty_ex__shibei"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__shibei2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__shibei2.mp3",
+        "skill_id": "wzzz_v__ty_ex__shibei"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__liantao1.mp3",
+        "destination": "audio/skill/wzzz_v__liantao1.mp3",
+        "skill_id": "wzzz_v__liantao"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__liantao2.mp3",
+        "destination": "audio/skill/wzzz_v__liantao2.mp3",
+        "skill_id": "wzzz_v__liantao"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v33__zhanshen1.mp3",
+        "destination": "audio/skill/wzzz_v__v33__zhanshen1.mp3",
+        "skill_id": "wzzz_v__v33__zhanshen"
+      },
+      {
+        "source_repo": "gamemode",
+        "source_path": "audio/skill/wzzz_v__v33__zhanshen2.mp3",
+        "destination": "audio/skill/wzzz_v__v33__zhanshen2.mp3",
+        "skill_id": "wzzz_v__v33__zhanshen"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__wansha1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__wansha1.mp3",
+        "skill_id": "wzzz_v__ol_ex__wansha"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__wansha2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__wansha2.mp3",
+        "skill_id": "wzzz_v__ol_ex__wansha"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__luanwu1.mp3",
+        "destination": "audio/skill/wzzz_v__mou__luanwu1.mp3",
+        "skill_id": "wzzz_v__mou__luanwu"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/wzzz_v__mou__luanwu2.mp3",
+        "destination": "audio/skill/wzzz_v__mou__luanwu2.mp3",
+        "skill_id": "wzzz_v__mou__luanwu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__weimu1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__weimu1.mp3",
+        "skill_id": "wzzz_v__ol_ex__weimu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__weimu2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__weimu2.mp3",
+        "skill_id": "wzzz_v__ol_ex__weimu"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__qingshic1.mp3",
+        "destination": "audio/skill/wzzz_v__qingshic1.mp3",
+        "skill_id": "wzzz_v__qingshic"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__qingshic2.mp3",
+        "destination": "audio/skill/wzzz_v__qingshic2.mp3",
+        "skill_id": "wzzz_v__qingshic"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__lijian1.mp3",
+        "destination": "audio/skill/wzzz_v__lijian1.mp3",
+        "skill_id": "wzzz_v__lijian"
+      },
+      {
+        "source_repo": "mougong",
+        "source_path": "audio/skill/mou__lijian2.mp3",
+        "destination": "audio/skill/wzzz_v__lijian2.mp3",
+        "skill_id": "wzzz_v__lijian"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__lihun1.mp3",
+        "destination": "audio/skill/wzzz_v__lihun1.mp3",
+        "skill_id": "wzzz_v__lihun"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__lihun2.mp3",
+        "destination": "audio/skill/wzzz_v__lihun2.mp3",
+        "skill_id": "wzzz_v__lihun"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__biyue1.mp3",
+        "destination": "audio/skill/wzzz_v__ex__biyue1.mp3",
+        "skill_id": "wzzz_v__ex__biyue"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__ex__biyue2.mp3",
+        "destination": "audio/skill/wzzz_v__ex__biyue2.mp3",
+        "skill_id": "wzzz_v__ex__biyue"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__shichou1.mp3",
+        "destination": "audio/skill/wzzz_v__ol__shichou1.mp3",
+        "skill_id": "wzzz_v__ol__shichou"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol__shichou2.mp3",
+        "destination": "audio/skill/wzzz_v__ol__shichou2.mp3",
+        "skill_id": "wzzz_v__ol__shichou"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__pingcai1.mp3",
+        "destination": "audio/skill/wzzz_v__pingcai1.mp3",
+        "skill_id": "wzzz_v__pingcai"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__pingcai2.mp3",
+        "destination": "audio/skill/wzzz_v__pingcai2.mp3",
+        "skill_id": "wzzz_v__pingcai"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__moukui1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__moukui1.mp3",
+        "skill_id": "wzzz_v__ty__moukui"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__moukui2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__moukui2.mp3",
+        "skill_id": "wzzz_v__ty__moukui"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__jungong1.mp3",
+        "destination": "audio/skill/wzzz_v__jungong1.mp3",
+        "skill_id": "wzzz_v__jungong"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__jungong2.mp3",
+        "destination": "audio/skill/wzzz_v__jungong2.mp3",
+        "skill_id": "wzzz_v__jungong"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__dengli1.mp3",
+        "destination": "audio/skill/wzzz_v__dengli1.mp3",
+        "skill_id": "wzzz_v__dengli"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__dengli2.mp3",
+        "destination": "audio/skill/wzzz_v__dengli2.mp3",
+        "skill_id": "wzzz_v__dengli"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__longdan1.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__longdan1.mp3",
+        "skill_id": "wzzz_v__ol_ex__longdan"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__ol_ex__longdan2.mp3",
+        "destination": "audio/skill/wzzz_v__ol_ex__longdan2.mp3",
+        "skill_id": "wzzz_v__ol_ex__longdan"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__chongzhen1.mp3",
+        "destination": "audio/skill/wzzz_v__chongzhen1.mp3",
+        "skill_id": "wzzz_v__chongzhen"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__chongzhen2.mp3",
+        "destination": "audio/skill/wzzz_v__chongzhen2.mp3",
+        "skill_id": "wzzz_v__chongzhen"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__yajiao1.mp3",
+        "destination": "audio/skill/wzzz_v__yajiao1.mp3",
+        "skill_id": "wzzz_v__yajiao"
+      },
+      {
+        "source_repo": "standard_ex",
+        "source_path": "audio/skill/wzzz_v__yajiao2.mp3",
+        "destination": "audio/skill/wzzz_v__yajiao2.mp3",
+        "skill_id": "wzzz_v__yajiao"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__langxi1.mp3",
+        "destination": "audio/skill/wzzz_v__langxi1.mp3",
+        "skill_id": "wzzz_v__langxi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__langxi2.mp3",
+        "destination": "audio/skill/wzzz_v__langxi2.mp3",
+        "skill_id": "wzzz_v__langxi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/yisuan1.mp3",
+        "destination": "audio/skill/wzzz_v__xh__yisuan1.mp3",
+        "skill_id": "wzzz_v__xh__yisuan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/yisuan2.mp3",
+        "destination": "audio/skill/wzzz_v__xh__yisuan2.mp3",
+        "skill_id": "wzzz_v__xh__yisuan"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__yongsi1.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__yongsi1.mp3",
+        "skill_id": "wzzz_v__m_ex__yongsi"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__m_ex__yongsi2.mp3",
+        "destination": "audio/skill/wzzz_v__m_ex__yongsi2.mp3",
+        "skill_id": "wzzz_v__m_ex__yongsi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__weidi1.mp3",
+        "destination": "audio/skill/wzzz_v__weidi1.mp3",
+        "skill_id": "wzzz_v__weidi"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/wzzz_v__weidi2.mp3",
+        "destination": "audio/skill/wzzz_v__weidi2.mp3",
+        "skill_id": "wzzz_v__weidi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__shiyuan1.mp3",
+        "destination": "audio/skill/wzzz_v__shiyuan1.mp3",
+        "skill_id": "wzzz_v__shiyuan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__shiyuan2.mp3",
+        "destination": "audio/skill/wzzz_v__shiyuan2.mp3",
+        "skill_id": "wzzz_v__shiyuan"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__dushi1.mp3",
+        "destination": "audio/skill/wzzz_v__dushi1.mp3",
+        "skill_id": "wzzz_v__dushi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__dushi2.mp3",
+        "destination": "audio/skill/wzzz_v__dushi2.mp3",
+        "skill_id": "wzzz_v__dushi"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__luanji1.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__luanji1.mp3",
+        "skill_id": "wzzz_v__ofl_mou__luanji"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__luanji2.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__luanji2.mp3",
+        "skill_id": "wzzz_v__ofl_mou__luanji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__wenji1.mp3",
+        "destination": "audio/skill/wzzz_v__wenji1.mp3",
+        "skill_id": "wzzz_v__wenji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__wenji2.mp3",
+        "destination": "audio/skill/wzzz_v__wenji2.mp3",
+        "skill_id": "wzzz_v__wenji"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__tunjiang1.mp3",
+        "destination": "audio/skill/wzzz_v__tunjiang1.mp3",
+        "skill_id": "wzzz_v__tunjiang"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/wzzz_v__tunjiang2.mp3",
+        "destination": "audio/skill/wzzz_v__tunjiang2.mp3",
+        "skill_id": "wzzz_v__tunjiang"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__huashen1.mp3",
+        "destination": "audio/skill/wzzz_v__huashen1.mp3",
+        "skill_id": "wzzz_v__huashen"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__huashen2.mp3",
+        "destination": "audio/skill/wzzz_v__huashen2.mp3",
+        "skill_id": "wzzz_v__huashen"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xinsheng1.mp3",
+        "destination": "audio/skill/wzzz_v__xinsheng1.mp3",
+        "skill_id": "wzzz_v__xinsheng"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__xinsheng2.mp3",
+        "destination": "audio/skill/wzzz_v__xinsheng2.mp3",
+        "skill_id": "wzzz_v__xinsheng"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__huoshou1.mp3",
+        "destination": "audio/skill/wzzz_v__huoshou1.mp3",
+        "skill_id": "wzzz_v__huoshou"
+      },
+      {
+        "source_repo": "shzl",
+        "source_path": "audio/skill/wzzz_v__huoshou2.mp3",
+        "destination": "audio/skill/wzzz_v__huoshou2.mp3",
+        "skill_id": "wzzz_v__huoshou"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__zaiqi1.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__zaiqi1.mp3",
+        "skill_id": "wzzz_v__ofl_mou__zaiqi"
+      },
+      {
+        "source_repo": "offline",
+        "source_path": "audio/skill/wzzz_v__ofl_mou__zaiqi2.mp3",
+        "destination": "audio/skill/wzzz_v__ofl_mou__zaiqi2.mp3",
+        "skill_id": "wzzz_v__ofl_mou__zaiqi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yicong1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yicong1.mp3",
+        "skill_id": "wzzz_v__ty_ex__yicong"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__yicong2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__yicong2.mp3",
+        "skill_id": "wzzz_v__ty_ex__yicong"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__qiaomeng1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__qiaomeng1.mp3",
+        "skill_id": "wzzz_v__ty_ex__qiaomeng"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty_ex__qiaomeng2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__qiaomeng2.mp3",
+        "skill_id": "wzzz_v__ty_ex__qiaomeng"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__kuangfu1.mp3",
+        "destination": "audio/skill/wzzz_v__ty__kuangfu1.mp3",
+        "skill_id": "wzzz_v__ty__kuangfu"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/wzzz_v__ty__kuangfu2.mp3",
+        "destination": "audio/skill/wzzz_v__ty__kuangfu2.mp3",
+        "skill_id": "wzzz_v__ty__kuangfu"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__chouhai1.mp3",
+        "destination": "audio/skill/wzzz_v__chouhai1.mp3",
+        "skill_id": "wzzz_v__chouhai"
+      },
+      {
+        "source_repo": "mobile",
+        "source_path": "audio/skill/wzzz_v__chouhai2.mp3",
+        "destination": "audio/skill/wzzz_v__chouhai2.mp3",
+        "skill_id": "wzzz_v__chouhai"
+      }
+    ],
+    "missing_skills": [
+      [
+        "wzzz__shuzhi",
+        "述志"
+      ],
+      [
+        "wzzz__shouyue",
+        "授钺"
+      ],
+      [
+        "wzzz_v__os__zhuiting",
+        "坠廷"
+      ],
+      [
+        "wzzz_v__tg__jiancheng",
+        "坚城"
+      ],
+      [
+        "wzzz__shouyu",
+        "守御"
+      ],
+      [
+        "wzzz_v__vd_sheshen",
+        "舍身"
+      ],
+      [
+        "wzzz_v__kunfenEx",
+        "困奋"
+      ],
+      [
+        "wzzz_v__qingguo",
+        "倾国"
+      ],
+      [
+        "wzzz_v__mashu",
+        "马术"
+      ],
+      [
+        "wzzz__jinzi",
+        "锦姿"
+      ],
+      [
+        "wzzz_v__ty_ex__tongxin",
+        "同心"
+      ],
+      [
+        "wzzz__baolie",
+        "豹烈"
+      ],
+      [
+        "wzzz_v__yizhuang",
+        "益壮"
+      ],
+      [
+        "wzzz__qinglong",
+        "青龙"
+      ],
+      [
+        "wzzz_v__sxfy__wudu",
+        "无度"
+      ],
+      [
+        "wzzz__yuanding",
+        "缘定"
+      ],
+      [
+        "wzzz__beijia",
+        "悲笳"
+      ],
+      [
+        "wzzz_v__xh__xiongyi",
+        "雄异"
+      ],
+      [
+        "wzzz_v__ol__zhuiji",
+        "追击"
+      ],
+      [
+        "wzzz_v__yinship",
+        "隐世"
+      ],
+      [
+        "wzzz_v__jiuzhu",
+        "救主"
+      ]
+    ]
+  }
+}

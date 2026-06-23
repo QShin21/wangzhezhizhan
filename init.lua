@@ -2,6 +2,8 @@ local extension = Package:new("wangzhezhizhan")
 extension.extensionName = "wangzhezhizhan"
 
 local prefix = "packages.wangzhezhizhan."
+local lords = require(prefix .. "pkg.lords")
+local generals = require(prefix .. "pkg.generals")
 local wangzhe_role = require(prefix .. "pkg.gamemodes.wangzhe_role")
 
 extension:loadSkillSkels(wangzhe_role.skills)
@@ -46,4 +48,8 @@ if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__w
   ltk_util.__wangzhe_summary_patched = true
 end
 
-return extension
+return {
+  extension,
+  lords,
+  generals,
+}
