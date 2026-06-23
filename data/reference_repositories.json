@@ -1,0 +1,102 @@
+[
+  {
+    "name": "shzl",
+    "url": "https://gitee.com/qsgs-fans/shzl",
+    "usage": "神话再临参考包，优先查找风火林山阴雷神相关经典技能、武将图和语音。"
+  },
+  {
+    "name": "yj",
+    "url": "https://gitee.com/qsgs-fans/yj",
+    "usage": "一将成名参考包，优先查找一将系列武将技能、图片和语音。"
+  },
+  {
+    "name": "mobile",
+    "url": "https://gitee.com/qsgs-fans/mobile",
+    "usage": "移动版参考包，优先查找移动版、手杀版本技能。"
+  },
+  {
+    "name": "sp",
+    "url": "https://gitee.com/qsgs-fans/sp",
+    "usage": "SP 参考包，优先查找 SP、JSP、星 SP 武将技能和素材。"
+  },
+  {
+    "name": "tenyear",
+    "url": "https://gitee.com/qsgs-fans/tenyear",
+    "usage": "十周年参考包，优先查找十周年界限突破、汇萃、星火等技能。"
+  },
+  {
+    "name": "ol",
+    "url": "https://gitee.com/qsgs-fans/ol",
+    "usage": "OL 参考包，优先查找 OL 专属或 OL 修改版技能。"
+  },
+  {
+    "name": "standard_ex",
+    "url": "https://gitee.com/qsgs-fans/standard_ex",
+    "usage": "界限突破标准参考包，优先查找界标技能。"
+  },
+  {
+    "name": "mougong",
+    "url": "https://gitee.com/Qsgs-Fans/mougong",
+    "usage": "谋攻篇参考包，优先查找谋系技能。"
+  },
+  {
+    "name": "freekill-core",
+    "url": "https://gitee.com/Qsgs-Fans/freekill-core",
+    "usage": "新月杀核心与标准包参考，查找核心 API、标准技能和基础规则实现。"
+  },
+  {
+    "name": "gamemode",
+    "url": "https://gitee.com/Qsgs-Fans/gamemode",
+    "usage": "游戏模式扩展参考，查找 SpecialPack、模式入口和规则技写法。"
+  },
+  {
+    "name": "hegemony",
+    "url": "https://gitee.com/Qsgs-Fans/hegemony",
+    "usage": "国战模式参考，查找模式包组织、规则技和场上标记机制。"
+  },
+  {
+    "name": "utility",
+    "url": "https://gitee.com/qsgs-fans/utility",
+    "usage": "辅助模块参考，必要时复制通用辅助事件或工具函数到本仓库。"
+  },
+  {
+    "name": "lunar",
+    "url": "https://gitee.com/Qsgs-Fans/lunar",
+    "usage": "其他武将或机制参考。"
+  },
+  {
+    "name": "offline",
+    "url": "https://gitee.com/Qsgs-Fans/offline",
+    "usage": "线下/稀有武将参考，优先查找赛事用牌接近版本的素材。"
+  },
+  {
+    "name": "brainhole_new",
+    "url": "https://gitee.com/Qsgs-Fans/brainhole_new",
+    "usage": "脑洞包参考，用于查找特殊机制或非标准技能实现。"
+  },
+  {
+    "name": "lunarltk-qsgs-ui",
+    "url": "https://gitee.com/notify-ctrl/lunarltk-qsgs-ui",
+    "usage": "新月杀 UI 参考，用于后续优化选将分组显示和结算表字段展示。"
+  },
+  {
+    "name": "xinhanwujiang",
+    "url": "https://gitee.com/shin03/xinhanwujiang",
+    "usage": "新韩武将参考，用于补充同名技能实现或素材。"
+  },
+  {
+    "name": "xinghan_canlan",
+    "url": "https://gitee.com/shin03/xinghan_canlan",
+    "usage": "星汉灿烂参考包，用于补充星汉相关技能与素材。"
+  },
+  {
+    "name": "qsgs",
+    "url": "https://gitee.com/Qsgs-Fans/qsgs",
+    "usage": "QSGS 综合参考，用于查漏补缺。"
+  },
+  {
+    "name": "tuguo",
+    "url": "https://gitee.com/Qsgs-Fans/tuguo",
+    "usage": "图国参考包，优先查找文聘等图国来源技能。"
+  }
+]

@@ -1471,6 +1471,16 @@
         "destination": "audio/death/wzzz__panfeng.mp3"
       },
       {
+        "source_repo": "sp",
+        "source_path": "audio/death/xingcai.mp3",
+        "destination": "audio/death/wzzz__zhangxingcai.mp3"
+      },
+      {
+        "source_repo": "local-existing",
+        "source_path": "audio/death/wzzz__jushou.mp3",
+        "destination": "audio/death/wzzz__jushou.mp3"
+      },
+      {
         "source_repo": "offline",
         "source_path": "audio/death/ofl3__caocao.mp3",
         "destination": "audio/death/wzzz__caocao.mp3"
@@ -4828,6 +4838,54 @@
         "source_path": "audio/skill/wzzz_v__chouhai2.mp3",
         "destination": "audio/skill/wzzz_v__chouhai2.mp3",
         "skill_id": "wzzz_v__chouhai"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/kunfenEx_olmou__jiangwei.mp3",
+        "destination": "audio/skill/wzzz_v__kunfenEx1.mp3",
+        "skill_id": "wzzz_v__kunfenEx"
+      },
+      {
+        "source_repo": "sp",
+        "source_path": "audio/skill/kunfen1.mp3",
+        "destination": "audio/skill/wzzz_v__kunfenEx2.mp3",
+        "skill_id": "wzzz_v__kunfenEx"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/tongxins1.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__tongxin1.mp3",
+        "skill_id": "wzzz_v__ty_ex__tongxin"
+      },
+      {
+        "source_repo": "ol",
+        "source_path": "audio/skill/tongxins2.mp3",
+        "destination": "audio/skill/wzzz_v__ty_ex__tongxin2.mp3",
+        "skill_id": "wzzz_v__ty_ex__tongxin"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/xiongyis1.mp3",
+        "destination": "audio/skill/wzzz_v__xh__xiongyi1.mp3",
+        "skill_id": "wzzz_v__xh__xiongyi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/xiongyis2.mp3",
+        "destination": "audio/skill/wzzz_v__xh__xiongyi2.mp3",
+        "skill_id": "wzzz_v__xh__xiongyi"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/yinshi1.mp3",
+        "destination": "audio/skill/wzzz_v__yinship1.mp3",
+        "skill_id": "wzzz_v__yinship"
+      },
+      {
+        "source_repo": "tenyear",
+        "source_path": "audio/skill/yinshi2.mp3",
+        "destination": "audio/skill/wzzz_v__yinship2.mp3",
+        "skill_id": "wzzz_v__yinship"
       }
     ],
     "missing_skills": [
@@ -4856,10 +4914,6 @@
         "舍身"
       ],
       [
-        "wzzz_v__kunfenEx",
-        "困奋"
-      ],
-      [
         "wzzz_v__qingguo",
         "倾国"
       ],
@@ -4870,10 +4924,6 @@
       [
         "wzzz__jinzi",
         "锦姿"
-      ],
-      [
-        "wzzz_v__ty_ex__tongxin",
-        "同心"
       ],
       [
         "wzzz__baolie",
@@ -4900,16 +4950,8 @@
         "悲笳"
       ],
       [
-        "wzzz_v__xh__xiongyi",
-        "雄异"
-      ],
-      [
         "wzzz_v__ol__zhuiji",
         "追击"
-      ],
-      [
-        "wzzz_v__yinship",
-        "隐世"
       ],
       [
         "wzzz_v__jiuzhu",

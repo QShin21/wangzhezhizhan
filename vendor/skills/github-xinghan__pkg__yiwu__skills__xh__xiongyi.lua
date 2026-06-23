@@ -3,8 +3,6 @@ local xiongyi = fk.CreateSkill{
   tags = { Skill.Limited },
 }
 
-local okH, H = pcall(require, "packages.hegemony.util")
-
 Fk:loadTranslationTable{
   ["wzzz_v__xh__xiongyi"] = "雄异",
   [":wzzz_v__xh__xiongyi"] = "限定技，出牌阶段，你可以令与你势力相同的所有角色各摸三张牌，然后若你的体力值为场上唯一最小，你回复1点体力。当你脱离濒死状态时，本技能视为未发动过并删除回复体力的效果。",
@@ -15,9 +13,6 @@ Fk:loadTranslationTable{
 }
 
 local function sameKingdom(p, me)
-  if okH and H and H.compareKingdomWith then
-    return H.compareKingdomWith(p, me)
-  end
   return p.kingdom ~= "unknown" and me.kingdom ~= "unknown" and p.kingdom == me.kingdom
 end
 

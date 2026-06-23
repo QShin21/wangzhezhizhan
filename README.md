@@ -6,8 +6,8 @@
 
 - `wangzhe_role_mode`：王者之战 6/8 人身份模式。
 - `wzzz_lords`：10 位常备主公。
-- `wzzz_generals`：128 位非主公；常备主公不会在这里重复出现，同名非主公版本使用独立代码名。
-- `data/roster.json`：逐条保存赛事手册武将、技能文本及代码名。
+- `wzzz_generals`：128 位非主公；其中包含与常备主同名同称号的非主公版本，选将时按赛事规则去重。
+- `data/roster.json`：逐条保存本包实际实现的武将、技能文本及代码名；`data/manual_roster.json` 保留赛事手册原始抽取清单。
 - `data/skill_sources.json`：每个技能所参考的实现及源文件。
 - `data/asset_sources.json`：图片和音频来源。
 
@@ -28,6 +28,8 @@
 将本仓库放入新月杀的 `packages/wangzhezhizhan` 目录并启用即可，不再需要单独安装原武将包。
 
 参考包中的技能及关联技能已经收录到 `vendor/skills/`，辅助模块收录到 `vendor/modules/`。所有收录技能统一使用 `wzzz_v__` 命名空间，可以和原生态包同时安装，不会覆盖同名技能。
+
+制作规则和参考仓库索引保存在 `data/extension_knowledge.md` 与 `data/reference_repositories.json`，后续继续补武将时优先按这两份资料执行。
 
 ## 许可与来源
 

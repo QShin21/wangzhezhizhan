@@ -21,6 +21,8 @@ return {
   ["#wangzhe_sixiang_viewas"] = "四象：移除对应标记，将牌当作指定牌使用或打出",
   ["#wangzhe_aozhan"] = "鏖战：失去两张牌或失去1点体力",
   ["#wangzhe_aozhan-discard"] = "鏖战：请选择两张牌置入弃牌堆",
+  ["@[:]wangzhe_aozhan"] = "阶段",
+  ["wangzhe_aozhan"] = "鏖战",
   ["wangzhe_aozhan_discard"] = "失去两张牌",
   ["wangzhe_aozhan_losehp"] = "失去1点体力",
   ["#wangzhe_sixiang_log"] = "%from 随机获得了 %arg",

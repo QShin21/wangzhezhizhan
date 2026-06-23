@@ -1,8 +1,6 @@
 local extension = Package:new("wzzz_lords")
 extension.extensionName = "wangzhezhizhan"
-extension:loadSkillSkelsByPath("./packages/wangzhezhizhan/pkg/lords/skills")
-extension:loadSkillSkelsByPath("./packages/wangzhezhizhan/pkg/generals/skills")
-extension:loadSkillSkelsByPath("./packages/wangzhezhizhan/vendor/skills")
+require("packages.wangzhezhizhan.pkg.load_skills")(extension)
 
 Fk:loadTranslationTable {
   ["wzzz_lords"] = "常备主公",

@@ -1,13 +1,9 @@
-local extension = Package:new("wangzhezhizhan")
-extension.extensionName = "wangzhezhizhan"
-
 local prefix = "packages.wangzhezhizhan."
+
+local gamemodes = require(prefix .. "pkg.gamemodes")
 local lords = require(prefix .. "pkg.lords")
 local generals = require(prefix .. "pkg.generals")
-local wangzhe_role = require(prefix .. "pkg.gamemodes.wangzhe_role")
 
-extension:loadSkillSkels(wangzhe_role.skills)
-extension:addGameMode(wangzhe_role.mode)
 Fk:loadTranslationTable(require(prefix .. "i18n.zh_CN"))
 
 local ok, ltk_util = pcall(require, "ltk.client.util")
@@ -30,15 +26,21 @@ if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__w
   function ltk_util:entitle(data, seat, winner)
     local ret = old_entitle(self, data, seat, winner)
     if data and data.wangzhe_score ~= nil then
+      local kill_targets = translate_general_list(data.wangzhe_kill_targets)
+      local death_source = translate_general_key(data.wangzhe_death_source)
       local extra = {}
+
+      ret.wangzhe_score = data.wangzhe_score
+      ret.wangzhe_kill_targets = kill_targets
+      ret.wangzhe_death_source = death_source
+      ret.wangzhe_overview = data.wangzhe_overview
+
       if seat == 0 and data.wangzhe_overview then
         table.insert(extra, data.wangzhe_overview)
       end
       table.insert(extra, Fk:translate("wangzhe_score") .. "：" .. tostring(data.wangzhe_score))
-      table.insert(extra, Fk:translate("wangzhe_kill_targets") .. "：" ..
-        translate_general_list(data.wangzhe_kill_targets))
-      table.insert(extra, Fk:translate("wangzhe_death_source") .. "：" ..
-        translate_general_key(data.wangzhe_death_source))
+      table.insert(extra, Fk:translate("wangzhe_kill_targets") .. "：" .. kill_targets)
+      table.insert(extra, Fk:translate("wangzhe_death_source") .. "：" .. death_source)
       if ret.honor and ret.honor ~= "" then table.insert(extra, ret.honor) end
       ret.honor = table.concat(extra, "；")
     end
@@ -49,7 +51,7 @@ if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__w
 end
 
 return {
-  extension,
+  gamemodes,
   lords,
   generals,
 }

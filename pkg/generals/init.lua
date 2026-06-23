@@ -1,5 +1,6 @@
 local extension = Package:new("wzzz_generals")
 extension.extensionName = "wangzhezhizhan"
+require("packages.wangzhezhizhan.pkg.load_skills")(extension)
 
 Fk:loadTranslationTable {
   ["wzzz_generals"] = "非主公",

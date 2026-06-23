@@ -39,6 +39,25 @@ local function contains_same_general(list, name)
   return table.find(list or {}, function(g) return same_title_general(g, name) end) ~= nil
 end
 
+local function get_skill_name(skill)
+  if type(skill) == "string" then return skill end
+  if not skill then return nil end
+  local skel = skill.getSkeleton and skill:getSkeleton()
+  return skel and skel.name or skill.name
+end
+
+local function is_player_general_skill(player, skill)
+  local name = get_skill_name(skill)
+  if not name then return false end
+  for _, general_name in ipairs({ player.general, player.deputyGeneral }) do
+    local general = Fk.generals[general_name]
+    if general and table.contains(general:getSkillNameList(true, true), name) then
+      return true
+    end
+  end
+  return false
+end
+
 local function is_wangzhe_general(name)
   local g = Fk.generals[name]
   if not g then return false end
@@ -51,34 +70,16 @@ local function is_wangzhe_general(name)
     string.find(name, "^wangzhe__") ~= nil
 end
 
-local function skill_has_lord_tag(skill)
-  if type(skill) == "string" then skill = Fk.skills[skill] end
-  return skill and skill:hasTag(Skill.Lord)
-end
-
 local function is_lord_general(name)
   local g = Fk.generals[name]
   if not g then return false end
-  if table.contains(Fk.lords or {}, name) then return true end
-  return table.find(g.skills or {}, skill_has_lord_tag) ~= nil or
-    table.find(g.other_skills or {}, skill_has_lord_tag) ~= nil
+  local pkg = g.package or g.packageName
+  if type(pkg) == "table" then pkg = pkg.name end
+  return pkg == "wzzz_lords" or string.find(name, "^wzzz_lord__") ~= nil
 end
 
 local function pick_unique(room, source, n, excludes)
   local picked, pool = {}, table.simpleClone(source or {})
-  room:shuffleTable(pool)
-  for _, name in ipairs(pool) do
-    if #picked >= n then break end
-    if not contains_same_general(picked, name) and not contains_same_general(excludes, name) then
-      table.insert(picked, name)
-    end
-  end
-  return picked
-end
-
-local function fill_unique(room, picked, source, n, excludes)
-  if #picked >= n then return picked end
-  local pool = table.simpleClone(source or {})
   room:shuffleTable(pool)
   for _, name in ipairs(pool) do
     if #picked >= n then break end
@@ -324,7 +325,7 @@ local function wangzhe_getlogic()
     local non_lord_pool = table.filter(all, function(name) return not is_lord_general(name) end)
     local used_generals = {}
 
-    if #non_lord_pool == 0 or #all < #room.players * n then
+    if #lord_pool < LORD_CANDIDATE_COUNT or #non_lord_pool == 0 or #all < #room.players * n then
       send_no_enough_general_log(room, #room.players * n, #all)
       room.settings.generalTimeout = old_timeout
       room:returnToGeneralPile(all)
@@ -334,12 +335,10 @@ local function wangzhe_getlogic()
     if lord then
       room:setCurrent(lord)
       local lord_candidates = pick_unique(room, lord_pool, LORD_CANDIDATE_COUNT, {})
-      fill_unique(room, lord_candidates, all, LORD_CANDIDATE_COUNT, lord_candidates)
-
       local extra_candidates = pick_unique(room, non_lord_pool, LORD_EXTRA_COUNT, lord_candidates)
       local generals = table.connect(lord_candidates, extra_candidates)
-      if #generals < n then
-        send_no_enough_general_log(room, n, #generals)
+      if #lord_candidates < LORD_CANDIDATE_COUNT or #extra_candidates < LORD_EXTRA_COUNT or #generals < n then
+        send_no_enough_general_log(room, LORD_CANDIDATE_COUNT + LORD_EXTRA_COUNT, #generals)
         room.settings.generalTimeout = old_timeout
         room:returnToGeneralPile(all)
         return
@@ -426,9 +425,9 @@ local function rebels_all_dead(room)
 end
 
 rule:addEffect(fk.GameStart, {
-  priority = 10,
+  priority = 100,
   can_trigger = function(self, event, target, player)
-    return target == player and player.role == "lord"
+    return player.role == "lord"
   end,
   on_use = function(self, event, target, player)
     local room = player.room
@@ -440,6 +439,7 @@ rule:addEffect(fk.GameStart, {
     local choice = room:tableRandomPick(SIXIANG_MARKS)
     room:setPlayerMark(player, choice, 1)
     room:setTag("wangzhe_sixiang", choice)
+    room:setTag("wangzhe_sixiang_left", table.filter(SIXIANG_MARKS, function(mark) return mark ~= choice end))
     room:sendLog{
       type = "#wangzhe_sixiang_log",
       from = player.id,
@@ -459,13 +459,13 @@ rule:addEffect(fk.RoundStart, {
   on_refresh = function(self, event, target, player)
     local room = player.room
     room:setTag("wangzhe_aozhan_started", true)
-    room:setBanner("@[:]wangzhe_aozhan", 1)
+    room:setBanner("@[:]wangzhe_aozhan", "wangzhe_aozhan")
     room:sendLog{ type = "#wangzhe_aozhan_start", toast = true }
   end,
 })
 
 rule:addEffect(fk.TurnEnd, {
-  priority = -10,
+  priority = -1000,
   can_trigger = function(self, event, target, player)
     if target ~= player or player.dead then return false end
     local room = player.room
@@ -534,7 +534,7 @@ rule:addEffect(fk.BeforeGameOverJudge, {
 })
 
 rule:addEffect(fk.TurnEnd, {
-  priority = -20,
+  priority = -1100,
   can_trigger = function(self, event, target, player)
     return target == player and rebels_all_dead(player.room)
   end,
@@ -547,7 +547,7 @@ rule:addEffect(fk.TurnEnd, {
 
 rule:addEffect("invalidity", {
   invalidity_func = function(self, from, skill)
-    return from:getMark(AOZHAN_INVALID_MARK) > 0 and skill and skill.name ~= rule.name
+    return from and from:getMark(AOZHAN_INVALID_MARK) > 0 and is_player_general_skill(from, skill)
   end,
 })
 
@@ -679,7 +679,7 @@ local mode = fk.CreateGameMode{
   rule = RULE_SKILL,
   whitelist = function(self, pkg)
     return WZ_GENERALS_PACKAGES[pkg.name] == true or
-      pkg.name == "standard_cards" or pkg.name == "standard"
+      pkg.name == "standard_cards" or pkg.name == "standard" or pkg.name == "maneuvering"
   end,
   feasible = function(self, settings)
     return settings.playerNum == 6 or settings.playerNum == 8
