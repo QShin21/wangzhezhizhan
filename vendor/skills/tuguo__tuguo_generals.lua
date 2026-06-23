@@ -1,6 +1,56 @@
 local extension = Package("tuguo_generals")
 extension.extensionName = "tuguo"
 
+local function wzzz_tg_create_skill_with_effect(key, spec)
+  local skill = fk.CreateSkill(spec)
+  skill:addEffect(key, spec)
+  return skill
+end
+
+fk.CreateActiveSkill = fk.CreateActiveSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("active", spec)
+end
+
+fk.CreateTriggerSkill = fk.CreateTriggerSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect(spec.events, spec)
+end
+
+fk.CreateViewAsSkill = fk.CreateViewAsSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("viewas", spec)
+end
+
+fk.CreateDistanceSkill = fk.CreateDistanceSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("distance", spec)
+end
+
+fk.CreateMaxCardsSkill = fk.CreateMaxCardsSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("maxcards", spec)
+end
+
+fk.CreateTargetModSkill = fk.CreateTargetModSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("targetmod", spec)
+end
+
+fk.CreateFilterSkill = fk.CreateFilterSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("filter", spec)
+end
+
+fk.CreateProhibitSkill = fk.CreateProhibitSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("prohibit", spec)
+end
+
+fk.CreateInvaliditySkill = fk.CreateInvaliditySkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("invalidity", spec)
+end
+
+fk.CreateAttackRangeSkill = fk.CreateAttackRangeSkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("atkrange", spec)
+end
+
+fk.CreateVisibilitySkill = fk.CreateVisibilitySkill or function(spec)
+  return wzzz_tg_create_skill_with_effect("visibility", spec)
+end
+
 Fk:loadTranslationTable{
   ["tuguo"] = "图国篇", -- strengthening the country，但是好长
   ["tuguo_generals"] = "图国篇",
