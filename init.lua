@@ -35,7 +35,7 @@ if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__w
       ret.wangzhe_death_source = death_source
       ret.wangzhe_overview = data.wangzhe_overview
 
-      if seat == 0 and data.wangzhe_overview then
+      if data.wangzhe_overview then
         table.insert(extra, data.wangzhe_overview)
       end
       table.insert(extra, Fk:translate("wangzhe_score") .. "：" .. tostring(data.wangzhe_score))

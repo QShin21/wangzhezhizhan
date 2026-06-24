@@ -118,16 +118,17 @@ local function send_no_enough_general_log(room, required, actual)
   room:gameOver("")
 end
 
-local function has_sixiang_mark(player)
-  return table.find(SIXIANG_MARKS, function(mark) return player:getMark(mark) > 0 end) ~= nil
+local function has_sixiang_viewas_mark(player)
+  return player:getMark("@wangzhe_xuanwu") > 0 or
+    player:getMark("@wangzhe_qinglong") > 0 or
+    player:getMark("@wangzhe_baihu") > 0
 end
 
 local function sync_sixiang_skills(room, player)
-  if has_sixiang_mark(player) then
-    room:handleAddLoseSkills(player, SUZAKU_SKILL .. "|" .. SIXIANG_SKILL, nil, false, true)
-  else
-    room:handleAddLoseSkills(player, "-" .. SUZAKU_SKILL .. "|-" .. SIXIANG_SKILL, nil, false, true)
-  end
+  local changes = {}
+  table.insert(changes, player:getMark("@wangzhe_suzaku") > 0 and SUZAKU_SKILL or "-" .. SUZAKU_SKILL)
+  table.insert(changes, has_sixiang_viewas_mark(player) and SIXIANG_SKILL or "-" .. SIXIANG_SKILL)
+  room:handleAddLoseSkills(player, table.concat(changes, "|"), nil, false, true)
 end
 
 local function clear_sixiang_marks(room, player)
@@ -137,12 +138,61 @@ local function clear_sixiang_marks(room, player)
   sync_sixiang_skills(room, player)
 end
 
+local function normalize_random_pick(picked)
+  if picked == nil then return {} end
+  if type(picked) == "table" then return picked end
+  return { picked }
+end
+
+local function draw_sixiang_marks(room, source, n)
+  local pool = table.simpleClone(source or {})
+  if #pool == 0 or n <= 0 then return {} end
+  return normalize_random_pick(room:tableRandomPick(pool, math.min(n, #pool)))
+end
+
+local function grant_sixiang_mark(room, player, mark, log_type)
+  if not mark or mark == "" then return end
+  room:addPlayerMark(player, mark, 1)
+  room:sendLog{
+    type = log_type or "#wangzhe_sixiang_log",
+    from = player.id,
+    arg = mark,
+  }
+  sync_sixiang_skills(room, player)
+end
+
+local function remove_sixiang_mark_for_card(room, player, card)
+  if not card then return end
+  local mark = SIXIANG_CARD_MARK[card.trueName] or SIXIANG_CARD_MARK[card.name]
+  if mark and player:getMark(mark) > 0 then
+    room:setPlayerMark(player, mark, 0)
+    sync_sixiang_skills(room, player)
+  end
+end
+
 local function available_sixiang_cards(player)
   local choices = {}
-  if player:getMark("@wangzhe_xuanwu") > 0 then table.insert(choices, "peach") end
-  if player:getMark("@wangzhe_qinglong") > 0 then table.insert(choices, "nullification") end
-  if player:getMark("@wangzhe_baihu") > 0 then table.insertTable(choices, { "slash", "jink" }) end
+  local card_num = #player:getCardIds("he")
+  if player:getMark("@wangzhe_xuanwu") > 0 and card_num >= 1 then table.insert(choices, "peach") end
+  if player:getMark("@wangzhe_qinglong") > 0 and card_num >= 2 then table.insert(choices, "nullification") end
+  if player:getMark("@wangzhe_baihu") > 0 and card_num >= 1 then table.insertTable(choices, { "slash", "jink" }) end
+  if #choices > 0 and type(player.getViewAsCardNames) == "function" then
+    return player:getViewAsCardNames(SIXIANG_SKILL, choices)
+  end
   return choices
+end
+
+local function translate_general_key(key)
+  if not key or key == "" then return Fk:translate("wangzhe_none") end
+  local names = key:split("/")
+  return table.concat(table.map(names, function(name)
+    return Fk:translate(name)
+  end), "/")
+end
+
+local function translate_general_list(list)
+  if type(list) ~= "table" or #list == 0 then return Fk:translate("wangzhe_none") end
+  return table.concat(table.map(list, translate_general_key), "、")
 end
 
 local function is_lord_side(role)
@@ -203,7 +253,7 @@ local function collect_death_info(room)
   local death_source, kill_targets = {}, {}
   local renegade_rebel_kills = 0
 
-  room.logic:getEventsOfScope(GameEvent.Death, 1, function(e)
+  room.logic:getEventsOfScope(GameEvent.Death, 999, function(e)
     local death = e.data
     local victim, killer = death.who, death.killer
     if victim and victim.seat then
@@ -410,7 +460,7 @@ local function wangzhe_getlogic()
   return logic
 end
 
-local rule = fk.CreateSkill { name = RULE_SKILL }
+local rule = fk.CreateSkill { name = RULE_SKILL, mode_skill = true }
 
 local function rebels_all_dead(room)
   return not table.find(room.players, function(p)
@@ -455,17 +505,16 @@ rule:addEffect(fk.GameStart, {
     room:setTag("wangzhe_entered_lord_renegade_rebel", false)
     room:setTag("wangzhe_renegade_death_loyalist_dead", nil)
     room:setTag("wangzhe_aozhan_started", false)
+    room:setBanner("@[:]wangzhe_stage", "wangzhe_stage_normal")
 
-    local choice = room:tableRandomPick(SIXIANG_MARKS)
-    room:setPlayerMark(player, choice, 1)
+    for _, p in ipairs(room.players) do
+      clear_sixiang_marks(room, p)
+    end
+
+    local choice = draw_sixiang_marks(room, SIXIANG_MARKS, 1)[1]
+    grant_sixiang_mark(room, player, choice)
     room:setTag("wangzhe_sixiang", choice)
     room:setTag("wangzhe_sixiang_left", table.filter(SIXIANG_MARKS, function(mark) return mark ~= choice end))
-    room:sendLog{
-      type = "#wangzhe_sixiang_log",
-      from = player.id,
-      arg = choice,
-    }
-    sync_sixiang_skills(room, player)
   end,
 })
 
@@ -479,7 +528,7 @@ rule:addEffect(fk.RoundStart, {
   on_refresh = function(self, event, target, player)
     local room = player.room
     room:setTag("wangzhe_aozhan_started", true)
-    room:setBanner("@[:]wangzhe_aozhan", "wangzhe_aozhan")
+    room:setBanner("@[:]wangzhe_stage", "wangzhe_stage_aozhan")
     room:sendLog{ type = "#wangzhe_aozhan_start", toast = true }
   end,
 })
@@ -571,22 +620,35 @@ rule:addEffect(fk.GameFinished, {
   on_refresh = function(self, event, target, player, winner)
     local room = player.room
     local summary = room:getBanner("GameSummary")
-    if type(summary) ~= "table" then return end
+    local has_summary = type(summary) == "table"
 
     local death_source, kill_targets, renegade_rebel_kills = collect_death_info(room)
     local overview = wangzhe_result_overview(room, winner)
 
     for _, p in ipairs(room.players) do
-      local row = summary[p.seat]
-      if row then
-        row.wangzhe_score = calculate_wangzhe_score(room, p, winner, renegade_rebel_kills)
-        row.wangzhe_kill_targets = kill_targets[p.seat] or {}
-        row.wangzhe_death_source = death_source[p.seat] or ""
-        if p.seat == 1 then row.wangzhe_overview = overview end
+      local score = calculate_wangzhe_score(room, p, winner, renegade_rebel_kills)
+      if has_summary then
+        local row = summary[p.seat]
+        if row then
+          row.wangzhe_score = score
+          row.wangzhe_kill_targets = kill_targets[p.seat] or {}
+          row.wangzhe_death_source = death_source[p.seat] or ""
+          if p.seat == 1 then row.wangzhe_overview = overview end
+        end
       end
+
+      room:sendLog{
+        type = "#wangzhe_score_detail",
+        from = p.id,
+        arg = tostring(score),
+        arg2 = Fk:translate("wangzhe_kill_targets") .. "：" .. translate_general_list(kill_targets[p.seat]) ..
+          "；" .. Fk:translate("wangzhe_death_source") .. "：" .. translate_general_key(death_source[p.seat]),
+      }
     end
 
-    room:setBanner("GameSummary", summary)
+    if has_summary then
+      room:setBanner("GameSummary", summary)
+    end
     room:sendLog{
       type = "#wangzhe_score_overview",
       arg = overview,
@@ -666,11 +728,7 @@ sixiang:addEffect("viewas", {
     return card
   end,
   before_use = function(self, player, use)
-    local mark = SIXIANG_CARD_MARK[use.card.trueName] or SIXIANG_CARD_MARK[use.card.name]
-    if mark then
-      player.room:setPlayerMark(player, mark, 0)
-      sync_sixiang_skills(player.room, player)
-    end
+    remove_sixiang_mark_for_card(player.room, player, use.card)
   end,
   enabled_at_play = function(self, player)
     return #available_sixiang_cards(player) > 0
@@ -679,7 +737,17 @@ sixiang:addEffect("viewas", {
     return #available_sixiang_cards(player) > 0
   end,
   enabled_at_nullification = function(self, player)
-    return player:getMark("@wangzhe_qinglong") > 0
+    return player:getMark("@wangzhe_qinglong") > 0 and #player:getCardIds("he") >= 2
+  end,
+})
+
+sixiang:addEffect(fk.CardResponding, {
+  can_refresh = function(self, event, target, player, data)
+    return target == player and data.card and
+      (data.card.skillName == sixiang.name or table.contains(data.card.skillNames or {}, sixiang.name))
+  end,
+  on_refresh = function(self, event, target, player, data)
+    remove_sixiang_mark_for_card(player.room, player, data.card)
   end,
 })
 
