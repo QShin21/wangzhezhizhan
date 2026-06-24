@@ -62,10 +62,10 @@
         "destination": "image/generals/wzzz_lord__liuxie.jpg"
       },
       {
-        "code_name": "wzzz__sp_caoren",
+        "code_name": "wzzz_sp__sp_caoren",
         "source_repo": "sp",
         "source_path": "image/generals/starsp__caoren.jpg",
-        "destination": "image/generals/wzzz__sp_caoren.jpg"
+        "destination": "image/generals/wzzz_sp__sp_caoren.jpg"
       },
       {
         "code_name": "wzzz__luzhi",
@@ -200,10 +200,10 @@
         "destination": "image/generals/wzzz__wangji.jpg"
       },
       {
-        "code_name": "wzzz__sp_jiangwei",
+        "code_name": "wzzz_sp__sp_jiangwei",
         "source_repo": "sp",
         "source_path": "image/generals/jsp__jiangwei.jpg",
-        "destination": "image/generals/wzzz__sp_jiangwei.jpg"
+        "destination": "image/generals/wzzz_sp__sp_jiangwei.jpg"
       },
       {
         "code_name": "wzzz__zhonghui",
@@ -447,10 +447,10 @@
         "destination": "image/generals/wzzz__zhugejin.jpg"
       },
       {
-        "code_name": "wzzz__sp_pangtong",
+        "code_name": "wzzz_sp__sp_pangtong",
         "source_repo": "sp",
         "source_path": "image/generals/starsp__pangtong.jpg",
-        "destination": "image/generals/wzzz__sp_pangtong.jpg"
+        "destination": "image/generals/wzzz_sp__sp_pangtong.jpg"
       },
       {
         "code_name": "wzzz__bulianshi",
@@ -621,10 +621,10 @@
         "destination": "image/generals/wzzz__gongsunyuan.jpg"
       },
       {
-        "code_name": "wzzz__sp_caiwenji",
+        "code_name": "wzzz_sp__sp_caiwenji",
         "source_repo": "sp",
         "source_path": "image/generals/sp__caiwenji.jpg",
-        "destination": "image/generals/wzzz__sp_caiwenji.jpg"
+        "destination": "image/generals/wzzz_sp__sp_caiwenji.jpg"
       },
       {
         "code_name": "wzzz__yujin",
@@ -669,10 +669,10 @@
         "destination": "image/generals/wzzz__jushou.jpg"
       },
       {
-        "code_name": "wzzz__sp_sunce",
+        "code_name": "wzzz_sp__sp_sunce",
         "source_repo": "ol",
         "source_path": "image/generals/ol_sp__sunce.jpg",
-        "destination": "image/generals/wzzz__sp_sunce.jpg"
+        "destination": "image/generals/wzzz_sp__sp_sunce.jpg"
       },
       {
         "code_name": "wzzz__lvbu",
@@ -693,10 +693,10 @@
         "destination": "image/generals/wzzz__diaochan.jpg"
       },
       {
-        "code_name": "wzzz__sp_machao",
+        "code_name": "wzzz_sp__sp_machao",
         "source_repo": "sp",
         "source_path": "image/generals/sp__machao.jpg",
-        "destination": "image/generals/wzzz__sp_machao.jpg"
+        "destination": "image/generals/wzzz_sp__sp_machao.jpg"
       },
       {
         "code_name": "wzzz__pangdegong",
@@ -717,10 +717,10 @@
         "destination": "image/generals/wzzz__gaolan.jpg"
       },
       {
-        "code_name": "wzzz__sp_zhaoyun",
+        "code_name": "wzzz_sp__sp_zhaoyun",
         "source_repo": "sp",
         "source_path": "image/generals/jsp__zhaoyun.jpg",
-        "destination": "image/generals/wzzz__sp_zhaoyun.jpg"
+        "destination": "image/generals/wzzz_sp__sp_zhaoyun.jpg"
       },
       {
         "code_name": "wzzz__lijue",
@@ -888,7 +888,7 @@
       {
         "source_repo": "ol",
         "source_path": "audio/death/ol_sp__caoren.mp3",
-        "destination": "audio/death/wzzz__sp_caoren.mp3"
+        "destination": "audio/death/wzzz_sp__sp_caoren.mp3"
       },
       {
         "source_repo": "overseas",
@@ -1003,7 +1003,7 @@
       {
         "source_repo": "sp",
         "source_path": "audio/death/jsp__jiangwei.mp3",
-        "destination": "audio/death/wzzz__sp_jiangwei.mp3"
+        "destination": "audio/death/wzzz_sp__sp_jiangwei.mp3"
       },
       {
         "source_repo": "offline",
@@ -1203,7 +1203,7 @@
       {
         "source_repo": "sp",
         "source_path": "audio/death/starsp__pangtong.mp3",
-        "destination": "audio/death/wzzz__sp_pangtong.mp3"
+        "destination": "audio/death/wzzz_sp__sp_pangtong.mp3"
       },
       {
         "source_repo": "yj",
@@ -1348,7 +1348,7 @@
       {
         "source_repo": "sp",
         "source_path": "audio/death/sp__caiwenji.mp3",
-        "destination": "audio/death/wzzz__sp_caiwenji.mp3"
+        "destination": "audio/death/wzzz_sp__sp_caiwenji.mp3"
       },
       {
         "source_repo": "offline",
@@ -1383,7 +1383,7 @@
       {
         "source_repo": "ol",
         "source_path": "audio/death/ol_sp__sunce.mp3",
-        "destination": "audio/death/wzzz__sp_sunce.mp3"
+        "destination": "audio/death/wzzz_sp__sp_sunce.mp3"
       },
       {
         "source_repo": "gamemode",
@@ -1403,7 +1403,7 @@
       {
         "source_repo": "sp",
         "source_path": "audio/death/sp__machao.mp3",
-        "destination": "audio/death/wzzz__sp_machao.mp3"
+        "destination": "audio/death/wzzz_sp__sp_machao.mp3"
       },
       {
         "source_repo": "mobile",
@@ -1423,7 +1423,7 @@
       {
         "source_repo": "sp",
         "source_path": "audio/death/starsp__zhaoyun.mp3",
-        "destination": "audio/death/wzzz__sp_zhaoyun.mp3"
+        "destination": "audio/death/wzzz_sp__sp_zhaoyun.mp3"
       },
       {
         "source_repo": "tenyear",

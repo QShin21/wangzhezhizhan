@@ -325,8 +325,8 @@
   },
   {
     "number": 11,
-    "name": "SP 曹仁",
-    "code_name": "wzzz__sp_caoren",
+    "name": "曹仁",
+    "code_name": "wzzz_sp__sp_caoren",
     "metadata": "魏势力，4 体力，男性",
     "package": "wzzz_generals",
     "skills": [
@@ -814,8 +814,8 @@
   },
   {
     "number": 34,
-    "name": "SP 姜维",
-    "code_name": "wzzz__sp_jiangwei",
+    "name": "姜维",
+    "code_name": "wzzz_sp__sp_jiangwei",
     "metadata": "魏势力，4 体力，男性",
     "package": "wzzz_generals",
     "skills": [
@@ -1795,8 +1795,8 @@
   },
   {
     "number": 75,
-    "name": "SP 庞统",
-    "code_name": "wzzz__sp_pangtong",
+    "name": "庞统",
+    "code_name": "wzzz_sp__sp_pangtong",
     "metadata": "吴势力，3 体力，男性",
     "package": "wzzz_generals",
     "skills": [
@@ -2446,8 +2446,8 @@
   },
   {
     "number": 104,
-    "name": "SP 蔡文姬",
-    "code_name": "wzzz__sp_caiwenji",
+    "name": "蔡文姬",
+    "code_name": "wzzz_sp__sp_caiwenji",
     "metadata": "群势力，3 体力，女性",
     "package": "wzzz_generals",
     "skills": [
@@ -2632,8 +2632,8 @@
   },
   {
     "number": 112,
-    "name": "SP 孙策",
-    "code_name": "wzzz__sp_sunce",
+    "name": "孙策",
+    "code_name": "wzzz_sp__sp_sunce",
     "metadata": "群势力，4 体力，男性",
     "package": "wzzz_generals",
     "skills": [
@@ -2722,8 +2722,8 @@
   },
   {
     "number": 116,
-    "name": "SP 马超",
-    "code_name": "wzzz__sp_machao",
+    "name": "马超",
+    "code_name": "wzzz_sp__sp_machao",
     "metadata": "群势力，4 体力，男性",
     "package": "wzzz_generals",
     "skills": [
@@ -2800,8 +2800,8 @@
   },
   {
     "number": 120,
-    "name": "SP 赵云",
-    "code_name": "wzzz__sp_zhaoyun",
+    "name": "赵云",
+    "code_name": "wzzz_sp__sp_zhaoyun",
     "metadata": "群势力，3 体力，男性",
     "package": "wzzz_generals",
     "skills": [

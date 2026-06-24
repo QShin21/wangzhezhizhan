@@ -6,11 +6,11 @@ Fk:loadTranslationTable {
   ["wzzz_generals"] = "非主公",
 }
 
--- 11. SP 曹仁
-local g11 = General:new(extension, "wzzz__sp_caoren", "wei", 4)
+-- 11. 曹仁
+local g11 = General:new(extension, "wzzz_sp__sp_caoren", "wei", 4)
 g11:addSkills { "wzzz_v__weikui", "wzzz_v__lizhan" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_caoren"] = "SP 曹仁",
+  ["wzzz_sp__sp_caoren"] = "曹仁",
 }
 
 -- 12. 鲁芝
@@ -169,12 +169,12 @@ Fk:loadTranslationTable {
   ["wzzz__wangji"] = "王基",
 }
 
--- 34. SP 姜维
-local g34 = General:new(extension, "wzzz__sp_jiangwei", "wei", 4)
+-- 34. 姜维
+local g34 = General:new(extension, "wzzz_sp__sp_jiangwei", "wei", 4)
 g34:addSkills { "wzzz_v__kunfenEx", "wzzz_v__fengliang" }
 g34:addRelatedSkills { "wzzz_v__m_ex__tiaoxin" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_jiangwei"] = "SP 姜维",
+  ["wzzz_sp__sp_jiangwei"] = "姜维",
 }
 
 -- 35. 钟会
@@ -464,11 +464,11 @@ Fk:loadTranslationTable {
   ["wzzz__zhugejin"] = "诸葛瑾",
 }
 
--- 75. SP 庞统
-local g75 = General:new(extension, "wzzz__sp_pangtong", "wu", 3)
+-- 75. 庞统
+local g75 = General:new(extension, "wzzz_sp__sp_pangtong", "wu", 3)
 g75:addSkills { "wzzz_v__guolun", "wzzz_v__zhanji", "wzzz_v__qshm__songsang" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_pangtong"] = "SP 庞统",
+  ["wzzz_sp__sp_pangtong"] = "庞统",
 }
 
 -- 76. 步练师
@@ -668,11 +668,11 @@ Fk:loadTranslationTable {
   ["wzzz__gongsunyuan"] = "公孙渊",
 }
 
--- 104. SP 蔡文姬
-local g104 = General:new(extension, "wzzz__sp_caiwenji", "qun", 3, 3, General.Female)
+-- 104. 蔡文姬
+local g104 = General:new(extension, "wzzz_sp__sp_caiwenji", "qun", 3, 3, General.Female)
 g104:addSkills { "wzzz__beijia", "wzzz_v__mozhi", "wzzz_v__chenqing", "wzzz_v__duanchang" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_caiwenji"] = "SP 蔡文姬",
+  ["wzzz_sp__sp_caiwenji"] = "蔡文姬",
 }
 
 -- 105. 于禁
@@ -725,11 +725,11 @@ Fk:loadTranslationTable {
   ["wzzz__jushou"] = "沮授",
 }
 
--- 112. SP 孙策
-local g112 = General:new(extension, "wzzz__sp_sunce", "qun", 4)
+-- 112. 孙策
+local g112 = General:new(extension, "wzzz_sp__sp_sunce", "qun", 4)
 g112:addSkills { "wzzz_v__liantao" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_sunce"] = "SP 孙策",
+  ["wzzz_sp__sp_sunce"] = "孙策",
 }
 
 -- 113. 吕布
@@ -753,11 +753,11 @@ Fk:loadTranslationTable {
   ["wzzz__diaochan"] = "貂蝉",
 }
 
--- 116. SP 马超
-local g116 = General:new(extension, "wzzz__sp_machao", "qun", 4)
+-- 116. 马超
+local g116 = General:new(extension, "wzzz_sp__sp_machao", "qun", 4)
 g116:addSkills { "wzzz_v__ol__zhuiji", "wzzz_v__ol__shichou" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_machao"] = "SP 马超",
+  ["wzzz_sp__sp_machao"] = "马超",
 }
 
 -- 117. 庞德公
@@ -781,12 +781,12 @@ Fk:loadTranslationTable {
   ["wzzz__gaolan"] = "高览",
 }
 
--- 120. SP 赵云
-local g120 = General:new(extension, "wzzz__sp_zhaoyun", "qun", 3)
+-- 120. 赵云
+local g120 = General:new(extension, "wzzz_sp__sp_zhaoyun", "qun", 3)
 g120:addSkills { "wzzz_v__ol_ex__longdan", "wzzz_v__chongzhen", "wzzz_v__jiuzhu" }
 g120:addRelatedSkills { "wzzz_v__yajiao" }
 Fk:loadTranslationTable {
-  ["wzzz__sp_zhaoyun"] = "SP 赵云",
+  ["wzzz_sp__sp_zhaoyun"] = "赵云",
 }
 
 -- 121. 李傕

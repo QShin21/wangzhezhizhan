@@ -465,7 +465,7 @@
   },
   {
     "general_number": 11,
-    "general": "SP 曹仁",
+    "general": "曹仁",
     "skill": "伪溃",
     "implementation": "reference",
     "selected_id": "weikui",
@@ -477,7 +477,7 @@
   },
   {
     "general_number": 11,
-    "general": "SP 曹仁",
+    "general": "曹仁",
     "skill": "励战",
     "implementation": "reference",
     "selected_id": "lizhan",
@@ -1029,7 +1029,7 @@
   },
   {
     "general_number": 34,
-    "general": "SP 姜维",
+    "general": "姜维",
     "skill": "困奋",
     "implementation": "reference",
     "selected_id": "kunfenEx",
@@ -1041,7 +1041,7 @@
   },
   {
     "general_number": 34,
-    "general": "SP 姜维",
+    "general": "姜维",
     "skill": "逢亮",
     "implementation": "reference",
     "selected_id": "fengliang",
@@ -1053,7 +1053,7 @@
   },
   {
     "general_number": 34,
-    "general": "SP 姜维",
+    "general": "姜维",
     "skill": "挑衅",
     "implementation": "reference",
     "selected_id": "m_ex__tiaoxin",
@@ -2248,7 +2248,7 @@
   },
   {
     "general_number": 75,
-    "general": "SP 庞统",
+    "general": "庞统",
     "skill": "过论",
     "implementation": "reference",
     "selected_id": "guolun",
@@ -2260,7 +2260,7 @@
   },
   {
     "general_number": 75,
-    "general": "SP 庞统",
+    "general": "庞统",
     "skill": "展骥",
     "implementation": "reference",
     "selected_id": "zhanji",
@@ -2272,7 +2272,7 @@
   },
   {
     "general_number": 75,
-    "general": "SP 庞统",
+    "general": "庞统",
     "skill": "送丧",
     "implementation": "reference",
     "selected_id": "qshm__songsang",
@@ -3023,7 +3023,7 @@
   },
   {
     "general_number": 104,
-    "general": "SP 蔡文姬",
+    "general": "蔡文姬",
     "skill": "悲笳",
     "implementation": "custom",
     "selected_id": "wzzz__beijia",
@@ -3033,7 +3033,7 @@
   },
   {
     "general_number": 104,
-    "general": "SP 蔡文姬",
+    "general": "蔡文姬",
     "skill": "默识",
     "implementation": "reference",
     "selected_id": "mozhi",
@@ -3045,7 +3045,7 @@
   },
   {
     "general_number": 104,
-    "general": "SP 蔡文姬",
+    "general": "蔡文姬",
     "skill": "陈情",
     "implementation": "reference",
     "selected_id": "chenqing",
@@ -3057,7 +3057,7 @@
   },
   {
     "general_number": 104,
-    "general": "SP 蔡文姬",
+    "general": "蔡文姬",
     "skill": "断肠",
     "implementation": "reference",
     "selected_id": "duanchang",
@@ -3250,7 +3250,7 @@
   },
   {
     "general_number": 112,
-    "general": "SP 孙策",
+    "general": "孙策",
     "skill": "连讨",
     "implementation": "reference",
     "selected_id": "liantao",
@@ -3358,7 +3358,7 @@
   },
   {
     "general_number": 116,
-    "general": "SP 马超",
+    "general": "马超",
     "skill": "追击",
     "implementation": "reference",
     "selected_id": "ol__zhuiji",
@@ -3370,7 +3370,7 @@
   },
   {
     "general_number": 116,
-    "general": "SP 马超",
+    "general": "马超",
     "skill": "誓仇",
     "implementation": "reference",
     "selected_id": "ol__shichou",
@@ -3442,7 +3442,7 @@
   },
   {
     "general_number": 120,
-    "general": "SP 赵云",
+    "general": "赵云",
     "skill": "龙胆",
     "implementation": "reference",
     "selected_id": "ol_ex__longdan",
@@ -3454,7 +3454,7 @@
   },
   {
     "general_number": 120,
-    "general": "SP 赵云",
+    "general": "赵云",
     "skill": "冲阵",
     "implementation": "reference",
     "selected_id": "chongzhen",
@@ -3466,7 +3466,7 @@
   },
   {
     "general_number": 120,
-    "general": "SP 赵云",
+    "general": "赵云",
     "skill": "救主",
     "implementation": "reference",
     "selected_id": "jiuzhu",
@@ -3478,7 +3478,7 @@
   },
   {
     "general_number": 120,
-    "general": "SP 赵云",
+    "general": "赵云",
     "skill": "涯角",
     "implementation": "reference",
     "selected_id": "yajiao",

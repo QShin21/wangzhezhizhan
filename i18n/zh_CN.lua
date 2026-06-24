@@ -2,6 +2,7 @@ return {
   ["wangzhezhizhan"] = "王者之战",
   ["wzzz_lord"] = "王主",
   ["wzzz"] = "王战",
+  ["wzzz_sp"] = "王战SP",
   ["wangzhe_role_mode"] = "王者之战身份局",
   [":wangzhe_role_mode"] = "三国杀王者之战身份模式：仅支持6人（1主1忠1内3反）或8人（1主2忠1内4反）。选将固定60秒，使用王者之战武将包；游戏开始时主公获得四象标记；指定轮次后进入鏖战。",
   ["#wangzhe_role_rule&"] = "王者之战规则",
