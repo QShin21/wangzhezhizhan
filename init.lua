@@ -159,8 +159,8 @@ if type(Entitle) == "function" and not _G.__wangzhe_old_global_entitle then
 end
 patch_global_summary_helpers()
 
-local ok, ltk_util = pcall(require, "ltk.client.util")
-if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__wangzhe_summary_patched then
+local function patch_ltk_summary_util(ltk_util)
+  if not ltk_util or type(ltk_util.entitle) ~= "function" or ltk_util.__wangzhe_summary_patched then return end
   local old_entitle = ltk_util.entitle
 
   if type(ltk_util.findMosts) == "function" then
@@ -177,6 +177,14 @@ if ok and ltk_util and type(ltk_util.entitle) == "function" and not ltk_util.__w
   ltk_util.entitle = patch_wangzhe_entitle(old_entitle)
 
   ltk_util.__wangzhe_summary_patched = true
+end
+
+for _, util_module in ipairs({
+  "packages.freekill-core.ltk.client.util",
+  "ltk.client.util",
+}) do
+  local ok, ltk_util = pcall(require, util_module)
+  if ok then patch_ltk_summary_util(ltk_util) end
 end
 
 return {
