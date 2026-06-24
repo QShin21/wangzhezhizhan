@@ -562,10 +562,10 @@ end
 
 rule:addEffect(fk.GameStart, {
   priority = 100,
-  can_trigger = function(self, event, target, player)
+  can_refresh = function(self, event, target, player)
     return player.role == "lord"
   end,
-  on_use = function(self, event, target, player)
+  on_refresh = function(self, event, target, player)
     local room = player.room
     room:setTag("wangzhe_entered_duel", false)
     room:setTag("wangzhe_entered_lord_renegade_rebel", false)
