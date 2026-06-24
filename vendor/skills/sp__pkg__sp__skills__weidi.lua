@@ -15,7 +15,23 @@ Fk:loadTranslationTable{
   ["$wzzz_v__weidi2"] = "我才是皇帝！",
 }
 
-local SIXIANG_SKILLS = "wangzhe_suzaku_skill|wangzhe_sixiang_skill"
+local LEGACY_SIXIANG_SKILL = "wangzhe_sixiang_skill"
+
+local SIXIANG_MARK_SKILL = {
+  ["@wangzhe_suzaku"] = "wangzhe_suzaku_skill",
+  ["@wangzhe_xuanwu"] = "wangzhe_xuanwu_skill",
+  ["@wangzhe_qinglong"] = "wangzhe_qinglong_skill",
+  ["@wangzhe_baihu"] = "wangzhe_baihu_skill",
+}
+
+local function sync_sixiang_skills(room, player)
+  local changes = {}
+  for mark, skill_name in pairs(SIXIANG_MARK_SKILL) do
+    table.insert(changes, player:getMark(mark) > 0 and skill_name or "-" .. skill_name)
+  end
+  table.insert(changes, "-" .. LEGACY_SIXIANG_SKILL)
+  room:handleAddLoseSkills(player, table.concat(changes, "|"), nil, false, true)
+end
 
 local function get_lord_skills(room, player)
   local skills = {}
@@ -45,7 +61,7 @@ local function take_sixiang_marks(room, player, n)
     }
   end
   room:setTag("wangzhe_sixiang_left", marks)
-  room:handleAddLoseSkills(player, SIXIANG_SKILLS, nil, false, true)
+  sync_sixiang_skills(room, player)
 end
 
 local spec = {

@@ -2,6 +2,8 @@ local extension = Package:new("wangzhe_mode", Package.SpecialPack)
 
 local wangzhe_role = require "packages.wangzhezhizhan.pkg.gamemodes.wangzhe_role"
 
+Fk:loadTranslationTable(require "packages.wangzhezhizhan.i18n.zh_CN")
+
 Fk:loadTranslationTable{
   ["wangzhe_mode"] = "王者之战模式",
   ["wangzhe_role_mode"] = "王者之战身份局",

@@ -10,7 +10,10 @@ local LORD_EXTRA_COUNT = 3
 
 local RULE_SKILL = "#wangzhe_role_rule&"
 local SUZAKU_SKILL = "wangzhe_suzaku_skill"
-local SIXIANG_SKILL = "wangzhe_sixiang_skill"
+local XUANWU_SKILL = "wangzhe_xuanwu_skill"
+local QINGLONG_SKILL = "wangzhe_qinglong_skill"
+local BAIHU_SKILL = "wangzhe_baihu_skill"
+local LEGACY_SIXIANG_SKILL = "wangzhe_sixiang_skill"
 local AOZHAN_INVALID_MARK = "@@wangzhe_aozhan_invalid"
 
 local SIXIANG_MARKS = {
@@ -25,6 +28,13 @@ local SIXIANG_CARD_MARK = {
   nullification = "@wangzhe_qinglong",
   slash = "@wangzhe_baihu",
   jink = "@wangzhe_baihu",
+}
+
+local SIXIANG_MARK_SKILL = {
+  ["@wangzhe_suzaku"] = SUZAKU_SKILL,
+  ["@wangzhe_xuanwu"] = XUANWU_SKILL,
+  ["@wangzhe_qinglong"] = QINGLONG_SKILL,
+  ["@wangzhe_baihu"] = BAIHU_SKILL,
 }
 
 local function same_title_general(a, b)
@@ -118,16 +128,12 @@ local function send_no_enough_general_log(room, required, actual)
   room:gameOver("")
 end
 
-local function has_sixiang_viewas_mark(player)
-  return player:getMark("@wangzhe_xuanwu") > 0 or
-    player:getMark("@wangzhe_qinglong") > 0 or
-    player:getMark("@wangzhe_baihu") > 0
-end
-
 local function sync_sixiang_skills(room, player)
   local changes = {}
-  table.insert(changes, player:getMark("@wangzhe_suzaku") > 0 and SUZAKU_SKILL or "-" .. SUZAKU_SKILL)
-  table.insert(changes, has_sixiang_viewas_mark(player) and SIXIANG_SKILL or "-" .. SIXIANG_SKILL)
+  for mark, skill_name in pairs(SIXIANG_MARK_SKILL) do
+    table.insert(changes, player:getMark(mark) > 0 and skill_name or "-" .. skill_name)
+  end
+  table.insert(changes, "-" .. LEGACY_SIXIANG_SKILL)
   room:handleAddLoseSkills(player, table.concat(changes, "|"), nil, false, true)
 end
 
@@ -170,16 +176,11 @@ local function remove_sixiang_mark_for_card(room, player, card)
   end
 end
 
-local function available_sixiang_cards(player)
-  local choices = {}
-  local card_num = #player:getCardIds("he")
-  if player:getMark("@wangzhe_xuanwu") > 0 and card_num >= 1 then table.insert(choices, "peach") end
-  if player:getMark("@wangzhe_qinglong") > 0 and card_num >= 2 then table.insert(choices, "nullification") end
-  if player:getMark("@wangzhe_baihu") > 0 and card_num >= 1 then table.insertTable(choices, { "slash", "jink" }) end
-  if #choices > 0 and type(player.getViewAsCardNames) == "function" then
-    return player:getViewAsCardNames(SIXIANG_SKILL, choices)
+local function available_sixiang_card_names(player, skill_name, names)
+  if type(player.getViewAsCardNames) == "function" then
+    return player:getViewAsCardNames(skill_name, names)
   end
-  return choices
+  return names
 end
 
 local function translate_general_key(key)
@@ -716,64 +717,75 @@ suzaku:addEffect("active", {
   end,
 })
 
-local sixiang = fk.CreateSkill { name = SIXIANG_SKILL }
+local function create_sixiang_viewas_skill(skill_name, mark, card_names, card_num, prompt)
+  local skill = fk.CreateSkill { name = skill_name }
 
-sixiang:addEffect("viewas", {
-  pattern = "peach,nullification,slash,jink",
-  prompt = "#wangzhe_sixiang_viewas",
-  include_equip = true,
-  interaction = function(self, player)
-    local choices = available_sixiang_cards(player)
-    if #choices == 0 then return end
-    return UI.CardNameBox {
-      choices = choices,
-      all_choices = { "peach", "nullification", "slash", "jink" },
-    }
-  end,
-  filter_pattern = function(self, player, card_name)
-    local name = self.interaction and self.interaction.data or card_name
-    if name == "nullification" then
-      return { min_num = 2, max_num = 2, pattern = "." }
-    elseif SIXIANG_CARD_MARK[name] then
-      return { min_num = 1, max_num = 1, pattern = "." }
-    end
-    return nil
-  end,
-  view_as = function(self, player, cards)
-    local name = self.interaction and self.interaction.data
-    if not name or not SIXIANG_CARD_MARK[name] then return end
-    if name == "nullification" and #cards ~= 2 then return end
-    if name ~= "nullification" and #cards ~= 1 then return end
-    if player:getMark(SIXIANG_CARD_MARK[name]) <= 0 then return end
+  skill:addEffect("viewas", {
+    pattern = table.concat(card_names, ","),
+    prompt = prompt,
+    include_equip = true,
+    interaction = function(self, player)
+      if #card_names == 1 then return end
+      local choices = available_sixiang_card_names(player, skill_name, card_names)
+      if #choices == 0 then return end
+      return UI.CardNameBox {
+        choices = choices,
+        all_choices = card_names,
+      }
+    end,
+    filter_pattern = {
+      min_num = card_num,
+      max_num = card_num,
+      pattern = ".",
+    },
+    view_as = function(self, player, cards)
+      local name = #card_names == 1 and card_names[1] or (self.interaction and self.interaction.data)
+      if not name or not table.contains(card_names, name) or #cards ~= card_num then return end
+      if player:getMark(mark) <= 0 then return end
 
-    local card = Fk:cloneCard(name)
-    card.skillName = sixiang.name
-    card:addSubcards(cards)
-    return card
-  end,
-  before_use = function(self, player, use)
-    remove_sixiang_mark_for_card(player.room, player, use.card)
-  end,
-  enabled_at_play = function(self, player)
-    return #available_sixiang_cards(player) > 0
-  end,
-  enabled_at_response = function(self, player)
-    return #available_sixiang_cards(player) > 0
-  end,
-  enabled_at_nullification = function(self, player)
-    return player:getMark("@wangzhe_qinglong") > 0 and #player:getCardIds("he") >= 2
-  end,
-})
+      local card = Fk:cloneCard(name)
+      card.skillName = skill.name
+      card:addSubcards(cards)
+      return card
+    end,
+    before_use = function(self, player, use)
+      remove_sixiang_mark_for_card(player.room, player, use.card)
+    end,
+    enabled_at_play = function(self, player)
+      return player:getMark(mark) > 0 and #player:getCardIds("he") >= card_num and
+        #available_sixiang_card_names(player, skill_name, card_names) > 0
+    end,
+    enabled_at_response = function(self, player)
+      return player:getMark(mark) > 0 and #player:getCardIds("he") >= card_num and
+        #available_sixiang_card_names(player, skill_name, card_names) > 0
+    end,
+    enabled_at_nullification = function(self, player)
+      return skill_name == QINGLONG_SKILL and player:getMark(mark) > 0 and #player:getCardIds("he") >= card_num
+    end,
+  })
 
-sixiang:addEffect(fk.CardResponding, {
-  can_refresh = function(self, event, target, player, data)
-    return target == player and data.card and
-      (data.card.skillName == sixiang.name or table.contains(data.card.skillNames or {}, sixiang.name))
-  end,
-  on_refresh = function(self, event, target, player, data)
-    remove_sixiang_mark_for_card(player.room, player, data.card)
-  end,
-})
+  skill:addEffect(fk.CardResponding, {
+    can_refresh = function(self, event, target, player, data)
+      return target == player and data.card and
+        (data.card.skillName == skill.name or table.contains(data.card.skillNames or {}, skill.name))
+    end,
+    on_refresh = function(self, event, target, player, data)
+      remove_sixiang_mark_for_card(player.room, player, data.card)
+    end,
+  })
+
+  return skill
+end
+
+local xuanwu = create_sixiang_viewas_skill(
+  XUANWU_SKILL, "@wangzhe_xuanwu", { "peach" }, 1, "#wangzhe_xuanwu_viewas"
+)
+local qinglong = create_sixiang_viewas_skill(
+  QINGLONG_SKILL, "@wangzhe_qinglong", { "nullification" }, 2, "#wangzhe_qinglong_viewas"
+)
+local baihu = create_sixiang_viewas_skill(
+  BAIHU_SKILL, "@wangzhe_baihu", { "slash", "jink" }, 1, "#wangzhe_baihu_viewas"
+)
 
 local mode = fk.CreateGameMode{
   name = "wangzhe_role_mode",
@@ -809,5 +821,5 @@ local mode = fk.CreateGameMode{
 
 return {
   mode = mode,
-  skills = { rule, suzaku, sixiang },
+  skills = { rule, suzaku, xuanwu, qinglong, baihu },
 }
