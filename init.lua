@@ -28,6 +28,42 @@ local function get_game_summary()
   return ClientInstance:getBanner("GameSummary")
 end
 
+local WANGZHE_RESULT_TITLE_KEYS = {
+  ["Game Win"] = true,
+  ["Game Lose"] = true,
+  ["Game Draw"] = true,
+}
+local wangzhe_pending_row_result_translations = 0
+
+local function wangzhe_overview_from_summary(summary)
+  if type(summary) ~= "table" then return nil end
+  for _, row in ipairs(summary) do
+    if is_wangzhe_summary_row(row) and row.wangzhe_overview and row.wangzhe_overview ~= "" then
+      return row.wangzhe_overview
+    end
+  end
+  return nil
+end
+
+local function mark_wangzhe_row_result_translation()
+  wangzhe_pending_row_result_translations = wangzhe_pending_row_result_translations + 1
+end
+
+local function reset_wangzhe_row_result_translations()
+  wangzhe_pending_row_result_translations = 0
+end
+
+local function translate_wangzhe_result_title(src)
+  if not WANGZHE_RESULT_TITLE_KEYS[src] then return nil end
+  local summary = get_game_summary()
+  if type(summary) ~= "table" or not is_wangzhe_summary_row(summary[1]) then return nil end
+  if wangzhe_pending_row_result_translations > 0 then
+    wangzhe_pending_row_result_translations = wangzhe_pending_row_result_translations - 1
+    return nil
+  end
+  return wangzhe_overview_from_summary(summary)
+end
+
 local function prepare_wangzhe_summary_rows(summary)
   if type(summary) ~= "table" then return false end
   local found = false
@@ -46,6 +82,7 @@ local function prepare_wangzhe_summary_rows(summary)
       row.kill = row.wangzhe_raw_kill
     end
   end
+  if found then reset_wangzhe_row_result_translations() end
   return found
 end
 
@@ -53,9 +90,9 @@ local function format_wangzhe_summary_rows(summary)
   if type(summary) ~= "table" then return end
   for _, row in ipairs(summary) do
     if is_wangzhe_summary_row(row) then
-      row.turn = translate_general_list(row.wangzhe_kill_targets)
+      row.turn = tostring(row.wangzhe_score)
       row.recover = translate_general_key(row.wangzhe_death_source)
-      row.damage = tostring(row.wangzhe_score)
+      row.damage = translate_general_list(row.wangzhe_kill_targets)
       row.damaged = ""
       row.kill = ""
     end
@@ -78,11 +115,12 @@ local function patch_wangzhe_entitle(old_entitle)
     local raw_data = raw_wangzhe_entitle_data(data)
     local ret = old_entitle(self, raw_data, seat, winner)
     if is_wangzhe_summary_row(data) then
+      mark_wangzhe_row_result_translation()
       ret.wangzhe_score = data.wangzhe_score
       ret.wangzhe_kill_targets = translate_general_list(data.wangzhe_kill_targets)
       ret.wangzhe_death_source = translate_general_key(data.wangzhe_death_source)
       ret.wangzhe_overview = data.wangzhe_overview
-      ret.honor = data.wangzhe_overview or ""
+      ret.honor = ""
     end
     return ret
   end
@@ -93,11 +131,12 @@ local function patch_wangzhe_global_entitle(old_entitle)
     local raw_data = raw_wangzhe_entitle_data(data)
     local ret = old_entitle(raw_data, seat, winner)
     if is_wangzhe_summary_row(data) then
+      mark_wangzhe_row_result_translation()
       ret.wangzhe_score = data.wangzhe_score
       ret.wangzhe_kill_targets = translate_general_list(data.wangzhe_kill_targets)
       ret.wangzhe_death_source = translate_general_key(data.wangzhe_death_source)
       ret.wangzhe_overview = data.wangzhe_overview
-      ret.honor = data.wangzhe_overview or ""
+      ret.honor = ""
     end
     return ret
   end
@@ -112,17 +151,21 @@ local function patch_summary_headers()
   if type(Fk.translate) ~= "function" or Fk.__wangzhe_summary_translate_patched then return end
   local old_translate = Fk.translate
   local header = {
-    Turn = "击杀对象",
+    Turn = "积分",
     Recover = "死亡来源",
-    Damage = "积分",
+    Damage = "击杀对象",
     Damaged = "",
     Kill = "",
-    Honor = "结算",
+    Honor = "",
   }
 
   function Fk:translate(src, lang)
     if self ~= Fk then
       return old_translate(Fk, self, src)
+    end
+    local result_title = translate_wangzhe_result_title(src)
+    if result_title then
+      return result_title
     end
     if header[src] ~= nil and wangzhe_summary_active() then
       return header[src]

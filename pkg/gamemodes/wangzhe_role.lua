@@ -370,9 +370,9 @@ local function apply_wangzhe_score_summary(room, winner, summary)
         row.wangzhe_kill_targets = kill_targets[p.seat] or {}
         row.wangzhe_death_source = death_source[p.seat] or ""
         row.wangzhe_mode = true
-        row.turn = translate_general_list(row.wangzhe_kill_targets)
+        row.turn = tostring(score)
         row.recover = translate_general_key(row.wangzhe_death_source)
-        row.damage = tostring(score)
+        row.damage = translate_general_list(row.wangzhe_kill_targets)
         row.damaged = ""
         row.kill = ""
         if p.seat == 1 then row.wangzhe_overview = overview end
