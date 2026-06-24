@@ -15,6 +15,7 @@ local QINGLONG_SKILL = "wangzhe_qinglong_skill"
 local BAIHU_SKILL = "wangzhe_baihu_skill"
 local LEGACY_SIXIANG_SKILL = "wangzhe_sixiang_skill"
 local AOZHAN_INVALID_MARK = "@@wangzhe_aozhan_invalid"
+local WANGZHE_BLANK_COLUMN = "\194\160"
 
 local SIXIANG_MARKS = {
   "@wangzhe_suzaku",
@@ -373,8 +374,8 @@ local function apply_wangzhe_score_summary(room, winner, summary)
         row.turn = tostring(score)
         row.recover = translate_general_key(row.wangzhe_death_source)
         row.damage = translate_general_list(row.wangzhe_kill_targets)
-        row.damaged = ""
-        row.kill = ""
+        row.damaged = WANGZHE_BLANK_COLUMN
+        row.kill = WANGZHE_BLANK_COLUMN
         if p.seat == 1 then row.wangzhe_overview = overview end
       end
     end

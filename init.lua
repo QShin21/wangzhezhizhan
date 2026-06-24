@@ -33,6 +33,7 @@ local WANGZHE_RESULT_TITLE_KEYS = {
   ["Game Lose"] = true,
   ["Game Draw"] = true,
 }
+local WANGZHE_BLANK_COLUMN = "\194\160"
 local wangzhe_pending_row_result_translations = 0
 
 local function wangzhe_overview_from_summary(summary)
@@ -93,8 +94,8 @@ local function format_wangzhe_summary_rows(summary)
       row.turn = tostring(row.wangzhe_score)
       row.recover = translate_general_key(row.wangzhe_death_source)
       row.damage = translate_general_list(row.wangzhe_kill_targets)
-      row.damaged = ""
-      row.kill = ""
+      row.damaged = WANGZHE_BLANK_COLUMN
+      row.kill = WANGZHE_BLANK_COLUMN
     end
   end
 end
@@ -120,7 +121,7 @@ local function patch_wangzhe_entitle(old_entitle)
       ret.wangzhe_kill_targets = translate_general_list(data.wangzhe_kill_targets)
       ret.wangzhe_death_source = translate_general_key(data.wangzhe_death_source)
       ret.wangzhe_overview = data.wangzhe_overview
-      ret.honor = ""
+      ret.honor = WANGZHE_BLANK_COLUMN
     end
     return ret
   end
@@ -136,7 +137,7 @@ local function patch_wangzhe_global_entitle(old_entitle)
       ret.wangzhe_kill_targets = translate_general_list(data.wangzhe_kill_targets)
       ret.wangzhe_death_source = translate_general_key(data.wangzhe_death_source)
       ret.wangzhe_overview = data.wangzhe_overview
-      ret.honor = ""
+      ret.honor = WANGZHE_BLANK_COLUMN
     end
     return ret
   end
@@ -154,9 +155,9 @@ local function patch_summary_headers()
     Turn = "积分",
     Recover = "死亡来源",
     Damage = "击杀对象",
-    Damaged = "",
-    Kill = "",
-    Honor = "",
+    Damaged = WANGZHE_BLANK_COLUMN,
+    Kill = WANGZHE_BLANK_COLUMN,
+    Honor = WANGZHE_BLANK_COLUMN,
   }
 
   function Fk:translate(src, lang)
