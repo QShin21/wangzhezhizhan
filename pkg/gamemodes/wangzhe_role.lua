@@ -364,6 +364,7 @@ local function apply_wangzhe_score_summary(room, winner, summary)
         row.wangzhe_score = score
         row.wangzhe_kill_targets = kill_targets[p.seat] or {}
         row.wangzhe_death_source = death_source[p.seat] or ""
+        row.wangzhe_mode = true
         if p.seat == 1 then row.wangzhe_overview = overview end
       end
     end
