@@ -347,11 +347,77 @@ local function wangzhe_result_overview(room, winner)
   return string.format("%d忠臣阵亡，%d反贼阵亡，%s获胜", loyalist_dead, rebel_dead, winner_text)
 end
 
+local function apply_wangzhe_score_summary(room, winner, summary)
+  if room:getTag("wangzhe_score_finalized") then return end
+  room:setTag("wangzhe_score_finalized", true)
+
+  local has_summary = type(summary) == "table"
+  local death_source, kill_targets, renegade_rebel_kills = collect_death_info(room)
+  local overview = wangzhe_result_overview(room, winner)
+
+  for _, p in ipairs(room.players) do
+    local score = calculate_wangzhe_score(room, p, winner, renegade_rebel_kills)
+    if has_summary then
+      local row = summary[p.seat]
+      if row then
+        row.wangzhe_score = score
+        row.wangzhe_kill_targets = kill_targets[p.seat] or {}
+        row.wangzhe_death_source = death_source[p.seat] or ""
+        if p.seat == 1 then row.wangzhe_overview = overview end
+      end
+    end
+
+    room:sendLog{
+      type = "#wangzhe_score_detail",
+      from = p.id,
+      arg = tostring(score),
+      arg2 = Fk:translate("wangzhe_kill_targets") .. "：" .. translate_general_list(kill_targets[p.seat]) ..
+        "；" .. Fk:translate("wangzhe_death_source") .. "：" .. translate_general_key(death_source[p.seat]),
+    }
+  end
+
+  room:sendLog{
+    type = "#wangzhe_score_overview",
+    arg = overview,
+    toast = true,
+  }
+end
+
+local function install_wangzhe_summary_hooks(room)
+  if room.__wangzhe_summary_hooks_installed then return end
+  room.__wangzhe_summary_hooks_installed = true
+
+  if type(room.gameOver) == "function" then
+    local old_game_over = room.gameOver
+    room.gameOver = function(self, winner, ...)
+      self:setTag("wangzhe_pending_winner", winner or "")
+      local ret = old_game_over(self, winner, ...)
+      self:setTag("wangzhe_pending_winner", nil)
+      return ret
+    end
+  end
+
+  if type(room.getGameSummary) == "function" then
+    local old_get_game_summary = room.getGameSummary
+    room.getGameSummary = function(self, ...)
+      local summary = old_get_game_summary(self, ...)
+      if self:getSettings("gameMode") == "wangzhe_role_mode" then
+        local winner = self:getTag("wangzhe_pending_winner")
+        if winner ~= nil then
+          apply_wangzhe_score_summary(self, winner, summary)
+        end
+      end
+      return summary
+    end
+  end
+end
+
 local function wangzhe_getlogic()
   local logic = GameLogic:subclass("wangzhe_role_logic")
 
   function logic:initialize(room)
     GameLogic.initialize(self, room)
+    install_wangzhe_summary_hooks(room)
     self.role_table[6] = { "lord", "loyalist", "rebel", "rebel", "rebel", "renegade" }
     self.role_table[8] = { "lord", "loyalist", "loyalist", "rebel", "rebel", "rebel", "rebel", "renegade" }
   end
@@ -505,6 +571,8 @@ rule:addEffect(fk.GameStart, {
     room:setTag("wangzhe_entered_lord_renegade_rebel", false)
     room:setTag("wangzhe_renegade_death_loyalist_dead", nil)
     room:setTag("wangzhe_aozhan_started", false)
+    room:setTag("wangzhe_score_finalized", false)
+    room:setTag("wangzhe_pending_winner", nil)
     room:setBanner("@[:]wangzhe_stage", "wangzhe_stage_normal")
 
     for _, p in ipairs(room.players) do
@@ -610,50 +678,6 @@ rule:addEffect(fk.TurnEnd, {
 rule:addEffect("invalidity", {
   invalidity_func = function(self, from, skill)
     return from and from:getMark(AOZHAN_INVALID_MARK) > 0 and is_player_owned_skill(from, skill)
-  end,
-})
-
-rule:addEffect(fk.GameFinished, {
-  can_refresh = function(self, event, target, player, winner)
-    return player.seat == 1 and player.room:getSettings("gameMode") == "wangzhe_role_mode"
-  end,
-  on_refresh = function(self, event, target, player, winner)
-    local room = player.room
-    local summary = room:getBanner("GameSummary")
-    local has_summary = type(summary) == "table"
-
-    local death_source, kill_targets, renegade_rebel_kills = collect_death_info(room)
-    local overview = wangzhe_result_overview(room, winner)
-
-    for _, p in ipairs(room.players) do
-      local score = calculate_wangzhe_score(room, p, winner, renegade_rebel_kills)
-      if has_summary then
-        local row = summary[p.seat]
-        if row then
-          row.wangzhe_score = score
-          row.wangzhe_kill_targets = kill_targets[p.seat] or {}
-          row.wangzhe_death_source = death_source[p.seat] or ""
-          if p.seat == 1 then row.wangzhe_overview = overview end
-        end
-      end
-
-      room:sendLog{
-        type = "#wangzhe_score_detail",
-        from = p.id,
-        arg = tostring(score),
-        arg2 = Fk:translate("wangzhe_kill_targets") .. "：" .. translate_general_list(kill_targets[p.seat]) ..
-          "；" .. Fk:translate("wangzhe_death_source") .. "：" .. translate_general_key(death_source[p.seat]),
-      }
-    end
-
-    if has_summary then
-      room:setBanner("GameSummary", summary)
-    end
-    room:sendLog{
-      type = "#wangzhe_score_overview",
-      arg = overview,
-      toast = true,
-    }
   end,
 })
 
