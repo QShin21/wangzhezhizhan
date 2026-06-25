@@ -75,12 +75,12 @@
     "number": 4,
     "name": "关平",
     "code_name": "wzzz__guanping",
-    "title": "忠臣孝子，血战禁将",
+    "title": "忠臣孝子",
     "kingdom": "蜀",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "蜀势力，4/4 体力，男性，忠臣孝子，血战禁将",
+    "metadata": "蜀势力，4/4 体力，男性，忠臣孝子",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -961,12 +961,12 @@
     "number": 33,
     "name": "张松",
     "code_name": "wzzz__zhangsong",
-    "title": "怀璧待凤仪，血战禁将",
+    "title": "怀璧待凤仪",
     "kingdom": "蜀",
     "hp": 3,
     "max_hp": 3,
     "gender": "男性",
-    "metadata": "蜀势力，3/3 体力，男性，怀璧待凤仪，血战禁将",
+    "metadata": "蜀势力，3/3 体力，男性，怀璧待凤仪",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1621,12 +1621,12 @@
     "number": 57,
     "name": "潘濬",
     "code_name": "wzzz__panjun",
-    "title": "方严疾恶，血战禁将",
+    "title": "方严疾恶",
     "kingdom": "吴",
     "hp": 3,
     "max_hp": 3,
     "gender": "男性",
-    "metadata": "吴势力，3/3 体力，男性，方严疾恶，血战禁将",
+    "metadata": "吴势力，3/3 体力，男性，方严疾恶",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2145,12 +2145,12 @@
     "number": 76,
     "name": "周泰",
     "code_name": "wzzz__zhoutai",
-    "title": "历战之躯，血战禁将",
+    "title": "历战之躯",
     "kingdom": "吴",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "吴势力，4/4 体力，男性，历战之躯，血战禁将",
+    "metadata": "吴势力，4/4 体力，男性，历战之躯",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -3157,12 +3157,12 @@
     "number": 114,
     "name": "许褚",
     "code_name": "wzzz__xuchu",
-    "title": "虎痴，血战禁将",
+    "title": "虎痴",
     "kingdom": "魏",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "魏势力，4/4 体力，男性，虎痴，血战禁将",
+    "metadata": "魏势力，4/4 体力，男性，虎痴",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -3417,12 +3417,12 @@
     "number": 124,
     "name": "诸葛诞",
     "code_name": "wzzz__zhugedan",
-    "title": "薤露蒿里，血战禁将",
+    "title": "薤露蒿里",
     "kingdom": "魏",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "魏势力，4/4 体力，男性，薤露蒿里，血战禁将",
+    "metadata": "魏势力，4/4 体力，男性，薤露蒿里",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -3849,12 +3849,12 @@
     "number": 139,
     "name": "何进",
     "code_name": "wzzz__hejin",
-    "title": "色厉内荏，血战禁将",
+    "title": "色厉内荏",
     "kingdom": "群",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "群势力，4/4 体力，男性，色厉内荏，血战禁将",
+    "metadata": "群势力，4/4 体力，男性，色厉内荏",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -3875,12 +3875,12 @@
     "number": 140,
     "name": "华佗",
     "code_name": "wzzz__huatuo",
-    "title": "神医，血战禁将",
+    "title": "神医",
     "kingdom": "群",
     "hp": 3,
     "max_hp": 3,
     "gender": "男性",
-    "metadata": "群势力，3/3 体力，男性，神医，血战禁将",
+    "metadata": "群势力，3/3 体力，男性，神医",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -4497,12 +4497,12 @@
     "number": 163,
     "name": "袁术",
     "code_name": "wzzz__yuanshu",
-    "title": "仲家帝，血战禁将",
+    "title": "仲家帝",
     "kingdom": "群",
     "hp": 4,
     "max_hp": 4,
     "gender": "男性",
-    "metadata": "群势力，4/4 体力，男性，仲家帝，血战禁将",
+    "metadata": "群势力，4/4 体力，男性，仲家帝",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -4639,12 +4639,12 @@
     "number": 168,
     "name": "左慈",
     "code_name": "wzzz__zuoci",
-    "title": "谜之仙人，血战禁将",
+    "title": "谜之仙人",
     "kingdom": "群",
     "hp": 3,
     "max_hp": 3,
     "gender": "男性",
-    "metadata": "群势力，3/3 体力，男性，谜之仙人，血战禁将",
+    "metadata": "群势力，3/3 体力，男性，谜之仙人",
     "package": "wzzz_generals",
     "skills": [
       {

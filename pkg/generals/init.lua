@@ -38,12 +38,12 @@ Fk:loadTranslationTable {
 
 -- 4. 关平
 local g4 = General:new(extension, "wzzz__guanping", "shu", 4)
-g4.title = "忠臣孝子，血战禁将"
+g4.title = "忠臣孝子"
 g4.trueName = "关平"
 g4:addSkills { "wzzz_v__ty_ex__longyin", "wzzz_v__ty_ex__jiezhong" }
 Fk:loadTranslationTable {
   ["wzzz__guanping"] = "关平",
-  ["#" .. "wzzz__guanping"] = "忠臣孝子，血战禁将",
+  ["#" .. "wzzz__guanping"] = "忠臣孝子",
 }
 
 -- 5. 关兴张苞
@@ -335,12 +335,12 @@ Fk:loadTranslationTable {
 
 -- 33. 张松
 local g33 = General:new(extension, "wzzz__zhangsong", "shu", 3)
-g33.title = "怀璧待凤仪，血战禁将"
+g33.title = "怀璧待凤仪"
 g33.trueName = "张松"
 g33:addSkills { "wzzz_v__xiantu", "wzzz_v__qiangzhi" }
 Fk:loadTranslationTable {
   ["wzzz__zhangsong"] = "张松",
-  ["#" .. "wzzz__zhangsong"] = "怀璧待凤仪，血战禁将",
+  ["#" .. "wzzz__zhangsong"] = "怀璧待凤仪",
 }
 
 -- 34. 张星彩
@@ -576,12 +576,12 @@ Fk:loadTranslationTable {
 
 -- 57. 潘濬
 local g57 = General:new(extension, "wzzz__panjun", "wu", 3)
-g57.title = "方严疾恶，血战禁将"
+g57.title = "方严疾恶"
 g57.trueName = "潘濬"
 g57:addSkills { "wzzz_v__guanwei", "wzzz_v__gongqing" }
 Fk:loadTranslationTable {
   ["wzzz__panjun"] = "潘濬",
-  ["#" .. "wzzz__panjun"] = "方严疾恶，血战禁将",
+  ["#" .. "wzzz__panjun"] = "方严疾恶",
 }
 
 -- 58. SP庞统
@@ -769,12 +769,12 @@ Fk:loadTranslationTable {
 
 -- 76. 周泰
 local g76 = General:new(extension, "wzzz__zhoutai", "wu", 4)
-g76.title = "历战之躯，血战禁将"
+g76.title = "历战之躯"
 g76.trueName = "周泰"
 g76:addSkills { "wzzz_v__hs__buqu", "wzzz_v__m_ex__fenji" }
 Fk:loadTranslationTable {
   ["wzzz__zhoutai"] = "周泰",
-  ["#" .. "wzzz__zhoutai"] = "历战之躯，血战禁将",
+  ["#" .. "wzzz__zhoutai"] = "历战之躯",
 }
 
 -- 77. 周瑜
@@ -1152,12 +1152,12 @@ Fk:loadTranslationTable {
 
 -- 114. 许褚
 local g114 = General:new(extension, "wzzz__xuchu", "wei", 4)
-g114.title = "虎痴，血战禁将"
+g114.title = "虎痴"
 g114.trueName = "许褚"
 g114:addSkills { "wzzz_v__ex__luoyi", "wzzz_v__v11__xiechan" }
 Fk:loadTranslationTable {
   ["wzzz__xuchu"] = "许褚",
-  ["#" .. "wzzz__xuchu"] = "虎痴，血战禁将",
+  ["#" .. "wzzz__xuchu"] = "虎痴",
 }
 
 -- 115. 荀攸
@@ -1253,13 +1253,13 @@ Fk:loadTranslationTable {
 
 -- 124. 诸葛诞
 local g124 = General:new(extension, "wzzz__zhugedan", "wei", 4)
-g124.title = "薤露蒿里，血战禁将"
+g124.title = "薤露蒿里"
 g124.trueName = "诸葛诞"
 g124:addSkills { "wzzz_v__ty_ex__gongao", "wzzz_v__ty_ex__juyi" }
 g124:addRelatedSkills { "wzzz_v__weizhong", "wzzz_v__benghuai" }
 Fk:loadTranslationTable {
   ["wzzz__zhugedan"] = "诸葛诞",
-  ["#" .. "wzzz__zhugedan"] = "薤露蒿里，血战禁将",
+  ["#" .. "wzzz__zhugedan"] = "薤露蒿里",
 }
 
 -- 125. 蔡夫人
@@ -1406,22 +1406,22 @@ Fk:loadTranslationTable {
 
 -- 139. 何进
 local g139 = General:new(extension, "wzzz__hejin", "qun", 4)
-g139.title = "色厉内荏，血战禁将"
+g139.title = "色厉内荏"
 g139.trueName = "何进"
 g139:addSkills { "wzzz_v__ty__mouzhu", "wzzz_v__ol__yanhuo" }
 Fk:loadTranslationTable {
   ["wzzz__hejin"] = "何进",
-  ["#" .. "wzzz__hejin"] = "色厉内荏，血战禁将",
+  ["#" .. "wzzz__hejin"] = "色厉内荏",
 }
 
 -- 140. 华佗
 local g140 = General:new(extension, "wzzz__huatuo", "qun", 3)
-g140.title = "神医，血战禁将"
+g140.title = "神医"
 g140.trueName = "华佗"
 g140:addSkills { "wzzz_v__jishi", "wzzz_v__ex__chuli", "wzzz_v__m_ex__qingnang", "wzzz_s__6025_6551" }
 Fk:loadTranslationTable {
   ["wzzz__huatuo"] = "华佗",
-  ["#" .. "wzzz__huatuo"] = "神医，血战禁将",
+  ["#" .. "wzzz__huatuo"] = "神医",
 }
 
 -- 141. 华雄
@@ -1647,12 +1647,12 @@ Fk:loadTranslationTable {
 
 -- 163. 袁术
 local g163 = General:new(extension, "wzzz__yuanshu", "qun", 4)
-g163.title = "仲家帝，血战禁将"
+g163.title = "仲家帝"
 g163.trueName = "袁术"
 g163:addSkills { "wzzz_v__m_ex__yongsi", "wzzz_v__weidi" }
 Fk:loadTranslationTable {
   ["wzzz__yuanshu"] = "袁术",
-  ["#" .. "wzzz__yuanshu"] = "仲家帝，血战禁将",
+  ["#" .. "wzzz__yuanshu"] = "仲家帝",
 }
 
 -- 164. 张郃
@@ -1698,12 +1698,12 @@ Fk:loadTranslationTable {
 
 -- 168. 左慈
 local g168 = General:new(extension, "wzzz__zuoci", "qun", 3)
-g168.title = "谜之仙人，血战禁将"
+g168.title = "谜之仙人"
 g168.trueName = "左慈"
 g168:addSkills { "wzzz_v__huashen", "wzzz_v__xinsheng" }
 Fk:loadTranslationTable {
   ["wzzz__zuoci"] = "左慈",
-  ["#" .. "wzzz__zuoci"] = "谜之仙人，血战禁将",
+  ["#" .. "wzzz__zuoci"] = "谜之仙人",
 }
 
 return extension
