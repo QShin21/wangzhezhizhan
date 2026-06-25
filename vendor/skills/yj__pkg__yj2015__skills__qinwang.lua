@@ -1,7 +1,6 @@
 
 local qinwang = fk.CreateSkill {
   name = "wzzz_v__qinwang",
-  tags = { Skill.Lord },
 }
 
 Fk:loadTranslationTable{
@@ -14,6 +13,13 @@ Fk:loadTranslationTable{
 
   ["$wzzz_v__qinwang1"] = "大厦倾危，谁堪栋梁！",
   ["$wzzz_v__qinwang2"] = "国有危难，哪位将军请战？",
+}
+
+Fk:loadTranslationTable{
+  ["wzzz_v__qinwang"] = "勤王",
+  [":wzzz_v__qinwang"] = "每回合限一次，当你需要打出【杀】时，你可以弃置一张牌，然后令其他角色依次选择是否打出【杀】（视为由你打出），响应的角色摸一张牌。",
+  ["#wzzz_v__qinwang"] = "勤王：弃置一张牌，令其他角色依次选择是否替你打出【杀】",
+  ["#wzzz_v__qinwang-ask"] = "勤王：你可以替 %src 打出一张【杀】，然后摸一张牌",
 }
 
 qinwang:addEffect("viewas", {
@@ -39,21 +45,19 @@ qinwang:addEffect("viewas", {
     local room = player.room
     room:throwCard(use.card.fake_subcards, qinwang.name, player, player)
     for _, p in ipairs(room:getOtherPlayers(player)) do
-      if p.kingdom == "shu" then
-        local respond = room:askToResponse(p, {
-          skill_name = qinwang.name,
-          pattern = "slash",
-          prompt = "#wzzz_v__qinwang-ask:"..player.id,
-          cancelable = true,
-        })
-        if respond then
-          respond.skipDrop = true
-          room:responseCard(respond)
-          use.card = respond.card
-          use.extra_data = use.extra_data or {}
-          use.extra_data.qinwang = p
-          return
-        end
+      local respond = room:askToResponse(p, {
+        skill_name = qinwang.name,
+        pattern = "slash",
+        prompt = "#wzzz_v__qinwang-ask:"..player.id,
+        cancelable = true,
+      })
+      if respond then
+        respond.skipDrop = true
+        room:responseCard(respond)
+        use.card = respond.card
+        use.extra_data = use.extra_data or {}
+        use.extra_data.qinwang = p
+        return
       end
     end
     return ""
@@ -66,15 +70,12 @@ qinwang:addEffect("viewas", {
     end
   end,
   enabled_at_play = function(self, player)
-    return not player:isNude() and
-      table.find(Fk:currentRoom().alive_players, function(p)
-        return p ~= player and p.kingdom == "shu"
-      end)
+    return false
   end,
   enabled_at_response = function(self, player)
-    return not player:isNude() and
+    return player:usedSkillTimes(qinwang.name, Player.HistoryTurn) == 0 and not player:isNude() and
       table.find(Fk:currentRoom().alive_players, function(p)
-        return p ~= player and p.kingdom == "shu"
+        return p ~= player
       end)
   end,
 })

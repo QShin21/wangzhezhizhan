@@ -12,6 +12,12 @@ Fk:loadTranslationTable{
   ["$wzzz_v__ziyuan2"] = "雪中送炭，以解君愁。",
 }
 
+Fk:loadTranslationTable{
+  ["wzzz_v__ziyuan"] = "资援",
+  [":wzzz_v__ziyuan"] = "出牌阶段限一次，你可以交给一名其他角色任意张点数之和不大于13的牌并展示之，然后你摸一张牌，若点数之和等于13，你令该角色回复1点体力。",
+  ["#wzzz_v__ziyuan"] = "资援：交给一名其他角色任意张点数之和不大于13的手牌",
+}
+
 ziyuan:addEffect("active", {
   anim_type = "support",
   prompt = "#wzzz_v__ziyuan",
@@ -33,13 +39,21 @@ ziyuan:addEffect("active", {
     for _, id in ipairs(selected_cards) do
       num = num + Fk:getCardById(id).number
     end
-    return num == 13 and #selected == 0 and to_select ~= player
+    return num > 0 and num <= 13 and #selected == 0 and to_select ~= player
   end,
   on_use = function(self, room, effect)
     local player = effect.from
     local target = effect.tos[1]
+    local num = 0
+    for _, id in ipairs(effect.cards) do
+      num = num + Fk:getCardById(id).number
+    end
+    player:showCards(effect.cards)
     room:moveCardTo(effect.cards, Card.PlayerHand, target, fk.ReasonGive, ziyuan.name, nil, false, player)
-    if target:isWounded() and not target.dead then
+    if player:isAlive() then
+      player:drawCards(1, ziyuan.name)
+    end
+    if num == 13 and target:isWounded() and not target.dead then
       room:recover{
         who = target,
         num = 1,

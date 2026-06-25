@@ -13,6 +13,14 @@ Fk:loadTranslationTable{
   ["$wzzz_v__shensu2"] = "取汝首级，有如探囊取物！",
 }
 
+Fk:loadTranslationTable{
+  ["wzzz_v__shensu"] = "神速",
+  [":wzzz_v__shensu"] = "你可以做出如下选择：1.跳过判定阶段和摸牌阶段；2.跳过出牌阶段并弃置一张装备牌；3.跳过弃牌阶段并翻面。你每选择一项，视为你使用一张无距离限制的【杀】。",
+  ["#wzzz_v__shensu1-choose"] = "神速：跳过判定阶段和摸牌阶段，视为使用无距离限制的【杀】",
+  ["#wzzz_v__shensu2-choose"] = "神速：跳过出牌阶段并弃一张装备牌，视为使用无距离限制的【杀】",
+  ["#wzzz_v__shensu3-choose"] = "神速：跳过弃牌阶段并翻面，视为使用无距离限制的【杀】",
+}
+
 shensu:addEffect(fk.EventPhaseChanging, {
   anim_type = "offensive",
   can_trigger = function(self, event, target, player, data)
@@ -21,6 +29,7 @@ shensu:addEffect(fk.EventPhaseChanging, {
         if not player:canSkip(Player.Draw) then return end
       elseif data.phase == Player.Play then
         if player:isNude() then return end
+      elseif data.phase == Player.Discard then
       else
         return
       end
@@ -68,6 +77,20 @@ shensu:addEffect(fk.EventPhaseChanging, {
         event:setCostData(self, { tos = tos, cards = cards })
         return true
       end
+    elseif data.phase == Player.Discard then
+      local tos = room:askToChoosePlayers(player, {
+        min_num = 1,
+        max_num = max_num,
+        targets = targets,
+        skill_name = shensu.name,
+        prompt = "#wzzz_v__shensu3-choose",
+        cancelable = true,
+      })
+      if #tos > 0 then
+        room:sortByAction(tos)
+        event:setCostData(self, { tos = tos })
+        return true
+      end
     end
   end,
   on_use = function(self, event, target, player, data)
@@ -76,6 +99,8 @@ shensu:addEffect(fk.EventPhaseChanging, {
       player:skip(Player.Draw)
     elseif data.phase == Player.Play then
       room:throwCard(event:getCostData(self).cards, shensu.name, player, player)
+    elseif data.phase == Player.Discard then
+      player:turnOver()
     end
     data.skipped = true
     if player.dead then return end

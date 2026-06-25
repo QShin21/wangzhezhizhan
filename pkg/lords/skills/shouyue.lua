@@ -29,7 +29,7 @@ shouyue:addEffect(fk.EventPhaseEnd, {
     local ally = event:getCostData(self).tos[1]
     local slash = Fk:cloneCard("slash")
     local targets = table.filter(room:getOtherPlayers(ally, false), function(p) return ally:canUseTo(slash, p) end)
-    local tos = room:askToChoosePlayers(ally, {
+    local tos = room:askToChoosePlayers(player, {
       targets = targets, min_num = 1, max_num = 1, prompt = "#wzzz__shouyue-target", skill_name = shouyue.name, cancelable = true,
     })
     if #tos == 0 then

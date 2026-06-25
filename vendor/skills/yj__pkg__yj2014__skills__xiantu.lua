@@ -13,6 +13,13 @@ Fk:loadTranslationTable{
   ["$wzzz_v__xiantu2"] = "我已诚心相献，君何踌躇不前？",
 }
 
+Fk:loadTranslationTable{
+  ["wzzz_v__xiantu"] = "献图",
+  [":wzzz_v__xiantu"] = "其他角色的出牌阶段开始时，你可以摸三张牌，然后交给其两张牌。此阶段结束时，若其此阶段未杀死过角色，你失去1点体力。",
+  ["#wzzz_v__xiantu-invoke"] = "献图：你可以摸三张牌并交给 %dest 两张牌",
+  ["#wzzz_v__xiantu-give"] = "献图：交给 %dest 两张牌",
+}
+
 xiantu:addEffect(fk.EventPhaseStart, {
   mute = true,
   anim_type = "support",
@@ -36,8 +43,8 @@ xiantu:addEffect(fk.EventPhaseStart, {
     room:notifySkillInvoked(player, xiantu.name, "support", {target})
     room:setPlayerMark(player, "wzzz_v__xiantu_record-phase", 1)
 
-    player:drawCards(2, xiantu.name)
-    if player:isNude() or target == player then return end
+    player:drawCards(3, xiantu.name)
+    if #player:getCardIds("he") < 2 or target == player then return end
     local cards = room:askToCards(player, {
       skill_name = xiantu.name,
       include_equip = true,

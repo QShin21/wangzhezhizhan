@@ -3,6 +3,26 @@ local hujia = fk.CreateSkill {
   tags = { Skill.Lord },
 }
 
+Fk:loadTranslationTable {
+  ["wzzz_v__hujia"] = "护驾",
+  [":wzzz_v__hujia"] = "主公技，当你需要使用或打出【闪】时，你可以令其他魏势力角色选择是否替你使用或打出【闪】（视为由你使用或打出）；其他魏势力角色于其回合外使用、打出或替你使用或打出【闪】时，其可以令你摸一张牌（每回合限一次）。",
+  ["#wzzz_v__hujia-ask"] = "护驾：你可以替 %src 打出一张【闪】",
+  ["#wzzz_v__hujia-invoke"] = "护驾：是否令 %src 摸一张牌？",
+}
+
+local function askHujiaDraw(helper, lord)
+  local room = lord.room
+  if helper.dead or lord.dead or room.current == helper or helper:getMark("wzzz_v__hujia_draw-turn") > 0 then return end
+  if room:askToSkillInvoke(helper, {
+    skill_name = hujia.name,
+    prompt = "#wzzz_v__hujia-invoke:" .. lord.id,
+  }) then
+    room:doIndicate(helper.id, { lord.id })
+    room:addPlayerMark(helper, "wzzz_v__hujia_draw-turn")
+    lord:drawCards(1, hujia.name)
+  end
+end
+
 local hujia_spec = {
   anim_type = "defensive",
   can_trigger = function(self, event, target, player, data)
@@ -28,6 +48,7 @@ local hujia_spec = {
         if respond then
           respond.skipDrop = true
           room:responseCard(respond)
+          askHujiaDraw(p, player)
 
           local new_card = Fk:cloneCard('jink')
           new_card.skillName = hujia.name
@@ -49,6 +70,31 @@ local hujia_spec = {
 
 hujia:addEffect(fk.AskForCardUse, hujia_spec)
 hujia:addEffect(fk.AskForCardResponse, hujia_spec)
+
+local hujia_draw_spec = {
+  anim_type = "support",
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(hujia.name) and target ~= player and not target.dead and target.kingdom == "wei" and
+      player.room.current ~= target and target:getMark("wzzz_v__hujia_draw-turn") == 0 and
+      data.card and data.card.trueName == "jink"
+  end,
+  on_cost = function(self, event, target, player, data)
+    if player.room:askToSkillInvoke(target, {
+      skill_name = hujia.name,
+      prompt = "#wzzz_v__hujia-invoke:" .. player.id,
+    }) then
+      player.room:doIndicate(target.id, { player.id })
+      return true
+    end
+  end,
+  on_use = function(self, event, target, player, data)
+    player.room:addPlayerMark(target, "wzzz_v__hujia_draw-turn")
+    player:drawCards(1, hujia.name)
+  end,
+}
+
+hujia:addEffect(fk.CardUsing, hujia_draw_spec)
+hujia:addEffect(fk.CardResponding, hujia_draw_spec)
 
 hujia:addAI(Fk.Ltk.AI.newInvokeStrategy {
   think = function(self, ai)

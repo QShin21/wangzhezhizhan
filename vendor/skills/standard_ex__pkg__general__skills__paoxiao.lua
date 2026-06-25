@@ -13,6 +13,11 @@ local paoxiao = fk.CreateSkill{
   tags = { Skill.Compulsory },
 }
 
+Fk:loadTranslationTable{
+  ["wzzz_v__ex__paoxiao"] = "咆哮",
+  [":wzzz_v__ex__paoxiao"] = "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1；每回合你使用第二张【杀】时，摸一张牌。",
+}
+
 paoxiao:addEffect("targetmod", {
   bypass_times = function(self, player, skill, scope, card)
     return player:hasSkill(paoxiao.name) and card and skill.trueName == "slash_skill" and scope == Player.HistoryPhase
@@ -20,13 +25,12 @@ paoxiao:addEffect("targetmod", {
 })
 
 paoxiao:addEffect(fk.CardUsing, {
-  can_refresh = function(self, event, target, player, data)
+  can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(paoxiao.name) and
-      data.card.trueName == "slash" and player:usedCardTimes("slash") > 1
+      data.card.trueName == "slash" and player:usedCardTimes("slash") == 2
   end,
-  on_refresh = function(self, event, target, player, data)
-    player:broadcastSkillInvoke(paoxiao.name)
-    player.room:notifySkillInvoked(player, paoxiao.name, "offensive")
+  on_use = function(self, event, target, player, data)
+    player:drawCards(1, paoxiao.name)
   end,
 })
 

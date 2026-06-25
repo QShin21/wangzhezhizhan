@@ -55,6 +55,17 @@ bazhen:addEffect(fk.AskForCardResponse, {
   on_use = spec.on_use,
 })
 
+bazhen:addEffect(fk.FinishJudge, {
+  anim_type = "drawcard",
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(bazhen.name) and data.reason == "#eight_diagram_skill" and
+      #player:getEquipments(Card.SubtypeArmor) == 0 and not data:matchPattern()
+  end,
+  on_use = function(self, event, target, player, data)
+    player:drawCards(1, bazhen.name)
+  end,
+})
+
 bazhen:addAI(Fk.Ltk.AI.newInvokeStrategy{
   think = function(self, ai)
     return ai:getBenefitOfEvents(function(logic)

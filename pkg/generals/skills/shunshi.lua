@@ -21,6 +21,17 @@ shunshi:addEffect(fk.AfterCardsMove, {
     return player.room:askToSkillInvoke(player, { skill_name = shunshi.name })
   end,
   on_use = function(self, event, target, player, data)
+    for _, move in ipairs(data) do
+      if move.to == player and move.toArea == Card.PlayerHand and
+        (move.skillName == "wzzz_v__ex__lianying" or move.skillName == "lianying") then
+        for _, info in ipairs(move.moveInfo) do
+          if Fk:getCardById(info.cardId).type ~= Card.TypeBasic then
+            player:showCards(info.cardId)
+            break
+          end
+        end
+      end
+    end
     player:drawCards(1, shunshi.name)
   end,
 })

@@ -11,6 +11,12 @@ Fk:loadTranslationTable{
   ["$wzzz_v__wuyuan2"] = "云长，一定要平安归来啊！",
 }
 
+Fk:loadTranslationTable{
+  ["wzzz_v__wuyuan"] = "武缘",
+  [":wzzz_v__wuyuan"] = "出牌阶段限一次，你可以展示并交给一名其他角色一张【杀】，然后你回复1点体力令该角色摸一张牌。若此【杀】为：红色，其额外摸一张牌；黑色，其下回合使用【杀】的次数+1。",
+  ["@@wzzz_v__wuyuan_black"] = "武缘",
+}
+
 wzzz_v__wuyuan:addEffect("active", {
   anim_type = "support",
   card_num = 1,
@@ -30,6 +36,7 @@ wzzz_v__wuyuan:addEffect("active", {
     local player = effect.from
     local target = effect.tos[1]
     local card = Fk:getCardById(effect.cards[1])
+    player:showCards(effect.cards[1])
     room:obtainCard(target, card, false, fk.ReasonGive, player, skillName)
     if player:isAlive() and player:isWounded() then
       room:recover({
@@ -40,17 +47,30 @@ wzzz_v__wuyuan:addEffect("active", {
       })
     end
     if target:isAlive() then
-      if card.color == Card.Red and target:isWounded() then
-        room:recover({
-          who = target,
-          num = 1,
-          recoverBy = player,
-          skillName = skillName,
-        })
+      target:drawCards(card.color == Card.Red and 2 or 1, skillName)
+      if card.color == Card.Black then
+        room:setPlayerMark(target, "@@wzzz_v__wuyuan_black", 1)
       end
-      local n = card.name ~= "slash" and 2 or 1
-      target:drawCards(n, skillName)
     end
+  end,
+})
+
+wzzz_v__wuyuan:addEffect("targetmod", {
+  residue_func = function(self, player, skill, scope)
+    if player:getMark("@@wzzz_v__wuyuan_black") > 0 and skill.trueName == "slash_skill" and scope == Player.HistoryPhase then
+      return 1
+    end
+  end,
+})
+
+wzzz_v__wuyuan:addEffect(fk.EventPhaseEnd, {
+  mute = true,
+  is_delay_effect = true,
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player.phase == Player.Play and player:getMark("@@wzzz_v__wuyuan_black") > 0
+  end,
+  on_use = function(self, event, target, player, data)
+    player.room:setPlayerMark(player, "@@wzzz_v__wuyuan_black", 0)
   end,
 })
 
