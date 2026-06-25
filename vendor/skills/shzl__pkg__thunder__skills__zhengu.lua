@@ -14,7 +14,7 @@ Fk:loadTranslationTable{
 }
 
 zhengu:addLoseEffect(function (self, player, is_death)
-  if is_death then
+  if is_death or (WzzzHuashen and WzzzHuashen.isHuashenSkill(player, zhengu.name)) then
     local room = player.room
     for _, p in ipairs(room.alive_players) do
       room:removeTableMark(p, "@@wzzz_v__zhengu", player.id)

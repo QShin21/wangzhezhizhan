@@ -67,7 +67,8 @@ end
 local spec = {
   priority = 90,
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(weidi.name) and player.room:getSettings("gameMode") == "wangzhe_role_mode"
+    return player:hasSkill(weidi.name) and player.room:getSettings("gameMode") == "wangzhe_role_mode" and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, weidi.name))
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room

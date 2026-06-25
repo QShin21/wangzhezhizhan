@@ -16,6 +16,7 @@ botu:addEffect(fk.TurnEnd, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
     if target == player and player:hasSkill(botu.name) and
+      not (WzzzHuashen and WzzzHuashen.isBlockedTiming(player, botu.name, "TurnEnd")) and
       player:usedSkillTimes(botu.name, Player.HistoryRound) < math.min(3, #player.room.alive_players) then
       local suits = {}
       player.room.logic:getEventsOfScope(GameEvent.MoveCards, 1, function (e)

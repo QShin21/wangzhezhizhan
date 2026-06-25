@@ -29,7 +29,8 @@ end
 wzzz_v__xianfu:addEffect(fk.GameStart, {
   audio_index = {1, 2},
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(wzzz_v__xianfu.name) and #player.room:getOtherPlayers(player, false) > 0
+    return player:hasSkill(wzzz_v__xianfu.name) and #player.room:getOtherPlayers(player, false) > 0 and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, wzzz_v__xianfu.name))
   end,
   on_cost = Util.TrueFunc,
   on_use = function (self, event, target, player, data)

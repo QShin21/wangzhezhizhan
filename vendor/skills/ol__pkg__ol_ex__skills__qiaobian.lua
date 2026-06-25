@@ -19,7 +19,8 @@ Fk:loadTranslationTable {
 
 qiaobian:addEffect(fk.GameStart, {
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(qiaobian.name)
+    return player:hasSkill(qiaobian.name) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, qiaobian.name))
   end,
   on_cost = Util.TrueFunc,
   on_use = function (self, event, target, player, data)

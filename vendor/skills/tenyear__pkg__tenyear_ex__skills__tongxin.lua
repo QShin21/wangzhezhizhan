@@ -19,7 +19,8 @@ end
 tongxin:addEffect(fk.GameStart, {
   mute = true,
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(tongxin.name) and is_team_mode(player.room)
+    return player:hasSkill(tongxin.name) and is_team_mode(player.room) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, tongxin.name))
   end,
   on_cost = Util.TrueFunc,
   on_use = function(self, event, target, player, data)

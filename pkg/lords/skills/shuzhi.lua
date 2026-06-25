@@ -11,7 +11,8 @@ Fk:loadTranslationTable {
 
 shuzhi:addEffect(fk.GameStart, {
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(shuzhi.name)
+    return player:hasSkill(shuzhi.name) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, shuzhi.name))
   end,
   on_cost = Util.TrueFunc,
   on_use = function(self, event, target, player, data)

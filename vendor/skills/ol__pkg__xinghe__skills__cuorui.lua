@@ -16,7 +16,8 @@ Fk:loadTranslationTable{
 cuorui:addEffect(fk.GameStart, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(cuorui.name) and player:getHandcardNum() < #player.room.alive_players
+    return player:hasSkill(cuorui.name) and player:getHandcardNum() < #player.room.alive_players and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, cuorui.name))
   end,
   on_use = function(self, event, target, player, data)
     player:drawCards(#player.room.alive_players - player:getHandcardNum(), cuorui.name)

@@ -9,7 +9,10 @@ Fk:loadTranslationTable {
 }
 
 beijia:addEffect(fk.GameStart, {
-  can_trigger = function(self, event, target, player, data) return player:hasSkill(beijia.name) end,
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(beijia.name) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, beijia.name))
+  end,
   on_cost = Util.TrueFunc,
   on_use = function(self, event, target, player, data)
     local choices = {}

@@ -14,7 +14,8 @@ Fk:loadTranslationTable{
 jugu:addEffect(fk.GameStart, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(jugu.name)
+    return player:hasSkill(jugu.name) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, jugu.name))
   end,
   on_use = function(self, event, target, player, data)
     player.room:drawCards(player, player.maxHp, jugu.name)

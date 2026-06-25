@@ -17,7 +17,8 @@ Fk:loadTranslationTable {
 huwei:addEffect(fk.GameStart, {
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(huwei.name) and is_team_mode(player.room) and
-      player:hasSkill("wzzz_v__ex__yijue", true) and not player:hasSkill("wzzz_v__zhongyi", true)
+      player:hasSkill("wzzz_v__ex__yijue", true) and not player:hasSkill("wzzz_v__zhongyi", true) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, huwei.name))
   end,
   on_cost = function(self, event, target, player, data)
     return player.room:askToSkillInvoke(player, { skill_name = huwei.name })

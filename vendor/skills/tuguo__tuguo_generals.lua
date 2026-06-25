@@ -17,7 +17,8 @@ Fk:loadTranslationTable {
 jiancheng:addEffect(fk.GameStart, {
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(jiancheng.name) and is_team_mode(player.room) and
-      player:hasSkill("wzzz_v__zhenwei", true) and not player:hasSkill("wzzz__shouyu", true)
+      player:hasSkill("wzzz_v__zhenwei", true) and not player:hasSkill("wzzz__shouyu", true) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, jiancheng.name))
   end,
   on_cost = function(self, event, target, player, data)
     return player.room:askForSkillInvoke(player, jiancheng.name, data)

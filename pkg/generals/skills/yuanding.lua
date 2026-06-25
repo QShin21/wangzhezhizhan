@@ -9,7 +9,10 @@ Fk:loadTranslationTable {
 }
 
 yuanding:addEffect(fk.GameStart, {
-  can_trigger = function(self, event, target, player, data) return player:hasSkill(yuanding.name) end,
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(yuanding.name) and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, yuanding.name))
+  end,
   on_cost = Util.TrueFunc,
   on_use = function(self, event, target, player, data)
     local room = player.room

@@ -5,11 +5,50 @@ local baonue = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__baonue"] = "暴虐",
-  [":wzzz_v__ol_ex__baonue"] = "主公技，当其他群雄角色造成1点伤害后，你可以判定，若结果为♠，你获得判定牌并回复1点体力。",
+  [":wzzz_v__ol_ex__baonue"] = "主公技，当其他群势力角色造成伤害后，你可以进行判定，若结果为黑桃，你回复1点体力并获得此判定牌。游戏开始时，若场上没有其他群势力角色，则你可以令一名其他角色变更势力至“群”。",
 
   ["$wzzz_v__ol_ex__baonue1"] = "吾乃人屠，当以兵为贡。",
   ["$wzzz_v__ol_ex__baonue2"] = "天下群雄，唯我独尊！",
 }
+
+local function isHuashenZuoci(player)
+  return player and player:hasSkill("wzzz_v__huashen", true)
+end
+
+baonue:addEffect(fk.GameStart, {
+  can_trigger = function(self, event, target, player, data)
+    if not player:hasSkill(baonue.name) then return false end
+    local room = player.room
+    return not table.find(room:getOtherPlayers(player, false), function(p)
+      return p.kingdom == "qun" and not isHuashenZuoci(p)
+    end) and table.find(room:getOtherPlayers(player, false), function(p)
+      return p.kingdom ~= "qun" and not isHuashenZuoci(p)
+    end)
+  end,
+  on_cost = function(self, event, target, player, data)
+    local room = player.room
+    local targets = table.filter(room:getOtherPlayers(player, false), function(p)
+      return p.kingdom ~= "qun" and not isHuashenZuoci(p)
+    end)
+    local to = room:askToChoosePlayers(player, {
+      min_num = 1,
+      max_num = 1,
+      targets = targets,
+      skill_name = baonue.name,
+      cancelable = true,
+    })
+    if #to > 0 then
+      event:setCostData(self, {tos = to})
+      return true
+    end
+  end,
+  on_use = function(self, event, target, player, data)
+    local room = player.room
+    local to = event:getCostData(self).tos[1]
+    to.kingdom = "qun"
+    room:broadcastProperty(to, "kingdom")
+  end,
+})
 
 baonue:addEffect(fk.Damage, {
   anim_type = "support",

@@ -19,7 +19,9 @@ choujue:addEffect(fk.Deathed, {
   on_use = function(self, event, target, player, data)
     local room = player.room
     room:addPlayerMark(player, "choujue_buff-turn", 1)
-    room:changeMaxHp(player, 1)
+    if not (WzzzHuashen and WzzzHuashen.shouldPreventMaxHpGain(player, choujue.name)) then
+      room:changeMaxHp(player, 1)
+    end
     if player.dead then return end
     player:drawCards(2, choujue.name)
   end,

@@ -4,9 +4,9 @@ local youdi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__sp__youdi"] = "诱敌",
-  [":wzzz_v__sp__youdi"] = "结束阶段，你可以令一名其他角色弃置你一张手牌，若弃置的牌不是【杀】，则你获得其一张牌；若弃置的牌不是黑色，则你摸一张牌。",
+  [":wzzz_v__sp__youdi"] = "结束阶段，你可以令一名其他角色弃置你的一张手牌，你依次执行满足条件的选项：1.若此牌不为【杀】，你获得其一张牌；2.若此牌不为黑色，你摸一张牌；若两项均满足，则你增加1点体力上限（至多增加至5）。",
 
-  ["#wzzz_v__sp__youdi-choose"] = "诱敌：令一名角色弃置你一张手牌，若不为【杀】，你获得其一张牌；若不为黑色，你摸一张牌",
+  ["#wzzz_v__sp__youdi-choose"] = "诱敌：令一名角色弃置你一张手牌，按弃置牌执行对应效果",
 
   ["$wzzz_v__sp__youdi1"] = "东吴已容不下我，愿降以保周全。",
   ["$wzzz_v__sp__youdi2"] = "笺书七条，足以表我归降之心。",
@@ -44,7 +44,9 @@ youdi:addEffect(fk.EventPhaseStart, {
     card = Fk:getCardById(card)
     room:throwCard(card, youdi.name, player, to)
     if player.dead or to.dead then return end
-    if card.trueName ~= "slash" and not to:isNude() then
+    local not_slash = card.trueName ~= "slash"
+    local not_black = card.color ~= Card.Black
+    if not_slash and not to:isNude() then
       local card2 = room:askToChooseCard(player, {
         target = to,
         flag = "he",
@@ -52,8 +54,12 @@ youdi:addEffect(fk.EventPhaseStart, {
       })
       room:obtainCard(player, card2, false, fk.ReasonPrey, player, youdi.name)
     end
-    if not player.dead and card.color ~= Card.Black then
+    if not player.dead and not_black then
       player:drawCards(1, youdi.name)
+    end
+    if not player.dead and not_slash and not_black and player.maxHp < 5 and
+      not (WzzzHuashen and WzzzHuashen.shouldPreventMaxHpGain(player, youdi.name)) then
+      room:changeMaxHp(player, 1)
     end
   end,
 })

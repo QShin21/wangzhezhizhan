@@ -17,7 +17,8 @@ Fk:loadTranslationTable{
 choujin:addEffect(fk.GameStart, {
   anim_type = "special",
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(choujin.name) and #player.room:getOtherPlayers(player, false) > 0
+    return player:hasSkill(choujin.name) and #player.room:getOtherPlayers(player, false) > 0 and
+      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, choujin.name))
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room
