@@ -1,6 +1,6 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__yingzi"] = "英姿",
-  [":wzzz_v__ex__yingzi"] = "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等同于你的体力上限。",
+  [":wzzz_v__ex__yingzi"] = "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等于你的体力上限。",
 
   ["$wzzz_v__ex__yingzi1"] = "哈哈哈哈哈哈哈哈！",
   ["$wzzz_v__ex__yingzi2"] = "伯符，且看我这一手！",

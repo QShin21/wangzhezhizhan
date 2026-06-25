@@ -1398,6 +1398,8 @@ return {
   [":wzzz_v__xiahouba__paoxiao"] = "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。",
   ["wzzz_v__pangtong__kanpo"] = "看破",
   [":wzzz_v__pangtong__kanpo"] = "你可以将一张黑色牌当【无懈可击】使用；你的【无懈可击】不能被响应。",
+  ["wzzz_v__zhouyu__yingzi"] = "英姿",
+  [":wzzz_v__zhouyu__yingzi"] = "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限+X（X为你的体力上限）。",
   -- AUTO-GENERATED SKILL DESCRIPTION OVERRIDES END
   -- AUTO-GENERATED WZZZ ROSTER END
 }

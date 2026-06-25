@@ -781,7 +781,7 @@ Fk:loadTranslationTable {
 local g77 = General:new(extension, "wzzz__zhouyu", "wu", 3)
 g77.title = "大都督"
 g77.trueName = "周瑜"
-g77:addSkills { "wzzz_v__ex__yingzi", "wzzz_v__wzzz__fanjian" }
+g77:addSkills { "wzzz_v__zhouyu__yingzi", "wzzz_v__wzzz__fanjian" }
 Fk:loadTranslationTable {
   ["wzzz__zhouyu"] = "周瑜",
   ["#" .. "wzzz__zhouyu"] = "大都督",

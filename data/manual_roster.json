@@ -2181,7 +2181,7 @@
     "skills": [
       {
         "name": "英姿",
-        "id": "wzzz_v__ex__yingzi",
+        "id": "wzzz_v__zhouyu__yingzi",
         "derived": false,
         "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限+X（X为你的体力上限）。"
       },
