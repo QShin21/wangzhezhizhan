@@ -8,12 +8,14 @@ Fk:loadTranslationTable{
   [":wzzz_v__v33__zhanshen"] = "锁定技，准备阶段，你选择一项未获得过的效果，获得此效果直到本局游戏结束：<br>"..
   "1.摸牌阶段，你多摸一张牌；<br>"..
   "2.你使用【杀】造成伤害+1；<br>"..
-  "3.你使用【杀】可以额外选择一个目标。",
+  "3.你使用【杀】可以额外选择一个目标；<br>"..
+  "4.出牌阶段，你可以多使用一张【杀】。",
 
   ["#wzzz_v__v33__zhanshen-choice"] = "战神：选择一项效果，本局游戏永久获得",
   ["wzzz_v__v33__zhanshen_1"] = "摸牌阶段多摸一张牌",
   ["wzzz_v__v33__zhanshen_2"] = "使用【杀】伤害+1",
   ["wzzz_v__v33__zhanshen_3"] = "使用【杀】可以额外选择一个目标",
+  ["wzzz_v__v33__zhanshen_4"] = "出牌阶段多使用一张【杀】",
   ["#wzzz_v__v33__zhanshen-choose"] = "战神：你可以为此%arg增加一个目标",
 
   ["$wzzz_v__v33__zhanshen1"] = "战神降世，神威再临！",
@@ -24,7 +26,7 @@ v33__zhanshen:addEffect(fk.EventPhaseStart, {
   anim_type = "offensive",
   can_trigger = function(self, event, target, player, data)
     if target == player and player:hasSkill(v33__zhanshen.name) and player.phase == Player.Start then
-      for i = 1, 3 do
+      for i = 1, 4 do
         if player:getMark("wzzz_v__v33__zhanshen_"..i) == 0 then
           return true
         end
@@ -33,7 +35,7 @@ v33__zhanshen:addEffect(fk.EventPhaseStart, {
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room
-    local choices = table.map(table.filter({1, 2, 3}, function(n)
+    local choices = table.map(table.filter({1, 2, 3, 4}, function(n)
       return player:getMark("wzzz_v__v33__zhanshen_"..n) == 0
     end), function(n)
       return "wzzz_v__v33__zhanshen_"..n
@@ -94,6 +96,15 @@ v33__zhanshen:addEffect(fk.AfterCardTargetDeclared, {
   on_use = function(self, event, target, player, data)
     for _, p in ipairs(event:getCostData(self).tos) do
       data:addTarget(p)
+    end
+  end,
+})
+
+v33__zhanshen:addEffect("targetmod", {
+  residue_func = function(self, player, skill, scope)
+    if player:hasSkill(v33__zhanshen.name) and player:getMark("wzzz_v__v33__zhanshen_4") > 0 and
+      skill.trueName == "slash_skill" and scope == Player.HistoryPhase then
+      return 1
     end
   end,
 })

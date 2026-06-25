@@ -2,22 +2,28 @@ local huwei = fk.CreateSkill {
   name = "wzzz_v__v11__huwei",
 }
 
-Fk:loadTranslationTable{
-  ["wzzz_v__v11__huwei"] = "虎威",
-  [":wzzz_v__v11__huwei"] = "当你登场时，你可以视为对对手使用一张【水淹七军】。",
+local function is_team_mode(room)
+  local mode = room:getSettings("gameMode") or ""
+  return room:isGameMode("1v1_mode") or room:isGameMode("2v2_mode") or room:isGameMode("3v3_mode") or
+    mode:find("1v1", 1, true) ~= nil or mode:find("2v2", 1, true) ~= nil or
+    mode:find("3v3", 1, true) ~= nil or mode:find("team", 1, true) ~= nil
+end
 
-  ["$wzzz_v__v11__huwei1"] = "传令，发动水计！",
-  ["$wzzz_v__v11__huwei2"] = "来人，引水对敌！",
+Fk:loadTranslationTable {
+  ["wzzz_v__v11__huwei"] = "虎威",
+  [":wzzz_v__v11__huwei"] = "若本局为团队模式，亮将后，你可以失去“义绝”，获得“忠义”。",
 }
 
-local U = require "packages.wangzhezhizhan.vendor.modules.gamemode.pkg.1v1_generals.1v1_util"
-
-huwei:addEffect(U.Debut, {
-  can_trigger = function (self, event, target, player, data)
-    return target == player and player:hasSkill(huwei.name) and player:canUse(Fk:cloneCard("drowning"))
+huwei:addEffect(fk.GameStart, {
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(huwei.name) and is_team_mode(player.room) and
+      player:hasSkill("wzzz_v__ex__yijue", true) and not player:hasSkill("wzzz_v__zhongyi", true)
+  end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, { skill_name = huwei.name })
   end,
   on_use = function(self, event, target, player, data)
-    player.room:useVirtualCard("drowning", nil, player, player.next, huwei.name)
+    player.room:handleAddLoseSkills(player, "-wzzz_v__ex__yijue|wzzz_v__zhongyi", nil, false, true)
   end,
 })
 

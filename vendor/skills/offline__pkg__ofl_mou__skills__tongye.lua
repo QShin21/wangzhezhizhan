@@ -5,43 +5,42 @@ local tongye = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ofl_mou__tongye"] = "统业",
-  [":wzzz_v__ofl_mou__tongye"] = "锁定技，若本局游戏牌堆未洗过牌，则你视为拥有〖英姿〗和〖固政〗。",
+  [":wzzz_v__ofl_mou__tongye"] = "主公技，锁定技，首轮开始时，你获得“英姿”和“固政”；首轮结束时，你失去“英姿”和“固政”。",
 }
 
-tongye:addEffect(fk.AfterDrawPileShuffle, {
-  can_refresh = function (self, event, target, player, data)
-    return not player.room:getBanner(tongye.name)
+tongye:addEffect(fk.GameStart, {
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(tongye.name)
   end,
-  on_refresh = function (self, event, target, player, data)
+  on_cost = Util.TrueFunc,
+  on_use = function(self, event, target, player, data)
     local room = player.room
-    room:setBanner(tongye.name, 1)
-    for _, p in ipairs(room.players) do
-      if p:getMark(tongye.name) ~= 0 then
-        room:handleAddLoseSkills(p, "-" .. table.concat(p:getTableMark(tongye.name), "|-"), nil, false, true)
-        room:setPlayerMark(p, tongye.name, 0)
-      end
-    end
-  end,
-})
-
-tongye:addAcquireEffect(function (self, player, is_start)
-  local room = player.room
-  if not room:getBanner(tongye.name) then
-    local skills = table.filter({"mou__yingzi", "wzzz_v__guzheng"}, function (s)
+    local skills = table.filter({"wzzz_v__ex__yingzi", "wzzz_v__guzheng"}, function(s)
       return not player:hasSkill(s, true)
     end)
     if #skills > 0 then
       room:setPlayerMark(player, tongye.name, skills)
       room:handleAddLoseSkills(player, table.concat(skills, "|"), nil, false, true)
     end
-  end
-end)
+  end,
+})
 
-tongye:addLoseEffect(function (self, player, is_death)
-  local room = player.room
+tongye:addEffect(fk.RoundEnd, {
+  mute = true,
+  can_trigger = function(self, event, target, player, data)
+    return player:getMark(tongye.name) ~= 0
+  end,
+  on_cost = Util.TrueFunc,
+  on_use = function(self, event, target, player, data)
+    player.room:handleAddLoseSkills(player, "-"..table.concat(player:getTableMark(tongye.name), "|-"), nil, false, true)
+    player.room:setPlayerMark(player, tongye.name, 0)
+  end,
+})
+
+tongye:addLoseEffect(function(self, player)
   if player:getMark(tongye.name) ~= 0 then
-    room:handleAddLoseSkills(player, "-"..table.concat(player:getTableMark(tongye.name), "|-"), nil, false, true)
-    room:setPlayerMark(player, tongye.name, 0)
+    player.room:handleAddLoseSkills(player, "-"..table.concat(player:getTableMark(tongye.name), "|-"), nil, false, true)
+    player.room:setPlayerMark(player, tongye.name, 0)
   end
 end)
 

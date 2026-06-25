@@ -4201,7 +4201,7 @@
       },
       {
         "name": "战神",
-        "id": "wzzz_v__v33__zhanshen",
+        "id": "wzzz__zhanshen_awaken",
         "derived": false,
         "description": "觉醒技，准备阶段，若你已受伤且场上存活人数小于5，你减1点体力上限，并可以弃置装备区里的武器牌，然后获得“马术”和“神戟”。"
       },

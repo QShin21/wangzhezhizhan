@@ -1527,7 +1527,7 @@ Fk:loadTranslationTable {
 local g151 = General:new(extension, "wzzz__lvbu_wushuang", "qun", 5)
 g151.title = "最强神话"
 g151.trueName = "吕布"
-g151:addSkills { "wzzz_v__hs__wushuang", "wzzz_v__liyu", "wzzz_v__v33__zhanshen" }
+g151:addSkills { "wzzz_v__hs__wushuang", "wzzz_v__liyu", "wzzz__zhanshen_awaken" }
 g151:addRelatedSkills { "wzzz_v__mashu", "wzzz_v__shenji" }
 Fk:loadTranslationTable {
   ["wzzz__lvbu_wushuang"] = "吕布",
