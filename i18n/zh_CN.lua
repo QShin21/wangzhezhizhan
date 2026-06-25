@@ -1390,6 +1390,8 @@ return {
   [":wzzz_v__ol_ex__huangtian"] = "主公技，其他群势力角色出牌阶段限一次，其可以交给你一张【闪】或【闪电】或黑桃手牌并展示之；每回合限一次，其他群势力角色使用或打出【闪】后，你可以获得之。",
   ["wzzz_v__gxzb__paoxiao"] = "咆哮",
   [":wzzz_v__gxzb__paoxiao"] = "锁定技，你使用【杀】无次数限制，每回合你使用第二张【杀】时，摸一张牌。",
+  ["wzzz_v__jiangwei__guanxing"] = "观星",
+  [":wzzz_v__jiangwei__guanxing"] = "准备阶段，你可以观看牌堆顶的五张牌（若存活角色数小于4则改为三张），然后将这些牌以任意顺序置于牌堆顶或牌堆底。若你将这些牌均置于牌堆底，则结束阶段你可以再发动一次“观星”。",
   -- AUTO-GENERATED SKILL DESCRIPTION OVERRIDES END
   -- AUTO-GENERATED WZZZ ROSTER END
 }

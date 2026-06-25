@@ -134,7 +134,7 @@ local g13 = General:new(extension, "wzzz__jiangwei", "shu", 4)
 g13.title = "龙的衣钵"
 g13.trueName = "姜维"
 g13:addSkills { "wzzz_v__ol_ex__tiaoxin", "wzzz_v__ol_ex__zhiji" }
-g13:addRelatedSkills { "wzzz_v__ex__guanxing" }
+g13:addRelatedSkills { "wzzz_v__jiangwei__guanxing" }
 Fk:loadTranslationTable {
   ["wzzz__jiangwei"] = "姜维",
   ["#" .. "wzzz__jiangwei"] = "龙的衣钵",

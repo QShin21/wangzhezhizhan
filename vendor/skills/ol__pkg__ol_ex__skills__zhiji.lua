@@ -43,7 +43,7 @@ zhiji:addEffect(fk.EventPhaseStart, {
     if player.dead then return end
     room:changeMaxHp(player, -1)
     if player.dead then return false end
-    room:handleAddLoseSkills(player, "wzzz_v__ex__guanxing")
+    room:handleAddLoseSkills(player, "wzzz_v__jiangwei__guanxing")
   end,
 })
 

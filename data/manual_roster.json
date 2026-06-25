@@ -403,7 +403,7 @@
       },
       {
         "name": "观星",
-        "id": "wzzz_v__ex__guanxing",
+        "id": "wzzz_v__jiangwei__guanxing",
         "derived": true,
         "description": "准备阶段，你可以观看牌堆顶的五张牌（若存活角色数小于4则改为三张），然后将这些牌以任意顺序置于牌堆顶或牌堆底。若你将这些牌均置于牌堆底，则结束阶段你可以再发动一次“观星”。"
       }
