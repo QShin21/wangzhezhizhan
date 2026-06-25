@@ -1968,7 +1968,7 @@
       {
         "name": "恂恂",
         "id": "wzzz_v__xunxun",
-        "derived": false,
+        "derived": true,
         "description": "摸牌阶段开始时，你可以观看牌堆顶的四张牌，将其中两张牌以任意顺序置于牌堆顶，其余以任意顺序置于牌堆底。"
       }
     ]

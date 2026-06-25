@@ -700,7 +700,8 @@ Fk:loadTranslationTable {
 local g69 = General:new(extension, "wzzz__tangzi", "wu", 4)
 g69.title = "工学之奇才"
 g69.trueName = "唐咨"
-g69:addSkills { "wzzz_v__xingzhao", "wzzz_v__xunxun" }
+g69:addSkills { "wzzz_v__xingzhao" }
+g69:addRelatedSkills { "wzzz_v__xunxun" }
 Fk:loadTranslationTable {
   ["wzzz__tangzi"] = "唐咨",
   ["#" .. "wzzz__tangzi"] = "工学之奇才",
