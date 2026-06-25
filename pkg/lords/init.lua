@@ -51,7 +51,7 @@ local g5 = General:new(extension, "wzzz_lord__liushan", "shu", 3)
 g5.title = "乐不思蜀"
 g5.trueName = "刘禅"
 g5:addSkills { "wzzz_v__xiangle", "wzzz_v__m_ex__fangquan", "wzzz_v__ol_ex__ruoyu" }
-g5:addRelatedSkills { "wzzz_v__jijiang", "wzzz_v__sishu" }
+g5:addRelatedSkills { "wzzz_v__ol_ex__jijiang", "wzzz_v__sishu" }
 Fk:loadTranslationTable {
   ["wzzz_lord__liushan"] = "刘禅",
   ["#" .. "wzzz_lord__liushan"] = "乐不思蜀",

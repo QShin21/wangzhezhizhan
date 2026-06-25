@@ -4,10 +4,9 @@ local mingjian = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__mingjian"] = "明鉴",
-  [":wzzz_v__ty_ex__mingjian"] = "出牌阶段限一次，你可以将所有手牌交给一名其他角色，该角色下回合：使用【杀】次数上限和手牌上限+1；"..
-  "首次造成伤害后，你可以发动〖恢拓〗。",
+  [":wzzz_v__ty_ex__mingjian"] = "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），该角色于其下个回合使用【杀】的次数+1，手牌上限+1。",
 
-  ["#wzzz_v__ty_ex__mingjian"] = "明鉴：将所有手牌交给一名角色，其下回合手牌上限和【杀】次数+1",
+  ["#wzzz_v__ty_ex__mingjian"] = "明鉴：将所有手牌交给一名其他角色，其下个回合手牌上限和【杀】次数+1",
   ["@@wzzz_v__ty_ex__mingjian"] = "明鉴",
   ["@@wzzz_v__ty_ex__mingjian-turn"] = "明鉴",
 
@@ -53,26 +52,6 @@ mingjian:addEffect("targetmod", {
       return #player:getTableMark("@@wzzz_v__ty_ex__mingjian-turn")
     end
   end,
-})
-
-mingjian:addEffect(fk.Damage, {
-  anim_type = "support",
-  is_delay_effect = true,
-  can_trigger = function (self, event, target, player, data)
-    if target and table.contains(target:getTableMark("@@wzzz_v__ty_ex__mingjian-turn"), player.id) and not player.dead and
-      player:usedEffectTimes(self.name, Player.HistoryTurn) == 0 then
-      local turn_event = player.room.logic:getCurrentEvent():findParent(GameEvent.Turn, true)
-      if turn_event == nil then return end
-      local damage_events = player.room.logic:getActualDamageEvents(1, function (e)
-        return e.data.from == target
-      end, nil, turn_event.id)
-      return #damage_events == 1 and damage_events[1].data == data
-    end
-  end,
-  on_cost = Util.TrueFunc,
-  on_use = function (self, event, target, player, data)
-    Fk.skills["wzzz_v__huituo"]:doCost(event, target, player, data)
-  end
 })
 
 return mingjian
