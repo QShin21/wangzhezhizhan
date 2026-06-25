@@ -1394,6 +1394,8 @@ return {
   [":wzzz_v__jiangwei__guanxing"] = "准备阶段，你可以观看牌堆顶的五张牌（若存活角色数小于4则改为三张），然后将这些牌以任意顺序置于牌堆顶或牌堆底。若你将这些牌均置于牌堆底，则结束阶段你可以再发动一次“观星”。",
   ["wzzz_v__pangtong__huoji"] = "火计",
   [":wzzz_v__pangtong__huoji"] = "你可以将一张红色牌当【火攻】使用。你的【火攻】改为你展示目标一张手牌，你弃置与其展示牌颜色相同的手牌以造成伤害。",
+  ["wzzz_v__xiahouba__paoxiao"] = "咆哮",
+  [":wzzz_v__xiahouba__paoxiao"] = "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。",
   -- AUTO-GENERATED SKILL DESCRIPTION OVERRIDES END
   -- AUTO-GENERATED WZZZ ROSTER END
 }

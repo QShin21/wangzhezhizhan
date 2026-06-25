@@ -873,9 +873,9 @@
     "general": "夏侯霸",
     "package": "wzzz_generals",
     "skill": "咆哮",
-    "implementation": "reference",
-    "selected_id": "ex__paoxiao",
-    "local_id": "wzzz_v__ex__paoxiao",
+    "implementation": "local",
+    "selected_id": "xiahouba__paoxiao",
+    "local_id": "wzzz_v__xiahouba__paoxiao",
     "derived": true,
     "description": "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。"
   },

@@ -15,12 +15,12 @@ baobian:addEffect(fk.Damaged, {
   anim_type = "masochism",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(baobian.name) and
-      table.find({"wzzz_v__tiaoxin", "wzzz_v__ex__paoxiao", "ol_ex__shensu"}, function(s)
+      table.find({"wzzz_v__tiaoxin", "wzzz_v__xiahouba__paoxiao", "ol_ex__shensu"}, function(s)
         return not player:hasSkill(s, true)
       end)
   end,
   on_use = function(self, event, target, player, data)
-    for _, s in ipairs({"wzzz_v__tiaoxin", "wzzz_v__ex__paoxiao", "ol_ex__shensu"}) do
+    for _, s in ipairs({"wzzz_v__tiaoxin", "wzzz_v__xiahouba__paoxiao", "ol_ex__shensu"}) do
       if not player:hasSkill(s, true) then
         player.room:handleAddLoseSkills(player, s)
         return

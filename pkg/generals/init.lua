@@ -307,7 +307,7 @@ local g30 = General:new(extension, "wzzz__xiahouba", "shu", 4)
 g30.title = "棘途壮志"
 g30.trueName = "夏侯霸"
 g30:addSkills { "wzzz_v__ty__baobian", "wzzz__baolie" }
-g30:addRelatedSkills { "wzzz_v__ol_ex__tiaoxin", "wzzz_v__ex__paoxiao", "wzzz_v__shensu" }
+g30:addRelatedSkills { "wzzz_v__ol_ex__tiaoxin", "wzzz_v__xiahouba__paoxiao", "wzzz_v__shensu" }
 Fk:loadTranslationTable {
   ["wzzz__xiahouba"] = "夏侯霸",
   ["#" .. "wzzz__xiahouba"] = "棘途壮志",
