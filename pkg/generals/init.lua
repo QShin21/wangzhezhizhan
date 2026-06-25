@@ -1498,7 +1498,7 @@ Fk:loadTranslationTable {
 local g148 = General:new(extension, "wzzz__liuxie", "qun", 3)
 g148.title = "真命天子"
 g148.trueName = "刘协"
-g148:addSkills { "wzzz_v__tianming", "wzzz_v__mizhao" }
+g148:addSkills { "wzzz_v__liuxie__tianming", "wzzz_v__mizhao" }
 Fk:loadTranslationTable {
   ["wzzz__liuxie"] = "刘协",
   ["#" .. "wzzz__liuxie"] = "真命天子",

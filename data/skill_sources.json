@@ -3755,11 +3755,11 @@
     "general": "刘协",
     "package": "wzzz_generals",
     "skill": "天命",
-    "implementation": "reference",
-    "selected_id": "tianming",
-    "local_id": "wzzz_v__tianming",
+    "implementation": "local",
+    "selected_id": "liuxie__tianming",
+    "local_id": "wzzz_v__liuxie__tianming",
     "derived": false,
-    "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后你可以令全场除你以外体力值唯一最大的角色也如此做。"
+    "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后若全场体力值唯一最大的角色不为你，其也可以如此做。"
   },
   {
     "general_number": 148,
