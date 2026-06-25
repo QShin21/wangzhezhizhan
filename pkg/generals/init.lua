@@ -236,7 +236,7 @@ local g23 = General:new(extension, "wzzz__pangtong", "shu", 3)
 g23.title = "凤雏"
 g23.trueName = "庞统"
 g23:addSkills { "wzzz_v__m_ex__lianhuan", "wzzz_v__niepan" }
-g23:addRelatedSkills { "wzzz_v__bazhen", "wzzz_v__pangtong__huoji", "wzzz_v__ol_ex__kanpo" }
+g23:addRelatedSkills { "wzzz_v__bazhen", "wzzz_v__pangtong__huoji", "wzzz_v__pangtong__kanpo" }
 Fk:loadTranslationTable {
   ["wzzz__pangtong"] = "庞统",
   ["#" .. "wzzz__pangtong"] = "凤雏",

@@ -4,9 +4,9 @@ local kanpo = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__kanpo"] = "看破",
-  [":wzzz_v__ol_ex__kanpo"] = "你可以将一张黑色牌当【无懈可击】使用。你使用的【无懈可击】不能被响应。",
+  [":wzzz_v__ol_ex__kanpo"] = "你可以将一张黑色手牌当【无懈可击】使用。你的【无懈可击】不能被响应。",
 
-  ["#wzzz_v__ol_ex__kanpo"] = "看破：你可以将一张黑色牌当【无懈可击】使用",
+  ["#wzzz_v__ol_ex__kanpo"] = "看破：你可以将一张黑色手牌当【无懈可击】使用",
 
   ["$wzzz_v__ol_ex__kanpo1"] = "此计奥妙，我已看破。",
   ["$wzzz_v__ol_ex__kanpo2"] = "还有什么是我看不破的？",
@@ -20,7 +20,7 @@ kanpo:addEffect("viewas", {
   filter_pattern = {
     min_num = 1,
     max_num = 1,
-    pattern = ".|.|black",
+    pattern = ".|.|black|hand",
   },
   view_as = function(self, player, cards)
     if #cards ~= 1 then return end
@@ -33,7 +33,9 @@ kanpo:addEffect("viewas", {
     return not response
   end,
   enabled_at_nullification = function (self, player, data)
-    return #player:getCardIds("he") > 0 or #player:getHandlyIds(false) > 0
+    return table.find(player:getCardIds("h"), function(id)
+      return Fk:getCardById(id).color == Card.Black
+    end)
   end
 })
 

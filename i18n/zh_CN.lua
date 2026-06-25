@@ -1396,6 +1396,8 @@ return {
   [":wzzz_v__pangtong__huoji"] = "你可以将一张红色牌当【火攻】使用。你的【火攻】改为你展示目标一张手牌，你弃置与其展示牌颜色相同的手牌以造成伤害。",
   ["wzzz_v__xiahouba__paoxiao"] = "咆哮",
   [":wzzz_v__xiahouba__paoxiao"] = "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。",
+  ["wzzz_v__pangtong__kanpo"] = "看破",
+  [":wzzz_v__pangtong__kanpo"] = "你可以将一张黑色牌当【无懈可击】使用；你的【无懈可击】不能被响应。",
   -- AUTO-GENERATED SKILL DESCRIPTION OVERRIDES END
   -- AUTO-GENERATED WZZZ ROSTER END
 }

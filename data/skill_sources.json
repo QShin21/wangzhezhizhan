@@ -708,9 +708,9 @@
     "general": "庞统",
     "package": "wzzz_generals",
     "skill": "看破",
-    "implementation": "reference",
-    "selected_id": "ol_ex__kanpo",
-    "local_id": "wzzz_v__ol_ex__kanpo",
+    "implementation": "local",
+    "selected_id": "pangtong__kanpo",
+    "local_id": "wzzz_v__pangtong__kanpo",
     "derived": true,
     "description": "你可以将一张黑色牌当【无懈可击】使用；你的【无懈可击】不能被响应。"
   },
