@@ -4,10 +4,10 @@ local yongsi = fk.CreateSkill{
 }
 
 Fk:loadTranslationTable{
-  ["wzzz_v__m_ex__yongsi"] = "庸肆",
-  [":wzzz_v__m_ex__yongsi"] = "锁定技，摸牌阶段，你改为摸X张牌（X为全场势力数）；弃牌阶段开始时，你需弃置一张牌，否则失去1点体力。",
+  ["wzzz_v__m_ex__yongsi"] = "庯肆",
+  [":wzzz_v__m_ex__yongsi"] = "锁定技，摸牌阶段，你摸 X 张牌（X 为全场势力数且至少为 3）；弃牌阶段开始时，你弃置一张牌或失去 1 点体力。",
 
-  ["#wzzz_v__m_ex__yongsi-discard"] = "庸肆：你需弃置一张牌，否则失去1点体力",
+  ["#wzzz_v__m_ex__yongsi-discard"] = "庯肆：你需弃置一张牌，否则失去1点体力",
 
   ["$wzzz_v__m_ex__yongsi1"] = "乱世之中，必出枭雄。",
   ["$wzzz_v__m_ex__yongsi2"] = "得此玉玺，是为天助！",
@@ -24,7 +24,7 @@ yongsi:addEffect(fk.DrawNCards, {
     for _, p in ipairs(room.alive_players) do
       table.insertIfNeed(kingdoms, p.kingdom)
     end
-    data.n = #kingdoms
+    data.n = math.max(#kingdoms, 3)
   end,
 })
 

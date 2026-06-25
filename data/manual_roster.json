@@ -1,1107 +1,112 @@
 [
   {
     "number": 1,
-    "name": "曹操",
-    "code_name": "wzzz_lord__caocao",
-    "metadata": "魏势力，4 体力，男性，常备主公",
-    "package": "wzzz_lords",
+    "name": "董允",
+    "code_name": "wzzz__dongyun",
+    "title": "骨鲠良相",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，骨鲠良相",
+    "package": "wzzz_generals",
     "skills": [
       {
-        "name": "述志",
-        "id": "wzzz__shuzhi",
+        "name": "舍宴",
+        "id": "wzzz_v__sheyan",
         "derived": false,
-        "description": "锁定技，亮将后，你选择“奸雄”和“清正”中的一个技能添加限定技标签。"
+        "description": "当你成为普通锦囊牌的目标时，你可以令此牌增加一个无距离限制的目标，若此牌目标数大于1，你可以改为令此牌对其中一个目标无效。"
       },
       {
-        "name": "奸雄",
-        "id": "wzzz_v__ex__jianxiong",
+        "name": "秉正",
+        "id": "wzzz_v__bingzheng",
         "derived": false,
-        "description": "当你受到伤害后，你可以获得对你造成伤害的牌并摸一张牌。"
-      },
-      {
-        "name": "清正",
-        "id": "wzzz_v__mou__qingzheng",
-        "derived": false,
-        "description": "出牌阶段开始时，你可以弃置你手牌中一种花色的所有牌并选择一名其他角色观看你的手牌，然后你观看其手牌并弃置其中一种花色的所有牌；若其被弃置的牌数小于你弃置的牌数，你对其造成 1点伤害。"
-      },
-      {
-        "name": "护驾",
-        "id": "wzzz_v__hujia",
-        "derived": false,
-        "description": "主公技，当你需要使用或打出【闪】时，你可以令其他魏势力角色选择是否替你使用或打出【闪】（视为由你使用或打出）；其他魏势力角色于其回合外使用、打出或替你使用或打出【闪】时，其可以令你摸一张牌（每回合限一次）。"
+        "description": "出牌阶段结束时，你可以选择一名手牌数不等于体力值的角色并选择一项：1.令其摸一张牌；2.令其弃置一张手牌。然后若其手牌数与体力值相等，你摸一张牌并可以交给其一张牌。"
       }
     ]
   },
   {
     "number": 2,
-    "name": "曹叡",
-    "code_name": "wzzz_lord__caorui",
-    "metadata": "魏势力，3 体力，男性，常备主公",
-    "package": "wzzz_lords",
+    "name": "法正",
+    "code_name": "wzzz__fazheng",
+    "title": "蜀汉的辅翼",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，蜀汉的辅翼",
+    "package": "wzzz_generals",
     "skills": [
       {
-        "name": "明鉴",
-        "id": "wzzz_v__ty_ex__mingjian",
+        "name": "恩怨",
+        "id": "wzzz_v__ol_ex__enyuan",
         "derived": false,
-        "description": "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），该角色于其下个回合使用【杀】的次数+1，手牌上限+1。"
+        "description": "当你获得一名其他角色的至少两张牌后，你可以令其摸一张牌；当你受到1点伤害后，你可以令伤害来源选择一项：1.展示并交给你一张红色手牌；2.失去1点体力。"
       },
       {
-        "name": "恢拓",
-        "id": "wzzz_v__huituo",
+        "name": "眩惑",
+        "id": "wzzz_v__ol_ex__xuanhuo",
         "derived": false,
-        "description": "当你受到伤害后，你可以令一名角色进行判定，若结果为：红色，其回复 1 点体力；黑色，其摸 X 张牌（X 为此伤害值）。"
-      },
-      {
-        "name": "兴衰",
-        "id": "wzzz_v__xingshuai",
-        "derived": false,
-        "description": "主公技，限定技，当你进入濒死状态时，你可以令其他魏势力角色依次选择是否令你回复 1 点体力。选择是的角色在此次濒死结算结束后依次受到 1 点无来源的伤害。"
+        "description": "摸牌阶段结束时，你可以交给一名其他角色两张牌，令其选择一项：1.对你指定的另一名角色使用一张无距离限制的【杀】；2.你观看其手牌并获得其手牌区或装备区的共计两张牌。"
       }
     ]
   },
   {
     "number": 3,
-    "name": "曹丕",
-    "code_name": "wzzz_lord__caopi",
-    "metadata": "魏势力，3 体力，男性，常备主公，仅限主公使用",
-    "package": "wzzz_lords",
+    "name": "傅肜",
+    "code_name": "wzzz__furong",
+    "title": "矢忠不二",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，矢忠不二",
+    "package": "wzzz_generals",
     "skills": [
       {
-        "name": "行殇",
-        "id": "wzzz_v__xingshang",
+        "name": "效死",
+        "id": "wzzz_v__xiaosi",
         "derived": false,
-        "description": "其他角色死亡时，你可以获得其所有牌。"
-      },
-      {
-        "name": "放逐",
-        "id": "wzzz_v__fangzhu",
-        "derived": false,
-        "description": "当你受到伤害后，你可以令一名其他角色翻面，然后其摸 X 张牌（X 为你已损失的体力值）。"
-      },
-      {
-        "name": "颂威",
-        "id": "wzzz_v__songwei",
-        "derived": false,
-        "description": "主公技，其他魏势力角色的黑色判定牌生效后，其可以令你摸一张牌。"
+        "description": "出牌阶段限一次，你可以弃置一张基本牌，并令一名有手牌的其他角色弃置一张基本牌（若其不能弃置，则须展示所有手牌，然后你摸一张牌），然后你可以使用双方因此弃置的任意张牌（无距离次数限制）。"
       }
     ]
   },
   {
     "number": 4,
-    "name": "刘备",
-    "code_name": "wzzz_lord__liubei",
-    "metadata": "蜀势力，4 体力，男性，常备主公",
-    "package": "wzzz_lords",
+    "name": "关平",
+    "code_name": "wzzz__guanping",
+    "title": "忠臣孝子，血战禁将",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，忠臣孝子，血战禁将",
+    "package": "wzzz_generals",
     "skills": [
       {
-        "name": "仁德",
-        "id": "wzzz_v__ex__rende",
+        "name": "龙吟",
+        "id": "wzzz_v__ty_ex__longyin",
         "derived": false,
-        "description": "出牌阶段每名角色限一次，你可以将任意张手牌交给一名其他角色，当你于此阶段给出第二张牌时，你可以选择一项：1.视为使用一张基本牌；2.回复 1 点体力并于此阶段取消此技能“每名角色限一次“的限制。"
+        "description": "一名角色于其出牌阶段使用【杀】时，你可以弃置一张牌令此【杀】无次数限制，然后若此【杀】为：红色，你摸一张牌；与你以此法弃置的牌点数相同，“竭忠”视为未发动过。"
       },
       {
-        "name": "仁望",
-        "id": "wzzz_v__v11__renwang",
+        "name": "竭忠",
+        "id": "wzzz_v__ty_ex__jiezhong",
         "derived": false,
-        "description": "每回合限一次，当其他角色于其出牌阶段对你使用【杀】或普通锦囊牌时，若你不是此阶段内第一次成为上述牌的目标，你可以弃置其一张牌。"
-      },
-      {
-        "name": "激将",
-        "id": "wzzz_v__jijiang",
-        "derived": false,
-        "description": "主公技，你可以令其他蜀势力角色在你需要使用或打出【杀】时，依次选择是否打出一张【杀】（视为由你使用或打出），然后其可以令你摸一张牌（每回合限一次）。"
-      },
-      {
-        "name": "授钺",
-        "id": "wzzz__shouyue",
-        "derived": false,
-        "description": "主公技，出牌阶段结束时，你可以令一名体力值不小于你的其他蜀势力角色选择一项：1.跳过下一个出牌阶段；2.视为对其攻击范围内你指定的一名角色使用一张【杀】。"
+        "description": "限定技，出牌阶段开始时，你可以将手牌摸至体力上限。"
       }
     ]
   },
   {
     "number": 5,
-    "name": "刘禅",
-    "code_name": "wzzz_lord__liushan",
-    "metadata": "蜀势力，3 体力，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "享乐",
-        "id": "wzzz_v__xiangle",
-        "derived": false,
-        "description": "锁定技，当你成为一名角色使用【杀】的目标后，除非该角色弃置一张基本牌，否则此【杀】对你无效。"
-      },
-      {
-        "name": "放权",
-        "id": "wzzz_v__m_ex__fangquan",
-        "derived": false,
-        "description": "你可以跳过出牌阶段，若如此做，本回合你的手牌上限等于体力上限，然后此回合结束时，你可以弃置一张手牌，令一名其他角色进行一个额外的回合。"
-      },
-      {
-        "name": "若愚",
-        "id": "wzzz_v__ol_ex__ruoyu",
-        "derived": false,
-        "description": "主公技，觉醒技，准备阶段，若你是体力值最小的角色，你加 1 点体力上限并回复体力至 3 点，然后获得“激将”和“思蜀”。"
-      },
-      {
-        "name": "激将",
-        "id": "wzzz_v__jijiang",
-        "derived": true,
-        "description": "主公技，你可以令其他蜀势力角色在你需要使用或打出【杀】时，依次选择是否打出一张【杀】（视为由你使用或打出）；其他蜀势力角色于其回合外使用或打出【杀】时，其可以令你摸一张牌（每回合限一次）。"
-      },
-      {
-        "name": "思蜀",
-        "id": "wzzz_v__sishu",
-        "derived": true,
-        "description": "出牌阶段开始时，你可以指定一名角色，令其本局游戏中【乐不思蜀】判定结果反转。"
-      }
-    ]
-  },
-  {
-    "number": 6,
-    "name": "孙皓",
-    "code_name": "wzzz_lord__sunhao",
-    "metadata": "吴势力，5 体力，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "残蚀",
-        "id": "wzzz_v__ol__canshi",
-        "derived": false,
-        "description": "摸牌阶段，你可以改为摸 X 张牌（X 为已受伤的角色数且至少为 4）。若如此做，当你本回合内使用【杀】或普通锦囊牌时，你弃置一张牌。"
-      },
-      {
-        "name": "仇海",
-        "id": "wzzz_v__ty__chouhai",
-        "derived": false,
-        "description": "锁定技，当你受到【杀】的伤害时，若你没有手牌，此伤害+1。"
-      },
-      {
-        "name": "归命",
-        "id": "wzzz_v__guiming",
-        "derived": false,
-        "description": "主公技，锁定技，吴势力角色于你的摸牌阶段视为已受伤的角色。"
-      }
-    ]
-  },
-  {
-    "number": 7,
-    "name": "孙权",
-    "code_name": "wzzz_lord__sunquan",
-    "metadata": "吴势力，4 体力，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "制衡",
-        "id": "wzzz_v__tycl__zhiheng",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置任意张牌，然后摸等量的牌。若你以此法弃置了所有的手牌，则额外摸一张牌。"
-      },
-      {
-        "name": "救援",
-        "id": "wzzz_v__mou__jiuyuan",
-        "derived": false,
-        "description": "主公技，当其他吴势力角色使用【桃】时，你可以摸一张牌。其他吴势力角色对你使用【桃】时，你可以额外回复 1 点体力。"
-      },
-      {
-        "name": "统业",
-        "id": "wzzz_v__ofl_mou__tongye",
-        "derived": false,
-        "description": "主公技，锁定技，首轮开始时，你获得“英姿”和“固政”；首轮结束时，你失去“英姿”和“固政”。"
-      },
-      {
-        "name": "英姿",
-        "id": "wzzz_v__ex__yingzi",
-        "derived": true,
-        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等于你的体力上限。"
-      },
-      {
-        "name": "固政",
-        "id": "wzzz_v__guzheng",
-        "derived": true,
-        "description": "其他角色的弃牌阶段结束时，你可以将该角色此阶段内弃置的一张手牌交给该角色，然后你可以获得其余此阶段内弃置的牌。"
-      }
-    ]
-  },
-  {
-    "number": 8,
-    "name": "孙策",
-    "code_name": "wzzz_lord__sunce",
-    "metadata": "吴势力，4 体力，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "激昂",
-        "id": "wzzz_v__jiang",
-        "derived": false,
-        "description": "当你使用【决斗】或红色【杀】指定目标后，或成为【决斗】或红色【杀】目标后，你可以摸一张牌；【决斗】或红色【杀】因弃置进入弃牌堆后，你可以失去 1 点体力获得之（每回合限一次）。"
-      },
-      {
-        "name": "魂姿",
-        "id": "wzzz_v__ol_ex__hunzi",
-        "derived": false,
-        "description": "觉醒技，准备阶段，若你的体力值为 1，你减 1 点体力上限，然后获得“英姿”和“英魂”。本回合的结束阶段，你摸两张牌或回复 1 点体力。"
-      },
-      {
-        "name": "制霸",
-        "id": "wzzz_v__zhiba",
-        "derived": false,
-        "description": "主公技，其他吴势力角色的出牌阶段限一次，其可以与你拼点（你可以拒绝此拼点）；出牌阶段限一次，你可以与一名其他吴势力角色拼点。若其没赢，你可以获得拼点的两张牌。"
-      },
-      {
-        "name": "英姿",
-        "id": "wzzz_v__ex__yingzi",
-        "derived": true,
-        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等于你的体力上限。"
-      },
-      {
-        "name": "英魂",
-        "id": "wzzz_v__yinghun",
-        "derived": true,
-        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置 X 张牌；2.令其摸 X 张牌并弃置一张牌（X 为你已损失的体力值）。"
-      }
-    ]
-  },
-  {
-    "number": 9,
-    "name": "孙坚",
-    "code_name": "wzzz_lord__sunjian",
-    "metadata": "吴势力，4 体力 5 上限，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "英魂",
-        "id": "wzzz_v__yinghun",
-        "derived": false,
-        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置 X 张牌；2.令其摸 X 张牌并弃置一张牌。（X 为你已损失的体力值）"
-      },
-      {
-        "name": "武烈",
-        "id": "wzzz_v__wulie",
-        "derived": false,
-        "description": "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。若你因此失去体力后体力值不大于 3，则你可以令场上一名角色获得“平讨”。"
-      },
-      {
-        "name": "破虏",
-        "id": "wzzz_v__os_ex__polu",
-        "derived": false,
-        "description": "主公技，当吴势力角色杀死一名角色或死亡后，你可以令至多三名角色各摸 Y 张牌（Y 为你此前发动过此技能的次数+1 且至多为 3）。"
-      },
-      {
-        "name": "平讨",
-        "id": "wzzz_v__ol__pingtao",
-        "derived": true,
-        "description": "锁定技，你使用【杀】对目标角色造成伤害时，若该角色没有手牌或拥有“破虏”，则此伤害+1。"
-      }
-    ]
-  },
-  {
-    "number": 10,
-    "name": "刘协",
-    "code_name": "wzzz_lord__liuxie",
-    "metadata": "群势力，3 体力，男性，常备主公",
-    "package": "wzzz_lords",
-    "skills": [
-      {
-        "name": "天命",
-        "id": "wzzz_v__tianming",
-        "derived": false,
-        "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后你可以令全场除你以外体力值唯一最大的角色也如此做。"
-      },
-      {
-        "name": "密诏",
-        "id": "wzzz_v__mizhao",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），然后令其与你选择的另一名其他角色拼点，赢的角色视为对没赢的角色使用一张【杀】。"
-      },
-      {
-        "name": "坠廷",
-        "id": "wzzz_v__os__zhuiting",
-        "derived": false,
-        "description": "主公技，当一张锦囊牌对你生效前，其他群势力或魏势力角色可以将一张与此牌颜色相同的手牌当【无懈可击】使用；本局进入鏖战阶段后，你须执行的鏖战效果修改为：弃置两张牌（不足则全弃，无牌则不弃）。"
-      }
-    ]
-  },
-  {
-    "number": 11,
-    "name": "曹仁",
-    "code_name": "wzzz_sp__sp_caoren",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "伪溃",
-        "id": "wzzz_v__weikui",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以失去 1 点体力并选择一名有手牌的其他角色，你观看其手牌：若其手"
-      },
-      {
-        "name": "励战",
-        "id": "wzzz_v__lizhan",
-        "derived": false,
-        "description": "回合结束时，你可以令任意名已受伤的角色各摸一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 12,
-    "name": "鲁芝",
-    "code_name": "wzzz__luzhi",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "清忠",
-        "id": "wzzz_v__qingzhong",
-        "derived": false,
-        "description": "出牌阶段开始时，你可以摸两张牌，然后本阶段结束时，若你手牌数不为场上唯一最少，你与手牌数最少的一名其他角色交换手牌。"
-      },
-      {
-        "name": "卫境",
-        "id": "wzzz_v__weijing",
-        "derived": false,
-        "description": "每轮限一次，你可以视为使用一张【杀】或【闪】。"
-      }
-    ]
-  },
-  {
-    "number": 13,
-    "name": "朱灵",
-    "code_name": "wzzz__zhuling",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "急陷",
-        "id": "wzzz_v__jixian",
-        "derived": false,
-        "description": "摸牌阶段结束时，你可以视为对满足以下任意条件的一名其他角色使用一张【杀】并摸 X 张牌（X 为其满足的条件数）：1.装备区里有防具牌；2.技能数多于你；3.未受伤。若此【杀】没有对其造成伤害，你失去 1 点体力。"
-      }
-    ]
-  },
-  {
-    "number": 14,
-    "name": "陈群",
-    "code_name": "wzzz__chenqun",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "品第",
-        "id": "wzzz_v__ty_ex__pindi",
-        "derived": false,
-        "description": "出牌阶段每名角色限一次，你可以弃置一张牌并选择一名角色（不能弃置相同类型的牌），令其摸 X 张牌或令其弃置 X 张牌（X 为本回合此技能发动次数）。若其已受伤，你横置。"
-      },
-      {
-        "name": "法恩",
-        "id": "wzzz_v__faen",
-        "derived": false,
-        "description": "当一名角色翻至正面或横置后，你可以令其摸一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 15,
-    "name": "李典",
-    "code_name": "wzzz__lidian",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "恂恂",
-        "id": "wzzz_v__xunxun",
-        "derived": false,
-        "description": "摸牌阶段开始时，你可以观看牌堆顶的四张牌，将其中两张牌以任意顺序置于牌堆顶，其余以任意顺序置于牌堆底。"
-      },
-      {
-        "name": "忘隙",
-        "id": "wzzz_v__ol_ex__wangxi",
-        "derived": false,
-        "description": "当你对其他角色造成 1 点伤害后，或当你受到其他角色造成的 1 点伤害后，你可以摸两张牌并将其中一张牌交给其。"
-      }
-    ]
-  },
-  {
-    "number": 16,
-    "name": "典韦",
-    "code_name": "wzzz__dianwei",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "强袭",
-        "id": "wzzz_v__ol__qiangxi",
-        "derived": false,
-        "description": "出牌阶段限两次，你可以受到 1 点伤害或弃置一张武器牌，然后对一名本回合未以此法指定过的其他角色造成 1 点伤害。"
-      },
-      {
-        "name": "狞恶",
-        "id": "wzzz_v__ninge",
-        "derived": false,
-        "description": "锁定技，当一名角色每回合第二次受到伤害后，若其为你或伤害来源为你，你摸一张牌并弃置其区域里的一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 17,
-    "name": "夏侯惇",
-    "code_name": "wzzz__xiahoudun",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "刚烈",
-        "id": "wzzz_v__ex__ganglie",
-        "derived": false,
-        "description": "当你受到 1 点伤害后，你可以选择一名其他角色并进行判定，若结果为：红色，你对其造成 1点伤害；黑色，你弃置其一张牌。"
-      },
-      {
-        "name": "清俭",
-        "id": "wzzz_v__ex__qingjian",
-        "derived": false,
-        "description": "每轮限一次，当你于摸牌阶段外获得牌后，你可以展示任意张牌并将这些牌交给一名其他角色，然后当前回合角色本回合手牌上限+X（X 为你以此法展示的牌包含的类型数）。"
-      }
-    ]
-  },
-  {
-    "number": 18,
-    "name": "文聘",
-    "code_name": "wzzz__wenpin",
-    "metadata": "魏势力，5 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "坚城",
-        "id": "wzzz_v__tg__jiancheng",
-        "derived": false,
-        "description": "若本局为团队模式，亮将后，你可以失去“镇卫”，获得“守御”。"
-      },
-      {
-        "name": "镇卫",
-        "id": "wzzz_v__zhenwei",
-        "derived": false,
-        "description": "当其他角色成为【杀】或黑色锦囊牌的唯一目标时，若其体力值小于你，你可以弃置一张牌并"
-      },
-      {
-        "name": "守御",
-        "id": "wzzz__shouyu",
-        "derived": true,
-        "description": "锁定技，敌方角色计算与其他己方角色的距离+1。"
-      }
-    ]
-  },
-  {
-    "number": 19,
-    "name": "荀攸",
-    "code_name": "wzzz__xunyou",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "奇策",
-        "id": "wzzz_v__qice",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以将所有手牌当任意一张普通锦囊牌使用。"
-      },
-      {
-        "name": "智愚",
-        "id": "wzzz_v__ty_ex__zhiyu",
-        "derived": false,
-        "description": "当你受到伤害后，你可以摸一张牌并展示所有手牌，然后令伤害来源弃置一张手牌。若你展示的牌颜色均相同，你获得弃置的牌且下回合“奇策”发动次数+1。"
-      }
-    ]
-  },
-  {
-    "number": 20,
-    "name": "蒋干",
-    "code_name": "wzzz__jianggan",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "盗书",
-        "id": "wzzz_v__daoshu",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以选择一名有手牌的其他角色并声明一种花色，然后你获得其一张手牌并展示之，若此牌与你声明的花色：相同，你对其造成 1 点伤害，“盗书”视为未发动过；不同，你展示一张与你此法获得的牌花色不同的手牌并交给该角色（没有则改为展示手牌）。"
-      },
-      {
-        "name": "伪诚",
-        "id": "wzzz_v__weicheng",
-        "derived": false,
-        "description": "当你将手牌交给其他角色，或你的手牌被其他角色获得后，若你的手牌数不大于体力值，你可以摸一张牌。"
-      },
-      {
-        "name": "戴罪",
-        "id": "wzzz_v__daizui",
-        "derived": false,
-        "description": "限定技，当你受到致命伤害时，你可以对伤害来源发动一次“盗书”，若本次“盗书”你对其造成了伤害，则防止你受到的致命伤害。"
-      }
-    ]
-  },
-  {
-    "number": 21,
-    "name": "张辽",
-    "code_name": "wzzz__zhangliao",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "突袭",
-        "id": "wzzz_v__tuxi",
-        "derived": false,
-        "description": "你的回合内限两次，当你不以此法获得牌后，你可以弃置至多 X 张手牌，然后获得至多 X 名其他角色各一张手牌（X 为你获得的牌数且至多为 2，若为本回合第二次发动则改为至多为 1）。"
-      }
-    ]
-  },
-  {
-    "number": 22,
-    "name": "郭嘉",
-    "code_name": "wzzz__guojia",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "天妒",
-        "id": "wzzz_v__tiandu",
-        "derived": false,
-        "description": "当你的判定牌生效后，你可以获得之。"
-      },
-      {
-        "name": "遗计",
-        "id": "wzzz_v__ex__yiji",
-        "derived": false,
-        "description": "当你受到 1 点伤害后，你可以摸两张牌，然后你可以将至多两张手牌交给一至两名其他角色。当你每轮首次进入濒死状态时，你可以摸一张牌，然后你可以将一张手牌交给一名其他角色。"
-      }
-    ]
-  },
-  {
-    "number": 23,
-    "name": "司马懿",
-    "code_name": "wzzz__simayi",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "鬼才",
-        "id": "wzzz_v__guicai",
-        "derived": false,
-        "description": "当一名角色的判定牌生效前，你可以打出一张牌代替之。"
-      },
-      {
-        "name": "反馈",
-        "id": "wzzz_v__ex__fankui",
-        "derived": false,
-        "description": "当你受到 1 点伤害后，可以选择其中一项：1.你获得一名角色区域里的一张牌；2.观看一名角色手牌并获得其中一张牌(每轮限一次)。"
-      }
-    ]
-  },
-  {
-    "number": 24,
-    "name": "荀彧",
-    "code_name": "wzzz__xunyu",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "驱虎",
-        "id": "wzzz_v__quhu",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以与一名体力值大于你的角色拼点。若你赢，该角色对其攻击范围内你选择的一名角色造成 1 点伤害；若你没赢，该角色对你造成 1 点伤害。"
-      },
-      {
-        "name": "节命",
-        "id": "wzzz_v__ol_ex__jieming",
-        "derived": false,
-        "description": "当你受到 1 点伤害后，你可以令一名角色将手牌摸至 X 张。当你死亡时，你可以令一名角色摸 X 张牌，然后令其将手牌弃置至 X 张（X 为其体力上限且最多为 5）。"
-      }
-    ]
-  },
-  {
-    "number": 25,
-    "name": "曹昂",
-    "code_name": "wzzz__caoang",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "慷忾",
-        "id": "wzzz_v__kangkai",
-        "derived": false,
-        "description": "当一名角色成为【杀】的目标后，若你与其距离 1 以内，你可以摸一张牌，然后交给其一张牌并展示之。若此牌为装备牌，该角色可以使用此牌。"
-      },
-      {
-        "name": "舍身",
-        "id": "wzzz_v__vd_sheshen",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一名角色区域里的一张牌，然后失去 1 点体力，若弃置的牌为一名角色判定区里的牌，你失去“舍身”。"
-      }
-    ]
-  },
-  {
-    "number": 26,
-    "name": "张春华",
-    "code_name": "wzzz__zhangchunhua",
-    "metadata": "魏势力，3 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "绝情",
-        "id": "wzzz_v__ty_ex__jueqing",
-        "derived": false,
-        "description": "当你造成非传导伤害时，你可以失去等量的体力并令此伤害翻倍。若如此做，此伤害结算完成后，你修改“绝情”。（修改：锁定技，你即将造成的伤害视为失去体力。）"
-      },
-      {
-        "name": "伤逝",
-        "id": "wzzz_v__shangshi",
-        "derived": false,
-        "description": "当你的手牌数小于 X 时，你可以将手牌摸至 X 张(X 为你已损失的体力值)。"
-      },
-      {
-        "name": "翦灭",
-        "id": "wzzz_v__jianmie",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以令一名其他角色选择一种颜色，然后你选择一种颜色，你与其展示所有手牌并弃置各自所选颜色的全部手牌(没有该颜色则不弃)，然后弃置牌较多的角色视为对另一名角色使用一张【决斗】。"
-      }
-    ]
-  },
-  {
-    "number": 27,
-    "name": "徐晃",
-    "code_name": "wzzz__xuhuang",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "断粮",
-        "id": "wzzz_v__m_ex__duanliang",
-        "derived": false,
-        "description": "你可以将一张黑色非锦囊牌当【兵粮寸断】使用；若你本回合未造成过伤害，你使用【兵粮寸断】无距离限制 。（团队模式中修改为“你对手牌数不小于你的角色使用【兵粮寸断】无距离限制”）"
-      },
-      {
-        "name": "截辎",
-        "id": "wzzz_v__m_ex__jiezi",
-        "derived": false,
-        "description": "其他角色跳过摸牌阶段后，你可以令一名角色摸一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 28,
-    "name": "阎柔",
-    "code_name": "wzzz__yanrou",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "仇讨",
-        "id": "wzzz_v__choutao",
-        "derived": false,
-        "description": "当你使用【杀】指定目标或成为【杀】的目标后，你可以弃置使用者的一张牌令此【杀】不能被抵消，若使用者为你，此【杀】无次数限制。"
-      },
-      {
-        "name": "襄戍",
-        "id": "wzzz_v__xiangshu",
-        "derived": false,
-        "description": "限定技，结束阶段，你可以令一名已受伤的角色回复 X 点体力并摸 X 张牌（X 为你本回合造成的伤害值且至多为 5）。"
-      }
-    ]
-  },
-  {
-    "number": 29,
-    "name": "郝昭",
-    "code_name": "wzzz__haozhao",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "镇骨",
-        "id": "wzzz_v__zhengu",
-        "derived": false,
-        "description": "结束阶段，你可以选择一名其他角色，本回合与其下个回合结束后，其将手牌调整至 X（X 为你的手牌数，至多摸至五张）。"
-      }
-    ]
-  },
-  {
-    "number": 30,
-    "name": "毛玠",
-    "code_name": "wzzz__maojie",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "秉清",
-        "id": "wzzz_v__bingqing",
-        "derived": false,
-        "description": "出牌阶段，你使用每种花色的第一张牌结算完成后，若该花色为你此阶段使用的：第二种花色，你可以令一名角色摸两张牌；第三种，你可以弃置一名角色区域里的一张牌；第四种，你可以对一名其他角色造成 1 点伤害。"
-      },
-      {
-        "name": "奉迎",
-        "id": "wzzz_v__ty__fengying",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以弃置所有手牌并于此回合结束后执行一个额外的回合。此额外的回合开始时，若你已受伤且体力值为全场最少，你可以将手牌摸至体力值。"
-      }
-    ]
-  },
-  {
-    "number": 31,
-    "name": "夏侯渊",
-    "code_name": "wzzz__xiahouyuan",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "神速",
-        "id": "wzzz_v__shensu",
-        "derived": false,
-        "description": "你可以做出如下选择：1.跳过判定阶段和摸牌阶段；2.跳过出牌阶段并弃置一张装备牌；3.跳过弃牌阶段并翻面。你每选择一项，视为你使用一张无距离限制的【杀】。"
-      },
-      {
-        "name": "设变",
-        "id": "wzzz_v__shebian",
-        "derived": false,
-        "description": "当你翻面时，你可以移动场上的一张装备牌。"
-      }
-    ]
-  },
-  {
-    "number": 32,
-    "name": "邓艾",
-    "code_name": "wzzz__dengai",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "屯田",
-        "id": "wzzz_v__ol_ex__tuntian",
-        "derived": false,
-        "description": "当你于回合外失去牌后，或你于回合内弃置【杀】后，你可以进行判定，若结果不为红桃，将判定牌置于你的武将牌上，称为“田”；若结果为红桃，则你获得此判定牌；你计算与其他角色的距离-X（X 为“田”的数量）。"
-      },
-      {
-        "name": "凿险",
-        "id": "wzzz_v__zaoxian",
-        "derived": false,
-        "description": "觉醒技，准备阶段，若“田”的数量不小于 3，你减少 1 点体力上限并获得“急袭” 。"
-      },
-      {
-        "name": "急袭",
-        "id": "wzzz_v__jixi",
-        "derived": true,
-        "description": "你可以将一张“田”当【顺手牵羊】使用。"
-      }
-    ]
-  },
-  {
-    "number": 33,
-    "name": "王基",
-    "code_name": "wzzz__wangji",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "奇制",
-        "id": "wzzz_v__qizhi",
-        "derived": false,
-        "description": "当你于回合内使用牌指定目标后，你可以弃置不是此牌目标的一名角色一张牌，然后该角色摸一张牌。"
-      },
-      {
-        "name": "进趋",
-        "id": "wzzz_v__jinqu",
-        "derived": false,
-        "description": "结束阶段，你可以摸两张牌，然后将手牌弃置至 X+1 张 (X 为你于此回合内发动过“奇制”的次数)。"
-      }
-    ]
-  },
-  {
-    "number": 34,
-    "name": "姜维",
-    "code_name": "wzzz_sp__sp_jiangwei",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "困奋",
-        "id": "wzzz_v__kunfenEx",
-        "derived": false,
-        "description": "结束阶段，你可以失去 1 点体力，然后摸两张牌（修改：增加描述“且可以视为使用一张【火攻】”）。"
-      },
-      {
-        "name": "逢亮",
-        "id": "wzzz_v__fengliang",
-        "derived": false,
-        "description": "觉醒技，当你进入濒死状态时，你减 1 点体力上限并将体力回复至 2 点，然后获得“挑衅”，并修改“困奋”。"
-      },
-      {
-        "name": "挑衅",
-        "id": "wzzz_v__m_ex__tiaoxin",
-        "derived": true,
-        "description": "出牌阶段限一次，你可以令一名其他角色选择一项：1.对你使用一张【杀】；2.你弃置其一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 35,
-    "name": "钟会",
-    "code_name": "wzzz__zhonghui",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "权计",
-        "id": "wzzz_v__m_ex__quanji",
-        "derived": false,
-        "description": "出牌阶段结束时，若你的手牌数大于你的体力值，或当你受到 1 点伤害后，你可以摸一张牌，然后你将一张手牌置于武将牌上，称为“权”；你的手牌上限+X(X 为“权”的数量)。（修改“权计”删除描述：“出牌阶段结束时，若你的手牌数大于你的体力值”）"
-      },
-      {
-        "name": "自立",
-        "id": "wzzz_v__zili",
-        "derived": false,
-        "description": "觉醒技，准备阶段，若“权”的数量不小于 3，你减 1 点体力上限并获得“排异”，然后回复 1点体力或摸两张牌。然后你修改“权计”。"
-      },
-      {
-        "name": "排异",
-        "id": "wzzz_v__m_ex__paiyi",
-        "derived": true,
-        "description": "出牌阶段限一次，你可以移去一张“权”，令一名角色摸两张牌。若该角色的手牌数大于你，你对其造成 1 点伤害。"
-      }
-    ]
-  },
-  {
-    "number": 36,
-    "name": "王异",
-    "code_name": "wzzz__wangyi",
-    "metadata": "魏势力，4 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "贞烈",
-        "id": "wzzz_v__zhenlie",
-        "derived": false,
-        "description": "当你成为其他角色使用【杀】或普通锦囊牌的目标后，你可以失去 1 点体力。若如此做，此牌对你无效，然后你弃置其一张牌。"
-      },
-      {
-        "name": "秘计",
-        "id": "wzzz_v__miji",
-        "derived": false,
-        "description": "结束阶段，你可以摸 X 张牌（X 为你已损失的体力值），然后可以将等量的手牌交给其他角色。"
-      }
-    ]
-  },
-  {
-    "number": 37,
-    "name": "曹冲",
-    "code_name": "wzzz__caochong",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "称象",
-        "id": "wzzz_v__ty_ex__chengxiang",
-        "derived": false,
-        "description": "当你受到伤害后，你可以亮出牌堆顶的四张牌，获得其中任意张点数之和不大于 13 的牌；若获得的牌点数之和恰好为 13，你可以复原武将牌或下次发动“称象”亮出牌堆顶五张牌。"
-      },
-      {
-        "name": "仁心",
-        "id": "wzzz_v__renxin",
-        "derived": false,
-        "description": "当体力值为 1 的其他角色受到伤害时，你可以弃置一张装备牌并翻面，然后防止此伤害。"
-      }
-    ]
-  },
-  {
-    "number": 38,
-    "name": "甄姬",
-    "code_name": "wzzz__zhenji",
-    "metadata": "魏势力，3 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "洛神",
-        "id": "wzzz_v__ex__luoshen",
-        "derived": false,
-        "description": "准备阶段，你可以进行判定并获得判定牌，当黑色判定牌生效后，你可以重复此流程。本回合你的手牌上限+X（X 为你本回合以此法获得的黑色牌数）。"
-      },
-      {
-        "name": "倾国",
-        "id": "wzzz_v__qingguo",
-        "derived": false,
-        "description": "你可以将一张黑色手牌当【闪】使用或打出。"
-      }
-    ]
-  },
-  {
-    "number": 39,
-    "name": "许褚",
-    "code_name": "wzzz__xuchu",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "裸衣",
-        "id": "wzzz_v__ex__luoyi",
-        "derived": false,
-        "description": "摸牌阶段开始前，你可以亮出牌堆顶的三张牌，然后你可以跳过摸牌阶段并获得其中的基本牌、武器牌或【决斗】。若如此做，直到你的下个回合开始，你为伤害来源的【杀】或【决斗】造成的伤害+1 且当你使用的【杀】被【闪】抵消后，你可以摸一张牌。"
-      },
-      {
-        "name": "挟缠",
-        "id": "wzzz_v__v11__xiechan",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以与一名其他角色拼点，若你赢，你视为对其使用一张【决斗】；若你没赢，其视为对你使用一张【决斗】。"
-      }
-    ]
-  },
-  {
-    "number": 40,
-    "name": "诸葛诞",
-    "code_name": "wzzz__zhugedan",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "功獒",
-        "id": "wzzz_v__ty_ex__gongao",
-        "derived": false,
-        "description": "锁定技，每名角色限一次，当一名其他角色第一次进入濒死状态时，你加 1 点体力上限并回复1 点体力。（修改“功獒”的发动时机为“当其他角色死亡后”）"
-      },
-      {
-        "name": "举义",
-        "id": "wzzz_v__ty_ex__juyi",
-        "derived": false,
-        "description": "觉醒技，准备阶段，若你的体力上限大于场上角色数，你将手牌摸至体力上限，获得“崩坏”和“威重”，并修改“功獒”。"
-      },
-      {
-        "name": "威重",
-        "id": "wzzz_v__weizhong",
-        "derived": true,
-        "description": "锁定技，当你的体力上限减少时，你摸一张牌；本局进入鏖战阶段后，你须执行的鏖战效果修改为：失去1点体力。"
-      },
-      {
-        "name": "崩坏",
-        "id": "wzzz_v__benghuai",
-        "derived": true,
-        "description": "锁定技，结束阶段，若你不是体力值最小的角色，你失去 1 点体力或减 1 点体力上限。"
-      }
-    ]
-  },
-  {
-    "number": 41,
-    "name": "刘谌",
-    "code_name": "wzzz__liuchen",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "战绝",
-        "id": "wzzz_v__zhanjue",
-        "derived": false,
-        "description": "出牌阶段限两次，你可以将所有手牌当【决斗】使用并摸一张牌，然后因此受伤的角色摸一张牌。若你本阶段因此技能受到过伤害，此技能本阶段失效。"
-      },
-      {
-        "name": "勤王",
-        "id": "wzzz_v__qinwang",
-        "derived": false,
-        "description": "每回合限一次，当你需要打出【杀】时，你可以弃置一张牌，然后令其他角色依次选择是否打出【杀】（视为由你打出），响应的角色摸一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 42,
-    "name": "庞统",
-    "code_name": "wzzz__pangtong",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "连环",
-        "id": "wzzz_v__m_ex__lianhuan",
-        "derived": false,
-        "description": "你可以将一张梅花牌当【铁索连环】使用或重铸；你使用【铁索连环】可以额外指定一名目标。"
-      },
-      {
-        "name": "涅槃",
-        "id": "wzzz_v__niepan",
-        "derived": false,
-        "description": "限定技，当你处于濒死状态时，你可以弃置区域里的所有牌，然后复原你的武将牌，摸三张牌，将体力回复至 3 点，然后你获得“八阵”“火计”“看破”中的一个。"
-      },
-      {
-        "name": "八阵",
-        "id": "wzzz_v__bazhen",
-        "derived": true,
-        "description": "锁定技，若你的装备区里没有防具牌，你视为装备着【八卦阵】。你的【八卦阵】判定失效时，你摸一张牌。"
-      },
-      {
-        "name": "火计",
-        "id": "wzzz_v__ol_ex__huoji",
-        "derived": true,
-        "description": "你可以将一张红色牌当【火攻】使用。你的【火攻】改为你展示目标一张手牌，你弃置与其展示牌颜色相同的手牌以造成伤害。"
-      },
-      {
-        "name": "看破",
-        "id": "wzzz_v__ol_ex__kanpo",
-        "derived": true,
-        "description": "你可以将一张黑色牌当【无懈可击】使用；你的【无懈可击】不能被响应。"
-      }
-    ]
-  },
-  {
-    "number": 43,
-    "name": "马超",
-    "code_name": "wzzz__machao",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "马术",
-        "id": "wzzz_v__mashu",
-        "derived": false,
-        "description": "锁定技，你计算与其他角色的距离-1；当你使用或失去装备区里的坐骑牌时，你摸一张牌。"
-      },
-      {
-        "name": "铁骑",
-        "id": "wzzz_v__ex__tieji",
-        "derived": false,
-        "description": "当你使用【杀】指定一名角色为目标后，你可以令其本回合内非锁定技失效，然后你进行判定，除非该角色弃置与结果花色相同的一张牌，否则不能使用【闪】响应此【杀】。"
-      },
-      {
-        "name": "锦姿",
-        "id": "wzzz__jinzi",
-        "derived": false,
-        "description": "若你的装备区里没有防具牌，你视为装备着【白银狮子】。每轮限一次，你可以将一张武器牌或防具牌当【杀】使用，然后你可以令此【杀】无次数限制并失去“锦姿”。"
-      }
-    ]
-  },
-  {
-    "number": 44,
-    "name": "黄权",
-    "code_name": "wzzz__huangquan",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "筹进",
-        "id": "wzzz_v__choujin",
-        "derived": false,
-        "description": "游戏开始时，你可以令一名其他角色获得“筹进”标记；每回合限一次，一名角色对拥有“筹进”标记的角色造成伤害后，伤害来源可以摸一张牌。"
-      },
-      {
-        "name": "谏计",
-        "id": "wzzz_v__jianji",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以令一名其他角色摸一张牌并展示之，然后其可以使用此牌(可转化使用)。"
-      },
-      {
-        "name": "途绝",
-        "id": "wzzz_v__tujue",
-        "derived": false,
-        "description": "限定技，当你进入濒死状态时，你可以将所有牌交给一名其他角色。"
-      }
-    ]
-  },
-  {
-    "number": 45,
-    "name": "关兴&张苞",
+    "name": "关兴张苞",
     "code_name": "wzzz__guanxingzhangbao",
-    "metadata": "蜀势力，4 体力，男性",
+    "title": "将门虎子",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，将门虎子",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1124,440 +129,66 @@
       },
       {
         "name": "咆哮",
-        "id": "wzzz_v__mou__paoxiao",
+        "id": "wzzz_v__ex__paoxiao",
         "derived": true,
         "description": "锁定技，你使用【杀】无次数限制，每回合你使用第二张【杀】时，摸一张牌。"
       }
     ]
   },
   {
-    "number": 46,
-    "name": "马谡",
-    "code_name": "wzzz__masu",
-    "metadata": "蜀势力，3 体力，男性",
+    "number": 6,
+    "name": "关银屏",
+    "code_name": "wzzz__guanyinping",
+    "title": "武姬",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "蜀势力，3/3 体力，女性，武姬",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "散谣",
-        "id": "wzzz_v__ol__sanyao",
+        "name": "雪恨",
+        "id": "wzzz_v__ol__xuehen",
         "derived": false,
-        "description": "出牌阶段各限一次，你可以弃置一张牌，然后对体力值最大/手牌数最多的一名角色造成 1 点伤害。"
+        "description": "出牌阶段限一次，你可以弃置一张红色牌并选择至多X名角色（X为你已损失的体力值且至少为1），然后你横置这些角色，并对其中一名角色造成1点火焰伤害。"
       },
       {
-        "name": "制蛮",
-        "id": "wzzz_v__ty_ex__zhiman",
+        "name": "虎啸",
+        "id": "wzzz_v__ol__huxiao",
         "derived": false,
-        "description": "当你对其他角色造成伤害时，你可以防止此伤害，然后获得其区域里的一张牌。"
+        "description": "锁定技，当你对一名角色造成火焰伤害后，其摸一张牌，本回合你对其使用牌无次数限制。"
       },
       {
-        "name": "挥泪",
-        "id": "wzzz_v__huilei",
+        "name": "武继",
+        "id": "wzzz_v__shzj_guansuo__wuji",
         "derived": false,
-        "description": "锁定技，当你死亡时，杀死你的角色弃置所有牌。"
-      }
-    ]
-  },
-  {
-    "number": 47,
-    "name": "夏侯氏",
-    "code_name": "wzzz__xiahoushi",
-    "metadata": "蜀势力，3 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "樵拾",
-        "id": "wzzz_v__qiaoshi",
-        "derived": false,
-        "description": "其他角色的结束阶段，若其手牌数等于你，你可以与其各摸一张牌。"
+        "description": "觉醒技，结束阶段，若你于此回合内造成过至少3点伤害，你加1点体力上限并回复1点体力，然后选择一项：1.获得“偃月”，失去“虎啸”并摸两张牌，然后可以弃置你装备区里的武器牌；2.获得“武圣”并摸一张牌。"
       },
       {
-        "name": "燕语",
-        "id": "wzzz_v__ty_ex__yanyu",
-        "derived": false,
-        "description": "出牌阶段，你可以重铸【杀】。出牌阶段结束时，你可以令一名男性角色摸 X 张牌。（X 为你此阶段重铸【杀】的数量且至多为 3）"
-      }
-    ]
-  },
-  {
-    "number": 48,
-    "name": "张星彩",
-    "code_name": "wzzz__zhangxingcai",
-    "metadata": "蜀势力，3 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "甚贤",
-        "id": "wzzz_v__ol__shenxian",
-        "derived": false,
-        "description": "每名其他角色的回合限一次，当其他角色因弃置而失去基本牌后，你可以摸一张牌。"
-      },
-      {
-        "name": "枪舞",
-        "id": "wzzz_v__qiangwu",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以进行判定，然后本回合你使用点数小于判定结果的【杀】无距离限制，点数大于判定结果的【杀】无次数限制。"
-      }
-    ]
-  },
-  {
-    "number": 49,
-    "name": "祝融",
-    "code_name": "wzzz__zhurong",
-    "metadata": "蜀势力，4 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "巨象",
-        "id": "wzzz_v__juxiang",
-        "derived": false,
-        "description": "锁定技，【南蛮入侵】对你无效；其他角色使用的【南蛮入侵】结算完成后，你获得之。"
-      },
-      {
-        "name": "烈刃",
-        "id": "wzzz_v__os_ex__lieren",
-        "derived": false,
-        "description": "当你使用【杀】指定目标后，你可以与其拼点，若你：赢，你获得其一张牌；没赢，你与其获得对方的拼点牌。"
-      },
-      {
-        "name": "长标",
-        "id": "wzzz_v__changbiao",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以将任意张手牌（至少一张）当一张无距离限制的【杀】使用，若此【杀】造成过伤害，出牌阶段结束时，你摸等量的牌。"
-      }
-    ]
-  },
-  {
-    "number": 50,
-    "name": "马良",
-    "code_name": "wzzz__maliang",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "自书",
-        "id": "wzzz_v__mobile__zishu",
-        "derived": false,
-        "description": "锁定技，当你于回合内非因此法而获得牌后，你摸一张牌；其他角色的回合结束后，你弃置 X张牌。（X 为你本回合获得的牌数）"
-      },
-      {
-        "name": "应援",
-        "id": "wzzz_v__yingyuan",
-        "derived": false,
-        "description": "每回合限两次，当你于回合内使用的基本牌或普通锦囊牌结算结束后，你可以将之交给一名其他角色。"
-      },
-      {
-        "name": "协穆",
-        "id": "wzzz_v__sxfy__xiemu",
-        "derived": false,
-        "description": "其他角色的出牌阶段限一次，其可以交给你一张基本牌并展示之，然后你可以令其本回合攻击范围+1。"
-      }
-    ]
-  },
-  {
-    "number": 51,
-    "name": "吴懿",
-    "code_name": "wzzz__wuyi",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "奔袭",
-        "id": "wzzz_v__m_ex__benxi",
-        "derived": false,
-        "description": "出牌阶段开始时，你可以弃置至多四张牌，令你本阶段计算与其他角色的距离-X、你使用的下一张基本牌或普通锦囊牌可以额外指定至多 X 名你计算与其距离为 1 的角色为目标，然后此牌结算结束后，若此牌造成过伤害，你摸 X 张牌。(X 为你以此法弃置的牌数)"
-      }
-    ]
-  },
-  {
-    "number": 52,
-    "name": "夏侯霸",
-    "code_name": "wzzz__xiahouba",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "豹变",
-        "id": "wzzz_v__ty__baobian",
-        "derived": false,
-        "description": "锁定技，当你受到伤害后，你依次获得以下技能：“挑衅”“咆哮”“神速”。"
-      },
-      {
-        "name": "豹烈",
-        "id": "wzzz__baolie",
-        "derived": false,
-        "description": "限定技，准备阶段，你可以对自己造成 2 点伤害。"
-      },
-      {
-        "name": "挑衅",
-        "id": "wzzz_v__ol_ex__tiaoxin",
+        "name": "偃月",
+        "id": "wzzz_s__5043_6708",
         "derived": true,
-        "description": "出牌阶段限一次，你可以选择一名攻击范围内包含你的角色，然后除非该角色对你使用一张【杀】且此【杀】对你造成伤害，否则你弃置其一张牌并在本阶段内将此技能修改为“出牌阶段限两次”。"
+        "description": "锁定技，若你的装备区里没有武器牌，你视为装备着【青龙偃月刀】。"
       },
       {
-        "name": "咆哮",
-        "id": "wzzz_v__ex__paoxiao",
+        "name": "武圣",
+        "id": "wzzz_v__wusheng",
         "derived": true,
-        "description": "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。"
-      },
-      {
-        "name": "神速",
-        "id": "wzzz_v__shensu",
-        "derived": true,
-        "description": "你可以做出如下选择：1.跳过判定阶段和摸牌阶段；2.跳过出牌阶段并弃置一张装备牌；3.跳过弃牌阶段并翻面。你每选择一项，视为你使用一张无距离限制的【杀】。"
+        "description": "你可以将一张红色牌当【杀】使用或打出。你使用的方块【杀】无距离限制。"
       }
     ]
   },
   {
-    "number": 53,
-    "name": "秦宓",
-    "code_name": "wzzz__qinmi",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "谏征",
-        "id": "wzzz_v__jianzhengq",
-        "derived": false,
-        "description": "攻击范围内包含你的角色使用【杀】指定目标时，若你不为此【杀】目标，你可以将一张手牌置于牌堆顶，并取消所有目标，然后若此【杀】不为黑色，你成为此【杀】目标。"
-      },
-      {
-        "name": "专对",
-        "id": "wzzz_v__zhuandui",
-        "derived": false,
-        "description": "当你使用【杀】指定目标后，你可以与其拼点，若你赢，其不能抵消此【杀】；当你成为【杀】的目标后，你可以与使用者拼点，若你赢，此【杀】对你无效。"
-      },
-      {
-        "name": "天辩",
-        "id": "wzzz_v__tianbian",
-        "derived": false,
-        "description": "当你拼点时，你可以用牌堆顶的一张牌拼点；你的红桃拼点牌点数视为 K。"
-      }
-    ]
-  },
-  {
-    "number": 54,
-    "name": "诸葛瞻",
-    "code_name": "wzzz__zhugezhan",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "罪论",
-        "id": "wzzz_v__zuilun",
-        "derived": false,
-        "description": "结束阶段，你可以观看牌堆顶的三张牌，然后获得其中的 X 张牌，其余牌以任意顺序放回牌堆顶，若你未获得牌，你与一名其他角色各失去 1 点体力（X 为你符合的条件数：1. 本回合造成过伤害；2.手牌数为场上最少；3.本回合未弃置过牌）。"
-      },
-      {
-        "name": "父荫",
-        "id": "wzzz_v__fuyin",
-        "derived": false,
-        "description": "锁定技，每回合你第一次成为【杀】或【决斗】的目标后，若使用者的手牌数不小于你，此牌对你无效。"
-      }
-    ]
-  },
-  {
-    "number": 55,
-    "name": "黄忠",
-    "code_name": "wzzz__huangzhong",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "烈弓",
-        "id": "wzzz_v__ol_ex__liegong",
-        "derived": false,
-        "description": "你使用【杀】可以选择距离不大于此【杀】点数的角色为目标；当你使用【杀】指定目标后，"
-      },
-      {
-        "name": "益壮",
-        "id": "wzzz_v__yizhuang",
-        "derived": false,
-        "description": "准备阶段，若你的判定区里有牌，你可以对自己造成 1 点伤害，然后弃置判定区里的所有牌。"
-      }
-    ]
-  },
-  {
-    "number": 56,
-    "name": "沙摩柯",
-    "code_name": "wzzz__shamoke",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "蒺藜",
-        "id": "wzzz_v__jilis",
-        "derived": false,
-        "description": "每回合你使用或打出第 X 张牌时，你可以摸 X 张牌（X 为你的攻击范围）。"
-      }
-    ]
-  },
-  {
-    "number": 57,
-    "name": "糜竺",
-    "code_name": "wzzz__mizhu",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "巨贾",
-        "id": "wzzz_v__jugu",
-        "derived": false,
-        "description": "锁定技，你的手牌上限+X；游戏开始时，你摸 X 张牌（X 为你的体力上限）。"
-      },
-      {
-        "name": "资援",
-        "id": "wzzz_v__ziyuan",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以交给一名其他角色任意张点数之和不大于 13 的牌并展示之，然后你摸一张牌，若：点数之和等于 13，你令该角色回复 1 点体力。"
-      }
-    ]
-  },
-  {
-    "number": 58,
-    "name": "魏延",
-    "code_name": "wzzz__weiyan",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "狂骨",
-        "id": "wzzz_v__m_shi__kuanggu",
-        "derived": false,
-        "description": "当你对距离 1 以内的一名角色造成伤害后，你可以选择一项：1.回复 1 点体力；2.摸一张牌；3.回复 1 点体力并摸一张牌，然后弃置一张牌，令你此阶段内使用【杀】的次数+1（每回合限一次）。"
-      },
-      {
-        "name": "奇谋",
-        "id": "wzzz_v__m_ex__qimou",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以失去任意点体力，然后本回合你使用【杀】的次数+X，你与其他角色的距离-X（X 为你失去的体力值）。"
-      }
-    ]
-  },
-  {
-    "number": 59,
-    "name": "刘封",
-    "code_name": "wzzz__liufeng",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "陷嗣",
-        "id": "wzzz_v__ty_ex__xiansi",
-        "derived": false,
-        "description": "准备阶段，你可以选择至多两名角色，将这些角色的各一张牌置于你的武将牌上，称为“逆”；当一名角色需要对你使用杀时，其可以移去两张“逆”并视为对你使用一张【杀】。若“逆”的数量大于你的体力值，你可以移去一张“逆“，并视为使用一张【杀】。"
-      }
-    ]
-  },
-  {
-    "number": 60,
-    "name": "张翼",
-    "code_name": "wzzz__zhangyi",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "执义",
-        "id": "wzzz_v__zhiyi",
-        "derived": false,
-        "description": "每名角色的结束阶段，若你本回合使用或打出过基本牌，你可以选择一项：1.摸一张牌；2.视为使用一张本回合你使用或打出过的基本牌。"
-      }
-    ]
-  },
-  {
-    "number": 61,
-    "name": "姜维",
-    "code_name": "wzzz__jiangwei",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "挑衅",
-        "id": "wzzz_v__ol_ex__tiaoxin",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以选择一名攻击范围内包含你的角色，然后除非该角色对你使用一张【杀】且此【杀】对你造成伤害，否则你弃置其一张牌并在本阶段内将此技能修改为“出牌阶段限两次”。"
-      },
-      {
-        "name": "志继",
-        "id": "wzzz_v__ol_ex__zhiji",
-        "derived": false,
-        "description": "觉醒技，准备阶段或结束阶段，若你没有手牌，你回复 1 点体力或摸两张牌，然后减 1 点体 力上限并获得“观星”。"
-      },
-      {
-        "name": "观星",
-        "id": "wzzz_v__ex__guanxing",
-        "derived": true,
-        "description": "准备阶段，你可以观看牌堆顶的五张牌（若存活角色数小于 4 则改为三张），然后将这些牌以任意顺序置于牌堆顶或牌堆底。若你将这些牌均置于牌堆底，则结束阶段你可以再发动一次“观星”。"
-      }
-    ]
-  },
-  {
-    "number": 62,
-    "name": "董允",
-    "code_name": "wzzz__dongyun",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "舍宴",
-        "id": "wzzz_v__sheyan",
-        "derived": false,
-        "description": "当你成为普通锦囊牌的目标时，你可以令此牌增加一个无距离限制的目标，若此牌目 标数大于1，你可以改为令此牌对其中一个目标无效。"
-      },
-      {
-        "name": "秉正",
-        "id": "wzzz_v__bingzheng",
-        "derived": false,
-        "description": "出牌阶段结束时，你可以选择一名手牌数不等于体力值的角色并选择一项：1.令其摸一张牌；2.令其弃置一张手牌。然后若其手牌数与体力值相等，你摸一张牌并可以交给其一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 63,
-    "name": "张飞",
-    "code_name": "wzzz__zhangfei",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "咆哮",
-        "id": "wzzz_v__ex__paoxiao",
-        "derived": false,
-        "description": "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。（修改：增加描述“每回合你使用第二张【杀】时，摸一张牌”）"
-      },
-      {
-        "name": "替身",
-        "id": "wzzz_v__ex__tishen",
-        "derived": false,
-        "description": "限定技，准备阶段，你可以将体力回复至体力上限并摸 X 张牌（X 为你回复的体力值），然后修改“咆哮”。"
-      }
-    ]
-  },
-  {
-    "number": 64,
-    "name": "王平",
-    "code_name": "wzzz__wangping",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "飞军",
-        "id": "wzzz_v__feijun",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌，然后选择一项：1.令一名手牌数大于你的角色交给你一张牌；2.令一名装备区里牌数大于你的角色弃置其装备区里的一张牌。"
-      },
-      {
-        "name": "兵略",
-        "id": "wzzz_v__binglue",
-        "derived": false,
-        "description": "锁定技，你对每名角色第一次发动“飞军”后摸两张牌。"
-      }
-    ]
-  },
-  {
-    "number": 65,
+    "number": 7,
     "name": "关羽",
     "code_name": "wzzz__guanyu",
-    "metadata": "蜀势力，4 体力，男性",
+    "title": "美髯公",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，美髯公",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1582,7 +213,7 @@
         "name": "义绝",
         "id": "wzzz_v__ex__yijue",
         "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌，然后令一名其他角色展示一张手牌，若此牌为： 红色，你获得之并可以令其回复 1 点体力；黑色，本回合其非锁定技失效且不能使用或打出手牌，你对其使用的红桃【杀】伤害+1。"
+        "description": "出牌阶段限一次，你可以弃置一张牌，然后令一名其他角色展示一张手牌，若此牌为：红色，你获得之并可以令其回复1点体力；黑色，本回合其非锁定技失效且不能使用或打出手牌，你对其使用的红桃【杀】伤害+1。"
       },
       {
         "name": "忠义",
@@ -1593,94 +224,111 @@
     ]
   },
   {
-    "number": 66,
-    "name": "法正",
-    "code_name": "wzzz__fazheng",
-    "metadata": "蜀势力，3 体力，男性",
+    "number": 8,
+    "name": "胡金定",
+    "code_name": "wzzz__hujinding",
+    "title": "怀子求怜",
+    "kingdom": "蜀",
+    "hp": 2,
+    "max_hp": 5,
+    "gender": "女性",
+    "metadata": "蜀势力，2/5 体力，女性，怀子求怜",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "恩怨",
-        "id": "wzzz_v__ol_ex__enyuan",
+        "name": "仁释",
+        "id": "wzzz_v__renshi",
         "derived": false,
-        "description": "当你获得一名其他角色的至少两张牌后，你可以令其摸一张牌；当你受到 1 点伤害后，你可以"
+        "description": "锁定技，当你每回合第一次受到【杀】造成的伤害时，若你已受伤，你令此【杀】对你的伤害-1并获得之，然后减1点体力上限。"
       },
       {
-        "name": "眩惑",
-        "id": "wzzz_v__ol_ex__xuanhuo",
+        "name": "武缘",
+        "id": "wzzz_v__wuyuan",
         "derived": false,
-        "description": "摸牌阶段结束时，你可以交给一名其他角色两张牌，令其选择一项：1.对你指定的另一名角色使用一张无距离限制的【杀】；2.你观看其手牌并获得其手牌区或装备区的共计两张牌。"
+        "description": "出牌阶段限一次，你可以展示并交给一名其他角色一张【杀】，然后你回复1点体力令该角色摸一张牌。若此【杀】为：红色，其额外摸一张牌；黑色，其下回合使用【杀】的次数+1。"
+      },
+      {
+        "name": "怀子",
+        "id": "wzzz_v__huaizi",
+        "derived": false,
+        "description": "锁定技，你的手牌上限等于你的体力上限。"
       }
     ]
   },
   {
-    "number": 67,
-    "name": "谯周",
-    "code_name": "wzzz__qiaozhou",
-    "metadata": "蜀势力，3 体力，男性",
+    "number": 9,
+    "name": "黄皓",
+    "code_name": "wzzz__huanghao",
+    "title": "便辟佞慧",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，便辟佞慧",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "知命",
-        "id": "wzzz_v__os__zhiming",
+        "name": "寝情",
+        "id": "wzzz_v__ty__qinqing",
         "derived": false,
-        "description": "准备阶段和弃牌阶段结束时，你摸一张牌，然后你可以将一张牌置于牌堆顶。"
+        "description": "结束阶段，你可以弃置至多X名攻击范围内包含一号位的角色的各一张牌（X为场上存活角色最多阵营的角色数）；然后若其手牌数：小于一号位，其摸一张牌；大于一号位，你摸一张牌。"
       },
       {
-        "name": "星卜",
-        "id": "wzzz_v__xingbu",
+        "name": "贿生",
+        "id": "wzzz_v__huisheng",
         "derived": false,
-        "description": "结束阶段，你可以亮出牌堆顶的三张牌，然后你可以根据其中红色牌数令一名其他角色于其下"
+        "description": "当你受到其他角色造成的伤害时，你可以选择任意张牌，令其观看之并选择一项：1.获得这些牌中的一张，防止此伤害，然后你不能再对其发动此技能；2.弃置等量的牌。"
+      },
+      {
+        "name": "存畏",
+        "id": "wzzz_v__cunwei",
+        "derived": false,
+        "description": "锁定技，当你成为锦囊牌的目标后，若你为此牌唯一目标，你摸一张牌，否则你弃置一张牌。"
       }
     ]
   },
   {
-    "number": 68,
-    "name": "张松",
-    "code_name": "wzzz__zhangsong",
-    "metadata": "蜀势力，3 体力，男性",
+    "number": 10,
+    "name": "黄权",
+    "code_name": "wzzz__huangquan",
+    "title": "道绝殊途",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，道绝殊途",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "献图",
-        "id": "wzzz_v__xiantu",
+        "name": "筹进",
+        "id": "wzzz_v__choujin",
         "derived": false,
-        "description": "其他角色的出牌阶段开始时，你可以摸三张牌，然后交给其两张牌。此阶段结束时，若其此阶段未杀死过角色，你失去 1 点体力。"
+        "description": "游戏开始时，你可以令一名其他角色获得“筹进”标记；每回合限一次，一名角色对拥有“筹进”标记的角色造成伤害后，伤害来源可以摸一张牌。"
       },
       {
-        "name": "强识",
-        "id": "wzzz_v__qiangzhi",
+        "name": "谏计",
+        "id": "wzzz_v__jianji",
         "derived": false,
-        "description": "出牌阶段开始时，你可以展示一名其他角色的一张手牌，本回合你使用与之类型相同的牌时可以摸一张牌。"
+        "description": "出牌阶段限一次，你可以令一名其他角色摸一张牌并展示之，然后其可以使用此牌（可转化使用）。"
+      },
+      {
+        "name": "途绝",
+        "id": "wzzz_v__tujue",
+        "derived": false,
+        "description": "限定技，当你进入濒死状态时，你可以将所有牌交给一名其他角色。"
       }
     ]
   },
   {
-    "number": 69,
-    "name": "关平",
-    "code_name": "wzzz__guanping",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "龙吟",
-        "id": "wzzz_v__ty_ex__longyin",
-        "derived": false,
-        "description": "一名角色于其出牌阶段使用【杀】时，你可以弃置一张牌令此【杀】无次数限制，然后若此【杀】"
-      },
-      {
-        "name": "竭忠",
-        "id": "wzzz_v__ty_ex__jiezhong",
-        "derived": false,
-        "description": "限定技，出牌阶段开始时，你可以将手牌摸至体力上限。"
-      }
-    ]
-  },
-  {
-    "number": 70,
+    "number": 11,
     "name": "黄月英",
     "code_name": "wzzz__huangyueying",
-    "metadata": "蜀势力，3 体力，女性",
+    "title": "归隐的杰女",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "蜀势力，3/3 体力，女性，归隐的杰女",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1704,127 +352,841 @@
     ]
   },
   {
-    "number": 71,
-    "name": "丁奉",
-    "code_name": "wzzz__dingfeng",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 12,
+    "name": "黄忠",
+    "code_name": "wzzz__huangzhong",
+    "title": "老当益壮",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，老当益壮",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "短兵",
-        "id": "wzzz_v__ol__duanbing",
+        "name": "烈弓",
+        "id": "wzzz_v__ol_ex__liegong",
         "derived": false,
-        "description": "你使用【杀】可以多选择一名距离为 1 的角色为目标。你对距离为 1 的角色使用的【杀】需使用两张【闪】才能抵消。"
+        "description": "你使用【杀】可以选择距离不大于此【杀】点数的角色为目标；当你使用【杀】指定目标后，你可以根据下列条件执行相应的效果：1.其手牌数不大于你的手牌数，此【杀】不可被【闪】响应：2.其体力值不小于你的体力值，此【杀】伤害+1。"
       },
       {
-        "name": "奋迅",
-        "id": "wzzz_v__qshm__fenxun",
+        "name": "益壮",
+        "id": "wzzz_v__yizhuang",
         "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌并选择一名其他角色，然后本回合你计算与其的距离视为 1，若如此做，此阶段结束时，若你本阶段使用【杀】对距离 1 以内的角色造成过至少 2 点伤害，你可以摸两张牌。"
+        "description": "准备阶段，若你的判定区里有牌，你可以对自己造成1点伤害，然后弃置判定区里的所有牌。"
       }
     ]
   },
   {
-    "number": 72,
-    "name": "韩当",
-    "code_name": "wzzz__handang",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 13,
+    "name": "姜维",
+    "code_name": "wzzz__jiangwei",
+    "title": "龙的衣钵",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，龙的衣钵",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "弓骑",
-        "id": "wzzz_v__gongqi",
+        "name": "挑衅",
+        "id": "wzzz_v__ol_ex__tiaoxin",
         "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌，令你本回合的攻击范围无限。若你以此法弃置的牌为非基本牌，你可以弃置一名其他角色的一张牌。"
+        "description": "出牌阶段限一次，你可以选择一名攻击范围内包含你的角色，然后除非该角色对你使用一张【杀】且此【杀】对你造成伤害，否则你弃置其一张牌并在本阶段内将此技能修改为“出牌阶段限两次”。"
       },
       {
-        "name": "解烦",
-        "id": "wzzz_v__jiefan",
+        "name": "志继",
+        "id": "wzzz_v__ol_ex__zhiji",
         "derived": false,
-        "description": "限定技，出牌阶段，你可以选择一名角色，令攻击范围内包含其的角色选择一项：1.弃置一张武器牌；2.令其摸一张牌。若此时为第一轮游戏，回合结束时，此技能视为未发动过。"
+        "description": "觉醒技，准备阶段或结束阶段，若你没有手牌，你回复1点体力或摸两张牌，然后减1点体力上限并获得“观星”。"
+      },
+      {
+        "name": "观星",
+        "id": "wzzz_v__ex__guanxing",
+        "derived": true,
+        "description": "准备阶段，你可以观看牌堆顶的五张牌（若存活角色数小于4则改为三张），然后将这些牌以任意顺序置于牌堆顶或牌堆底。若你将这些牌均置于牌堆底，则结束阶段你可以再发动一次“观星”。"
       }
     ]
   },
   {
-    "number": 73,
-    "name": "凌统",
-    "code_name": "wzzz__lingtong",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 14,
+    "name": "刘备",
+    "code_name": "wzzz__liubei",
+    "title": "乱世的枭雄",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，乱世的枭雄",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "旋风",
-        "id": "wzzz_v__m_ex__xuanfeng",
+        "name": "仁德",
+        "id": "wzzz_v__ex__rende",
         "derived": false,
-        "description": "当你于弃牌阶段弃置过至少两张牌，或当你失去装备区里的牌后，你可以依次弃置至多两名其他角色共计两张牌。"
+        "description": "出牌阶段每名角色限一次，你可以将任意张手牌交给一名其他角色，当你于此阶段给出第二张牌时，你可以选择一项：1.视为使用一张基本牌；2.回复1点体力并于此阶段取消此技能“每名角色限一次“的限制。"
       },
       {
-        "name": "勇进",
-        "id": "wzzz_v__ty_ex__yongjin",
+        "name": "仁望",
+        "id": "wzzz_v__v11__renwang",
         "derived": false,
-        "description": "限定技，出牌阶段，你可以依次移动场上至多三张各不同的装备牌。"
+        "description": "每回合限一次，当其他角色于其出牌阶段对你使用【杀】或普通锦囊牌时，若你不是此阶段内第一次成为上述牌的目标，你可以弃置其一张牌。"
       }
     ]
   },
   {
-    "number": 74,
-    "name": "诸葛瑾",
-    "code_name": "wzzz__zhugejin",
-    "metadata": "吴势力，3 体力，男性",
+    "number": 15,
+    "name": "刘谌",
+    "code_name": "wzzz__liuchen",
+    "title": "血荐轩辕",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，血荐轩辕",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "缓释",
-        "id": "wzzz_v__huanshi",
+        "name": "战绝",
+        "id": "wzzz_v__zhanjue",
         "derived": false,
-        "description": "当一名角色的判定牌生效前，你可以令其观看你的手牌并选择你的一张牌，然后你打出此牌代替判定牌。"
+        "description": "出牌阶段限两次，你可以将所有手牌当【决斗】使用并摸一张牌，然后因此受伤的角色摸一张牌。若你本阶段因此技能受到过伤害，此技能本阶段失效。"
       },
       {
-        "name": "弘援",
-        "id": "wzzz_v__hongyuan",
+        "name": "勤王",
+        "id": "wzzz_v__qinwang",
         "derived": false,
-        "description": "摸牌阶段结束时，你可以依次交给至多两名其他角色各一张牌。"
-      },
-      {
-        "name": "明哲",
-        "id": "wzzz_v__mingzhe",
-        "derived": false,
-        "description": "当你于回合外或摸牌阶段失去红色牌时，你可以展示之并摸一张牌。（团队模式中增加描述：“摸牌阶段限一次”）"
+        "description": "每回合限一次，当你需要打出【杀】时，你可以弃置一张牌，然后令其他角色依次选择是否打出【杀】（视为由你打出），响应的角色摸一张牌。"
       }
     ]
   },
   {
-    "number": 75,
+    "number": 16,
+    "name": "刘封",
+    "code_name": "wzzz__liufeng",
+    "title": "骑虎之殇",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，骑虎之殇",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "陷嗣",
+        "id": "wzzz_v__ty_ex__xiansi",
+        "derived": false,
+        "description": "准备阶段，你可以选择至多两名角色，将这些角色的各一张牌置于你的武将牌上，称为“逆”；当一名角色需要对你使用杀时，其可以移去两张“逆”并视为对你使用一张【杀】。若“逆”的数量大于你的体力值，你可以移去一张“逆”，并视为使用一张【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "name": "刘禅",
+    "code_name": "wzzz__liushan",
+    "title": "乐不思蜀",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，乐不思蜀",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "享乐",
+        "id": "wzzz_v__xiangle",
+        "derived": false,
+        "description": "锁定技，当你成为一名角色使用【杀】的目标后，除非该角色弃置一张基本牌，否则此【杀】对你无效。"
+      },
+      {
+        "name": "放权",
+        "id": "wzzz_v__m_ex__fangquan",
+        "derived": false,
+        "description": "你可以跳过出牌阶段，若如此做，本回合你的手牌上限等于体力上限，然后此回合结束时，你可以弃置一张手牌，令一名其他角色进行一个额外的回合。"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "name": "马超",
+    "code_name": "wzzz__machao",
+    "title": "一骑当千",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，一骑当千",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "马术",
+        "id": "wzzz_v__mashu",
+        "derived": false,
+        "description": "锁定技，你计算与其他角色的距离-1；当你使用或失去装备区里的坐骑牌时，你摸一张牌。"
+      },
+      {
+        "name": "铁骑",
+        "id": "wzzz_v__ex__tieji",
+        "derived": false,
+        "description": "当你使用【杀】指定一名角色为目标后，你可以令其本回合内非锁定技失效，然后你进行判定，除非该角色弃置与结果花色相同的一张牌，否则不能使用【闪】响应此【杀】。"
+      },
+      {
+        "name": "锦姿",
+        "id": "wzzz__jinzi",
+        "derived": false,
+        "description": "若你的装备区里没有防具牌，你视为装备着【白银狮子】。每轮限一次，你可以将一张武器牌或防具牌当【杀】使用，然后你可以令此【杀】无次数限制并失去“锦姿”。"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "name": "马良",
+    "code_name": "wzzz__maliang",
+    "title": "白眉智士",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，白眉智士",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "自书",
+        "id": "wzzz_v__mobile__zishu",
+        "derived": false,
+        "description": "锁定技，当你于回合内非因此法而获得牌后，你摸一张牌；其他角色的回合结束后，你弃置X张牌。（X为你本回合获得的牌数）"
+      },
+      {
+        "name": "应援",
+        "id": "wzzz_v__yingyuan",
+        "derived": false,
+        "description": "每回合限两次，当你于回合内使用的基本牌或普通锦囊牌结算结束后，你可以将之交给一名其他角色。"
+      },
+      {
+        "name": "协穆",
+        "id": "wzzz_v__sxfy__xiemu",
+        "derived": false,
+        "description": "其他角色的出牌阶段限一次，其可以交给你一张基本牌并展示之，然后你可以令其本回合攻击范围+1。"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "name": "马谡",
+    "code_name": "wzzz__masu",
+    "title": "军略之才器",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，军略之才器",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "散谣",
+        "id": "wzzz_v__ol__sanyao",
+        "derived": false,
+        "description": "出牌阶段各限一次，你可以弃置一张牌，然后对体力值最大/手牌数最多的一名角色造成1点伤害。"
+      },
+      {
+        "name": "制蛮",
+        "id": "wzzz_v__ty_ex__zhiman",
+        "derived": false,
+        "description": "当你对其他角色造成伤害时，你可以防止此伤害，然后获得其区域里的一张牌。"
+      },
+      {
+        "name": "挥泪",
+        "id": "wzzz_v__huilei",
+        "derived": false,
+        "description": "锁定技，当你死亡时，杀死你的角色弃置所有牌。"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "name": "糜夫人",
+    "code_name": "wzzz__mifuren",
+    "title": "乱世沉香",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "蜀势力，3/3 体力，女性，乱世沉香",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "闺秀",
+        "id": "wzzz_v__mobile__guixiu",
+        "derived": false,
+        "description": "锁定技，结束阶段，若你的体力值为：奇数，你摸一张牌；偶数，你回复1点体力。"
+      },
+      {
+        "name": "清玉",
+        "id": "wzzz_v__qingyu",
+        "derived": false,
+        "description": "锁定技，当你受到伤害时，若你的牌数不小于2，则你须弃置两张牌并防止此伤害。"
+      },
+      {
+        "name": "存嗣",
+        "id": "wzzz_v__ty__cunsi",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以回复1点体力，然后失去“清玉”并令一名角色获得“勇决”，若不为你，其摸两张牌。"
+      },
+      {
+        "name": "勇决",
+        "id": "wzzz_v__ty__yongjue",
+        "derived": true,
+        "description": "当你于出牌阶段使用第一张【杀】时，你可以选择一项：1.此【杀】结算结束后，你获得之；2.令此【杀】无次数限制。"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "name": "糜竺",
+    "code_name": "wzzz__mizhu",
+    "title": "挥金追义",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，挥金追义",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "巨贾",
+        "id": "wzzz_v__jugu",
+        "derived": false,
+        "description": "锁定技，你的手牌上限+X；游戏开始时，你摸X张牌（X为你的体力上限）。"
+      },
+      {
+        "name": "资援",
+        "id": "wzzz_v__ziyuan",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以交给一名其他角色任意张点数之和不大于13的牌并展示之，然后你摸一张牌，若：点数之和等于13，你令该角色回复1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 23,
     "name": "庞统",
-    "code_name": "wzzz_sp__sp_pangtong",
-    "metadata": "吴势力，3 体力，男性",
+    "code_name": "wzzz__pangtong",
+    "title": "凤雏",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，凤雏",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "过论",
-        "id": "wzzz_v__guolun",
+        "name": "连环",
+        "id": "wzzz_v__m_ex__lianhuan",
         "derived": false,
-        "description": "出牌阶段限一次，你可以展示一名其他角色的一张手牌。若如此做，你可以展示一张手牌交换之，然后你可以选择一项：1.令展示牌点数较小的角色摸一张牌；2.令展示牌点数较大的角色回复 1点体力。"
+        "description": "你可以将一张梅花牌当【铁索连环】使用或重铸；你使用【铁索连环】可以额外指定一名目标。"
       },
       {
-        "name": "展骥",
-        "id": "wzzz_v__zhanji",
+        "name": "涅槃",
+        "id": "wzzz_v__niepan",
         "derived": false,
-        "description": "锁定技，当你于出牌阶段内不因此技能而摸牌时，你摸一张牌。"
+        "description": "限定技，当你处于濒死状态时，你可以弃置区域里的所有牌，然后复原你的武将牌，摸三张牌，将体力回复至3点，然后你获得“八阵”“火计”“看破”中的一个。"
       },
       {
-        "name": "送丧",
-        "id": "wzzz_v__qshm__songsang",
-        "derived": false,
-        "description": "限定技，当一名角色死亡时，你可以加 1 点体力上限并回复 1 点体力。"
+        "name": "八阵",
+        "id": "wzzz_v__bazhen",
+        "derived": true,
+        "description": "锁定技，若你的装备区里没有防具牌，你视为装备着【八卦阵】。你的【八卦阵】判定失效时，你摸一张牌。"
+      },
+      {
+        "name": "火计",
+        "id": "wzzz_v__ol_ex__huoji",
+        "derived": true,
+        "description": "你可以将一张红色牌当【火攻】使用。你的【火攻】改为你展示目标一张手牌，你弃置与其展示牌颜色相同的手牌以造成伤害。"
+      },
+      {
+        "name": "看破",
+        "id": "wzzz_v__ol_ex__kanpo",
+        "derived": true,
+        "description": "你可以将一张黑色牌当【无懈可击】使用；你的【无懈可击】不能被响应。"
       }
     ]
   },
   {
-    "number": 76,
+    "number": 24,
+    "name": "谯周",
+    "code_name": "wzzz__qiaozhou",
+    "title": "观星知命",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，观星知命",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "知命",
+        "id": "wzzz_v__os__zhiming",
+        "derived": false,
+        "description": "准备阶段和弃牌阶段结束时，你摸一张牌，然后你可以将一张牌置于牌堆顶。"
+      },
+      {
+        "name": "星卜",
+        "id": "wzzz_v__xingbu",
+        "derived": false,
+        "description": "结束阶段，你可以亮出牌堆顶的三张牌，然后你可以根据其中红色牌数令一名其他角色于其下个回合获得以下效果：3，出牌阶段使用【杀】的次数+1，摸牌阶段多摸两张牌；2，出牌阶段使用【杀】的次数-1并跳过弃牌阶段；不大于1，准备阶段弃置一张手牌。"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "name": "秦宓",
+    "code_name": "wzzz__qinmi",
+    "title": "彻天之舌",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，彻天之舌",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "谏征",
+        "id": "wzzz_v__jianzhengq",
+        "derived": false,
+        "description": "攻击范围内包含你的角色使用【杀】指定目标时，若你不为此【杀】目标，你可以将一张手牌置于牌堆顶，并取消所有目标，然后若此【杀】不为黑色，你成为此【杀】目标。"
+      },
+      {
+        "name": "专对",
+        "id": "wzzz_v__zhuandui",
+        "derived": false,
+        "description": "当你使用【杀】指定目标后，你可以与其拼点，若你赢，其不能抵消此【杀】；当你成为【杀】的目标后，你可以与使用者拼点，若你赢，此【杀】对你无效。"
+      },
+      {
+        "name": "天辩",
+        "id": "wzzz_v__tianbian",
+        "derived": false,
+        "description": "当你拼点时，你可以用牌堆顶的一张牌拼点；你的红桃拼点牌点数视为K。"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "name": "沙摩柯",
+    "code_name": "wzzz__shamoke",
+    "title": "五溪蛮王",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，五溪蛮王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "蒺藜",
+        "id": "wzzz_v__jilis",
+        "derived": false,
+        "description": "每回合你使用或打出第X张牌时，你可以摸X张牌（X为你的攻击范围）。"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "name": "王平",
+    "code_name": "wzzz__wangping",
+    "title": "兵谋以致用",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，兵谋以致用",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "飞军",
+        "id": "wzzz_v__feijun",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张牌，然后选择一项：1.令一名手牌数大于你的角色交给你一张牌；2.令一名装备区里牌数大于你的角色弃置其装备区里的一张牌。"
+      },
+      {
+        "name": "兵略",
+        "id": "wzzz_v__binglue",
+        "derived": false,
+        "description": "锁定技，你对每名角色第一次发动“飞军”后摸两张牌。"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "name": "魏延",
+    "code_name": "wzzz__weiyan",
+    "title": "嗜血的独狼",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，嗜血的独狼",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "狂骨",
+        "id": "wzzz_v__m_shi__kuanggu",
+        "derived": false,
+        "description": "当你对距离1以内的一名角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌；3.回复1点体力并摸一张牌，然后弃置一张牌，令你此阶段内使用【杀】的次数+1（每回合限一次）。"
+      },
+      {
+        "name": "奇谋",
+        "id": "wzzz_v__m_ex__qimou",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以失去任意点体力，然后本回合你使用【杀】的次数+X，你与其他角色的距离-X（X为你失去的体力值）。"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "name": "吴懿",
+    "code_name": "wzzz__wuyi",
+    "title": "建兴鞍辔",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，建兴鞍辔",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "奔袭",
+        "id": "wzzz_v__m_ex__benxi",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以弃置至多四张牌，令你本阶段计算与其他角色的距离-X、你使用的下一张基本牌或普通锦囊牌可以额外指定至多X名你计算与其距离为1的角色为目标，然后此牌结算结束后，若此牌造成过伤害，你摸X张牌。（X为你以此法弃置的牌数）"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "name": "夏侯霸",
+    "code_name": "wzzz__xiahouba",
+    "title": "棘途壮志",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，棘途壮志",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "豹变",
+        "id": "wzzz_v__ty__baobian",
+        "derived": false,
+        "description": "锁定技，当你受到伤害后，你依次获得以下技能：“挑衅”“咆哮”“神速”。"
+      },
+      {
+        "name": "豹烈",
+        "id": "wzzz__baolie",
+        "derived": false,
+        "description": "限定技，准备阶段，你可以对自己造成2点伤害。"
+      },
+      {
+        "name": "挑衅",
+        "id": "wzzz_v__ol_ex__tiaoxin",
+        "derived": true,
+        "description": "出牌阶段限一次，你可以选择一名攻击范围内包含你的角色，然后除非该角色对你使用一张【杀】且此【杀】对你造成伤害，否则你弃置其一张牌并在本阶段内将此技能修改为“出牌阶段限两次”。"
+      },
+      {
+        "name": "咆哮",
+        "id": "wzzz_v__ex__paoxiao",
+        "derived": true,
+        "description": "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。"
+      },
+      {
+        "name": "神速",
+        "id": "wzzz_v__shensu",
+        "derived": true,
+        "description": "你可以做出如下选择：1.跳过判定阶段和摸牌阶段；2.跳过出牌阶段并弃置一张装备牌；3.跳过弃牌阶段并翻面。你每选择一项，视为你使用一张无距离限制的【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "name": "夏侯氏",
+    "code_name": "wzzz__xiahoushi",
+    "title": "采缘撷睦",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "蜀势力，3/3 体力，女性，采缘撷睦",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "樵拾",
+        "id": "wzzz_v__qiaoshi",
+        "derived": false,
+        "description": "其他角色的结束阶段，若其手牌数等于你，你可以与其各摸一张牌。"
+      },
+      {
+        "name": "燕语",
+        "id": "wzzz_v__ty_ex__yanyu",
+        "derived": false,
+        "description": "出牌阶段，你可以重铸【杀】。出牌阶段结束时，你可以令一名男性角色摸X张牌。（X为你此阶段重铸【杀】的数量且至多为3）"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "name": "张飞",
+    "code_name": "wzzz__zhangfei",
+    "title": "万夫不当",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，万夫不当",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "咆哮",
+        "id": "wzzz_v__ex__paoxiao",
+        "derived": false,
+        "description": "锁定技，你使用【杀】无次数限制；你使用的【杀】被抵消时，本回合你下一次因【杀】造成的伤害+1。（修改：增加描述“每回合你使用第二张【杀】时，摸一张牌”）"
+      },
+      {
+        "name": "替身",
+        "id": "wzzz_v__ex__tishen",
+        "derived": false,
+        "description": "限定技，准备阶段，你可以将体力回复至体力上限并摸X张牌（X为你回复的体力值），然后修改“咆哮”。"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "name": "张松",
+    "code_name": "wzzz__zhangsong",
+    "title": "怀璧待凤仪，血战禁将",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，怀璧待凤仪，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "献图",
+        "id": "wzzz_v__xiantu",
+        "derived": false,
+        "description": "其他角色的出牌阶段开始时，你可以摸三张牌，然后交给其两张牌。此阶段结束时，若其此阶段未杀死过角色，你失去1点体力。"
+      },
+      {
+        "name": "强识",
+        "id": "wzzz_v__qiangzhi",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以展示一名其他角色的一张手牌，本回合你使用与之类型相同的牌时可以摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "name": "张星彩",
+    "code_name": "wzzz__zhangxingcai",
+    "title": "敬哀皇后",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "蜀势力，3/3 体力，女性，敬哀皇后",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "甚贤",
+        "id": "wzzz_v__ol__shenxian",
+        "derived": false,
+        "description": "每名其他角色的回合限一次，当其他角色因弃置而失去基本牌后，你可以摸一张牌。"
+      },
+      {
+        "name": "枪舞",
+        "id": "wzzz_v__qiangwu",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以进行判定，然后本回合你使用点数小于判定结果的【杀】无距离限制，点数大于判定结果的【杀】无次数限制。"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "name": "张翼",
+    "code_name": "wzzz__zhangyi",
+    "title": "亢锐怀忠",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，亢锐怀忠",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "执义",
+        "id": "wzzz_v__zhiyi",
+        "derived": false,
+        "description": "每名角色的结束阶段，若你本回合使用或打出过基本牌，你可以选择一项：1.摸一张牌；2.视为使用一张本回合你使用或打出过的基本牌。"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "name": "张翼",
+    "code_name": "wzzz__zhangyi_fenggong",
+    "title": "奉公弗怠",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，奉公弗怠",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "殿军",
+        "id": "wzzz_v__dianjun",
+        "derived": false,
+        "description": "锁定技，回合结束时，你受到1点伤害并执行一个额外的出牌阶段。"
+      },
+      {
+        "name": "亢锐",
+        "id": "wzzz_v__kangrui",
+        "derived": false,
+        "description": "当一名角色于其回合内首次受到伤害后，你可以摸一张牌并选择一项：1.其回复1点体力；2.其本回合下次造成的伤害+1。其执行以上任意一项后，当其于本回合造成伤害时，其本回合的手牌上限等于0。"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "name": "诸葛亮",
+    "code_name": "wzzz__zhugeliang_chimu",
+    "title": "迟暮的丞相",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，迟暮的丞相",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "观星",
+        "id": "wzzz_v__ex__guanxing",
+        "derived": false,
+        "description": "准备阶段，你可以观看牌堆顶的X张牌，若“星”的数量小于X，你可以将其中一张牌置于武将牌上，称为“星”，然后将其余牌以任意顺序置于牌堆顶或牌堆底。若你将其余牌均置于牌堆底或你未发动“知天”时未因此法获得“星”，结束阶段，你可以再发动一次“观星”。（X为5，角色数为2时改为3）"
+      },
+      {
+        "name": "知天",
+        "id": "wzzz_v__zhitian",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以获得所有“星”，然后可以弃置你装备区里的武器牌，若“星”数星不小于X，则本回合当你装备区没有武器牌时，你视为装备【诸葛连弩】。（X为5，角色数为2时改为3）"
+      },
+      {
+        "name": "空城",
+        "id": "wzzz_v__hs__kongcheng",
+        "derived": false,
+        "description": "锁定技，若你没有手牌，你不能成为【杀】或【决斗】的目标。"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "name": "诸葛亮",
+    "code_name": "wzzz__zhugeliang_wolong",
+    "title": "卧龙",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，卧龙",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "火计",
+        "id": "wzzz_v__ol_ex__huoji",
+        "derived": false,
+        "description": "你可以将一张红色手牌当【火攻】使用；你使用的【火攻】对目标角色生效时，你可以观看牌堆顶的四张牌，并可以选择其中一张代替该【火攻】需弃置的牌，然后将其余的牌置于牌堆顶（每回合你每次因【火攻】对目标角色造成伤害后，本回合此技能观看牌堆顶的牌数-1）。（团队模式中修改为“你可以将一张红色手牌当【火攻】使用。你的【火攻】改为你展示目标角色一张手牌，你弃置与展示牌颜色相同的手牌以造成伤害。”）"
+      },
+      {
+        "name": "看破",
+        "id": "wzzz_v__ol_ex__kanpo",
+        "derived": false,
+        "description": "你可以将一张黑色手牌当【无懈可击】使用。你的【无懈可击】不能被响应。"
+      },
+      {
+        "name": "八阵",
+        "id": "wzzz_v__bazhen",
+        "derived": false,
+        "description": "锁定技，若你的装备区里没有防具牌，你视为装备着【八卦阵】。"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "name": "诸葛瞻",
+    "code_name": "wzzz__zhugezhan",
+    "title": "临难死义",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，临难死义",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "罪论",
+        "id": "wzzz_v__zuilun",
+        "derived": false,
+        "description": "结束阶段，你可以观看牌堆顶的三张牌，然后获得其中的X张牌，其余牌以任意顺序放回牌堆顶，若你未获得牌，你与一名其他角色各失去1点体力（X为你符合的条件数：1.本回合造成过伤害；2.手牌数为场上最少；3.本回合未弃置过牌）。"
+      },
+      {
+        "name": "父萌",
+        "id": "wzzz_s__7236_840c",
+        "derived": false,
+        "description": "锁定技，每回合你第一次成为【杀】或【决斗】的目标后，若使用者的手牌数不小于你，此牌对你无效。"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "name": "祝融",
+    "code_name": "wzzz__zhurong",
+    "title": "野性的女王",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "女性",
+    "metadata": "蜀势力，4/4 体力，女性，野性的女王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "巨象",
+        "id": "wzzz_v__juxiang",
+        "derived": false,
+        "description": "锁定技，【南蛮入侵】对你无效；其他角色使用的【南蛮入侵】结算完成后，你获得之。"
+      },
+      {
+        "name": "烈刃",
+        "id": "wzzz_v__os_ex__lieren",
+        "derived": false,
+        "description": "当你使用【杀】指定目标后，你可以与其拼点，若你：赢，你获得其一张牌；没赢，你与其获得对方的拼点牌。"
+      },
+      {
+        "name": "长标",
+        "id": "wzzz_v__changbiao",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以将任意张手牌（至少一张）当一张无距离限制的【杀】使用，若此【杀】造成过伤害，出牌阶段结束时，你摸等量的牌。"
+      }
+    ]
+  },
+  {
+    "number": 41,
     "name": "步练师",
     "code_name": "wzzz__bulianshi",
-    "metadata": "吴势力，3 体力，女性",
+    "title": "无冕之后",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，无冕之后",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1837,51 +1199,78 @@
         "name": "追忆",
         "id": "wzzz_v__zhuiyi",
         "derived": false,
-        "description": "当你死亡时，你可以令一名其他角色（杀死你的角色除外）摸三张牌并回复 1 点体力。"
+        "description": "当你死亡时，你可以令一名其他角色（杀死你的角色除外）摸三张牌并回复1点体力。"
       }
     ]
   },
   {
-    "number": 77,
-    "name": "徐盛",
-    "code_name": "wzzz__xusheng",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 42,
+    "name": "步骘",
+    "code_name": "wzzz__buzhi",
+    "title": "积跬靖边",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，积跬靖边",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "破军",
-        "id": "wzzz_v__ty_ex__pojun",
+        "name": "弘德",
+        "id": "wzzz_v__hongde",
         "derived": false,
-        "description": "当你使用【杀】指定目标后，你可以将该角色的至多 X 张牌扣置于其武将牌上，本回合结束后，其获得这些牌（X 为其体力值）；当你使用【杀】对目标角色造成伤害时，若其手牌区和装备区里的牌数均不大于你，此伤害+1。"
+        "description": "当你一次性获得或失去至少两张牌后，你可以令一名其他角色摸一张牌。"
       },
       {
-        "name": "疑城",
-        "id": "wzzz_v__v33__yicheng",
+        "name": "定叛",
+        "id": "wzzz_v__dingpan",
         "derived": false,
-        "description": "与你相邻的角色成为【杀】的目标后，你可以令其摸一张牌，然后弃置一张牌。"
+        "description": "出牌阶段限X次（X为存活角色最多阵营的存活角色数且至多为3），你可以令一名装备区里有牌的角色摸一张牌，然后其选择一项：1.令你弃置其一至两张牌；2.获得装备区里的所有牌，然后你对其造成1点伤害。"
       }
     ]
   },
   {
-    "number": 78,
-    "name": "留赞",
-    "code_name": "wzzz__liuzan",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 43,
+    "name": "岑昏",
+    "code_name": "wzzz__cenhun",
+    "title": "伐梁倾瓴",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，伐梁倾瓴",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "奋音",
-        "id": "wzzz_v__sxfy__fenyin",
+        "name": "极奢",
+        "id": "wzzz_v__jishe",
         "derived": false,
-        "description": "当你于回合内使用牌时，若此牌与你本回合使用的上一张牌颜色不同，你可以摸一张牌。"
+        "description": "出牌阶段，若你的手牌上限大于0，你可以摸一张牌，然后本回合你的手牌上限-1；结束阶段，若你没有手牌，你可以横置至多X名角色（X为你的体力值）。"
+      },
+      {
+        "name": "链祸",
+        "id": "wzzz_v__lianhuo",
+        "derived": false,
+        "description": "锁定技，当你受到火焰伤害时，若你处于连环状态且你是传导伤害的起点，则此伤害+1。"
+      },
+      {
+        "name": "无度",
+        "id": "wzzz_v__sxfy__wudu",
+        "derived": false,
+        "description": "限定技，当一名没有手牌的角色受到伤害时，你可以防止此伤害，然后你减1点体力上限。"
       }
     ]
   },
   {
-    "number": 79,
+    "number": 44,
     "name": "大乔",
     "code_name": "wzzz__daqiao",
-    "metadata": "吴势力，3 体力，女性",
+    "title": "矜持之花",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，矜持之花",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -1905,229 +1294,41 @@
     ]
   },
   {
-    "number": 80,
-    "name": "文鸯",
-    "code_name": "wzzz__wenyang",
-    "metadata": "吴势力，4 体力，男性",
+    "number": 45,
+    "name": "丁奉",
+    "code_name": "wzzz__dingfeng",
+    "title": "清侧忠臣",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，清侧忠臣",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "却敌",
-        "id": "wzzz_v__quedi",
+        "name": "短兵",
+        "id": "wzzz_v__ol__duanbing",
         "derived": false,
-        "description": "每回合限一次，当你使用【杀】或【决斗】指定唯一目标后，你可以选择一项或减 1 点体力上"
+        "description": "你使用【杀】可以多选择一名距离为1的角色为目标。你对距离为1的角色使用的【杀】需使用两张【闪】才能抵消。"
       },
       {
-        "name": "仇决",
-        "id": "wzzz_v__mobile__choujue",
+        "name": "奋迅",
+        "id": "wzzz_v__qshm__fenxun",
         "derived": false,
-        "description": "锁定技，当你杀死其他角色后，你加 1 点体力上限并摸两张牌，本回合“却敌” 可发动次数+1。"
-      },
-      {
-        "name": "冲坚",
-        "id": "wzzz_v__ofl__chongjian",
-        "derived": false,
-        "description": "限定技，出牌阶段，你可以减 1 点体力上限，将一张装备牌当【酒】或无视防具的任意一种【杀】使用。"
+        "description": "出牌阶段限一次，你可以弃置一张牌并选择一名其他角色，然后本回合你计算与其的距离视为1，若如此做，此阶段结束时，若你本阶段使用【杀】对距离1以内的角色造成过至少2点伤害，你可以摸两张牌。"
       }
     ]
   },
   {
-    "number": 81,
-    "name": "岑昏",
-    "code_name": "wzzz__cenhun",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "极奢",
-        "id": "wzzz_v__jishe",
-        "derived": false,
-        "description": "出牌阶段，若你的手牌上限大于 0，你可以摸一张牌，然后本回合你的手牌上限-1；结束阶段，若你没有手牌，你可以横置至多 X 名角色（X 为你的体力值）。"
-      },
-      {
-        "name": "链祸",
-        "id": "wzzz_v__lianhuo",
-        "derived": false,
-        "description": "锁定技，当你受到火焰伤害时，若你处于连环状态且你是传导伤害的起点，则此伤害+1。"
-      },
-      {
-        "name": "无度",
-        "id": "wzzz_v__sxfy__wudu",
-        "derived": false,
-        "description": "限定技，当一名没有手牌的角色受到伤害时，你可以防止此伤害，然后你减 1 点体力上限。"
-      }
-    ]
-  },
-  {
-    "number": 82,
-    "name": "孙尚香",
-    "code_name": "wzzz__sunshangxiang",
-    "metadata": "吴势力，3 体力，女性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "缘定",
-        "id": "wzzz__yuanding",
-        "derived": false,
-        "description": "锁定技，亮将后，你选择其中一项：1.“良助”添加限定技标签；2.失去“结姻”。"
-      },
-      {
-        "name": "结姻",
-        "id": "wzzz_v__jieyin",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以选择一名男性角色并弃置一张手牌或将一张装备牌置入其装备区。然后你与其体力值较高的角色摸一张牌，体力值较低的角色回复 1 点体力。"
-      },
-      {
-        "name": "良助",
-        "id": "wzzz_v__liangzhu",
-        "derived": false,
-        "description": "每回合限一次，当一名角色于其出牌阶段内不因“结姻”回复体力后，你可以摸一张牌或令其摸两张牌。"
-      },
-      {
-        "name": "枭姬",
-        "id": "wzzz_v__xiaoji",
-        "derived": false,
-        "description": "当你失去装备区里的一张牌后，你可以摸两张牌。"
-      }
-    ]
-  },
-  {
-    "number": 83,
-    "name": "诸葛恪",
-    "code_name": "wzzz__zhugeke",
-    "metadata": "吴势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "黩武",
-        "id": "wzzz_v__duwu",
-        "derived": false,
-        "description": "出牌阶段，你可以选择你攻击范围内的一名角色并弃置 X 张牌（X 为其体力值），然后对其造成 1 点伤害，若其因此伤害进入濒死状态且未死亡，你失去 1 点体力且本回合“黩武”失效。"
-      },
-      {
-        "name": "傲才",
-        "id": "wzzz_v__ol__aocai",
-        "derived": false,
-        "description": "当你于回合外需要使用或打出基本牌时，你可以观看牌堆顶的两张牌（若你没有手牌改为观看四张），并可以使用或打出其中一张你需要的基本牌。"
-      }
-    ]
-  },
-  {
-    "number": 84,
-    "name": "朱桓",
-    "code_name": "wzzz__zhuhuan",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "奋励",
-        "id": "wzzz_v__fenli",
-        "derived": false,
-        "description": "判定阶段开始前，若你的手牌数为场上最多，你可以跳过此阶段和本回合的下个摸牌阶段；出牌阶段开始前，若你的体力值为场上最高，你可以跳过此阶段；弃牌阶段开始前，若你装备区里的牌数为场上最多（至少 0 张），你可以跳过此阶段。"
-      },
-      {
-        "name": "平寇",
-        "id": "wzzz_v__pingkou",
-        "derived": false,
-        "description": "回合结束时，你可以对至多 X 名其他角色各造成 1 点伤害。若你选择的角色数小于 X，则你获得其中一名角色装备区里的一张牌。（X 为你本回合跳过的阶段数）"
-      }
-    ]
-  },
-  {
-    "number": 85,
-    "name": "鲁肃",
-    "code_name": "wzzz__lusu",
-    "metadata": "吴势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "好施",
-        "id": "wzzz_v__haoshi",
-        "derived": false,
-        "description": "摸牌阶段，你可以多摸两张牌，然后若你的手牌数大于 5，你将一半手牌（向下取整）交给场上手牌数最少的一名其他角色。"
-      },
-      {
-        "name": "缔盟",
-        "id": "wzzz_v__ol_ex__dimeng",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以令两名其他角色交换手牌（这两名角色手牌数差须不大于你的牌数）。若如此做，此阶段结束时，你弃置 X 张牌(X 为这两名角色此时的手牌数差）。"
-      }
-    ]
-  },
-  {
-    "number": 86,
-    "name": "蒋钦",
-    "code_name": "wzzz__jiangqin",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "俭衣",
-        "id": "wzzz_v__jianyi",
-        "derived": false,
-        "description": "锁定技，其他角色的回合结束后，你获得弃牌堆中一张本回合因弃置而置入的防具牌。"
-      },
-      {
-        "name": "尚义",
-        "id": "wzzz_v__mobile__shangyi",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌并选择一名有手牌的其他角色，令其观看你的手牌， 然后你观看其手牌并获得其中一张。"
-      }
-    ]
-  },
-  {
-    "number": 87,
-    "name": "陆逊",
-    "code_name": "wzzz__luxun",
-    "metadata": "吴势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "谦逊",
-        "id": "wzzz_v__ex__qianxun",
-        "derived": false,
-        "description": "当一张延时锦囊牌或其他角色使用的普通锦囊牌对你生效时，若你是此牌唯一目标，你可以将所有手牌扣置于武将牌上，然后此回合结束时，你获得这些牌。"
-      },
-      {
-        "name": "连营",
-        "id": "wzzz_v__ex__lianying",
-        "derived": false,
-        "description": "当你失去手牌后，若你没有手牌，你可以令至多 X 名角色各摸一张牌（X 为你此次失去的手牌数）。"
-      },
-      {
-        "name": "顺势",
-        "id": "wzzz__shunshi",
-        "derived": false,
-        "description": "（团队模式中失去此技能）当你于回合外因“连营”而获得非基本牌时，你可以展示之并摸一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 88,
-    "name": "步骘",
-    "code_name": "wzzz__buzhi",
-    "metadata": "吴势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "弘德",
-        "id": "wzzz_v__hongde",
-        "derived": false,
-        "description": "当你一次性获得或失去至少两张牌后，你可以令一名其他角色摸一张牌。"
-      },
-      {
-        "name": "定叛",
-        "id": "wzzz_v__dingpan",
-        "derived": false,
-        "description": "出牌阶段限 X 次(X 为存活角色最多阵营的存活角色数且至多为 3)，你可以令一名装备区里有牌的角色摸一张牌，然后其选择一项：1.令你弃置其一至两张牌；2.获得装备区里的所有牌，然后你对其造成 1 点伤害。"
-      }
-    ]
-  },
-  {
-    "number": 89,
+    "number": 46,
     "name": "甘宁",
     "code_name": "wzzz__ganning",
-    "metadata": "吴势力，4 体力，男性",
+    "title": "锦帆游侠",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，锦帆游侠",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2145,52 +1346,527 @@
     ]
   },
   {
-    "number": 90,
-    "name": "凌操",
-    "code_name": "wzzz__lingcao",
-    "metadata": "吴势力，4 体力 5 上限，男性",
+    "number": 47,
+    "name": "顾雍",
+    "code_name": "wzzz__guyong",
+    "title": "庙堂的玉磬",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，庙堂的玉磬",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "独进",
-        "id": "wzzz_v__ol__dujin",
+        "name": "慎行",
+        "id": "wzzz_v__ty_ex__shenxing",
         "derived": false,
-        "description": "摸牌阶段，你可以多摸 X+1 张牌（X 为你装备区里牌数的一半且向上取整）。"
+        "description": "出牌阶段，你可以弃置X张牌，然后摸一张牌。（X为你本阶段此前发动此技能的次数且至多为2）"
       },
       {
-        "name": "独锋",
-        "id": "wzzz_v__dufeng",
+        "name": "秉壹",
+        "id": "wzzz_v__bingyi",
         "derived": false,
-        "description": "限定技，出牌阶段开始时，你可以失去 1 点体力，令你本回合使用【杀】的次数+Y（Y 为你已损失体力值-1）。"
+        "description": "结束阶段，你可以展示所有手牌，若其中红色/黑色牌更多，你选择至多等量名角色并观看牌堆顶/牌堆底等量张牌，然后将这些牌分配给这些角色各一张。"
       }
     ]
   },
   {
-    "number": 91,
+    "number": 48,
+    "name": "韩当",
+    "code_name": "wzzz__handang",
+    "title": "石城侯",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，石城侯",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "弓骑",
+        "id": "wzzz_v__gongqi",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张牌，令你本回合的攻击范围无限。若你以此法弃置的牌为非基本牌，你可以弃置一名其他角色的一张牌。"
+      },
+      {
+        "name": "解烦",
+        "id": "wzzz_v__jiefan",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以选择一名角色，令攻击范围内包含其的角色选择一项：1.弃置一张武器牌；2.令其摸一张牌。若此时为第一轮游戏，回合结束时，此技能视为未发动过。"
+      }
+    ]
+  },
+  {
+    "number": 49,
     "name": "黄盖",
     "code_name": "wzzz__huanggai",
-    "metadata": "吴势力，4 体力，男性",
+    "title": "轻身为国",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，轻身为国",
     "package": "wzzz_generals",
     "skills": [
       {
         "name": "苦肉",
         "id": "wzzz_v__ex__kurou",
         "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌，然后失去 1 点体力。"
+        "description": "出牌阶段限一次，你可以弃置一张牌，然后失去1点体力。"
       },
       {
         "name": "诈降",
         "id": "wzzz_v__ol_ex__zhaxiang",
         "derived": false,
-        "description": "锁定技，当你失去 1 点体力后，你摸三张牌；然后若此时在你的出牌阶段内，则直到回合结束，你使用红色【杀】无距离限制且不能被【闪】响应，且你可以多使用一张【杀】。"
+        "description": "锁定技，当你失去1点体力后，你摸三张牌；然后若此时在你的出牌阶段内，则直到回合结束，你使用红色【杀】无距离限制且不能被【闪】响应，且你可以多使用一张【杀】。"
       }
     ]
   },
   {
-    "number": 92,
+    "number": 50,
+    "name": "蒋钦",
+    "code_name": "wzzz__jiangqin",
+    "title": "折节尚义",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，折节尚义",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "俭衣",
+        "id": "wzzz_v__jianyi",
+        "derived": false,
+        "description": "锁定技，其他角色的回合结束后，你获得弃牌堆中一张本回合因弃置而置入的防具牌。"
+      },
+      {
+        "name": "尚义",
+        "id": "wzzz_v__mobile__shangyi",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张牌并选择一名有手牌的其他角色，令其观看你的手牌，然后你观看其手牌并获得其中一张。"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "name": "凌操",
+    "code_name": "wzzz__lingcao",
+    "title": "激流勇进",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "吴势力，4/5 体力，男性，激流勇进",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "独进",
+        "id": "wzzz_v__ol__dujin",
+        "derived": false,
+        "description": "摸牌阶段，你可以多摸X+1张牌（X为你装备区里牌数的一半且向上取整）。"
+      },
+      {
+        "name": "独锋",
+        "id": "wzzz_v__dufeng",
+        "derived": false,
+        "description": "限定技，出牌阶段开始时，你可以失去1点体力，令你本回合使用【杀】的次数+Y（Y为你已损失体力值-1）。"
+      }
+    ]
+  },
+  {
+    "number": 52,
+    "name": "凌统",
+    "code_name": "wzzz__lingtong",
+    "title": "豪情烈胆",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，豪情烈胆",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "旋风",
+        "id": "wzzz_v__m_ex__xuanfeng",
+        "derived": false,
+        "description": "当你于弃牌阶段弃置过至少两张牌，或当你失去装备区里的牌后，你可以依次弃置至多两名其他角色共计两张牌。"
+      },
+      {
+        "name": "勇进",
+        "id": "wzzz_v__ty_ex__yongjin",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以依次移动场上至多三张各不同的装备牌。"
+      }
+    ]
+  },
+  {
+    "number": 53,
+    "name": "留赞",
+    "code_name": "wzzz__liuzan",
+    "title": "啸天亢声",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，啸天亢声",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "奋音",
+        "id": "wzzz_v__sxfy__fenyin",
+        "derived": false,
+        "description": "当你于回合内使用牌时，若此牌与你本回合使用的上一张牌颜色不同，你可以摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "name": "鲁肃",
+    "code_name": "wzzz__lusu",
+    "title": "独断的外交家",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，独断的外交家",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "好施",
+        "id": "wzzz_v__haoshi",
+        "derived": false,
+        "description": "摸牌阶段，你可以多摸两张牌，然后若你的手牌数大于5，你将一半手牌（向下取整）交给场上手牌数最少的一名其他角色。"
+      },
+      {
+        "name": "缔盟",
+        "id": "wzzz_v__ol_ex__dimeng",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以令两名其他角色交换手牌（这两名角色手牌数差须不大于你的牌数）。若如此做，此阶段结束时，你弃置X张牌（X为这两名角色此时的手牌数差）"
+      }
+    ]
+  },
+  {
+    "number": 55,
+    "name": "陆逊",
+    "code_name": "wzzz__luxun",
+    "title": "儒生雄才",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，儒生雄才",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "谦逊",
+        "id": "wzzz_v__ex__qianxun",
+        "derived": false,
+        "description": "当一张延时锦囊牌或其他角色使用的普通锦囊牌对你生效时，若你是此牌唯一目标，你可以将所有手牌扣置于武将牌上，然后此回合结束时，你获得这些牌。"
+      },
+      {
+        "name": "连营",
+        "id": "wzzz_v__ex__lianying",
+        "derived": false,
+        "description": "当你失去手牌后，若你没有手牌，你可以令至多X名角色各摸一张牌（X为你此次失去的手牌数）"
+      },
+      {
+        "name": "顺势",
+        "id": "wzzz__shunshi",
+        "derived": false,
+        "description": "（团队模式中失去此技能）当你于回合外因“连营”而获得非基本牌时，你可以展示之并摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "name": "吕蒙",
+    "code_name": "wzzz__lvmeng",
+    "title": "士别三日",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，士别三日",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "克己",
+        "id": "wzzz_v__keji",
+        "derived": false,
+        "description": "若你未于出牌阶段内使用或打出过【杀】，你可以跳过弃牌阶段。"
+      },
+      {
+        "name": "勤学",
+        "id": "wzzz_v__ol_ex__qinxue",
+        "derived": false,
+        "description": "觉醒技，准备阶段或结束阶段，若你的手牌数减体力值大于1，你减1点体力上限并获得“攻心”，然后回复1点体力或摸两张牌。"
+      },
+      {
+        "name": "博图",
+        "id": "wzzz_v__botu",
+        "derived": false,
+        "description": "每轮限两次，你的回合结束后，若本回合置入弃牌堆的牌包含四种花色，你可以执行一个额外的回合。"
+      },
+      {
+        "name": "攻心",
+        "id": "wzzz_v__gongxin",
+        "derived": true,
+        "description": "出牌阶段限一次，你可以观看一名其他角色的手牌，然后你可以展示其中的一张红桃牌并选择一项：1.弃置此牌；2.将此牌置于牌堆顶。"
+      }
+    ]
+  },
+  {
+    "number": 57,
+    "name": "潘濬",
+    "code_name": "wzzz__panjun",
+    "title": "方严疾恶，血战禁将",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，方严疾恶，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "观微",
+        "id": "wzzz_v__guanwei",
+        "derived": false,
+        "description": "每回合限一次，一名角色的出牌阶段结束后，若其本回合使用过至少两张非虚拟牌，且这些牌花色均相同或均为无色牌，你可以弃置一张牌，令其摸两张牌并执行一个额外的出牌阶段。"
+      },
+      {
+        "name": "公清",
+        "id": "wzzz_v__gongqing",
+        "derived": false,
+        "description": "锁定技，当你受到伤害时，若伤害来源的攻击范围：小于3，则此伤害改为1；大于3，则此伤害+1。"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "name": "SP庞统",
+    "code_name": "wzzz_sp__sp_pangtong",
+    "title": "南州士冠",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，南州士冠",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "过论",
+        "id": "wzzz_v__guolun",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以展示一名其他角色的一张手牌。若如此做，你可以展示一张手牌交换之，然后你可以选择一项：1.令展示牌点数较小的角色摸一张牌；2.令展示牌点数较大的角色回复1点体力。"
+      },
+      {
+        "name": "展骥",
+        "id": "wzzz_v__zhanji",
+        "derived": false,
+        "description": "锁定技，当你于出牌阶段内不因此技能而摸牌时，你摸一张牌。"
+      },
+      {
+        "name": "送丧",
+        "id": "wzzz_v__qshm__songsang",
+        "derived": false,
+        "description": "限定技，当一名角色死亡时，你可以加1点体力上限并回复1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "name": "全琮",
+    "code_name": "wzzz__quancong",
+    "title": "慕势耀族",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，慕势耀族",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "邀名",
+        "id": "wzzz_v__ol__yaoming",
+        "derived": false,
+        "description": "出牌阶段各限一次，或当你受到1点伤害后，你可以选择一项：1.弃置一名手牌数不小于你的其他角色的一张牌；2.令一名手牌数不大于你的其他角色摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "name": "孙策",
+    "code_name": "wzzz__sunce",
+    "title": "江东小霸王",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，江东小霸王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "激昂",
+        "id": "wzzz_v__jiang",
+        "derived": false,
+        "description": "当你使用【决斗】或红色【杀】指定目标后，或成为【决斗】或红色【杀】目标后，你可以摸一张牌；【决斗】或红色【杀】因弃置进入弃牌堆后，你可以失去1点体力获得之（每回合限一次）。"
+      },
+      {
+        "name": "魂姿",
+        "id": "wzzz_v__ol_ex__hunzi",
+        "derived": false,
+        "description": "觉醒技，准备阶段，若你的体力值为1，你减1点体力上限，然后获得“英姿”和“英魂”。本回合的结束阶段，你摸两张牌或回复1点体力。"
+      },
+      {
+        "name": "英姿",
+        "id": "wzzz_v__ex__yingzi",
+        "derived": true,
+        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等于你的体力上限。"
+      },
+      {
+        "name": "英魂",
+        "id": "wzzz_v__yinghun",
+        "derived": true,
+        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置X张牌；2.令其摸X张牌并弃置一张牌（X为你已损失的体力值）。"
+      }
+    ]
+  },
+  {
+    "number": 61,
+    "name": "孙登",
+    "code_name": "wzzz__sundeng",
+    "title": "才高德茂",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，才高德茂",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "匡弼",
+        "id": "wzzz_v__kuangbi",
+        "derived": false,
+        "description": "出牌阶段限一次或游戏开始时，你可以选择一名有牌的其他角色，其将一至三张牌（游戏开始时改为一至两张牌）扣置于你的武将牌上，然后你可以令其摸等量的牌。准备阶段，你获得你武将牌上的牌。（团队模式中删除描述：“游戏开始时”）"
+      }
+    ]
+  },
+  {
+    "number": 62,
+    "name": "孙皓",
+    "code_name": "wzzz__sunhao",
+    "title": "时日曷丧",
+    "kingdom": "吴",
+    "hp": 5,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "吴势力，5/5 体力，男性，时日曷丧",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "残蚀",
+        "id": "wzzz_v__ol__canshi",
+        "derived": false,
+        "description": "摸牌阶段，你可以改为摸X张牌（X为已受伤的角色数且至少为4）。若如此做，当你本回合内使用非装备牌时，你弃置一张牌。"
+      },
+      {
+        "name": "仇海",
+        "id": "wzzz_v__chouhai",
+        "derived": false,
+        "description": "锁定技，当你受到伤害时，若你没有手牌，此伤害+1。"
+      }
+    ]
+  },
+  {
+    "number": 63,
+    "name": "孙坚",
+    "code_name": "wzzz__sunjian",
+    "title": "武烈帝",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "吴势力，4/5 体力，男性，武烈帝",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "英魂",
+        "id": "wzzz_v__yinghun",
+        "derived": false,
+        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置X张牌；2.令其摸张牌并弃置一张牌。（X为你已损失的体力值）"
+      },
+      {
+        "name": "武烈",
+        "id": "wzzz_v__wulie",
+        "derived": false,
+        "description": "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。"
+      }
+    ]
+  },
+  {
+    "number": 64,
+    "name": "孙鲁育",
+    "code_name": "wzzz__sunluyu",
+    "title": "舍身饲虎",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，舍身饲虎",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "魅步",
+        "id": "wzzz_v__ty__meibu",
+        "derived": false,
+        "description": "其他角色的出牌阶段开始时，若你在其攻击范围内，你可以弃置一张牌，令该角色于本回合内拥有“止息”。若其本回合因“止息”弃置的牌与你以此法弃置的牌的花色相同，你获得之。"
+      },
+      {
+        "name": "穆穆",
+        "id": "wzzz_v__ty__mumu",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以选择一项：1.弃置一名其他角色装备区里的一张牌，然后你本回合可使用【杀】的次数+1；2.获得一名角色装备区里的一张防具牌，然后你本回合可使用【杀】的次数-1。"
+      },
+      {
+        "name": "止息",
+        "id": "wzzz_v__ty__zhixi",
+        "derived": true,
+        "description": "锁定技，你于出牌阶段内使用【杀】或普通锦囊牌时须弃置一张手牌。"
+      }
+    ]
+  },
+  {
+    "number": 65,
+    "name": "孙权",
+    "code_name": "wzzz__sunquan",
+    "title": "年轻的贤君",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，年轻的贤君",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "制衡",
+        "id": "wzzz_v__tycl__zhiheng",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置任意张牌，然后摸等量的牌。若你以此法弃置了所有的手牌，则额外摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 66,
     "name": "孙茹",
     "code_name": "wzzz__sunru",
-    "metadata": "吴势力，3 体力，女性",
+    "title": "出水青莲",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，出水青莲",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2208,31 +1884,53 @@
     ]
   },
   {
-    "number": 93,
-    "name": "周鲂",
-    "code_name": "wzzz__zhoufang",
-    "metadata": "吴势力，3 体力，男性",
+    "number": 67,
+    "name": "孙尚香",
+    "code_name": "wzzz__sunshangxiang",
+    "title": "弓腰姬",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，弓腰姬",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "断发",
-        "id": "wzzz_v__duanfa",
+        "name": "缘定",
+        "id": "wzzz__yuanding",
         "derived": false,
-        "description": "出牌阶段，你可以弃置任意张黑色牌，然后摸等量的牌（每阶段至多弃置 X 张，X 为你的体力上限）。"
+        "description": "锁定技，亮将后，你选择其中一项：1.“良助”添加限定技标签；2.失去“结姻”。"
       },
       {
-        "name": "诱敌",
-        "id": "wzzz_v__sp__youdi",
+        "name": "结姻",
+        "id": "wzzz_v__jieyin",
         "derived": false,
-        "description": "结束阶段，你可以令一名其他角色弃置你的一张手牌，你依次执行满足条件的选项：1.若此牌不为【杀】，你获得其一张牌；2.若此牌不为黑色，你摸一张牌；若两项均满足，则你增加 1 点体力上限(至多增加至 5)。"
+        "description": "出牌阶段限一次，你可以选择一名男性角色并弃置一张手牌或将一张装备牌置入其装备区。然后你与其体力值较高的角色摸一张牌，体力值较低的角色回复1点体力。"
+      },
+      {
+        "name": "良助",
+        "id": "wzzz_v__liangzhu",
+        "derived": false,
+        "description": "每回合限一次，当一名角色于其出牌阶段内不因“结姻”回复体力后，你可以摸一张牌或令其摸两张牌。"
+      },
+      {
+        "name": "枭姬",
+        "id": "wzzz_v__xiaoji",
+        "derived": false,
+        "description": "当你失去装备区里的一张牌后，你可以摸两张牌。"
       }
     ]
   },
   {
-    "number": 94,
+    "number": 68,
     "name": "太史慈",
     "code_name": "wzzz__taishici",
-    "metadata": "吴势力，4 体力，男性",
+    "title": "笃烈之士",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，笃烈之士",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2250,43 +1948,15 @@
     ]
   },
   {
-    "number": 95,
-    "name": "吕蒙",
-    "code_name": "wzzz__lvmeng",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "克己",
-        "id": "wzzz_v__keji",
-        "derived": false,
-        "description": "若你未于出牌阶段内使用或打出过【杀】，你可以跳过弃牌阶段。"
-      },
-      {
-        "name": "勤学",
-        "id": "wzzz_v__ol_ex__qinxue",
-        "derived": false,
-        "description": "觉醒技，准备阶段或结束阶段，若你的手牌数减体力值大于 1，你减 1 点体力上限并获得“攻心”，然后回复 1 点体力或摸两张牌。"
-      },
-      {
-        "name": "博图",
-        "id": "wzzz_v__botu",
-        "derived": false,
-        "description": "每轮限两次，你的回合结束后，若本回合置入弃牌堆的牌包含四种花色，你可以执行一个额外的回合。"
-      },
-      {
-        "name": "攻心",
-        "id": "wzzz_v__gundam__gongxin",
-        "derived": true,
-        "description": "出牌阶段限一次，你可以观看一名其他角色的手牌，然后你可以展示其中的一张红桃牌；并选"
-      }
-    ]
-  },
-  {
-    "number": 96,
+    "number": 69,
     "name": "唐咨",
     "code_name": "wzzz__tangzi",
-    "metadata": "吴势力，4 体力，男性",
+    "title": "工学之奇才",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，工学之奇才",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2304,31 +1974,131 @@
     ]
   },
   {
-    "number": 97,
-    "name": "周瑜",
-    "code_name": "wzzz__zhouyu",
-    "metadata": "吴势力，3 体力，男性",
+    "number": 70,
+    "name": "文鸯",
+    "code_name": "wzzz__wenyang",
+    "title": "独骑破军",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，独骑破军",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "英姿",
-        "id": "wzzz_v__ex__yingzi",
+        "name": "却敌",
+        "id": "wzzz_v__quedi",
         "derived": false,
-        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限+X（X 为你的体力上限）。"
+        "description": "每回合限一次，当你使用【杀】或【决斗】指定唯一目标后，你可以选择一项或减1点体力上限依次执行两项：1.获得其一张手牌；2.弃置一张基本牌令此牌造成的伤害+1。"
       },
       {
-        "name": "反间",
-        "id": "wzzz_v__wzzz__fanjian",
+        "name": "仇决",
+        "id": "wzzz_v__mobile__choujue",
         "derived": false,
-        "description": "出牌阶段限一次，你可以展示一张手牌，将其交给一名角色并令其本回合非锁定技失效，然后"
+        "description": "锁定技，当你杀死其他角色后，你加1点体力上限并摸两张牌，本回合“却敌”可发动次数+1。"
+      },
+      {
+        "name": "冲坚",
+        "id": "wzzz_v__ofl__chongjian",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以减1点体力上限，将一张装备牌当【酒】或无视防具的任意一种【杀】使用。"
       }
     ]
   },
   {
-    "number": 98,
-    "name": "张昭&张纮",
+    "number": 71,
+    "name": "小乔",
+    "code_name": "wzzz__xiaoqiao",
+    "title": "矫情之花",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "吴势力，3/3 体力，女性，矫情之花",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "天香",
+        "id": "wzzz_v__ol_ex__tianxiang",
+        "derived": false,
+        "description": "当你受到伤害时，你可以弃置一张红桃牌并选择一名其他角色，然后防止此伤害并选择一项：1.令伤害来源对其造成1点伤害，然后其摸X张牌（X为其已损失体力值且至多为5）；2.令其失去1点体力，然后其获得你弃置的牌。"
+      },
+      {
+        "name": "红颜",
+        "id": "wzzz_v__ol_ex__hongyan",
+        "derived": false,
+        "description": "锁定技，你的黑桃牌和你的黑桃判定牌视为红桃牌；若你的装备区里有牌，你的手牌上限等于你的体力上限。"
+      },
+      {
+        "name": "飘零",
+        "id": "wzzz_v__ol_ex__piaoling",
+        "derived": false,
+        "description": "结束阶段，你可以进行判定，若结果为红桃，你将此判定牌置于牌堆顶或交给一名角色，若该角色为你，你弃置一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "name": "徐盛",
+    "code_name": "wzzz__xusheng",
+    "title": "江东的铁壁",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，江东的铁壁",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "破军",
+        "id": "wzzz_v__ty_ex__pojun",
+        "derived": false,
+        "description": "当你使用【杀】指定目标后，你可以将该角色的至多X张牌扣置于其武将牌上，本回合结束后，其获得这些牌（X为其体力值）；当你使用【杀】对目标角色造成伤害时，若其手牌区和装备区里的牌数均不大于你，此伤害+1。"
+      },
+      {
+        "name": "疑城",
+        "id": "wzzz_v__v33__yicheng",
+        "derived": false,
+        "description": "与你相邻的角色成为【杀】的目标后，你可以令其摸一张牌，然后弃置一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 73,
+    "name": "虞翻",
+    "code_name": "wzzz__yufan",
+    "title": "狂直之士",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，狂直之士",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "纵玄",
+        "id": "wzzz_v__m_ex__zongxuan",
+        "derived": false,
+        "description": "当你的牌因弃置而置入弃牌堆后，或你上家的牌于每回合首次因弃置而置入弃牌堆后，你可以将其中一张锦囊牌交给一名其他角色，且可以将其余任意张牌置于牌堆顶。出牌阶段限一次，你可以摸一张牌并将一张牌置于牌堆顶。"
+      },
+      {
+        "name": "直言",
+        "id": "wzzz_v__ol_ex__zhiyan",
+        "derived": false,
+        "description": "结束阶段，你可以令一名角色摸一张牌并展示之，若此牌为：装备牌，则其使用之并回复1点体力；非装备牌，若其体力值不等于你，其失去1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 74,
+    "name": "张昭张纮",
     "code_name": "wzzz__zhangzhaozhanghong",
-    "metadata": "吴势力，3 体力，男性",
+    "title": "经天纬地",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，经天纬地",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2346,109 +2116,1377 @@
     ]
   },
   {
-    "number": 99,
-    "name": "李儒",
-    "code_name": "wzzz__liru",
-    "metadata": "群势力，3 体力，男性",
+    "number": 75,
+    "name": "周鲂",
+    "code_name": "wzzz__zhoufang",
+    "title": "下发载义",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，下发载义",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "绝策",
-        "id": "wzzz_v__juece",
+        "name": "断发",
+        "id": "wzzz_v__duanfa",
         "derived": false,
-        "description": "结束阶段，你可以对一名没有手牌的其他角色造成 1 点伤害。"
+        "description": "出牌阶段，你可以弃置任意张黑色牌，然后摸等量的牌（每阶段至多弃置X张，X为你的体力上限）"
       },
       {
-        "name": "灭计",
-        "id": "wzzz_v__m_ex__mieji",
+        "name": "诱敌",
+        "id": "wzzz_v__sp__youdi",
         "derived": false,
-        "description": "出牌阶段限一次，你可以展示一张武器牌或锦囊牌并置于牌堆顶，然后令一名有手牌的其他角"
+        "description": "结束阶段，你可以令一名其他角色弃置你的一张手牌，你依次执行满足条件的选项：1.若此牌不为【杀】，你获得其一张牌；2.若此牌不为黑色，你摸一张牌；若两项均满足，则你增加1点体力上限（至多增加至5）。"
+      }
+    ]
+  },
+  {
+    "number": 76,
+    "name": "周泰",
+    "code_name": "wzzz__zhoutai",
+    "title": "历战之躯，血战禁将",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，历战之躯，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "不屈",
+        "id": "wzzz_v__hs__buqu",
+        "derived": false,
+        "description": "锁定技，当你处于濒死状态时，你将牌堆顶的一张牌置于你的武将牌上，称为“创”，若此牌的点数与已有的“创”点数均不同，则你将体力回复至1点，若出现相同点数则将此牌置入弃牌堆。若你的武将牌上有“创”，则你的手牌上限与“创”的数量相等。"
       },
       {
-        "name": "焚城",
-        "id": "wzzz_v__fencheng",
+        "name": "奋激",
+        "id": "wzzz_v__m_ex__fenji",
         "derived": false,
-        "description": "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.弃置至少 X+1 张牌（X 为发动此技能时该角色的上家以此法弃置的牌数）；2.受到你造成的 2 点火焰伤害。"
+        "description": "当一名角色的手牌被另一名角色弃置或获得时，你可以失去1点体力，然后令失去手牌的角色摸两张牌；一名角色的结束阶段，若其没有手牌，你可以失去1点体力，然后令其摸两张牌。"
+      }
+    ]
+  },
+  {
+    "number": 77,
+    "name": "周瑜",
+    "code_name": "wzzz__zhouyu",
+    "title": "大都督",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，大都督",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "英姿",
+        "id": "wzzz_v__ex__yingzi",
+        "derived": false,
+        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限+X（X为你的体力上限）。"
+      },
+      {
+        "name": "反间",
+        "id": "wzzz_v__wzzz__fanjian",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以展示一张手牌，将其交给一名角色并令其本回合非锁定技失效，然后其须选择一项：1.展示所有手牌，然后弃置与此牌颜色相同的所有牌（至少两张）；2.失去1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 78,
+    "name": "朱桓",
+    "code_name": "wzzz__zhuhuan",
+    "title": "中洲拒天人",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，中洲拒天人",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "奋励",
+        "id": "wzzz_v__fenli",
+        "derived": false,
+        "description": "判定阶段开始前，若你的手牌数为场上最多，你可以跳过此阶段和本回合的下个摸牌阶段；出牌阶段开始前，若你的体力值为场上最高，你可以跳过此阶段；弃牌阶段开始前，若你装备区里的牌数为场上最多（至少0张），你可以跳过此阶段。"
+      },
+      {
+        "name": "平寇",
+        "id": "wzzz_v__pingkou",
+        "derived": false,
+        "description": "回合结束时，你可以对至多X名其他角色各造成1点伤害。若你选择的角色数小于X，则你获得其中一名角色装备区里的一张牌。（X为你本回合跳过的阶段数）"
+      }
+    ]
+  },
+  {
+    "number": 79,
+    "name": "朱然",
+    "code_name": "wzzz__zhuran",
+    "title": "不动之督",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，不动之督",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "胆守",
+        "id": "wzzz_v__ty_ex__danshou",
+        "derived": false,
+        "description": "每名其他角色的回合限一次，当你成为基本牌或普通锦囊牌的目标后，你可以摸一张牌；一名角色的结束阶段，若你本回合未以此法摸牌，你可以弃置X+1张牌，对其造成1点伤害。（X为其手牌数）"
+      }
+    ]
+  },
+  {
+    "number": 80,
+    "name": "诸葛瑾",
+    "code_name": "wzzz__zhugejin",
+    "title": "联盟的维系者",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，联盟的维系者",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "缓释",
+        "id": "wzzz_v__huanshi",
+        "derived": false,
+        "description": "当一名角色的判定牌生效前，你可以令其观看你的手牌并选择你的一张牌，然后你打出此牌代替判定牌。"
+      },
+      {
+        "name": "弘援",
+        "id": "wzzz_v__hongyuan",
+        "derived": false,
+        "description": "摸牌阶段结束时，你可以依次交给至多两名其他角色各一张牌。"
+      },
+      {
+        "name": "明哲",
+        "id": "wzzz_v__mingzhe",
+        "derived": false,
+        "description": "当你于回合外或摸牌阶段失去红色牌时，你可以展示之并摸一张牌。（团队模式中增加描述：“摸牌阶段限一次”）"
+      }
+    ]
+  },
+  {
+    "number": 81,
+    "name": "诸葛恪",
+    "code_name": "wzzz__zhugeke",
+    "title": "兴家赤族",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，兴家赤族",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "黩武",
+        "id": "wzzz_v__duwu",
+        "derived": false,
+        "description": "出牌阶段，你可以选择你攻击范围内的一名角色并弃置X张牌（X为其体力值），然后对其造成1点伤害，若其因此伤害进入濒死状态且未死亡，你失去1点体力且本回合“黩武”失效。"
+      },
+      {
+        "name": "傲才",
+        "id": "wzzz_v__ol__aocai",
+        "derived": false,
+        "description": "当你于回合外需要使用或打出基本牌时，你可以观看牌堆顶的两张牌（若你没有手牌改为观看四张），并可以使用或打出其中一张你需要的基本牌。"
+      }
+    ]
+  },
+  {
+    "number": 82,
+    "name": "祖茂",
+    "code_name": "wzzz__zumao",
+    "title": "碧血染赤帻",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，碧血染赤帻",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "引兵",
+        "id": "wzzz_v__qshm__yinbing",
+        "derived": false,
+        "description": "游戏开始时或结束阶段，你可以将任意名攻击范围内包含你的其他角色的各一张手牌置于你的武将牌上，然后你可以将你的一张手牌置于武将牌上，称为“引兵”（至多两张）；当你受到【杀】或【决斗】造成的伤害后，你移去一张“引兵”牌。（团队模式中删除描述：“游戏开始时”）"
+      },
+      {
+        "name": "绝地",
+        "id": "wzzz_v__juedi",
+        "derived": false,
+        "description": "锁定技，准备阶段，你选择一项：1.移去所有“引兵”牌，然后你摸牌至体力上限；2.令一名体力值不大于你的其他角色获得所有“引兵”牌，然后其回复1点体力并摸等量的牌。"
+      }
+    ]
+  },
+  {
+    "number": 83,
+    "name": "曹昂",
+    "code_name": "wzzz__caoang",
+    "title": "取义成仁",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，取义成仁",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "慷忾",
+        "id": "wzzz_v__kangkai",
+        "derived": false,
+        "description": "当一名角色成为【杀】的目标后，若你与其距离1以内，你可以摸一张牌，然后交给其一张牌并展示之。若此牌为装备牌，该角色可以使用此牌。"
+      },
+      {
+        "name": "舍身",
+        "id": "wzzz_v__vd_sheshen",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一名角色区域里的一张牌，然后失去1点体力，若弃置的牌为一名角色判定区里的牌，你失去“舍身”。"
+      }
+    ]
+  },
+  {
+    "number": 84,
+    "name": "曹操",
+    "code_name": "wzzz__caocao",
+    "title": "魏武帝",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，魏武帝",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "述志",
+        "id": "wzzz__shuzhi",
+        "derived": false,
+        "description": "锁定技，亮将后，你选择“奸雄”和“清正”中的一个技能添加限定技标签。"
+      },
+      {
+        "name": "奸雄",
+        "id": "wzzz_v__ex__jianxiong",
+        "derived": false,
+        "description": "当你受到伤害后，你可以获得对你造成伤害的牌并摸一张牌。"
+      },
+      {
+        "name": "清正",
+        "id": "wzzz_v__mou__qingzheng",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以弃置你手牌中一种花色的所有牌并选择一名其他角色观看你的手牌，然后你观看其手牌并弃置其中一种花色的所有牌；若其被弃置的牌数小于你弃置的牌数，你对其造成1点伤害。"
+      }
+    ]
+  },
+  {
+    "number": 85,
+    "name": "曹冲",
+    "code_name": "wzzz__caochong",
+    "title": "仁爱的神童",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，仁爱的神童",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "称象",
+        "id": "wzzz_v__ty_ex__chengxiang",
+        "derived": false,
+        "description": "当你受到伤害后，你可以亮出牌堆顶的四张牌，获得其中任意张点数之和不大于13的牌；若获得的牌点数之和恰好为13，你可以复原武将牌或下次发动“称象”亮出牌堆顶五张牌。"
+      },
+      {
+        "name": "仁心",
+        "id": "wzzz_v__renxin",
+        "derived": false,
+        "description": "当体力值为1的其他角色受到伤害时，你可以弃置一张装备牌并翻面，然后防止此伤害。"
+      }
+    ]
+  },
+  {
+    "number": 86,
+    "name": "曹仁",
+    "code_name": "wzzz__caoren",
+    "title": "大将军",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，大将军",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "据守",
+        "id": "wzzz_v__ol__jushou",
+        "derived": false,
+        "description": "结束阶段，你可以翻面，然后摸四张牌并弃置一张手牌，若此牌为装备牌，则你改为使用之。"
+      },
+      {
+        "name": "解围",
+        "id": "wzzz_v__ol__jiewei",
+        "derived": false,
+        "description": "你可以将装备区里的一张牌当【无懈可击】使用；当你翻至正面时，你可以弃置一张牌，然后可以移动场上的一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 87,
+    "name": "SP曹仁",
+    "code_name": "wzzz_sp__sp_caoren",
+    "title": "险不辞难",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，险不辞难",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "伪溃",
+        "id": "wzzz_v__weikui",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以失去1点体力并选择一名有手牌的其他角色，你观看其手牌：若其手牌中：有【闪】，则视为你对其使用一张无次数限制的【杀】，且本回合你计算与其的距离视为1；没有【闪】，你弃置其中一张牌。"
+      },
+      {
+        "name": "励战",
+        "id": "wzzz_v__lizhan",
+        "derived": false,
+        "description": "回合结束时，你可以令任意名已受伤的角色各摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 88,
+    "name": "曹叡",
+    "code_name": "wzzz__caorui",
+    "title": "天姿的明君",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，天姿的明君",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "明鉴",
+        "id": "wzzz_v__ty_ex__mingjian",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），该角色于其下个回合使用【杀】的次数+1，手牌上限+1。"
+      },
+      {
+        "name": "恢拓",
+        "id": "wzzz_v__huituo",
+        "derived": false,
+        "description": "当你受到伤害后，你可以令一名角色进行判定，若结果为：红色，其回复1点体力；黑色，其摸X张牌（X为此伤害值）。"
+      }
+    ]
+  },
+  {
+    "number": 89,
+    "name": "曹彰",
+    "code_name": "wzzz__caozhang",
+    "title": "黄须儿",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，黄须儿",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "将驰",
+        "id": "wzzz_v__ty_ex__jiangchi",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以选择一项：1.摸两张牌，本阶段不能使用或打出【杀】，弃牌阶段开始时，你可以展示任意张【杀】并令这些牌此阶段不计入手牌上限；2.摸一张牌；3.弃置一张牌，此阶段【杀】无距离限制且可以多使用一张【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 90,
+    "name": "陈群",
+    "code_name": "wzzz__chenqun",
+    "title": "万世臣表",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，万世臣表",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "品第",
+        "id": "wzzz_v__ty_ex__pindi",
+        "derived": false,
+        "description": "出牌阶段每名角色限一次，你可以弃置一张牌并选择一名角色（不能弃置相同类型的牌），令其摸X张牌或令其弃置X张牌（X为本回合此技能发动次数）。若其已受伤，你横置。"
+      },
+      {
+        "name": "法恩",
+        "id": "wzzz_v__faen",
+        "derived": false,
+        "description": "当一名角色翻至正面或横置后，你可以令其摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 91,
+    "name": "崔琰",
+    "code_name": "wzzz__cuiyan",
+    "title": "伯夷之风",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，伯夷之风",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "雅俊",
+        "id": "wzzz_v__yajun",
+        "derived": false,
+        "description": "摸牌阶段，你多摸一张牌；出牌阶段开始时，你可以用本回合获得的一张牌与一名角色拼点，若你：赢，你可以将其中一张拼点牌置于牌堆顶；没赢，本回合你的手牌上限-1。"
+      },
+      {
+        "name": "尊嫡",
+        "id": "wzzz_v__zundi",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张手牌并选择一名角色，然后你进行一次判定，若结果为：红色，其可以移动场上的一张牌；黑色，其摸三张牌。"
+      }
+    ]
+  },
+  {
+    "number": 92,
+    "name": "典韦",
+    "code_name": "wzzz__dianwei",
+    "title": "古之恶来",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，古之恶来",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "强袭",
+        "id": "wzzz_v__ol__qiangxi",
+        "derived": false,
+        "description": "出牌阶段限两次，你可以受到1点伤害或弃置一张武器牌，然后对一名本回合未以此法指定过的其他角色造成1点伤害。"
+      },
+      {
+        "name": "狞恶",
+        "id": "wzzz_v__ninge",
+        "derived": false,
+        "description": "锁定技，当一名角色每回合第二次受到伤害后，若其为你或伤害来源为你，你摸一张牌并弃置其区域里的一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 93,
+    "name": "邓艾",
+    "code_name": "wzzz__dengai",
+    "title": "矫然的壮士",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，矫然的壮士",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "屯田",
+        "id": "wzzz_v__ol_ex__tuntian",
+        "derived": false,
+        "description": "当你于回合外失去牌后，或你于回合内弃置【杀】后，你可以进行判定，若结果不为红桃，将判定牌置于你的武将牌上，称为“田”；若结果为红桃，则你获得此判定牌；你计算与其他角色的距离-X（X为“田”的数量）。"
+      },
+      {
+        "name": "凿险",
+        "id": "wzzz_v__zaoxian",
+        "derived": false,
+        "description": "觉醒技，准备阶段，若“田”的数量不小于3，你减少1点体力上限并获得“急袭”。"
+      },
+      {
+        "name": "急袭",
+        "id": "wzzz_v__jixi",
+        "derived": true,
+        "description": "你可以将一张“田”当【顺手牵羊】使用。"
+      }
+    ]
+  },
+  {
+    "number": 94,
+    "name": "郭淮",
+    "code_name": "wzzz__guohuai",
+    "title": "垂问秦雍",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，垂问秦雍",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "精策",
+        "id": "wzzz_v__ol__jingce",
+        "derived": false,
+        "description": "出牌阶段结束时，你可以摸X张牌（X为你本回合使用过牌的类型数）；你的手牌上限+Y（Y为你本回合使用过牌的花色数）。"
+      }
+    ]
+  },
+  {
+    "number": 95,
+    "name": "郭嘉",
+    "code_name": "wzzz__guojia",
+    "title": "早终的先知",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，早终的先知",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "天妒",
+        "id": "wzzz_v__tiandu",
+        "derived": false,
+        "description": "当你的判定牌生效后，你可以获得之。"
+      },
+      {
+        "name": "遗计",
+        "id": "wzzz_v__ex__yiji",
+        "derived": false,
+        "description": "当你受到1点伤害后，你可以摸两张牌，然后你可以将至多两张手牌交给一至两名其他角色。当你每轮首次进入濒死状态时，你可以摸一张牌，然后你可以将一张手牌交给一名其他角色。"
+      }
+    ]
+  },
+  {
+    "number": 96,
+    "name": "郝昭",
+    "code_name": "wzzz__haozhao",
+    "title": "扣弦的豪将",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，扣弦的豪将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "镇骨",
+        "id": "wzzz_v__zhengu",
+        "derived": false,
+        "description": "结束阶段，你可以选择一名其他角色，本回合与其下个回合结束后，其将手牌调整至X（X为你的手牌数，至多摸至五张）。"
+      }
+    ]
+  },
+  {
+    "number": 97,
+    "name": "SP姜维",
+    "code_name": "wzzz_sp__sp_jiangwei",
+    "title": "幼麒",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，幼麒",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "困奋",
+        "id": "wzzz_v__kunfenEx",
+        "derived": false,
+        "description": "结束阶段，你可以失去1点体力，然后摸两张牌（修改：增加描述“且可以视为使用一张【火攻】”）。"
+      },
+      {
+        "name": "逢亮",
+        "id": "wzzz_v__fengliang",
+        "derived": false,
+        "description": "觉醒技，当你进入濒死状态时，你减1点体力上限并将体力回复至2点，然后获得“挑衅”并修改“困奋”。"
+      },
+      {
+        "name": "挑衅",
+        "id": "wzzz_v__m_ex__tiaoxin",
+        "derived": true,
+        "description": "出牌阶段限一次，你可以令一名其他角色选择一项：1.对你使用一张【杀】；2.你弃置其一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 98,
+    "name": "蒋干",
+    "code_name": "wzzz__jianggan",
+    "title": "锋镝悬信",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，锋镝悬信",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "盗书",
+        "id": "wzzz_v__daoshu",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以选择一名有手牌的其他角色并声明一种花色，然后你获得其一张手牌并展示之，若此牌与你声明的花色：相同，你对其造成1点伤害，“盗书”视为未发动过；不同，你展示一张与你此法获得的牌花色不同的手牌并交给该角色（没有则改为展示手牌）。"
+      },
+      {
+        "name": "伪诚",
+        "id": "wzzz_v__weicheng",
+        "derived": false,
+        "description": "当你将手牌交给其他角色，或你的手牌被其他角色获得后，若你的手牌数不大于体力值，你可以摸一张牌。"
+      },
+      {
+        "name": "戴罪",
+        "id": "wzzz_v__daizui",
+        "derived": false,
+        "description": "限定技，当你受到致命伤害时，你可以对伤害来源发动一次“盗书”，若本次“盗书”你对其造成了伤害，则防止你受到的致命伤害。"
+      }
+    ]
+  },
+  {
+    "number": 99,
+    "name": "蒯越蒯良",
+    "code_name": "wzzz__kuaiyuekuailiang",
+    "title": "雍论臼谋",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，雍论臼谋",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "荐降",
+        "id": "wzzz_v__jianxiang",
+        "derived": false,
+        "description": "当你成为其他角色使用牌的目标后，你可以令手牌数最少的一名角色摸一张牌。"
+      },
+      {
+        "name": "审时",
+        "id": "wzzz_v__shenshi",
+        "derived": false,
+        "description": "当你受到其他角色造成的伤害后，你可以观看其手牌，然后交给其一张牌并展示之（本回合明置于其手牌区），当前回合结束时，若其未失去此牌，你将手牌摸至四张。"
+      },
+      {
+        "name": "度势",
+        "id": "wzzz_v__m_heg__duoshi",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将一张牌交给一名除你外手牌数最多的角色，然后对其造成1点伤害。若其因此死亡，你可以令一名角色将手牌摸至四张。"
       }
     ]
   },
   {
     "number": 100,
-    "name": "华雄",
-    "code_name": "wzzz__huaxiong",
-    "metadata": "群势力，6 体力，男性",
+    "name": "李典",
+    "code_name": "wzzz__lidian",
+    "title": "深明大义",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，深明大义",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "耀武",
-        "id": "wzzz_v__ol_ex__yaowu",
+        "name": "恂恂",
+        "id": "wzzz_v__xunxun",
         "derived": false,
-        "description": "锁定技，当你受到伤害时，若对你造成伤害的牌为红色，伤害来源摸一张牌，否则你摸一张牌。"
+        "description": "摸牌阶段开始时，你可以观看牌堆顶的四张牌，将其中两张牌以任意顺序置于牌堆顶，其余以任意顺序置于牌堆底。"
       },
       {
-        "name": "势斩",
-        "id": "wzzz_v__shizhan",
+        "name": "忘隙",
+        "id": "wzzz_v__ol_ex__wangxi",
         "derived": false,
-        "description": "出牌阶段限两次，你可以选择一名本回合未被此技能选择过的其他角色，其视为对你使用一张【决斗】。"
+        "description": "当你对其他角色造成1点伤害后，或当你受到其他角色造成的1点伤害后，你可以摸两张牌并将其中一张牌交给其。"
       }
     ]
   },
   {
     "number": 101,
-    "name": "高顺",
-    "code_name": "wzzz__gaoshun",
-    "metadata": "群势力，4 体力，男性",
+    "name": "鲁芝",
+    "code_name": "wzzz__luzhi",
+    "title": "夷夏慕德",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，夷夏慕德",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "陷阵",
-        "id": "wzzz_v__ty_ex__xianzhen",
+        "name": "清忠",
+        "id": "wzzz_v__qingzhong",
         "derived": false,
-        "description": "出牌阶段限一次，你可以与一名角色拼点，若你：赢，本回合你无视该角色的防具、对其使用牌无距离次数限制、使用每种牌名的牌第一次对其造成的伤害+1；没赢，本回合你不能使用【杀】，弃牌阶段开始时，你可以展示任意张【杀】并令这些牌此阶段不计入手牌上限。"
+        "description": "出牌阶段开始时，你可以摸两张牌，然后本阶段结束时，若你手牌数不为场上唯一最少，你与手牌数最少的一名其他角色交换手牌。"
       },
       {
-        "name": "禁酒",
-        "id": "wzzz_v__ty_ex__jinjiu",
+        "name": "卫境",
+        "id": "wzzz_v__weijing",
         "derived": false,
-        "description": "锁定技，你手牌中的【酒】视为点数 K 的【杀】；其他角色于你回合内不能使用【酒】。"
+        "description": "每轮限一次，你可以视为使用一张【杀】或【闪】。"
       }
     ]
   },
   {
     "number": 102,
-    "name": "张郃",
-    "code_name": "wzzz__zhanghe",
-    "metadata": "群势力，4 体力，男性",
+    "name": "满宠",
+    "code_name": "wzzz__manchong",
+    "title": "政法兵谋",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，政法兵谋",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "巧变",
-        "id": "wzzz_v__ol_ex__qiaobian",
+        "name": "峻刑",
+        "id": "wzzz_v__m_ex__junxing",
         "derived": false,
-        "description": "你可以弃置一张手牌并跳过你的一个阶段（准备阶段和结束阶段除外），若你以此法跳过了：摸牌阶段，你可以获得至多两名其他角色的各一张手牌；出牌阶段，你可以移动场上的一张牌。回合结束时，若你本回合跳过了至少三个阶段，你可以摸两张牌。"
+        "description": "出牌阶段限一次，你可以弃置任意张手牌（至少一张）并选择一名其他角色，然后其选择一项：1.弃置等量张牌并失去1点体力；2.翻面，然后摸等量张牌。"
+      },
+      {
+        "name": "御策",
+        "id": "wzzz_v__yuce",
+        "derived": false,
+        "description": "当你受到伤害后，你可以展示一张手牌，然后伤害来源选择一项：1.弃置一张与此牌类型不同的手牌；2.你回复1点体力。"
       }
     ]
   },
   {
     "number": 103,
-    "name": "公孙渊",
-    "code_name": "wzzz__gongsunyuan",
-    "metadata": "群势力，4 体力，男性",
+    "name": "毛玠",
+    "code_name": "wzzz__maojie",
+    "title": "清公素履",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，清公素履",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "怀异",
-        "id": "wzzz_v__huaiyi",
+        "name": "秉清",
+        "id": "wzzz_v__bingqing",
         "derived": false,
-        "description": "出牌阶段限一次，你可以展示所有手牌，若其中包含： 一种颜色，你摸一张牌，然后此技能本阶段改为“出牌阶段限两次”；两种颜色，你弃置其中一种颜色所有的牌并获得至多 X 名其他角色的各一张牌(X 为你以此法弃置的手牌数)，然后若你获得的牌大于一张，你失去 1 点体力。"
+        "description": "出牌阶段，你使用每种花色的第一张牌结算完成后，若该花色为你此阶段使用的：第二种花色，你可以令一名角色摸两张牌；第三种，你可以弃置一名角色区域里的一张牌；第四种，你可以对一名其他角色造成1点伤害。"
+      },
+      {
+        "name": "奉迎",
+        "id": "wzzz_v__ty__fengying",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以弃置所有手牌并于此回合结束后执行一个额外的回合。此额外的回合开始时，若你已受伤且体力值为全场最少，你可以将手牌摸至体力值。"
       }
     ]
   },
   {
     "number": 104,
-    "name": "蔡文姬",
+    "name": "牛金",
+    "code_name": "wzzz__niujin",
+    "title": "独进的兵胆",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，独进的兵胆",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "挫锐",
+        "id": "wzzz_v__ol__cuorui",
+        "derived": false,
+        "description": "限定技，准备阶段，你可以将手牌摸至X张并跳过本回合判定阶段（X为场上手牌数最多角色的手牌数，至多摸五张牌）。"
+      },
+      {
+        "name": "裂围",
+        "id": "wzzz_v__ty__liewei",
+        "derived": false,
+        "description": "当一名角色进入濒死状态时，你可以摸一张牌（每回合限一次）。当你杀死一名角色后，你可以复原“挫锐”或摸两张牌。"
+      }
+    ]
+  },
+  {
+    "number": 105,
+    "name": "司马朗",
+    "code_name": "wzzz__simalang",
+    "title": "再世神农",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，再世神农",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "郡兵",
+        "id": "wzzz_v__ty_ex__junbing",
+        "derived": false,
+        "description": "一名角色的结束阶段，若其手牌数小于体力值，其可以摸一张牌并交给你所有手牌，然后你交给其等量的牌。（团队模式中修改为“若其手牌数小于2”）"
+      },
+      {
+        "name": "去疾",
+        "id": "wzzz_v__quji",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置X张牌并选择至多X名已受伤的角色（X为你已损失的体力值）这些角色各回复1点体力，然后其中已受伤的角色各摸一张牌。若你以此法弃置过黑色牌，你失去1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 106,
+    "name": "司马懿",
+    "code_name": "wzzz__simayi",
+    "title": "狼顾之鬼",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，狼顾之鬼",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "鬼才",
+        "id": "wzzz_v__guicai",
+        "derived": false,
+        "description": "当一名角色的判定牌生效前，你可以打出一张牌代替之。"
+      },
+      {
+        "name": "反馈",
+        "id": "wzzz_v__ex__fankui",
+        "derived": false,
+        "description": "当你受到1点伤害后，可以选择其中一项：1.你获得一名角色区域里的一张牌；2.观看一名角色手牌并获得其中一张牌（每轮限一次）。"
+      }
+    ]
+  },
+  {
+    "number": 107,
+    "name": "王基",
+    "code_name": "wzzz__wangji",
+    "title": "经行合一",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，经行合一",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "奇制",
+        "id": "wzzz_v__qizhi",
+        "derived": false,
+        "description": "当你于回合内使用牌指定目标后，你可以弃置不是此牌目标的一名角色一张牌，然后该角色摸一张牌。"
+      },
+      {
+        "name": "进趋",
+        "id": "wzzz_v__jinqu",
+        "derived": false,
+        "description": "结束阶段，你可以摸两张牌，然后将手牌弃置至X+1张（X为你于此回合内发动过“奇制”的次数）。"
+      }
+    ]
+  },
+  {
+    "number": 108,
+    "name": "王异",
+    "code_name": "wzzz__wangyi",
+    "title": "决意的巾帼",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "女性",
+    "metadata": "魏势力，4/4 体力，女性，决意的巾帼",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "贞烈",
+        "id": "wzzz_v__zhenlie",
+        "derived": false,
+        "description": "当你成为其他角色使用【杀】或普通锦囊牌的目标后，你可以失去1点体力。若如此做，此牌对你无效，然后你弃置其一张牌。"
+      },
+      {
+        "name": "秘计",
+        "id": "wzzz_v__miji",
+        "derived": false,
+        "description": "结束阶段，你可以摸X张牌（X为你已损失的体力值），然后可以将等量的手牌交给其他角色。"
+      }
+    ]
+  },
+  {
+    "number": 109,
+    "name": "文聘",
+    "code_name": "wzzz__wenpin",
+    "title": "坚城宿将",
+    "kingdom": "魏",
+    "hp": 5,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "魏势力，5/5 体力，男性，坚城宿将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "坚城",
+        "id": "wzzz_v__tg__jiancheng",
+        "derived": false,
+        "description": "若本局为团队模式，亮将后，你可以失去“镇卫”，获得“守御”。"
+      },
+      {
+        "name": "镇卫",
+        "id": "wzzz_v__zhenwei",
+        "derived": false,
+        "description": "当其他角色成为【杀】或黑色锦囊牌的唯一目标时，若其体力值小于你，你可以弃置一张牌并选择一项：1.摸一张牌，然后将此牌转移给你；2.若此牌为非虚拟牌，你令此牌无效，回合结束后，使用者获得此牌。"
+      },
+      {
+        "name": "守御",
+        "id": "wzzz__shouyu",
+        "derived": true,
+        "description": "锁定技，敌方角色计算与其他己方角色的距离+1。"
+      }
+    ]
+  },
+  {
+    "number": 110,
+    "name": "戏志才",
+    "code_name": "wzzz__xizhicai",
+    "title": "负俗的夭才",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，负俗的夭才",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "天妒",
+        "id": "wzzz_v__tiandu",
+        "derived": false,
+        "description": "当你的判定牌生效后，你可以获得此牌。"
+      },
+      {
+        "name": "先辅",
+        "id": "wzzz_v__xianfu",
+        "derived": false,
+        "description": "锁定技，游戏开始时，你声明一名其他角色获得“先辅”标记，当其受到伤害后，你受到等量的无来源普通伤害，当其回复体力后，你回复等量的体力。"
+      },
+      {
+        "name": "筹策",
+        "id": "wzzz_v__chouce",
+        "derived": false,
+        "description": "当你受到1点伤害后，你可以就行一次判定，若结果为：黑色，你弃置一名角色区域里的一张牌；红色，你令一名角色摸一张牌（若其为“先辅”角色且你因“先辅”受到伤害，则改为摸两张牌）。"
+      }
+    ]
+  },
+  {
+    "number": 111,
+    "name": "夏侯惇",
+    "code_name": "wzzz__xiahoudun",
+    "title": "独眼的罗刹",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，独眼的罗刹",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "刚烈",
+        "id": "wzzz_v__ex__ganglie",
+        "derived": false,
+        "description": "当你受到1点伤害后，你可以选择一名其他角色并进行判定，若结果为：红色，你对其造成1点伤害；黑色，你弃置其一张牌。"
+      },
+      {
+        "name": "清俭",
+        "id": "wzzz_v__ex__qingjian",
+        "derived": false,
+        "description": "每轮限一次，当你于摸牌阶段外获得牌后，你可以展示任意张牌并将这些牌交给一名其他角色。然后当前回合角色本回合手牌上限+X（X为你以此法展示的牌包含的类型数）。"
+      }
+    ]
+  },
+  {
+    "number": 112,
+    "name": "夏侯渊",
+    "code_name": "wzzz__xiahouyuan",
+    "title": "疾行的猎豹",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，疾行的猎豹",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "神速",
+        "id": "wzzz_v__shensu",
+        "derived": false,
+        "description": "你可以做出如下选择：1.跳过判定阶段和摸牌阶段；2.跳过出牌阶段并弃置一张装备牌；3.跳过弃牌阶段并翻面。你每选择一项，视为你使用一张无距离限制的【杀】。"
+      },
+      {
+        "name": "设变",
+        "id": "wzzz_v__shebian",
+        "derived": false,
+        "description": "当你翻面时，你可以移动场上的一张装备牌。"
+      }
+    ]
+  },
+  {
+    "number": 113,
+    "name": "徐晃",
+    "code_name": "wzzz__xuhuang",
+    "title": "周亚夫之风",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，周亚夫之风",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "断粮",
+        "id": "wzzz_v__m_ex__duanliang",
+        "derived": false,
+        "description": "你可以将一张黑色非锦囊牌当【兵粮寸断】使用；若你本回合未造成过伤害，你使用【兵粮寸断】无距离限制。（团队模式中修改为“你对手牌数不小于你的角色使用【兵粮寸断】无距离限制”）"
+      },
+      {
+        "name": "截辎",
+        "id": "wzzz_v__m_ex__jiezi",
+        "derived": false,
+        "description": "其他角色跳过摸牌阶段后，你可以令一名角色摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 114,
+    "name": "许褚",
+    "code_name": "wzzz__xuchu",
+    "title": "虎痴，血战禁将",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，虎痴，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "裸衣",
+        "id": "wzzz_v__ex__luoyi",
+        "derived": false,
+        "description": "摸牌阶段开始前，你可以亮出牌堆顶的三张牌，然后你可以跳过摸牌阶段并获得其中的基本牌武器牌或【决斗】。若如此做，直到你的下个回合开始，你为伤害来源的【杀】或【决斗】造成的伤害+1且当你使用的【杀】被【闪】抵消后，你可以摸一张牌。"
+      },
+      {
+        "name": "挟缠",
+        "id": "wzzz_v__v11__xiechan",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以与一名其他角色拼点，若你赢，你视为对其使用一张【决斗】；若你没赢，其视为对你使用一张【决斗】。"
+      }
+    ]
+  },
+  {
+    "number": 115,
+    "name": "荀攸",
+    "code_name": "wzzz__xunyou",
+    "title": "曹魏的谋主",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，曹魏的谋主",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "奇策",
+        "id": "wzzz_v__qice",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将所有手牌当任意一张普通锦囊牌使用。"
+      },
+      {
+        "name": "智愚",
+        "id": "wzzz_v__ty_ex__zhiyu",
+        "derived": false,
+        "description": "当你受到伤害后，你可以摸一张牌并展示所有手牌，然后令伤害来源弃置一张手牌。若你展示的牌颜色均相同，你获得弃置的牌且下回合“奇策”发动次数+1。"
+      }
+    ]
+  },
+  {
+    "number": 116,
+    "name": "荀彧",
+    "code_name": "wzzz__xunyu",
+    "title": "王佐之才",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，王佐之才",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "驱虎",
+        "id": "wzzz_v__quhu",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以与一名体力值大于你的角色拼点。若你嬴，该角色对其攻击范围内你选择的一名角色造成1点伤害；若你没赢，该角色对你造成1点伤害。"
+      },
+      {
+        "name": "节命",
+        "id": "wzzz_v__ol_ex__jieming",
+        "derived": false,
+        "description": "当你受到1点伤害后，你可以令一名角色将手牌摸至X张。当你死亡时，你可以令一名角色摸X张牌，然后令其将手牌弃置至X张（X为其体力上限且最多为5）。"
+      }
+    ]
+  },
+  {
+    "number": 117,
+    "name": "阎柔",
+    "code_name": "wzzz__yanrou",
+    "title": "冠玉啸北",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，冠玉啸北",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "仇讨",
+        "id": "wzzz_v__choutao",
+        "derived": false,
+        "description": "当你使用【杀】指定目标或成为【杀】的目标后，你可以弃置使用者的一张牌令此【杀】不能被抵消，若使用者为你，此【杀】无次数限制。"
+      },
+      {
+        "name": "襄戍",
+        "id": "wzzz_v__xiangshu",
+        "derived": false,
+        "description": "限定技，结束阶段，你可以令一名已受伤的角色回复X点体力并摸X张牌（X为你本回合造成的伤害值且至多为5）。"
+      }
+    ]
+  },
+  {
+    "number": 118,
+    "name": "张春华",
+    "code_name": "wzzz__zhangchunhua",
+    "title": "冷血皇后",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "魏势力，3/3 体力，女性，冷血皇后",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "绝情",
+        "id": "wzzz_v__ty_ex__jueqing",
+        "derived": false,
+        "description": "当你造成非传导伤害时，你可以失去等量的体力并令此伤害翻倍。若如此做，此伤害结算完成后，你修改“绝情”。（修改：锁定技，你即将造成的伤害视为失去体力。）"
+      },
+      {
+        "name": "伤逝",
+        "id": "wzzz_v__shangshi",
+        "derived": false,
+        "description": "当你的手牌数小于X时，你可以将手牌摸至X张（X为你已损失的体力值）。"
+      },
+      {
+        "name": "翦灭",
+        "id": "wzzz_v__jianmie",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以令一名其他角色选择一种颜色，然后你选择一种颜色，你与其展示所有手牌并弃置各自所选颜色的全部手牌（没有该颜色则不弃），然后弃置牌较多的角色视为对另一名角色使用张【决斗】。"
+      }
+    ]
+  },
+  {
+    "number": 119,
+    "name": "张辽",
+    "code_name": "wzzz__zhangliao",
+    "title": "前将军",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，前将军",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "突袭",
+        "id": "wzzz_v__tuxi",
+        "derived": false,
+        "description": "你的回合内限两次，当你不以此法获得牌后，你可以弃置至多X张手牌，然后获得至多等量名其他角色各一张手牌（X为你获得的牌数且至多为2，若为本回合第二次发动则改为至多为1）。"
+      }
+    ]
+  },
+  {
+    "number": 120,
+    "name": "甄姬",
+    "code_name": "wzzz__zhenji",
+    "title": "薄幸的美人",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "魏势力，3/3 体力，女性，薄幸的美人",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "洛神",
+        "id": "wzzz_v__ex__luoshen",
+        "derived": false,
+        "description": "准备阶段，你可以进行判定并获得判定牌，当黑色判定牌生效后，你可以重复此流程。本回合你的手牌上限+X（X为你本回合以此法获得的黑色牌数）。"
+      },
+      {
+        "name": "倾国",
+        "id": "wzzz_v__qingguo",
+        "derived": false,
+        "description": "你可以将一张黑色手牌当【闪】使用或打出。"
+      }
+    ]
+  },
+  {
+    "number": 121,
+    "name": "钟会",
+    "code_name": "wzzz__zhonghui",
+    "title": "桀骜的野心家",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，桀骜的野心家",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "权计",
+        "id": "wzzz_v__m_ex__quanji",
+        "derived": false,
+        "description": "出牌阶段结束时，若你的手牌数大于你的体力值，或当你受到1点伤害后，你可以摸一张牌，然后你将一张手牌置于武将牌上，称为“权”；你的手牌上限+X（X为“权”的数量）。（修改“权计”删除描述：“出牌阶段结束时，若你的手牌数大于你的体力值”）"
+      },
+      {
+        "name": "自立",
+        "id": "wzzz_v__zili",
+        "derived": false,
+        "description": "觉醒技，准备阶段，若“权”的数量不小于3，你减1点体力上限并获得“排异”，然后回复1点体力或摸两张牌。然后你修改“权计”。"
+      },
+      {
+        "name": "排异",
+        "id": "wzzz_v__m_ex__paiyi",
+        "derived": true,
+        "description": "出牌阶段限一次，你可以移去一张“权”，令一名角色摸两张牌。若该角色的手牌数大于你，你对其造成1点伤害。"
+      }
+    ]
+  },
+  {
+    "number": 122,
+    "name": "钟繇",
+    "code_name": "wzzz__zhongyao",
+    "title": "正楷萧曹",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，正楷萧曹",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "活墨",
+        "id": "wzzz_v__huomo",
+        "derived": false,
+        "description": "当你需要使用基本牌时（你本回合使用过的基本牌除外），你可以展示一张黑色非基本牌并置于牌堆顶，视为使用此基本牌。"
+      },
+      {
+        "name": "佐定",
+        "id": "wzzz_v__zuoding",
+        "derived": false,
+        "description": "当其他角色于其出牌阶段内使用黑桃牌指定目标后，若本阶段没有角色受到过伤害，你可以令其中一名目标角色摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 123,
+    "name": "朱灵",
+    "code_name": "wzzz__zhuling",
+    "title": "良将之亚",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，良将之亚",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "急陷",
+        "id": "wzzz_v__jixian",
+        "derived": false,
+        "description": "摸牌阶段结束时，你可以视为对满定以下任意条件的一名其他角色使用一张【杀】并摸X张牌（X为其满足的条件数）：1.装备区里有防具牌；2.技能数多于你：3.未受伤。若此【杀】没有对其造成伤害，你失去1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 124,
+    "name": "诸葛诞",
+    "code_name": "wzzz__zhugedan",
+    "title": "薤露蒿里，血战禁将",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，薤露蒿里，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "功獒",
+        "id": "wzzz_v__ty_ex__gongao",
+        "derived": false,
+        "description": "锁定技，每名角色限一次，当一名其他角色第一次进入濒死状态时，你加1点体力上限并回复1点体力。（修改“功獒”的发动时机为“当其他角色死亡后”）"
+      },
+      {
+        "name": "举义",
+        "id": "wzzz_v__ty_ex__juyi",
+        "derived": false,
+        "description": "觉醒技，准备阶段，若你的体力上限大于场上角色数，你将手牌摸至体力上限，获得“崩坏”和“威重”，并修改“功獒”。"
+      },
+      {
+        "name": "威重",
+        "id": "wzzz_v__weizhong",
+        "derived": true,
+        "description": "锁定技，当你的体力上限减少时，你摸一张牌；本局进入鏖战阶段后，你须执行的鏖战效果修改为：失去1点体力。"
+      },
+      {
+        "name": "崩坏",
+        "id": "wzzz_v__benghuai",
+        "derived": true,
+        "description": "锁定技，结束阶段，若你不是体力值最小的角色，你失去1点体力或减1点体力上限。"
+      }
+    ]
+  },
+  {
+    "number": 125,
+    "name": "蔡夫人",
+    "code_name": "wzzz__caifuren",
+    "title": "襄江的蒲苇",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "群势力，3/3 体力，女性，襄江的蒲苇",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "窃听",
+        "id": "wzzz_v__ol_ex__qieting",
+        "derived": false,
+        "description": "其他角色的回合结束时，若其本回合未对其他角色造成伤害，你可以选择一项，然后若其本回合未对其他角色使用过牌，则改为你可以至多选择两项：1.将其装备区里的一张牌置入你的装备区；2.摸一张牌。"
+      },
+      {
+        "name": "献州",
+        "id": "wzzz_v__xianzhou",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以将装备区里的所有牌交给一名其他角色，然后其选择一项：1.令你回复X点体力；2.对其攻击范围内至多X名角色各造成1点伤害。（X为你给出的牌数）"
+      }
+    ]
+  },
+  {
+    "number": 126,
+    "name": "SP蔡文姬",
     "code_name": "wzzz_sp__sp_caiwenji",
-    "metadata": "群势力，3 体力，女性",
+    "title": "金璧之才",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "群势力，3/3 体力，女性，金璧之才",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2478,31 +3516,313 @@
     ]
   },
   {
-    "number": 105,
-    "name": "于禁",
-    "code_name": "wzzz__yujin",
-    "metadata": "群势力，4 体力，男性",
+    "number": 127,
+    "name": "陈宫",
+    "code_name": "wzzz__chengong",
+    "title": "刚直壮烈",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，刚直壮烈",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "毅重",
-        "id": "wzzz_v__yizhong",
+        "name": "明策",
+        "id": "wzzz_v__ty_ex__mingce",
         "derived": false,
-        "description": "锁定技，若你装备区里没有防具牌，则梅花【杀】对你无效。"
+        "description": "出牌阶段限一次，你可以展示一张【杀】或装备牌并交给一名其他角色，然后其选择一项：1.视为对你选择的一名角色使用一张【杀】，此【杀】第一次造成伤害后，其执行另一项；2.你与其各摸一张牌。"
       },
       {
-        "name": "镇军",
-        "id": "wzzz_v__ol_ex__zhenjun",
+        "name": "智迟",
+        "id": "wzzz_v__zhichi",
         "derived": false,
-        "description": "准备阶段和结束阶段，你可以弃置一名角色的 X 张牌(X 为其手牌数减体力值且至少为 1)，然后"
+        "description": "锁定技，当你于回合外受到伤害后，本回合其他角色使用的【杀】和普通锦囊牌对你无效。"
       }
     ]
   },
   {
-    "number": 106,
+    "number": 128,
+    "name": "貂蝉",
+    "code_name": "wzzz__diaochan",
+    "title": "绝世的舞姬",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "女性",
+    "metadata": "群势力，3/3 体力，女性，绝世的舞姬",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "倾世",
+        "id": "wzzz_v__qingshic",
+        "derived": false,
+        "description": "锁定技，亮将后，你失去“离间”或“离魂”。"
+      },
+      {
+        "name": "离间",
+        "id": "wzzz_v__lijian",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张牌并选择两名男性角色，然后令其中一名角色视为对另一名角色使用一张【决斗】（不能被【无懈可击】响应）。"
+      },
+      {
+        "name": "离魂",
+        "id": "wzzz_v__lihun",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置一张牌并翻面，然后选择一名男性角色，获得其所有手牌。出牌阶段结束时，你交给其X张牌（X为其体力值）。"
+      },
+      {
+        "name": "闭月",
+        "id": "wzzz_v__ex__biyue",
+        "derived": false,
+        "description": "结束阶段，若你的手牌数小于你的体力值，你可以摸两张牌，否则摸一张牌。（团队模式中修改为“结束阶段，你可以摸一张牌，若你没有手牌，则改为摸两张牌”）"
+      }
+    ]
+  },
+  {
+    "number": 129,
+    "name": "丁原",
+    "code_name": "wzzz__dingyuan",
+    "title": "养虎为患",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，养虎为患",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "慈孝",
+        "id": "wzzz_v__cixiao",
+        "derived": false,
+        "description": "准备阶段，若场上没有拥有“义子”标记的其他角色，则你可以令一名其他角色获得一个“义子”标记，否则你可以弃置一张牌并将“义子”标记移动给另一名其他角色（当其他角色获得/失去“义子”标记时，其获得/失去“叛弑”）。"
+      },
+      {
+        "name": "先率",
+        "id": "wzzz_v__xianshuai",
+        "derived": false,
+        "description": "当一名角色造成伤害后，若此伤害是本轮首次造成伤害，你可以摸一张牌，然后若你为此次伤害的伤害来源，你可以对受伤角色造成1点伤害。"
+      },
+      {
+        "name": "叛弑",
+        "id": "wzzz_v__panshi",
+        "derived": true,
+        "description": "锁定技，准备阶段，你将一张手牌交给拥有“慈孝”的角色；你于出牌阶段使用的【杀】对其造成伤害时，此伤害+1，此【杀】结算结束后，你结束出牌阶段。"
+      }
+    ]
+  },
+  {
+    "number": 130,
+    "name": "董卓",
+    "code_name": "wzzz__dongzhuo",
+    "title": "魔王",
+    "kingdom": "群",
+    "hp": 8,
+    "max_hp": 8,
+    "gender": "男性",
+    "metadata": "群势力，8/8 体力，男性，魔王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "酒池",
+        "id": "wzzz_v__ol_ex__jiuchi",
+        "derived": false,
+        "description": "你可以将一张黑桃牌当【酒】使用；你使用【酒】无次数限制。你使用的受【酒】影响的【杀】造成伤害后，本回合“崩坏”失效。"
+      },
+      {
+        "name": "肉林",
+        "id": "wzzz_v__roulin",
+        "derived": false,
+        "description": "锁定技，你对女性角色使用的【杀】和女性角色对你使用的【杀】均需使用两张【闪】才能抵消。"
+      },
+      {
+        "name": "崩坏",
+        "id": "wzzz_v__benghuai",
+        "derived": false,
+        "description": "锁定技，结束阶段，若你不是体力值最小的角色，你失去1点体力或减1点体力上限。"
+      }
+    ]
+  },
+  {
+    "number": 131,
+    "name": "杜预",
+    "code_name": "wzzz__duyu",
+    "title": "文成武德",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，文成武德",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "三陈",
+        "id": "wzzz_v__sanchen",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以令一名角色摸三张牌并弃置三张牌。若其未以此法弃置类型相同的牌，则其摸一张牌并令此技能视为未发动过（不能选择此阶段已选择过的角色），然后你于此阶段内获得“破竹”。（团队模式中增加描述：每回合至多对两名角色发动“三陈”）"
+      },
+      {
+        "name": "破竹",
+        "id": "wzzz_v__pozhu",
+        "derived": true,
+        "description": "出牌阶段，你可以弃置一张手牌，并展示一名其他角色的手牌，若展示牌与你弃置的牌花色不同，你对其造成1点伤害，然后此技能失效。"
+      }
+    ]
+  },
+  {
+    "number": 132,
+    "name": "伏完",
+    "code_name": "wzzz__fuwan",
+    "title": "沉毅的国丈",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，沉毅的国丈",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "谋溃",
+        "id": "wzzz_v__ty__moukui",
+        "derived": false,
+        "description": "当你使用【杀】指定目标后，你可以选择任意项：1.摸一张牌；2.弃置其中一名目标角色的一张牌。若你选择了两项，此【杀】被无效或抵消时，你弃置一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 133,
+    "name": "高览",
+    "code_name": "wzzz__gaolan",
+    "title": "绝击坚营",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，绝击坚营",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "峻攻",
+        "id": "wzzz_v__jungong",
+        "derived": false,
+        "description": "出牌阶段，你可以弃置X张牌或失去X点体力，视为使用一张无距离次数限制的【杀】（X为你本阶段此前发动过此技能的次数+1），然后当此【杀】造成伤害后，此技能本回合失效。"
+      },
+      {
+        "name": "等力",
+        "id": "wzzz_v__dengli",
+        "derived": false,
+        "description": "当你使用【杀】指定一名角色为目标时，或当你成为其他角色使用【杀】的目标时，若你与其体力值相等，你可以摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 134,
+    "name": "高顺",
+    "code_name": "wzzz__gaoshun",
+    "title": "攻无不克",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，攻无不克",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "陷阵",
+        "id": "wzzz_v__ty_ex__xianzhen",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以与一名角色拼点，若你：嬴，本回合你无视该角色的防具、对其使用牌无距离次数限制、使用每种牌名的牌第一次对其造成的伤害+1；没赢，本回合你不能使用【杀】，弃牌阶段开始时，你可以展示任意张【杀】并令这些牌此阶段不计入手牌上限。"
+      },
+      {
+        "name": "禁酒",
+        "id": "wzzz_v__ty_ex__jinjiu",
+        "derived": false,
+        "description": "锁定技，你手牌中的【酒】视为点数K的【杀】；其他角色于你回合内不能使用【酒】。"
+      }
+    ]
+  },
+  {
+    "number": 135,
+    "name": "公孙渊",
+    "code_name": "wzzz__gongsunyuan",
+    "title": "狡徒悬海",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，狡徒悬海",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "怀异",
+        "id": "wzzz_v__huaiyi",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以展示所有手牌，若其中包含：一种颜色，你摸一张牌，然后此技能本阶段改为“出牌阶段限两次”；两种颜色，你弃置其中一种颜色所有的牌并获得至多X名其他角色的各一张牌（X为你以此法弃置的手牌数），然后若你获得的牌大于一张，你失去1点体力。"
+      }
+    ]
+  },
+  {
+    "number": 136,
+    "name": "公孙瓒",
+    "code_name": "wzzz__gongsunzan",
+    "title": "白马将军",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，白马将军",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "义从",
+        "id": "wzzz_v__ty_ex__yicong",
+        "derived": false,
+        "description": "锁定技，你计算与其他角色的距离-1；若你已损失的体力值不小于2，其他角色计算与你的距离+1。"
+      },
+      {
+        "name": "趫猛",
+        "id": "wzzz_v__ty_ex__qiaomeng",
+        "derived": false,
+        "description": "当你使用黑色牌指定其他角色为目标后，你可以弃置其中一名目标角色一张牌，若弃置的牌为：武器牌，此牌不能被响应；坐骑牌，你获得之。"
+      }
+    ]
+  },
+  {
+    "number": 137,
+    "name": "郭图逄纪",
+    "code_name": "wzzz__guotupangji",
+    "title": "凶蛇两端",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，凶蛇两端",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "急攻",
+        "id": "wzzz_v__ty_ex__jigong",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以摸一至两张牌，然后你本回合的手牌上限改为X（X为你此阶段造成过的伤害数），弃牌阶段开始时，若X不小于你摸的牌数，你回复1点体力。"
+      },
+      {
+        "name": "饰非",
+        "id": "wzzz_v__shifei",
+        "derived": false,
+        "description": "当你需要使用或打出【闪】时，你可以令当前回合角色摸一张牌。若其手牌数不为全场唯一最多，你弃置手牌数最多的一名角色一张牌，视为使用或打出一张【闪】。"
+      }
+    ]
+  },
+  {
+    "number": 138,
     "name": "韩遂",
     "code_name": "wzzz__hansui",
-    "metadata": "群势力，4 体力，男性",
+    "title": "雄踞北疆",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，雄踞北疆",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2521,150 +3841,110 @@
         "name": "骁袭",
         "id": "wzzz_v__mobile__xiaoxi",
         "derived": false,
-        "description": "体力值大于你的角色的结束阶段，若其本回合使用过【杀】，你可以将一张黑色牌当【杀】对其使用(有距离限制)。"
+        "description": "体力值大于你的角色的结束阶段，若其本回合使用过【杀】，你可以将一张黑色牌当【杀】对其使用（有距离限制）。"
       }
     ]
   },
   {
-    "number": 107,
-    "name": "马腾",
-    "code_name": "wzzz__mateng",
-    "metadata": "群势力，4 体力，男性",
+    "number": 139,
+    "name": "何进",
+    "code_name": "wzzz__hejin",
+    "title": "色厉内荏，血战禁将",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，色厉内荏，血战禁将",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "马术",
-        "id": "wzzz_v__mashu",
+        "name": "谋诛",
+        "id": "wzzz_v__ty__mouzhu",
         "derived": false,
-        "description": "锁定技，你计算与其他角色的距离-1。当你使用坐骑牌或失去装备区里的坐骑牌时，你摸一张牌。"
+        "description": "出牌阶段限一次，你可以选择任意名与你距离为1或体力值与你相同的其他角色，这些角色依次执行以下流程：将一张手牌交给你，若其手牌少于你，其视为对你使用【杀】或【决斗】。"
       },
       {
-        "name": "雄异",
-        "id": "wzzz_v__xh__xiongyi",
+        "name": "延祸",
+        "id": "wzzz_v__ol__yanhuo",
         "derived": false,
-        "description": "限定技，出牌阶段，你可以与一名其他角色各摸三张牌。若你的体力值为全场唯一最小，你回复 1 点体力。当你脱离濒死状态后，你复原此技能且删除回复体力的效果。"
+        "description": "当你死亡时，你可以选择一项：1.令本局游戏【杀】造成的伤害+1；2.令伤害来源弃置至多X张牌（X为你的牌数）。"
       }
     ]
   },
   {
-    "number": 108,
-    "name": "杜预",
-    "code_name": "wzzz__duyu",
-    "metadata": "群势力，3 体力，男性",
+    "number": 140,
+    "name": "华佗",
+    "code_name": "wzzz__huatuo",
+    "title": "神医，血战禁将",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，神医，血战禁将",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "三陈",
-        "id": "wzzz_v__sanchen",
+        "name": "济世",
+        "id": "wzzz_v__jishi",
         "derived": false,
-        "description": "出牌阶段限一次，你可以令一名角色摸三张牌并弃置三张牌。若其未以此法弃置类型相同的牌，则其摸一张牌并令此技能视为未发动过（不能选择此阶段已选择过的角色），然后你于此阶段内获得“破竹”。（团队模式中增加描述：每回合至多对两名角色发动“三陈”）"
+        "description": "亮将后，你选择“除疠”和“青囊”中的一个技能添加限定技标签。"
       },
       {
-        "name": "破竹",
-        "id": "wzzz_v__pozhu",
-        "derived": true,
-        "description": "出牌阶段，你可以弃置一张手牌，并展示一名其他角色的手牌，若展示牌与你弃置的牌花色不同，你对其造成 1 点伤害，然后此技能失效。"
-      }
-    ]
-  },
-  {
-    "number": 109,
-    "name": "麴义",
-    "code_name": "wzzz__quyi",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "伏骑",
-        "id": "wzzz_v__fuji",
+        "name": "除疠",
+        "id": "wzzz_v__ex__chuli",
         "derived": false,
-        "description": "锁定技，当你使用【杀】或普通锦囊牌时，计算与你距离为 2 以内的其他角色均不能响应此牌。"
+        "description": "出牌阶段限一次，若你有牌，你可以选择任意名势力各不相同的其他角色（至少一名），弃置你与这些角色各一张牌，然后以此法失去黑桃牌的角色各摸一张牌。"
       },
       {
-        "name": "骄恣",
-        "id": "wzzz_v__jiaozi",
+        "name": "青囊",
+        "id": "wzzz_v__m_ex__qingnang",
         "derived": false,
-        "description": "锁定技，当你造成伤害时，若你的手牌数最多，此伤害+1。"
-      }
-    ]
-  },
-  {
-    "number": 110,
-    "name": "陈宫",
-    "code_name": "wzzz__chengong",
-    "metadata": "群势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "明策",
-        "id": "wzzz_v__ty_ex__mingce",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以展示一张【杀】或装备牌并交给一名其他角色，然后其选择一项：1.视为对你选择的一名角色使用一张【杀】，此【杀】第一次造成伤害后，其执行另一项；2.你与其各摸一张牌。"
+        "description": "出牌阶段限一次，你可以弃置一张手牌并令一名本回合未以此法选择过的角色回复1点体力，若你弃置的牌为红色，你可以重复此流程。"
       },
       {
-        "name": "智迟",
-        "id": "wzzz_v__zhichi",
+        "name": "急救",
+        "id": "wzzz_s__6025_6551",
         "derived": false,
-        "description": "锁定技，当你于回合外受到伤害后，本回合其他角色使用的【杀】和普通锦囊牌对你无效。"
+        "description": "你于回合外可以将一张红色牌当【桃】使用。"
       }
     ]
   },
   {
-    "number": 111,
-    "name": "沮授",
-    "code_name": "wzzz__jushou",
-    "metadata": "群势力，3 体力，男性",
+    "number": 141,
+    "name": "华雄",
+    "code_name": "wzzz__huaxiong",
+    "title": "魔将",
+    "kingdom": "群",
+    "hp": 6,
+    "max_hp": 6,
+    "gender": "男性",
+    "metadata": "群势力，6/6 体力，男性，魔将",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "渐营",
-        "id": "wzzz_v__m_ex__jianying",
+        "name": "耀武",
+        "id": "wzzz_v__ol_ex__yaowu",
         "derived": false,
-        "description": "当你于出牌阶段使用牌时，若此牌与你于此阶段内使用的上一张牌花色或点数相同，你可以摸一张牌。出牌阶段限一次，你可以指定一种花色，此阶段你使用下一张基本牌或普通锦囊牌视为此花色。"
+        "description": "锁定技，当你受到伤害时，若对你造成伤害的牌为红色，伤害来源摸一张牌，否则你摸一张牌。"
       },
       {
-        "name": "矢北",
-        "id": "wzzz_v__ty_ex__shibei",
+        "name": "势斩",
+        "id": "wzzz_v__shizhan",
         "derived": false,
-        "description": "锁定技，你每回合第一次受到伤害后，回复 1 点体力。你每回合第二次受到伤害后，失去 1 点体力。"
+        "description": "出牌阶段限两次，你可以选择一名本回合未被此技能选择过的其他角色，其视为对你使用一张【决斗】。"
       }
     ]
   },
   {
-    "number": 112,
-    "name": "孙策",
-    "code_name": "wzzz_sp__sp_sunce",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "连讨",
-        "id": "wzzz_v__liantao",
-        "derived": false,
-        "description": "出牌阶段开始时，你可令一名其他角色选择一种颜色，然后你展示所有手牌并依次将此颜色的手牌当【决斗】对其使用直到有一方进入濒死状态，然后你摸 X 张牌（X 为你以此法造成的伤害数）。若该角色没有因此受到伤害，你摸一张牌，本回合手牌上限+1 且本回合不能使用【杀】。"
-      }
-    ]
-  },
-  {
-    "number": 113,
-    "name": "吕布",
-    "code_name": "wzzz__lvbu",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "战神",
-        "id": "wzzz_v__v33__zhanshen",
-        "derived": false,
-        "description": "锁定技，准备阶段，你选择一项未获得的效果获得，直到本局结束：1.摸牌阶段，多摸一张牌；2.使用【杀】造成的伤害+1；3.使用【杀】可以额外选择一个目标；4. 出牌阶段，你可以多使用一张【杀】。"
-      }
-    ]
-  },
-  {
-    "number": 114,
+    "number": 142,
     "name": "贾诩",
     "code_name": "wzzz__jiaxu",
-    "metadata": "群势力，3 体力，男性",
+    "title": "冷酷的毒士",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，冷酷的毒士",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2677,7 +3957,7 @@
         "name": "乱武",
         "id": "wzzz_v__mou__luanwu",
         "derived": false,
-        "description": "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.失去 1 点体力；2.对其距离最近的一名角色使用一张【杀】。结算完成后，你可以视为使用一张无距离次数限制的【杀】。"
+        "description": "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.失去1点体力；2.对其距离最近的一名角色使用一张【杀】。结算完成后，你可以视为使用一张无距离次数限制的【杀】。"
       },
       {
         "name": "帷幕",
@@ -2688,64 +3968,365 @@
     ]
   },
   {
-    "number": 115,
-    "name": "貂蝉",
-    "code_name": "wzzz__diaochan",
-    "metadata": "群势力，3 体力，女性",
+    "number": 143,
+    "name": "沮授",
+    "code_name": "wzzz__jushou",
+    "title": "监军谋国",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，监军谋国",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "倾世",
-        "id": "wzzz_v__qingshic",
+        "name": "渐营",
+        "id": "wzzz_v__m_ex__jianying",
         "derived": false,
-        "description": "锁定技，亮将后，你失去“离间”或“离魂”。"
+        "description": "当你于出牌阶段使用牌时，若此牌与你于此阶段内使用的上一张牌花色或点数相同，你可以摸一张牌。出牌阶段限一次，你可以指定一种花色，此阶段你使用下一张基本牌或普通锦囊牌视为此花色。"
       },
       {
-        "name": "离间",
-        "id": "wzzz_v__lijian",
+        "name": "矢北",
+        "id": "wzzz_v__ty_ex__shibei",
         "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌并选择两名男性角色，然后令其中一名角色视为对另一名角色使用一张【决斗】(不能被【无懈可击】响应)。"
-      },
-      {
-        "name": "离魂",
-        "id": "wzzz_v__lihun",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置一张牌并翻面，然后选择一名男性角色，获得其所有手牌。出牌阶段结束时，你交给其 X 张牌(X 为其体力值)。"
-      },
-      {
-        "name": "闭月",
-        "id": "wzzz_v__ex__biyue",
-        "derived": false,
-        "description": "结束阶段，若你的手牌数小于你的体力值，你可以摸两张牌，否则摸一张牌。（团队模式中修改为“结束阶段，你可以摸一张牌，若你没有手牌，则改为摸两张牌”）"
+        "description": "锁定技，你每回合第一次受到伤害后，回复1点体力。你每回合第二次受到伤害后，失去1点体力。"
       }
     ]
   },
   {
-    "number": 116,
-    "name": "马超",
+    "number": 144,
+    "name": "李傕",
+    "code_name": "wzzz__lijue",
+    "title": "奸谋恶勇",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 6,
+    "gender": "男性",
+    "metadata": "群势力，4/6 体力，男性，奸谋恶勇",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "狼袭",
+        "id": "wzzz_v__langxi",
+        "derived": false,
+        "description": "准备阶段，你可以选择一名体力值不大于你的其他角色，并亮出牌堆顶的一张牌，若此牌点数为：6~9，你对其造成1点伤害；10~K，你对其造成2点伤害；5，你可以重复此流程。"
+      },
+      {
+        "name": "亦算",
+        "id": "wzzz_v__xh__yisuan",
+        "derived": false,
+        "description": "出牌阶段限一次，当你使用的普通锦囊牌结算结束后进入弃牌堆时，你可以失去1点体力或减1点体力上限，获得之。"
+      }
+    ]
+  },
+  {
+    "number": 145,
+    "name": "李儒",
+    "code_name": "wzzz__liru",
+    "title": "魔仕",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，魔仕",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "绝策",
+        "id": "wzzz_v__juece",
+        "derived": false,
+        "description": "结束阶段，你可以对一名没有手牌的其他角色造成1点伤害。"
+      },
+      {
+        "name": "灭计",
+        "id": "wzzz_v__m_ex__mieji",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以展示一张武器牌或锦囊牌并置于牌堆顶，然后令一名有手牌的其他角色选择一项：1.交给你一张锦囊牌；2.依次弃置两张非锦囊牌，若无法弃置第二张牌，则展示所有手牌。（团队模式中修改为“出牌阶段限一次，你可以展示一张黑色锦囊牌并置于牌堆顶，然后令一名有手牌的其他角色选择一项：1.弃置一张锦囊牌；2.依次弃置两张非锦囊牌，若无法弃置第二张牌，则展示所有手牌”）"
+      },
+      {
+        "name": "焚城",
+        "id": "wzzz_v__fencheng",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.弃置至少X+1张牌（X为发动此技能时该角色的上家以此法弃置的牌数）；2.受到你造成的2点火焰伤害。"
+      }
+    ]
+  },
+  {
+    "number": 146,
+    "name": "刘辩",
+    "code_name": "wzzz__liubian",
+    "title": "弘农怀王",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，弘农怀王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "诗怨",
+        "id": "wzzz_v__shiyuan",
+        "derived": false,
+        "description": "每回合每项限一次，当你成为其他角色使用牌的目标后，若该角色的体力值：大于你，你可以摸两张牌；等于你，你可以摸两张牌；小于你，你可以摸一张牌。"
+      },
+      {
+        "name": "毒逝",
+        "id": "wzzz_v__dushi",
+        "derived": false,
+        "description": "锁定技，当你进入濒死状态时，其他角色不能对你使用【桃】直到此次濒死结算结束。当你脱离濒死状态后或当你死亡时，你失去此技能并令一名其他角色获得之。"
+      }
+    ]
+  },
+  {
+    "number": 147,
+    "name": "刘琦",
+    "code_name": "wzzz__liuqi",
+    "title": "居外而安",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，居外而安",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "问计",
+        "id": "wzzz_v__wenji",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以令一名其他角色交给你一张牌并展示之，此阶段你使用与此牌类型相同的牌不能被其他角色响应。"
+      },
+      {
+        "name": "屯江",
+        "id": "wzzz_v__tunjiang",
+        "derived": false,
+        "description": "结束阶段，若你未执行出牌阶段或于出牌阶段内未对其他角色使用过牌，你可以摸X张牌（X为全场势力数）。"
+      }
+    ]
+  },
+  {
+    "number": 148,
+    "name": "刘协",
+    "code_name": "wzzz__liuxie",
+    "title": "真命天子",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，真命天子",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "天命",
+        "id": "wzzz_v__tianming",
+        "derived": false,
+        "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后若全场体力值唯一最大的角色不为你，其也可以如此做。"
+      },
+      {
+        "name": "密诏",
+        "id": "wzzz_v__mizhao",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），然后令其与你选择的另一名其他角色拼点，赢的角色视为对没赢的角色使用一张【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 149,
+    "name": "刘焉",
+    "code_name": "wzzz__liuyan",
+    "title": "裂土之宗",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，裂土之宗",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "图射",
+        "id": "wzzz_v__tushe",
+        "derived": false,
+        "description": "当你使用非装备牌指定目标后，你可以展示所有手牌，若其中没有基本牌，你可以摸两张牌（若你的判定区里有牌，则改为摸一张牌）。"
+      },
+      {
+        "name": "立牧",
+        "id": "wzzz_v__limu",
+        "derived": false,
+        "description": "出牌阶段，你可以将一张方块牌当【乐不思蜀】对你使用，然后你回复1点体力；若你的判定区里有牌，则你对攻击范围内的其他角色使用牌无距离次数限制。"
+      }
+    ]
+  },
+  {
+    "number": 150,
+    "name": "吕布",
+    "code_name": "wzzz__lvbu",
+    "title": "武的化身",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，武的化身",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "战神",
+        "id": "wzzz_v__v33__zhanshen",
+        "derived": false,
+        "description": "锁定技，准备阶段，你选择一项未获得的效果获得，直到本局结束：1.摸牌阶段，多摸一张牌；2.使用【杀】造成的伤害+1；3.使用【杀】可以额外选择一个目标；4.出牌阶段，你可以多使用一张【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 151,
+    "name": "吕布",
+    "code_name": "wzzz__lvbu_wushuang",
+    "title": "最强神话",
+    "kingdom": "群",
+    "hp": 5,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "群势力，5/5 体力，男性，最强神话",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "无双",
+        "id": "wzzz_v__hs__wushuang",
+        "derived": false,
+        "description": "锁定技，你使用的【杀】需两张【闪】才能抵消；与你【决斗】的角色每次需要打出两张【杀】。你使用的非虚拟【决斗】可以选择至多三名角色为目标。"
+      },
+      {
+        "name": "利驭",
+        "id": "wzzz_v__liyu",
+        "derived": false,
+        "description": "当你使用【杀】对一名其他角色造成伤害后，你可以获得其区域里的一张牌，若获得的牌不为装备牌，其摸一张牌；否则你视为对其选择的另一名角色使用一张【决斗】。"
+      },
+      {
+        "name": "战神",
+        "id": "wzzz_v__v33__zhanshen",
+        "derived": false,
+        "description": "觉醒技，准备阶段，若你已受伤且场上存活人数小于5，你减1点体力上限，并可以弃置装备区里的武器牌，然后获得“马术”和“神戟”。"
+      },
+      {
+        "name": "马术",
+        "id": "wzzz_v__mashu",
+        "derived": true,
+        "description": "锁定技，你计算与其他角色的距离-1。当你使用坐骑牌或失去装备区里的坐骑牌时，你摸一张牌。"
+      },
+      {
+        "name": "神戟",
+        "id": "wzzz_v__shenji",
+        "derived": true,
+        "description": "若你的装备区里没有武器牌，你使用【杀】可额外选择至多两名角色为目标。"
+      }
+    ]
+  },
+  {
+    "number": 152,
+    "name": "SP马超",
     "code_name": "wzzz_sp__sp_machao",
-    "metadata": "群势力，4 体力，男性",
+    "title": "西凉的猛狮",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，西凉的猛狮",
     "package": "wzzz_generals",
     "skills": [
       {
         "name": "追击",
         "id": "wzzz_v__ol__zhuiji",
         "derived": false,
-        "description": "锁定技，你计算与体力值不大于你的其他角色的距离视为 1；体力值大于你的角色不能响应你使用的【杀】。当你使用【杀】指定距离为 1 的其他角色为目标后，其选择一项：1.弃置一张牌；2.重铸装备区里的所有牌。"
+        "description": "锁定技，你计算与体力值不大于你的其他角色的距离视为1；体力值大于你的角色不能响应你使用的【杀】。当你使用【杀】指定距离为1的其他角色为目标后，其选择一项：1.弃置一张牌；2.重铸装备区里的所有牌。"
       },
       {
         "name": "誓仇",
         "id": "wzzz_v__ol__shichou",
         "derived": false,
-        "description": "当你使用【杀】选择目标后，可以令至多 X+1 名角色也成为此【杀】目标（X 为你已损失的体力值）。"
+        "description": "当你使用【杀】选择目标后，可以令至多X+1名角色也成为此【杀】目标（X为你已损失的体力值）。"
       }
     ]
   },
   {
-    "number": 117,
+    "number": 153,
+    "name": "马腾",
+    "code_name": "wzzz__mateng",
+    "title": "勇冠西州",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，勇冠西州",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "马术",
+        "id": "wzzz_v__mashu",
+        "derived": false,
+        "description": "锁定技，你计算与其他角色的距离-1。当你使用坐骑牌或失去装备区里的坐骑牌时，你摸一张牌。"
+      },
+      {
+        "name": "雄异",
+        "id": "wzzz_v__xh__xiongyi",
+        "derived": false,
+        "description": "限定技，出牌阶段，你可以与一名其他角色各摸三张牌。若你的体力值为全场唯一最小，你回复1点体力。当你脱离濒死状态后，你复原此技能且删除回复体力的效果。"
+      }
+    ]
+  },
+  {
+    "number": 154,
+    "name": "孟获",
+    "code_name": "wzzz__menghuo",
+    "title": "南蛮王",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，南蛮王",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "祸首",
+        "id": "wzzz_v__huoshou",
+        "derived": false,
+        "description": "锁定技，【南蛮入侵】对你无效；其他角色使用【南蛮入侵】指定目标后，你代替其成为此牌伤害来源。出牌阶段结束时，若你有手牌，你须弃置所有手牌并视为使用一张【南蛮入侵】。"
+      },
+      {
+        "name": "再起",
+        "id": "wzzz_v__ofl_mou__zaiqi",
+        "derived": false,
+        "description": "弃牌阶段结束时，若你本回合弃置过牌，你可以令至多X名其他角色依次选择一项（X为本回合置入弃牌堆的红色牌数且至多为3）：1.令你摸一张牌；2.弃置一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 155,
+    "name": "潘凤",
+    "code_name": "wzzz__panfeng",
+    "title": "联军上将",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，联军上将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "狂斧",
+        "id": "wzzz_v__ty__kuangfu",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以弃置场上的一张装备牌，然后视为使用一张无距离次数限制的【杀】。若你弃置自己的牌且此【杀】造成伤害，你摸两张牌；若你弃置其他角色的牌且此【杀】未造成伤害，你弃置两张手牌。"
+      }
+    ]
+  },
+  {
+    "number": 156,
     "name": "庞德公",
     "code_name": "wzzz__pangdegong",
-    "metadata": "群势力，3 体力，男性",
+    "title": "德懿举世",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，德懿举世",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2758,51 +4339,274 @@
         "name": "评才",
         "id": "wzzz_v__pingcai",
         "derived": false,
-        "description": "出牌阶段限一次，你可以展示一张手牌，若此牌为：方块，你对一名角色造成 1 点火焰伤害；红桃，你令一名角色摸一张牌并回复 1 点体力；黑桃，你移动场上的一张装备牌；梅花，你令至多三名角色横置。"
+        "description": "出牌阶段限一次，你可以展示一张手牌，若此牌为：方块，你对一名角色造成1点火焰伤害；红桃，你令一名角色摸一张牌并回复1点体力；黑桃，你移动场上的一张装备牌；梅花，你令至多三名角色横置。"
       }
     ]
   },
   {
-    "number": 118,
-    "name": "伏完",
-    "code_name": "wzzz__fuwan",
-    "metadata": "群势力，4 体力，男性",
+    "number": 157,
+    "name": "麹义",
+    "code_name": "wzzz__quyi",
+    "title": "名门的骁将",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，名门的骁将",
     "package": "wzzz_generals",
     "skills": [
       {
-        "name": "谋溃",
-        "id": "wzzz_v__ty__moukui",
+        "name": "伏骑",
+        "id": "wzzz_v__fuji",
         "derived": false,
-        "description": "当你使用【杀】指定目标后，你可以选择任意项：1.摸一张牌；2.弃置其中一名目标角色的一张牌。若你选择了两项，此【杀】被无效或抵消时，你弃置一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 119,
-    "name": "高览",
-    "code_name": "wzzz__gaolan",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "峻攻",
-        "id": "wzzz_v__jungong",
-        "derived": false,
-        "description": "出牌阶段，你可以弃置 X 张牌或失去 X 点体力，视为使用一张无距离次数限制的【杀】（X 为你本阶段此前发动过此技能的次数+1），然后当此【杀】造成伤害后，此技能本回合失效。"
+        "description": "锁定技，当你使用【杀】或普通锦囊牌时，计算与你距离为2以内的其他角色均不能响应此牌。"
       },
       {
-        "name": "等力",
-        "id": "wzzz_v__dengli",
+        "name": "骄恣",
+        "id": "wzzz_v__jiaozi",
         "derived": false,
-        "description": "当你使用【杀】指定一名角色为目标时，或当你成为其他角色使用【杀】的目标时，若你与其体力值相等，你可以摸一张牌。"
+        "description": "锁定技，当你造成伤害时，若你的手牌数最多，此伤害+1。"
       }
     ]
   },
   {
-    "number": 120,
-    "name": "赵云",
+    "number": 158,
+    "name": "SP孙策",
+    "code_name": "wzzz_sp__sp_sunce",
+    "title": "壮武命世",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，壮武命世",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "连讨",
+        "id": "wzzz_v__liantao",
+        "derived": false,
+        "description": "出牌阶段开始时，你可令一名其他角色选择一种颜色，然后你展示所有手牌并依次将此颜色的手牌当【决斗】对其使用直到有一方进入濒死状态，然后你摸X张牌（X为你以此法造成的伤害数）。若该角色没有因此受到伤害，你摸一张牌，本回合手牌上限+1且本回合不能使用【杀】。"
+      }
+    ]
+  },
+  {
+    "number": 159,
+    "name": "许攸",
+    "code_name": "wzzz__xuyou",
+    "title": "朝秦暮楚",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，朝秦暮楚",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "成略",
+        "id": "wzzz_v__chenglue",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以摸一张牌，然后弃置一张手牌，若如此做，直到回合结束，你使用与弃置牌花色相同的牌无距离次数限制。"
+      },
+      {
+        "name": "恃才",
+        "id": "wzzz_v__shicai",
+        "derived": false,
+        "description": "你的回合内，当你使用一张牌结算结束后，若此牌与你本回合使用并结算结束的牌类型均不同（延时锦囊除外），你可以将此牌置于牌堆顶，然后摸一张牌。"
+      },
+      {
+        "name": "寸目",
+        "id": "wzzz_v__cunmu",
+        "derived": false,
+        "description": "锁定技，当你摸牌时，改为从牌堆底摸牌。"
+      }
+    ]
+  },
+  {
+    "number": 160,
+    "name": "颜良文丑",
+    "code_name": "wzzz__yanliangwenchou",
+    "title": "虎狼兄弟",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，虎狼兄弟",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "双雄",
+        "id": "wzzz_v__fhyx_ex__shuangxiong",
+        "derived": false,
+        "description": "出牌阶段开始时，你可以令一名其他角色弃置一张牌，本阶段你可以将一张与此牌颜色不同的手牌当【决斗】使用。"
+      },
+      {
+        "name": "狭勇",
+        "id": "wzzz_v__fhyx_ex__xiayong",
+        "derived": false,
+        "description": "结束阶段，若你本回合使用过的【杀】或【决斗】均对目标角色造成过伤害，你可以摸等同于这些牌造成伤害总数的牌。（团队模式中，此技能发动时机修改为“出牌阶段结束时”）"
+      }
+    ]
+  },
+  {
+    "number": 161,
+    "name": "于禁",
+    "code_name": "wzzz__yujin",
+    "title": "讨暴坚垒",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，讨暴坚垒",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "毅重",
+        "id": "wzzz_v__yizhong",
+        "derived": false,
+        "description": "锁定技，若你装备区里没有防具牌，则梅花【杀】对你无效。"
+      },
+      {
+        "name": "镇军",
+        "id": "wzzz_v__ol_ex__zhenjun",
+        "derived": false,
+        "description": "准备阶段和结束阶段，你可以弃置一名角色的X张牌（X为其手牌数减体力值且至少为1），然后选择一项：1.你弃置等同于其中非装备牌数的牌；2.该角色摸等同于其中非装备牌数的牌。"
+      }
+    ]
+  },
+  {
+    "number": 162,
+    "name": "袁绍",
+    "code_name": "wzzz__yuanshao",
+    "title": "高贵的名门",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，高贵的名门",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "乱击",
+        "id": "wzzz_v__ofl_mou__luanji",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将两张手牌当【万箭齐发】使用。当其他角色打出【闪】响应你使用的【万箭齐发】时，若你的手牌数小于你的手牌上限，你可以摸一张牌。你于回合内杀死一名角色时，本回合手牌上限+2。"
+      }
+    ]
+  },
+  {
+    "number": 163,
+    "name": "袁术",
+    "code_name": "wzzz__yuanshu",
+    "title": "仲家帝，血战禁将",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，仲家帝，血战禁将",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "庯肆",
+        "id": "wzzz_v__m_ex__yongsi",
+        "derived": false,
+        "description": "锁定技，摸牌阶段，你摸X张牌（X为全场势力数且至少为3）；弃牌阶段开始时，你弃置一张牌或失去1点体力。"
+      },
+      {
+        "name": "伪帝",
+        "id": "wzzz_v__weidi",
+        "derived": false,
+        "description": "锁定技，游戏开始时，你选择其中一项，1.你选择获得主公的一个主公技并抽取一张剩余的四象标记；2.你抽取两张剩余的四象标记。"
+      }
+    ]
+  },
+  {
+    "number": 164,
+    "name": "张郃",
+    "code_name": "wzzz__zhanghe",
+    "title": "料敌机先",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，料敌机先",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "巧变",
+        "id": "wzzz_v__ol_ex__qiaobian",
+        "derived": false,
+        "description": "你可以弃置一张手牌并跳过你的一个阶段（准备阶段和结束阶段除外），若你以此法跳过了：摸牌阶段，你可以获得至多两名其他角色的各一张手牌；出牌阶段，你可以移动场上的一张牌。回合结束时，若你本回合跳过了至少三个阶段，你可以摸两张牌。"
+      }
+    ]
+  },
+  {
+    "number": 165,
+    "name": "张角",
+    "code_name": "wzzz__zhangjiao",
+    "title": "天公将军",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，天公将军",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "雷击",
+        "id": "wzzz_v__ol_ex__leiji",
+        "derived": false,
+        "description": "当你使用或打出【闪】，或使用【闪电】时，你可以进行判定。当你的判定牌生效后，若结果为：黑桃，你可以对一名角色造成2点雷电伤害；梅花，你回复1点体力并可以对一名角色造成1点雷电伤害。"
+      },
+      {
+        "name": "鬼道",
+        "id": "wzzz_v__ol_ex__guidao",
+        "derived": false,
+        "description": "一名角色的判定牌生效前，你可以打出一张黑色牌替换之，然后若你打出的牌为黑桃且点数为2～9，你摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 166,
+    "name": "张鲁",
+    "code_name": "wzzz__zhanglu",
+    "title": "政宽教惠",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，政宽教惠",
+    "package": "wzzz_generals",
+    "skills": [
+      {
+        "name": "义舍",
+        "id": "wzzz_v__yishe",
+        "derived": false,
+        "description": "游戏开始时或结束阶段，若“米”数量小于3，你可以摸两张牌，然后将两张牌置于武将牌上，称为“米”；当你移去最后一张“米”时，你可以回复1点体力。"
+      },
+      {
+        "name": "布施",
+        "id": "wzzz_v__bushi",
+        "derived": false,
+        "description": "当你受到1点伤害后，你可以获得一张“米”；当你对其他角色造成1点伤害后，其可以获得一张“米”。"
+      },
+      {
+        "name": "米道",
+        "id": "wzzz_v__midao",
+        "derived": false,
+        "description": "当一名角色的判定牌生效前，你可以打出一张“米”代替之。"
+      }
+    ]
+  },
+  {
+    "number": 167,
+    "name": "SP赵云",
     "code_name": "wzzz_sp__sp_zhaoyun",
-    "metadata": "群势力，3 体力，男性",
+    "title": "常山的游龙",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，常山的游龙",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2821,7 +4625,7 @@
         "name": "救主",
         "id": "wzzz_v__jiuzhu",
         "derived": false,
-        "description": "限定技，当一名其他角色进入濒死状态时，你可以失去“冲阵”并选择一项：1.令其回复 1 点体力，你获得 “涯角”；2.令一名角色摸三张牌。"
+        "description": "限定技，当一名其他角色进入濒死状态时，你可以失去“冲阵”并选择一项：1.令其回复1点体力，你获得“涯角”；2.令一名角色摸三张牌。"
       },
       {
         "name": "涯角",
@@ -2832,109 +4636,15 @@
     ]
   },
   {
-    "number": 121,
-    "name": "李傕",
-    "code_name": "wzzz__lijue",
-    "metadata": "群势力，4 体力 6 上限，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "狼袭",
-        "id": "wzzz_v__langxi",
-        "derived": false,
-        "description": "准备阶段，你可以选择一名体力值不大于你的其他角色，并亮出牌堆顶的一张牌，若此牌点数"
-      },
-      {
-        "name": "亦算",
-        "id": "wzzz_v__xh__yisuan",
-        "derived": false,
-        "description": "出牌阶段限一次，当你使用的普通锦囊牌结算结束后进入弃牌堆时，你可以失去 1 点体力或减1 点体力上限，获得之。"
-      }
-    ]
-  },
-  {
-    "number": 122,
-    "name": "袁术",
-    "code_name": "wzzz__yuanshu",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "庸肆",
-        "id": "wzzz_v__m_ex__yongsi",
-        "derived": false,
-        "description": "锁定技，摸牌阶段，你摸 X 张牌(X 为全场势力数且至少为 3)；弃牌阶段开始时，你弃置一张牌或失去 1 点体力。"
-      },
-      {
-        "name": "伪帝",
-        "id": "wzzz_v__weidi",
-        "derived": false,
-        "description": "锁定技，游戏开始时，你选择其中一项，1.你选择获得主公的一个主公技并抽取一张剩余的四象标记；2.你抽取两张剩余的四象标记。"
-      }
-    ]
-  },
-  {
-    "number": 123,
-    "name": "刘辩",
-    "code_name": "wzzz__liubian",
-    "metadata": "群势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "诗怨",
-        "id": "wzzz_v__shiyuan",
-        "derived": false,
-        "description": "每回合每项限一次，当你成为其他角色使用牌的目标后，若该角色的体力值：大于你，你可以摸两张牌；等于你，你可以摸两张牌；小于你，你可以摸一张牌。"
-      },
-      {
-        "name": "毒逝",
-        "id": "wzzz_v__dushi",
-        "derived": false,
-        "description": "锁定技，当你进入濒死状态时，其他角色不能对你使用【桃】直到此次濒死结算结束。当你脱离濒死状态后或当你死亡时，你失去此技能并令一名其他角色获得之。"
-      }
-    ]
-  },
-  {
-    "number": 124,
-    "name": "袁绍",
-    "code_name": "wzzz__yuanshao",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "乱击",
-        "id": "wzzz_v__ofl_mou__luanji",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以将两张手牌当【万箭齐发】使用。当其他角色打出【闪】响应你使用的【万箭齐发】时，若你的手牌数小于你的手牌上限，你可以摸一张牌。你于回合内杀死一名角色时，本回合手牌上限+2。"
-      }
-    ]
-  },
-  {
-    "number": 125,
-    "name": "刘琦",
-    "code_name": "wzzz__liuqi",
-    "metadata": "群势力，3 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "问计",
-        "id": "wzzz_v__wenji",
-        "derived": false,
-        "description": "出牌阶段开始时，你可以令一名其他角色交给你一张牌并展示之，此阶段你使用与此牌类型相同的牌不能被其他角色响应。"
-      },
-      {
-        "name": "屯江",
-        "id": "wzzz_v__tunjiang",
-        "derived": false,
-        "description": "结束阶段，若你未执行出牌阶段或于出牌阶段内未对其他角色使用过牌，你可以摸 X 张牌（X为全场势力数）。"
-      }
-    ]
-  },
-  {
-    "number": 126,
+    "number": 168,
     "name": "左慈",
     "code_name": "wzzz__zuoci",
-    "metadata": "群势力，3 体力，男性",
+    "title": "谜之仙人，血战禁将",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，谜之仙人，血战禁将",
     "package": "wzzz_generals",
     "skills": [
       {
@@ -2947,73 +4657,21 @@
         "name": "新生",
         "id": "wzzz_v__xinsheng",
         "derived": false,
-        "description": "当你受到 1 点伤害后，你可以将一张未加入游戏的武将牌扣置为“化身”。"
+        "description": "当你受到1点伤害后，你可以将一张未加入游戏的武将牌扣置为“化身”。"
       }
     ]
   },
   {
-    "number": 127,
-    "name": "孟获",
-    "code_name": "wzzz__menghuo",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "祸首",
-        "id": "wzzz_v__huoshou",
-        "derived": false,
-        "description": "锁定技，【南蛮入侵】对你无效；其他角色使用【南蛮入侵】指定目标后，你代替其成为此牌伤害来源。出牌阶段结束时，若你有手牌，你须弃置所有手牌并视为使用一张【南蛮入侵】。"
-      },
-      {
-        "name": "再起",
-        "id": "wzzz_v__ofl_mou__zaiqi",
-        "derived": false,
-        "description": "弃牌阶段结束时，若你本回合弃置过牌，你可以令至多 X 名其他角色依次选择一项(X 为本回合置入弃牌堆的红色牌数且至多为 3)：1.令你摸一张牌； 2.弃置一张牌。"
-      }
-    ]
-  },
-  {
-    "number": 128,
-    "name": "公孙瓒",
-    "code_name": "wzzz__gongsunzan",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "义从",
-        "id": "wzzz_v__ty_ex__yicong",
-        "derived": false,
-        "description": "锁定技，你计算与其他角色的距离-1；若你已损失的体力值不小于 2，其他角色计算与你的距离+1。"
-      },
-      {
-        "name": "趫猛",
-        "id": "wzzz_v__ty_ex__qiaomeng",
-        "derived": false,
-        "description": "当你使用黑色牌指定其他角色为目标后，你可以弃置其中一名目标角色一张牌，若弃置的牌为：武器牌，此牌不能被响应；坐骑牌，你获得之。"
-      }
-    ]
-  },
-  {
-    "number": 129,
-    "name": "潘凤",
-    "code_name": "wzzz__panfeng",
-    "metadata": "群势力，4 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "狂斧",
-        "id": "wzzz_v__ty__kuangfu",
-        "derived": false,
-        "description": "出牌阶段限一次，你可以弃置场上的一张装备牌，然后视为使用一张无距离次数限制的【杀】。若你弃置自己的牌且此【杀】造成伤害，你摸两张牌；若你弃置其他角色的牌且 此【杀】未造成伤害，你弃置两张手牌。"
-      }
-    ]
-  },
-  {
-    "number": 130,
+    "number": 1,
     "name": "曹操",
-    "code_name": "wzzz__caocao",
-    "metadata": "魏势力，4 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__caocao",
+    "title": "魏武帝",
+    "kingdom": "魏",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "魏势力，4/4 体力，男性，魏武帝，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "述志",
@@ -3031,16 +4689,59 @@
         "name": "清正",
         "id": "wzzz_v__mou__qingzheng",
         "derived": false,
-        "description": "出牌阶段开始时，你可以弃置你手牌中一种花色的所有牌并选择一名其他角色观看你的手牌，然后你观看其手牌并弃置其中一种花色的所有牌；若其被弃置的牌数小于你弃置的牌数，你对其造成 1点伤害。"
+        "description": "出牌阶段开始时，你可以弃置你手牌中一种花色的所有牌并选择一名其他角色观看你的手牌，然后你观看其手牌并弃置其中一种花色的所有牌；若其被弃置的牌数小于你弃置的牌数，你对其造成1点伤害。"
+      },
+      {
+        "name": "护驾",
+        "id": "wzzz_v__hujia",
+        "derived": false,
+        "description": "主公技，当你需要使用或打出【闪】时，你可以令其他魏势力角色选择是否替你使用或打出【闪】（视为由你使用或打出）；其他魏势力角色于其回合外使用、打出或替你使用或打出【闪】时，其可以令你摸一张牌（每回合限一次）。"
       }
     ]
   },
   {
-    "number": 131,
+    "number": 2,
+    "name": "曹丕",
+    "code_name": "wzzz_lord__caopi",
+    "title": "霸业的继承者",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，霸业的继承者，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "行殇",
+        "id": "wzzz_v__xingshang",
+        "derived": false,
+        "description": "其他角色死亡时，你可以获得其所有牌。"
+      },
+      {
+        "name": "放逐",
+        "id": "wzzz_v__fangzhu",
+        "derived": false,
+        "description": "当你受到伤害后，你可以令一名其他角色翻面，然后其摸X张牌（X为你已损失的体力值）。"
+      },
+      {
+        "name": "颂威",
+        "id": "wzzz_v__songwei",
+        "derived": false,
+        "description": "主公技，其他魏势力角色的黑色判定牌生效后，其可以令你摸一张牌。"
+      }
+    ]
+  },
+  {
+    "number": 3,
     "name": "曹叡",
-    "code_name": "wzzz__caorui",
-    "metadata": "魏势力，3 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__caorui",
+    "title": "天姿的明君",
+    "kingdom": "魏",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "魏势力，3/3 体力，男性，天姿的明君，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "明鉴",
@@ -3052,37 +4753,65 @@
         "name": "恢拓",
         "id": "wzzz_v__huituo",
         "derived": false,
-        "description": "当你受到伤害后，你可以令一名角色进行判定，若结果为：红色，其回复 1 点体力；黑色，其摸 X 张牌（X 为此伤害值）。"
+        "description": "当你受到伤害后，你可以令一名角色进行判定，若结果为：红色，其回复1点体力；黑色，其摸X张牌（X为此伤害值）。"
+      },
+      {
+        "name": "兴衰",
+        "id": "wzzz_v__xingshuai",
+        "derived": false,
+        "description": "主公技，限定技，当你进入濒死状态时，你可以令其他魏势力角色依次选择是否令你回复1点体力。选择是的角色在此次濒死结算结束后依次受到1点无来源的伤害。"
       }
     ]
   },
   {
-    "number": 132,
+    "number": 4,
     "name": "刘备",
-    "code_name": "wzzz__liubei",
-    "metadata": "蜀势力，4 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__liubei",
+    "title": "乱世的枭雄",
+    "kingdom": "蜀",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "蜀势力，4/4 体力，男性，乱世的枭雄，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "仁德",
         "id": "wzzz_v__ex__rende",
         "derived": false,
-        "description": "出牌阶段每名角色限一次，你可以将任意张手牌交给一名其他角色，当你于此阶段给出第二张牌时，你可以选择一项：1.视为使用一张基本牌；2.回复 1 点体力并于此阶段取消此技能“每名角色限一次”的限制。"
+        "description": "出牌阶段每名角色限一次，你可以将任意张手牌交给一名其他角色，当你于此阶段给出第二张牌时，你可以选择一项：1.视为使用一张基本牌；2.回复1点体力并于此阶段取消此技能“每名角色限一次“的限制。"
       },
       {
         "name": "仁望",
         "id": "wzzz_v__v11__renwang",
         "derived": false,
-        "description": "每回合限一次，当其他角色于其出牌阶段对你使用【杀】或普通锦囊牌时，若你不是此阶段第一次成为上述牌的目标，你可以弃置其一张牌。"
+        "description": "每回合限一次，当其他角色于其出牌阶段对你使用【杀】或普通锦囊牌时，若你不是此阶段内第一次成为上述牌的目标，你可以弃置其一张牌。"
+      },
+      {
+        "name": "激将",
+        "id": "wzzz_v__jijiang",
+        "derived": false,
+        "description": "主公技，你可以令其他蜀势力角色在你需要使用或打出【杀】时，依次选择是否打出一张【杀】（视为由你使用或打出），然后其可以令你摸一张牌（每回合限一次）。"
+      },
+      {
+        "name": "授钺",
+        "id": "wzzz__shouyue",
+        "derived": false,
+        "description": "主公技，出牌阶段结束时，你可以令一名体力值不小于你的其他蜀势力角色选择一项：1.跳过下一个出牌阶段；2.视为对其攻击范围内你指定的一名角色使用一张【杀】。"
       }
     ]
   },
   {
-    "number": 133,
+    "number": 5,
     "name": "刘禅",
-    "code_name": "wzzz__liushan",
-    "metadata": "蜀势力，3 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__liushan",
+    "title": "乐不思蜀",
+    "kingdom": "蜀",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "蜀势力，3/3 体力，男性，乐不思蜀，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "享乐",
@@ -3095,63 +4824,100 @@
         "id": "wzzz_v__m_ex__fangquan",
         "derived": false,
         "description": "你可以跳过出牌阶段，若如此做，本回合你的手牌上限等于体力上限，然后此回合结束时，你可以弃置一张手牌，令一名其他角色进行一个额外的回合。"
-      }
-    ]
-  },
-  {
-    "number": 134,
-    "name": "孙皓",
-    "code_name": "wzzz__sunhao",
-    "metadata": "吴势力，5 体力，男性",
-    "package": "wzzz_generals",
-    "skills": [
-      {
-        "name": "残蚀",
-        "id": "wzzz_v__ol__canshi",
-        "derived": false,
-        "description": "摸牌阶段，你可以改为摸 X 张牌（X 为已受伤的角色数且至少为 4）。若如此做，当你于本回合内使用非装备牌时，你弃置一张牌。"
       },
       {
-        "name": "仇海",
-        "id": "wzzz_v__chouhai",
+        "name": "若愚",
+        "id": "wzzz_v__ol_ex__ruoyu",
         "derived": false,
-        "description": "锁定技，当你受到伤害时，若你没有手牌，此伤害+1。"
+        "description": "主公技，觉醒技，准备阶段，若你是体力值最小的角色，你加1点体力上限并回复体力至3点，然后获得“激将”和“思蜀”。"
+      },
+      {
+        "name": "激将",
+        "id": "wzzz_v__jijiang",
+        "derived": true,
+        "description": "主公技，你可以令其他蜀势力角色在你需要使用或打出【杀】时，依次选择是否打出一张【杀】（视为由你使用或打出）；其他蜀势力角色于其回合外使用或打出【杀】时，其可以令你摸一张牌（每回合限一次）。"
+      },
+      {
+        "name": "思蜀",
+        "id": "wzzz_v__sishu",
+        "derived": true,
+        "description": "出牌阶段开始时，你可以指定一名角色，令其本局游戏中【乐不思蜀】判定结果反转。"
       }
     ]
   },
   {
-    "number": 135,
+    "number": 6,
     "name": "孙权",
-    "code_name": "wzzz__sunquan",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__sunquan",
+    "title": "年轻的贤君",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，年轻的贤君，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "制衡",
         "id": "wzzz_v__tycl__zhiheng",
         "derived": false,
         "description": "出牌阶段限一次，你可以弃置任意张牌，然后摸等量的牌。若你以此法弃置了所有的手牌，则额外摸一张牌。"
+      },
+      {
+        "name": "救援",
+        "id": "wzzz_v__mou__jiuyuan",
+        "derived": false,
+        "description": "主公技，当其他吴势力角色使用【桃】时，你可以摸一张牌。其他吴势力角色对你使用【桃】时，你可以额外回复1点体力。"
+      },
+      {
+        "name": "统业",
+        "id": "wzzz_v__ofl_mou__tongye",
+        "derived": false,
+        "description": "主公技，锁定技，首轮开始时，你获得“英姿”和“固政”；首轮结束时，你失去“英姿”和“固政”。"
+      },
+      {
+        "name": "英姿",
+        "id": "wzzz_v__ex__yingzi",
+        "derived": true,
+        "description": "锁定技，摸牌阶段，你多摸一张牌；你的手牌上限等于你的体力上限。"
+      },
+      {
+        "name": "固政",
+        "id": "wzzz_v__guzheng",
+        "derived": true,
+        "description": "其他角色的弃牌阶段结束时，你可以将该角色此阶段内弃置的一张手牌交给该角色，然后你可以获得其余此阶段内弃置的牌。"
       }
     ]
   },
   {
-    "number": 136,
+    "number": 7,
     "name": "孙策",
-    "code_name": "wzzz__sunce",
-    "metadata": "吴势力，4 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__sunce",
+    "title": "江东小霸王",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "吴势力，4/4 体力，男性，江东小霸王，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "激昂",
         "id": "wzzz_v__jiang",
         "derived": false,
-        "description": "当你使用【决斗】或红色【杀】指定目标后，或成为【决斗】或红色【杀】目标后，你可以摸一张牌；【决斗】或红色【杀】因弃置进入弃牌堆后，你可以失去 1 点体力获得之（每回合限一次）。"
+        "description": "当你使用【决斗】或红色【杀】指定目标后，或成为【决斗】或红色【杀】目标后，你可以摸一张牌；【决斗】或红色【杀】因弃置进入弃牌堆后，你可以失去1点体力获得之（每回合限一次）。"
       },
       {
         "name": "魂姿",
         "id": "wzzz_v__ol_ex__hunzi",
         "derived": false,
-        "description": "觉醒技，准备阶段，若你的体力值为 1，你减 1 点体力上限，然后获得“英姿”和“英魂”。本回合的结束阶段，你摸两张牌或回复 1 点体力。"
+        "description": "觉醒技，准备阶段，若你的体力值为1，你减1点体力上限，然后获得“英姿”和“英魂”。本回合的结束阶段，你摸两张牌或回复1点体力。"
+      },
+      {
+        "name": "制霸",
+        "id": "wzzz_v__zhiba",
+        "derived": false,
+        "description": "主公技，其他吴势力角色的出牌阶段限一次，其可以与你拼点（你可以拒绝此拼点）；出牌阶段限一次，你可以与一名其他吴势力角色拼点。若其没赢，你可以获得拼点的两张牌。"
       },
       {
         "name": "英姿",
@@ -3163,49 +4929,307 @@
         "name": "英魂",
         "id": "wzzz_v__yinghun",
         "derived": true,
-        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置 X 张牌；2.令其摸 X 张牌并弃置一张牌（X 为你已损失的体力值）。"
+        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置X张牌；2.令其摸X张牌并弃置一张牌（X为你已损失的体力值）。"
       }
     ]
   },
   {
-    "number": 137,
+    "number": 8,
+    "name": "孙皓",
+    "code_name": "wzzz_lord__sunhao",
+    "title": "时日曷丧",
+    "kingdom": "吴",
+    "hp": 5,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "吴势力，5/5 体力，男性，时日曷丧，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "残蚀",
+        "id": "wzzz_v__ol__canshi",
+        "derived": false,
+        "description": "摸牌阶段，你可以改为摸X张牌（X为已受伤的角色数且至少为4）。若如此做，当你本回合内使用【杀】或普通锦囊牌时，你弃置一张牌。"
+      },
+      {
+        "name": "仇海",
+        "id": "wzzz_v__ty__chouhai",
+        "derived": false,
+        "description": "锁定技，当你受到【杀】的伤害时，若你没有手牌，此伤害+1。"
+      },
+      {
+        "name": "归命",
+        "id": "wzzz_v__guiming",
+        "derived": false,
+        "description": "主公技，锁定技，吴势力角色于你的摸牌阶段视为已受伤的角色。"
+      }
+    ]
+  },
+  {
+    "number": 9,
     "name": "孙坚",
-    "code_name": "wzzz__sunjian",
-    "metadata": "吴势力，4 体力 5 上限，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__sunjian",
+    "title": "武烈帝",
+    "kingdom": "吴",
+    "hp": 4,
+    "max_hp": 5,
+    "gender": "男性",
+    "metadata": "吴势力，4/5 体力，男性，武烈帝，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "英魂",
         "id": "wzzz_v__yinghun",
         "derived": false,
-        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置 X 张牌；2.令其摸 X 张牌并弃置一张牌。（X 为你已损失的体力值）"
+        "description": "准备阶段，若你已受伤，你可以选择一名其他角色并选择一项：1.令其摸一张牌并弃置X张牌；2.令其摸X张牌并弃置一张牌。（X为你已损失的体力值）"
       },
       {
         "name": "武烈",
         "id": "wzzz_v__wulie",
         "derived": false,
-        "description": "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。"
+        "description": "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。若你因此失去体力后体力值不大于3，则你可以令场上一名角色获得“平讨”。"
+      },
+      {
+        "name": "破虏",
+        "id": "wzzz_v__os_ex__polu",
+        "derived": false,
+        "description": "主公技，当吴势力角色杀死一名角色或死亡后，你可以令至多三名角色各摸Y张牌（Y为你此前发动过此技能的次数+1且至多为3）。"
+      },
+      {
+        "name": "平讨",
+        "id": "wzzz_v__ol__pingtao",
+        "derived": true,
+        "description": "锁定技，你使用【杀】对目标角色造成伤害时，若该角色没有手牌或拥有“破虏”，则此伤害+1。"
       }
     ]
   },
   {
-    "number": 138,
+    "number": 10,
     "name": "刘协",
-    "code_name": "wzzz__liuxie",
-    "metadata": "群势力，3 体力，男性",
-    "package": "wzzz_generals",
+    "code_name": "wzzz_lord__liuxie",
+    "title": "真命天子",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，真命天子，常备主公",
+    "package": "wzzz_lords",
     "skills": [
       {
         "name": "天命",
         "id": "wzzz_v__tianming",
         "derived": false,
-        "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后若全场体力值唯一最大的角色不为你，其也可以如此做。"
+        "description": "当你成为【杀】的目标后，你可以弃置两张牌并摸两张牌（不足则全弃，无牌则不弃），然后你可以令全场除你以外体力值唯一最大的角色也如此做。"
       },
       {
         "name": "密诏",
         "id": "wzzz_v__mizhao",
         "derived": false,
         "description": "出牌阶段限一次，你可以将所有手牌交给一名其他角色（至少一张），然后令其与你选择的另一名其他角色拼点，赢的角色视为对没赢的角色使用一张【杀】。"
+      },
+      {
+        "name": "坠廷",
+        "id": "wzzz_v__os__zhuiting",
+        "derived": false,
+        "description": "主公技，当一张锦囊牌对你生效前，其他群势力或魏势力角色可以将一张与此牌颜色相同的手牌当【无懈可击】使用；本局进入鏖战阶段后，你须执行的鏖战效果修改为：弃置两张牌（不足则全弃，无牌则不弃）。"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "name": "董卓",
+    "code_name": "wzzz_lord__dongzhuo",
+    "title": "魔王",
+    "kingdom": "群",
+    "hp": 8,
+    "max_hp": 8,
+    "gender": "男性",
+    "metadata": "群势力，8/8 体力，男性，魔王，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "酒池",
+        "id": "wzzz_v__ol_ex__jiuchi",
+        "derived": false,
+        "description": "你可以将一张黑桃牌当【酒】使用；你使用【酒】无次数限制。你使用的受【酒】影响的【杀】造成伤害后，本回合“崩坏”失效。"
+      },
+      {
+        "name": "肉林",
+        "id": "wzzz_v__roulin",
+        "derived": false,
+        "description": "锁定技，你对女性角色使用的【杀】和女性角色对你使用的【杀】均需使用两张【闪】才能抵消。"
+      },
+      {
+        "name": "崩坏",
+        "id": "wzzz_v__benghuai",
+        "derived": false,
+        "description": "锁定技，结束阶段，若你不是体力值最小的角色，你失去1点体力或减1点体力上限。"
+      },
+      {
+        "name": "暴虐",
+        "id": "wzzz_v__ol_ex__baonue",
+        "derived": false,
+        "description": "主公技，当其他群势力角色造成伤害后，你可以进行判定，若结果为黑桃，你回复1点体力并获得此判定牌。游戏开始时，若场上没有其他群势力角色，则你可以令一名其他角色变更势力至“群”。"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "name": "刘辩",
+    "code_name": "wzzz_lord__liubian",
+    "title": "弘农怀王",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，弘农怀王，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "诗怨",
+        "id": "wzzz_v__shiyuan",
+        "derived": false,
+        "description": "每回合每项限一次，当你成为其他角色使用牌的目标后，若该角色的体力值：大于你，你可以摸两张牌；等于你，你可以摸两张牌；小于你，你可以摸一张牌。"
+      },
+      {
+        "name": "毒逝",
+        "id": "wzzz_v__dushi",
+        "derived": false,
+        "description": "锁定技，当你进入濒死状态时，其他角色不能对你使用【桃】直到此次濒死结算结束。当你脱离濒死状态后或当你死亡时，你失去此技能并令一名其他角色获得之。"
+      },
+      {
+        "name": "余威",
+        "id": "wzzz_v__yuwei",
+        "derived": false,
+        "description": "主公技，锁定技，其他群势力角色的回合内，“诗怨”改为“每回合每项限两次”。"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "name": "马腾",
+    "code_name": "wzzz_lord__mateng",
+    "title": "驰骋西陲",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，驰骋西陲，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "马术",
+        "id": "wzzz_v__mashu",
+        "derived": false,
+        "description": "锁定技，你计算与其他角色当距离-1。当你使用坐骑牌或失去装备区里的坐骑牌时，你摸一张牌。"
+      },
+      {
+        "name": "雄争",
+        "id": "wzzz_s__96c4_4e89",
+        "derived": false,
+        "description": "每轮开始时，你可以选择一名未被此技能选择过的角色。若如此做，本轮结束时，你可以选择一项：1.视为对除其以外任意名本轮未对其造成过伤害的角色各使用一张【杀】；2.令任意名本轮对其造成过伤害的角色各摸两张牌。"
+      },
+      {
+        "name": "乱年",
+        "id": "wzzz_s__4e71_5e74",
+        "derived": false,
+        "description": "主公技，其他群势力角色出牌阶段限一次，其可以弃置X张牌，对“雄争”角色造成1点伤害（X为此技能本轮此前发动的次数+1）。"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "name": "孙亮",
+    "code_name": "wzzz_lord__sunliang",
+    "title": "寒江枯木",
+    "kingdom": "吴",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "吴势力，3/3 体力，男性，寒江枯木，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "溃诛",
+        "id": "wzzz_v__ol__kuizhu",
+        "derived": false,
+        "description": "弃牌阶段结束时，你可以选择一项：1.令至多X名角色各摸一张牌；2.对任意名体力值之和不大于X的角色各造成1点伤害。（X为你此阶段弃置的牌数）"
+      },
+      {
+        "name": "掣政",
+        "id": "wzzz_v__ol__chezheng",
+        "derived": false,
+        "description": "锁定技，出牌阶段，当你对攻击范围内不包含你的角色造成伤害时，你防止之；出牌阶段结束时，你弃置其中一名角色的一张牌，然后摸Y张牌（Y为攻击范围内不包含你的其他角色数且至多为2）。"
+      },
+      {
+        "name": "立军",
+        "id": "wzzz_v__ol__lijun",
+        "derived": false,
+        "description": "主公技，其他吴势力角色的出牌阶段限一次，其使用【杀】结算结束后，其可以将此【杀】交给你，然后你可以令其摸一张牌且此阶段使用【杀】的次数+1。"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "name": "袁绍",
+    "code_name": "wzzz_lord__yuanshao",
+    "title": "高贵的名门",
+    "kingdom": "群",
+    "hp": 4,
+    "max_hp": 4,
+    "gender": "男性",
+    "metadata": "群势力，4/4 体力，男性，高贵的名门，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "乱击",
+        "id": "wzzz_v__ofl_mou__luanji",
+        "derived": false,
+        "description": "出牌阶段限一次，你可以将两张手牌当【万箭齐发】使用。当其他角色打出【闪】响应你使用的【万箭齐发】时，若你的手牌数小于你的手牌上限，你可以摸一张牌。你于回合内杀死一名角色时，本回合手牌上限+2。"
+      },
+      {
+        "name": "血裔",
+        "id": "wzzz_v__mou__xueyi",
+        "derived": false,
+        "description": "主公技，锁定技，你的手牌上限+2X（X为其他群势力角色数），你杀死忠臣不执行奖惩。每回合限一次，当你使用牌指定其他群势力角色为目标后，你摸一张牌。"
+      },
+      {
+        "name": "盟旌",
+        "id": "wzzz_s__76df_65cc",
+        "derived": false,
+        "description": "主公技，其他群势力角色杀死一名角色后，其可以回复1点体力或摸Y张牌（Y为死亡角色所在阵营的存活角色数且至多为2）。"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "name": "张角",
+    "code_name": "wzzz_lord__zhangjiao",
+    "title": "天公将军",
+    "kingdom": "群",
+    "hp": 3,
+    "max_hp": 3,
+    "gender": "男性",
+    "metadata": "群势力，3/3 体力，男性，天公将军，常备主公",
+    "package": "wzzz_lords",
+    "skills": [
+      {
+        "name": "雷击",
+        "id": "wzzz_v__ol_ex__leiji",
+        "derived": false,
+        "description": "当你使用或打出【闪】，或使用【闪电】时，你可以进行判定。当你的判定牌生效后，若结果为：黑桃，你可以对一名角色造成2点雷电伤害；梅花，你回复1点体力并可以对一名角色造成1点雷电伤害。"
+      },
+      {
+        "name": "鬼道",
+        "id": "wzzz_v__ol_ex__guidao",
+        "derived": false,
+        "description": "一名角色的判定牌生效前，你可以打出一张黑色牌替换之，然后若你打出的牌为黑桃且点数为2～9，你摸一张牌。"
+      },
+      {
+        "name": "黄天",
+        "id": "wzzz_v__ol_ex__huangtian",
+        "derived": false,
+        "description": "主公技，其他群势力角色出牌阶段限一次，其可以交给你一张【闪】或【闪电】或黑桃手牌并展示之；每回合限一次，其他群势力角色使用或打出【闪】后，你可以获得之。"
       }
     ]
   }
