@@ -1388,6 +1388,8 @@ return {
   [":wzzz_s__76df_65cc"] = "主公技，其他群势力角色杀死一名角色后，其可以回复1点体力或摸Y张牌（Y为死亡角色所在阵营的存活角色数且至多为2）。",
   ["wzzz_v__ol_ex__huangtian"] = "黄天",
   [":wzzz_v__ol_ex__huangtian"] = "主公技，其他群势力角色出牌阶段限一次，其可以交给你一张【闪】或【闪电】或黑桃手牌并展示之；每回合限一次，其他群势力角色使用或打出【闪】后，你可以获得之。",
+  ["wzzz_v__gxzb__paoxiao"] = "咆哮",
+  [":wzzz_v__gxzb__paoxiao"] = "锁定技，你使用【杀】无次数限制，每回合你使用第二张【杀】时，摸一张牌。",
   -- AUTO-GENERATED SKILL DESCRIPTION OVERRIDES END
   -- AUTO-GENERATED WZZZ ROSTER END
 }

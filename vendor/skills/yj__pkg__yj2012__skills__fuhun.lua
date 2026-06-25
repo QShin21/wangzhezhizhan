@@ -42,7 +42,7 @@ fuhun:addEffect(fk.Damage, {
   on_trigger = function(self, event, target, player, data)
     local room = player.room
     local skills = {}
-    for _, skill_name in ipairs({"wzzz_v__wusheng", "paoxiao"}) do
+    for _, skill_name in ipairs({"wzzz_v__wusheng", "wzzz_v__gxzb__paoxiao"}) do
       if not player:hasSkill(skill_name, true) then
         table.insert(skills, skill_name)
       end
