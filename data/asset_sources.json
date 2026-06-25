@@ -69,8 +69,8 @@
       },
       {
         "code_name": "wzzz__luzhi",
-        "source_repo": "overseas",
-        "source_path": "image/generals/os__luzhi.jpg",
+        "source_repo": "ol",
+        "source_path": "image/generals/luzhiw.jpg",
         "destination": "image/generals/wzzz__luzhi.jpg"
       },
       {
