@@ -42,6 +42,7 @@ mouQingzheng:addEffect(fk.EventPhaseStart, {
     return
       target == player and
       player:hasSkill(mouQingzheng.name) and
+      (not WzzzShuzhi or not WzzzShuzhi.skillAvailable or WzzzShuzhi.skillAvailable(player, mouQingzheng.name)) and
       player.phase == Player.Play and
       table.find(player.room:getOtherPlayers(player, false), function() return true end) and
       table.find(player:getCardIds("h"), function(id)

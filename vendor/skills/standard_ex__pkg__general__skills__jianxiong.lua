@@ -13,6 +13,10 @@ local jianxiong = fk.CreateSkill{
 
 jianxiong:addEffect(fk.Damaged, {
   anim_type = "masochism",
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(jianxiong.name) and
+      (not WzzzShuzhi or not WzzzShuzhi.skillAvailable or WzzzShuzhi.skillAvailable(player, jianxiong.name))
+  end,
   on_use = function(self, event, target, player, data)
     if data.card and player.room:getCardArea(data.card) == Card.Processing then
       player.room:obtainCard(player, data.card, true, fk.ReasonJustMove, player, jianxiong.name)
