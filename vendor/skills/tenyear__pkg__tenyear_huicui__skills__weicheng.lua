@@ -4,7 +4,7 @@ local weicheng = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__weicheng"] = "伪诚",
-  [":wzzz_v__weicheng"] = "其他角色获得你的手牌后，若你的手牌数小于体力值，你可以摸一张牌。",
+  [":wzzz_v__weicheng"] = "当你将手牌交给其他角色，或你的手牌被其他角色获得后，若你的手牌数不大于体力值，你可以摸一张牌。",
 
   ["$wzzz_v__weicheng1"] = "略施谋略，敌军便信以为真。",
   ["$wzzz_v__weicheng2"] = "吾只观雅规，而非说客。",
@@ -13,7 +13,7 @@ Fk:loadTranslationTable{
 weicheng:addEffect(fk.AfterCardsMove, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    if player:hasSkill(weicheng.name) and player:getHandcardNum() < player.hp then
+    if player:hasSkill(weicheng.name) and player:getHandcardNum() <= player.hp then
       for _, move in ipairs(data) do
         if move.from == player and move.to and move.to ~= player and move.toArea == Card.PlayerHand then
           for _, info in ipairs(move.moveInfo) do

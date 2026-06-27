@@ -5,7 +5,7 @@ local songsang = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__qshm__songsang"] = "送丧",
-  [":wzzz_v__qshm__songsang"] = "限定技，一名角色死亡后，你可以加1点体力上限并回复1点体力，然后你获得〖展骥〗。",
+  [":wzzz_v__qshm__songsang"] = "限定技，当一名角色死亡时，你可以加1点体力上限并回复1点体力。",
 
   ["$wzzz_v__qshm__songsang1"] = "江波逆浪，似如驾鹤西归。",
   ["$wzzz_v__qshm__songsang2"] = "天妒英才至此，背负公瑾之躯。",
@@ -25,11 +25,10 @@ songsang:addEffect(fk.Death, {
         who = player,
         num = 1,
         recoverBy = player,
-        skill_name = songsang.name,
+        skillName = songsang.name,
       }
       if player.dead then return end
     end
-    room:handleAddLoseSkills(player, "wzzz_v__zhanji")
   end,
 })
 

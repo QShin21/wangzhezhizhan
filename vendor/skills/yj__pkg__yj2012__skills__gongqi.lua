@@ -4,9 +4,9 @@ local gongqi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__gongqi"] = "弓骑",
-  [":wzzz_v__gongqi"] = "出牌阶段限一次，你可以弃置一张牌，此回合你的攻击范围无限。若你以此法弃置的牌为装备牌，你可以弃置一名其他角色的一张牌。",
+  [":wzzz_v__gongqi"] = "出牌阶段限一次，你可以弃置一张牌，令你本回合的攻击范围无限。若你以此法弃置的牌为非基本牌，你可以弃置一名其他角色的一张牌。",
 
-  ["#wzzz_v__gongqi"] = "弓骑：弃一张牌，本回合攻击范围无限；若弃置装备牌，可以弃置一名其他角色的一张牌",
+  ["#wzzz_v__gongqi"] = "弓骑：弃一张牌，本回合攻击范围无限；若弃置非基本牌，可以弃置一名其他角色的一张牌",
   ["#wzzz_v__gongqi-choose"] = "弓骑：你可以弃置一名其他角色的一张牌",
 
   ["$wzzz_v__gongqi1"] = "看我箭弩弓张，取你性命！",
@@ -29,7 +29,7 @@ gongqi:addEffect("active", {
     local player = effect.from
     room:throwCard(effect.cards, gongqi.name, player, player)
     if player.dead then return end
-    if Fk:getCardById(effect.cards[1]).type == Card.TypeEquip then
+    if Fk:getCardById(effect.cards[1]).type ~= Card.TypeBasic then
       local targets = table.filter(room:getOtherPlayers(player, false), function(p)
         return not p:isNude()
       end)

@@ -4,7 +4,7 @@ local kuizhu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__kuizhu"] = "溃诛",
-  [":wzzz_v__ol__kuizhu"] = "弃牌阶段结束时，你可以选择一项：1.令至多X名角色各摸一张牌；2.对任意名体力值之和为X的角色造成1点伤害（X为你此阶段弃置的牌数）。",
+  [":wzzz_v__ol__kuizhu"] = "弃牌阶段结束时，你可以选择一项：1.令至多X名角色各摸一张牌；2.对任意名体力值之和不大于X的角色各造成1点伤害。（X为你此阶段弃置的牌数）",
 
   ["$wzzz_v__ol__kuizhu1"] = "东吴之主，岂是贪生怕死之辈？",
   ["$wzzz_v__ol__kuizhu2"] = "欺朕年幼？有胆，便一决雌雄！",
@@ -53,7 +53,7 @@ kuizhu:addEffect(fk.EventPhaseEnd, {
     local targets = event:getCostData(self).tos
     local choice = event:getCostData(self).choice
     room:doIndicate(player, targets)
-    if choice:startsWith("kuizhu_choice1") then
+    if choice == "wzzz_v__ol__kuizhu_draw" then
       room:notifySkillInvoked(player, kuizhu.name, "support")
       for _, p in ipairs(targets) do
         if not p.dead then

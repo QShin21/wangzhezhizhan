@@ -5,10 +5,9 @@ local mouLuanwu = fk.CreateSkill({
 
 Fk:loadTranslationTable{
   ["wzzz_v__mou__luanwu"] = "乱武",
-  [":wzzz_v__mou__luanwu"] = "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.对距离最近的另一名其他角色使用一张【杀】；" ..
-  "2.失去1点体力。每有一名角色因此失去体力时，你可以升级“完杀”或者“帷幕”（每个技能各限升级一次）。",
-  ["#wzzz_v__mou__luanwu"] = "令所有其他角色选择对最近角色出杀或掉血，若掉血你升级技能",
-  ["#wzzz_v__mou__luanwu-choice"] = "乱武：你可以升级“完杀”或者“帷幕”！",
+  [":wzzz_v__mou__luanwu"] = "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.失去1点体力；2.对其距离最近的一名角色使用一张【杀】。结算完成后，你可以视为使用一张无距离次数限制的【杀】。",
+  ["#wzzz_v__mou__luanwu"] = "令所有其他角色选择失去体力或对最近角色出杀",
+  ["#wzzz_v__mou__luanwu-slash"] = "乱武：你可以视为使用一张无距离次数限制的【杀】",
   ["#wzzz_v__mou__luanwu_delay"] = "乱武",
 
   ["$wzzz_v__mou__luanwu1"] = "降则任人鱼肉，竭战或可保生！",
@@ -59,42 +58,18 @@ mouLuanwu:addEffect("active", {
         end
       end
     end
-  end,
-})
-
-mouLuanwu:addEffect(fk.HpLost, {
-  is_delay_effect = true,
-  mute = true,
-  can_trigger = function(self, event, target, player, data)
-    return
-      data.skillName == "wzzz_v__mou__luanwu" and
-      player.phase == Player.Play and
-      player:isAlive() and
-      (
-        (player:hasSkill("wzzz_v__mou__wansha", true) and player:getMark("@@wzzz_v__mou__wansha_upgrade") == 0) or
-        (player:hasSkill("wzzz_v__mou__weimu", true) and player:getMark("@@wzzz_v__mou__weimu_upgrade") == 0)
-      )
-  end,
-  on_cost = Util.TrueFunc,
-  on_use = function(self, event, target, player, data)
-    local room = player.room
-    local all_choices = { "wzzz_v__mou__wansha", "wzzz_v__mou__weimu" }
-    local choices = table.filter(all_choices, function(name)
-      return player:hasSkill(name, true) and player:getMark("@@" .. name .. "_upgrade") == 0
-    end)
-    table.insert(choices, "Cancel")
-    table.insert(all_choices, "Cancel")
-    local choice = room:askToChoice(
-      player,
-      {
-        choices = choices,
-        skill_name = mouLuanwu.name,
-        prompt = "#wzzz_v__mou__luanwu-choice",
-        all_choices = all_choices
-      }
-    )
-    if choice ~= "Cancel" then
-      room:setPlayerMark(player, "@@" .. choice .. "_upgrade", 1)
+    if not player.dead then
+      room:askToUseVirtualCard(player, {
+        name = "slash",
+        skill_name = skillName,
+        prompt = "#wzzz_v__mou__luanwu-slash",
+        cancelable = true,
+        extra_data = {
+          bypass_distances = true,
+          bypass_times = true,
+          extraUse = true,
+        },
+      })
     end
   end,
 })

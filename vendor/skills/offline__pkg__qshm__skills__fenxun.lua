@@ -4,11 +4,11 @@ local fenxun = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__qshm__fenxun"] = "奋迅",
-  [":wzzz_v__qshm__fenxun"] = "出牌阶段限一次，你可以弃置至少一张张牌并选择一名其他角色，本回合你与其的距离视为1，当你本回合下次对其造成伤害后，"..
-  "你获得其等量手牌。",
+  [":wzzz_v__qshm__fenxun"] = "出牌阶段限一次，你可以弃置一张牌并选择一名其他角色，然后本回合你计算与其的距离视为1，若如此做，此阶段结束时，若你本阶段使用【杀】对距离1以内的角色造成过至少2点伤害，你可以摸两张牌。",
 
-  ["#wzzz_v__qshm__fenxun"] = "奋迅：弃任意张牌，本回合你与一名角色的距离视为1，下次对其造成伤害获得其等量手牌",
+  ["#wzzz_v__qshm__fenxun"] = "奋迅：弃一张牌，本回合你至一名其他角色的距离视为1",
   ["@wzzz_v__qshm__fenxun-turn"] = "被奋迅",
+  ["#wzzz_v__qshm__fenxun-draw"] = "奋迅：你本阶段使用【杀】造成过至少2点伤害，是否摸两张牌？",
 
   ["$wzzz_v__qshm__fenxun1"] = "端午竞舟，于中流击水，可立潮头！",
   ["$wzzz_v__qshm__fenxun2"] = "百舸争渡，驾艨艟弄潮，舍我其谁！",
@@ -16,7 +16,7 @@ Fk:loadTranslationTable{
 
 fenxun:addEffect("active", {
   anim_type = "offensive",
-  min_card_num = 1,
+  card_num = 1,
   target_num = 1,
   prompt = "#wzzz_v__qshm__fenxun",
   can_use = function(self, player)
@@ -32,39 +32,37 @@ fenxun:addEffect("active", {
     local player = effect.from
     local target = effect.tos[1]
     room:addTableMarkIfNeed(player, "wzzz_v__qshm__fenxun-turn", target.id)
-    room:setPlayerMark(target, "@wzzz_v__qshm__fenxun-turn", #effect.cards)
+    room:setPlayerMark(target, "@wzzz_v__qshm__fenxun-turn", 1)
     room:throwCard(effect.cards, fenxun.name, player, player)
   end,
 })
 
-fenxun:addEffect(fk.Damage, {
-  anim_type = "offensive",
+fenxun:addEffect(fk.EventPhaseEnd, {
+  anim_type = "drawcard",
   is_delay_effect = true,
-  can_trigger = function (self, event, target, player, data)
-    return target == player and table.contains(player:getTableMark("wzzz_v__qshm__fenxun-turn"), data.to.id) and
-      data.to:getMark("@wzzz_v__qshm__fenxun-turn") > 0
-  end,
-  on_cost = function (self, event, target, player, data)
-    event:setCostData(self, {tos = {data.to}})
-    return true
-  end,
-  on_use = function (self, event, target, player, data)
-    local room = player.room
-    local n = data.to:getMark("@wzzz_v__qshm__fenxun-turn")
-    room:setPlayerMark(data.to, "@wzzz_v__qshm__fenxun-turn", 0)
-    if not data.to:isKongcheng() then
-      local cards = data.to:getCardIds("h")
-      if #cards > n then
-        cards = room:askToChooseCards(player, {
-          target = data.to,
-          min = n,
-          max = n,
-          flag = "h",
-          skill_name = fenxun.name,
-        })
-      end
-      room:moveCardTo(cards, Card.PlayerHand, player, fk.ReasonPrey, fenxun.name, nil, false, player)
+  can_trigger = function(self, event, target, player, data)
+    if target ~= player or player.phase ~= Player.Play or
+      #player:getTableMark("wzzz_v__qshm__fenxun-turn") == 0 then
+      return false
     end
+    local damage = 0
+    player.room.logic:getActualDamageEvents(1, function(e)
+      local damageData = e.data
+      if damageData.from == player and damageData.card and damageData.card.trueName == "slash" and
+        player:distanceTo(damageData.to) <= 1 then
+        damage = damage + damageData.damage
+      end
+    end, Player.HistoryPhase)
+    return damage >= 2
+  end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, {
+      skill_name = fenxun.name,
+      prompt = "#wzzz_v__qshm__fenxun-draw",
+    })
+  end,
+  on_use = function(self, event, target, player, data)
+    player:drawCards(2, fenxun.name)
   end,
 })
 

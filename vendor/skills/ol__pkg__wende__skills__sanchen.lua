@@ -4,8 +4,7 @@ local sanchen = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__sanchen"] = "三陈",
-  [":wzzz_v__sanchen"] = "出牌阶段限一次，你可令一名角色摸三张牌然后弃置三张牌。若其未因此次效果而弃置类别相同的牌，则其摸一张牌，"..
-  "且本技能视为未发动过（本回合不能再指定其为目标）。",
+  [":wzzz_v__sanchen"] = "出牌阶段限一次，你可以令一名角色摸三张牌并弃置三张牌。若其未以此法弃置类型相同的牌，则其摸一张牌并令此技能视为未发动过（不能选择此阶段已选择过的角色），然后你于此阶段内获得“破竹”。",
 
   ["#wzzz_v__sanchen"] = "三陈：令一名角色摸三张牌并弃置三张牌",
   ["#wzzz_v__sanchen-discard"] = "三陈：弃置三张牌，若类别各不相同则你摸一张牌且 %src 可以再发动“三陈”",
@@ -58,7 +57,22 @@ sanchen:addEffect("active", {
     end
     if not player.dead then
       player:setSkillUseHistory(sanchen.name, 0, Player.HistoryPhase)
+      if not player:hasSkill("wzzz_v__pozhu", true) then
+        room:setPlayerMark(player, "wzzz_v__sanchen_pozhu-phase", 1)
+        room:handleAddLoseSkills(player, "wzzz_v__pozhu", nil, false, true)
+      end
     end
+  end,
+})
+
+sanchen:addEffect(fk.EventPhaseEnd, {
+  mute = true,
+  can_refresh = function(self, event, target, player, data)
+    return target == player and player.phase == Player.Play and player:getMark("wzzz_v__sanchen_pozhu-phase") > 0
+  end,
+  on_refresh = function(self, event, target, player, data)
+    player.room:setPlayerMark(player, "wzzz_v__sanchen_pozhu-phase", 0)
+    player.room:handleAddLoseSkills(player, "-wzzz_v__pozhu", nil, false, true)
   end,
 })
 

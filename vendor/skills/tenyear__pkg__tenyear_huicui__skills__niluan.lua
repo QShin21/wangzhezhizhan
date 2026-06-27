@@ -4,9 +4,9 @@ local niluan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__niluan"] = "逆乱",
-  [":wzzz_v__ty__niluan"] = "出牌阶段，你可以将一张黑色牌当【杀】使用，若此【杀】未造成伤害，则不计入使用次数限制。",
+  [":wzzz_v__ty__niluan"] = "出牌阶段，你可以将一张黑色牌当【杀】使用，若此【杀】未造成过伤害，则此【杀】无次数限制。",
 
-  ["#wzzz_v__ty__niluan"] = "逆乱：将一张黑色牌当【杀】使用，若未造成伤害则不计次",
+  ["#wzzz_v__ty__niluan"] = "逆乱：将一张黑色牌当【杀】使用，若未造成伤害则此【杀】无次数限制",
 
   ["$wzzz_v__ty__niluan1"] = "如果不能功成名就，那就干脆为祸一方！",
   ["$wzzz_v__ty__niluan2"] = "哈哈哈哈哈，天下之事皆无常！",

@@ -6,7 +6,7 @@ local shouyue = fk.CreateSkill {
 Fk:loadTranslationTable {
   ["wzzz__shouyue"] = "授钺",
   [":wzzz__shouyue"] = "主公技，出牌阶段结束时，你可以令一名体力值不小于你的其他蜀势力角色选择一项：1.跳过下一个出牌阶段；2.视为对其攻击范围内你指定的一名角色使用一张【杀】。",
-  ["#wzzz__shouyue-choose"] = "授钺：选择一名体力值不小于你的蜀势力角色",
+  ["#wzzz__shouyue-choose"] = "授钺：选择一名体力值不小于你的其他蜀势力角色",
   ["#wzzz__shouyue-target"] = "授钺：选择【杀】的目标，或取消并跳过下个出牌阶段",
   ["@@wzzz__shouyue_skip"] = "授钺",
 }

@@ -4,7 +4,7 @@ local canshi = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__canshi"] = "残蚀",
-  [":wzzz_v__ol__canshi"] = "摸牌阶段，你可以多摸X张牌（X为已受伤的角色数），若如此做，当你于此回合内使用【杀】或普通锦囊牌时，你弃置一张牌。",
+  [":wzzz_v__ol__canshi"] = "摸牌阶段，你可以改为摸X张牌（X为已受伤的角色数且至少为4）。若如此做，当你本回合内使用非装备牌时，你弃置一张牌。",
 
   ["$wzzz_v__ol__canshi1"] = "君王治政，岂容他人置喙？",
   ["$wzzz_v__ol__canshi2"] = "怀怒肆威暴，何人敢不从！",
@@ -15,20 +15,20 @@ canshi:addEffect(fk.DrawNCards, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(canshi.name) and
       table.find(player.room.alive_players, function (p)
-        return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu" and p ~= player)
+        return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu")
       end)
   end,
   on_use = function(self, event, target, player, data)
-    data.n = data.n + #table.filter(player.room.alive_players, function (p)
-      return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu" and p ~= player)
-    end)
+    data.n = math.max(4, #table.filter(player.room.alive_players, function (p)
+      return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu")
+    end))
   end,
 })
 canshi:addEffect(fk.CardUsing, {
   anim_type = "negative",
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
-    return target == player and (data.card.trueName == "slash" or data.card:isCommonTrick()) and
+    return target == player and data.card.type ~= Card.TypeEquip and
       player:usedSkillTimes(canshi.name, Player.HistoryTurn) > 0 and
       not player:isNude() and not player.dead
   end,

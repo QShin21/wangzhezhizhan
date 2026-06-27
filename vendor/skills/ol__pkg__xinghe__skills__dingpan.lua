@@ -4,16 +4,28 @@ local dingpan = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__dingpan"] = "定叛",
-  [":wzzz_v__dingpan"] = "出牌阶段限X次，你可以令一名装备区里有牌的角色摸一张牌，然后其选择一项：1.令你弃置其装备区里的一张牌；"..
-  "2.获得其装备区里的所有牌，若如此做，你对其造成1点伤害（X为场上存活的反贼数）。",
+  [":wzzz_v__dingpan"] = "出牌阶段限X次（X为存活角色最多阵营的存活角色数且至多为3），你可以令一名装备区里有牌的角色摸一张牌，然后其选择一项：1.令你弃置其一至两张牌；"..
+  "2.获得装备区里的所有牌，然后你对其造成1点伤害。",
 
-  ["#wzzz_v__dingpan"] = "定叛：令一名装备区里有牌的角色摸一张牌，然后其选择弃置装备或收回装备并受到你造成的伤害",
-  ["wzzz_v__dingpan_discard"] = "%src弃置你装备区里的一张牌",
+  ["#wzzz_v__dingpan"] = "定叛：令一名装备区里有牌的角色摸一张牌，然后其选择弃牌或收回装备并受到你造成的伤害",
+  ["wzzz_v__dingpan_discard"] = "%src弃置你的一至两张牌",
   ["wzzz_v__dingpan_damage"] = "收回所有装备，%src对你造成1点伤害",
 
   ["$wzzz_v__dingpan1"] = "从孙者生，从刘者死！",
   ["$wzzz_v__dingpan2"] = "多行不义必自毙！",
 }
+
+local function maxRoleCount(room)
+  local counts = {}
+  for _, p in ipairs(room.alive_players) do
+    counts[p.role] = (counts[p.role] or 0) + 1
+  end
+  local n = 0
+  for _, count in pairs(counts) do
+    n = math.max(n, count)
+  end
+  return math.min(3, n)
+end
 
 dingpan:addEffect("active", {
   anim_type = "offensive",
@@ -22,15 +34,10 @@ dingpan:addEffect("active", {
   target_num = 1,
   times = function(self, player)
     return player.phase == Player.Play and
-    #table.filter(Fk:currentRoom().alive_players, function (p)
-      return p.role == "rebel"
-    end) - player:usedSkillTimes(dingpan.name, Player.HistoryPhase) or -1
+      maxRoleCount(Fk:currentRoom()) - player:usedSkillTimes(dingpan.name, Player.HistoryPhase) or -1
   end,
   can_use = function(self, player)
-    return player:usedSkillTimes(dingpan.name, Player.HistoryPhase) <
-      #table.filter(Fk:currentRoom().alive_players, function (p)
-        return p.role == "rebel"
-      end)
+    return player:usedSkillTimes(dingpan.name, Player.HistoryPhase) < maxRoleCount(Fk:currentRoom())
   end,
   card_filter = Util.FalseFunc,
   target_filter = function(self, player, to_select, selected)
@@ -42,7 +49,7 @@ dingpan:addEffect("active", {
     target:drawCards(1, dingpan.name)
     if target.dead then return end
     local choices = {"wzzz_v__dingpan_damage:"..player.id}
-    if #target:getCardIds("e") > 0 and not player.dead then
+    if not target:isNude() and not player.dead then
       table.insert(choices, 1, "wzzz_v__dingpan_discard:"..player.id)
     end
     local choice = room:askToChoice(target, {
@@ -50,12 +57,14 @@ dingpan:addEffect("active", {
       skill_name = dingpan.name,
     })
     if choice:startsWith("wzzz_v__dingpan_discard") then
-      local id = room:askToChooseCard(player, {
+      local cards = room:askToChooseCards(player, {
         target = target,
-        flag = "e",
+        min = 1,
+        max = 2,
+        flag = "he",
         skill_name = dingpan.name,
       })
-      room:throwCard(id, dingpan.name, target, player)
+      room:throwCard(cards, dingpan.name, target, player)
     else
       room:moveCardTo(target:getCardIds("e"), Card.PlayerHand, target, fk.ReasonJustMove, dingpan.name, nil, true, target)
       if not target.dead then

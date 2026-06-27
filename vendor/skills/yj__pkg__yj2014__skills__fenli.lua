@@ -4,8 +4,7 @@ local fenli = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__fenli"] = "奋励",
-  [":wzzz_v__fenli"] = "若你的手牌数为全场最多，你可以跳过摸牌阶段；若你的体力值为全场最多，你可以跳过出牌阶段；若你的装备区里有牌且数量为全场最多，"..
-  "你可以跳过弃牌阶段。",
+  [":wzzz_v__fenli"] = "判定阶段开始前，若你的手牌数为场上最多，你可以跳过此阶段和本回合的下个摸牌阶段；出牌阶段开始前，若你的体力值为场上最高，你可以跳过此阶段；弃牌阶段开始前，若你装备区里的牌数为场上最多（至少0张），你可以跳过此阶段。",
 
   ["#wzzz_v__fenli-invoke"] = "奋励：你可以跳过%arg",
 
@@ -16,7 +15,7 @@ Fk:loadTranslationTable{
 fenli:addEffect(fk.EventPhaseChanging, {
   can_trigger = function(self, event, target, player, data)
     if target == player and player:hasSkill(fenli.name) and not data.skipped then
-      if data.phase == Player.Draw then
+      if data.phase == Player.Judge then
         return table.every(player.room:getOtherPlayers(player), function (p)
           return p:getHandcardNum() <= player:getHandcardNum()
         end)
@@ -24,7 +23,7 @@ fenli:addEffect(fk.EventPhaseChanging, {
         return table.every(player.room:getOtherPlayers(player), function (p)
           return p.hp <= player.hp
         end)
-      elseif data.phase == Player.Discard and #player:getCardIds("e") > 0 then
+      elseif data.phase == Player.Discard then
         return table.every(player.room:getOtherPlayers(player), function (p)
           return #p:getCardIds("e") <= #player:getCardIds("e")
         end)
@@ -32,14 +31,21 @@ fenli:addEffect(fk.EventPhaseChanging, {
     end
   end,
   on_cost = function(self, event, target, player, data)
-    local phases = {"phase_draw", "phase_play", "phase_discard"}
+    local phases = {
+      [Player.Judge] = "phase_judge",
+      [Player.Play] = "phase_play",
+      [Player.Discard] = "phase_discard",
+    }
     return player.room:askToSkillInvoke(player, {
       skill_name = fenli.name,
-      prompt = "#wzzz_v__fenli-invoke:::"..phases[data.phase - 3],
+      prompt = "#wzzz_v__fenli-invoke:::"..phases[data.phase],
     })
   end,
   on_use = function(self, event, target, player, data)
     player:skip(data.phase)
+    if data.phase == Player.Judge then
+      player:skip(Player.Draw)
+    end
     data.skipped = true
   end,
 })

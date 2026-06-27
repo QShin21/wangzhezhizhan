@@ -1,10 +1,11 @@
 local changbiao = fk.CreateSkill{
   name = "wzzz_v__changbiao",
+  tags = { Skill.Limited },
 }
 
 Fk:loadTranslationTable {
   ["wzzz_v__changbiao"] = "长标",
-  [":wzzz_v__changbiao"] = "出牌阶段限一次，你可以将任意张手牌当【杀】使用（无距离限制），若此【杀】造成过伤害，此阶段结束时，你摸等量的牌。",
+  [":wzzz_v__changbiao"] = "限定技，出牌阶段，你可以将任意张手牌（至少一张）当一张无距离限制的【杀】使用，若此【杀】造成过伤害，出牌阶段结束时，你摸等量的牌。",
 
   ["#wzzz_v__changbiao"] = "长标：你可以将任意张手牌当【杀】使用",
   ["@wzzz_v__changbiao_draw-phase"] = "长标",
@@ -35,7 +36,7 @@ changbiao:addEffect("viewas", {
     use.extra_data.changbiao = player
   end,
   enabled_at_play = function(self, player)
-    return player:usedSkillTimes(changbiao.name, Player.HistoryPhase) < 1
+    return player:usedSkillTimes(changbiao.name, Player.HistoryGame) == 0
   end,
   enabled_at_response = Util.FalseFunc,
 })

@@ -4,7 +4,7 @@ local jushou = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__jushou"] = "据守",
-  [":wzzz_v__ol__jushou"] = "结束阶段，你可以翻面，摸四张牌，然后选择一项：1.使用一张装备牌手牌；2.弃置一张非装备牌手牌。",
+  [":wzzz_v__ol__jushou"] = "结束阶段，你可以翻面，然后摸四张牌并弃置一张手牌，若此牌为装备牌，则你改为使用之。",
 
   ["#wzzz_v__ol__jushou-ask"] = "据守：使用手牌中的一张装备牌，或弃置手牌中的一张非装备牌",
   ["#wzzz_v__ol__jushou-use"] = "据守：请使用%arg",

@@ -4,8 +4,7 @@ local zhenwei = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__zhenwei"] = "镇卫",
-  [":wzzz_v__zhenwei"] = "当一名其他角色成为【杀】或黑色锦囊牌的唯一目标时，若该角色的体力值小于你，你可以弃置一张牌并选择一项："..
-  "1.摸一张牌，然后你成为此牌的目标；2.令此牌失效并将之移出游戏，回合结束时使用者收回此牌。",
+  [":wzzz_v__zhenwei"] = "当其他角色成为【杀】或黑色锦囊牌的唯一目标时，若其体力值小于你，你可以弃置一张牌并选择一项：1.摸一张牌，然后将此牌转移给你；2.若此牌为非虚拟牌，你令此牌无效，回合结束后，使用者获得此牌。",
 
   ["#wzzz_v__zhenwei-invoke"] = "镇卫：%src 对 %dest 使用%arg，你可以弃置一张牌执行一项",
   ["wzzz_v__zhenwei_transfer"] = "摸一张牌并将%arg转移给你",
@@ -31,6 +30,7 @@ zhenwei:addEffect(fk.TargetConfirming, {
       extra_data = {
         from = data.from.id,
         card = data.card:toLogString(),
+        can_recycle = not data.card:isVirtual(),
       }
     })
     if success and dat then
@@ -51,7 +51,7 @@ zhenwei:addEffect(fk.TargetConfirming, {
       end
     else
       data.use.nullifiedTargets = table.simpleClone(room.players)
-      if not data.from.dead and room:getCardArea(data.card) == Card.Processing then
+      if not data.card:isVirtual() and not data.from.dead and room:getCardArea(data.card) == Card.Processing then
         data.from:addToPile(zhenwei.name, data.card, true, zhenwei.name)
       end
     end

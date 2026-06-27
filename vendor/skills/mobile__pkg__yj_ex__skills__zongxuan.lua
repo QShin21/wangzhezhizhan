@@ -4,11 +4,12 @@ local zongxuan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__m_ex__zongxuan"] = "纵玄",
-  [":wzzz_v__m_ex__zongxuan"] = "出牌阶段限一次，你可以摸一张牌，然后将一张牌置于牌堆顶；当你的牌因弃置而置入弃牌堆时，你可以将其中任意张牌置于牌堆顶。",
+  [":wzzz_v__m_ex__zongxuan"] = "当你的牌因弃置而置入弃牌堆后，或你上家的牌于每回合首次因弃置而置入弃牌堆后，你可以将其中一张锦囊牌交给一名其他角色，且可以将其余任意张牌置于牌堆顶。出牌阶段限一次，你可以摸一张牌并将一张牌置于牌堆顶。",
 
   ["#wzzz_v__m_ex__zongxuan-active"] = "纵玄：你可以摸一张牌，然后将一张牌置于牌堆顶",
   ["#wzzz_v__m_ex__zongxuan-put"] = "纵玄：将一张牌置于牌堆顶",
   ["#wzzz_v__m_ex__zongxuan-invoke"] = "纵玄：将任意数量的弃牌置于牌堆顶",
+  ["#wzzz_v__m_ex__zongxuan-give"] = "纵玄：你可以将其中一张锦囊牌交给一名其他角色",
   ["#PutKnownCardtoDrawPile"] = "%from 将 %card 置于牌堆顶",
 
   ["$wzzz_v__m_ex__zongxuan1"] = "近日之事，吾心已有谱。",
@@ -45,12 +46,18 @@ zongxuan:addEffect(fk.AfterCardsMove, {
     if player:hasSkill(zongxuan.name) then
       local room = player.room
       local cards = {}
+      local upper = false
       for _, move in ipairs(data) do
-        if move.from == player and move.toArea == Card.DiscardPile and move.moveReason == fk.ReasonDiscard then
+        local from = move.from
+        local isSelf = from == player
+        local isUpper = from and from ~= player and from:getNextAlive() == player and
+          player:getMark("wzzz_v__m_ex__zongxuan_upper-turn") == 0
+        if (isSelf or isUpper) and move.toArea == Card.DiscardPile and move.moveReason == fk.ReasonDiscard then
           for _, info in ipairs(move.moveInfo) do
             if info.fromArea == Card.PlayerHand or info.fromArea == Card.PlayerEquip then
               if room:getCardArea(info.cardId) == Card.DiscardPile then
                 table.insertIfNeed(cards, info.cardId)
+                if isUpper then upper = true end
               end
             end
           end
@@ -58,24 +65,56 @@ zongxuan:addEffect(fk.AfterCardsMove, {
       end
       cards = room.logic:moveCardsHoldingAreaCheck(cards)
       if #cards > 0 then
-        event:setCostData(self, {cards = cards})
+        event:setCostData(self, {cards = cards, upper = upper})
         return true
       end
     end
   end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, {
+      skill_name = zongxuan.name,
+      prompt = "#wzzz_v__m_ex__zongxuan-invoke",
+    })
+  end,
   on_use = function(self, event, target, player, data)
     local room = player.room
-    local top = event:getCostData(self).cards
-    if #top > 1 then
-      top = room:askToArrangeCards(player, {
-        skill_name = zongxuan.name,
-        card_map = {top, "pile_discard","Top"},
-        prompt = "#wzzz_v__m_ex__zongxuan-invoke",
-        free_arrange = true,
-        box_size = 7,
-        min_limit = {0, 1},
-      })[2]
+    local cost = event:getCostData(self)
+    if cost.upper then
+      room:setPlayerMark(player, "wzzz_v__m_ex__zongxuan_upper-turn", 1)
     end
+    local cards = table.simpleClone(cost.cards)
+    local tricks = table.filter(cards, function(id)
+      return Fk:getCardById(id).type == Card.TypeTrick
+    end)
+    if #tricks > 0 and #room:getOtherPlayers(player, false) > 0 then
+      local tos, give = room:askToChooseCardsAndPlayers(player, {
+        targets = room:getOtherPlayers(player, false),
+        min_num = 1,
+        max_num = 1,
+        min_card_num = 1,
+        max_card_num = 1,
+        pattern = tostring(Exppattern{ id = tricks }),
+        expand_pile = tricks,
+        skill_name = zongxuan.name,
+        prompt = "#wzzz_v__m_ex__zongxuan-give",
+        cancelable = true,
+      })
+      if #tos > 0 and #give > 0 then
+        table.removeOne(cards, give[1])
+        room:moveCardTo(give, Card.PlayerHand, tos[1], fk.ReasonJustMove, zongxuan.name, nil, false, player)
+      end
+    end
+    cards = room.logic:moveCardsHoldingAreaCheck(cards)
+    if #cards == 0 then return end
+    local top = room:askToArrangeCards(player, {
+      skill_name = zongxuan.name,
+      card_map = {cards, "pile_discard","Top"},
+      prompt = "#wzzz_v__m_ex__zongxuan-invoke",
+      free_arrange = true,
+      box_size = 7,
+      min_limit = {0, 0},
+    })[2]
+    if #top == 0 then return end
     room:sendLog{
       type = "#PutKnownCardtoDrawPile",
       from = player.id,

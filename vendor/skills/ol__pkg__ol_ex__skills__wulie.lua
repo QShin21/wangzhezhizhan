@@ -5,11 +5,10 @@ local wulie = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__wulie"] = "武烈",
-  [":wzzz_v__wulie"] = "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。若你因此失去体力后体力值不大于3，则你可以令场上一名角色获得“平讨”。",
+  [":wzzz_v__wulie"] = "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。",
 
   ["@@wzzz_v__wulie_lie"] = "烈",
   ["#wzzz_v__wulie-choose"] = "武烈：选择任意名其他角色并失去等量的体力，防止这些角色受到的下次伤害",
-  ["#wzzz_v__wulie-pingtao"] = "武烈：你可以令一名角色获得“平讨”",
 
   ["$wzzz_v__wulie1"] = "孙武之后，英烈勇战。",
   ["$wzzz_v__wulie2"] = "兴义之中，忠烈之名。",
@@ -43,19 +42,6 @@ wulie:addEffect(fk.EventPhaseStart, {
     for _, p in ipairs(event:getCostData(self).tos) do
       if not p.dead then
         room:setPlayerMark(p, "@@wzzz_v__wulie_lie", 1)
-      end
-    end
-    if not player.dead and player.hp <= 3 and player:hasSkill("wzzz_v__os_ex__polu", true) then
-      local tos = room:askToChoosePlayers(player, {
-        targets = room.alive_players,
-        min_num = 1,
-        max_num = 1,
-        prompt = "#wzzz_v__wulie-pingtao",
-        skill_name = wulie.name,
-        cancelable = true,
-      })
-      if #tos > 0 and not tos[1]:hasSkill("wzzz_v__ol__pingtao", true) then
-        room:handleAddLoseSkills(tos[1], "wzzz_v__ol__pingtao", nil, false, true)
       end
     end
   end,

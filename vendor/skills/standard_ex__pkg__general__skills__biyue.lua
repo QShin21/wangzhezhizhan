@@ -1,6 +1,6 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__biyue"] = "闭月",
-  [":wzzz_v__ex__biyue"] = "结束阶段，你可以摸一张牌，若你没有手牌则改为两张。",
+  [":wzzz_v__ex__biyue"] = "结束阶段，若你的手牌数小于你的体力值，你可以摸两张牌，否则摸一张牌。",
 
   ["$wzzz_v__ex__biyue1"] = "梦蝶幻月，如沫虚妄。",
   ["$wzzz_v__ex__biyue2"] = "水映月明，芙蓉照倩影。",
@@ -15,8 +15,13 @@ biyue:addEffect(fk.EventPhaseStart, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(biyue.name) and player.phase == Player.Finish
   end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, {
+      skill_name = biyue.name,
+    })
+  end,
   on_use = function(self, event, target, player, data)
-    player:drawCards(player:isKongcheng() and 2 or 1, biyue.name)
+    player:drawCards(player:getHandcardNum() < player.hp and 2 or 1, biyue.name)
   end,
 })
 

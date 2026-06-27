@@ -1,6 +1,6 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__qingjian"] = "清俭",
-  [":wzzz_v__ex__qingjian"] = "每回合限一次，当你于摸牌阶段外获得牌后，你可以展示任意张牌并交给一名其他角色。当前回合角色本回合手牌上限+X（X为你"..
+  [":wzzz_v__ex__qingjian"] = "每轮限一次，当你于摸牌阶段外获得牌后，你可以展示任意张牌并交给一名其他角色。当前回合角色本回合手牌上限+X（X为你"..
   "展示牌的类别数）。",
 
   ["#wzzz_v__ex__qingjian-invoke"] = "清俭：你可以将任意张牌交给一名其他角色，并令 %dest 手牌上限增加",
@@ -16,7 +16,7 @@ local qingjian = fk.CreateSkill{
 qingjian:addEffect(fk.AfterCardsMove, {
   anim_type = "support",
   can_trigger = function(self, event, target, player, data)
-    if player:hasSkill(qingjian.name) and player:usedSkillTimes(qingjian.name, Player.HistoryTurn) == 0 and
+    if player:hasSkill(qingjian.name) and player:usedSkillTimes(qingjian.name, Player.HistoryRound) == 0 and
       not player:isNude() and player.phase ~= Player.Draw then
       for _, move in ipairs(data) do
         if move.to == player and move.toArea == Player.Hand then

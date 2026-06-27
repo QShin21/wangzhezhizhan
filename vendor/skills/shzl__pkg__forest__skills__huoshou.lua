@@ -5,7 +5,7 @@ local huoshou = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__huoshou"] = "祸首",
-  [":wzzz_v__huoshou"] = "锁定技，【南蛮入侵】对你无效；当其他角色使用【南蛮入侵】指定目标后，你代替其成为此牌造成的伤害的来源。",
+  [":wzzz_v__huoshou"] = "锁定技，【南蛮入侵】对你无效；其他角色使用【南蛮入侵】指定目标后，你代替其成为此牌伤害来源。出牌阶段结束时，若你有手牌，你须弃置所有手牌并视为使用一张【南蛮入侵】。",
 
   ["$wzzz_v__huoshou1"] = "背黑锅我来，送死？你去！",
   ["$wzzz_v__huoshou2"] = "通通算我的！",
@@ -47,6 +47,21 @@ huoshou:addEffect(fk.PreDamage, {
       local use = e.data
       local from = room:getPlayerById(use.extra_data.huoshou)
       data.from = not from.dead and from or nil
+    end
+  end,
+})
+
+huoshou:addEffect(fk.EventPhaseEnd, {
+  anim_type = "offensive",
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(huoshou.name) and player.phase == Player.Play and
+      not player:isKongcheng()
+  end,
+  on_use = function(self, event, target, player, data)
+    local room = player.room
+    room:throwCard(player:getCardIds("h"), huoshou.name, player, player)
+    if not player.dead then
+      room:useVirtualCard("savage_assault", nil, player, nil, huoshou.name, true)
     end
   end,
 })

@@ -4,13 +4,12 @@ local zhenjun = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__zhenjun"] = "镇军",
-  [":wzzz_v__ol_ex__zhenjun"] = "准备阶段，你可以弃置一名角色X张牌（X为其手牌数减体力值且至少为1），然后选择一项："..
-  "1.你弃置与其中非装备牌数等量的牌；2.结束阶段，其摸与其中非装备牌数等量的牌。",
+  [":wzzz_v__ol_ex__zhenjun"] = "准备阶段和结束阶段，你可以弃置一名角色的X张牌（X为其手牌数减体力值且至少为1），然后选择一项："..
+  "1.你弃置等同于其中非装备牌数的牌；2.该角色摸等同于其中非装备牌数的牌。",
 
   ["#wzzz_v__ol_ex__zhenjun-choose"] = "镇军：选择一名角色，弃置其手牌数减体力值张牌（至少一张）",
   ["#wzzz_v__ol_ex__zhenjun-card"] = "镇军：弃置 %dest %arg张牌，然后选择弃牌或令其摸牌",
-  ["#wzzz_v__ol_ex__zhenjun-discard"] = "镇军：弃置%arg张牌，或点“取消” %dest 于结束阶段摸%arg张牌",
-  ["@wzzz_v__ol_ex__zhenjun-turn"] = "镇军",
+  ["#wzzz_v__ol_ex__zhenjun-discard"] = "镇军：弃置%arg张牌，或点“取消”令 %dest 摸%arg张牌",
 
   ["$wzzz_v__ol_ex__zhenjun1"] = "奉令无犯，当敌制决，靡有遗失！",
   ["$wzzz_v__ol_ex__zhenjun2"] = "军令在此，围而后降者皆不赦。",
@@ -19,7 +18,8 @@ Fk:loadTranslationTable{
 zhenjun:addEffect(fk.EventPhaseStart, {
   anim_type = "control",
   can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(zhenjun.name) and player.phase == Player.Start and
+    return target == player and player:hasSkill(zhenjun.name) and
+      (player.phase == Player.Start or player.phase == Player.Finish) and
       table.find(player.room.alive_players, function(p)
         return not p:isNude()
       end)
@@ -87,22 +87,8 @@ zhenjun:addEffect(fk.EventPhaseStart, {
         skill_name = zhenjun.name,
         prompt = "#wzzz_v__ol_ex__zhenjun-discard::"..to.id..":"..num,
       }) == 0 then
-      room:addPlayerMark(to, "@wzzz_v__ol_ex__zhenjun-turn", num)
+      to:drawCards(num, zhenjun.name)
     end
-  end,
-})
-
-zhenjun:addEffect(fk.EventPhaseStart, {
-  is_delay_effect = true,
-  mute = true,
-  can_trigger = function(self, event, target, player, data)
-    return target.phase == Player.Finish and not player.dead and player:getMark("@wzzz_v__ol_ex__zhenjun-turn") > 0
-  end,
-  on_use = function(self, event, target, player, data)
-    local room = player.room
-    local x = player:getMark("@wzzz_v__ol_ex__zhenjun-turn")
-    room:setPlayerMark(player, "@wzzz_v__ol_ex__zhenjun-turn", 0)
-    player:drawCards(x, zhenjun.name)
   end,
 })
 

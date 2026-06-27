@@ -5,7 +5,7 @@ local fencheng = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__fencheng"] = "焚城",
-  [":wzzz_v__fencheng"] = "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.弃置至少X+1张牌（X为该角色的上家以此法弃置牌的数量）；"..
+  [":wzzz_v__fencheng"] = "限定技，出牌阶段，你可以令所有其他角色依次选择一项：1.弃置至少X+1张牌（X为发动此技能时该角色的上家以此法弃置的牌数）；"..
   "2.受到你造成的2点火焰伤害。",
 
   ["#wzzz_v__fencheng"] = "焚城：令所有其他角色选择弃牌或你对其造成2点火焰伤害！",

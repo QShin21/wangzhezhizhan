@@ -693,7 +693,7 @@
       },
       {
         "name": "八阵",
-        "id": "wzzz_v__bazhen",
+        "id": "wzzz_v__pangtong__bazhen",
         "derived": true,
         "description": "锁定技，若你的装备区里没有防具牌，你视为装备着【八卦阵】。你的【八卦阵】判定失效时，你摸一张牌。"
       },
@@ -4947,7 +4947,7 @@
     "skills": [
       {
         "name": "残蚀",
-        "id": "wzzz_v__ol__canshi",
+        "id": "wzzz_lord__ol__canshi",
         "derived": false,
         "description": "摸牌阶段，你可以改为摸X张牌（X为已受伤的角色数且至少为4）。若如此做，当你本回合内使用【杀】或普通锦囊牌时，你弃置一张牌。"
       },
@@ -4985,7 +4985,7 @@
       },
       {
         "name": "武烈",
-        "id": "wzzz_v__wulie",
+        "id": "wzzz_lord__wulie",
         "derived": false,
         "description": "限定技，结束阶段，你可以选择至多等同你体力值的其他角色并失去等量体力，然后防止这些角色下一次受到的伤害。若你因此失去体力后体力值不大于3，则你可以令场上一名角色获得“平讨”。"
       },

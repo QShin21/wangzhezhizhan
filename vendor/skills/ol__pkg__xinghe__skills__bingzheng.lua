@@ -38,7 +38,7 @@ bingzheng:addEffect(fk.EventPhaseEnd, {
     local room = player.room
     local to = event:getCostData(self).tos[1]
     local choice = event:getCostData(self).choice
-    if choice == "draw1" then
+    if choice == nil or choice == "wzzz_v__bingzheng_draw" then
       to:drawCards(1, bingzheng.name)
     else
       room:askToDiscard(to, {

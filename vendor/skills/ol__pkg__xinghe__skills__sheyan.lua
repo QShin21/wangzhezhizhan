@@ -4,9 +4,9 @@ local sheyan = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__sheyan"] = "舍宴",
-  [":wzzz_v__sheyan"] = "当你成为一张普通锦囊牌的目标时，你可以为此牌增加一个目标或减少一个目标（目标数至少为一）。",
+  [":wzzz_v__sheyan"] = "当你成为普通锦囊牌的目标时，你可以令此牌增加一个无距离限制的目标，若此牌目标数大于1，你可以改为令此牌对其中一个目标无效。",
 
-  ["#wzzz_v__sheyan-choose"] = "舍宴：你可以为%arg增加或减少一个目标",
+  ["#wzzz_v__sheyan-choose"] = "舍宴：你可以为%arg增加一个目标，或令其对一个目标无效",
 
   ["$wzzz_v__sheyan1"] = "公事为重，宴席不去也罢。",
   ["$wzzz_v__sheyan2"] = "还是改日吧。",

@@ -1,15 +1,16 @@
 
 local jianmie = fk.CreateSkill{
   name = "wzzz_v__jianmie",
+  tags = { Skill.Limited },
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__jianmie"] = "翦灭",
-  [":wzzz_v__jianmie"] = "出牌阶段限一次，你可以选择一名其他角色，你与其同时选择一种颜色，弃置所有各自选择颜色的手牌，然后弃置牌数较多的角色视为对"..
-  "另一名角色使用【决斗】。",
+  [":wzzz_v__jianmie"] = "限定技，出牌阶段，你可以令一名其他角色选择一种颜色，然后你选择一种颜色，你与其展示所有手牌并弃置各自所选颜色的全部手牌（没有该颜色则不弃），然后弃置牌较多的角色视为对另一名角色使用一张【决斗】。",
 
-  ["#wzzz_v__jianmie"] = "翦灭：与一名角色同时选择一种颜色的手牌弃置，弃牌数多的角色视为对对方使用【决斗】",
+  ["#wzzz_v__jianmie"] = "翦灭：令一名其他角色选择一种颜色，然后你选择一种颜色，双方展示手牌并弃置对应颜色手牌",
   ["#wzzz_v__jianmie-choice"] = "翦灭：选择一种颜色的手牌弃置，弃牌多的角色视为对对方使用【决斗】！",
+  ["#wzzz_v__jianmie-target-choice"] = "翦灭：请先选择一种颜色的手牌弃置",
 
   ["$wzzz_v__jianmie1"] = "莫说是你，天潢贵胄亦可杀得！",
   ["$wzzz_v__jianmie2"] = "你我不到黄泉，不复相见！",
@@ -21,7 +22,7 @@ jianmie:addEffect("active", {
   card_num = 0,
   target_num = 1,
   can_use = function(self, player)
-    return player:usedSkillTimes(jianmie.name, Player.HistoryPhase) == 0
+    return player:usedSkillTimes(jianmie.name, Player.HistoryGame) == 0
   end,
   card_filter = Util.FalseFunc,
   target_filter = function (self, player, to_select, selected, selected_cards)
@@ -30,18 +31,26 @@ jianmie:addEffect("active", {
   on_use = function(self, room, effect)
     local player = effect.from
     local target = effect.tos[1]
-    local result = room:askToJointChoice(player, {
-      players = {player, target},
+    local target_choice = room:askToChoice(target, {
+      choices = {"red", "black"},
+      skill_name = jianmie.name,
+      prompt = "#wzzz_v__jianmie-target-choice",
+    })
+    local player_choice = room:askToChoice(player, {
       choices = {"red", "black"},
       skill_name = jianmie.name,
       prompt = "#wzzz_v__jianmie-choice",
     })
+    player:showCards(player:getCardIds("h"))
+    if not target.dead then
+      target:showCards(target:getCardIds("h"))
+    end
     local cards1 = table.filter(player:getCardIds("h"), function (id)
-      return Fk:getCardById(id):getColorString() == result[player] and
+      return Fk:getCardById(id):getColorString() == player_choice and
         not player:prohibitDiscard(id)
     end)
     local cards2 = table.filter(target:getCardIds("h"), function (id)
-      return Fk:getCardById(id):getColorString() == result[target] and
+      return Fk:getCardById(id):getColorString() == target_choice and
         not target:prohibitDiscard(id)
     end)
     local moves = {}
@@ -65,7 +74,9 @@ jianmie:addEffect("active", {
         skillName = jianmie.name,
       })
     end
-    room:moveCards(table.unpack(moves))
+    if #moves > 0 then
+      room:moveCards(table.unpack(moves))
+    end
     local src, to = player, player
     if #cards1 > #cards2 then
       src, to = player, target

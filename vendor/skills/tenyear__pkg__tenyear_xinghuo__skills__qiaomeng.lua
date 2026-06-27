@@ -4,9 +4,9 @@ local qiaomeng = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__qiaomeng"] = "趫猛",
-  [":wzzz_v__ty_ex__qiaomeng"] = "当你使用黑色牌指定目标后，你可以弃置其中一名其他角色的一张牌，若此牌为：锦囊牌，此牌不能被响应；装备牌，改为你获得之。",
+  [":wzzz_v__ty_ex__qiaomeng"] = "当你使用黑色牌指定其他角色为目标后，你可以弃置其中一名目标角色一张牌，若弃置的牌为：武器牌，此牌不能被响应；坐骑牌，你获得之。",
 
-  ["#wzzz_v__ty_ex__qiaomeng-choose"] = "趫猛：弃置一名角色的一张牌，若为锦囊则不可响应，若为装备你获得之",
+  ["#wzzz_v__ty_ex__qiaomeng-choose"] = "趫猛：弃置一名目标角色的一张牌，若为武器则此牌不可响应，若为坐骑则你获得之",
 
   ["$wzzz_v__ty_ex__qiaomeng1"] = "猛士骁锐，可慑百蛮失蹄！",
   ["$wzzz_v__ty_ex__qiaomeng2"] = "锐士志猛，可凭白手夺马！",
@@ -47,11 +47,11 @@ qiaomeng:addEffect(fk.TargetSpecified, {
       skill_name = qiaomeng.name,
     })
     local card = Fk:getCardById(id, true)
-    if card.type == Card.TypeEquip then
+    if card.sub_type == Card.SubtypeOffensiveRide or card.sub_type == Card.SubtypeDefensiveRide then
       room:obtainCard(player, id, false, fk.ReasonPrey, player, qiaomeng.name)
     else
       room:throwCard(id, qiaomeng.name, to, player)
-      if card.type == Card.TypeTrick then
+      if card.sub_type == Card.SubtypeWeapon then
         data.use.disresponsiveList = table.simpleClone(room.players)
       end
     end

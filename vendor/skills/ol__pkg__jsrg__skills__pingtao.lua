@@ -1,85 +1,25 @@
 local pingtao = fk.CreateSkill {
   name = "wzzz_v__ol__pingtao",
+  tags = { Skill.Compulsory },
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__pingtao"] = "平讨",
-  [":wzzz_v__ol__pingtao"] = "出牌阶段限一次，你可以令一名其他角色选择一项：1.交给你一张牌，然后你本回合使用的下一张【杀】可以多指定一个目标；"..
-  "2.你视为对其使用一张【杀】（有次数限制）。",
-
-  ["#wzzz_v__ol__pingtao"] = "平讨：令一名角色选择交给你一张牌或视为你对其使用【杀】",
-  ["#wzzz_v__ol__pingtao-card"] = "平讨：交给 %src 一张牌，或点“取消”其视为对你使用【杀】",
-  ["@@wzzz_v__ol__pingtao-turn"] = "平讨",
-  ["#wzzz_v__ol__pingtao-choose"] = "平讨：你可以为%arg额外指定至多%arg2个目标",
+  [":wzzz_v__ol__pingtao"] = "锁定技，你使用【杀】对目标角色造成伤害时，若该角色没有手牌或拥有“破虏”，则此伤害+1。",
 
   ["$wzzz_v__ol__pingtao1"] = "二贼作乱日久，该以时进讨！",
   ["$wzzz_v__ol__pingtao2"] = "王师天兵已至，贼徒还不速降！",
 }
 
-pingtao:addEffect("active", {
+pingtao:addEffect(fk.DamageCaused, {
   anim_type = "offensive",
-  prompt = "#wzzz_v__ol__pingtao",
-  card_num = 0,
-  target_num = 1,
-  can_use = function(self, player)
-    return player:usedSkillTimes(pingtao.name, Player.HistoryPhase) == 0
-  end,
-  card_filter = Util.FalseFunc,
-  target_filter = function(self, player, to_select, selected, selected_cards)
-    if #selected == 0 and to_select ~= player then
-      if player:canUseTo(Fk:cloneCard("slash"), to_select) then
-        return true
-      else
-        return not to_select:isNude()
-      end
-    end
-  end,
-  on_use = function(self, room, effect)
-    local player = effect.from
-    local target = effect.tos[1]
-    local card = room:askToCards(target, {
-      min_num = 1,
-      max_num = 1,
-      skill_name = pingtao.name,
-      include_equip = true,
-      cancelable = player:canUseTo(Fk:cloneCard("slash"), target),
-      prompt = "#wzzz_v__ol__pingtao-card:"..player.id,
-    })
-    if #card > 0 then
-      room:addPlayerMark(player, "@@wzzz_v__ol__pingtao-turn", 1)
-      room:moveCardTo(card, Card.PlayerHand, player, fk.ReasonGive, pingtao.name, nil, false, target)
-    else
-      room:useVirtualCard("slash", nil, player, target, pingtao.name, false)
-    end
-  end,
-})
-
-
-pingtao:addEffect(fk.AfterCardTargetDeclared, {
-  anim_type = "offensive",
-  is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
-    return target == player and data.card.trueName == "slash" and player:getMark("@@wzzz_v__ol__pingtao-turn") > 0
+    return target == player and player:hasSkill(pingtao.name) and data.card and
+      data.card.trueName == "slash" and data.to and
+      (data.to:isKongcheng() or data.to:hasSkill("wzzz_v__os_ex__polu", true))
   end,
   on_use = function(self, event, target, player, data)
-    local room = player.room
-    local n = player:getMark("@@wzzz_v__ol__pingtao-turn")
-    room:setPlayerMark(player, "@@wzzz_v__ol__pingtao-turn", 0)
-    if #data:getExtraTargets({bypass_distances = false}) > 0 then
-      local tos = room:askToChoosePlayers(player, {
-        min_num = 1,
-        max_num = n,
-        targets = data:getExtraTargets({bypass_distances = true}),
-        skill_name = pingtao.name,
-        prompt = "#wzzz_v__ol__pingtao-choose:::"..data.card:toLogString()..":"..n,
-        cancelable = true,
-      })
-      if #tos > 0 then
-        for _, p in ipairs(tos) do
-          data:addTarget(p)
-        end
-      end
-    end
+    data:changeDamage(1)
   end,
 })
 

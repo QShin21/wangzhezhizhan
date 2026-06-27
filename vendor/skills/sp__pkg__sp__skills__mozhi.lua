@@ -4,18 +4,22 @@ local mozhi = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__mozhi"] = "默识",
-  [":wzzz_v__mozhi"] = "结束阶段，你可以将一张手牌当你本回合出牌阶段使用过的第一张基本牌或普通锦囊牌使用，然后你可以将一张手牌当你本回合"..
+  [":wzzz_v__mozhi"] = "结束阶段，你可以将一张牌当你本回合出牌阶段使用过的第一张基本牌或普通锦囊牌使用，然后你可以将一张牌当你本回合"..
   "出牌阶段使用过的第二张基本牌或普通锦囊牌使用。",
 
-  ["#wzzz_v__mozhi-invoke"] = "默识：你可以将一张手牌当【%arg】使用",
+  ["#wzzz_v__mozhi-invoke"] = "默识：你可以将一张牌当【%arg】使用",
 
   ["$wzzz_v__mozhi1"] = "博闻强识，不辱才女之名。",
   ["$wzzz_v__mozhi2"] = "今日默书，方恨千卷诗书未能全记。",
 }
 
+local function availableCards(player)
+  return player:getCardIds("he")
+end
+
 mozhi:addEffect(fk.EventPhaseStart, {
   can_trigger = function(self, event, target, player, data)
-    if target == player and player:hasSkill(mozhi.name) and player.phase == Player.Finish and #player:getHandlyIds() > 0 then
+    if target == player and player:hasSkill(mozhi.name) and player.phase == Player.Finish and #availableCards(player) > 0 then
       local room = player.room
       local names = {}
       local phase_ids = {}
@@ -61,7 +65,7 @@ mozhi:addEffect(fk.EventPhaseStart, {
       },
       card_filter = {
         n = 1,
-        cards = player:getHandlyIds(),
+        cards = availableCards(player),
       },
       skip = true,
     })
@@ -74,7 +78,7 @@ mozhi:addEffect(fk.EventPhaseStart, {
     local room = player.room
     local names = event:getCostData(self).choice
     room:useCard(event:getCostData(self).extra_data)
-    if player.dead or #player:getHandlyIds() == 0 or #names < 2 then return end
+    if player.dead or #availableCards(player) == 0 or #names < 2 then return end
     room:askToUseVirtualCard(player, {
       name = names[2],
       skill_name = mozhi.name,
@@ -86,7 +90,7 @@ mozhi:addEffect(fk.EventPhaseStart, {
       },
       card_filter = {
         n = 1,
-        cards = player:getHandlyIds(),
+        cards = availableCards(player),
       },
     })
   end,

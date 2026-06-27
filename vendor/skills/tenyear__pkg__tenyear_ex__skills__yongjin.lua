@@ -5,7 +5,7 @@ local yongjin = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__yongjin"] = "勇进",
-  [":wzzz_v__ty_ex__yongjin"] = "限定技，出牌阶段，你可以依次移动场上至多三张装备牌。",
+  [":wzzz_v__ty_ex__yongjin"] = "限定技，出牌阶段，你可以依次移动场上至多三张各不同的装备牌。",
 
   ["#wzzz_v__ty_ex__yongjin"] = "勇进：依次移动三张装备！",
   ["#wzzz_v__ty_ex__yongjin-choose"] = "勇进：你可以移动场上的一张装备牌",

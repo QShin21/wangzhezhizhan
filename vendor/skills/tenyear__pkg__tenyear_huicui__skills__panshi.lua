@@ -18,12 +18,12 @@ wzzz_v__panshi:addEffect(fk.EventPhaseStart, {
     return target == player and player.phase == Player.Start and
       player:hasSkill(wzzz_v__panshi.name) and not player:isKongcheng() and
       table.find(player.room.alive_players, function(p)
-        return p ~= player and p:hasSkill("cixiao", true)
+        return p ~= player and p:hasSkill("wzzz_v__cixiao", true)
       end)
   end,
   on_cost = function(self, event, target, player, data)
     local fathers = table.filter(player.room.alive_players, function(p)
-      return p ~= player and p:hasSkill("cixiao", true)
+      return p ~= player and p:hasSkill("wzzz_v__cixiao", true)
     end)
     event:setCostData(self, { tos = fathers })
     return true
@@ -65,7 +65,7 @@ wzzz_v__panshi:addEffect(fk.DamageCaused, {
   anim_type = "offensive",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(wzzz_v__panshi.name) and player.phase == Player.Play and
-      data.card and data.card.trueName =="slash" and data.to:hasSkill("cixiao", true) and
+      data.card and data.card.trueName == "slash" and data.to:hasSkill("wzzz_v__cixiao", true) and
       player.room.logic:damageByCardEffect()
   end,
   on_use = function(self, event, target, player, data)
@@ -77,10 +77,23 @@ wzzz_v__panshi:addEffect(fk.Damage, {
   anim_type = "negative",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(wzzz_v__panshi.name) and player.phase == Player.Play and
-      data.card and data.card.trueName =="slash" and data.to:hasSkill("cixiao", true) and
+      data.card and data.card.trueName == "slash" and data.to:hasSkill("wzzz_v__cixiao", true) and
       player.room.logic:damageByCardEffect()
   end,
   on_use = function(self, event, target, player, data)
+    player.room:setPlayerMark(player, "wzzz_v__panshi_end_play-turn", 1)
+  end,
+})
+
+wzzz_v__panshi:addEffect(fk.CardUseFinished, {
+  mute = true,
+  is_delay_effect = true,
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:getMark("wzzz_v__panshi_end_play-turn") > 0 and
+      data.card and data.card.trueName == "slash" and player.phase == Player.Play
+  end,
+  on_use = function(self, event, target, player, data)
+    player.room:setPlayerMark(player, "wzzz_v__panshi_end_play-turn", 0)
     player:endPlayPhase()
   end,
 })

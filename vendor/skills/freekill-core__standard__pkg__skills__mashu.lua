@@ -5,7 +5,7 @@ local mashu = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__mashu"] = "马术",
-  [":wzzz_v__mashu"] = "锁定技，你计算与其他角色的距离-1。当你使用坐骑牌或失去装备区里的坐骑牌时，你摸一张牌。",
+  [":wzzz_v__mashu"] = "锁定技，你计算与其他角色的距离-1；当你使用或失去装备区里的坐骑牌时，你摸一张牌。",
 }
 
 local function isRide(card)

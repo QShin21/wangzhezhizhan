@@ -4,7 +4,7 @@ local botu = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__botu"] = "博图",
-  [":wzzz_v__botu"] = "每轮限X次（X为存活角色数且最多为3），回合结束时，若本回合内置入弃牌堆的牌包含四种花色，你可以获得一个额外回合。",
+  [":wzzz_v__botu"] = "每轮限两次，你的回合结束后，若本回合置入弃牌堆的牌包含四种花色，你可以执行一个额外的回合。",
 
   ["@wzzz_v__botu-turn"] = "博图",
 
@@ -17,7 +17,7 @@ botu:addEffect(fk.TurnEnd, {
   can_trigger = function(self, event, target, player, data)
     if target == player and player:hasSkill(botu.name) and
       not (WzzzHuashen and WzzzHuashen.isBlockedTiming(player, botu.name, "TurnEnd")) and
-      player:usedSkillTimes(botu.name, Player.HistoryRound) < math.min(3, #player.room.alive_players) then
+      player:usedSkillTimes(botu.name, Player.HistoryRound) < 2 then
       local suits = {}
       player.room.logic:getEventsOfScope(GameEvent.MoveCards, 1, function (e)
         for _, move in ipairs(e.data) do

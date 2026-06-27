@@ -4,8 +4,7 @@ local duwu = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__duwu"] = "黩武",
-  [":wzzz_v__duwu"] = "出牌阶段，你可以弃置X张牌，对你攻击范围内的一名其他角色造成1点伤害（X为该角色的体力值）。"..
-  "若其因此进入濒死状态，则濒死状态结算后你失去1点体力，且此技能本回合失效。",
+  [":wzzz_v__duwu"] = "出牌阶段，你可以选择你攻击范围内的一名角色并弃置X张牌（X为其体力值），然后对其造成1点伤害，若其因此伤害进入濒死状态且未死亡，你失去1点体力且本回合“黩武”失效。",
 
   ["#wzzz_v__duwu"] = "黩武：弃置一名角色体力值张数的牌，对其造成1点伤害",
 
@@ -22,8 +21,8 @@ duwu:addEffect("active", {
     return not player:prohibitDiscard(to_select)
   end,
   target_filter = function(self, player, to_select, selected, selected_cards)
-    return #selected == 0 and to_select ~= player and to_select.hp > 0 and
-      to_select.hp == #selected_cards and player:inMyAttackRange(to_select, nil, selected_cards)
+    return #selected == 0 and to_select.hp > 0 and
+      to_select.hp == #selected_cards and (to_select == player or player:inMyAttackRange(to_select, nil, selected_cards))
   end,
   on_use = function(self, room, effect)
     local player = effect.from
@@ -44,7 +43,8 @@ duwu:addEffect(fk.AfterDying, {
   anim_type = "negative",
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
-    return data.extra_data and data.extra_data.duwu and data.extra_data.duwu == player and not player.dead
+    return data.extra_data and data.extra_data.duwu and data.extra_data.duwu == player and not player.dead and
+      not target.dead
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room

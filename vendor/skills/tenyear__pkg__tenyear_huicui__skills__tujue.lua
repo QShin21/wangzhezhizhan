@@ -5,9 +5,9 @@ local tujue = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__tujue"] = "途绝",
-  [":wzzz_v__tujue"] = "限定技，当你处于濒死状态时，你可以将所有牌交给一名其他角色，然后你回复等量的体力并摸等量的牌。",
+  [":wzzz_v__tujue"] = "限定技，当你进入濒死状态时，你可以将所有牌交给一名其他角色。",
 
-  ["#wzzz_v__tujue-choose"] = "途绝：你可以将所有牌交给一名角色，回复等量体力并摸等量牌",
+  ["#wzzz_v__tujue-choose"] = "途绝：你可以将所有牌交给一名其他角色",
 
   ["$wzzz_v__tujue1"] = "归蜀无路，孤臣泪尽江北。",
   ["$wzzz_v__tujue2"] = "受吾主殊遇，安能降吴！",
@@ -39,15 +39,6 @@ tujue:addEffect(fk.AskForPeaches, {
     local room = player.room
     local cards = player:getCardIds("he")
     room:moveCardTo(cards, Card.PlayerHand, event:getCostData(self).tos[1], fk.ReasonGive, tujue.name, nil, false, player)
-    if player.dead then return end
-    room:recover{
-      who = player,
-      num = #cards,
-      recoverBy = player,
-      skillName = tujue.name
-    }
-    if player.dead then return end
-    player:drawCards(#cards, tujue.name)
   end,
 })
 

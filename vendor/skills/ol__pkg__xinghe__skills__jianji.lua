@@ -4,7 +4,7 @@ local jianji = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__jianji"] = "谏计",
-  [":wzzz_v__jianji"] = "出牌阶段限一次，你可以令一名其他角色摸一张牌，然后其可以使用该牌。",
+  [":wzzz_v__jianji"] = "出牌阶段限一次，你可以令一名其他角色摸一张牌并展示之，然后其可以使用此牌（可转化使用）。",
 
   ["#wzzz_v__jianji"] = "谏计：令一名其他角色摸一张牌，其可以使用之",
   ["#wzzz_v__jianji-use"] = "谏计：你可以使用这张牌",
@@ -29,6 +29,7 @@ jianji:addEffect("active", {
     local target = effect.tos[1]
     local id = target:drawCards(1, jianji.name)[1]
     if not target.dead and table.contains(target:getCardIds("h"), id) then
+      target:showCards(id)
       room:askToUseRealCard(target, {
         pattern = {id},
         skill_name = jianji.name,
@@ -36,6 +37,7 @@ jianji:addEffect("active", {
         extra_data = {
           bypass_times = true,
           extraUse = true,
+          expand_pile = {id},
         }
       })
     end

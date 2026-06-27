@@ -4,8 +4,7 @@ local mouzhu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__mouzhu"] = "谋诛",
-  [":wzzz_v__ty__mouzhu"] = "出牌阶段限一次，你可以选择任意名与你距离为1或体力值与你相同的其他角色，依次执行：将一张手牌交给你，然后若其手牌数小于你，"..
-  "其视为对你使用一张【杀】或【决斗】。",
+  [":wzzz_v__ty__mouzhu"] = "出牌阶段限一次，你可以选择任意名与你距离为1或体力值与你相同的其他角色，这些角色依次执行以下流程：将一张手牌交给你，若其手牌少于你，其视为对你使用【杀】或【决斗】。",
 
   ["#wzzz_v__ty__mouzhu"] = "谋诛：令任意名角色交给你一张手牌，若其手牌数小于你，视为对你使用【杀】或【决斗】",
   ["#wzzz_v__ty__mouzhu-give"] = "谋诛：交给 %dest 一张手牌，然后若手牌数小于其，视为对其使用【杀】或【决斗】",
@@ -25,7 +24,7 @@ mouzhu:addEffect("active", {
   end,
   card_filter = Util.FalseFunc,
   target_filter = function(self, player, to_select, selected)
-    return to_select ~= player and (to_select:distanceTo(player) == 1 or to_select.hp == player.hp) and not to_select:isKongcheng()
+    return to_select ~= player and (player:distanceTo(to_select) == 1 or to_select.hp == player.hp) and not to_select:isKongcheng()
   end,
   on_use = function(self, room, effect)
     local player = effect.from

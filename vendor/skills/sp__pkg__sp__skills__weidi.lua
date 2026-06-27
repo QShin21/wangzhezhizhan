@@ -5,7 +5,7 @@ local weidi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__weidi"] = "伪帝",
-  [":wzzz_v__weidi"] = "锁定技，游戏开始时，你选择一项：1.获得主公的一个主公技并随机获得一张剩余四象标记；2.随机获得两张剩余四象标记。",
+  [":wzzz_v__weidi"] = "锁定技，游戏开始时，你选择其中一项，1.你选择获得主公的一个主公技并抽取一张剩余的四象标记；2.你抽取两张剩余的四象标记。",
   ["wzzz_v__weidi_skill"] = "获得主公技并抽取一张四象",
   ["wzzz_v__weidi_sixiang"] = "抽取两张四象",
   ["#wzzz_v__weidi-skill"] = "伪帝：选择获得主公的一个主公技",

@@ -10,7 +10,7 @@ Fk:loadTranslationTable{
 
 xiemu:addEffect("atkrange", {
   correct_func = function (self, from, to)
-    return from:usedSkillTimes("wzzz_v__sxfy__xiemu&", Player.HistoryTurn)
+    return from:getMark("@@wzzz_v__sxfy__xiemu-turn")
   end,
 })
 

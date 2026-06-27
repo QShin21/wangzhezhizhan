@@ -825,7 +825,8 @@ local mode = fk.CreateGameMode{
         return
       end
       killer:drawCards(3, "kill")
-    elseif victim.role == "loyalist" and killer.role == "lord" then
+    elseif victim.role == "loyalist" and killer.role == "lord" and
+      not killer:hasSkill("wzzz_v__mou__xueyi", true) then
       killer:throwAllCards("he")
     end
   end,

@@ -5,7 +5,8 @@ local niepan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__niepan"] = "涅槃",
-  [":wzzz_v__niepan"] = "限定技，当你处于濒死状态时，你可以弃置区域里的所有牌，复原你的武将牌，然后摸三张牌并将体力回复至3点。",
+  [":wzzz_v__niepan"] = "限定技，当你处于濒死状态时，你可以弃置区域里的所有牌，然后复原你的武将牌，摸三张牌，将体力回复至3点，然后你获得“八阵”“火计”“看破”中的一个。",
+  ["#wzzz_v__niepan-choice"] = "涅槃：选择获得一个技能",
 
   ["$wzzz_v__niepan1"] = "凤雏岂能消亡？",
   ["$wzzz_v__niepan2"] = "浴火重生！",
@@ -31,6 +32,13 @@ niepan:addEffect(fk.AskForPeaches, {
       recoverBy = player,
       skillName = niepan.name,
     }
+    if player.dead then return end
+    local choice = room:askToChoice(player, {
+      choices = {"wzzz_v__pangtong__bazhen", "wzzz_v__pangtong__huoji", "wzzz_v__pangtong__kanpo"},
+      skill_name = niepan.name,
+      prompt = "#wzzz_v__niepan-choice",
+    })
+    room:handleAddLoseSkills(player, choice, nil, false, true)
   end,
 })
 

@@ -4,7 +4,7 @@ local wzzz_v__chouce = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__chouce"] = "筹策",
-  [":wzzz_v__chouce"] = "当你受到1点伤害后，你可以进行判定，若结果为：黑色，你弃置一名角色区域里的一张牌；红色，你令一名角色摸一张牌（先辅的角色摸两张）。",
+  [":wzzz_v__chouce"] = "当你受到1点伤害后，你可以进行一次判定，若结果为：黑色，你弃置一名角色区域里的一张牌；红色，你令一名角色摸一张牌（若其为“先辅”角色且你因“先辅”受到伤害，则改为摸两张牌）。",
 
   ["#wzzz_v__chouce-draw"] = "筹策: 令一名角色摸一张牌（若为先辅角色则摸两张）",
   ["#wzzz_v__chouce-discard"] = "筹策: 弃置一名角色区域里的一张牌",
@@ -14,11 +14,11 @@ Fk:loadTranslationTable{
 }
 
 local updataXianfu = function (room, player, target)
-  local mark = player:getTableMark("xianfu")
+  local mark = player:getTableMark("wzzz_v__xianfu")
   table.insertIfNeed(mark[2], target.id)
-  room:setPlayerMark(player, "xianfu", mark)
+  room:setPlayerMark(player, "wzzz_v__xianfu", mark)
   local names = table.map(mark[2], function(pid) return Fk:translate(room:getPlayerById(pid).general) end)
-  room:setPlayerMark(player, "@xianfu", table.concat(names, ","))
+  room:setPlayerMark(player, "@wzzz_v__xianfu", table.concat(names, ","))
 end
 
 wzzz_v__chouce:addEffect(fk.Damaged, {
@@ -52,8 +52,8 @@ wzzz_v__chouce:addEffect(fk.Damaged, {
         cancelable = false,
       })[1]
       local num = 1
-      local mark = player:getTableMark("xianfu")
-      if #mark > 0 and table.contains(mark[1], to.id) then
+      local mark = player:getTableMark("wzzz_v__xianfu")
+      if data.skillName == "wzzz_v__xianfu" and #mark > 0 and table.contains(mark[1], to.id) then
         num = 2
         updataXianfu (room, player, to)
       end

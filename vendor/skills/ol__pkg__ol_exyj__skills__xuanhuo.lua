@@ -5,11 +5,10 @@ local xuanhuo = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__xuanhuo"] = "眩惑",
-  [":wzzz_v__ol_ex__xuanhuo"] = "摸牌阶段结束时，你可以交给一名其他角色两张牌，令其选择一项：1.对你指定的另一名角色使用一张【杀】；2.你观看其手牌并"..
-  "获得其两张牌。",
+  [":wzzz_v__ol_ex__xuanhuo"] = "摸牌阶段结束时，你可以交给一名其他角色两张牌，令其选择一项：1.对你指定的另一名角色使用一张无距离限制的【杀】；2.你观看其手牌并获得其手牌区或装备区的共计两张牌。",
 
-  ["#wzzz_v__ol_ex__xuanhuo-invoke"] = "眩惑：交给第一名角色两张手牌，令其选择对第二名角色使用【杀】或你获得其两张牌",
-  ["#wzzz_v__ol_ex__xuanhuo-use"] = "眩惑：你需对 %dest 使用一张【杀】，否则 %src 观看你手牌并获得你两张牌",
+  ["#wzzz_v__ol_ex__xuanhuo-invoke"] = "眩惑：交给第一名角色两张牌，令其选择对第二名角色使用【杀】或你获得其两张牌",
+  ["#wzzz_v__ol_ex__xuanhuo-use"] = "眩惑：你需对 %dest 使用一张无距离限制的【杀】，否则 %src 观看你手牌并获得你两张牌",
   ["#wzzz_v__ol_ex__xuanhuo-prey"] = "眩惑：获得 %dest 两张牌",
 
   ["$wzzz_v__ol_ex__xuanhuo1"] = "眩惑之术，非为迷惑，乃为明辨贤愚。",

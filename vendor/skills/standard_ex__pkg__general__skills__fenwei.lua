@@ -1,6 +1,6 @@
 Fk:loadTranslationTable{
   ["wzzz_v__fenwei"] = "奋威",
-  [":wzzz_v__fenwei"] = "限定技，当一张锦囊牌指定多个目标后，你可令此牌对其中任意个目标无效。",
+  [":wzzz_v__fenwei"] = "限定技，当一张锦囊牌指定多个目标后，你可令此牌对其中任意个目标无效。首轮结束时，若“奋威”已发动，你复原此技能。",
 
   ["#wzzz_v__fenwei-choose"] = "奋威：你可以令此%arg对任意个目标无效",
 
@@ -39,6 +39,18 @@ fenwei:addEffect(fk.TargetSpecified, {
   on_use = function(self, event, target, player, data)
     data.use.nullifiedTargets = data.use.nullifiedTargets or {}
     table.insertTableIfNeed(data.use.nullifiedTargets, event:getCostData(self).tos)
+  end,
+})
+
+fenwei:addEffect(fk.RoundEnd, {
+  mute = true,
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(fenwei.name, true) and (player.room:getBanner("RoundCount") or 0) == 1 and
+      player:usedSkillTimes(fenwei.name, Player.HistoryGame) > 0
+  end,
+  on_cost = Util.TrueFunc,
+  on_use = function(self, event, target, player, data)
+    player:setSkillUseHistory(fenwei.name, 0, Player.HistoryGame)
   end,
 })
 

@@ -83,7 +83,7 @@ Fk:loadTranslationTable {
 local g8 = General:new(extension, "wzzz_lord__sunhao", "wu", 5)
 g8.title = "时日曷丧"
 g8.trueName = "孙皓"
-g8:addSkills { "wzzz_v__ol__canshi", "wzzz_v__ty__chouhai", "wzzz_v__guiming" }
+g8:addSkills { "wzzz_lord__ol__canshi", "wzzz_v__ty__chouhai", "wzzz_v__guiming" }
 Fk:loadTranslationTable {
   ["wzzz_lord__sunhao"] = "孙皓",
   ["#" .. "wzzz_lord__sunhao"] = "时日曷丧",
@@ -93,7 +93,7 @@ Fk:loadTranslationTable {
 local g9 = General:new(extension, "wzzz_lord__sunjian", "wu", 4, 5)
 g9.title = "武烈帝"
 g9.trueName = "孙坚"
-g9:addSkills { "wzzz_v__yinghun", "wzzz_v__wulie", "wzzz_v__os_ex__polu" }
+g9:addSkills { "wzzz_v__yinghun", "wzzz_lord__wulie", "wzzz_v__os_ex__polu" }
 g9:addRelatedSkills { "wzzz_v__ol__pingtao" }
 Fk:loadTranslationTable {
   ["wzzz_lord__sunjian"] = "孙坚",

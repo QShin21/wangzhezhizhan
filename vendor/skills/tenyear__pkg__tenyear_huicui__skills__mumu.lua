@@ -4,13 +4,13 @@ local mumu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__mumu"] = "穆穆",
-  [":wzzz_v__ty__mumu"] = "出牌阶段开始时，你可以选择一项：1.弃置一名其他角色装备区里的一张牌，你本回合出牌阶段使用【杀】次数上限+1；"..
-  "2.获得一名其他角色装备区里的一张牌，你本回合出牌阶段使用【杀】次数上限-1。",
+  [":wzzz_v__ty__mumu"] = "出牌阶段开始时，你可以选择一项：1.弃置一名其他角色装备区里的一张牌，然后你本回合可使用【杀】的次数+1；"..
+  "2.获得一名角色装备区里的一张防具牌，然后你本回合可使用【杀】的次数-1。",
 
   ["wzzz_v__ty__mumu1"] = "弃置一名角色一张装备，使用【杀】次数+1",
-  ["wzzz_v__ty__mumu2"] = "获得一名角色一张装备，使用【杀】次数-1",
+  ["wzzz_v__ty__mumu2"] = "获得一名角色一张防具，使用【杀】次数-1",
   ["#wzzz_v__ty__mumu1-choose"] = "穆穆：选择一名角色，弃置其装备区里的一张牌",
-  ["#wzzz_v__ty__mumu2-choose"] = "穆穆：选择一名角色，获得其装备区里的一张牌",
+  ["#wzzz_v__ty__mumu2-choose"] = "穆穆：选择一名角色，获得其装备区里的一张防具牌",
 
   ["$wzzz_v__ty__mumu1"] = "素性贞淑，穆穆春山。",
   ["$wzzz_v__ty__mumu2"] = "雍穆融治，吾之所愿。",
@@ -20,20 +20,44 @@ mumu:addEffect(fk.EventPhaseStart, {
   anim_type = "control",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(mumu.name) and player.phase == Player.Play and
-      table.find(player.room:getOtherPlayers(player, false), function(p)
+      (table.find(player.room:getOtherPlayers(player, false), function(p)
         return #p:getCardIds("e") > 0
-      end)
+      end) or table.find(player.room.alive_players, function(p)
+        return table.find(p:getCardIds("e"), function(id)
+          return Fk:getCardById(id).sub_type == Card.SubtypeArmor
+        end)
+      end))
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room
+    local choices = {}
+    if table.find(room:getOtherPlayers(player, false), function(p)
+      return #p:getCardIds("e") > 0
+    end) then
+      table.insert(choices, "wzzz_v__ty__mumu1")
+    end
+    if table.find(room.alive_players, function(p)
+      return table.find(p:getCardIds("e"), function(id)
+        return Fk:getCardById(id).sub_type == Card.SubtypeArmor
+      end)
+    end) then
+      table.insert(choices, "wzzz_v__ty__mumu2")
+    end
+    table.insert(choices, "Cancel")
     local choice = room:askToChoice(player, {
-      choices = {"wzzz_v__ty__mumu1", "wzzz_v__ty__mumu2", "Cancel"},
+      choices = choices,
       skill_name = mumu.name,
     })
     if choice ~= "Cancel" then
-      local targets = table.filter(room:getOtherPlayers(player, false), function(p)
-        return #p:getCardIds("e") > 0
-      end)
+      local targets = choice == "wzzz_v__ty__mumu1" and
+        table.filter(room:getOtherPlayers(player, false), function(p)
+          return #p:getCardIds("e") > 0
+        end) or
+        table.filter(room.alive_players, function(p)
+          return table.find(p:getCardIds("e"), function(id)
+            return Fk:getCardById(id).sub_type == Card.SubtypeArmor
+          end)
+        end)
       local to = room:askToChoosePlayers(player, {
         targets = targets,
         min_num = 1,
@@ -53,7 +77,14 @@ mumu:addEffect(fk.EventPhaseStart, {
     local choice = event:getCostData(self).choice
     local id = room:askToChooseCard(player, {
       target = to,
-      flag = "e",
+      flag = choice == "wzzz_v__ty__mumu1" and "e" or {
+        card_data = {{
+          "$Equip",
+          table.filter(to:getCardIds("e"), function(id)
+            return Fk:getCardById(id).sub_type == Card.SubtypeArmor
+          end),
+        }},
+      },
       skill_name = mumu.name,
     })
     room:addPlayerMark(player, choice.."-turn", 1)

@@ -5,9 +5,9 @@ local benxi = fk.CreateSkill{
 Fk:loadTranslationTable{
   ["wzzz_v__m_ex__benxi"] = "奔袭",
   ["#wzzz_v__m_ex__benxi_delay"] = "奔袭",
-  [":wzzz_v__m_ex__benxi"] = "出牌阶段开始时，你可以弃置任意张牌，令你本阶段：计算与其他角色的距离-X、"..
+  [":wzzz_v__m_ex__benxi"] = "出牌阶段开始时，你可以弃置至多四张牌，令你本阶段计算与其他角色的距离-X、"..
   "使用的下一张基本牌或普通锦囊牌可以额外指定至多X名你计算与其距离为1的角色为目标（X为你以此法弃置的牌数），"..
-  "然后此牌结算结束后，若此牌造成过伤害，你摸五张牌。",
+  "然后此牌结算结束后，若此牌造成过伤害，你摸X张牌。（X为你以此法弃置的牌数）",
 
   ["#wzzz_v__m_ex__benxi-discard"] = "奔袭：弃置数张牌，此阶段使用第一张牌可额外指定等量目标",
   ["#wzzz_v__m_ex__benxi-choose"] = "奔袭：可为此【%arg】额外指定至多%arg2个距离为1的目标",
@@ -27,7 +27,7 @@ benxi:addEffect(fk.EventPhaseStart, {
   on_cost = function(self, event, target, player, data)
     local cards = player.room:askToDiscard(player, {
       min_num = 1,
-      max_num = 998,
+      max_num = 4,
       include_equip = true,
       skill_name = benxi.name,
       cancelable = true,
@@ -104,7 +104,7 @@ benxi:addEffect(fk.CardUseFinished, {
   on_use = function(self, event, target, player, data)
     player.room:notifySkillInvoked(player, benxi.name, "drawcard")
     player:broadcastSkillInvoke(benxi.name, 3)
-    player:drawCards(5, benxi.name)
+    player:drawCards(player:getMark("@wzzz_v__m_ex__benxi-phase"), benxi.name)
   end,
 })
 

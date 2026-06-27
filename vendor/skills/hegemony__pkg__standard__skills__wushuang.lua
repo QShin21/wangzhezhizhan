@@ -7,9 +7,9 @@ Fk:loadTranslationTable {
   ["wzzz_v__hs__wushuang"] = "无双",
   [":wzzz_v__hs__wushuang"] = "锁定技，当你使用【杀】指定目标后，其使用【闪】抵消此【杀】的方式改为需连续使用两张【闪】；"..
   "当你使用【决斗】指定目标后，或当你成为【决斗】的目标后，你令其打出【杀】响应此【决斗】的方式改为需连续打出两张【杀】；" ..
-  "你使用的非转化【决斗】能额外选择至多两名角色为目标。",
+  "你使用的非虚拟【决斗】可以选择至多三名角色为目标。",
 
-  ["#wzzz_v__hs__wushuang-choose"] = "无双：你可以为%arg增加至多两个目标",
+  ["#wzzz_v__hs__wushuang-choose"] = "无双：你可以为%arg增加至多三个目标",
 
   ["$wzzz_v__hs__wushuang1"] = "谁能挡我！",
   ["$wzzz_v__hs__wushuang2"] = "神挡杀神，佛挡杀佛！",
@@ -42,7 +42,7 @@ wushuang:addEffect(fk.AfterCardTargetDeclared, {
   mute = true,
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(wushuang.name) and
-      data.card.trueName == "duel" and not data.card:isConverted() and
+      data.card.trueName == "duel" and not data.card:isVirtual() and
       #data:getExtraTargets() > 0
   end,
   on_cost = function(self, event, target, player, data)
@@ -50,7 +50,7 @@ wushuang:addEffect(fk.AfterCardTargetDeclared, {
     local tos = room:askToChoosePlayers(player, {
       targets = data:getExtraTargets(),
       min_num = 1,
-      max_num = 2,
+      max_num = 3,
       prompt = "#wzzz_v__hs__wushuang-choose:::" .. data.card:toLogString(),
       skill_name = wushuang.name,
       cancelable = true,

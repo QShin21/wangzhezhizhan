@@ -4,7 +4,8 @@ local hanzhan = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__hanzhan"] = "酣战",
-  [":wzzz_v__hanzhan"] = "当你与其他角色拼点，或其他角色与你拼点时，你可令其改为用随机一张手牌拼点，你拼点后，你可获得其中点数最大的【杀】。",
+  [":wzzz_v__hanzhan"] = "当你拼点前，你可以令对方用你选择的手牌拼点；当你拼点后，你可以获得拼点牌中点数最大的【杀】。",
+  ["#wzzz_v__hanzhan-invoke"] = "酣战：是否选择对方用于拼点的手牌？",
 
   ["$wzzz_v__hanzhan1"] = "伯符，且与我一战！",
   ["$wzzz_v__hanzhan2"] = "与君酣战，快哉快哉！",
@@ -24,17 +25,33 @@ hanzhan:addEffect(fk.StartPindian, {
       return table.contains(data.tos, player)
     end
   end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, {
+      skill_name = hanzhan.name,
+      prompt = "#wzzz_v__hanzhan-invoke",
+    })
+  end,
   on_use = function(self, event, target, player, data)
     local room = player.room
     if player == data.from then
       for _, to in ipairs(data.tos) do
         if not (to.dead or to:isKongcheng() or (data.results[to] and data.results[to].toCard)) then
           data.results[to] = data.results[to] or {}
-          data.results[to].toCard = Fk:getCardById(room:tableRandomPick(to:getCardIds("h")))
+          local id = room:askToChooseCard(player, {
+            target = to,
+            flag = "h",
+            skill_name = hanzhan.name,
+          })
+          data.results[to].toCard = Fk:getCardById(id)
         end
       end
     elseif not (data.from.dead or data.from:isKongcheng()) then
-      data.fromCard = Fk:getCardById(room:tableRandomPick(data.from:getCardIds("h")))
+      local id = room:askToChooseCard(player, {
+        target = data.from,
+        flag = "h",
+        skill_name = hanzhan.name,
+      })
+      data.fromCard = Fk:getCardById(id)
     end
   end,
 })

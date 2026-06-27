@@ -5,8 +5,7 @@ local huaiyi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__huaiyi"] = "怀异",
-  [":wzzz_v__huaiyi"] = "出牌阶段限一次，你可以展示所有手牌，若其中包含两种颜色，则你弃置其中一种颜色的牌，然后获得至多X名其他角色的各一张牌"..
-  "（X为你以此法弃置的手牌数）。若你获得的牌大于一张，则你失去1点体力。",
+  [":wzzz_v__huaiyi"] = "出牌阶段限一次，你可以展示所有手牌，若其中包含：一种颜色，你摸一张牌，然后此技能本阶段改为“出牌阶段限两次”；两种颜色，你弃置其中一种颜色所有的牌并获得至多X名其他角色的各一张牌（X为你以此法弃置的手牌数），然后若你获得的牌大于一张，你失去1点体力。",
 
   ["#wzzz_v__huaiyi"] = "怀异：展示手牌，弃置其中一种颜色的牌，获得等量名其他角色各一张牌",
   ["#wzzz_v__huaiyi-choose"] = "怀异：你可以获得至多%arg名角色各一张牌",
@@ -21,7 +20,8 @@ huaiyi:addEffect("active", {
   card_num = 0,
   target_num = 0,
   can_use = function(self, player)
-    return player:usedSkillTimes(huaiyi.name, Player.HistoryPhase) == 0 and not player:isKongcheng()
+    local limit = player:getMark("wzzz_v__huaiyi_extra-phase") > 0 and 2 or 1
+    return player:usedSkillTimes(huaiyi.name, Player.HistoryPhase) < limit and not player:isKongcheng()
   end,
   card_filter = Util.FalseFunc,
   on_use = function(self, room, effect)
@@ -32,7 +32,12 @@ huaiyi:addEffect("active", {
       return table.find(cards, function (id2)
         return Fk:getCardById(id).color ~= Fk:getCardById(id2).color
       end) ~= nil
-    end) or player.dead or player:isKongcheng() then return end
+    end) then
+      player:drawCards(1, huaiyi.name)
+      room:setPlayerMark(player, "wzzz_v__huaiyi_extra-phase", 1)
+      return
+    end
+    if player.dead or player:isKongcheng() then return end
     local red = table.filter(cards, function (id)
       return table.contains(player:getCardIds("h"), id) and Fk:getCardById(id).color == Card.Red and not player:prohibitDiscard(id)
     end)

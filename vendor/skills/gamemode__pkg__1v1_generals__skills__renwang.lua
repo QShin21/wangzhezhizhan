@@ -4,7 +4,7 @@ local renwang = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__v11__renwang"] = "仁望",
-  [":wzzz_v__v11__renwang"] = "当对手于其出牌阶段内对你使用【杀】或普通锦囊牌时，若本阶段你已成为过上述牌的目标，你可以弃置其一张牌。",
+  [":wzzz_v__v11__renwang"] = "每回合限一次，当其他角色于其出牌阶段对你使用【杀】或普通锦囊牌时，若你不是此阶段内第一次成为上述牌的目标，你可以弃置其一张牌。",
 
   ["$wzzz_v__v11__renwang1"] = "忍无可忍，无需再忍！",
   ["$wzzz_v__v11__renwang2"] = "休怪我无情了！",
@@ -14,6 +14,7 @@ renwang:addEffect(fk.CardUsing, {
   anim_type = "defensive",
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(renwang.name) and target ~= player and not target:isNude() and target.phase == Player.Play and
+      player:usedSkillTimes(renwang.name, Player.HistoryTurn) == 0 and
       table.contains(data.tos, player) and (data.card.trueName == "slash" or data.card:isCommonTrick()) and
       #player.room.logic:getEventsOfScope(GameEvent.UseCard, 1, function(e)
         local use = e.data

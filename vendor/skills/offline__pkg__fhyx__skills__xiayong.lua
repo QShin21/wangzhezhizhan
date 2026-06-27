@@ -4,7 +4,7 @@ local xiayong = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__fhyx_ex__xiayong"] = "狭勇",
-  [":wzzz_v__fhyx_ex__xiayong"] = "结束阶段，若你本回合使用的【杀】和【决斗】均对目标角色造成了伤害，你可以摸等同于这些伤害值的牌。",
+  [":wzzz_v__fhyx_ex__xiayong"] = "结束阶段，若你本回合使用过的【杀】或【决斗】均对目标角色造成过伤害，你可以摸等同于这些牌造成伤害总数的牌。",
 }
 
 xiayong:addEffect(fk.EventPhaseStart, {

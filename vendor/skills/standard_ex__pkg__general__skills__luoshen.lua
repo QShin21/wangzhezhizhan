@@ -1,8 +1,8 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__luoshen"] = "洛神",
-  [":wzzz_v__ex__luoshen"] = "准备阶段开始时，你可以进行判定，当黑色判定牌生效后，你获得之并可以重复此流程。你以此法获得的牌在本回合不计入手牌上限。",
+  [":wzzz_v__ex__luoshen"] = "准备阶段，你可以进行判定并获得判定牌，当黑色判定牌生效后，你可以重复此流程。本回合你的手牌上限+X（X为你本回合以此法获得的黑色牌数）。",
 
-  ["@@wzzz_v__ex__luoshen-inhand-turn"] = "洛神",
+  ["@wzzz_v__ex__luoshen-turn"] = "洛神",
 
   ["$wzzz_v__ex__luoshen1"] = "屏翳收风，川后静波。",
   ["$wzzz_v__ex__luoshen2"] = "冯夷鸣鼓，女娲清歌。",
@@ -41,16 +41,19 @@ luoshen:addEffect(fk.FinishJudge, {
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
     return target == player and data.reason == luoshen.name and
-      data.card.color == Card.Black and player.room:getCardArea(data.card) == Card.Processing
+      player.room:getCardArea(data.card) == Card.Processing
   end,
   on_use = function(self, event, target, player, data)
-    player.room:obtainCard(player, data.card, true, nil, player, luoshen.name, "@@wzzz_v__ex__luoshen-inhand-turn")
+    if data.card.color == Card.Black then
+      player.room:addPlayerMark(player, "@wzzz_v__ex__luoshen-turn", 1)
+    end
+    player.room:obtainCard(player, data.card, true, nil, player, luoshen.name)
   end,
 })
 
 luoshen:addEffect("maxcards", {
-  exclude_from = function(self, player, card)
-    return card:getMark("@@wzzz_v__ex__luoshen-inhand-turn") > 0
+  correct_func = function(self, player)
+    return player:getMark("@wzzz_v__ex__luoshen-turn")
   end,
 })
 

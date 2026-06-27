@@ -4,66 +4,45 @@ local qiaobian = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__qiaobian"] = "巧变",
-  [":wzzz_v__ol_ex__qiaobian"] = "游戏开始时，你获得2枚“变”标记。你可以弃置一张牌或移除1枚“变”标记并跳过你的一个阶段（准备阶段和结束阶段除外）："..
-  "若跳过摸牌阶段，你可以获得至多两名角色的各一张手牌；若跳过出牌阶段，你可以移动场上的一张牌。结束阶段开始时，若你的手牌数与之前你的每一回合"..
-  "结束阶段开始时的手牌数均不相等，你获得1枚“变”标记。",
+  [":wzzz_v__ol_ex__qiaobian"] = "你可以弃置一张手牌并跳过你的一个阶段（准备阶段和结束阶段除外），若你以此法跳过了：摸牌阶段，你可以获得至多两名其他角色的各一张手牌；出牌阶段，你可以移动场上的一张牌。回合结束时，若你本回合跳过了至少三个阶段，你可以摸两张牌。",
 
-  ["@wzzz_v__ol_ex__qiaobian_change"] = "变",
-  ["#wzzz_v__ol_ex__qiaobian-invoke"] = "巧变：弃一张牌，或直接点“确定”弃置变标记，来跳过 %arg",
-  ["#wzzz_v__ol_ex__qiaobian-prey"] = "巧变：你可以选择至多两名角色，获得这些角色各一张手牌",
+  ["#wzzz_v__ol_ex__qiaobian-invoke"] = "巧变：弃置一张手牌并跳过 %arg",
+  ["#wzzz_v__ol_ex__qiaobian-prey"] = "巧变：你可以选择至多两名其他角色，获得这些角色各一张手牌",
   ["#wzzz_v__ol_ex__qiaobian-move"] = "巧变：你可以移动场上的一张牌",
+  ["#wzzz_v__ol_ex__qiaobian-draw"] = "巧变：你本回合跳过了至少三个阶段，可以摸两张牌",
 
   ["$wzzz_v__ol_ex__qiaobian1"] = "顺势而变，则胜矣。",
   ["$wzzz_v__ol_ex__qiaobian2"] = "万物变化，固无休息。",
 }
 
-qiaobian:addEffect(fk.GameStart, {
-  can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(qiaobian.name) and
-      not (WzzzHuashen and WzzzHuashen.shouldSkipOpeningTiming(player, qiaobian.name))
-  end,
-  on_cost = Util.TrueFunc,
-  on_use = function (self, event, target, player, data)
-    player.room:addPlayerMark(player, "@wzzz_v__ol_ex__qiaobian_change", 2)
-  end
-})
-
 qiaobian:addEffect(fk.EventPhaseChanging, {
   anim_type = "control",
   can_trigger = function (self, event, target, player, data)
-    return target == player and player:hasSkill(qiaobian.name) and
-      (not player:isNude() or player:getMark("@wzzz_v__ol_ex__qiaobian_change") > 0) and
-      (data.phase > Player.Start and data.phase < Player.Finish) and
-      not data.skipped
+    return target == player and player:hasSkill(qiaobian.name) and not player:isKongcheng() and
+      (data.phase > Player.Start and data.phase < Player.Finish) and not data.skipped
   end,
   on_cost = function (self, event, target, player, data)
-    local discard_data = {
-      num = 1,
-      min_num = player:getMark("@wzzz_v__ol_ex__qiaobian_change") == 0 and 1 or 0,
-      include_equip = true,
-      skillName = qiaobian.name,
-      pattern = ".",
-    }
-    local success, dat = player.room:askToUseActiveSkill(player, {
-      skill_name = "discard_skill",
-      prompt = "#wzzz_v__ol_ex__qiaobian-invoke:::" .. Util.PhaseStrMapper(data.phase),
+    local cards = player.room:askToDiscard(player, {
+      min_num = 1,
+      max_num = 1,
+      include_equip = false,
+      skill_name = qiaobian.name,
       cancelable = true,
-      extra_data = discard_data,
+      prompt = "#wzzz_v__ol_ex__qiaobian-invoke:::" .. Util.PhaseStrMapper(data.phase),
+      skip = true,
     })
-    if success and dat then
-      event:setCostData(self, {cards = dat.cards})
+    if #cards > 0 then
+      event:setCostData(self, {cards = cards})
       return true
     end
   end,
   on_use = function (self, event, target, player, data)
     local room = player.room
     data.skipped = true
-    if #event:getCostData(self).cards > 0 then
-      room:throwCard(event:getCostData(self).cards, qiaobian.name, player, player)
-      if player.dead then return false end
-    else
-      room:removePlayerMark(player, "@wzzz_v__ol_ex__qiaobian_change")
-    end
+    room:throwCard(event:getCostData(self).cards, qiaobian.name, player, player)
+    room:addPlayerMark(player, "wzzz_v__ol_ex__qiaobian_skipped-turn", 1)
+    if player.dead then return false end
+
     if data.phase == Player.Draw then
       local targets = table.filter(room:getOtherPlayers(player, false), function(p)
         return not p:isKongcheng()
@@ -110,15 +89,19 @@ qiaobian:addEffect(fk.EventPhaseChanging, {
 })
 
 qiaobian:addEffect(fk.EventPhaseStart, {
+  anim_type = "drawcard",
   can_trigger = function (self, event, target, player, data)
     return target == player and player:hasSkill(qiaobian.name) and player.phase == Player.Finish and
-      not table.contains(player:getTableMark("wzzz_v__ol_ex__qiaobian_number"), player:getHandcardNum())
+      player:getMark("wzzz_v__ol_ex__qiaobian_skipped-turn") >= 3
   end,
-  on_cost = Util.TrueFunc,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, {
+      skill_name = qiaobian.name,
+      prompt = "#wzzz_v__ol_ex__qiaobian-draw",
+    })
+  end,
   on_use = function (self, event, target, player, data)
-    local room = player.room
-    room:addTableMark(player, "wzzz_v__ol_ex__qiaobian_number", player:getHandcardNum())
-    room:addPlayerMark(player, "@wzzz_v__ol_ex__qiaobian_change")
+    player:drawCards(2, qiaobian.name)
   end
 })
 

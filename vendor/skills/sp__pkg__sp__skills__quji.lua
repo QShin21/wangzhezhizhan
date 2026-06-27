@@ -5,7 +5,7 @@ local wzzz_v__quji = fk.CreateSkill {
 Fk:loadTranslationTable{
   ["wzzz_v__quji"] = "去疾",
   [":wzzz_v__quji"] = "出牌阶段限一次，若你已受伤，你可以弃置X张牌并选择至多X名已受伤的角色，令这些角色各回复1点体力，然后若你以此法弃置的牌中"..
-  "有黑色牌，你失去1点体力。（X为你已损失的体力值）",
+  "有黑色牌，你失去1点体力。（X为你已损失的体力值）这些角色回复后仍已受伤的角色各摸一张牌。",
 
   ["#wzzz_v__quji"] = "去疾：弃置%arg张牌，令至多等量角色回复体力，若弃置了黑色牌，你失去1点体力",
 
@@ -47,6 +47,11 @@ wzzz_v__quji:addEffect("active", {
           recoverBy = player,
           skillName = wzzz_v__quji.name,
         }
+      end
+    end
+    for _, to in ipairs(tos) do
+      if not to.dead and to:isWounded() then
+        to:drawCards(1, wzzz_v__quji.name)
       end
     end
     if loseHp and not player.dead then

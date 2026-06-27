@@ -4,9 +4,9 @@ local lianhuan = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__m_ex__lianhuan"] = "连环",
-  [":wzzz_v__m_ex__lianhuan"] = "你可以将一张♣手牌当【铁索连环】使用或重铸，你使用【铁索连环】时可以额外指定一个目标。",
+  [":wzzz_v__m_ex__lianhuan"] = "你可以将一张梅花牌当【铁索连环】使用或重铸；你使用【铁索连环】可以额外指定一名目标。",
 
-  ["#wzzz_v__m_ex__lianhuan"] = "连环：你可以将一张♣手牌当【铁索连环】使用或重铸",
+  ["#wzzz_v__m_ex__lianhuan"] = "连环：你可以将一张梅花牌当【铁索连环】使用或重铸",
   ["#wzzz_v__m_ex__lianhuan-choose"] = "连环：你可以为 %arg 额外指定一个目标",
 
   ["$wzzz_v__m_ex__lianhuan1"] = "将多兵众，不可以敌，使其自累，以杀其势。",
@@ -19,10 +19,11 @@ lianhuan:addEffect("active", {
   card_num = 1,
   min_target_num = 0,
   can_use = function(self, player)
-    return not player:isKongcheng()
+    return #player:getCardIds("he") > 0
   end,
   card_filter = function(self, player, to_select, selected)
-    return #selected == 0 and Fk:getCardById(to_select).suit == Card.Club and table.contains(player:getHandlyIds(), to_select)
+    return #selected == 0 and Fk:getCardById(to_select).suit == Card.Club and
+      table.contains(player:getCardIds("he"), to_select)
   end,
   target_filter = function(self, player, to_select, selected, selected_cards)
     if #selected_cards == 1 then

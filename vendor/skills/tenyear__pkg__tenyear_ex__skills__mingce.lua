@@ -4,8 +4,7 @@ local mingce = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__mingce"] = "明策",
-  [":wzzz_v__ty_ex__mingce"] = "出牌阶段限一次，你可以将一张装备牌或【杀】交给一名其他角色，其选择一项：1.视为对你指定的另一名角色使用【杀】，"..
-  "若此【杀】造成伤害，执行选项2；2.你与其各摸一张牌。",
+  [":wzzz_v__ty_ex__mingce"] = "出牌阶段限一次，你可以展示一张【杀】或装备牌并交给一名其他角色，然后其选择一项：1.视为对你选择的一名角色使用一张【杀】，此【杀】第一次造成伤害后，其执行另一项；2.你与其各摸一张牌。",
 
   ["#wzzz_v__ty_ex__mingce"] = "明策：将一张装备牌或【杀】交给一名角色，然后选择第二名角色",
   ["#wzzz_v__ty_ex__mingce1"] = "明策：将一张装备牌或【杀】交给 %src，选择第二名角色",
@@ -47,6 +46,7 @@ mingce:addEffect("active", {
     local player = effect.from
     local target = effect.tos[1]
     local to = effect.tos[2]
+    player:showCards(effect.cards)
     room:obtainCard(target, effect.cards, true, fk.ReasonGive, player, mingce.name)
     if target.dead then return end
     if not to.dead then

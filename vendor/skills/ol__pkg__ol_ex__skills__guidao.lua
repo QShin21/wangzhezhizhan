@@ -4,7 +4,7 @@ local guidao = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__guidao"] = "鬼道",
-  [":wzzz_v__ol_ex__guidao"] = "当一名角色的判定结果确定前，你可以打出一张黑色牌替换之，然后若你打出的牌为♠2~9，你摸一张牌。",
+  [":wzzz_v__ol_ex__guidao"] = "一名角色的判定牌生效前，你可以打出一张黑色牌替换之，然后若你打出的牌为黑桃且点数为2～9，你摸一张牌。",
 
   ["#wzzz_v__ol_ex__guidao-ask"] = "鬼道：你可以打出一张黑色牌替换 %dest 的“%arg”判定，若打出♠2~9，你摸一张牌",
 

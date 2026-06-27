@@ -4,7 +4,7 @@ local wenji = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__wenji"] = "问计",
-  [":wzzz_v__wenji"] = "出牌阶段开始时，你可以令一名其他角色交给你一张牌，你于本回合内使用与该牌同名的牌不能被其他角色响应。",
+  [":wzzz_v__wenji"] = "出牌阶段开始时，你可以令一名其他角色交给你一张牌并展示之，此阶段你使用与此牌类型相同的牌不能被其他角色响应。",
 
   ["#wzzz_v__wenji-choose"] = "问计：你可以令一名其他角色交给你一张牌",
   ["#wzzz_v__wenji-give"] = "问计：你需交给 %src 一张牌",
@@ -51,7 +51,8 @@ wenji:addEffect(fk.EventPhaseStart, {
       prompt = "#wzzz_v__wenji-give:"..player.id,
       cancelable = false,
     })
-    room:addTableMarkIfNeed(player, "@wzzz_v__wenji-turn", Fk:getCardById(cards[1]).trueName)
+    to:showCards(cards)
+    room:addTableMarkIfNeed(player, "@wzzz_v__wenji-turn", Fk:getCardById(cards[1]).type)
     room:obtainCard(player, cards, false, fk.ReasonGive, to, wenji.name)
   end,
 })
@@ -59,7 +60,7 @@ wenji:addEffect(fk.CardUsing, {
   anim_type = "offensive",
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
-    return target == player and table.contains(player:getTableMark("@wzzz_v__wenji-turn"), data.card.trueName)
+    return target == player and table.contains(player:getTableMark("@wzzz_v__wenji-turn"), data.card.type)
   end,
   on_use = function(self, event, target, player, data)
     data.disresponsiveList = data.disresponsiveList or {}

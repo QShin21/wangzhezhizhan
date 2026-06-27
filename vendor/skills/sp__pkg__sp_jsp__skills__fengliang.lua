@@ -34,7 +34,7 @@ fengliang:addEffect(fk.EnterDying, {
       }
       if player.dead then return end
     end
-    room:handleAddLoseSkills(player, "wzzz_v__tiaoxin")
+    room:handleAddLoseSkills(player, "wzzz_v__m_ex__tiaoxin")
     if player:hasSkill("wzzz_v__kunfen", true) then
       if player.phase == Player.Finish and player:usedSkillTimes("wzzz_v__kunfen", Player.HistoryPhase) > 0 then
         room:handleAddLoseSkills(player, "-wzzz_v__kunfen", nil, false, true)

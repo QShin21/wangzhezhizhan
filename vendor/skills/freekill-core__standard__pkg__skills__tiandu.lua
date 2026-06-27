@@ -2,6 +2,11 @@ local tiandu = fk.CreateSkill {
   name = "wzzz_v__tiandu",
 }
 
+Fk:loadTranslationTable {
+  ["wzzz_v__tiandu"] = "天妒",
+  [":wzzz_v__tiandu"] = "当你的判定牌生效后，你可以获得之。",
+}
+
 tiandu:addEffect(fk.FinishJudge, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(tiandu.name) and

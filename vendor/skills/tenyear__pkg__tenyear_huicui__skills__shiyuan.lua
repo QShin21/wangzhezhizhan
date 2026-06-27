@@ -4,8 +4,7 @@ local shiyuan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__shiyuan"] = "诗怨",
-  [":wzzz_v__shiyuan"] = "每回合每项限一次，当你成为其他角色使用牌的目标后：1.若其体力值比你多，你摸三张牌；2.若其体力值与你相同，你摸两张牌；"..
-  "3.若其体力值比你少，你摸一张牌。",
+  [":wzzz_v__shiyuan"] = "每回合每项限一次，当你成为其他角色使用牌的目标后，若该角色的体力值：大于你，你可以摸两张牌；等于你，你可以摸两张牌；小于你，你可以摸一张牌。",
 
   ["$wzzz_v__shiyuan1"] = "感怀诗于前，绝怨赋于后。",
   ["$wzzz_v__shiyuan2"] = "汉宫楚歌起，四面无援矣。",
@@ -28,7 +27,7 @@ shiyuan:addEffect(fk.TargetConfirmed, {
     local room = player.room
     if data.from.hp > player.hp then
       room:addPlayerMark(player, "wzzz_v__shiyuan1-turn", 1)
-      player:drawCards(3, shiyuan.name)
+      player:drawCards(2, shiyuan.name)
     elseif data.from.hp == player.hp then
       room:addPlayerMark(player, "wzzz_v__shiyuan2-turn", 1)
       player:drawCards(2, shiyuan.name)

@@ -4,7 +4,7 @@ local jinqu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__jinqu"] = "进趋",
-  [":wzzz_v__jinqu"] = "结束阶段，你可以摸两张牌，然后将手牌弃至X张（X为你本回合发动〖奇制〗的次数）。",
+  [":wzzz_v__jinqu"] = "结束阶段，你可以摸两张牌，然后将手牌弃置至X+1张（X为你于此回合内发动过“奇制”的次数）。",
 
   ["#wzzz_v__jinqu-invoke"] = "进趋：是否摸两张牌，然后将手牌弃至%arg？",
 
@@ -20,13 +20,13 @@ jinqu:addEffect(fk.EventPhaseStart, {
   on_cost = function (self, event, target, player, data)
     return player.room:askToSkillInvoke(player, {
       skill_name = jinqu.name,
-      prompt = "#wzzz_v__jinqu-invoke:::"..player:usedSkillTimes("wzzz_v__qizhi", Player.HistoryTurn)
+      prompt = "#wzzz_v__jinqu-invoke:::"..(player:usedSkillTimes("wzzz_v__qizhi", Player.HistoryTurn) + 1)
     })
   end,
   on_use = function(self, event, target, player, data)
     player:drawCards(2, jinqu.name)
     if player.dead then return end
-    local n = player:getHandcardNum() - player:usedSkillTimes("wzzz_v__qizhi", Player.HistoryTurn)
+    local n = player:getHandcardNum() - player:usedSkillTimes("wzzz_v__qizhi", Player.HistoryTurn) - 1
     if n > 0 then
       player.room:askToDiscard(player, {
         min_num = n,

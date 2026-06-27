@@ -4,7 +4,7 @@ local shuangxiong = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__fhyx_ex__shuangxiong"] = "双雄",
-  [":wzzz_v__fhyx_ex__shuangxiong"] = "出牌阶段开始时，你可以令一名角色弃置一张牌，若如此做，此阶段你可以将与此牌颜色不同的手牌当【决斗】使用。",
+  [":wzzz_v__fhyx_ex__shuangxiong"] = "出牌阶段开始时，你可以令一名其他角色弃置一张牌，本阶段你可以将一张与此牌颜色不同的手牌当【决斗】使用。",
 
   ["@wzzz_v__fhyx_ex__shuangxiong-phase"] = "双雄",
   ["#wzzz_v__fhyx_ex__shuangxiong"] = "双雄：你可以将一张%arg手牌当【决斗】使用",
@@ -54,13 +54,13 @@ shuangxiong:addEffect(fk.EventPhaseStart, {
   anim_type = "offensive",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(shuangxiong.name) and player.phase == Player.Play and
-      table.find(player.room.alive_players, function(p)
+      table.find(player.room:getOtherPlayers(player, false), function(p)
         return not p:isNude()
       end)
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room
-    local targets = table.filter(player.room.alive_players, function(p)
+    local targets = table.filter(player.room:getOtherPlayers(player, false), function(p)
       return not p:isNude()
     end)
     local to = room:askToChoosePlayers(player, {

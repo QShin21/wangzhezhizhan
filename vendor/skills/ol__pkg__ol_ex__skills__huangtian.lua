@@ -6,7 +6,7 @@ local huangtian = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__huangtian"] = "黄天",
-  [":wzzz_v__ol_ex__huangtian"] = "主公技，其他群势力角色的出牌阶段限一次，该角色可以将一张【闪】或♠手牌正面朝上交给你。",
+  [":wzzz_v__ol_ex__huangtian"] = "主公技，其他群势力角色出牌阶段限一次，其可以交给你一张【闪】或【闪电】或黑桃手牌并展示之；每回合限一次，其他群势力角色使用或打出【闪】后，你可以获得之。",
 
   ["$wzzz_v__ol_ex__huangtian1"] = "黄天法力，万军可灭！",
   ["$wzzz_v__ol_ex__huangtian2"] = "天书庇佑，黄巾可兴！",
@@ -38,5 +38,21 @@ huangtian:addEffect(fk.AfterPropertyChange, {
     end
   end,
 })
+
+local huangtian_collect_spec = {
+  anim_type = "support",
+  can_trigger = function(self, event, target, player, data)
+    return player:hasSkill(huangtian.name) and target and target ~= player and target.kingdom == "qun" and
+      data.card and data.card.trueName == "jink" and player:getMark("wzzz_v__ol_ex__huangtian_collect-turn") == 0 and
+      player.room:getCardArea(data.card) == Card.Processing
+  end,
+  on_use = function(self, event, target, player, data)
+    player.room:addPlayerMark(player, "wzzz_v__ol_ex__huangtian_collect-turn")
+    player.room:obtainCard(player, data.card, true, fk.ReasonJustMove, player, huangtian.name)
+  end,
+}
+
+huangtian:addEffect(fk.CardUsing, huangtian_collect_spec)
+huangtian:addEffect(fk.CardResponding, huangtian_collect_spec)
 
 return huangtian

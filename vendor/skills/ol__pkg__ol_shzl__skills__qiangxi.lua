@@ -4,9 +4,9 @@ local qiangxi = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__qiangxi"] = "强袭",
-  [":wzzz_v__ol__qiangxi"] = "出牌阶段限两次，你可以失去1点体力或弃置一张武器牌，对一名本回合内未以此法指定过的其他角色造成1点伤害。",
+  [":wzzz_v__ol__qiangxi"] = "出牌阶段限两次，你可以受到1点伤害或弃置一张武器牌，然后对一名本回合未以此法指定过的其他角色造成1点伤害。",
 
-  ["#wzzz_v__ol__qiangxi"] = "强袭：弃一张武器牌，或不选牌失去1点体力，对目标角色造成1点伤害",
+  ["#wzzz_v__ol__qiangxi"] = "强袭：弃一张武器牌，或不选牌受到1点伤害，对目标角色造成1点伤害",
 
   ["$wzzz_v__ol__qiangxi1"] = "休想靠近主公一步！",
   ["$wzzz_v__ol__qiangxi2"] = "人戟合一，所向披靡！",
@@ -35,7 +35,15 @@ qiangxi:addEffect("active", {
     if #effect.cards > 0 then
       room:throwCard(effect.cards, qiangxi.name, player, player)
     else
-      room:loseHp(player, 1, qiangxi.name)
+      room:damage{
+        from = player,
+        to = player,
+        damage = 1,
+        skillName = qiangxi.name,
+      }
+    end
+    if player.dead then
+      return
     end
     if not target.dead then
       room:damage{

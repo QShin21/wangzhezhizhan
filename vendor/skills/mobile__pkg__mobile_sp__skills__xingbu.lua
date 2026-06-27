@@ -59,6 +59,7 @@ xingbu:addEffect(fk.EventPhaseStart, {
         max_num = 1,
         prompt = "#wzzz_v__xingbu-target:::" .. result,
         skill_name = skillName,
+        cancelable = true,
       }
     )
     if #tos > 0 then

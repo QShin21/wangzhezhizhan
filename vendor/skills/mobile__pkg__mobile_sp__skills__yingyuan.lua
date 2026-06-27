@@ -4,7 +4,7 @@ local yingyuan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__yingyuan"] = "应援",
-  [":wzzz_v__yingyuan"] = "当你于回合内使用的牌结算完毕置入弃牌堆时，你可以将之交给一名其他角色（每回合每种牌名限一次）。",
+  [":wzzz_v__yingyuan"] = "每回合限两次，当你于回合内使用的基本牌或普通锦囊牌结算结束后，你可以将之交给一名其他角色。",
 
   ["#wzzz_v__yingyuan-card"] = "应援：你可以将 %arg 交给一名其他角色",
 
@@ -16,8 +16,9 @@ yingyuan:addEffect(fk.CardUseFinished, {
   anim_type = "support",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(yingyuan.name) and player.room.current == player and
+      (data.card.type == Card.TypeBasic or data.card:isCommonTrick()) and
       player.room:getCardArea(data.card) == Card.Processing and
-      not table.contains(player:getTableMark("wzzz_v__yingyuan-turn"), data.card.trueName) and
+      player:usedSkillTimes(yingyuan.name, Player.HistoryTurn) < 2 and
       #player.room:getOtherPlayers(player, false) > 0
   end,
   on_cost = function(self, event, target, player, data)
@@ -37,7 +38,6 @@ yingyuan:addEffect(fk.CardUseFinished, {
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room
-    room:addTableMark(player, "wzzz_v__yingyuan-turn", data.card.trueName)
     local to = event:getCostData(self).tos[1]
     room:moveCardTo(data.card, Card.PlayerHand, to, fk.ReasonGive, yingyuan.name, nil, true, player)
   end,

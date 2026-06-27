@@ -5,7 +5,7 @@ local jiefan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__jiefan"] = "解烦",
-  [":wzzz_v__jiefan"] = "限定技，出牌阶段，你可以选择一名角色，然后令攻击范围内有该角色的所有角色各选择一项：1.弃置一张武器牌；2.令其摸一张牌。",
+  [":wzzz_v__jiefan"] = "限定技，出牌阶段，你可以选择一名角色，令攻击范围内包含其的角色选择一项：1.弃置一张武器牌；2.令其摸一张牌。若此时为第一轮游戏，回合结束时，此技能视为未发动过。",
 
   ["#wzzz_v__jiefan"] = "解烦：指定一名角色，攻击范围内含有其的角色选择弃一张牌武器牌或令目标摸一张牌",
   ["wzzz_v__jiefan_target"] = "解烦目标",
@@ -55,6 +55,19 @@ jiefan:addEffect("active", {
         end
       end
     end
+  end,
+})
+
+jiefan:addEffect(fk.TurnEnd, {
+  mute = true,
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(jiefan.name, true) and
+      (player.room:getBanner("RoundCount") or 0) == 1 and
+      player:usedSkillTimes(jiefan.name, Player.HistoryGame) > 0
+  end,
+  on_cost = Util.TrueFunc,
+  on_use = function(self, event, target, player, data)
+    player:setSkillUseHistory(jiefan.name, 0, Player.HistoryGame)
   end,
 })
 

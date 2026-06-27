@@ -5,7 +5,7 @@ local zhichi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__zhichi"] = "智迟",
-  [":wzzz_v__zhichi"] = "锁定技，你的回合外，当你受到伤害后，此回合【杀】和普通锦囊牌对你无效。",
+  [":wzzz_v__zhichi"] = "锁定技，当你于回合外受到伤害后，本回合其他角色使用的【杀】和普通锦囊牌对你无效。",
 
   ["@@wzzz_v__zhichi-turn"] = "智迟",
 
@@ -28,6 +28,7 @@ zhichi:addEffect(fk.PreCardEffect, {
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
     return data.to == player and player:usedSkillTimes(zhichi.name, Player.HistoryTurn) > 0 and
+      data.from ~= player and
       (data.card.trueName == "slash" or data.card:isCommonTrick())
   end,
   on_use = function (self, event, target, player, data)

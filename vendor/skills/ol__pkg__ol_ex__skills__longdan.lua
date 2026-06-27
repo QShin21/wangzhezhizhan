@@ -4,9 +4,9 @@ local longdan = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__longdan"] = "龙胆",
-  [":wzzz_v__ol_ex__longdan"] = "你可以将一张【杀】当【闪】、【闪】当【杀】、【酒】当【桃】、【桃】当【酒】使用或打出。",
+  [":wzzz_v__ol_ex__longdan"] = "你可以将一张【闪】当【杀】、【杀】当【闪】、【酒】当【桃】、【桃】当【酒】使用或打出。",
 
-  ["#wzzz_v__ol_ex__longdan-viewas"] = "龙胆：将一张【杀】当【闪】、【闪】当【杀】、【酒】当【桃】、【桃】当【酒】使用或打出",
+  ["#wzzz_v__ol_ex__longdan-viewas"] = "龙胆：将一张【闪】当【杀】、【杀】当【闪】、【酒】当【桃】、【桃】当【酒】使用或打出",
 
   ["$wzzz_v__ol_ex__longdan1"] = "哼，有胆就先接我两招！",
   ["$wzzz_v__ol_ex__longdan2"] = "龙游沙场，胆战群雄！",

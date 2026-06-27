@@ -4,8 +4,7 @@ local moukui = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ty__moukui"] = "谋溃",
-  [":wzzz_v__ty__moukui"] = "当你使用【杀】指定目标后，你可以选择任意项：1.摸一张牌；2.弃置其中一名目标角色一张牌。"..
-  "若两项均选择，此【杀】被其无效或抵消后，该角色弃置你的一张牌。",
+  [":wzzz_v__ty__moukui"] = "当你使用【杀】指定目标后，你可以选择任意项：1.摸一张牌；2.弃置其中一名目标角色的一张牌。若你选择了两项，此【杀】被无效或抵消时，你弃置一张牌。",
 
   ["wzzz_v__ty__moukui_discard"] = "弃置一名目标角色一张牌",
   ["#wzzz_v__ty__moukui-choose"] = "谋溃：弃置其中一名目标角色一张牌",
@@ -107,15 +106,13 @@ moukui:addEffect(fk.CardUseFinished, {
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room
-    local to = data.extra_data.ty__moukui[2]
-    room:doIndicate(to, {player})
     if player:isNude() then return end
-    local id = room:askToChooseCard(to, {
+    local id = room:askToChooseCard(player, {
       target = player,
       flag = "he",
       skill_name = moukui.name,
     })
-    room:throwCard(id, moukui.name, player, to)
+    room:throwCard(id, moukui.name, player, player)
   end,
 })
 

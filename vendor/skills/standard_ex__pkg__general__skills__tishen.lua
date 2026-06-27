@@ -1,6 +1,6 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__tishen"] = "替身",
-  [":wzzz_v__ex__tishen"] = "限定技，准备阶段，若你已受伤，则你可以将体力值回复至上限，然后摸回复数值张牌。",
+  [":wzzz_v__ex__tishen"] = "限定技，准备阶段，你可以将体力回复至体力上限并摸X张牌（X为你回复的体力值），然后修改“咆哮”。",
 
   ["#tishen-invoke"] = "替身：你可以回复%arg点体力并摸%arg张牌",
 
@@ -37,6 +37,7 @@ tishen:addEffect(fk.EventPhaseStart, {
     }
     if not player.dead then
       player:drawCards(n, tishen.name)
+      room:setPlayerMark(player, "wzzz_v__ex__tishen_modified", 1)
     end
   end,
 })

@@ -4,9 +4,9 @@ local jieming = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__jieming"] = "节命",
-  [":wzzz_v__ol_ex__jieming"] = "当你受到1点伤害后或当你死亡时，你可令一名角色摸X张牌，其将手牌弃置至X张。（X为其体力上限且至多为5）",
+  [":wzzz_v__ol_ex__jieming"] = "当你受到1点伤害后，你可以令一名角色将手牌摸至X张。当你死亡时，你可以令一名角色摸X张牌，然后令其将手牌弃置至X张（X为其体力上限且最多为5）。",
 
-  ["#wzzz_v__ol_ex__jieming-choose"] = "节命：你可以令一名角色摸X张牌并将手牌弃至X张（X为其体力上限且至多为5）",
+  ["#wzzz_v__ol_ex__jieming-choose"] = "节命：你可以令一名角色执行节命效果（X为其体力上限且至多为5）",
 
   ["$wzzz_v__ol_ex__jieming1"] = "含气在胸，有进无退。",
   ["$wzzz_v__ol_ex__jieming2"] = "蕴节于形，生死无惧。",
@@ -54,7 +54,13 @@ jieming:addEffect(fk.Damaged, {
     return data.damage
   end,
   on_cost = jieming_spec.on_cost,
-  on_use = jieming_spec.on_use,
+  on_use = function(self, event, target, player, data)
+    local to = event:getCostData(self).tos[1]
+    local x = math.min(to.maxHp, 5)
+    if to:getHandcardNum() < x then
+      to:drawCards(x - to:getHandcardNum(), jieming.name)
+    end
+  end,
 })
 
 jieming:addEffect(fk.Death, {

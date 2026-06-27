@@ -4,10 +4,12 @@ local guolun = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__guolun"] = "过论",
-  [":wzzz_v__guolun"] = "出牌阶段限一次，你可以展示一名其他角色的一张手牌，然后你可以展示一张手牌，交换这两张牌，展示牌点数小的角色摸一张牌。",
+  [":wzzz_v__guolun"] = "出牌阶段限一次，你可以展示一名其他角色的一张手牌。若如此做，你可以展示一张手牌交换之，然后你可以选择一项：1.令展示牌点数较小的角色摸一张牌；2.令展示牌点数较大的角色回复1点体力。",
 
   ["#wzzz_v__guolun"] = "过论：展示一名角色的一张手牌，然后你可以展示一张手牌与其交换",
-  ["#wzzz_v__guolun-card"] = "过论：你可以展示一张牌并交换双方的牌，点数小的角色摸一张牌（对方点数为%arg）",
+  ["#wzzz_v__guolun-card"] = "过论：你可以展示一张牌并交换双方的牌（对方点数为%arg）",
+  ["wzzz_v__guolun_draw"] = "点数较小的角色摸一张牌",
+  ["wzzz_v__guolun_recover"] = "点数较大的角色回复1点体力",
 
   ["$wzzz_v__guolun1"] = "品过是非，讨评好坏。",
   ["$wzzz_v__guolun2"] = "若有天下太平时，必讨四海之内才。",
@@ -55,10 +57,28 @@ guolun:addEffect("active", {
           {player, {id2}},
           {target, {id1}},
         }, guolun.name)
-        if n2 > n1 and not target.dead then
-          target:drawCards(1, guolun.name)
-        elseif n1 > n2 and not player.dead then
-          player:drawCards(1, guolun.name)
+        local smaller, bigger
+        if n2 > n1 then
+          smaller, bigger = target, player
+        elseif n1 > n2 then
+          smaller, bigger = player, target
+        end
+        if smaller and bigger then
+          local choices = { "wzzz_v__guolun_draw", "wzzz_v__guolun_recover", "Cancel" }
+          local choice = room:askToChoice(player, {
+            choices = choices,
+            skill_name = guolun.name,
+          })
+          if choice == "wzzz_v__guolun_draw" and not smaller.dead then
+            smaller:drawCards(1, guolun.name)
+          elseif choice == "wzzz_v__guolun_recover" and not bigger.dead and bigger:isWounded() then
+            room:recover{
+              who = bigger,
+              num = 1,
+              recoverBy = player,
+              skillName = guolun.name,
+            }
+          end
         end
       end
     end

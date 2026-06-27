@@ -4,9 +4,9 @@ local huangtian_active = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__huangtian_active&"] = "黄天",
-  [":wzzz_v__ol_ex__huangtian_active&"] = "出牌阶段限一次，你可将一张【闪】或♠手牌正面朝上交给张角。",
+  [":wzzz_v__ol_ex__huangtian_active&"] = "出牌阶段限一次，你可以交给拥有“黄天”的角色一张【闪】或【闪电】或黑桃手牌并展示之。",
 
-  ["#wzzz_v__ol_ex__huangtian"] = "黄天：选择一张【闪】或♠手牌交给一名拥有“黄天”的角色",
+  ["#wzzz_v__ol_ex__huangtian"] = "黄天：选择一张【闪】、【闪电】或黑桃手牌交给一名拥有“黄天”的角色",
 }
 
 huangtian_active:addEffect("active", {
@@ -22,7 +22,8 @@ huangtian_active:addEffect("active", {
     return false
   end,
   card_filter = function(self, player, to_select, selected)
-    return #selected < 1 and (Fk:getCardById(to_select).name == "jink" or Fk:getCardById(to_select).suit == Card.Spade) and
+    local card = Fk:getCardById(to_select)
+    return #selected < 1 and (card.name == "jink" or card.name == "lightning" or card.suit == Card.Spade) and
       table.contains(player:getCardIds("h"), to_select)
   end,
   on_use = function(self, room, effect)

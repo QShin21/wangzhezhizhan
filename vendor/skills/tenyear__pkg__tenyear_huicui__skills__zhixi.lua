@@ -5,7 +5,7 @@ local zhixi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__zhixi"] = "止息",
-  [":wzzz_v__ty__zhixi"] = "锁定技，出牌阶段，当你使用【杀】或锦囊牌时，需弃置一张手牌。",
+  [":wzzz_v__ty__zhixi"] = "锁定技，你于出牌阶段内使用【杀】或普通锦囊牌时须弃置一张手牌。",
 }
 
 zhixi:addEffect(fk.CardUsing, {
@@ -13,7 +13,7 @@ zhixi:addEffect(fk.CardUsing, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(zhixi.name) and
       player.phase == Player.Play and not player:isKongcheng() and
-      (data.card.trueName == "slash" or data.card.type == Card.TypeTrick)
+      (data.card.trueName == "slash" or data.card:isCommonTrick())
   end,
   on_use = function(self, event, target, player, data)
     player.room:askToDiscard(player, {

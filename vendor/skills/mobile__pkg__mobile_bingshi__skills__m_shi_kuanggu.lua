@@ -1,18 +1,10 @@
 local mShiKuanggu = fk.CreateSkill {
   name = "wzzz_v__m_shi__kuanggu",
-  dynamic_desc = function(self, player)
-    return player:getMark("wzzz_v__m_shi__kuanggu_upgrade") > 0 and "wzzz_v__m_shi__kuanggu2" or "wzzz_v__m_shi__kuanggu1"
-  end,
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__m_shi__kuanggu"] = "狂骨",
-  [":wzzz_v__m_shi__kuanggu"] = "当你对距离1以内的角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌。<br>" ..
-  "⬤　二级：当你对距离1以内的角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌。背水：弃置一张牌，然后你此阶段使用【杀】的次数+1。",
-
-  [":wzzz_v__m_shi__kuanggu1"] = "当你对距离1以内的角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌。",
-  [":wzzz_v__m_shi__kuanggu2"] = "当你对距离1以内的角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌。" ..
-  "背水：弃置一张牌，然后你此阶段使用【杀】的次数+1。",
+  [":wzzz_v__m_shi__kuanggu"] = "当你对距离1以内的一名角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌；3.回复1点体力并摸一张牌，然后弃置一张牌，令你此阶段内使用【杀】的次数+1（每回合限一次）。",
 
   ["$wzzz_v__m_shi__kuanggu1"] = "曹贼吴犬，我有何惧哉？",
   ["$wzzz_v__m_shi__kuanggu2"] = "我尚未全力一搏，又试问谁能阻挡？",
@@ -25,87 +17,65 @@ Fk:loadTranslationTable{
 mShiKuanggu:addEffect(fk.Damage, {
   mute = true,
   can_trigger = function(self, event, target, player, data)
-    return
-      target == player and
-      player:hasSkill(mShiKuanggu.name) and
+    return target == player and player:hasSkill(mShiKuanggu.name) and
       (data.extra_data or {}).kuangguCheck
   end,
   on_cost = function(self, event, target, player, data)
-    ---@type string
-    local skillName = mShiKuanggu.name
     local room = player.room
-    local allChoices = { "draw1", "recover", "Cancel" }
-    if player:getMark("wzzz_v__m_shi__kuanggu_upgrade") > 0 then
-      table.insert(allChoices, 3, "beishui")
-    end
-
+    local allChoices = { "draw1", "recover", "beishui", "Cancel" }
     local choices = table.simpleClone(allChoices)
-    if not player:isWounded() then
-      table.remove(choices, 2)
+    if player:getMark("wzzz_v__m_shi__kuanggu_beishui-turn") > 0 then
+      table.removeOne(choices, "beishui")
     end
-    local choice = room:askToChoice(
-      player,
-      {
-        choices = choices,
-        skill_name = skillName,
-        all_choices = allChoices,
-      }
-    )
+    if not player:isWounded() then
+      table.removeOne(choices, "recover")
+    end
+    local choice = room:askToChoice(player, {
+      choices = choices,
+      skill_name = mShiKuanggu.name,
+      all_choices = allChoices,
+    })
     if choice ~= "Cancel" then
       event:setCostData(self, { choice = choice })
       return true
     end
   end,
   on_use = function(self, event, target, player, data)
-    ---@type string
-    local skillName = mShiKuanggu.name
     local room = player.room
     local choice = event:getCostData(self).choice
+    local audioIndex = choice == "beishui" and math.random(5, 6) or math.random(1, 2)
 
-    local audioIndex = math.random(1, 2)
-    if choice == "beishui" then
-      audioIndex = math.random(5, 6)
-    elseif player:getMark("wzzz_v__m_shi__kuanggu_upgrade") > 0 then
-      audioIndex = math.random(3, 4)
-    end
-    player:broadcastSkillInvoke(skillName, audioIndex)
-    room:notifySkillInvoked(player, skillName, "drawcard")
+    player:broadcastSkillInvoke(mShiKuanggu.name, audioIndex)
+    room:notifySkillInvoked(player, mShiKuanggu.name, "drawcard")
 
-    if choice ~= "draw1" then
+    if choice ~= "draw1" and player:isWounded() then
       room:recover{
         who = player,
         num = 1,
         recoverBy = player,
-        skillName = skillName,
+        skillName = mShiKuanggu.name,
       }
-
-      if not player:isAlive() then
-        return false
-      end
+      if not player:isAlive() then return false end
     end
 
     if choice ~= "recover" then
-      player:drawCards(1, skillName)
-
-      if not player:isAlive() then
-        return false
-      end
+      player:drawCards(1, mShiKuanggu.name)
+      if not player:isAlive() then return false end
     end
 
     if choice == "beishui" then
-      local cards = room:askToDiscard(
-        player,
-        {
+      room:addPlayerMark(player, "wzzz_v__m_shi__kuanggu_beishui-turn")
+      if not player:isNude() then
+        local cards = room:askToDiscard(player, {
           min_num = 1,
           max_num = 1,
-          skill_name = skillName,
+          skill_name = mShiKuanggu.name,
           include_equip = true,
           cancelable = false,
-        }
-      )
-
-      if #cards > 0 then
-        room:addPlayerMark(player, MarkEnum.SlashResidue .. "-phase", 1)
+        })
+        if #cards > 0 then
+          room:addPlayerMark(player, MarkEnum.SlashResidue .. "-phase", 1)
+        end
       end
     end
   end,

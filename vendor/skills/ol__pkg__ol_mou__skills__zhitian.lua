@@ -1,57 +1,65 @@
-local wzzz_v__zhitian = fk.CreateSkill{
+local zhitian = fk.CreateSkill{
   name = "wzzz_v__zhitian",
+  tags = { Skill.Limited },
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__zhitian"] = "知天",
-  [":wzzz_v__zhitian"] = "出牌阶段，牌堆顶的7张牌对你可见。你的【火攻】结算中，你可观看并选择牌堆顶7张牌中的一张牌代替【火攻】弃牌。",
+  [":wzzz_v__zhitian"] = "限定技，出牌阶段，你可以获得所有“星”，然后可以弃置你装备区里的武器牌，若“星”数星不小于X，则本回合当你装备区没有武器牌时，你视为装备【诸葛连弩】。（X为5，角色数为2时改为3）",
 
-  ["@[wzzz_v__zhitian]"] = "知天",
+  ["#wzzz_v__zhitian"] = "知天：获得所有“星”",
+  ["#wzzz_v__zhitian-discard"] = "知天：你可以弃置装备区里的武器牌",
+  ["@@wzzz_v__zhitian_crossbow-turn"] = "知天",
 
   ["$wzzz_v__zhitian1"] = "天火熊熊，再兴炎汉国祚！",
   ["$wzzz_v__zhitian2"] = "地火愔愔，燎尽不臣之贼！",
 }
 
-Fk:addQmlMark{
-  name = "wzzz_v__zhitian",
-  how_to_show = function(name, value, p)
-    return tostring(value)
-  end,
-  qml = function(name, value, p)
-    if Self:isBuddy(p) and p.phase == Player.Play and p:hasSkill(wzzz_v__zhitian.name) then
-      if type(value) ~= "number" or value < 1 then return {} end
-      local drawPile = Fk:currentRoom().draw_pile
-      local cards = {}
-      for i = 1, math.min(value, #drawPile), 1 do
-        table.insert(cards, drawPile[i])
-      end
-      return {
-        uri = "LunarLtk.Pages.InfoPopups",
-        name = "wzzz_v__ViewPile",
-        prop = {
-          ids = cards
-        },
-      }
-    end
-    return {}
-  end,
-}
+local function zhitianNum(room)
+  return #room.alive_players == 2 and 3 or 5
+end
 
-wzzz_v__zhitian:addEffect(fk.PreCardEffect, {
-  can_refresh = function(self, event, target, player, data)
-    return player:hasSkill(wzzz_v__zhitian.name) and data.from == player and data.card.trueName == "fire_attack"
+zhitian:addEffect("active", {
+  anim_type = "control",
+  prompt = "#wzzz_v__zhitian",
+  card_num = 0,
+  target_num = 0,
+  can_use = function(self, player)
+    return player:usedSkillTimes(zhitian.name, Player.HistoryGame) == 0 and
+      #player:getPile("wzzz_v__ex__guanxing_star") > 0
   end,
-  on_refresh = function(self, event, target, player, data)
-    data:changeCardSkill("wzzz_v__zhitian__fire_attack_skill")
+  card_filter = Util.FalseFunc,
+  on_use = function(self, room, effect)
+    local player = effect.from
+    local stars = player:getPile("wzzz_v__ex__guanxing_star")
+    local n = #stars
+    room:setPlayerMark(player, "wzzz_v__zhitian_used-turn", 1)
+    if player:getMark("wzzz_v__ex__guanxing_extra-turn") == 2 then
+      room:setPlayerMark(player, "wzzz_v__ex__guanxing_extra-turn", 0)
+    end
+    room:obtainCard(player, stars, true, fk.ReasonJustMove, player, zhitian.name)
+    if player.dead then return end
+
+    local weapons = player:getEquipments(Card.SubtypeWeapon)
+    if #weapons > 0 and room:askToSkillInvoke(player, {
+      skill_name = zhitian.name,
+      prompt = "#wzzz_v__zhitian-discard",
+    }) then
+      room:throwCard(weapons[1], zhitian.name, player, player)
+    end
+
+    if not player.dead and n >= zhitianNum(room) then
+      room:addPlayerMark(player, "@@wzzz_v__zhitian_crossbow-turn")
+    end
   end,
 })
 
-wzzz_v__zhitian:addAcquireEffect(function (self, player)
-  player.room:setPlayerMark(player, "@[wzzz_v__zhitian]", 7)
-end)
+zhitian:addEffect("targetmod", {
+  bypass_times = function(self, player, skill, scope, card)
+    return player:hasSkill(zhitian.name) and player:getMark("@@wzzz_v__zhitian_crossbow-turn") > 0 and
+      #player:getEquipments(Card.SubtypeWeapon) == 0 and card and skill.trueName == "slash_skill" and
+      scope == Player.HistoryPhase
+  end,
+})
 
-wzzz_v__zhitian:addLoseEffect(function (self, player)
-  player.room:setPlayerMark(player, "@[wzzz_v__zhitian]", 0)
-end)
-
-return wzzz_v__zhitian
+return zhitian

@@ -6,7 +6,7 @@ local yizhong = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__yizhong"] = "毅重",
-  [":wzzz_v__yizhong"] = "锁定技，当你没有装备防具时，黑色的【杀】对你无效。",
+  [":wzzz_v__yizhong"] = "锁定技，若你装备区里没有防具牌，则梅花【杀】对你无效。",
 
   ["$wzzz_v__yizhong1"] = "不先为备，何以待敌？",
   ["$wzzz_v__yizhong2"] = "稳重行军，百战不殆！",
@@ -16,7 +16,7 @@ yizhong:addEffect(fk.PreCardEffect, {
   anim_type = "defensive",
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(yizhong.name) and data.card.trueName == "slash" and data.to == player and
-      data.card.color == Card.Black and #player:getEquipments(Card.SubtypeArmor) == 0
+      data.card.suit == Card.Club and #player:getEquipments(Card.SubtypeArmor) == 0
   end,
   on_use = function (self, event, target, player, data)
     player.room:broadcastPlaySound("./packages/standard_cards/audio/card/nioh_shield")

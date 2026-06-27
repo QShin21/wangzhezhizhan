@@ -4,7 +4,7 @@ local qizhi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__qizhi"] = "奇制",
-  [":wzzz_v__qizhi"] = "当你于回合内使用非装备牌指定目标后，你可以弃置一名不为目标的角色的一张牌，然后令其摸一张牌。",
+  [":wzzz_v__qizhi"] = "当你于回合内使用牌指定目标后，你可以弃置不是此牌目标的一名角色一张牌，然后该角色摸一张牌。",
   ["@wzzz_v__qizhi-turn"] = "奇制",
   ["#wzzz_v__qizhi-choose"] = "奇制：你可以弃置一名角色一张牌，然后其摸一张牌",
 
@@ -16,7 +16,7 @@ qizhi:addEffect(fk.TargetSpecified, {
   anim_type = "control",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(qizhi.name) and player.room.current == player and
-      data.firstTarget and data.card.type ~= Card.TypeEquip and
+      data.firstTarget and
       table.find(player.room.alive_players, function (p)
         return not p:isNude()
       end)

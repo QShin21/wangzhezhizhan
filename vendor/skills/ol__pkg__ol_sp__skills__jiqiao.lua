@@ -1,10 +1,11 @@
 local jiqiao = fk.CreateSkill{
   name = "wzzz_v__ol__jiqiao",
+  tags = { Skill.Limited },
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol__jiqiao"] = "机巧",
-  [":wzzz_v__ol__jiqiao"] = "出牌阶段开始时，你可以弃置任意张装备牌，然后亮出牌堆顶两倍数量的牌，获得其中所有非装备牌。",
+  [":wzzz_v__ol__jiqiao"] = "限定技，出牌阶段开始时，你可以弃置任意张装备牌，然后亮出牌堆顶两倍数量的牌，获得其中所有非装备牌。",
 
   ["#wzzz_v__ol__jiqiao-invoke"] = "机巧：你可以弃置任意张装备牌，亮出牌堆顶两倍的牌，获得其中所有非装备牌",
 
@@ -15,7 +16,7 @@ Fk:loadTranslationTable{
 jiqiao:addEffect(fk.EventPhaseStart, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(jiqiao.name) and player.phase == Player.Play and
-      not player:isNude()
+      not player:isNude() and player:usedSkillTimes(jiqiao.name, Player.HistoryGame) == 0
   end,
   on_cost = function (self, event, target, player, data)
     local room = player.room

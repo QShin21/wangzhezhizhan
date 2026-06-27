@@ -4,7 +4,7 @@ local duanliang = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__m_ex__duanliang"] = "断粮",
-  [":wzzz_v__m_ex__duanliang"] = "你可以将一张黑色非锦囊牌当【兵粮寸断】使用。你对手牌数不小于你的角色使用【兵粮寸断】无距离限制。",
+  [":wzzz_v__m_ex__duanliang"] = "你可以将一张黑色非锦囊牌当【兵粮寸断】使用；若你本回合未造成过伤害，你使用【兵粮寸断】无距离限制。",
 
   ["#wzzz_v__m_ex__duanliang"] = "断粮：你可以将一张黑色非锦囊牌当【兵粮寸断】使用",
 
@@ -33,7 +33,9 @@ duanliang:addEffect("viewas", {
 duanliang:addEffect("targetmod", {
   bypass_distances =  function(self, player, skill, card, to)
     return player:hasSkill(duanliang.name) and skill.name == "supply_shortage_skill" and
-      to:getHandcardNum() >= player:getHandcardNum()
+      #player.room.logic:getActualDamageEvents(1, function(e)
+        return e.data.from == player
+      end, Player.HistoryTurn) == 0
   end,
 })
 

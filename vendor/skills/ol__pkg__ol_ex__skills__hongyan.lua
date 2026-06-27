@@ -5,8 +5,7 @@ local hongyan = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__hongyan"] = "红颜",
-  [":wzzz_v__ol_ex__hongyan"] = "锁定技，你的♠牌或你的♠判定牌的花色视为<font color='red'>♥</font>。"..
-  "若你的装备区里有<font color='red'>♥</font>牌，你的手牌上限改为体力上限。",
+  [":wzzz_v__ol_ex__hongyan"] = "锁定技，你的黑桃牌和你的黑桃判定牌视为红桃牌；若你的装备区里有牌，你的手牌上限等于你的体力上限。",
 
   ["$wzzz_v__ol_ex__hongyan1"] = "红颜娇花好，折花门前盼。",
   ["$wzzz_v__ol_ex__hongyan2"] = "我的容貌，让你心动了吗？",
@@ -24,9 +23,7 @@ hongyan:addEffect("filter", {
 
 hongyan:addEffect("maxcards", {
   fixed_func = function (self, player)
-    if player:hasSkill(hongyan.name) and table.find(player:getCardIds("e"), function (id)
-      return Fk:getCardById(id).suit == Card.Heart
-    end) then
+    if player:hasSkill(hongyan.name) and #player:getCardIds("e") > 0 then
       return player.maxHp
     end
   end,

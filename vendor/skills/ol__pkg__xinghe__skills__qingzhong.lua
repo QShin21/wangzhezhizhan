@@ -4,7 +4,7 @@ local qingzhong = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__qingzhong"] = "清忠",
-  [":wzzz_v__qingzhong"] = "出牌阶段开始时，你可以摸两张牌，然后本阶段结束时，你与一名手牌数最少的角色交换手牌。",
+  [":wzzz_v__qingzhong"] = "出牌阶段开始时，你可以摸两张牌，然后本阶段结束时，若你手牌数不为场上唯一最少，你与手牌数最少的一名其他角色交换手牌。",
 
   ["#wzzz_v__qingzhong-choose"] = "清忠：选择一名手牌数最少的角色，与其交换手牌",
 
@@ -54,7 +54,7 @@ qingzhong:addEffect(fk.EventPhaseEnd, {
       targets = targets,
       skill_name = qingzhong.name,
       prompt = "#wzzz_v__qingzhong-choose",
-      cancelable = ( x == player:getHandcardNum()),
+      cancelable = false,
     })
 
     if #targets > 0 then

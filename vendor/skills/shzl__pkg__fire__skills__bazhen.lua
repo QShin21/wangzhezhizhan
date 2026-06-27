@@ -5,7 +5,7 @@ local bazhen = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__bazhen"] = "八阵",
-  [":wzzz_v__bazhen"] = "锁定技，若你没有装备防具，视为你装备着【八卦阵】。",
+  [":wzzz_v__bazhen"] = "锁定技，若你的装备区里没有防具牌，你视为装备着【八卦阵】。",
 
   ["$wzzz_v__bazhen1"] = "你可识得此阵？",
   ["$wzzz_v__bazhen2"] = "太极生两仪，两仪生四象，四象生八卦。",
@@ -53,17 +53,6 @@ bazhen:addEffect(fk.AskForCardResponse, {
     })
   end,
   on_use = spec.on_use,
-})
-
-bazhen:addEffect(fk.FinishJudge, {
-  anim_type = "drawcard",
-  can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(bazhen.name) and data.reason == "#eight_diagram_skill" and
-      #player:getEquipments(Card.SubtypeArmor) == 0 and not data:matchPattern()
-  end,
-  on_use = function(self, event, target, player, data)
-    player:drawCards(1, bazhen.name)
-  end,
 })
 
 bazhen:addAI(Fk.Ltk.AI.newInvokeStrategy{

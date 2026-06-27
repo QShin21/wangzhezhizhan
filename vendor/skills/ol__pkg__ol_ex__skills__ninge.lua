@@ -5,7 +5,7 @@ local ninge = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ninge"] = "狞恶",
-  [":wzzz_v__ninge"] = "锁定技，当一名角色于当前回合内第二次受到伤害后，若其为你或来源为你，你摸一张牌，弃置其场上一张牌。",
+  [":wzzz_v__ninge"] = "锁定技，当一名角色于当前回合内第二次受到伤害后，若其为你或来源为你，你摸一张牌，弃置其区域里的一张牌。",
 
   ["$wzzz_v__ninge1"] = "古之恶来，今之典韦！",
   ["$wzzz_v__ninge2"] = "宁为刀俎，不为鱼肉！",
@@ -23,10 +23,10 @@ ninge:addEffect(fk.Damaged, {
     local room = player.room
     room:doIndicate(player, { target })
     player:drawCards(1, ninge.name)
-    if not player.dead and not target.dead and #target:getCardIds("ej") > 0 then
+    if not player.dead and not target.dead and #target:getCardIds("hej") > 0 then
       local id = room:askToChooseCard(player, {
         target = target,
-        flag = "ej",
+        flag = "hej",
         skill_name = ninge.name,
       })
       room:throwCard(id, ninge.name, target, player)

@@ -1,14 +1,13 @@
 local chongjian = fk.CreateSkill {
   name = "wzzz_v__ofl__chongjian",
-  tags = { Skill.AttachedKingdom },
-  attached_kingdom = {"wu"},
+  tags = { Skill.Limited },
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__ofl__chongjian"] = "冲坚",
-  [":wzzz_v__ofl__chongjian"] = "吴势力技，你可以将一张装备牌当【酒】或【杀】使用。",
+  [":wzzz_v__ofl__chongjian"] = "限定技，出牌阶段，你可以减1点体力上限，将一张装备牌当【酒】或无视防具的任意一种【杀】使用。",
 
-  ["#wzzz_v__ofl__chongjian"] = "冲坚：将装备牌当【酒】或【杀】使用",
+  ["#wzzz_v__ofl__chongjian"] = "冲坚：减1点体力上限，将装备牌当【酒】或无视防具的【杀】使用",
 }
 
 chongjian:addEffect("viewas", {
@@ -32,8 +31,20 @@ chongjian:addEffect("viewas", {
     card.skillName = chongjian.name
     return card
   end,
+  before_use = function(self, player, use)
+    local room = player.room
+    room:changeMaxHp(player, -1)
+    if use.card and use.card.trueName == "slash" then
+      for _, to in ipairs(use.tos or {}) do
+        room:addTableMark(player, MarkEnum.MarkArmorInvalidTo .. "-turn", to.id)
+      end
+    end
+  end,
+  enabled_at_play = function(self, player)
+    return player:usedSkillTimes(chongjian.name, Player.HistoryGame) == 0
+  end,
   enabled_at_response = function(self, player, response)
-    return not response
+    return false
   end,
 })
 

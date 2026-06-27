@@ -4,11 +4,10 @@ local zaiqi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ofl_mou__zaiqi"] = "再起",
-  [":wzzz_v__ofl_mou__zaiqi"] = "弃牌阶段结束时，你可以令至多X名角色依次选择一项（X为你本回合弃置过的牌数）：" ..
-  "1.令你摸一张牌；2.弃置一张牌，你回复1点体力。",
+  [":wzzz_v__ofl_mou__zaiqi"] = "弃牌阶段结束时，若你本回合弃置过牌，你可以令至多X名其他角色依次选择一项（X为本回合置入弃牌堆的红色牌数且至多为3）：1.令你摸一张牌；2.弃置一张牌。",
 
-  ["#wzzz_v__ofl_mou__zaiqi-choose"] = "再起：令至多%arg名角色选择：你摸一张牌，或弃置一张牌令你回复体力",
-  ["#wzzz_v__ofl_mou__zaiqi-discard"] = "再起：弃置一张牌令 %src 回复1点体力，或点“取消”其摸一张牌",
+  ["#wzzz_v__ofl_mou__zaiqi-choose"] = "再起：令至多%arg名其他角色选择：你摸一张牌，或其弃置一张牌",
+  ["#wzzz_v__ofl_mou__zaiqi-discard"] = "再起：弃置一张牌，或点“取消”令 %src 摸一张牌",
 
   ["$wzzz_v__ofl_mou__zaiqi1"] = "山辟路窄，误遭汝手，如何肯服？",
   ["$wzzz_v__ofl_mou__zaiqi2"] = "待我重整兵马，来日一决雌雄！",
@@ -32,14 +31,20 @@ zaiqi:addEffect(fk.EventPhaseEnd, {
     room.logic:getEventsOfScope(GameEvent.MoveCards, 1, function (e)
       for _, move in ipairs(e.data) do
         if move.toArea == Card.DiscardPile and move.moveReason == fk.ReasonDiscard and move.proposer == player then
-          n = n + #move.moveInfo
+          for _, info in ipairs(move.moveInfo) do
+            if Fk:getCardById(info.cardId).color == Card.Red then
+              n = n + 1
+            end
+          end
         end
       end
     end, Player.HistoryTurn)
+    n = math.min(n, 3)
+    if n == 0 then return false end
     local tos = room:askToChoosePlayers(player, {
       min_num = 1,
       max_num = n,
-      targets = room.alive_players,
+      targets = room:getOtherPlayers(player, false),
       skill_name = zaiqi.name,
       prompt = "#wzzz_v__ofl_mou__zaiqi-choose:::"..n,
       cancelable = true,
@@ -64,14 +69,7 @@ zaiqi:addEffect(fk.EventPhaseEnd, {
             prompt = "#wzzz_v__ofl_mou__zaiqi-discard:" .. player.id,
             cancelable = true,
           }) > 0 then
-          if player:isWounded() and not player.dead then
-            room:recover{
-              who = player,
-              num = 1,
-              recoverBy = p,
-              skillName = zaiqi.name
-            }
-          end
+          -- The second option only asks that role to discard a card.
         else
           player:drawCards(1, zaiqi.name)
         end

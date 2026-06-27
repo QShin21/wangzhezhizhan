@@ -5,9 +5,9 @@ local cunsi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__cunsi"] = "存嗣",
-  [":wzzz_v__ty__cunsi"] = "限定技，出牌阶段，你可以令一名角色获得〖勇决〗；若不为你，你摸两张牌。",
+  [":wzzz_v__ty__cunsi"] = "限定技，出牌阶段，你可以回复1点体力，然后失去“清玉”并令一名角色获得“勇决”，若不为你，其摸两张牌。",
 
-  ["#wzzz_v__ty__cunsi"] = "存嗣：令一名角色获得“勇决”，若不为你，你摸两张牌",
+  ["#wzzz_v__ty__cunsi"] = "存嗣：回复1点体力，失去“清玉”并令一名角色获得“勇决”",
 
   ["$wzzz_v__ty__cunsi1"] = "存汉室之嗣，留汉室之本。",
   ["$wzzz_v__ty__cunsi2"] = "一切，便托付将军了！",
@@ -28,9 +28,20 @@ cunsi:addEffect("active", {
   on_use = function(self, room, effect)
     local player = effect.from
     local target = effect.tos[1]
-    room:handleAddLoseSkills(target, "ty__yongjue")
+    if player:isWounded() then
+      room:recover{
+        who = player,
+        num = 1,
+        recoverBy = player,
+        skillName = cunsi.name,
+      }
+      if player.dead then return end
+    end
+    room:handleAddLoseSkills(player, "-wzzz_v__qingyu", nil, false, true)
+    if player.dead or target.dead then return end
+    room:handleAddLoseSkills(target, "wzzz_v__ty__yongjue", nil, false, true)
     if target ~= player then
-      player:drawCards(2, cunsi.name)
+      target:drawCards(2, cunsi.name)
     end
   end,
 })

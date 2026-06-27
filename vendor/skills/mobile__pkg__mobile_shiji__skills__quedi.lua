@@ -4,8 +4,7 @@ local quedi = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__quedi"] = "却敌",
-  [":wzzz_v__quedi"] = "每回合限一次，当你使用【杀】或【决斗】指定唯一目标后，你可以选择一项：1.获得其一张手牌；2.弃置一张基本牌，令此【杀】或【决斗】"..
-  "伤害基数+1；背水：减1点体力上限。",
+  [":wzzz_v__quedi"] = "每回合限一次，当你使用【杀】或【决斗】指定唯一目标后，你可以选择一项或减1点体力上限依次执行两项：1.获得其一张手牌；2.弃置一张基本牌令此牌造成的伤害+1。",
 
   ["#wzzz_v__quedi-choice"] = "却敌：你可以是否对 %dest 发动“却敌”？（已用：%arg/%arg2）",
   ["wzzz_v__quedi_prey"] = "获得%dest一张手牌",
@@ -29,11 +28,17 @@ quedi:addEffect(fk.TargetSpecified, {
     local room = player.room
     local all_choices = { "wzzz_v__quedi_prey::"..data.to.id, "wzzz_v__quedi_damage:::"..data.card.trueName, "wzzz_v__quedi_beishui", "Cancel" }
     local choices = table.simpleClone(all_choices)
-    if player:isKongcheng() then
+    local has_basic = table.find(player:getCardIds("h"), function(id)
+      return Fk:getCardById(id).type == Card.TypeBasic and not player:prohibitDiscard(id)
+    end) ~= nil
+    if not has_basic then
       table.remove(choices, 2)
     end
     if data.to:isKongcheng() then
       table.remove(choices, 1)
+    end
+    if data.to:isKongcheng() or not has_basic then
+      table.removeOne(choices, "wzzz_v__quedi_beishui")
     end
     local prompt = "#wzzz_v__quedi-choice::"..data.to.id..":"..player:usedSkillTimes(quedi.name, Player.HistoryTurn)..":"
     ..(1 + player:getMark("choujue_buff-turn"))
@@ -67,7 +72,7 @@ quedi:addEffect(fk.TargetSpecified, {
         include_equip = false,
         skill_name = quedi.name,
         pattern = ".|.|.|.|.|basic",
-        cancelable = true,
+        cancelable = choice ~= "wzzz_v__quedi_beishui",
         prompt = "#wzzz_v__quedi-discard:::" .. data.card.trueName,
       }) > 0 then
         data.additionalDamage = (data.additionalDamage or 0) + 1

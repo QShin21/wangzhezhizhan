@@ -4,7 +4,7 @@ local liangzhu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__liangzhu"] = "良助",
-  [":wzzz_v__liangzhu"] = "当一名角色于其出牌阶段内回复体力时，你可以选择一项：1.摸一张牌；2.令该角色摸两张牌。",
+  [":wzzz_v__liangzhu"] = "每回合限一次，当一名角色于其出牌阶段内不因“结姻”回复体力后，你可以摸一张牌或令其摸两张牌。",
 
   ["wzzz_v__liangzhu_draw2"] = "%dest摸两张牌",
 
@@ -15,7 +15,8 @@ Fk:loadTranslationTable{
 liangzhu:addEffect(fk.HpRecover, {
   anim_type = "support",
   can_trigger = function(self, event, target, player, data)
-    return player:hasSkill(liangzhu.name) and target.phase == Player.Play
+    return player:hasSkill(liangzhu.name) and target.phase == Player.Play and data.skillName ~= "wzzz_v__jieyin" and
+      player:usedSkillTimes(liangzhu.name, Player.HistoryTurn) == 0
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room
@@ -38,7 +39,6 @@ liangzhu:addEffect(fk.HpRecover, {
     if choice == "draw1" then
       player:drawCards(1, liangzhu.name)
     else
-      room:addTableMarkIfNeed(player, "wzzz_v__liangzhu_target", target.id)
       target:drawCards(2, liangzhu.name)
     end
   end,

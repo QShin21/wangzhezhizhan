@@ -5,8 +5,7 @@ local mouXueyi = fk.CreateSkill({
 
 Fk:loadTranslationTable{
   ["wzzz_v__mou__xueyi"] = "血裔",
-  [":wzzz_v__mou__xueyi"] = "主公技，锁定技，你的手牌上限+2X（X为其他群势力角色数）；"..
-  "当你使用牌指定其他群势力角色为目标后，你摸一张牌（每回合你以此法至多获得两张牌）。",
+  [":wzzz_v__mou__xueyi"] = "主公技，锁定技，你的手牌上限+2X（X为其他群势力角色数），你杀死忠臣不执行奖惩。每回合限一次，当你使用牌指定其他群势力角色为目标后，你摸一张牌。",
 
   ["$wzzz_v__mou__xueyi1"] = "四世三公之贵，岂是尔等寒门可及？",
   ["$wzzz_v__mou__xueyi2"] = "吾袁门名冠天下，何须奉天子为傀？",
@@ -18,7 +17,7 @@ mouXueyi:addEffect(fk.TargetSpecified, {
     return
       player:hasSkill(mouXueyi.name) and
       target == player and
-      player:usedEffectTimes(self.name) < 2 and
+      player:usedEffectTimes(self.name, Player.HistoryTurn) == 0 and
       data.to ~= player and
       data.to.kingdom == "qun"
   end,

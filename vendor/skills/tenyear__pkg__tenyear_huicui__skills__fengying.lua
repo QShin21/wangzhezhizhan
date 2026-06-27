@@ -5,8 +5,7 @@ local fengying = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty__fengying"] = "奉迎",
-  [":wzzz_v__ty__fengying"] = "限定技，出牌阶段，你可以弃置所有手牌，若如此做，此回合结束后，你执行一个额外回合；此额外回合开始时，若你的体力值全场最少，"..
-  "你将手牌摸至体力上限。",
+  [":wzzz_v__ty__fengying"] = "限定技，出牌阶段，你可以弃置所有手牌并于此回合结束后执行一个额外的回合。此额外的回合开始时，若你已受伤且体力值为全场最少，你可以将手牌摸至体力值。",
 
   ["#wzzz_v__ty__fengying"] = "奉迎：你可以弃置所有手牌，此回合结束后执行一个额外回合！",
 
@@ -40,14 +39,16 @@ fengying:addEffect(fk.TurnStart, {
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
     return target == player and player:getCurrentExtraTurnReason() == fengying.name and
-      player:getHandcardNum() < player.maxHp and
+      player:isWounded() and player:getHandcardNum() < player.hp and
       table.every(player.room.alive_players, function (p)
         return p.hp >= player.hp
       end)
   end,
-  on_cost = Util.TrueFunc,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, { skill_name = fengying.name })
+  end,
   on_use = function(self, event, target, player, data)
-    player:drawCards(player.maxHp - player:getHandcardNum(), fengying.name)
+    player:drawCards(player.hp - player:getHandcardNum(), fengying.name)
   end,
 })
 

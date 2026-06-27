@@ -5,7 +5,7 @@ local wzzz_v__xianfu = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__xianfu"] = "先辅",
-  [":wzzz_v__xianfu"] = "锁定技，游戏开始时，你选择一名其他角色，当其受到伤害后，你受到等量的伤害；当其回复体力后，你回复等量的体力。",
+  [":wzzz_v__xianfu"] = "锁定技，游戏开始时，你声明一名其他角色获得“先辅”标记，当其受到伤害后，你受到等量的无来源普通伤害；当其回复体力后，你回复等量的体力。",
 
   ["@wzzz_v__xianfu"] = "先辅",
   ["#wzzz_v__xianfu-choose"] = "先辅：请选择要先辅的角色",

@@ -4,7 +4,7 @@ local zhiba_active = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__zhiba_active&"] = "制霸",
-  [":wzzz_v__zhiba_active&"] = "出牌阶段限一次，你可与孙策拼点（若其发动过〖魂姿〗，其可以拒绝此拼点），若你没赢，其可以获得拼点的两张牌。",
+  [":wzzz_v__zhiba_active&"] = "出牌阶段限一次，你可以与拥有“制霸”的角色拼点（其可以拒绝此拼点），若你没赢，其可以获得拼点的两张牌。",
 
   ["#wzzz_v__zhiba"] = "制霸：你可以与孙策拼点",
 }
@@ -43,8 +43,7 @@ zhiba_active:addEffect("active", {
     room:notifySkillInvoked(target, "wzzz_v__zhiba")
     target:broadcastSkillInvoke("wzzz_v__zhiba")
     room:doIndicate(player.id, { target.id })
-    if target:usedSkillTimes("wzzz_v__hunzi", Player.HistoryGame) + target:usedSkillTimes("wzzz_v__m_ex__hunzi", Player.HistoryGame) > 0 and
-      room:askToChoice(target, {
+    if room:askToChoice(target, {
         choices = {"wzzz_v__zhiba_yes", "wzzz_v__zhiba_no"},
         skill_name = "wzzz_v__zhiba",
         prompt = "#wzzz_v__zhiba-ask:" .. player.id,

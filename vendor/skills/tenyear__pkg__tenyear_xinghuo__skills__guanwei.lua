@@ -4,7 +4,7 @@ local wzzz_v__guanwei = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__guanwei"] = "观微",
-  [":wzzz_v__guanwei"] = "每回合限一次，一名角色的出牌阶段结束时，若其于此回合内使用过至少两张牌，且这些牌花色均相同或均没有花色，你可以弃置一张牌，"..
+  [":wzzz_v__guanwei"] = "每回合限一次，一名角色的出牌阶段结束后，若其本回合使用过至少两张非虚拟牌，且这些牌花色均相同或均为无色牌，你可以弃置一张牌，"..
   "令其摸两张牌并执行一个额外的出牌阶段。",
 
   ["#wzzz_v__guanwei-invoke"] = "观微：你可以弃一张牌，令 %dest 摸两张牌并执行一个额外出牌阶段",
@@ -24,7 +24,7 @@ wzzz_v__guanwei:addEffect(fk.EventPhaseEnd, {
       local suit = nil
       player.room.logic:getEventsOfScope(GameEvent.UseCard, 1, function (e)
         local use = e.data
-        if use.from == target then
+        if use.from == target and not use.card:isVirtual() then
           if suit == nil then
             suit = use.card.suit
           elseif suit ~= use.card.suit then

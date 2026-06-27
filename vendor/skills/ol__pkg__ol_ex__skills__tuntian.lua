@@ -6,7 +6,7 @@ local tuntian = fk.CreateSkill {
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__tuntian"] = "屯田",
   [":wzzz_v__ol_ex__tuntian"] = "当你于回合外失去牌后，或于回合内因弃置而失去【杀】后，你可以进行判定，若结果不为<font color='red'>♥</font>，"..
-  "你将判定牌置于你的武将牌上，称为“田”；你计算与其他角色的距离-X（X为“田”的数量）。",
+  "你将判定牌置于你的武将牌上，称为“田”；若结果为<font color='red'>♥</font>，你获得此判定牌；你计算与其他角色的距离-X（X为“田”的数量）。",
 
   ["ol_ex__dengai_field"] = "田",
 
@@ -55,11 +55,15 @@ tuntian:addEffect(fk.FinishJudge, {
   mute = true,
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)
-    return target == player and not player.dead and data:matchPattern() and data.reason == tuntian.name
+    return target == player and not player.dead and data.reason == tuntian.name
       and player.room:getCardArea(data.card) == Card.Processing
   end,
   on_use = function(self, event, target, player, data)
-    player:addToPile("ol_ex__dengai_field", data.card, true, tuntian.name)
+    if data:matchPattern() then
+      player:addToPile("ol_ex__dengai_field", data.card, true, tuntian.name)
+    else
+      player.room:obtainCard(player, data.card, true, fk.ReasonJustMove, player, tuntian.name)
+    end
   end,
 })
 

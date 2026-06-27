@@ -5,10 +5,11 @@ local wuji = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__shzj_guansuo__wuji"] = "武继",
-  [":wzzz_v__shzj_guansuo__wuji"] = "觉醒技，结束阶段，若你本回合造成了至少3点伤害，你加1点体力上限并回复1点体力，失去〖虎啸〗，"..
-  "然后从游戏外获得【青龙偃月刀】或摸两张牌。",
+  [":wzzz_v__shzj_guansuo__wuji"] = "觉醒技，结束阶段，若你于此回合内造成过至少3点伤害，你加1点体力上限并回复1点体力，然后选择一项：1.获得“偃月”，失去“虎啸”并摸两张牌，然后可以弃置你装备区里的武器牌；2.获得“武圣”并摸一张牌。",
 
-  ["wzzz_v__shzj_guansuo__wuji_blade"] = "获得【青龙偃月刀】",
+  ["wzzz_v__shzj_guansuo__wuji_yanyue"] = "获得“偃月”",
+  ["wzzz_v__shzj_guansuo__wuji_wusheng"] = "获得“武圣”",
+  ["#wzzz_v__shzj_guansuo__wuji-discard"] = "武继：你可以弃置装备区里的武器牌",
 
   ["$wzzz_v__shzj_guansuo__wuji1"] = "每逢佳节，报仇之心益切！",
   ["$wzzz_v__shzj_guansuo__wuji2"] = "继父之武，承父之志！",
@@ -42,17 +43,27 @@ wuji:addEffect(fk.EventPhaseStart, {
       }
       if player.dead then return end
     end
-    room:handleAddLoseSkills(player, "-shzj_guansuo__huxiao")
-    if player.dead then return end
     local choice = room:askToChoice(player, {
-      choices = {"wzzz_v__shzj_guansuo__wuji_blade", "draw2"},
+      choices = {"wzzz_v__shzj_guansuo__wuji_yanyue", "wzzz_v__shzj_guansuo__wuji_wusheng"},
       skill_name = wuji.name,
     })
-    if choice == "draw2" then
+    if choice == "wzzz_v__shzj_guansuo__wuji_yanyue" then
+      room:handleAddLoseSkills(player, "wzzz_s__5043_6708|-wzzz_v__ol__huxiao", nil, false, true)
+      if player.dead then return end
       player:drawCards(2, wuji.name)
+      if player.dead then return end
+      local weapons = player:getEquipments(Card.SubtypeWeapon)
+      if #weapons > 0 and room:askToSkillInvoke(player, {
+        skill_name = wuji.name,
+        prompt = "#wzzz_v__shzj_guansuo__wuji-discard",
+      }) then
+        room:throwCard(weapons[1], wuji.name, player, player)
+      end
     else
-      local card = room:printCard("blade", Card.Spade, 5)
-      room:moveCardTo(card, Card.PlayerHand, player, fk.ReasonJustMove, wuji.name, nil, true, player)
+      room:handleAddLoseSkills(player, "wzzz_v__wusheng", nil, false, true)
+      if not player.dead then
+        player:drawCards(1, wuji.name)
+      end
     end
   end,
 })

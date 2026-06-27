@@ -4,7 +4,7 @@ local tunjiang = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__tunjiang"] = "屯江",
-  [":wzzz_v__tunjiang"] = "结束阶段，若你未跳过本回合的出牌阶段，且你于本回合出牌阶段内未使用牌指定过其他角色为目标，你可以摸X张牌（X为全场势力数）。",
+  [":wzzz_v__tunjiang"] = "结束阶段，若你未执行出牌阶段或于出牌阶段内未对其他角色使用过牌，你可以摸X张牌（X为全场势力数）。",
 
   ["$wzzz_v__tunjiang1"] = "皇叔勿惊，吾与关将军已到。",
   ["$wzzz_v__tunjiang2"] = "江夏冲要之地，孩儿愿往守之。",
@@ -15,13 +15,11 @@ tunjiang:addEffect(fk.EventPhaseStart, {
   can_trigger = function(self, event, target, player, data)
     if target == player and player:hasSkill(tunjiang.name) and player.phase == Player.Finish then
       local turnEvent = player.room.logic:getCurrentEvent():findParent(GameEvent.Turn)
-      if
-        not turnEvent or
-        table.find(turnEvent.data.phase_table,
-          function(phase) return phase.who == player and phase.phase == Player.Play and phase.skipped end
-        )
-      then
-        return false
+      if not turnEvent then return false end
+      if table.find(turnEvent.data.phase_table, function(phase)
+        return phase.who == player and phase.phase == Player.Play and phase.skipped
+      end) then
+        return true
       end
 
       local phase_events = player.room.logic:getEventsOfScope(GameEvent.Phase, 999, function (e)

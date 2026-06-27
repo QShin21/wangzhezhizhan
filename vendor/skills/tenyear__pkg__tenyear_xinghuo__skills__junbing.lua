@@ -4,11 +4,11 @@ local junbing = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__junbing"] = "郡兵",
-  [":wzzz_v__ty_ex__junbing"] = "一名角色的结束阶段，若其手牌数小于体力值，该角色可以摸一张牌并将所有手牌交给你，然后你可以将等量的牌交给其。",
+  [":wzzz_v__ty_ex__junbing"] = "一名角色的结束阶段，若其手牌数小于体力值，其可以摸一张牌并交给你所有手牌，然后你交给其等量的牌。",
 
   ["#wzzz_v__ty_ex__junbing-self"] = "郡兵：你可以摸一张牌",
   ["#wzzz_v__ty_ex__junbing-invoke"] = "郡兵：你可以发动 %src 的“郡兵”，摸一张牌，然后与其交换手牌",
-  ["#wzzz_v__ty_ex__junbing-give"] = "郡兵：你可以将%arg张牌交给 %dest",
+  ["#wzzz_v__ty_ex__junbing-give"] = "郡兵：请将%arg张牌交给 %dest",
 
   ["$wzzz_v__ty_ex__junbing1"] = "",
   ["$wzzz_v__ty_ex__junbing2"] = "",
@@ -43,7 +43,7 @@ junbing:addEffect(fk.EventPhaseStart, {
       max_num = n,
       include_equip = true,
       skill_name = junbing.name,
-      cancelable = true,
+      cancelable = false,
       prompt = "#wzzz_v__ty_ex__junbing-give::"..target.id..":"..n,
     })
     if #cards > 0 then

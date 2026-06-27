@@ -5,16 +5,12 @@ local xiongyi = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__xh__xiongyi"] = "雄异",
-  [":wzzz_v__xh__xiongyi"] = "限定技，出牌阶段，你可以令与你势力相同的所有角色各摸三张牌，然后若你的体力值为场上唯一最小，你回复1点体力。当你脱离濒死状态时，本技能视为未发动过并删除回复体力的效果。",
+  [":wzzz_v__xh__xiongyi"] = "限定技，出牌阶段，你可以与一名其他角色各摸三张牌。若你的体力值为全场唯一最小，你回复1点体力。当你脱离濒死状态后，你复原此技能且删除回复体力的效果。",
 
-  ["#wzzz_v__xh__xiongyi"] = "雄异：令与你势力相同的所有角色各摸三张牌",
+  ["#wzzz_v__xh__xiongyi"] = "雄异：选择一名其他角色，你与其各摸三张牌",
   ["$wzzz_v__xh__xiongyi1"] = "弟兄们，我们的机会来啦！",
   ["$wzzz_v__xh__xiongyi2"] = "此时不战，更待何时！",
 }
-
-local function sameKingdom(p, me)
-  return p.kingdom ~= "unknown" and me.kingdom ~= "unknown" and p.kingdom == me.kingdom
-end
 
 local function isUniqueMinHp(room, me)
   return table.every(room:getOtherPlayers(me, false), function(p)
@@ -26,8 +22,11 @@ xiongyi:addEffect("active", {
   anim_type = "drawcard",
   prompt = "#wzzz_v__xh__xiongyi",
   card_num = 0,
-  target_num = 0,
+  target_num = 1,
   card_filter = Util.FalseFunc,
+  target_filter = function(self, player, to_select, selected)
+    return #selected == 0 and to_select ~= player
+  end,
 
   can_use = function(self, player)
     return player.phase == Player.Play and player:usedSkillTimes(xiongyi.name, Player.HistoryGame) == 0
@@ -36,13 +35,12 @@ xiongyi:addEffect("active", {
   on_use = function(self, room, effect)
     local player = effect.from
 
-    local targets = table.filter(room:getAlivePlayers(), function(p)
-      return not p.dead and sameKingdom(p, player)
-    end)
-    for _, p in ipairs(targets) do
-      if not p.dead then
-        p:drawCards(3, xiongyi.name)
-      end
+    local target = effect.tos[1]
+    if not player.dead then
+      player:drawCards(3, xiongyi.name)
+    end
+    if not target.dead then
+      target:drawCards(3, xiongyi.name)
     end
 
     if player.dead then return end

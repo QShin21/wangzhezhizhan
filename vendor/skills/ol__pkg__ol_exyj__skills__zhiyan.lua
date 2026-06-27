@@ -4,8 +4,7 @@ local zhiyan = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__ol_ex__zhiyan"] = "直言",
-  [":wzzz_v__ol_ex__zhiyan"] = "你或你上家的结束阶段，你可以令一名角色摸一张牌并展示之，若此牌：为装备牌，其使用此牌并回复1点体力；"..
-  "不为装备牌且其体力值不等于你，其失去1点体力。",
+  [":wzzz_v__ol_ex__zhiyan"] = "结束阶段，你可以令一名角色摸一张牌并展示之，若此牌为：装备牌，则其使用之并回复1点体力；非装备牌，若其体力值不等于你，其失去1点体力。",
 
   ["#wzzz_v__ol_ex__zhiyan-choose"] = "直言：你可以令一名角色摸一张牌并展示之",
   ["#wzzz_v__ol_ex__zhiyan-use"] = "直言：请使用%arg",
@@ -17,7 +16,7 @@ Fk:loadTranslationTable{
 zhiyan:addEffect(fk.EventPhaseStart, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    return target.phase == Player.Finish and (target == player or target:getNextAlive() == player) and player:hasSkill(zhiyan.name)
+    return target == player and target.phase == Player.Finish and player:hasSkill(zhiyan.name)
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room

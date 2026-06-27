@@ -52,6 +52,7 @@ wzzz_v__xiaosi:addEffect("active", {
         table.insert(cards, card[1])
         room:throwCard(card, wzzz_v__xiaosi.name, target, target)
       else
+        target:showCards(target:getCardIds("h"))
         noBasicThrowed = true
       end
     end

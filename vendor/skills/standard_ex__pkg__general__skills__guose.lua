@@ -1,10 +1,10 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__guose"] = "国色",
   [":wzzz_v__ex__guose"] = "出牌阶段限一次，你可以选择一项：1.将一张<font color='red'>♦</font>牌当【乐不思蜀】使用；"..
-  "2.弃置一张<font color='red'>♦</font>牌并弃置场上的一张【乐不思蜀】。选择完成后，你摸一张牌。",
+  "2.弃置一张<font color='red'>♦</font>牌并弃置场上的一张【乐不思蜀】。",
 
-  ["#wzzz_v__ex__guose_use"] = "国色：将一张<font color='red'>♦</font>牌当【乐不思蜀】使用，然后你摸一张牌",
-  ["#wzzz_v__ex__guose_throw"] = "国色：弃置<font color='red'>♦</font>牌并弃置场上一张【乐不思蜀】，然后你摸一张牌",
+  ["#wzzz_v__ex__guose_use"] = "国色：将一张<font color='red'>♦</font>牌当【乐不思蜀】使用",
+  ["#wzzz_v__ex__guose_throw"] = "国色：弃置<font color='red'>♦</font>牌并弃置场上一张【乐不思蜀】",
   ["wzzz_v__ex__guose_use"] = "使用乐不思蜀",
   ["wzzz_v__ex__guose_throw"] = "弃置乐不思蜀",
 
@@ -72,9 +72,6 @@ guose:addEffect("active", {
         end
         room:throwCard(id, guose.name, target, player)
       end
-    end
-    if not player.dead then
-      player:drawCards(1, guose.name)
     end
   end,
 })

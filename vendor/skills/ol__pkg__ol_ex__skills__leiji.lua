@@ -4,8 +4,7 @@ local leiji = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__leiji"] = "雷击",
-  [":wzzz_v__ol_ex__leiji"] = "当你使用或打出【闪】或【闪电】时，你可以进行判定。当你的判定结果确定后，若结果为：♠，你可以对一名其他角色造成2点雷电伤害；"..
-  "♣，你回复1点体力，然后你可以对一名其他角色造成1点雷电伤害。",
+  [":wzzz_v__ol_ex__leiji"] = "当你使用或打出【闪】，或使用【闪电】时，你可以进行判定。当你的判定牌生效后，若结果为：黑桃，你可以对一名角色造成2点雷电伤害；梅花，你回复1点体力并可以对一名角色造成1点雷电伤害。",
 
   ["#wzzz_v__ol_ex__leiji-choose"] = "雷击：你可以对一名角色造成%arg点雷电伤害",
 
@@ -35,7 +34,7 @@ leiji:addEffect(fk.CardResponding, judge_data)
 leiji:addEffect(fk.FinishJudge, {
   anim_type = "offensive",
   can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(leiji.name) and data.card.color == Card.Black
+    return target == player and player:hasSkill(leiji.name) and data.reason == leiji.name and data.card.color == Card.Black
   end,
   on_cost = Util.TrueFunc,
   on_use = function(self, event, target, player, data)
@@ -54,7 +53,7 @@ leiji:addEffect(fk.FinishJudge, {
       if player.dead then return false end
     end
     local to = room:askToChoosePlayers(player, {
-      targets = room:getOtherPlayers(player, false),
+      targets = room.alive_players,
       min_num = 1,
       max_num = 1,
       prompt = "#wzzz_v__ol_ex__leiji-choose:::" .. x,

@@ -89,6 +89,7 @@ enyuan:addEffect(fk.Damaged, {
       prompt = "#wzzz_v__ol_ex__enyuan-give:"..player.id,
     })
     if #card > 0 then
+      data.from:showCards(card)
       room:moveCardTo(card, Player.Hand, player, fk.ReasonGive, enyuan.name, nil, false, data.from)
     else
       room:loseHp(data.from, 1, enyuan.name)

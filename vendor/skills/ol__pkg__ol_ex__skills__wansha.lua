@@ -5,7 +5,7 @@ local wansha = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__wansha"] = "完杀",
-  [":wzzz_v__ol_ex__wansha"] = "锁定技，你的回合内：只有你和处于濒死状态的角色可以使用【桃】；濒死流程中，除其以外的其他角色非锁定技无效。",
+  [":wzzz_v__ol_ex__wansha"] = "锁定技，你的回合内，若有角色处于濒死状态，只有你和处于濒死状态的角色才能使用【桃】；任意角色的濒死结算中，除你和濒死角色外的其他角色非锁定技失效。",
 
   ["$wzzz_v__ol_ex__wansha1"] = "有谁敢试试？",
   ["$wzzz_v__ol_ex__wansha2"] = "斩草务尽，以绝后患。",

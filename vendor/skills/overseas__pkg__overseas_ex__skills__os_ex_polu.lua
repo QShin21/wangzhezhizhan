@@ -5,9 +5,9 @@ local osExPolu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__os_ex__polu"] = "破虏",
-  [":wzzz_v__os_ex__polu"] = "主公技，当吴势力角色杀死一名角色或死亡后，你可令任意名角色各摸X张牌（X为你发动过此技能的次数+1）。",
+  [":wzzz_v__os_ex__polu"] = "主公技，当吴势力角色杀死一名角色或死亡后，你可以令至多三名角色各摸Y张牌（Y为你此前发动过此技能的次数+1且至多为3）。",
 
-  ["#wzzz_v__os_ex__polu"] = "破虏：你可选择任意名角色，令其各摸 %arg 张牌",
+  ["#wzzz_v__os_ex__polu"] = "破虏：你可选择至多三名角色，令其各摸 %arg 张牌",
   ["@wzzz_v__os_ex__polu"] = "破虏",
 
   ["$wzzz_v__os_ex__polu1"] = "义定四野，武匡海内。", -- 其实是给英魂的
@@ -41,9 +41,10 @@ osExPolu:addEffect(fk.Deathed, {
       {
         targets = alivePlayers,
         min_num = 1,
-        max_num = #alivePlayers,
-        prompt = "#wzzz_v__os_ex__polu:::" .. player:usedSkillTimes(skillName, Player.HistoryGame) + 1,
+        max_num = math.min(3, #alivePlayers),
+        prompt = "#wzzz_v__os_ex__polu:::" .. math.min(3, player:usedSkillTimes(skillName, Player.HistoryGame) + 1),
         skill_name = skillName,
+        cancelable = true,
       }
     )
     if #targets > 0 then
@@ -56,9 +57,10 @@ osExPolu:addEffect(fk.Deathed, {
     local room = player.room
     room:sortByAction(targets)
     room:addPlayerMark(player, "@wzzz_v__os_ex__polu")
+    local n = math.min(3, player:usedSkillTimes(osExPolu.name, Player.HistoryGame))
     for _, p in ipairs(targets) do
       if p:isAlive() then
-        p:drawCards(player:usedSkillTimes(osExPolu.name, Player.HistoryGame))
+        p:drawCards(n, osExPolu.name)
       end
     end
   end,

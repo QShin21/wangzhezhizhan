@@ -4,7 +4,7 @@ local wzzz_v__bushi = fk.CreateSkill{
 
 Fk:loadTranslationTable{
   ["wzzz_v__bushi"] = "布施",
-  [":wzzz_v__bushi"] = "当你受到1点伤害，或当一名角色受到你造成的1点伤害后，受到伤害的角色可以获得一张“米”。",
+  [":wzzz_v__bushi"] = "当你受到1点伤害后，你可以获得一张“米”；当你对其他角色造成1点伤害后，其可以获得一张“米”。",
 
   ["#wzzz_v__bushi-invoke"] = "布施：你可以获得 %src 的一张“米”",
 
@@ -14,12 +14,9 @@ Fk:loadTranslationTable{
 
 wzzz_v__bushi:addEffect(fk.Damaged, {
   anim_type = "masochism",
-  trigger_times = function(self, event, target, player, data)
-    return data.damage
-  end,
   can_trigger = function (self, event, target, player, data)
-    return player:hasSkill(wzzz_v__bushi.name) and #player:getPile("zhanglu_mi") > 0 and
-      (target == player or (data.from == player and not target.dead))
+    return player:hasSkill(wzzz_v__bushi.name) and #player:getPile("zhanglu_mi") > 0 and data.damage == 1 and
+      (target == player or (data.from == player and target ~= player and not target.dead))
   end,
   on_cost = function (self, event, target, player, data)
     local room = player.room

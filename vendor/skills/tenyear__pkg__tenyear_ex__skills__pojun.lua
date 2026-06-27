@@ -4,12 +4,10 @@ local pojun = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__pojun"] = "破军",
-  [":wzzz_v__ty_ex__pojun"] = "当你使用【杀】指定一个目标后，你可以将其至多X张牌移出游戏直到回合结束（X为其体力值），若其中有：装备牌，"..
-  "你弃置其中一张；锦囊牌，你摸一张牌。",
+  [":wzzz_v__ty_ex__pojun"] = "当你使用【杀】指定目标后，你可以将该角色的至多X张牌扣置于其武将牌上，本回合结束后，其获得这些牌（X为其体力值）；当你使用【杀】对目标角色造成伤害时，若其手牌区和装备区里的牌数均不大于你，此伤害+1。",
 
   ["#wzzz_v__ty_ex__pojun-invoke"] = "破军：你可以扣置 %dest 至多%arg张牌",
   ["$wzzz_v__ty_ex__pojun"] = "破军",
-  ["#wzzz_v__ty_ex__pojun-discard"] = "破军：弃置其中一张装备",
 
   ["$wzzz_v__ty_ex__pojun1"] = "奋身出命，为国建功！",
   ["$wzzz_v__ty_ex__pojun2"] = "披甲持戟，先登陷陈！",
@@ -40,24 +38,18 @@ pojun:addEffect(fk.TargetSpecified, {
       max = data.to.hp,
     })
     data.to:addToPile("$wzzz_v__ty_ex__pojun", cards, false, pojun.name, player)
-    if player.dead or data.to.dead then return end
-    local equips = table.filter(cards, function (id)
-      return Fk:getCardById(id).type == Card.TypeEquip
-    end)
-    if #equips > 0 then
-      local card = room:askToChooseCard(player, {
-        target = data.to,
-        flag = { card_data = { { pojun.name, equips } }},
-        skill_name = pojun.name,
-        prompt = "#wzzz_v__ty_ex__pojun-discard",
-      })
-      room:throwCard(card, pojun.name, data.to, player)
-    end
-    if table.find(cards, function (id)
-      return Fk:getCardById(id).type == Card.TypeTrick
-    end) and not player.dead then
-      player:drawCards(1, pojun.name)
-    end
+  end,
+})
+
+pojun:addEffect(fk.DamageCaused, {
+  anim_type = "offensive",
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:hasSkill(pojun.name) and data.card and data.card.trueName == "slash" and
+      data.to:getHandcardNum() <= player:getHandcardNum() and
+      #data.to:getCardIds("e") <= #player:getCardIds("e")
+  end,
+  on_use = function(self, event, target, player, data)
+    data:changeDamage(1)
   end,
 })
 

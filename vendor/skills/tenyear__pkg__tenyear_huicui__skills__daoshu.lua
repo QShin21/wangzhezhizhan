@@ -4,8 +4,7 @@ local daoshu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__daoshu"] = "盗书",
-  [":wzzz_v__daoshu"] = "出牌阶段限一次，你可以选择一名其他角色并选择一种花色，然后获得其一张手牌。若此牌与你选择的花色：相同，"..
-  "你对其造成1点伤害且此技能视为未发动过；不同，你交给其一张其他花色的手牌（若没有需展示所有手牌）。",
+  [":wzzz_v__daoshu"] = "出牌阶段限一次，你可以选择一名有手牌的其他角色并声明一种花色，然后你获得其一张手牌并展示之，若此牌与你声明的花色：相同，你对其造成1点伤害，“盗书”视为未发动过；不同，你展示一张与此法获得的牌花色不同的手牌并交给该角色（没有则改为展示手牌）。",
 
   ["#wzzz_v__daoshu"] = "盗书：声明一种花色，获得一名角色的一张手牌",
   ["#wzzz_v__daoshu-give"] = "盗书：交给 %dest 一张非%arg手牌",
@@ -42,6 +41,9 @@ daoshu:addEffect("active", {
       skill_name = daoshu.name,
     })
     room:obtainCard(player, card, true, fk.ReasonPrey, player, daoshu.name)
+    if not player.dead then
+      player:showCards(card)
+    end
     if Fk:getCardById(card):getSuitString(true) == self.interaction.data then
       if not target.dead then
         room:damage{
@@ -55,7 +57,7 @@ daoshu:addEffect("active", {
     else
       if player.dead or player:isKongcheng() then return end
       local others = table.filter(player:getCardIds("h"), function(id)
-        return Fk:getCardById(id):compareSuitWith(Fk:getCardById(card), true)
+        return Fk:getCardById(id):getSuitString(true) ~= Fk:getCardById(card):getSuitString(true)
       end)
       if #others > 0 then
         local cards = room:askToCards(player, {
@@ -66,6 +68,7 @@ daoshu:addEffect("active", {
           skill_name = daoshu.name,
           cancelable = false,
         })[1]
+        player:showCards(cards)
         room:obtainCard(target, cards, true, fk.ReasonGive, player, daoshu.name)
       else
         player:showCards(player:getCardIds("h"))

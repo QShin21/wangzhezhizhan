@@ -5,7 +5,7 @@ local weimu = fk.CreateSkill {
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__weimu"] = "帷幕",
-  [":wzzz_v__ol_ex__weimu"] = "锁定技，你不是黑色锦囊牌的合法目标。当你于回合内受到伤害时，你防止此伤害，摸2X张牌（X为伤害值）。",
+  [":wzzz_v__ol_ex__weimu"] = "锁定技，你不能成为黑色锦囊牌的目标。当你于回合内受到伤害时，防止此伤害并摸等同于伤害数的牌。",
 
   ["$wzzz_v__ol_ex__weimu1"] = "此伤与我无关。",
   ["$wzzz_v__ol_ex__weimu2"] = "还是另寻他法吧。",
@@ -19,7 +19,7 @@ weimu:addEffect(fk.DetermineDamageInflicted, {
   on_use = function(self, event, target, player, data)
     local n = data.damage
     data:preventDamage()
-    player:drawCards(n * 2, weimu.name)
+    player:drawCards(n, weimu.name)
   end,
 })
 

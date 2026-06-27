@@ -2,7 +2,7 @@
 Fk:loadTranslationTable{
   ["wzzz_v__ex__luoyi"] = "裸衣",
   [":wzzz_v__ex__luoyi"] = "摸牌阶段开始前，你可以亮出牌堆顶的三张牌，然后你可以跳过摸牌阶段并获得其中所有基本牌、武器牌和【决斗】，"..
-    "且直到你的下回合开始，你为伤害来源的【杀】和【决斗】对目标角色造成的伤害+1。",
+    "且直到你的下回合开始，你为伤害来源的【杀】和【决斗】造成的伤害+1，且当你使用的【杀】被【闪】抵消后，你可以摸一张牌。",
 
   ["@@wzzz_v__ex__luoyi"] = "裸衣",
   ["#wzzz_v__ex__luoyi-ask"] = "裸衣：是否跳过摸牌，获得其中的基本牌、武器和【决斗】，造成伤害+1？",
@@ -62,6 +62,18 @@ luoyi:addEffect(fk.DamageCaused, {
   end,
   on_use = function(self, event, target, player, data)
     data:changeDamage(1)
+  end,
+})
+
+luoyi:addEffect(fk.CardEffectCancelledOut, {
+  anim_type = "drawcard",
+  is_delay_effect = true,
+  can_trigger = function(self, event, target, player, data)
+    return target == player and player:getMark("@@wzzz_v__ex__luoyi") > 0 and
+      data.card and data.card.trueName == "slash"
+  end,
+  on_use = function(self, event, target, player, data)
+    player:drawCards(1, luoyi.name)
   end,
 })
 

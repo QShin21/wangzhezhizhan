@@ -5,7 +5,7 @@ local pindi = fk.CreateSkill {
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__pindi"] = "品第",
   [":wzzz_v__ty_ex__pindi"] = "出牌阶段每名角色限一次，你可以弃置一张本阶段未以此法弃置类型的牌并选择一名角色，令其摸X张牌或弃置X张牌"..
-  "（X为本回合此技能发动次数）。若其已受伤，横置或重置你的武将牌。",
+  "（X为本回合此技能发动次数）。若其已受伤，你横置。",
 
   ["#wzzz_v__ty_ex__pindi"] = "品第：弃置一张未弃置过类别的牌，令一名角色摸牌或弃牌（%arg张）",
   ["@@TyPindiSelected"] = "已选过",
@@ -56,8 +56,8 @@ pindi:addEffect("active", {
         })
       end
     end
-    if target:isWounded() and not player.dead then
-      player:setChainState(not player.chained)
+    if target:isWounded() and not player.dead and not player.chained then
+      player:setChainState(true)
     end
   end,
 })

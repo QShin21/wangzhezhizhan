@@ -39,11 +39,20 @@ buqu:addEffect(fk.AskForPeaches, {
 
 Fk:loadTranslationTable{
   ["wzzz_v__hs__buqu"] = "不屈",
-  [":wzzz_v__hs__buqu"] = "锁定技，当你处于濒死状态时，你将牌堆顶的一张牌置于你的武将牌上，称为“创”，若此牌的点数与已有的“创”点数：均不同，则你将体力回复至1点；存在相同，将此牌置入弃牌堆。",
+  [":wzzz_v__hs__buqu"] = "锁定技，当你处于濒死状态时，你将牌堆顶的一张牌置于你的武将牌上，称为“创”，若此牌的点数与已有的“创”点数均不同，则你将体力回复至1点，若出现相同点数则将此牌置入弃牌堆。若你的武将牌上有“创”，则你的手牌上限与“创”的数量相等。",
   ["wzzz_v__hs__buqu_scar"] = "创",
 
   ["$wzzz_v__hs__buqu1"] = "战如熊虎，不惜躯命！",
   ["$wzzz_v__hs__buqu2"] = "哼，这点小伤算什么！",
 }
+
+buqu:addEffect("maxcards", {
+  fixed_func = function(self, player)
+    local n = #player:getPile("wzzz_v__hs__buqu_scar")
+    if player:hasSkill(buqu.name) and n > 0 then
+      return n
+    end
+  end,
+})
 
 return buqu

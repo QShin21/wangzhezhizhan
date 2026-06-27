@@ -1,87 +1,21 @@
 local wzzz_v__shenshi = fk.CreateSkill {
   name = "wzzz_v__shenshi",
-  tags = {Skill.Switch},
 }
 
 Fk:loadTranslationTable{
   ["wzzz_v__shenshi"] = "审时",
-  [":wzzz_v__shenshi"] = "转换技，阳：出牌阶段限一次，你可以交给手牌数最多的其他角色一张牌，并对其造成1点伤害，若其死亡，你可以令一名角色将手牌摸至四张。"..
-  "阴：当有手牌的其他角色对你造成伤害后，你可以观看其手牌，并交给其一张牌；当前回合结束阶段，若此牌仍在其手牌或装备区，你将手牌摸至四张。",
-
-  [":wzzz_v__shenshi_yang"] = "转换技，<font color=\"#E0DB2F\">阳：出牌阶段限一次，你可以交给手牌数最多的其他角色一张牌，并对其造成1点伤害，" ..
-  "若其死亡，你可以令一名角色将手牌摸至四张。</font>阴：当有手牌的其他角色对你造成伤害后，你可以观看其手牌，并交给其一张牌；当前回合结束阶段，" ..
-  "若此牌仍在其手牌或装备区，你将手牌摸至四张。",
-  [":wzzz_v__shenshi_yin"] = "转换技，阳：出牌阶段限一次，你可以交给手牌数最多的其他角色一张牌，并对其造成1点伤害，若其死亡，你可以令一名角色"..
-  "将手牌摸至四张。<font color=\"#E0DB2F\">阴：当有手牌的其他角色对你造成伤害后，你可以观看其手牌，并交给其一张牌；当前回合结束阶段，"..
-  "若此牌仍在其手牌或装备区，你将手牌摸至四张。</font>",
-
-  ["#wzzz_v__shenshi"] = "审时：交给手牌数最多的其他角色一张牌，并对其造成1点伤害",
-  ["#wzzz_v__shenshi-choose"] = "审时：你可以令一名角色将手牌摸至四张",
+  [":wzzz_v__shenshi"] = "当你受到其他角色造成的伤害后，你可以观看其手牌，然后交给其一张牌并展示之（本回合明置于其手牌区），当前回合结束时，若其未失去此牌，你将手牌摸至四张。",
   ["#wzzz_v__shenshi-invoke"] = "审时：你可以观看 %dest 的手牌并交给其一张牌",
   ["#wzzz_v__shenshi-give"] = "审时：交给 %dest 一张牌，若本回合结束阶段仍属于其，你将手牌摸至四张",
-  ["#wzzz_v__shenshiYin"] = "审时",
 
   ["$wzzz_v__shenshi1"] = "深中足智，鉴时审情。",
   ["$wzzz_v__shenshi2"] = "数语之言，审时度势。",
 }
 
-wzzz_v__shenshi:addEffect("active", {
-  anim_type = "switch",
-  card_num = 1,
-  target_num = 1,
-  prompt = "#wzzz_v__shenshi",
-  can_use = function(self, player)
-    return player:usedEffectTimes(self.name, Player.HistoryPhase) == 0 and
-      player:getSwitchSkillState(wzzz_v__shenshi.name, false) == fk.SwitchYang
-  end,
-  card_filter = function(self, player, to_select, selected)
-    return #selected == 0
-  end,
-  target_filter = function (self, player, to_select, selected)
-    if #selected == 0 and to_select ~= player then
-      local n = 0
-      for _, p in ipairs(Fk:currentRoom().alive_players) do
-        if p ~= player and p:getHandcardNum() > n then
-          n = p:getHandcardNum()
-        end
-      end
-      return to_select:getHandcardNum() == n
-    end
-  end,
-  on_use = function(self, room, effect)
-    local player = effect.from
-    local target = effect.tos[1]
-    room:obtainCard(target, effect.cards[1], true, fk.ReasonGive, player, wzzz_v__shenshi.name)
-    room:damage{
-      from = player,
-      to = target,
-      damage = 1,
-      skillName = wzzz_v__shenshi.name,
-    }
-    if target.dead and not player.dead then
-      local targets = table.filter(room.alive_players, function(p)
-        return p:getHandcardNum() < 4
-      end)
-      if #targets == 0 then return end
-      local to = room:askToChoosePlayers(player, {
-        min_num = 1,
-        max_num = 1,
-        targets = targets,
-        skill_name = wzzz_v__shenshi.name,
-        prompt = "#wzzz_v__shenshi-choose",
-        cancelable = true,
-      })
-      if #to > 0 then
-        to[1]:drawCards(4 - to[1]:getHandcardNum(), wzzz_v__shenshi.name)
-      end
-    end
-  end,
-})
 wzzz_v__shenshi:addEffect(fk.Damaged, {
-  anim_type = "switch",
+  anim_type = "masochism",
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(wzzz_v__shenshi.name) and
-      player:getSwitchSkillState(wzzz_v__shenshi.name, false) == fk.SwitchYin and
       data.from and data.from ~= player and not data.from.dead and not data.from:isKongcheng()
   end,
   on_cost = function(self, event, target, player, data)
@@ -108,7 +42,8 @@ wzzz_v__shenshi:addEffect(fk.Damaged, {
       cancelable = false,
     })
     room:addTableMark(player, "wzzz_v__shenshi-turn", {data.from.id, card[1]})
-    room:obtainCard(data.from, card, false, fk.ReasonGive, player, wzzz_v__shenshi.name)
+    player:showCards(card)
+    room:obtainCard(data.from, card, true, fk.ReasonGive, player, wzzz_v__shenshi.name)
   end,
 })
 wzzz_v__shenshi:addEffect(fk.EventPhaseStart, {

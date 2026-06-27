@@ -5,7 +5,7 @@ local qinxue = fk.CreateSkill{
 
 Fk:loadTranslationTable {
   ["wzzz_v__ol_ex__qinxue"] = "勤学",
-  [":wzzz_v__ol_ex__qinxue"] = "觉醒技，准备阶段或结束阶段，若你的手牌数比体力值多2或更多，你减1点体力上限，回复1点体力或摸两张牌，然后获得技能〖攻心〗。",
+  [":wzzz_v__ol_ex__qinxue"] = "觉醒技，准备阶段或结束阶段，若你的手牌数减体力值大于1，你减1点体力上限并获得“攻心”，然后回复1点体力或摸两张牌。",
 
   ["$wzzz_v__ol_ex__qinxue1"] = "士别三日，刮目相看！",
   ["$wzzz_v__ol_ex__qinxue2"] = "吴下阿蒙，今非昔比！",
@@ -23,6 +23,8 @@ qinxue:addEffect(fk.EventPhaseStart, {
   on_use = function(self, event, target, player, data)
     local room = player.room
     room:changeMaxHp(player, -1)
+    if player.dead then return false end
+    room:handleAddLoseSkills(player, "wzzz_v__gongxin")
     if player.dead then return false end
     local choices = {"draw2"}
     if player:isWounded() then
@@ -42,8 +44,6 @@ qinxue:addEffect(fk.EventPhaseStart, {
         skillName = qinxue.name,
       }
     end
-    if player.dead then return false end
-    room:handleAddLoseSkills(player, "wzzz_v__gongxin")
   end,
 })
 

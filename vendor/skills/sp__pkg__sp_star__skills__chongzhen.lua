@@ -4,7 +4,7 @@ local chongzhen = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__chongzhen"] = "冲阵",
-  [":wzzz_v__chongzhen"] = "每当你发动〖龙胆〗使用或打出一张手牌时，你可以立即获得对方的一张手牌。",
+  [":wzzz_v__chongzhen"] = "当你发动“龙胆”使用或打出一张牌时，你可以立即获得对方的一张手牌。",
 
   ["#wzzz_v__chongzhen-invoke"] = "冲阵：你可以获得 %dest 的一张手牌",
 
@@ -57,7 +57,7 @@ chongzhen:addEffect(fk.CardUsing, {
       end
     end
   end,
-  on_cost = spec.spec,
+  on_cost = spec.on_cost,
   on_use = spec.on_use,
 })
 
@@ -84,7 +84,7 @@ chongzhen:addEffect(fk.CardResponding, {
       end
     end
   end,
-  on_cost = spec.spec,
+  on_cost = spec.on_cost,
   on_use = spec.on_use,
 })
 

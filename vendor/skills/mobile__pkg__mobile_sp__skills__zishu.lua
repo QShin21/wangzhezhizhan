@@ -5,10 +5,9 @@ local zishu = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__mobile__zishu"] = "自书",
-  [":wzzz_v__mobile__zishu"] = "锁定技，你的回合外，你获得的手牌均会在当前回合结束阶段结束时置入弃牌堆；"..
-  "你的回合内，当你不因此技能效果获得手牌时，摸一张牌。",
+  [":wzzz_v__mobile__zishu"] = "锁定技，当你于回合内非因此法而获得牌后，你摸一张牌；其他角色的回合结束后，你弃置X张牌。（X为你本回合获得的牌数）",
 
-  ["@@wzzz_v__mobile__zishu-inhand-turn"] = "自书",
+  ["@wzzz_v__mobile__zishu-turn"] = "自书",
 
   ["$wzzz_v__mobile__zishu1"] = "我意已决，诸兄何复多言？",
   ["$wzzz_v__mobile__zishu2"] = "此去如若不成，吾宁殉志而终。",
@@ -18,16 +17,17 @@ zishu:addEffect(fk.EventPhaseEnd, {
   anim_type = "negative",
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(zishu.name) and target ~= player and target.phase == Player.Finish and
-      table.find(player:getCardIds("h"), function (id)
-        return Fk:getCardById(id):getMark("@@wzzz_v__mobile__zishu-inhand-turn") > 0
-      end)
+      player:getMark("@wzzz_v__mobile__zishu-turn") > 0 and not player:isNude()
   end,
   on_use = function(self, event, target, player, data)
-    local room = player.room
-    local cards = table.filter(player:getCardIds("h"), function (id)
-      return Fk:getCardById(id):getMark("@@wzzz_v__mobile__zishu-inhand-turn") > 0
-    end)
-    room:moveCardTo(cards, Card.DiscardPile, nil, fk.ReasonPutIntoDiscardPile, zishu.name, nil, true, player)
+    local n = math.min(player:getMark("@wzzz_v__mobile__zishu-turn"), #player:getCardIds("he"))
+    player.room:askToDiscard(player, {
+      min_num = n,
+      max_num = n,
+      include_equip = true,
+      skill_name = zishu.name,
+      cancelable = false,
+    })
   end,
 })
 
@@ -53,11 +53,7 @@ zishu:addEffect(fk.AfterCardsMove, {
     local room = player.room
     for _, move in ipairs(data) do
       if move.to == player and move.toArea == Player.Hand then
-        for _, info in ipairs(move.moveInfo) do
-          if table.contains(player:getCardIds("h"), info.cardId) then
-            room:setCardMark(Fk:getCardById(info.cardId), "@@wzzz_v__mobile__zishu-inhand-turn", 1)
-          end
-        end
+        room:addPlayerMark(player, "@wzzz_v__mobile__zishu-turn", #move.moveInfo)
       end
     end
   end,

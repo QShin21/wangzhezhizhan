@@ -4,10 +4,9 @@ local jigong = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__jigong"] = "急攻",
-  [":wzzz_v__ty_ex__jigong"] = "出牌阶段开始时，你可以摸至多三张牌，若如此做，你本回合的手牌上限改为你此阶段造成的伤害值；弃牌阶段结束时，"..
-  "若伤害值不小于因此摸的牌数，你回复1点体力。",
+  [":wzzz_v__ty_ex__jigong"] = "出牌阶段开始时，你可以摸一至两张牌，然后你本回合的手牌上限改为X（X为你此阶段造成过的伤害数），弃牌阶段开始时，若X不小于你摸的牌数，你回复1点体力。",
 
-  ["#wzzz_v__ty_ex__jigong-choice"] = "急攻：摸至多三张牌，本回合手牌上限改为造成伤害值",
+  ["#wzzz_v__ty_ex__jigong-choice"] = "急攻：摸一至两张牌，本回合手牌上限改为本阶段造成伤害值",
   ["@wzzz_v__ty_ex__jigong-turn"] = "急攻",
 
   ["$wzzz_v__ty_ex__jigong1"] = "此时不战，更待何时！",
@@ -23,7 +22,7 @@ jigong:addEffect(fk.EventPhaseStart, {
   on_cost = function (self, event, target, player, data)
     local room = player.room
     local choice = room:askToChoice(player, {
-      choices = {"1", "2", "3", "Cancel"},
+      choices = {"1", "2", "Cancel"},
       skill_name = jigong.name,
       prompt = "#wzzz_v__ty_ex__jigong-choice",
     })
@@ -42,7 +41,7 @@ jigong:addEffect(fk.EventPhaseStart, {
   end,
 })
 
-jigong:addEffect(fk.EventPhaseEnd, {
+jigong:addEffect(fk.EventPhaseStart, {
   anim_type = "support",
   is_delay_effect = true,
   can_trigger = function(self, event, target, player, data)

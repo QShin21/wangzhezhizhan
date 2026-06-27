@@ -4,7 +4,7 @@ local zhanjue = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__zhanjue"] = "战绝",
-  [":wzzz_v__zhanjue"] = "出牌阶段，你可以将所有手牌当【决斗】使用，然后你和受伤的角色各摸一张牌。若你此法摸过两张或更多的牌，则本阶段〖战绝〗失效。",
+  [":wzzz_v__zhanjue"] = "出牌阶段限两次，你可以将所有手牌当【决斗】使用并摸一张牌，然后因此受伤的角色摸一张牌。若你本阶段因此技能受到过伤害，此技能本阶段失效。",
 
   ["#wzzz_v__zhanjue"] = "战绝：将所有手牌当【决斗】使用，然后你和受伤的角色各摸一张牌",
 
@@ -15,6 +15,7 @@ Fk:loadTranslationTable{
 zhanjue:addEffect("viewas", {
   anim_type = "offensive",
   prompt = "#wzzz_v__zhanjue",
+  max_phase_use_time = 2,
   card_filter = Util.FalseFunc,
   filter_pattern = function (self, player, card_name)
     local cards = player:getCardIds("h")
@@ -33,25 +34,21 @@ zhanjue:addEffect("viewas", {
   after_use = function(self, player, use)
     local room = player.room
     if not player.dead then
-      room:addPlayerMark(player, "wzzz_v__zhanjue-phase", 1)
       player:drawCards(1, zhanjue.name)
     end
     if use.damageDealt then
       for _, p in ipairs(room:getAlivePlayers()) do
         if use.damageDealt[p] and not p.dead then
-          if p == player then
-            room:addPlayerMark(player, "wzzz_v__zhanjue-phase", 1)
-          end
           p:drawCards(1, zhanjue.name)
         end
       end
     end
-    if player:getMark("wzzz_v__zhanjue-phase") > 1 then
+    if use.damageDealt and use.damageDealt[player] and not player.dead then
       room:invalidateSkill(player, zhanjue.name, "-phase")
     end
   end,
   enabled_at_play = function(self, player)
-    return not player:isKongcheng()
+    return not player:isKongcheng() and player:usedSkillTimes(zhanjue.name, Player.HistoryPhase) < 2
   end
 })
 

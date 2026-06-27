@@ -4,7 +4,7 @@ local wzzz_v__shicai = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__shicai"] = "恃才",
-  [":wzzz_v__shicai"] = "当你每回合首次使用一种类别的牌结算结束后，你可以将之置于牌堆顶，然后摸一张牌。",
+  [":wzzz_v__shicai"] = "你的回合内，当你使用一张牌结算结束后，若此牌与你本回合使用并结算结束的牌类型均不同（延时锦囊除外），你可以将此牌置于牌堆顶，然后摸一张牌。",
 
   ["#wzzz_v__shicai-invoke"] = "恃才：是否将%arg置于牌堆顶，然后摸一张牌？",
   ["@wzzz_v__shicai-turn"] = "恃才",
@@ -16,8 +16,9 @@ Fk:loadTranslationTable{
 wzzz_v__shicai:addEffect(fk.CardUseFinished, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    if target ~= player or not player:hasSkill(wzzz_v__shicai.name) then return end
+    if target ~= player or not player:hasSkill(wzzz_v__shicai.name) or player.room.current ~= player then return end
     local card_type = data.card.type
+    if card_type == Card.TypeTrick and not data.card:isCommonTrick() then return end
     local room = player.room
     if card_type == Card.TypeEquip then
       if not table.contains(player:getCardIds("e"), data.card:getEffectiveId()) then return end
@@ -67,7 +68,8 @@ wzzz_v__shicai:addEffect(fk.CardUseFinished, {
 })
 wzzz_v__shicai:addEffect(fk.AfterCardUseDeclared, {
   can_refresh = function(self, event, target, player, data)
-    return target == player and player:hasSkill(wzzz_v__shicai.name, true)
+    return target == player and player:hasSkill(wzzz_v__shicai.name, true) and player.room.current == player and
+      not (data.card.type == Card.TypeTrick and not data.card:isCommonTrick())
   end,
   on_refresh = function(self, event, target, player, data)
     player.room:addTableMarkIfNeed(player, "@wzzz_v__shicai-turn", data.card:getTypeString().."_char")

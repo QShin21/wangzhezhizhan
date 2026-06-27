@@ -4,11 +4,8 @@ local xuanfeng = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__m_ex__xuanfeng"] = "旋风",
-  [":wzzz_v__m_ex__xuanfeng"] = "当你于弃牌阶段弃置过至少两张牌，或当你失去装备区里的牌后，你可以选择一项：1.弃置至多两名其他角色的共计两张牌；2.将一名其他角色装备区里的牌移动到另一名其他角色的对应区域。",
+  [":wzzz_v__m_ex__xuanfeng"] = "当你于弃牌阶段弃置过至少两张牌，或当你失去装备区里的牌后，你可以依次弃置至多两名其他角色共计两张牌。",
 
-  ["#wzzz_v__m_ex__xuanfeng-choose"] = "旋风：选择弃置其他角色2张牌，或移动其他角色的1张装备",
-  ["wzzz_v__m_ex__xuanfeng_movecard"] = "移动场上的一张装备牌",
-  ["wzzz_v__m_ex__xuanfeng_discard"] = "弃置至多两名其他角色的共计两张牌",
   ["#wzzz_v__m_ex__xuanfeng-discard"] = "旋风：你可以选择一名角色，弃置其一张牌",
 
   ["$wzzz_v__m_ex__xuanfeng1"] = "短兵相接，让敌人丢盔弃甲！",
@@ -20,13 +17,18 @@ Fk:loadTranslationTable{
 ---@param player ServerPlayer
 local xuanfengCost = function(self, event, _, player, _)
   local room = player.room
-  local success, dat = room:askToUseActiveSkill(player, {
-    skill_name = "wzzz_v__m_ex__xuanfeng_active",
-    prompt = "#wzzz_v__m_ex__xuanfeng-choose",
+  local tos = room:askToChoosePlayers(player, {
+    min_num = 1,
+    max_num = 1,
+    targets = table.filter(room.alive_players, function (p)
+      return p ~= player and not p:isNude()
+    end),
+    skill_name = xuanfeng.name,
+    prompt = "#wzzz_v__m_ex__xuanfeng-discard",
     cancelable = true,
   })
-  if success and dat then
-    event:setCostData(self, {tos = dat.targets, choice = dat.interaction})
+  if #tos > 0 then
+    event:setCostData(self, {tos = tos})
     return true
   end
 end
@@ -37,43 +39,34 @@ end
 local xuanfengUse = function(self, event, _, player, _)
   local room = player.room
   local dat = event:getCostData(self)
-  if dat.choice == "wzzz_v__m_ex__xuanfeng_movecard" then
-    room:askToMoveCardInBoard(player, {
-      target_one = dat.tos[1],
-      target_two = dat.tos[2],
-      skill_name = xuanfeng.name,
-      flag = "e"
-    })
-  else
-    local to = dat.tos[1]
-    local card = room:askToChooseCard(player, {
-      target = to,
-      flag = "he",
-      skill_name = xuanfeng.name,
-    })
-    room:throwCard(card, xuanfeng.name, to, player)
-    if player.dead then return false end
-    local tos = table.filter(room.alive_players, function (p)
-      return p ~= player and not p:isNude()
-    end)
-    if #tos == 0 then return false end
-    tos = room:askToChoosePlayers(player, {
-      min_num = 1,
-      max_num = 1,
-      targets = tos,
-      skill_name = xuanfeng.name,
-      prompt = "#wzzz_v__m_ex__xuanfeng-discard",
-      cancelable = true,
-    })
-    if #tos == 0 then return false end
-    to = tos[1]
-    card = room:askToChooseCard(player, {
-      target = to,
-      flag = "he",
-      skill_name = xuanfeng.name,
-    })
-    room:throwCard(card, xuanfeng.name, to, player)
-  end
+  local to = dat.tos[1]
+  local card = room:askToChooseCard(player, {
+    target = to,
+    flag = "he",
+    skill_name = xuanfeng.name,
+  })
+  room:throwCard(card, xuanfeng.name, to, player)
+  if player.dead then return false end
+  local tos = table.filter(room.alive_players, function (p)
+    return p ~= player and not p:isNude()
+  end)
+  if #tos == 0 then return false end
+  tos = room:askToChoosePlayers(player, {
+    min_num = 1,
+    max_num = 1,
+    targets = tos,
+    skill_name = xuanfeng.name,
+    prompt = "#wzzz_v__m_ex__xuanfeng-discard",
+    cancelable = true,
+  })
+  if #tos == 0 then return false end
+  to = tos[1]
+  card = room:askToChooseCard(player, {
+    target = to,
+    flag = "he",
+    skill_name = xuanfeng.name,
+  })
+  room:throwCard(card, xuanfeng.name, to, player)
 end
 
 xuanfeng:addEffect(fk.AfterCardsMove, {

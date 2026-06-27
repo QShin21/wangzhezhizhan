@@ -4,7 +4,7 @@ local wzzz_v__huomo = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__huomo"] = "活墨",
-  [":wzzz_v__huomo"] = "当你需要使用基本牌时（你本回合使用过的基本牌除外），你可以将一张黑色非基本牌置于牌堆顶，视为使用此基本牌。",
+  [":wzzz_v__huomo"] = "当你需要使用基本牌时（你本回合使用过的基本牌除外），你可以展示一张黑色非基本牌并置于牌堆顶，视为使用此基本牌。",
 
   ["#wzzz_v__huomo"] = "活墨：将一张黑色非基本牌置于牌堆顶，视为使用一张基本牌",
 
@@ -39,6 +39,7 @@ wzzz_v__huomo:addEffect("viewas", {
     return card
   end,
   before_use = function (self, player, use)
+    player:showCards(use.card.fake_subcards)
     player.room:moveCards({
       ids = use.card.fake_subcards,
       from = player,
