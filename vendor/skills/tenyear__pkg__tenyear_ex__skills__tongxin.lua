@@ -7,6 +7,7 @@ Fk:loadTranslationTable{
   ["wzzz_v__ty_ex__tongxin"] = "同心",
   [":wzzz_v__ty_ex__tongxin"] = "（团队模式中失去此技能）限定技，出牌阶段开始时，你可以令你本回合使用的第一张【杀】攻击范围+2。",
   ["#wzzz_v__ty_ex__tongxin-invoke"] = "同心：令你本回合使用的第一张【杀】攻击范围+2",
+  ["@@wzzz_v__ty_ex__tongxin-turn"] = "同心",
 }
 
 local function is_team_mode(room)
