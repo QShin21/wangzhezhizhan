@@ -8,4 +8,6 @@
 
 为使扩展可独立运行，所需技能实现和辅助模块已于 2026-06-21 收录到本仓库，并统一改为 `wzzz_v__` 命名空间。逐文件来源、原技能 ID和修改后 ID见 `data/vendor_manifest.json`；这些文件属于基于原实现的修改版本。
 
+`wzzz_cards` 牌堆参考用户指定的 `https://gitee.com/shin03/xinghan_canlan` 中 `pkg/xinghan_cards/init.lua`，移植为本仓库独立牌包并改用 `wzzz_cards` 命名。
+
 各参考仓库的作者、画师、配音及原始许可声明继续适用于对应内容。

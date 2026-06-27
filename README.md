@@ -7,6 +7,7 @@
 - `wangzhe_role_mode`：王者之战 6/8 人身份模式。
 - `wzzz_lords`：16 位常备主公。
 - `wzzz_generals`：168 位非主公；其中包含与常备主同名同称号的非主公版本，选将时按赛事规则去重。
+- `wzzz_cards`：王者之战专用 108 张牌堆，牌型引用标准牌堆和军争包。
 - `data/roster.json`：逐条保存本包实际实现的武将、技能文本及代码名；`data/manual_roster.json` 保留赛事手册原始抽取清单。
 - `data/skill_sources.json`：每个技能所参考的实现及源文件。
 - `data/asset_sources.json`：图片和音频来源。

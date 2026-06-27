@@ -808,6 +808,7 @@ local mode = fk.CreateGameMode{
   rule = RULE_SKILL,
   whitelist = function(self, pkg)
     return WZ_GENERALS_PACKAGES[pkg.name] == true or
+      pkg.name == "wzzz_cards" or
       pkg.name == "standard_cards" or pkg.name == "standard" or pkg.name == "maneuvering"
   end,
   feasible = function(self, settings)

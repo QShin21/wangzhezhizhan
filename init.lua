@@ -3,6 +3,7 @@ local prefix = "packages.wangzhezhizhan."
 local gamemodes = require(prefix .. "pkg.gamemodes")
 local lords = require(prefix .. "pkg.lords")
 local generals = require(prefix .. "pkg.generals")
+local cards = require(prefix .. "pkg.wzzz_cards")
 
 Fk:loadTranslationTable(require(prefix .. "i18n.zh_CN"))
 
@@ -235,4 +236,5 @@ return {
   gamemodes,
   lords,
   generals,
+  cards,
 }
