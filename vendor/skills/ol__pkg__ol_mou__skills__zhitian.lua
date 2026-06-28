@@ -9,6 +9,7 @@ Fk:loadTranslationTable{
 
   ["#wzzz_v__zhitian"] = "知天：获得所有“星”",
   ["#wzzz_v__zhitian-discard"] = "知天：你可以弃置装备区里的武器牌",
+  ["@[wzzz_v__zhitian]"] = "知天",
   ["@@wzzz_v__zhitian_crossbow-turn"] = "知天",
 
   ["$wzzz_v__zhitian1"] = "天火熊熊，再兴炎汉国祚！",
