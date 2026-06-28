@@ -19,10 +19,8 @@ xiechan:addEffect("active", {
   card_num = 0,
   target_num = 1,
   can_use = function(self, player)
-    return player:usedSkillTimes(xiechan.name, Player.HistoryGame) == 0 and
-      table.find(player.room:getOtherPlayers(player, false), function(p)
-        return player:canPindian(p)
-      end)
+    return player.phase == Player.Play and not player:isKongcheng() and
+      player:usedSkillTimes(xiechan.name, Player.HistoryGame) == 0
   end,
   card_filter = Util.FalseFunc,
   target_filter = function(self, player, to_select, selected)
