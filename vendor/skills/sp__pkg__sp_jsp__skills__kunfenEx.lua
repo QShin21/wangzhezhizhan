@@ -17,6 +17,9 @@ kunfen:addEffect(fk.EventPhaseStart, {
   can_trigger = function(self, event, target, player, data)
     return target == player and player:hasSkill(kunfen.name) and player.phase == Player.Finish
   end,
+  on_cost = function(self, event, target, player, data)
+    return player.room:askToSkillInvoke(player, { skill_name = kunfen.name })
+  end,
   on_use = function(self, event, target, player, data)
     player.room:loseHp(player, 1, kunfen.name)
     if not player.dead then

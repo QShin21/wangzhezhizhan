@@ -2697,7 +2697,7 @@
         "name": "困奋",
         "id": "wzzz_v__kunfen",
         "derived": false,
-        "description": "锁定技，结束阶段，你失去1点体力，然后摸两张牌。"
+        "description": "结束阶段，你可以失去1点体力，然后摸两张牌。"
       },
       {
         "name": "逢亮",

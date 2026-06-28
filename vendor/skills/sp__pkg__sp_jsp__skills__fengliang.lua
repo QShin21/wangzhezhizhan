@@ -6,7 +6,7 @@ local fengliang = fk.CreateSkill {
 
 Fk:loadTranslationTable{
   ["wzzz_v__fengliang"] = "逢亮",
-  [":wzzz_v__fengliang"] = "觉醒技，当你进入濒死状态时，你减1点体力上限并将体力值回复至2点，然后获得技能〖挑衅〗，将技能〖困奋〗改为非锁定技。",
+  [":wzzz_v__fengliang"] = "觉醒技，当你进入濒死状态时，你减1点体力上限并将体力值回复至2点，然后获得技能〖挑衅〗并修改〖困奋〗。",
 
   ["$wzzz_v__fengliang1"] = "得遇丞相，再生之德！",
   ["$wzzz_v__fengliang2"] = "丞相大义，维岂有不从之理？",
