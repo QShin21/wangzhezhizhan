@@ -16,16 +16,27 @@ Fk:loadTranslationTable{
   ["$wzzz_v__ol__yaoming2"] = "惜得手中米，安得众人心。",
 }
 
+local function getYaomingOtherPlayers(player)
+  if player.room then
+    return player.room:getOtherPlayers(player, false)
+  end
+  local room = Fk:currentRoom()
+  if not room then return {} end
+  return table.filter(room.alive_players or {}, function(p)
+    return p ~= player
+  end)
+end
+
 local function yaomingChoices(player, phase)
   local choices = {}
   if (not phase or player:getMark("wzzz_v__ol__yaoming_discard-phase") == 0) and
-    table.find(player.room:getOtherPlayers(player, false), function(p)
+    table.find(getYaomingOtherPlayers(player), function(p)
       return p:getHandcardNum() >= player:getHandcardNum() and not p:isNude()
     end) then
     table.insert(choices, "wzzz_v__ol__yaoming_discard")
   end
   if (not phase or player:getMark("wzzz_v__ol__yaoming_draw-phase") == 0) and
-    table.find(player.room:getOtherPlayers(player, false), function(p)
+    table.find(getYaomingOtherPlayers(player), function(p)
       return p:getHandcardNum() <= player:getHandcardNum()
     end) then
     table.insert(choices, "wzzz_v__ol__yaoming_draw")
