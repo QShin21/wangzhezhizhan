@@ -69,6 +69,11 @@ yaoming:addEffect("active", {
       return to_select:getHandcardNum() <= player:getHandcardNum()
     end
   end,
+  target_tip = function(self, player, to_select, selected, selected_cards, card, selectable)
+    if selectable and self.interaction.data then
+      return self.interaction.data
+    end
+  end,
   on_use = function(self, room, effect)
     local choice = self.interaction.data
     room:addPlayerMark(effect.from, choice.."-phase", 1)
@@ -78,12 +83,16 @@ yaoming:addEffect("active", {
 
 yaoming:addEffect(fk.Damaged, {
   anim_type = "control",
+  trigger_times = function(self, event, target, player, data)
+    return data.damage
+  end,
   can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(yaoming.name) and data.damage == 1 and #yaomingChoices(player, false) > 0
+    return target == player and player:hasSkill(yaoming.name) and data.damage > 0 and #yaomingChoices(player, false) > 0
   end,
   on_cost = function(self, event, target, player, data)
     local room = player.room
     local choices = yaomingChoices(player, false)
+    if #choices == 0 then return false end
     table.insert(choices, "Cancel")
     local choice = room:askToChoice(player, {
       choices = choices,
@@ -117,7 +126,8 @@ yaoming:addEffect(fk.Damaged, {
 
 Fk:addTargetTip({
   name = "#wzzz_v__ol__yaoming-tip",
-  target_tip = function(self, player, to_select)
+  target_tip = function(self, player, to_select, selected, selected_cards, card, selectable)
+    if not selectable then return end
     if to_select:getHandcardNum() >= player:getHandcardNum() and not to_select:isNude() then
       return "wzzz_v__ol__yaoming_discard"
     elseif to_select:getHandcardNum() <= player:getHandcardNum() then
