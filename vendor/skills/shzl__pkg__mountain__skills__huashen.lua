@@ -30,6 +30,8 @@ local BANNED_HUASHEN_GENERALS = {
 local MODIFIED_MARK = "wzzz_v__huashen_modified_skills"
 local LOST_MARK = "wzzz_v__huashen_lost_skills"
 local TIMING_BLOCK_MARK = "wzzz_v__huashen_timing_block-turn"
+local BANNED_HUASHEN_SKILL_TAGS = { Skill.Lord, Skill.Limited, Skill.Wake }
+local BANNED_HUASHEN_DESC_PREFIXES = { "主公技", "限定技", "觉醒技" }
 
 local function getMarkTable(player, mark)
   local value = player:getMark(mark)
@@ -114,6 +116,28 @@ local function getEffectiveHuashenSkill(player, skill)
   return skill
 end
 
+local function isAttachedKingdomAllowed(player, skill)
+  return not skill:hasTag(Skill.AttachedKingdom) or
+    table.contains(skill:getSkeleton().attached_kingdom, player.kingdom)
+end
+
+local function isBannedHuashenSkill(skill_name)
+  local skill = Fk.skills[skill_name]
+  if not skill then return true end
+  if table.find(BANNED_HUASHEN_SKILL_TAGS, function(tag)
+      return skill:hasTag(tag)
+    end) then
+    return true
+  end
+
+  local desc = Fk:translate(":" .. skill_name)
+  if type(desc) ~= "string" or desc == ":" .. skill_name then return false end
+  desc = string.gsub(desc, "^（.-）", "")
+  return table.find(BANNED_HUASHEN_DESC_PREFIXES, function(prefix)
+    return string.sub(desc, 1, #prefix) == prefix
+  end)
+end
+
 local function splitSkillChanges(changes)
   local removed, added = {}, {}
   if type(changes) ~= "string" then return removed, added end
@@ -154,12 +178,14 @@ local function getAvailableSkills(player, general)
   local skills = {}
   for _, skill_name in ipairs(general:getSkillNameList()) do
     local s = Fk.skills[skill_name]
-    if s and not table.find({Skill.Lord, Skill.Limited, Skill.Wake}, function (tag)
-        return s:hasTag(tag)
-      end) then
-      if not s:hasTag(Skill.AttachedKingdom) or table.contains(s:getSkeleton().attached_kingdom, player.kingdom) then
+    if s and not isBannedHuashenSkill(skill_name) then
+      if isAttachedKingdomAllowed(player, s) then
         local effective = getEffectiveHuashenSkill(player, s.name)
-        if effective and Fk.skills[effective] and not table.contains(skills, effective) then
+        local effective_skill = effective and Fk.skills[effective]
+        if effective_skill and
+            not isBannedHuashenSkill(effective) and
+            isAttachedKingdomAllowed(player, effective_skill) and
+            not table.contains(skills, effective) then
           table.insert(skills, effective)
         end
       end
