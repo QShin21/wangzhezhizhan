@@ -982,8 +982,8 @@ Fk:loadTranslationTable {
 local g97 = General:new(extension, "wzzz_sp__sp_jiangwei", "wei", 4)
 g97.title = "幼麒"
 g97.trueName = "SP姜维"
-g97:addSkills { "wzzz_v__kunfenEx", "wzzz_v__fengliang" }
-g97:addRelatedSkills { "wzzz_v__m_ex__tiaoxin" }
+g97:addSkills { "wzzz_v__kunfen", "wzzz_v__fengliang" }
+g97:addRelatedSkills { "wzzz_v__kunfenEx", "wzzz_v__m_ex__tiaoxin" }
 Fk:loadTranslationTable {
   ["wzzz_sp__sp_jiangwei"] = "SP姜维",
   ["#" .. "wzzz_sp__sp_jiangwei"] = "幼麒",

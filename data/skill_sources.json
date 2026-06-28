@@ -2458,10 +2458,10 @@
     "package": "wzzz_generals",
     "skill": "困奋",
     "implementation": "reference",
-    "selected_id": "kunfenEx",
-    "local_id": "wzzz_v__kunfenEx",
+    "selected_id": "kunfen",
+    "local_id": "wzzz_v__kunfen",
     "derived": false,
-    "description": "结束阶段，你可以失去1点体力，然后摸两张牌（修改：增加描述“且可以视为使用一张【火攻】”）。"
+    "description": "锁定技，结束阶段，你失去1点体力，然后摸两张牌。"
   },
   {
     "general_number": 97,
