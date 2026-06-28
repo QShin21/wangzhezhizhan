@@ -16,6 +16,7 @@ liangzhu:addEffect(fk.HpRecover, {
   anim_type = "support",
   can_trigger = function(self, event, target, player, data)
     return player:hasSkill(liangzhu.name) and target.phase == Player.Play and data.skillName ~= "wzzz_v__jieyin" and
+      (not WzzzYuanding or not WzzzYuanding.liangzhuAvailable or WzzzYuanding.liangzhuAvailable(player)) and
       player:usedSkillTimes(liangzhu.name, Player.HistoryTurn) == 0
   end,
   on_cost = function(self, event, target, player, data)
