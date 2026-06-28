@@ -134,6 +134,7 @@ return {
   ["draw_card"] = "摸牌",
   ["discard_skill"] = "弃置牌",
   ["recover"] = "回复1点体力",
+  ["beishui"] = "背水",
   ["loseHp"] = "失去1点体力",
   ["loseMaxHp"] = "减1点体力上限",
   ["red"] = "红色",

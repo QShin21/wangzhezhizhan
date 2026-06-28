@@ -3,6 +3,7 @@ local mShiKuanggu = fk.CreateSkill {
 }
 
 Fk:loadTranslationTable{
+  ["beishui"] = "背水",
   ["wzzz_v__m_shi__kuanggu"] = "狂骨",
   [":wzzz_v__m_shi__kuanggu"] = "当你对距离1以内的一名角色造成伤害后，你可以选择一项：1.回复1点体力；2.摸一张牌；3.回复1点体力并摸一张牌，然后弃置一张牌，令你此阶段内使用【杀】的次数+1（每回合限一次）。",
 
