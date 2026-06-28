@@ -61,7 +61,14 @@ huoshou:addEffect(fk.EventPhaseEnd, {
     local room = player.room
     room:throwCard(player:getCardIds("h"), huoshou.name, player, player)
     if not player.dead then
-      room:useVirtualCard("savage_assault", nil, player, nil, huoshou.name, true)
+      local card = Fk:cloneCard("savage_assault")
+      card.skillName = huoshou.name
+      room:useCard{
+        from = player,
+        tos = {},
+        card = card,
+        extraUse = true,
+      }
     end
   end,
 })
