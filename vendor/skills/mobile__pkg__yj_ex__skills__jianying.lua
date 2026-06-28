@@ -22,11 +22,12 @@ jianying:addEffect("active", {
   card_num = 0,
   target_num = 0,
   can_use = function(self, player)
-    return player:usedSkillTimes(jianying.name, Player.HistoryPhase) == 0
+    return player.phase == Player.Play and player:getMark("wzzz_v__m_ex__jianying_active_used-phase") == 0
   end,
   card_filter = Util.FalseFunc,
   target_filter = Util.FalseFunc,
   on_use = function(self, room, effect)
+    room:setPlayerMark(effect.from, "wzzz_v__m_ex__jianying_active_used-phase", 1)
     room:setPlayerMark(effect.from, "wzzz_v__m_ex__jianying_next_suit-phase", self.interaction.data)
     room:setPlayerMark(effect.from, "@wzzz_v__m_ex__jianying_next-phase", self.interaction.data)
   end,
@@ -97,6 +98,7 @@ jianying:addEffect(fk.CardUseFinished, {
 jianying:addLoseEffect(function(self, player)
   local room = player.room
   room:setPlayerMark(player, "wzzz_v__m_ex__jianying_suit-phase", 0)
+  room:setPlayerMark(player, "wzzz_v__m_ex__jianying_active_used-phase", 0)
   room:setPlayerMark(player, "wzzz_v__m_ex__jianying_next_suit-phase", 0)
   room:setPlayerMark(player, "wzzz_v__m_ex__jianying_number-phase", 0)
   room:setPlayerMark(player, "@wzzz_v__m_ex__jianying_record-phase", 0)
