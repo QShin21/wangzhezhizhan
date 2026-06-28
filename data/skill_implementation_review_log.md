@@ -226,3 +226,4 @@
 - `wzzz__jinzi`：为使用装备牌转化的【杀】后是否令其不计入次数限制并失去“锦姿”的二段选择补充明确提示。
 - `wzzz_v__sxfy__xiemu` 等公开标记：补充“协穆”回合标记、1v1 先后手剩余/流放武将 banner 和“知天”扩展标记的中文翻译，避免界面显示英文标记 ID。
 - `wzzz_v__m_shi__kuanggu`：补充“背水”选项翻译，避免狂骨第三项在前端显示为 `beishui`。
+- `wzzz_v__ex__guanxing`：为“观星”选择“星”牌时的 `askToChooseCards` 补充目标参数，避免当前 FreeKill API 读取 `target.id` 时空值报错。

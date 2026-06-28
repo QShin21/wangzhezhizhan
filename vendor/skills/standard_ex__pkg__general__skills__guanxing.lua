@@ -33,6 +33,7 @@ guanxing:addEffect(fk.EventPhaseStart, {
 
     if #player:getPile("wzzz_v__ex__guanxing_star") < x then
       local chosen = room:askToChooseCards(player, {
+        target = player,
         min = 1,
         max = 1,
         flag = { card_data = {{"Top", cards}} },
