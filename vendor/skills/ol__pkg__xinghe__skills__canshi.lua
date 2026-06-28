@@ -13,10 +13,7 @@ Fk:loadTranslationTable{
 canshi:addEffect(fk.DrawNCards, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(canshi.name) and
-      table.find(player.room.alive_players, function (p)
-        return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu")
-      end)
+    return target == player and player:hasSkill(canshi.name)
   end,
   on_use = function(self, event, target, player, data)
     data.n = math.max(4, #table.filter(player.room.alive_players, function (p)
