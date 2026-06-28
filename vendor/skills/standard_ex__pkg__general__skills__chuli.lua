@@ -19,7 +19,8 @@ chuli:addEffect("active", {
   min_target_num = 1,
   prompt = "#wzzz_v__ex__chuli",
   can_use = function(self, player)
-    return player:usedSkillTimes(chuli.name, Player.HistoryPhase) == 0 and not player:isNude()
+    return player:usedSkillTimes(chuli.name, Player.HistoryPhase) == 0 and not player:isNude() and
+      (not WzzzJishi or not WzzzJishi.skillAvailable or WzzzJishi.skillAvailable(player, chuli.name))
   end,
   card_filter = Util.FalseFunc,
   target_filter = function(self, player, to_select, selected, selected_cards)

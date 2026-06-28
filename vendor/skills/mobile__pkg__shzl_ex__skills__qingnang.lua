@@ -19,7 +19,8 @@ qingnang:addEffect("active", {
   card_num = 1,
   target_num = 1,
   can_use = function(self, player)
-    return player:usedSkillTimes(qingnang.name, Player.HistoryPhase) == 0
+    return player:usedSkillTimes(qingnang.name, Player.HistoryPhase) == 0 and
+      (not WzzzJishi or not WzzzJishi.skillAvailable or WzzzJishi.skillAvailable(player, qingnang.name))
   end,
   card_filter = function(self, player, to_select, selected)
     return #selected == 0 and table.contains(player:getCardIds("h"), to_select) and not player:prohibitDiscard(to_select)
