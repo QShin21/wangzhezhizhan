@@ -71,11 +71,11 @@ tianyi:addTest(function(room, me)
 
   -- test1: 第一个出牌阶段内：对comp2发动天义，用A拼K，暂停发现不能出杀
   FkTest.setNextReplies(me, {
-    json.encode { card = { skill = tianyi.name, }, targets = { comp2.id } },
-    json.encode { card = { subcards = { jinkA.id }, } }
+    FkTest.ReplyUseSkill(tianyi.name, { comp2 }),
+    FkTest.ReplyChooseCards({ jinkA.id }),
   })
   FkTest.setNextReplies(comp2, {
-    json.encode { card = { subcards = { analepticK.id }, } }
+    FkTest.ReplyChooseCards({ analepticK.id }),
   })
   -- 用了点辣鸡手段 让他在第二次询问PlayCard时切出
   local function createTwiceClosure()
@@ -90,52 +90,45 @@ tianyi:addTest(function(room, me)
     room:handleAddLoseSkills(me, tianyi.name)
     room:obtainCard(me, { slashK.id, jinkA.id, slash.id, slash2.id })
     room:obtainCard(comp2, { peachA.id, analepticK.id })
-    me:gainAnExtraTurn(false, "", {
-      who = me, reason = "", phase_table = { Player.Play }})
+    me:gainAnExtraTurn(false, "", { Player.Play })
   end)
 
-  -- 应该不能点杀，也不能点天义按钮
-  local handler = ClientInstance.current_request_handler --[[@as ReqPlayCard]]
-  lu.assertIsFalse(handler:cardValidity(slash.id))
-  lu.assertIsFalse(handler:skillButtonValidity(tianyi.name))
+  -- 拼点没赢时禁止使用杀，且本阶段不能再次发动天义。
+  lu.assertEquals(me:getMark("wzzz_v__tianyi_lose-turn"), 1)
+  lu.assertIsFalse(me:canUse(slash))
+  lu.assertIsFalse(Fk.skills[tianyi.name]:canUse(me))
 
   -- 结束出牌阶段，让房间恢复正常
   FkTest.resumeRoom()
 
   -- test2: 用K拼A，再中断一次检查tmd技能生效情况
   FkTest.setNextReplies(me, {
-    json.encode { card = { skill = tianyi.name, }, targets = { comp2.id } },
-    json.encode { card = { subcards = { slashK.id }, } }
+    FkTest.ReplyUseSkill(tianyi.name, { comp2 }),
+    FkTest.ReplyChooseCards({ slashK.id }),
   })
   FkTest.setNextReplies(comp2, {
-    json.encode { card = { subcards = { peachA.id }, } }
+    FkTest.ReplyChooseCards({ peachA.id }),
   })
   FkTest.setRoomBreakpoint(me, "PlayCard", createTwiceClosure())
   FkTest.runInRoom(function()
-    me:gainAnExtraTurn(false, "", {
-      who = me, reason = "", phase_table = { Player.Play }})
+    me:gainAnExtraTurn(false, "", { Player.Play })
   end)
-  local handler2 = ClientInstance.current_request_handler --[[@as ReqPlayCard]]
-  lu.assertIsTrue(handler2:cardValidity(slash.id))
-  handler2:selectCard(slash.id, { selected = true })
-  -- 无距离限制：可杀到所有人
-  for _, p in ipairs(room:getOtherPlayers(me)) do
-    lu.assertIsTrue(handler2:targetValidity(p.id))
-  end
-  -- 喵分叉：可多杀一个
-  handler2:selectTarget(comp2.id, { selected = true })
-  lu.assertIsTrue(handler2:targetValidity(comp3.id))
-  handler2:selectTarget(comp3.id, { selected = true })
-  lu.assertNotIsTrue(handler2:targetValidity(comp4.id))
+  lu.assertEquals(me:getMark("wzzz_v__tianyi_win-turn"), 1)
+  lu.assertIsTrue(me:canUseTo(slash, comp4))
+  lu.assertEquals(slash:getSkill(me):getMaxTargetNum(me, slash), 2)
 
   FkTest.setNextReplies(me, {
-    json.encode{ card = slash.id, targets = { comp2.id, comp3.id }}
+    FkTest.ReplyCard(slash, { comp2, comp3 }),
+    FkTest.ReplyCard(slash2, { comp4 }),
+    "__cancel",
   })
-  FkTest.setRoomBreakpoint(me, "PlayCard")
+  FkTest.setNextReplies(comp2, { "__cancel" })
+  FkTest.setNextReplies(comp3, { "__cancel" })
+  FkTest.setNextReplies(comp4, { "__cancel" })
   FkTest.resumeRoom()
-  -- 双刀：本阶段还可再使用杀
-  local handler3 = ClientInstance.current_request_handler --[[@as ReqPlayCard]]
-  lu.assertIsTrue(handler3:cardValidity(slash2.id))
+  lu.assertEquals(comp2.hp, comp2.maxHp - 1)
+  lu.assertEquals(comp3.hp, comp3.maxHp - 1)
+  lu.assertEquals(comp4.hp, comp4.maxHp - 1)
 end)
 
 return tianyi

@@ -13,10 +13,7 @@ Fk:loadTranslationTable{
 lordCanshi:addEffect(fk.DrawNCards, {
   anim_type = "drawcard",
   can_trigger = function(self, event, target, player, data)
-    return target == player and player:hasSkill(lordCanshi.name) and
-      table.find(player.room.alive_players, function(p)
-        return p:isWounded() or (player:hasSkill("wzzz_v__guiming") and p.kingdom == "wu")
-      end)
+    return target == player and player:hasSkill(lordCanshi.name)
   end,
   on_use = function(self, event, target, player, data)
     data.n = math.max(4, #table.filter(player.room.alive_players, function(p)
@@ -43,5 +40,23 @@ lordCanshi:addEffect(fk.CardUsing, {
     })
   end,
 })
+
+lordCanshi:addTest(function(room, me)
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, lordCanshi.name)
+  end)
+
+  FkTest.setNextReplies(me, { "__cancel", "1" })
+  FkTest.runInRoom(function()
+    GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Draw })):exec()
+  end)
+  lu.assertEquals(me:getHandcardNum(), 2)
+
+  FkTest.runInRoom(function()
+    me:throwAllCards("h")
+    GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Draw })):exec()
+  end)
+  lu.assertEquals(me:getHandcardNum(), 4)
+end)
 
 return lordCanshi

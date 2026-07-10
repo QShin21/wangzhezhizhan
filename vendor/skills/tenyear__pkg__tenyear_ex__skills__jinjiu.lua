@@ -36,14 +36,12 @@ jinjiu:addTest(function (room, me)
   end)
   local comp2 = room.players[2]
   local analeptic = room:printCard("analeptic", Card.Spade, 5)
-  FkTest.setNextReplies(me, { json.encode {
-    card = analeptic.id,
-    targets = { comp2.id }
-  } })
+  FkTest.setNextReplies(me, { FkTest.ReplyCard(analeptic, { comp2 }) })
   FkTest.runInRoom(function ()
     room:obtainCard(me, analeptic)
-    me:gainAnExtraTurn(true, nil, {Player.Play})
+    me:gainAnExtraTurn(false, nil, {Player.Play})
   end)
+  lu.assertEquals(comp2.hp, comp2.maxHp - 1)
   FkTest.setNextReplies(me, {
     json.encode { card = { skill = "wzzz_v__ty_ex__xianzhen", }, targets = { comp2.id } },
     json.encode { card = { subcards = { analeptic.id }, } }
@@ -53,7 +51,7 @@ jinjiu:addTest(function (room, me)
     room:handleAddLoseSkills(me, "wzzz_v__ty_ex__xianzhen")
     room:obtainCard(me, analeptic)
     room:obtainCard(comp2, card)
-    me:gainAnExtraTurn(true, nil, {Player.Play})
+    me:gainAnExtraTurn(false, nil, {Player.Play})
   end)
   lu.assertEquals(analeptic.number, 5)
   FkTest.runInRoom(function ()

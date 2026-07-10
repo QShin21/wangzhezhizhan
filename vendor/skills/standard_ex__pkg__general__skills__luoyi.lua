@@ -78,18 +78,12 @@ luoyi:addEffect(fk.CardEffectCancelledOut, {
 })
 
 luoyi:addTest(function(room, me)
-  local comp2 = room.players[2] ---@type ServerPlayer, ServerPlayer
+  local comp2, comp3, comp4 = room.players[2], room.players[3], room.players[4]
   FkTest.runInRoom(function()
     room:handleAddLoseSkills(me, luoyi.name)
   end)
   local slash = Fk:getCardById(1)
-  FkTest.setNextReplies(me, { json.encode {
-    cards = {},
-    choice = "wzzz_v__ex__luoyi_get"
-  }, json.encode {
-    card = 1,
-    targets = { comp2.id }
-  } })
+  FkTest.setNextReplies(me, { "1", "1", FkTest.ReplyCard(slash, { comp2 }) })
   FkTest.setNextReplies(comp2, { "__cancel" })
 
   local origin_hp = comp2.hp
@@ -97,20 +91,32 @@ luoyi:addTest(function(room, me)
     room:obtainCard(me, 1)
     GameEvent.Turn:create(TurnData:new(me, "game_rule")):exec()
   end)
-  -- p(me:getCardIds("h"))
-  -- lu.assertEquals(#me:getCardIds("h"), 1)
+  lu.assertEquals(me:getMark("@@wzzz_v__ex__luoyi"), 1)
   lu.assertEquals(comp2.hp, origin_hp - 2)
 
-  -- 测标记持续时间
-  origin_hp = comp2.hp
+  -- 增伤持续到下回合开始，而不是在当前回合结束时清除。
+  FkTest.setNextReplies(comp3, { "__cancel" })
   FkTest.runInRoom(function()
     room:useCard{
       from = me,
-      tos = { comp2 },
-      card = slash,
+      tos = { comp3 },
+      card = Fk:cloneCard("slash"),
     }
   end)
-  lu.assertEquals(comp2.hp, origin_hp - 1)
+  lu.assertEquals(comp3.hp, comp3.maxHp - 2)
+
+  -- 下回合开始时清除标记，之后不再增伤。
+  FkTest.setNextReplies(comp4, { "__cancel" })
+  FkTest.runInRoom(function()
+    GameEvent.Turn:create(TurnData:new(me, "game_rule", {})):exec()
+    room:useCard{
+      from = me,
+      tos = { comp4 },
+      card = Fk:cloneCard("slash"),
+    }
+  end)
+  lu.assertEquals(me:getMark("@@wzzz_v__ex__luoyi"), 0)
+  lu.assertEquals(comp4.hp, comp4.maxHp - 1)
 end)
 
 return luoyi

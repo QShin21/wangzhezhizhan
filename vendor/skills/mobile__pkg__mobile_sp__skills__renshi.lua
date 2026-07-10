@@ -11,13 +11,22 @@ Fk:loadTranslationTable{
   ["$wzzz_v__renshi2"] = "还望您可以手下留情！",
 }
 
+local SLASH_DAMAGE_MARK = "wzzz_v__renshi_slash_damage-turn"
+
 wzzz_v__renshi:addEffect(fk.DetermineDamageInflicted, {
   anim_type = "defensive",
+  can_refresh = function(self, event, target, player, data)
+    return target == player and player:hasSkill(wzzz_v__renshi.name, true) and
+      data.card and data.card.trueName == "slash"
+  end,
+  on_refresh = function(self, event, target, player, data)
+    player.room:addPlayerMark(player, SLASH_DAMAGE_MARK, 1)
+  end,
   can_trigger = function(self, event, target, player, data)
     return
       target == player and
       player:hasSkill(wzzz_v__renshi.name) and
-      player:usedSkillTimes(wzzz_v__renshi.name, Player.HistoryTurn) == 0 and
+      player:getMark(SLASH_DAMAGE_MARK) == 1 and
       data.card and
       data.card.trueName == "slash" and
       player:isWounded()
@@ -37,5 +46,17 @@ wzzz_v__renshi:addEffect(fk.DetermineDamageInflicted, {
     room:changeMaxHp(player, -1)
   end,
 })
+
+wzzz_v__renshi:addTest(function(room, me)
+  local from = room.players[2]
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, wzzz_v__renshi.name)
+    room:useCard { from = from, tos = { me }, card = Fk:cloneCard("slash") }
+    room:useCard { from = from, tos = { me }, card = Fk:cloneCard("slash") }
+  end)
+  lu.assertEquals(me:getMark(SLASH_DAMAGE_MARK), 2)
+  lu.assertEquals(me.hp, me.maxHp - 2)
+  lu.assertEquals(me.maxHp, 4)
+end)
 
 return wzzz_v__renshi

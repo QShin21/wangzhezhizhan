@@ -1,6 +1,6 @@
 local tongye = fk.CreateSkill {
   name = "wzzz_v__ofl_mou__tongye",
-  tags = { Skill.Compulsory },
+  tags = { Skill.Lord, Skill.Compulsory },
 }
 
 Fk:loadTranslationTable{

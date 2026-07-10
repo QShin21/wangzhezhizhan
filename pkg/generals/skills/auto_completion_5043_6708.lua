@@ -21,7 +21,12 @@ skill_5043_6708:addEffect(fk.CardEffectCancelledOut, {
       prompt = "#wzzz_s__5043_6708-use::" .. data.to.id,
       skill_name = skill_5043_6708.name,
       cancelable = true,
-      extra_data = { exclusive_targets = { data.to.id } },
+      extra_data = {
+        must_targets = { data.to.id },
+        exclusive_targets = { data.to.id },
+        bypass_distances = true,
+        bypass_times = true,
+      },
     })
     if use then
       event:setCostData(self, use)
@@ -34,5 +39,21 @@ skill_5043_6708:addEffect(fk.CardEffectCancelledOut, {
     player.room:useCard(use)
   end,
 })
+
+skill_5043_6708:addTest(function(room, me)
+  local target = room.players[3]
+  local slash1 = room:printCard("slash")
+  local slash2 = room:printCard("slash")
+  local jink = room:printCard("jink")
+  FkTest.setNextReplies(me, { FkTest.ReplyCard(slash2, { target }) })
+  FkTest.setNextReplies(target, { FkTest.ReplyCard(jink), "__cancel" })
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, skill_5043_6708.name)
+    room:obtainCard(me, { slash1, slash2 })
+    room:obtainCard(target, jink)
+    room:useCard { from = me, tos = { target }, card = slash1 }
+  end)
+  lu.assertEquals(target.hp, target.maxHp - 1)
+end)
 
 return skill_5043_6708

@@ -14,9 +14,9 @@ Fk:loadTranslationTable {
 wansha:addEffect("prohibit" ,{
   prohibit_use = function(self, player, card)
     if card.name == "peach" and not player.dying then
-      return table.find(Fk:currentRoom().alive_players, function(p)
-        return Fk:currentRoom().current == p and p:hasSkill(wansha.name) and p ~= player
-      end)
+      local room = Fk:currentRoom()
+      return table.find(room.players, function(p) return p.dying end) and
+        room.current and room.current:hasSkill(wansha.name) and room.current ~= player
     end
   end,
 })
@@ -49,11 +49,28 @@ wansha:addEffect(fk.EnterDying, {
 })
 
 wansha:addTest(function (room, me)
+  local dying = room.players[2]
+  local other = room.players[3]
+  local peach = room:printCard("peach")
   FkTest.runInRoom(function ()
     room:handleAddLoseSkills(me, wansha.name)
+    room:handleAddLoseSkills(other, "wzzz_v__ex__biyue|wzzz_v__ty_ex__jinjiu")
+    room:loseHp(me, 1)
+    room:loseHp(other, 1)
+    room:setCurrent(me)
+    dying.dying = true
   end)
+
   FkTest.runInRoom(function ()
-    room:damage{to = room.players[2], damage = 6}
+    lu.assertIsTrue(other:prohibitUse(peach))
+    lu.assertIsFalse(me:prohibitUse(peach))
+    lu.assertIsFalse(dying:prohibitUse(peach))
+    lu.assertIsFalse(Fk.skills["wzzz_v__ex__biyue"]:isEffectable(other))
+    lu.assertIsTrue(Fk.skills["wzzz_v__ty_ex__jinjiu"]:isEffectable(other))
+
+    dying.dying = false
+    lu.assertIsFalse(other:prohibitUse(peach))
+    lu.assertIsTrue(Fk.skills["wzzz_v__ex__biyue"]:isEffectable(other))
   end)
 end)
 

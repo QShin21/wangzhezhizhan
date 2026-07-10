@@ -85,28 +85,30 @@ mieji:addTest(function (room, me)
   local comp2 = room.players[2]
   FkTest.runInRoom(function () room:handleAddLoseSkills(me, mieji.name) end)
   local card = room:printCard("duel", Card.Spade, 1)
-  FkTest.setNextReplies(me, {json.encode {
-    card = { skill = mieji.name, subcards = {card.id} }, targets = { comp2.id }
-  } })
+  local slash = room:printCard("slash", Card.Club, 2)
+  local jink = room:printCard("jink", Card.Heart, 3)
+  FkTest.setNextReplies(me, { FkTest.ReplyUseSkill(mieji.name, { comp2 }, { card.id }) })
   FkTest.runInRoom(function ()
+    room:throwCard(me:getCardIds("h"), nil, me, me)
+    room:throwCard(comp2:getCardIds("h"), nil, comp2, comp2)
     room:obtainCard(me, card)
-    room:drawCards(comp2, 2)
+    room:obtainCard(comp2, { slash.id, jink.id })
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Play })):exec()
   end)
   lu.assertIsTrue(comp2:isKongcheng())
   lu.assertIsTrue(me:isKongcheng())
 
-  local card2 = room:printCard("duel", Card.Spade, 2)
-  FkTest.setNextReplies(me, {json.encode {
-    card = { skill = mieji.name, subcards = {card.id} }, targets = { comp2.id }
-  } })
+  local card2 = room:printCard("duel", Card.Spade, 4)
+  local target_trick = room:printCard("dismantlement", Card.Club, 5)
+  FkTest.setNextReplies(me, { FkTest.ReplyUseSkill(mieji.name, { comp2 }, { card2.id }) })
   FkTest.runInRoom(function ()
-    room:obtainCard(me, card)
-    room:obtainCard(comp2, card2)
+    room:obtainCard(me, card2)
+    room:obtainCard(comp2, target_trick)
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Play })):exec()
   end)
   lu.assertIsTrue(comp2:isKongcheng())
   lu.assertEquals(me:getHandcardNum(), 1)
+  lu.assertEquals(me:getCardIds("h")[1], target_trick.id)
 end)
 
 return mieji

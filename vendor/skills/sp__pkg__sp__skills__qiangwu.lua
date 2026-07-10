@@ -21,7 +21,7 @@ qiangwu:addEffect("active", {
   card_num = 0,
   target_num = 0,
   can_use = function(self, player)
-    return player:usedSkillTimes(qiangwu.name) == 0
+    return player:usedSkillTimes(qiangwu.name, Player.HistoryPhase) == 0
   end,
   card_filter = Util.FalseFunc,
   on_use = function(self, room, effect)
@@ -60,5 +60,16 @@ qiangwu:addEffect("targetmod", {
     end
   end
 })
+
+qiangwu:addTest(function(room, me)
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, qiangwu.name)
+    me:setSkillUseHistory(qiangwu.name, 1, Player.HistoryTurn)
+    me:setSkillUseHistory(qiangwu.name, 0, Player.HistoryPhase)
+    lu.assertTrue(Fk.skills[qiangwu.name]:canUse(me))
+    me:setSkillUseHistory(qiangwu.name, 1, Player.HistoryPhase)
+    lu.assertFalse(Fk.skills[qiangwu.name]:canUse(me))
+  end)
+end)
 
 return qiangwu

@@ -25,7 +25,7 @@ xuehen:addEffect("active", {
     return math.max(1, player:getLostHp())
   end,
   can_use = function(self, player)
-    return player:usedSkillTimes(xuehen.name, Player.HistoryTurn) == 0
+    return player:usedSkillTimes(xuehen.name, Player.HistoryPhase) == 0
   end,
   card_filter = function(self, player, to_select, selected)
     return #selected == 0 and Fk:getCardById(to_select).color == Card.Red and not player:prohibitDiscard(to_select)
@@ -67,5 +67,16 @@ xuehen:addEffect("active", {
     }
   end,
 })
+
+xuehen:addTest(function(room, me)
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, xuehen.name)
+    me:setSkillUseHistory(xuehen.name, 1, Player.HistoryTurn)
+    me:setSkillUseHistory(xuehen.name, 0, Player.HistoryPhase)
+    lu.assertTrue(Fk.skills[xuehen.name]:canUse(me))
+    me:setSkillUseHistory(xuehen.name, 1, Player.HistoryPhase)
+    lu.assertFalse(Fk.skills[xuehen.name]:canUse(me))
+  end)
+end)
 
 return xuehen

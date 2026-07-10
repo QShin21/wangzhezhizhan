@@ -37,6 +37,7 @@ wzzz_v__cunmu:addTest(function (room, me)
   local iron_chain = room:printCard("iron_chain", Card.Spade, 1)
   FkTest.setNextReplies(me, {FkTest.ReplyUseSkill("recast", nil, {iron_chain.id})})
   FkTest.runInRoom(function ()
+    room:obtainCard(me, iron_chain)
     room:moveCards({
       ids = {card.id},
       moveReason = fk.ReasonJustMove,
@@ -45,8 +46,9 @@ wzzz_v__cunmu:addTest(function (room, me)
       toArea = Card.DrawPile,
       drawPilePosition = -1,
     })
-    me:gainAnExtraPhase(Player.Play)
+    me:gainAnExtraPhase(Player.Play, wzzz_v__cunmu.name, false)
   end)
+  lu.assertEquals(me:getCardIds(Player.Hand), {card.id})
 end)
 
 return wzzz_v__cunmu

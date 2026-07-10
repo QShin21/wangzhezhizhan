@@ -78,7 +78,8 @@ luoshen:addTest(function(room, me)
 
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Start })):exec()
   end)
-  lu.assertEquals(#me:getCardIds("h"), rnd)
+  -- 每张判定牌均会获得，包括令流程停止的最后一张红色判定牌。
+  lu.assertEquals(#me:getCardIds("h"), rnd + 1)
   FkTest.setNextReplies(me, { "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" }) -- 除了第一个1以外后面全是潜在的“重复流程”
   FkTest.runInRoom(function()
     room:throwCard(me:getCardIds("h"), nil, me, me)
@@ -88,7 +89,8 @@ luoshen:addTest(function(room, me)
     if rnd > 0 then room:moveCardTo(table.slice(blacks, 1, rnd + 1), Card.DrawPile) end
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Start, Player.Discard })):exec()
   end)
-  lu.assertEquals(#me:getCardIds("h"), rnd)
+  -- 五张黑色判定牌令手牌上限 +5，1 点体力时正好保留六张牌。
+  lu.assertEquals(#me:getCardIds("h"), rnd + 1)
 end)
 
 return luoshen

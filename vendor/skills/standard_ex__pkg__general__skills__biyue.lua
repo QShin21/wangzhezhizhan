@@ -30,17 +30,22 @@ biyue:addTest(function(room, me)
     room:handleAddLoseSkills(me, biyue.name)
   end)
 
-  FkTest.setNextReplies(me, { "1", "1" })
+  FkTest.setNextReplies(me, { "__cancel", "1", "1" })
   FkTest.runInRoom(function()
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Finish })):exec()
   end)
+  lu.assertEquals(me:getHandcardNum(), 0)
 
-  lu.assertEquals(#me:getCardIds("h"), 2)
   FkTest.runInRoom(function()
     GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Finish })):exec()
   end)
+  lu.assertEquals(me:getHandcardNum(), 2)
 
-  lu.assertEquals(#me:getCardIds("h"), 3)
+  FkTest.runInRoom(function()
+    me:drawCards(me.hp - me:getHandcardNum(), biyue.name)
+    GameEvent.Turn:create(TurnData:new(me, "game_rule", { Player.Finish })):exec()
+  end)
+  lu.assertEquals(me:getHandcardNum(), me.hp + 1)
 end)
 
 return biyue

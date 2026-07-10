@@ -10,6 +10,22 @@ Fk:loadTranslationTable {
   ["wzzz_s__76df_65cc_draw"] = "摸牌",
 }
 
+local function sameCamp(role1, role2)
+  if table.contains({ "lord", "loyalist" }, role1) then
+    return table.contains({ "lord", "loyalist" }, role2)
+  end
+  if table.contains({ "rebel", "rebel_chief" }, role1) then
+    return table.contains({ "rebel", "rebel_chief" }, role2)
+  end
+  return role1 == role2
+end
+
+local function aliveCampCount(room, victim)
+  return #table.filter(room.alive_players, function(p)
+    return sameCamp(p.role, victim.role)
+  end)
+end
+
 skill_76df_65cc:addEffect(fk.Death, {
   anim_type = "support",
   can_trigger = function(self, event, target, player, data)
@@ -37,12 +53,27 @@ skill_76df_65cc:addEffect(fk.Death, {
         skillName = skill_76df_65cc.name,
       }
     else
-      local n = #table.filter(room.alive_players, function(p)
-        return p.role == target.role
-      end)
-      killer:drawCards(math.min(2, math.max(1, n)), skill_76df_65cc.name)
+      killer:drawCards(math.min(2, aliveCampCount(room, target)), skill_76df_65cc.name)
     end
   end,
 })
+
+skill_76df_65cc:addTest(function(room, me)
+  lu.assertTrue(sameCamp("lord", "loyalist"))
+  lu.assertTrue(sameCamp("rebel", "rebel_chief"))
+  lu.assertFalse(sameCamp("lord", "rebel"))
+
+  local fake_room = {
+    alive_players = {
+      { role = "lord" },
+      { role = "rebel" },
+      { role = "rebel" },
+      { role = "rebel_chief" },
+    },
+  }
+  lu.assertEquals(aliveCampCount(fake_room, { role = "loyalist" }), 1)
+  lu.assertEquals(math.min(2, aliveCampCount(fake_room, { role = "rebel" })), 2)
+  lu.assertEquals(aliveCampCount(fake_room, { role = "renegade" }), 0)
+end)
 
 return skill_76df_65cc

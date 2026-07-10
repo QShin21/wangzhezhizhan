@@ -60,10 +60,13 @@ tianbian:addTest(function (room, me)
   local comp2 = room.players[2]
   local card = room:printCard("peach", Card.Heart, 1)
   local card2 = room:printCard("slash", Card.Spade, 1)
+  local pindian
   FkTest.runInRoom(function ()
     room:obtainCard(comp2, card2)
-    me:pindian({comp2}, tianbian.name, card)
+    pindian = me:pindian({comp2}, tianbian.name, card)
   end)
+  lu.assertEquals(pindian.fromCard.number, 13)
+  lu.assertTrue(pindian.results[comp2].winner == me)
   lu.assertEquals(card.number, 1)
 end)
 
