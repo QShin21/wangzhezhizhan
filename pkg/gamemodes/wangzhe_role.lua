@@ -547,6 +547,10 @@ local function rebels_all_dead(room)
   end)
 end
 
+local function aozhan_start_round(player_count)
+  return player_count == 6 and 5 or 4
+end
+
 local function throw_aozhan_cards(room, player, n, allow_less)
   local cards = player:getCardIds("he")
   if #cards == 0 then return false end
@@ -603,7 +607,7 @@ rule:addEffect(fk.RoundStart, {
   can_refresh = function(self, event, target, player)
     local room = player.room
     local round = room:getBanner("RoundCount") or 0
-    local threshold = #room.players == 6 and 5 or 4
+    local threshold = aozhan_start_round(#room.players)
     return player.seat == 1 and not room:getTag("wangzhe_aozhan_started") and round >= threshold
   end,
   on_refresh = function(self, event, target, player)
@@ -799,6 +803,46 @@ local baihu = create_sixiang_viewas_skill(
   BAIHU_SKILL, "@wangzhe_baihu", { "slash", "jink" }, 1, "#wangzhe_baihu_viewas"
 )
 
+suzaku:addTest(function(room, me)
+  local target = room.players[2]
+  local card = room:printCard("duel")
+  FkTest.runInRoom(function()
+    room:handleAddLoseSkills(me, SUZAKU_SKILL)
+    room:setPlayerMark(me, "@wangzhe_suzaku", 1)
+    room:obtainCard(me, card)
+    Fk.skills[SUZAKU_SKILL]:onUse(room, { from = me, tos = { target }, cards = { card.id } })
+  end)
+  lu.assertEquals(me:getMark("@wangzhe_suzaku"), 0)
+  lu.assertEquals(target.hp, target.maxHp - 1)
+  lu.assertEquals(room:getCardArea(card.id), Card.DiscardPile)
+end)
+
+local function add_sixiang_viewas_test(skill_skeleton, mark, card_name, card_count)
+  skill_skeleton:addTest(function(room, me)
+    local cards = {}
+    for _ = 1, card_count do table.insert(cards, room:printCard("jink")) end
+    local converted
+    FkTest.runInRoom(function()
+      room:handleAddLoseSkills(me, skill_skeleton.name)
+      room:setPlayerMark(me, mark, 1)
+      room:obtainCard(me, cards)
+      local skill = Fk.skills[skill_skeleton.name]
+      if skill_skeleton.name == BAIHU_SKILL then skill.interaction.data = card_name end
+      converted = skill:viewAs(me, table.map(cards, function(card) return card.id end))
+      skill:beforeUse(me, { from = me, card = converted })
+      if skill_skeleton.name == BAIHU_SKILL then skill.interaction.data = nil end
+    end)
+    lu.assertNotNil(converted)
+    lu.assertEquals(converted.name, card_name)
+    lu.assertEquals(#converted.subcards, card_count)
+    lu.assertEquals(me:getMark(mark), 0)
+  end)
+end
+
+add_sixiang_viewas_test(xuanwu, "@wangzhe_xuanwu", "peach", 1)
+add_sixiang_viewas_test(qinglong, "@wangzhe_qinglong", "nullification", 2)
+add_sixiang_viewas_test(baihu, "@wangzhe_baihu", "slash", 1)
+
 local mode = fk.CreateGameMode{
   name = "wangzhe_role_mode",
   minPlayer = 6,
@@ -832,6 +876,105 @@ local mode = fk.CreateGameMode{
     end
   end,
 }
+
+rule:addTest(function(room, me)
+  lu.assertEquals(aozhan_start_round(6), 5)
+  lu.assertEquals(aozhan_start_round(8), 4)
+
+  lu.assertTrue(mode:feasible { playerNum = 6 })
+  lu.assertTrue(mode:feasible { playerNum = 8 })
+  lu.assertFalse(mode:feasible { playerNum = 7 })
+  lu.assertEquals(mode.minPlayer, 6)
+  lu.assertEquals(mode.maxPlayer, 8)
+  lu.assertEquals(mode.rule, RULE_SKILL)
+  lu.assertTrue(mode:whitelist { name = "wzzz_generals" })
+  lu.assertTrue(mode:whitelist { name = "wzzz_lords" })
+  lu.assertTrue(mode:whitelist { name = "wzzz_cards" })
+  lu.assertTrue(mode:whitelist { name = "standard_cards" })
+  lu.assertFalse(mode:whitelist { name = "xinghan_canlan" })
+  lu.assertTrue(same_title_general("wzzz_lord__liubei", "wzzz__liubei"))
+  lu.assertFalse(same_title_general("wzzz__lvbu", "wzzz__lvbu_wushuang"))
+
+  local function score_room(players, tags)
+    return setmetatable({ players = players, tags = tags or {} }, {
+      __index = {
+        getTag = function(self, name)
+          return self.tags[name]
+        end,
+      },
+    })
+  end
+
+  local six_players = {
+    { role = "lord", dead = false },
+    { role = "loyalist", dead = false },
+    { role = "rebel", dead = true },
+    { role = "rebel", dead = true },
+    { role = "rebel", dead = true },
+    { role = "renegade", dead = true },
+  }
+  local six_room = score_room(six_players)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[1], "lord+loyalist", 0), 54)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[3], "lord+loyalist", 0), 0)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[1], "rebel", 0), 15)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[1], "renegade", 0), 18)
+
+  six_players[2].dead = true
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[1], "lord+loyalist", 0), 48)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[3], "lord+loyalist", 0), 9)
+  six_players[3].dead = false
+  six_players[4].dead = false
+  six_players[5].dead = false
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[3], "rebel", 0), 49)
+  six_players[5].dead = true
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[3], "rebel", 0), 45)
+  six_players[4].dead = true
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[3], "rebel", 0), 41)
+
+  six_room.tags.wangzhe_entered_duel = true
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[6], "lord+loyalist", 0), 26)
+  six_room.tags.wangzhe_entered_lord_renegade_rebel = true
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[6], "rebel", 2), 33)
+  lu.assertEquals(calculate_wangzhe_score(six_room, six_players[6], "renegade", 0), 85)
+
+  local eight_players = {
+    { role = "lord", dead = true },
+    { role = "loyalist", dead = true },
+    { role = "loyalist", dead = true },
+    { role = "rebel", dead = true },
+    { role = "rebel", dead = true },
+    { role = "rebel", dead = true },
+    { role = "rebel", dead = true },
+    { role = "renegade", dead = false },
+  }
+  local eight_room = score_room(eight_players)
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[8], "renegade", 0), 95)
+  eight_players[1].dead = false
+  eight_players[2].dead = false
+  eight_players[3].dead = false
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[1], "lord+loyalist", 0), 57)
+  eight_players[3].dead = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[1], "lord+loyalist", 0), 53)
+  eight_players[2].dead = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[1], "lord+loyalist", 0), 49)
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[1], "rebel", 0), 16)
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[1], "renegade", 0), 20)
+
+  for i = 4, 7 do eight_players[i].dead = false end
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[4], "rebel", 0), 51)
+  eight_players[7].dead = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[4], "rebel", 0), 48)
+  eight_players[6].dead = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[4], "rebel", 0), 45)
+  eight_players[5].dead = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[4], "rebel", 0), 43)
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[4], "lord+loyalist", 0), 10)
+
+  eight_room.tags.wangzhe_entered_duel = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[8], "lord+loyalist", 0), 34)
+  eight_room.tags.wangzhe_entered_lord_renegade_rebel = true
+  lu.assertEquals(calculate_wangzhe_score(eight_room, eight_players[8], "rebel", 2), 34)
+end)
 
 return {
   mode = mode,
