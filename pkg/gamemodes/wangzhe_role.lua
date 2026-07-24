@@ -539,7 +539,11 @@ local function wangzhe_getlogic()
   return logic
 end
 
-local rule = fk.CreateSkill { name = RULE_SKILL, mode_skill = true }
+local rule = fk.CreateSkill {
+  name = RULE_SKILL,
+  tags = { Skill.Compulsory },
+  mode_skill = true,
+}
 
 local function rebels_all_dead(room)
   return not table.find(room.players, function(p)
@@ -878,6 +882,23 @@ local mode = fk.CreateGameMode{
 }
 
 rule:addTest(function(room, me)
+  local aozhan_effect = table.find(rule.effects, function(effect)
+    return effect.event == fk.TurnEnd and effect.priority == -1000
+  end)
+  lu.assertNotNil(aozhan_effect)
+  lu.assertTrue(aozhan_effect:hasTag(Skill.Compulsory))
+
+  local cards = { room:printCard("jink"), room:printCard("jink") }
+  local hp = me.hp
+  FkTest.setNextReplies(me, { { "wangzhe_aozhan_losehp" } })
+  FkTest.runInRoom(function()
+    lu.assertTrue(aozhan_effect:cost(nil, me, me, nil))
+    room:obtainCard(me, cards)
+    aozhan_effect:use(fk.TurnEnd, me, me)
+  end)
+  lu.assertEquals(me.hp, hp - 1)
+  lu.assertEquals(me:getCardIds("he"), table.map(cards, function(card) return card.id end))
+
   lu.assertEquals(aozhan_start_round(6), 5)
   lu.assertEquals(aozhan_start_round(8), 4)
 
