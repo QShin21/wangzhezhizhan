@@ -18,7 +18,7 @@ zili:addEffect(fk.EventPhaseStart, {
       player:usedSkillTimes(zili.name, Player.HistoryGame) == 0
   end,
   can_wake = function(self, event, target, player, data)
-    return #player:getPile("m_ex__zhonghui_power") > 2
+    return #player:getPile("zhonghui_quan") > 2
   end,
   on_use = function(self, event, target, player, data)
     local room = player.room

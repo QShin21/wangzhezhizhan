@@ -17,15 +17,15 @@ paiyi:addEffect("active", {
   max_phase_use_time = 1,
   card_num = 1,
   target_num = 1,
-  expand_pile = "m_ex__zhonghui_power",
+  expand_pile = "zhonghui_quan",
   can_use = function(self, player)
-    return #player:getPile("m_ex__zhonghui_power") > 0 and player:usedSkillTimes(paiyi.name, Player.HistoryPhase) == 0
+    return #player:getPile("zhonghui_quan") > 0 and player:usedSkillTimes(paiyi.name, Player.HistoryPhase) == 0
   end,
   target_filter = function(self, player, to_select, selected)
     return #selected == 0
   end,
   card_filter = function(self, player, to_select, selected)
-    return #selected == 0 and player:getPileNameOfId(to_select) == "m_ex__zhonghui_power"
+    return #selected == 0 and player:getPileNameOfId(to_select) == "zhonghui_quan"
   end,
   on_use = function(self, room, effect)
     local player = effect.from

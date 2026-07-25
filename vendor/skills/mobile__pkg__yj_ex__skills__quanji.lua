@@ -1,6 +1,6 @@
 local quanji = fk.CreateSkill {
   name = "wzzz_v__m_ex__quanji",
-  derived_piles = "m_ex__zhonghui_power",
+  derived_piles = "zhonghui_quan",
 }
 
 Fk:loadTranslationTable{
@@ -8,7 +8,7 @@ Fk:loadTranslationTable{
   [":wzzz_v__m_ex__quanji"] = "出牌阶段结束时，若你的手牌数大于你的体力值，或当你受到1点伤害后，你可以摸一张牌，"..
     "然后你将一张手牌置于武将牌上，称为“权”；你的手牌上限+X（X为“权”数）。你觉醒后，删除此技能的出牌阶段结束时触发。",
 
-  ["m_ex__zhonghui_power"] = "权",
+  ["zhonghui_quan"] = "权",
   ["#wzzz_v__m_ex__quanji-push"] = "权计：选择1张手牌作为“权”置于武将牌上",
 
   ["$wzzz_v__m_ex__quanji1"] = "缓急不在一时，吾等慢慢来过。",
@@ -28,7 +28,7 @@ local quanjiUse = function(_, _, _, player, _)
       cancelable = false,
       prompt = "#wzzz_v__m_ex__quanji-push",
     })
-    player:addToPile("m_ex__zhonghui_power", card, true, quanji.name)
+    player:addToPile("zhonghui_quan", card, true, quanji.name)
   end
 end
 quanji:addEffect(fk.EventPhaseEnd, {
@@ -51,7 +51,7 @@ quanji:addEffect(fk.Damaged, {
 quanji:addEffect("maxcards", {
   correct_func = function(self, player)
     if player:hasSkill(quanji.name) then
-      return #player:getPile("m_ex__zhonghui_power")
+      return #player:getPile("zhonghui_quan")
     else
       return 0
     end
